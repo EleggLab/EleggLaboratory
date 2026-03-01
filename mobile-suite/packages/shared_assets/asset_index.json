@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "assetCount": 3,
+  "assets": [
+    {
+      "id": "click_a",
+      "path": "assets/audio/click_a.ogg",
+      "category": "audio",
+      "ext": "ogg",
+      "tags": [
+        "ui-sfx"
+      ]
+    },
+    {
+      "id": "emotes_preview",
+      "path": "assets/images/emotes_preview.png",
+      "category": "image",
+      "ext": "png",
+      "tags": [
+        "ui-preview"
+      ]
+    },
+    {
+      "id": "kenney_ui_preview",
+      "path": "assets/images/kenney_ui_preview.png",
+      "category": "image",
+      "ext": "png",
+      "tags": [
+        "ui-preview"
+      ]
+    }
+  ]
+}

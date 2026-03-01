@@ -1,6 +1,7 @@
-name: shared_assets
-description: "A new Flutter package project."
+name: shared_ui
+description: "Shared UI components for mobile-suite apps."
 version: 0.0.1
+publish_to: 'none'
 homepage:
 
 environment:
@@ -10,6 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  shared_assets:
+    path: ../shared_assets
 
 dev_dependencies:
   flutter_test:
@@ -21,11 +24,15 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-  assets:
-    - assets/images/
-    - assets/audio/
-    - asset_index.json
 
+  # To add assets to your package, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+  #
+  # For details regarding assets in packages, see
+  # https://flutter.dev/to/asset-from-package
+  #
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
