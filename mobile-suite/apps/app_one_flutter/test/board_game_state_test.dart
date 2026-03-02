@@ -51,4 +51,14 @@ void main() {
     }
     expect(g.clickBurstSec, greaterThan(0));
   });
+
+  test('auto tap can be triggered after upgrade', () {
+    final g = BoardGameState();
+    g.essence = 999;
+    final up = kUpgradeDefs.firstWhere((u) => u.id == 'click_auto_1');
+    g.buyUpgrade(up);
+    final ok = g.triggerAutoTap();
+    expect(ok, isTrue);
+    expect(g.autoTapRemainSec, greaterThan(0));
+  });
 }

@@ -117,7 +117,7 @@ class _IdleMergeBoardPageState extends State<IdleMergeBoardPage>
 
   Widget _tabBody() {
     return switch (tabIndex) {
-      0 => Column(children: [_actions(), const SizedBox(height: 10), Expanded(child: _board())]),
+      0 => Column(children: [_actions(), const SizedBox(height: 8), _boardTools(), const SizedBox(height: 10), Expanded(child: _board())]),
       1 => _upgrades(),
       _ => _logs(),
     };
@@ -136,7 +136,7 @@ class _IdleMergeBoardPageState extends State<IdleMergeBoardPage>
             Text('Essence: ${game.essence.toStringAsFixed(1)}'),
             Text('Residue: ${game.residue}'),
             Text('Tap: ${game.tapValue.toStringAsFixed(1)} ${game.clickBurstSec > 0 ? '(Burst ${game.clickBurstSec.toStringAsFixed(1)}s)' : ''}'),
-            Text('AutoTap: ${game.autoTapEnabled ? 'ON' : 'OFF'}'),
+            Text('AutoTap: ${game.autoTapEnabled ? 'ON' : 'OFF'} ${game.autoTapRemainSec > 0 ? '(run ${game.autoTapRemainSec.toStringAsFixed(1)}s)' : ''} ${game.autoTapCooldownSec > 0 ? '(cd ${game.autoTapCooldownSec.toStringAsFixed(1)}s)' : ''}'),
             Text('Tickets: ${game.tickets}/${game.ticketCap} · next in ${nextTicketSec}s'),
             Text('Board: ${game.filledCount}/${game.boardSlots}'),
           ],
@@ -183,6 +183,54 @@ class _IdleMergeBoardPageState extends State<IdleMergeBoardPage>
               _saveState();
             },
             child: const Text('Tap'),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _boardTools() {
+    return Row(
+      children: [
+        Expanded(
+          child: OutlinedButton(
+            onPressed: game.autoTapEnabled
+                ? () {
+                    setState(() {
+                      game.triggerAutoTap();
+                    });
+                    _saveState();
+                  }
+                : null,
+            child: const Text('AutoTap Start'),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: OutlinedButton(
+            onPressed: selected == null
+                ? null
+                : () {
+                    setState(() {
+                      game.stabilizerAt(selected!);
+                    });
+                    _saveState();
+                  },
+            child: const Text('Stabilize'),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: OutlinedButton(
+            onPressed: selected == null
+                ? null
+                : () {
+                    setState(() {
+                      game.catalystAt(selected!);
+                    });
+                    _saveState();
+                  },
+            child: const Text('Catalyst'),
           ),
         ),
       ],
@@ -278,11 +326,24 @@ class _IdleMergeBoardPageState extends State<IdleMergeBoardPage>
       byType[e.type] = (byType[e.type] ?? 0) + 1;
     }
 
+    final nowMs = DateTime.now().millisecondsSinceEpoch;
+    final recent24h = game.logs.where((e) => nowMs - e.timestampMs <= const Duration(hours: 24).inMilliseconds);
+    final merge24 = recent24h.where((e) => e.type == LogType.merge).length;
+    final trans24 = recent24h.where((e) => e.type == LogType.transform).length;
+    final summon24 = recent24h.where((e) => e.type == LogType.summon).length;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text('Logbook', style: TextStyle(fontWeight: FontWeight.bold)),
         const SizedBox(height: 8),
+        Card(
+          child: Padding(
+            padding: const EdgeInsets.all(10),
+            child: Text('24h 요약 · summon $summon24 / merge $merge24 / transform $trans24'),
+          ),
+        ),
+        const SizedBox(height: 6),
         Wrap(
           spacing: 6,
           children: [

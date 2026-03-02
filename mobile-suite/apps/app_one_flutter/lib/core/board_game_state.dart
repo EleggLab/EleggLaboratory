@@ -32,6 +32,8 @@ class BoardGameState {
     s.transformSpeedMultiplier = (map['transformSpeedMultiplier'] as num?)?.toDouble() ?? 1;
     s.clickBurstSec = (map['clickBurstSec'] as num?)?.toDouble() ?? 0;
     s.autoTapEnabled = (map['autoTapEnabled'] as bool?) ?? false;
+    s.autoTapRemainSec = (map['autoTapRemainSec'] as num?)?.toDouble() ?? 0;
+    s.autoTapCooldownSec = (map['autoTapCooldownSec'] as num?)?.toDouble() ?? 0;
     s.tapCount = (map['tapCount'] as num?)?.toInt() ?? 0;
 
     final purchasedMap = map['purchased'];
@@ -76,6 +78,8 @@ class BoardGameState {
   double transformSpeedMultiplier = 1;
   double clickBurstSec = 0;
   bool autoTapEnabled = false;
+  double autoTapRemainSec = 0;
+  double autoTapCooldownSec = 0;
   int tapCount = 0;
   int residue = 0;
   int tickets = 10;
@@ -108,6 +112,8 @@ class BoardGameState {
       'transformSpeedMultiplier': transformSpeedMultiplier,
       'clickBurstSec': clickBurstSec,
       'autoTapEnabled': autoTapEnabled,
+      'autoTapRemainSec': autoTapRemainSec,
+      'autoTapCooldownSec': autoTapCooldownSec,
       'tapCount': tapCount,
       'purchased': purchased,
       'board': board
@@ -131,8 +137,12 @@ class BoardGameState {
     _chargeTickets(deltaSec);
     _produceEssence(deltaSec, useOfflineMultiplier: false);
     _progressTransform(deltaSec, grouped: null, offline: false);
-    if (autoTapEnabled) {
+    if (autoTapEnabled && autoTapRemainSec > 0) {
       essence += tapValue * deltaSec;
+      autoTapRemainSec = (autoTapRemainSec - deltaSec).clamp(0, 99999);
+    }
+    if (autoTapCooldownSec > 0) {
+      autoTapCooldownSec = (autoTapCooldownSec - deltaSec).clamp(0, 99999);
     }
     if (clickBurstSec > 0) {
       clickBurstSec = (clickBurstSec - deltaSec).clamp(0, 99999);
@@ -187,6 +197,52 @@ class BoardGameState {
         payload: {'event': 'tap_burst_start', 'durationSec': 10},
       ));
     }
+  }
+
+  bool triggerAutoTap() {
+    if (!autoTapEnabled) return false;
+    if (autoTapCooldownSec > 0 || autoTapRemainSec > 0) return false;
+    autoTapRemainSec = 30;
+    autoTapCooldownSec = 600;
+    logs.add(LogEvent(
+      timestampMs: DateTime.now().millisecondsSinceEpoch,
+      type: LogType.upgrade,
+      payload: {'event': 'auto_tap_start', 'remainSec': 30},
+    ));
+    return true;
+  }
+
+  bool stabilizerAt(int index) {
+    if ((purchased['trans_stabilizer'] ?? 0) == 0) return false;
+    final tile = board[index];
+    if (tile == null) return false;
+    tile.transformElapsedSec = 0;
+    logs.add(LogEvent(
+      timestampMs: DateTime.now().millisecondsSinceEpoch,
+      type: LogType.upgrade,
+      payload: {'event': 'stabilizer', 'index': index, 'form': tile.form.name},
+    ));
+    return true;
+  }
+
+  bool catalystAt(int index) {
+    if ((purchased['trans_catalyst'] ?? 0) == 0) return false;
+    final tile = board[index];
+    if (tile == null) return false;
+    final rule = ruleFor(tile.form);
+    if (rule == null) return false;
+    final from = tile.form;
+    tile.form = rule.to;
+    tile.transformElapsedSec = 0;
+    final gain = ((_transformResidue(tile.tier, rule.baseResidue) * residueMultiplier) * 1.5).round();
+    residue += gain;
+    logs.add(LogEvent(
+      timestampMs: DateTime.now().millisecondsSinceEpoch,
+      type: LogType.transform,
+      deltaResidue: gain,
+      payload: {'event': 'catalyst', 'index': index, 'from': from.name, 'to': tile.form.name, 'tier': tile.tier},
+    ));
+    return true;
   }
 
   bool summonOne() {
