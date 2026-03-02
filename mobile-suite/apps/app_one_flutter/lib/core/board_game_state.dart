@@ -18,6 +18,7 @@ class BoardGameState {
 
   factory BoardGameState.fromMap(Map<String, dynamic> map, {Random? random}) {
     final s = BoardGameState(random: random);
+    s.boardSlots = (map['boardSlots'] as num?)?.toInt() ?? size;
     s.essence = (map['essence'] as num?)?.toDouble() ?? 0;
     s.residue = (map['residue'] as num?)?.toInt() ?? 0;
     s.tickets = (map['tickets'] as num?)?.toInt() ?? 10;
@@ -57,6 +58,7 @@ class BoardGameState {
   static const int rows = 5;
   static const int cols = 6;
   static const int size = rows * cols;
+  int boardSlots = size;
 
   final Random _random;
   final List<BoardTile?> board = List<BoardTile?>.filled(size, null);
@@ -82,10 +84,11 @@ class BoardGameState {
     ElementForm.air,
   ];
 
-  int get filledCount => board.whereType<BoardTile>().length;
+  int get filledCount => board.take(boardSlots).whereType<BoardTile>().length;
 
   Map<String, dynamic> toMap() {
     return {
+      'boardSlots': boardSlots,
       'essence': essence,
       'residue': residue,
       'tickets': tickets,
@@ -118,7 +121,7 @@ class BoardGameState {
   void tick(double deltaSec) {
     _chargeTickets(deltaSec);
     _produceEssence(deltaSec, useOfflineMultiplier: false);
-    _progressTransform(deltaSec);
+    _progressTransform(deltaSec, grouped: null, offline: false);
   }
 
   OfflineSummary applyOffline(int elapsedSec) {
@@ -129,18 +132,18 @@ class BoardGameState {
     final essenceBefore = essence;
     final residueBefore = residue;
     final ticketsBefore = tickets;
-    final logsBefore = logs.length;
 
     _chargeTickets(elapsedSec.toDouble());
     _produceEssence(elapsedSec.toDouble(), useOfflineMultiplier: true);
-    _progressTransform(elapsedSec.toDouble());
+    final grouped = <String,int>{};
+    _progressTransform(elapsedSec.toDouble(), grouped: grouped, offline: true);
 
     final summary = OfflineSummary(
       elapsedSec: elapsedSec,
       essenceGained: essence - essenceBefore,
       residueGained: residue - residueBefore,
       ticketsGained: tickets - ticketsBefore,
-      transformCount: logs.skip(logsBefore).where((e) => e.type == LogType.transform).length,
+      transformCount: grouped.values.fold(0, (a,b)=>a+b),
     );
 
     logs.add(LogEvent(
@@ -149,7 +152,7 @@ class BoardGameState {
       deltaEssence: summary.essenceGained,
       deltaResidue: summary.residueGained,
       deltaTickets: summary.ticketsGained,
-      payload: {'elapsedSec': elapsedSec, 'transformCount': summary.transformCount},
+      payload: {'elapsedSec': elapsedSec, 'transformCount': summary.transformCount, 'groups': grouped},
       isOffline: true,
     ));
 
@@ -218,17 +221,44 @@ class BoardGameState {
       case 'prod_offline_1':
         offlineMultiplier *= 1.10;
         break;
+      case 'prod_element_1':
+        productionMultiplier *= 1.15;
+        break;
+      case 'prod_board_expand_1':
+        boardSlots = (boardSlots + 6).clamp(6, size);
+        break;
+      case 'prod_recycle_1':
+        productionMultiplier *= 1.05;
+        break;
       case 'trans_residue_1':
         residueMultiplier *= 1.15;
         break;
       case 'trans_speed_1':
         transformSpeedMultiplier *= 1.10;
         break;
+      case 'trans_stabilizer':
+        residueMultiplier *= 1.05;
+        break;
+      case 'trans_catalyst':
+        residueMultiplier *= 1.10;
+        break;
+      case 'trans_penalty_reduce':
+        productionMultiplier *= 1.05;
+        break;
       case 'click_tap_1':
         tapValue += 1;
         break;
       case 'click_tap_2':
         tapValue += 2;
+        break;
+      case 'click_burst_1':
+        tapValue += 1;
+        break;
+      case 'click_auto_1':
+        tapValue += 1;
+        break;
+      case 'click_ticket_gauge':
+        ticketRemainderSec += 60;
         break;
       default:
         break;
@@ -244,7 +274,7 @@ class BoardGameState {
   }
 
   int _firstEmptyIndex() {
-    for (var i = 0; i < board.length; i++) {
+    for (var i = 0; i < boardSlots; i++) {
       if (board[i] == null) return i;
     }
     return -1;
@@ -270,8 +300,8 @@ class BoardGameState {
     essence += income * mult * deltaSec;
   }
 
-  void _progressTransform(double deltaSec) {
-    for (var i = 0; i < board.length; i++) {
+  void _progressTransform(double deltaSec, {Map<String,int>? grouped, required bool offline}) {
+    for (var i = 0; i < boardSlots; i++) {
       final tile = board[i];
       if (tile == null) continue;
       final rule = ruleFor(tile.form);
@@ -287,19 +317,26 @@ class BoardGameState {
         final gain = (_transformResidue(tile.tier, rule.baseResidue) * residueMultiplier).round();
         residue += gain;
 
-        logs.add(
-          LogEvent(
-            timestampMs: DateTime.now().millisecondsSinceEpoch,
-            type: LogType.transform,
-            deltaResidue: gain,
-            payload: {
-              'index': i,
-              'from': from.name,
-              'to': tile.form.name,
-              'tier': tile.tier,
-            },
-          ),
-        );
+        if (offline) {
+          final key = '${from.name}->${tile.form.name}:T${tile.tier}';
+          if (grouped != null) {
+            grouped[key] = (grouped[key] ?? 0) + 1;
+          }
+        } else {
+          logs.add(
+            LogEvent(
+              timestampMs: DateTime.now().millisecondsSinceEpoch,
+              type: LogType.transform,
+              deltaResidue: gain,
+              payload: {
+                'index': i,
+                'from': from.name,
+                'to': tile.form.name,
+                'tier': tile.tier,
+              },
+            ),
+          );
+        }
       }
     }
   }

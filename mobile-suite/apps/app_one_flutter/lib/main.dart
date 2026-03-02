@@ -137,7 +137,7 @@ class _IdleMergeBoardPageState extends State<IdleMergeBoardPage>
             Text('Residue: ${game.residue}'),
             Text('Tap: ${game.tapValue.toStringAsFixed(1)}'),
             Text('Tickets: ${game.tickets}/${game.ticketCap} · next in ${nextTicketSec}s'),
-            Text('Board: ${game.filledCount}/${BoardGameState.size}'),
+            Text('Board: ${game.filledCount}/${game.boardSlots}'),
           ],
         ),
       ),
@@ -190,7 +190,7 @@ class _IdleMergeBoardPageState extends State<IdleMergeBoardPage>
 
   Widget _board() {
     return GridView.builder(
-      itemCount: BoardGameState.size,
+      itemCount: game.boardSlots,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: BoardGameState.cols,
         mainAxisSpacing: 6,
