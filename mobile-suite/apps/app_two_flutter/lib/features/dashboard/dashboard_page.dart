@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../core/risk.dart';
 import '../../core/strategy.dart';
-import '../../models/market_models.dart';
 import '../../services/backtest_engine.dart';
+import '../../services/market_data_provider.dart';
 import '../../services/paper_broker.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -14,35 +14,24 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
+  final provider = MockMarketDataProvider();
   String status = 'Ready';
+  BacktestResult? last;
 
-  List<Candle> _mockCandles() {
-    final out = <Candle>[];
-    var price = 100.0;
-    for (var i = 0; i < 200; i++) {
-      final drift = (i % 17 == 0) ? -1.2 : 0.4;
-      price = (price + drift).clamp(20, 400);
-      out.add(Candle(
-        ts: DateTime.now().add(Duration(minutes: i)),
-        open: price - 0.2,
-        high: price + 0.8,
-        low: price - 0.9,
-        close: price,
-        volume: 1000 + i * 3,
-      ));
-    }
-    return out;
-  }
+  Future<void> _runBacktest() async {
+    setState(() => status = 'Running...');
 
-  void _runBacktest() {
+    final candles = await provider.fetchCandles(symbol: 'MOCK', limit: 220);
     final engine = BacktestEngine(
       strategy: SmaCrossStrategy(),
       riskEngine: const RiskEngine(RiskConfig()),
       broker: PaperBroker(initialCash: 100000),
     );
-    final result = engine.run('MOCK', _mockCandles());
+    final result = engine.run('MOCK', candles);
+
     setState(() {
-      status = 'Backtest done · final equity ${result.finalEquity.toStringAsFixed(2)} · trades ${result.tradeCount}';
+      last = result;
+      status = 'Backtest done';
     });
   }
 
@@ -60,6 +49,14 @@ class _DashboardPageState extends State<DashboardPage> {
             FilledButton(onPressed: _runBacktest, child: const Text('Run Mock Backtest')),
             const SizedBox(height: 12),
             Text(status),
+            const SizedBox(height: 12),
+            if (last != null) ...[
+              Text('Final Equity: ${last!.finalEquity.toStringAsFixed(2)}'),
+              Text('Trades: ${last!.tradeCount}'),
+              Text('WinRate: ${(last!.winRate * 100).toStringAsFixed(1)}%'),
+              Text('Max Drawdown: ${last!.maxDrawdownPct.toStringAsFixed(2)}%'),
+              Text('Total Return: ${last!.totalReturnPct.toStringAsFixed(2)}%'),
+            ],
           ],
         ),
       ),
