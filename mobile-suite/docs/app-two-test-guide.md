@@ -15,3 +15,8 @@ flutter run -d linux
 - 리스크 슬라이더 동작
 - 백테스트 지표 카드 표시
 - 최근 주문 로그 출력
+
+## M4 추가 체크
+- Config/Report/Portfolio 탭 이동 정상
+- 전략/시나리오/리스크 값 변경 후 재실행 정상
+- 백테스트 후 Portfolio 탭에서 cash/mv/upnl 표시 정상

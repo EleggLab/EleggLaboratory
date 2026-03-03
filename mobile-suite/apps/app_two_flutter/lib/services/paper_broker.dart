@@ -1,8 +1,9 @@
 import '../models/market_models.dart';
 
 class PaperBroker {
-  PaperBroker({double initialCash = 100000}) : cash = initialCash;
+  PaperBroker({this.initialCash = 100000}) : cash = initialCash;
 
+  final double initialCash;
   double cash;
   final Map<String, Position> positions = {};
   final List<TradeOrder> fills = [];
@@ -26,6 +27,18 @@ class PaperBroker {
     }
 
     fills.add(order);
+  }
+
+  double positionMarketValue(String symbol, double lastPrice) {
+    final p = positions[symbol];
+    if (p == null || p.qty <= 0) return 0;
+    return p.qty * lastPrice;
+  }
+
+  double unrealizedPnl(String symbol, double lastPrice) {
+    final p = positions[symbol];
+    if (p == null || p.qty <= 0) return 0;
+    return (lastPrice - p.avgPrice) * p.qty;
   }
 
   double equity(Map<String, double> lastPrices) {

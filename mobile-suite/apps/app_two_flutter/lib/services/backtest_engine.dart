@@ -14,6 +14,9 @@ class BacktestResult {
     required this.maxDrawdownPct,
     required this.totalReturnPct,
     required this.orders,
+    required this.endingCash,
+    required this.lastPrice,
+    required this.positions,
   });
 
   final double finalEquity;
@@ -22,6 +25,9 @@ class BacktestResult {
   final double maxDrawdownPct;
   final double totalReturnPct;
   final List<TradeOrder> orders;
+  final double endingCash;
+  final double lastPrice;
+  final Map<String, Position> positions;
 }
 
 class BacktestEngine {
@@ -93,6 +99,9 @@ class BacktestEngine {
       maxDrawdownPct: maxDd * 100,
       totalReturnPct: totalReturnPct,
       orders: List<TradeOrder>.from(broker.fills),
+      endingCash: broker.cash,
+      lastPrice: candles.last.close,
+      positions: Map<String, Position>.from(broker.positions),
     );
   }
 }
