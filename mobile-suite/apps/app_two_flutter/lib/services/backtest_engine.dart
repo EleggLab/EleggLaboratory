@@ -13,6 +13,7 @@ class BacktestResult {
     required this.winRate,
     required this.maxDrawdownPct,
     required this.totalReturnPct,
+    required this.orders,
   });
 
   final double finalEquity;
@@ -20,6 +21,7 @@ class BacktestResult {
   final double winRate;
   final double maxDrawdownPct;
   final double totalReturnPct;
+  final List<TradeOrder> orders;
 }
 
 class BacktestEngine {
@@ -90,6 +92,7 @@ class BacktestEngine {
       winRate: winRate,
       maxDrawdownPct: maxDd * 100,
       totalReturnPct: totalReturnPct,
+      orders: List<TradeOrder>.from(broker.fills),
     );
   }
 }
