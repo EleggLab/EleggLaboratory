@@ -59,6 +59,7 @@ flutter:
 
   assets:
     - assets/config/
+    - assets/art/
 
 
   # The following line ensures that the Material Icons font is

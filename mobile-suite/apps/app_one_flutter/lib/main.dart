@@ -466,10 +466,15 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/art/bg_blue.png'),
+            fit: BoxFit.cover,
+            opacity: 0.22,
+          ),
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Color(0xFF0B1220), Color(0xFF111827), Color(0xFF0F172A)],
+            colors: [Color(0xEE0B1220), Color(0xEE111827), Color(0xEE0F172A)],
           ),
         ),
         child: switch (page) {
@@ -512,6 +517,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
               child: Row(
                 children: [
                   Card(
+                    color: const Color(0x55222B3A),
                     child: Padding(
                       padding: const EdgeInsets.all(8),
                       child: Text('Tickets: $tickets/$ticketCap · 포인트: $elementPoint · 원소 ${elements.length}/$maxFieldElements', style: const TextStyle(color: Color(0xFFE5E7EB))),
@@ -600,14 +606,20 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Image.asset(
+                      _rarityAsset(def.rarity),
+                      width: 18,
+                      height: 18,
+                      fit: BoxFit.contain,
+                    ),
                     Text(
                       def.name,
-                      style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontSize: 9, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
                     ),
                     Text(
                       _rarityLabel(def.rarity),
-                      style: const TextStyle(fontSize: 7, fontWeight: FontWeight.w600),
+                      style: const TextStyle(fontSize: 6.5, fontWeight: FontWeight.w600),
                     ),
                   ],
                 ),
@@ -861,6 +873,14 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
       Rarity.legendary => '전설',
       Rarity.finalTier => '최종',
       Rarity.mythic => '신화',
+    };
+  }
+
+  String _rarityAsset(Rarity r) {
+    return switch (r) {
+      Rarity.common => 'assets/art/coin_1.png',
+      Rarity.rare => 'assets/art/coin_3.png',
+      Rarity.special || Rarity.legendary || Rarity.finalTier || Rarity.mythic => 'assets/art/coin_9.png',
     };
   }
 
