@@ -1,21 +1,64 @@
 import 'dart:async';
-import 'dart:convert';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:shared_ui/shared_ui.dart';
-
-import 'core/board_game_state.dart';
-import 'core/logbook.dart';
-import 'core/offline_summary.dart';
-import 'core/upgrades.dart';
-import 'core/tutorial.dart';
-import 'data/element_tables.dart';
 
 void main() {
   runApp(const MyApp());
 }
+
+enum Rarity { common, rare, special, legendary, finalTier, mythic }
+
+class ElementDef {
+  const ElementDef(this.id, this.name, this.rarity);
+
+  final String id;
+  final String name;
+  final Rarity rarity;
+}
+
+class FieldElement {
+  FieldElement({required this.uid, required this.elementId, required this.position});
+
+  final String uid;
+  String elementId;
+  Offset position;
+}
+
+class MegaRecipe {
+  const MegaRecipe({required this.id, required this.ingredients, required this.rewardMythicId});
+
+  final String id;
+  final List<String> ingredients;
+  final String rewardMythicId;
+}
+
+const elementDefs = <String, ElementDef>{
+  'fire': ElementDef('fire', '불', Rarity.common),
+  'water': ElementDef('water', '물', Rarity.common),
+  'earth': ElementDef('earth', '흙', Rarity.common),
+  'air': ElementDef('air', '바람', Rarity.common),
+  'steam': ElementDef('steam', '증기', Rarity.rare),
+  'mud': ElementDef('mud', '진흙', Rarity.rare),
+  'dust': ElementDef('dust', '먼지', Rarity.special),
+  'energy': ElementDef('energy', '에너지', Rarity.legendary),
+  'phoenix_seed': ElementDef('phoenix_seed', '불사 씨앗', Rarity.mythic),
+};
+
+const mergeRecipes = <String, String>{
+  'fire+water': 'steam',
+  'water+earth': 'mud',
+  'air+earth': 'dust',
+  'fire+air': 'energy',
+};
+
+const megaRecipes = <MegaRecipe>[
+  MegaRecipe(
+    id: 'mega_1',
+    ingredients: ['fire', 'water', 'earth', 'air'],
+    rewardMythicId: 'phoenix_seed',
+  ),
+];
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -24,570 +67,531 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'App One',
-      theme: SharedUiTheme.light(),
-      home: const IdleMergeBoardPage(),
+      theme: ThemeData(colorSchemeSeed: Colors.teal, useMaterial3: true),
+      home: const ElementalIdleHome(),
     );
   }
 }
 
-class IdleMergeBoardPage extends StatefulWidget {
-  const IdleMergeBoardPage({super.key});
+class ElementalIdleHome extends StatefulWidget {
+  const ElementalIdleHome({super.key});
 
   @override
-  State<IdleMergeBoardPage> createState() => _IdleMergeBoardPageState();
+  State<ElementalIdleHome> createState() => _ElementalIdleHomeState();
 }
 
-class _IdleMergeBoardPageState extends State<IdleMergeBoardPage>
-    with WidgetsBindingObserver {
-  static const _saveKey = 'app_one_state_v1';
-  static const _logFilterKey = 'app_one_log_filter_v1';
-  static const _logQueryKey = 'app_one_log_query_v1';
+class _ElementalIdleHomeState extends State<ElementalIdleHome> {
+  final random = Random();
+  final elements = <FieldElement>[];
+  final discovered = <String>{};
 
-  BoardGameState game = BoardGameState();
-  Timer? timer;
-  int? selected;
-  int tabIndex = 0;
-  DateTime? pausedAt;
-  LogType? logFilter;
-  bool logDesc = true;
-  String logQuery = '';
-  int tutorialIndex = 0;
-  final Set<String> tutorialRewarded = {};
+  int currentPage = 0; // 0 home, 1 codex, 2 mega
+  int tickets = 20;
+  int ticketCap = 30;
+  int ticketRemainSec = 0;
+
+  Size canvasSize = const Size(380, 580);
+
+  FieldElement? dragging;
+  Offset dragDelta = Offset.zero;
+  String? hoverTargetUid;
+  double hoverSec = 0;
+  double trashHoldSec = 0;
+
+  Timer? loop;
 
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addObserver(this);
-    _loadState();
-    _loadBalancePreset();
-    timer = Timer.periodic(const Duration(milliseconds: 200), (_) {
-      setState(() => game.tick(0.2));
+    loop = Timer.periodic(const Duration(milliseconds: 100), (_) {
+      setState(() {
+        _tick(0.1);
+      });
     });
   }
 
   @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {
-    if (state == AppLifecycleState.paused ||
-        state == AppLifecycleState.inactive ||
-        state == AppLifecycleState.detached) {
-      pausedAt = DateTime.now();
-      _saveState();
-      return;
+  void dispose() {
+    loop?.cancel();
+    super.dispose();
+  }
+
+  void _tick(double dt) {
+    if (tickets < ticketCap) {
+      ticketRemainSec += (dt * 1).round();
+      if (ticketRemainSec >= 600) {
+        ticketRemainSec = 0;
+        tickets += 1;
+      }
     }
 
-    if (state == AppLifecycleState.resumed && pausedAt != null) {
-      final sec = DateTime.now().difference(pausedAt!).inSeconds;
-      pausedAt = null;
-      if (sec > 1) {
-        final summary = game.applyOffline(sec);
-        _saveState();
-        if (mounted) {
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            _showOfflineSummary(summary);
-          });
+    if (dragging != null) {
+      final target = _findMergeTarget(dragging!);
+      if (target != null) {
+        if (hoverTargetUid == target.uid) {
+          hoverSec += dt;
+        } else {
+          hoverTargetUid = target.uid;
+          hoverSec = 0;
         }
+      } else {
+        hoverTargetUid = null;
+        hoverSec = 0;
+      }
+
+      if (_isOverTrash(dragging!.position)) {
+        trashHoldSec += dt;
+      } else {
+        trashHoldSec = 0;
       }
     }
   }
 
-  @override
-  void dispose() {
-    timer?.cancel();
-    _saveState();
-    WidgetsBinding.instance.removeObserver(this);
-    super.dispose();
+  void _spawnFromGacha({int count = 1}) {
+    for (var i = 0; i < count; i++) {
+      if (tickets <= 0) break;
+      tickets -= 1;
+      final roll = random.nextDouble();
+      String id;
+      if (roll < 0.72) {
+        id = ['fire', 'water', 'earth', 'air'][random.nextInt(4)];
+      } else if (roll < 0.92) {
+        id = ['steam', 'mud'][random.nextInt(2)];
+      } else if (roll < 0.992) {
+        id = 'dust';
+      } else {
+        id = 'energy';
+      }
+      _spawnElement(id);
+    }
+  }
+
+  void _spawnElement(String id) {
+    final p = Offset(
+      30 + random.nextDouble() * (canvasSize.width - 80).clamp(40, 500),
+      30 + random.nextDouble() * (canvasSize.height - 120).clamp(60, 700),
+    );
+    final e = FieldElement(uid: '${DateTime.now().microsecondsSinceEpoch}_${random.nextInt(9999)}', elementId: id, position: p);
+    elements.add(e);
+    discovered.add(id);
+  }
+
+  FieldElement? _findMergeTarget(FieldElement src) {
+    for (final e in elements) {
+      if (e.uid == src.uid) continue;
+      final d = (e.position - src.position).distance;
+      if (d > 56) continue;
+      final key1 = '${src.elementId}+${e.elementId}';
+      final key2 = '${e.elementId}+${src.elementId}';
+      if (mergeRecipes.containsKey(key1) || mergeRecipes.containsKey(key2)) {
+        return e;
+      }
+    }
+    return null;
+  }
+
+  bool _isOverTrash(Offset p) {
+    final trash = Rect.fromLTWH(canvasSize.width - 88, canvasSize.height - 88, 72, 72);
+    return trash.contains(p);
+  }
+
+  void _commitMergeIfReady() {
+    if (dragging == null || hoverTargetUid == null || hoverSec < 3) return;
+
+    final src = dragging!;
+    final dst = elements.firstWhere((e) => e.uid == hoverTargetUid, orElse: () => src);
+    if (src.uid == dst.uid) return;
+
+    final key1 = '${src.elementId}+${dst.elementId}';
+    final key2 = '${dst.elementId}+${src.elementId}';
+    final resultId = mergeRecipes[key1] ?? mergeRecipes[key2];
+    if (resultId == null) return;
+
+    elements.removeWhere((e) => e.uid == src.uid || e.uid == dst.uid);
+    final merged = FieldElement(uid: '${DateTime.now().microsecondsSinceEpoch}', elementId: resultId, position: dst.position);
+    elements.add(merged);
+    discovered.add(resultId);
+  }
+
+  void _commitTrashIfReady() {
+    if (dragging == null) return;
+    if (trashHoldSec < 3) return;
+    elements.removeWhere((e) => e.uid == dragging!.uid);
+  }
+
+  bool _canMega(MegaRecipe r) {
+    final counts = <String, int>{};
+    for (final e in elements) {
+      counts[e.elementId] = (counts[e.elementId] ?? 0) + 1;
+    }
+    for (final ing in r.ingredients) {
+      final c = counts[ing] ?? 0;
+      if (c <= 0) return false;
+      counts[ing] = c - 1;
+    }
+    return true;
+  }
+
+  void _consumeForMega(MegaRecipe r) {
+    final required = List<String>.from(r.ingredients);
+    for (final ing in required) {
+      final idx = elements.indexWhere((e) => e.elementId == ing);
+      if (idx >= 0) elements.removeAt(idx);
+    }
+    _spawnElement(r.rewardMythicId);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('App One · Idle Merge')),
-      body: Padding(
-        padding: const EdgeInsets.all(12),
-        child: Column(
+      appBar: AppBar(title: const Text('원소 숙성소')),
+      body: switch (currentPage) {
+        0 => _buildHome(),
+        1 => _buildCodex(),
+        _ => _buildMega(),
+      },
+      bottomNavigationBar: _bottomNav(),
+    );
+  }
+
+  Widget _buildHome() {
+    return LayoutBuilder(
+      builder: (context, c) {
+        canvasSize = c.biggest;
+        return Stack(
           children: [
-            _hud(),
-            const SizedBox(height: 8),
-            Expanded(child: _tabBody()),
-          ],
-        ),
-      ),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: tabIndex,
-        destinations: const [
-          NavigationDestination(icon: Icon(Icons.grid_on), label: 'Board'),
-          NavigationDestination(icon: Icon(Icons.trending_up), label: 'Upgrades'),
-          NavigationDestination(icon: Icon(Icons.list_alt), label: 'Logs'),
-        ],
-        onDestinationSelected: (i) => setState(() => tabIndex = i),
-      ),
-    );
-  }
-
-  Widget _tabBody() {
-    return switch (tabIndex) {
-      0 => Column(children: [_actions(), if (_currentStepId == 'merge_1') const Padding(padding: EdgeInsets.only(top:6), child: Text('같은 원소 타일 2개를 순서대로 눌러 머지해보세요', style: TextStyle(color: Colors.orange))), const SizedBox(height: 8), _boardTools(), const SizedBox(height: 10), Expanded(child: _board())]),
-      1 => _upgrades(),
-      _ => _logs(),
-    };
-  }
-
-  Widget _hud() {
-    final nextTicketSec = game.tickets >= game.ticketCap
-        ? 0
-        : (game.ticketIntervalSec - game.ticketRemainderSec);
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(12),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Essence: ${game.essence.toStringAsFixed(1)}'),
-            Text('Residue: ${game.residue}'),
-            Text('Tap: ${game.tapValue.toStringAsFixed(1)} ${game.clickBurstSec > 0 ? '(Burst ${game.clickBurstSec.toStringAsFixed(1)}s)' : ''}'),
-            Text('AutoTap: ${game.autoTapEnabled ? 'ON' : 'OFF'} ${game.autoTapRemainSec > 0 ? '(run ${game.autoTapRemainSec.toStringAsFixed(1)}s)' : ''} ${game.autoTapCooldownSec > 0 ? '(cd ${game.autoTapCooldownSec.toStringAsFixed(1)}s)' : ''}'),
-            Text('Tickets: ${game.tickets}/${game.ticketCap} · next in ${nextTicketSec}s'),
-            Text('Board: ${game.filledCount}/${game.boardSlots} ${game.boardSlots < BoardGameState.size ? '(확장 가능)' : '(최대)'}'),
-            const SizedBox(height: 6),
-        Row(children: [
-          Expanded(
-            child: TextField(
-              decoration: const InputDecoration(isDense: true, hintText: '로그 검색'),
-              onChanged: (v) { setState(() => logQuery = v); _saveState(); },
-            ),
-          ),
-          const SizedBox(width: 8),
-          IconButton(
-            onPressed: () { setState(() => logDesc = !logDesc); _saveState(); },
-            icon: Icon(logDesc ? Icons.south : Icons.north),
-            tooltip: '정렬 토글',
-          ),
-        ]),
-        const SizedBox(height: 6),
-            _tutorialCard(),
-          ],
-        ),
-      ),
-    );
-  }
-
-
-  Widget _tutorialCard() {
-    while (tutorialIndex < kTutorialSteps.length && _isStepDone(kTutorialSteps[tutorialIndex].id)) {
-      final sid = kTutorialSteps[tutorialIndex].id;
-      if (!tutorialRewarded.contains(sid)) {
-        tutorialRewarded.add(sid);
-        game.tickets = (game.tickets + 1).clamp(0, game.ticketCap);
-        game.essence += 25;
-      }
-      tutorialIndex += 1;
-      _saveState();
-    }
-
-    if (tutorialIndex >= kTutorialSteps.length) {
-      return const Text('튜토리얼 완료 ✅');
-    }
-
-    final step = kTutorialSteps[tutorialIndex];
-    return Container(
-      padding: const EdgeInsets.all(8),
-      decoration: BoxDecoration(color: Colors.amber.shade50, borderRadius: BorderRadius.circular(8)),
-      child: Row(
-        children: [
-          Expanded(child: Text('미션 ${tutorialIndex + 1}/${kTutorialSteps.length} · ${step.title} - ${step.desc}')),
-          const SizedBox(width: 8),
-          FilledButton.tonal(
-            onPressed: () {
-              setState(() {
-                if (step.id == 'upgrade_1') tabIndex = 1;
-                if (step.id == 'log_open') tabIndex = 2;
-                if (step.id == 'summon_3' || step.id == 'merge_1' || step.id == 'transform_1') tabIndex = 0;
-              });
-            },
-            child: const Text('이동'),
-          ),
-        ],
-      ),
-    );
-  }
-
-  bool _isStepDone(String id) {
-    switch (id) {
-      case 'summon_3':
-        return game.summonCount >= 3;
-      case 'merge_1':
-        return game.mergeCount >= 1;
-      case 'transform_1':
-        return game.transformCountTotal >= 1;
-      case 'upgrade_1':
-        return game.upgradeCount >= 1;
-      case 'log_open':
-        return tabIndex == 2;
-      default:
-        return false;
-    }
-  }
-
-
-  String? get _currentStepId {
-    var idx = tutorialIndex;
-    while (idx < kTutorialSteps.length && _isStepDone(kTutorialSteps[idx].id)) {
-      idx += 1;
-    }
-    if (idx >= kTutorialSteps.length) return null;
-    return kTutorialSteps[idx].id;
-  }
-
-  Widget _actions() {
-    return Row(
-      children: [
-        Expanded(
-          child: FilledButton(
-            onPressed: () {
-              setState(() {
-                game.summonOne();
-              });
-              _saveState();
-            },
-            style: FilledButton.styleFrom(backgroundColor: _currentStepId == 'summon_3' ? Colors.orange : null),
-            child: const Text('Summon x1'),
-          ),
-        ),
-        const SizedBox(width: 8),
-        Expanded(
-          child: OutlinedButton(
-            onPressed: () {
-              setState(() {
-                for (var i = 0; i < 10; i++) {
-                  if (!game.summonOne()) break;
-                }
-              });
-              _saveState();
-            },
-            child: const Text('Summon x10'),
-          ),
-        ),
-        const SizedBox(width: 8),
-        Expanded(
-          child: OutlinedButton(
-            onPressed: () {
-              setState(() {
-                game.tap();
-              });
-              _saveState();
-            },
-            style: OutlinedButton.styleFrom(side: BorderSide(color: _currentStepId == 'merge_1' ? Colors.orange : Colors.grey)),
-            child: const Text('Tap'),
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _boardTools() {
-    return Row(
-      children: [
-        Expanded(
-          child: OutlinedButton(
-            onPressed: game.autoTapEnabled
-                ? () {
-                    setState(() {
-                      game.triggerAutoTap();
-                    });
-                    _saveState();
-                  }
-                : null,
-            child: const Text('AutoTap Start'),
-          ),
-        ),
-        const SizedBox(width: 8),
-        Expanded(
-          child: OutlinedButton(
-            onPressed: selected == null
-                ? null
-                : () {
-                    setState(() {
-                      game.stabilizerAt(selected!);
-                    });
-                    _saveState();
-                  },
-            child: const Text('Stabilize'),
-          ),
-        ),
-        const SizedBox(width: 8),
-        Expanded(
-          child: OutlinedButton(
-            onPressed: selected == null
-                ? null
-                : () {
-                    setState(() {
-                      game.catalystAt(selected!);
-                    });
-                    _saveState();
-                  },
-            child: const Text('Catalyst'),
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _board() {
-    return GridView.builder(
-      itemCount: game.boardSlots,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: BoardGameState.cols,
-        mainAxisSpacing: 6,
-        crossAxisSpacing: 6,
-      ),
-      itemBuilder: (context, index) {
-        final tile = game.board[index];
-        final isSelected = selected == index;
-        return InkWell(
-          onTap: () => setState(() {
-            if (tile == null) {
-              selected = null;
-              return;
-            }
-            if (selected == null) {
-              selected = index;
-              return;
-            }
-            if (selected != null && selected != index) {
-              final merged = game.merge(selected!, index);
-              selected = merged ? null : index;
-              if (merged) {
-                _saveState();
-              }
-            }
-          }),
-          child: Container(
-            decoration: BoxDecoration(
-              color: tile == null ? Colors.black12 : _colorFor(tile.form),
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(
-                color: isSelected ? Colors.amber : Colors.black26,
-                width: isSelected ? 3 : 1,
+            Positioned(
+              left: 12,
+              top: 12,
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Text('Tickets: $tickets/$ticketCap · 전설 <1%'),
+                ),
               ),
             ),
-            child: tile == null
-                ? const SizedBox.shrink()
-                : Center(
-                    child: Text(
-                      '${tile.form.name}\nT${tile.tier}',
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w600),
-                    ),
-                  ),
-          ),
+            ...elements.map(_elementWidget),
+            _trashWidget(),
+          ],
         );
       },
     );
   }
 
-  Widget _upgrades() {
-    Widget section(UpgradeCategory cat, String title) {
-      final list = kUpgradeDefs.where((u) => u.category == cat).toList();
-      return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 6),
-            child: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
-          ),
-          ...list.map((u) {
-            final purchased = (game.purchased[u.id] ?? 0) > 0;
-            final reason = game.cannotBuyReason(u);
-            return Card(
-              child: ListTile(
-                title: Text(u.name),
-                subtitle: Text('${u.category.name} · cost ${u.cost.toStringAsFixed(0)}${reason != null && !purchased ? ' · $reason' : ''}'),
-                trailing: FilledButton(
-                  onPressed: purchased
-                      ? null
-                      : () {
-                          setState(() {
-                            game.buyUpgrade(u);
-                          });
-                          _saveState();
-                        },
-                  child: Text(purchased ? 'Done' : 'Buy'),
+  Widget _elementWidget(FieldElement e) {
+    final def = elementDefs[e.elementId]!;
+    final isDragging = dragging?.uid == e.uid;
+    final isHoverTarget = hoverTargetUid == e.uid;
+
+    return Positioned(
+      left: e.position.dx,
+      top: e.position.dy,
+      child: GestureDetector(
+        onPanStart: (_) {
+          dragging = e;
+          dragDelta = Offset.zero;
+          hoverSec = 0;
+          trashHoldSec = 0;
+        },
+        onPanUpdate: (d) {
+          setState(() {
+            dragDelta += d.delta;
+            e.position = Offset(
+              (e.position.dx + d.delta.dx).clamp(0, canvasSize.width - 56),
+              (e.position.dy + d.delta.dy).clamp(0, canvasSize.height - 96),
+            );
+          });
+        },
+        onPanEnd: (_) {
+          setState(() {
+            _commitMergeIfReady();
+            _commitTrashIfReady();
+            dragging = null;
+            hoverTargetUid = null;
+            hoverSec = 0;
+            trashHoldSec = 0;
+          });
+        },
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              width: 56,
+              height: 56,
+              decoration: BoxDecoration(
+                color: _rarityColor(def.rarity),
+                borderRadius: BorderRadius.circular(28),
+                border: Border.all(
+                  color: isDragging ? Colors.black : (isHoverTarget ? Colors.amber : Colors.white),
+                  width: isDragging ? 3 : 2,
                 ),
               ),
-            );
-          }),
-        ],
-      );
-    }
-
-    return ListView(
-      children: [
-        const Text('Upgrades (v1)', style: TextStyle(fontWeight: FontWeight.bold)),
-        section(UpgradeCategory.summon, 'Summon'),
-        section(UpgradeCategory.production, 'Production'),
-        section(UpgradeCategory.transform, 'Transform'),
-        section(UpgradeCategory.clicker, 'Clicker'),
-      ],
-    );
-  }
-
-  Widget _logs() {
-    var items = game.getRecentLogs(type: logFilter, limit: 120);
-    if (logQuery.isNotEmpty) {
-      items = items.where((e) => e.payload.toString().toLowerCase().contains(logQuery.toLowerCase())).toList();
-    }
-    if (!logDesc) {
-      items = items.reversed.toList();
-    }
-    final byType = <LogType, int>{};
-    for (final e in game.logs) {
-      byType[e.type] = (byType[e.type] ?? 0) + 1;
-    }
-
-    final nowMs = DateTime.now().millisecondsSinceEpoch;
-    final recent24h = game.logs.where((e) => nowMs - e.timestampMs <= const Duration(hours: 24).inMilliseconds);
-    final merge24 = recent24h.where((e) => e.type == LogType.merge).length;
-    final trans24 = recent24h.where((e) => e.type == LogType.transform).length;
-    final summon24 = recent24h.where((e) => e.type == LogType.summon).length;
-    final essence24 = recent24h.fold<double>(0, (a, e) => a + e.deltaEssence);
-    final residue24 = recent24h.fold<int>(0, (a, e) => a + e.deltaResidue);
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text('Logbook', style: TextStyle(fontWeight: FontWeight.bold)),
-        const SizedBox(height: 8),
-        Card(
-          child: Padding(
-            padding: const EdgeInsets.all(10),
-            child: Text('24h 요약 · summon $summon24 / merge $merge24 / transform $trans24 / essence ${essence24.toStringAsFixed(1)} / residue $residue24'),
-          ),
-        ),
-        const SizedBox(height: 6),
-        Wrap(
-          spacing: 6,
-          children: [
-            ChoiceChip(
-              label: const Text('전체'),
-              selected: logFilter == null,
-              onSelected: (_) { setState(() => logFilter = null); _saveState(); },
-            ),
-            ...LogType.values.map(
-              (t) => ChoiceChip(
-                label: Text('${t.name} (${byType[t] ?? 0})'),
-                selected: logFilter == t,
-                onSelected: (_) { setState(() => logFilter = t); _saveState(); },
+              child: Center(
+                child: Text(def.name, style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
               ),
             ),
+            if (isHoverTarget && dragging != null)
+              Positioned.fill(
+                child: CircularProgressIndicator(
+                  value: (hoverSec / 3).clamp(0, 1),
+                  strokeWidth: 3,
+                ),
+              ),
           ],
         ),
-        const SizedBox(height: 8),
-        Expanded(
-          child: ListView.builder(
-            itemCount: items.length,
-            itemBuilder: (context, i) {
-              final e = items[i];
-              if (e.type == LogType.offlineSummary) {
-                return Card(
-                  color: Colors.indigo.shade50,
-                  child: ListTile(
-                    title: const Text('Offline Summary'),
-                    subtitle: Text(e.payload.toString()),
-                  ),
-                );
-              }
-              return ListTile(
-                dense: true,
-                title: Text(e.type.name),
-                subtitle: Text(e.payload.toString()),
-                trailing: Text(
-                  e.isOffline ? 'offline' : '',
-                  style: const TextStyle(fontSize: 11),
-                ),
-              );
-            },
-          ),
-        ),
-      ],
+      ),
     );
   }
 
-  void _showOfflineSummary(OfflineSummary s) {
-    showDialog<void>(
-      context: context,
-      builder: (_) => AlertDialog(
-        title: const Text('오프라인 정산'),
-        content: SingleChildScrollView(
-          child: Text(
-            '경과: ${s.elapsedSec}s\n'
-            'Essence: +${s.essenceGained.toStringAsFixed(1)}\n'
-            'Residue: +${s.residueGained}\n'
-            'Tickets: +${s.ticketsGained}\n'
-            'Transform: ${s.transformCount}회\n\n'
-            '상세:\n${s.transformGroups.entries.map((e) => '- ${e.key} x${e.value}').join('\n')}',
+  Widget _trashWidget() {
+    final progress = (trashHoldSec / 3).clamp(0.0, 1.0).toDouble();
+    return Positioned(
+      right: 16,
+      bottom: 16,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
+            width: 72,
+            height: 72,
+            decoration: BoxDecoration(
+              color: Colors.red.shade100,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: Colors.red.shade700, width: 2),
+            ),
+            child: const Icon(Icons.delete_forever),
           ),
-        ),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(context), child: const Text('확인')),
+          if (trashHoldSec > 0)
+            SizedBox(
+              width: 72,
+              height: 72,
+              child: CircularProgressIndicator(value: progress, strokeWidth: 3),
+            ),
         ],
       ),
     );
   }
 
-  Color _colorFor(ElementForm form) {
-    return switch (form) {
-      ElementForm.flame || ElementForm.smoke || ElementForm.ash || ElementForm.soot => Colors.deepOrange.shade200,
-      ElementForm.water || ElementForm.vapor || ElementForm.cloud || ElementForm.dew => Colors.blue.shade200,
-      ElementForm.soil || ElementForm.mud || ElementForm.clay || ElementForm.stone => Colors.brown.shade200,
-      _ => Colors.cyan.shade200,
+  Widget _buildCodex() {
+    final all = elementDefs.values.toList()..sort((a, b) => a.name.compareTo(b.name));
+    return ListView(
+      padding: const EdgeInsets.all(12),
+      children: [
+        const Text('도감', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        const SizedBox(height: 8),
+        ...all.map((e) {
+          final found = discovered.contains(e.id);
+          return ListTile(
+            leading: Icon(found ? Icons.check_circle : Icons.radio_button_unchecked),
+            title: Text(e.name),
+            subtitle: Text('등급: ${e.rarity.name}'),
+            trailing: Text(found ? '발견' : '미발견'),
+          );
+        }),
+      ],
+    );
+  }
+
+  Widget _buildMega() {
+    return ListView(
+      padding: const EdgeInsets.all(12),
+      children: [
+        const Text('대규모 합성', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        const SizedBox(height: 8),
+        ...megaRecipes.map((r) {
+          final active = _canMega(r);
+          final reward = elementDefs[r.rewardMythicId]!;
+          return Card(
+            child: ListTile(
+              title: Text('${r.ingredients.join(' + ')} => ${reward.name}'),
+              subtitle: Text(active ? '활성화됨 (3초 꾹 눌러 발동)' : '재료 부족'),
+              trailing: _Hold3sButton(
+                enabled: active,
+                onCommit: () {
+                  setState(() {
+                    _consumeForMega(r);
+                  });
+                },
+              ),
+            ),
+          );
+        }),
+      ],
+    );
+  }
+
+  Widget _bottomNav() {
+    return BottomAppBar(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+        child: Row(
+          children: [
+            Expanded(
+              child: IconButton(
+                onPressed: () => _showTimeInfo(),
+                icon: const Icon(Icons.schedule),
+                tooltip: '시간',
+              ),
+            ),
+            Expanded(
+              child: IconButton(
+                onPressed: () => _openGachaSheet(),
+                icon: const Icon(Icons.casino),
+                tooltip: '원소 가챠',
+              ),
+            ),
+            Expanded(
+              child: FilledButton.tonal(
+                onPressed: () => setState(() => currentPage = 0),
+                child: const Text('홈'),
+              ),
+            ),
+            Expanded(
+              child: IconButton(
+                onPressed: () => setState(() => currentPage = 1),
+                icon: const Icon(Icons.menu_book),
+                tooltip: '도감',
+              ),
+            ),
+            Expanded(
+              child: IconButton(
+                onPressed: () => setState(() => currentPage = 2),
+                icon: const Icon(Icons.auto_awesome),
+                tooltip: '대규모 합성',
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _showTimeInfo() {
+    showDialog<void>(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: const Text('시간 정보'),
+        content: Text('다음 티켓까지: ${600 - ticketRemainSec}s'),
+        actions: [TextButton(onPressed: () => Navigator.pop(context), child: const Text('확인'))],
+      ),
+    );
+  }
+
+  void _openGachaSheet() {
+    showModalBottomSheet<void>(
+      context: context,
+      builder: (_) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text('원소 가챠 확률', style: TextStyle(fontWeight: FontWeight.bold)),
+              const Text('일반 72% / 희귀 20% / 특수 7.2% / 전설 0.8% (<1%)'),
+              const SizedBox(height: 8),
+              Row(
+                children: [
+                  Expanded(
+                    child: FilledButton(
+                      onPressed: () {
+                        setState(() => _spawnFromGacha(count: 1));
+                        Navigator.pop(context);
+                      },
+                      child: const Text('1회'),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: OutlinedButton(
+                      onPressed: () {
+                        setState(() => _spawnFromGacha(count: 10));
+                        Navigator.pop(context);
+                      },
+                      child: const Text('10회'),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Color _rarityColor(Rarity r) {
+    return switch (r) {
+      Rarity.common => Colors.grey.shade300,
+      Rarity.rare => Colors.blue.shade200,
+      Rarity.special => Colors.purple.shade200,
+      Rarity.legendary => Colors.orange.shade300,
+      Rarity.finalTier => Colors.red.shade300,
+      Rarity.mythic => Colors.amber.shade300,
     };
   }
+}
 
-  Future<void> _loadState() async {
-    final prefs = await SharedPreferences.getInstance();
-    final raw = prefs.getString(_saveKey);
-    if (raw == null || raw.isEmpty) return;
-    try {
-      final map = jsonDecode(raw) as Map<String, dynamic>;
-      if (!mounted) return;
-      setState(() {
-        game = BoardGameState.fromMap(map);
-      });
-      final f = prefs.getString(_logFilterKey);
-      if (f != null && f.isNotEmpty) {
-        logFilter = LogType.values.firstWhere((e) => e.name == f, orElse: () => LogType.summon);
+class _Hold3sButton extends StatefulWidget {
+  const _Hold3sButton({required this.enabled, required this.onCommit});
+
+  final bool enabled;
+  final VoidCallback onCommit;
+
+  @override
+  State<_Hold3sButton> createState() => _Hold3sButtonState();
+}
+
+class _Hold3sButtonState extends State<_Hold3sButton> {
+  Timer? timer;
+  double sec = 0;
+
+  void _start() {
+    if (!widget.enabled) return;
+    timer?.cancel();
+    sec = 0;
+    timer = Timer.periodic(const Duration(milliseconds: 100), (t) {
+      setState(() => sec += 0.1);
+      if (sec >= 3) {
+        t.cancel();
+        sec = 0;
+        widget.onCommit();
       }
-      tutorialIndex = prefs.getInt('app_one_tutorial_idx') ?? 0;
-      logDesc = prefs.getBool('app_one_log_desc') ?? true;
-      logQuery = prefs.getString(_logQueryKey) ?? '';
-      tutorialRewarded.addAll((prefs.getStringList('app_one_tutorial_rewarded') ?? const []));
-    } catch (_) {
-      // ignore broken save
-    }
+    });
   }
 
-
-  Future<void> _loadBalancePreset() async {
-    try {
-      final raw = await rootBundle.loadString('assets/config/balance_preset.json');
-      final json = jsonDecode(raw) as Map<String, dynamic>;
-      final interval = (json['ticketIntervalSec'] as num?)?.toInt();
-      final cap = (json['ticketCap'] as num?)?.toInt();
-      if (interval != null && interval > 0) game.ticketIntervalSec = interval;
-      if (cap != null && cap > 0) game.ticketCap = cap;
-      if (mounted) setState(() {});
-    } catch (_) {
-      // ignore preset load failures
-    }
+  void _stop() {
+    timer?.cancel();
+    setState(() => sec = 0);
   }
 
-  Future<void> _saveState() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(_saveKey, jsonEncode(game.toMap()));
-    await prefs.setString(_logFilterKey, logFilter?.name ?? '');
-    await prefs.setInt('app_one_tutorial_idx', tutorialIndex);
-    await prefs.setBool('app_one_log_desc', logDesc);
-    await prefs.setString(_logQueryKey, logQuery);
-    await prefs.setStringList('app_one_tutorial_rewarded', tutorialRewarded.toList());
+  @override
+  void dispose() {
+    timer?.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTapDown: (_) => _start(),
+      onTapUp: (_) => _stop(),
+      onTapCancel: _stop,
+      child: SizedBox(
+        width: 56,
+        height: 56,
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            CircleAvatar(
+              backgroundColor: widget.enabled ? Colors.green.shade100 : Colors.grey.shade300,
+              child: const Icon(Icons.play_arrow),
+            ),
+            if (sec > 0)
+              CircularProgressIndicator(value: (sec / 3).clamp(0, 1), strokeWidth: 3),
+          ],
+        ),
+      ),
+    );
   }
 }
