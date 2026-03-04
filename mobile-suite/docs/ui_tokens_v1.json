@@ -1,0 +1,26 @@
+{
+  "color": {
+    "bg": "#0F172A",
+    "surface": "#111827",
+    "primary": "#14B8A6",
+    "accent": "#F59E0B",
+    "danger": "#EF4444",
+    "textPrimary": "#F8FAFC",
+    "textSecondary": "#CBD5E1"
+  },
+  "typography": {
+    "title": {"size": 22, "weight": 700},
+    "section": {"size": 16, "weight": 600},
+    "body": {"size": 13, "weight": 500},
+    "caption": {"size": 11, "weight": 500}
+  },
+  "spacing": {"xs": 4, "sm": 8, "md": 12, "lg": 16, "xl": 24},
+  "radius": {"sm": 8, "md": 12, "lg": 16, "pill": 999},
+  "motion": {
+    "holdSeconds": 2.0,
+    "fastMs": 120,
+    "normalMs": 220,
+    "slowMs": 320,
+    "easing": "easeOutCubic"
+  }
+}

@@ -1,0 +1,11 @@
+element_id,rarity,base_shape,overlay_fx,state_variant,priority
+fire,common,orb,none,idle,high
+water,common,orb,none,idle,high
+earth,common,orb,none,idle,high
+air,common,orb,none,idle,high
+steam,rare,orb,mist,idle,medium
+mud,rare,orb,splash,idle,medium
+dust,special,orb,dust_spark,idle,medium
+energy,legendary,orb,electric_arc,idle,high
+philosopher_stone,finalTier,gem,final_glyph,idle,high
+phoenix_seed,mythic,seed,mythic_aura,idle,high
