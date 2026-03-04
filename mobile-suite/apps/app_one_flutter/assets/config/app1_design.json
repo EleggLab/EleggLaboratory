@@ -1,0 +1,15 @@
+{
+  "gacha": {
+    "common": 0.72,
+    "rare": 0.20,
+    "special": 0.072,
+    "legendary": 0.008
+  },
+  "megaRecipes": [
+    {
+      "id": "mega_1",
+      "ingredients": ["fire", "water", "earth", "air"],
+      "rewardMythicId": "phoenix_seed"
+    }
+  ]
+}

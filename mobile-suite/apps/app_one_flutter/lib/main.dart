@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'dart:math';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
@@ -53,7 +55,7 @@ const mergeRecipes = <String, String>{
   'fire+air': 'energy',
 };
 
-const megaRecipes = <MegaRecipe>[
+const defaultMegaRecipes = <MegaRecipe>[
   MegaRecipe(
     id: 'mega_1',
     ingredients: ['fire', 'water', 'earth', 'air'],
@@ -95,6 +97,14 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
   int ticketRemainSec = 0;
   int adRewardUsedToday = 0;
 
+  double gachaCommon = 0.72;
+  double gachaRare = 0.20;
+  double gachaSpecial = 0.072;
+  double gachaLegendary = 0.008;
+
+  List<MegaRecipe> megaRecipes = List<MegaRecipe>.from(defaultMegaRecipes);
+  String? lastSpawnUid;
+
   Size canvasSize = const Size(380, 580);
 
   FieldElement? dragging;
@@ -109,6 +119,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
   void initState() {
     super.initState();
     _loadAdRewardState();
+    _loadDesignConfig();
     loop = Timer.periodic(const Duration(milliseconds: 100), (_) {
       setState(() {
         _tick(0.1);
@@ -159,11 +170,11 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
       tickets -= 1;
       final roll = random.nextDouble();
       String id;
-      if (roll < 0.72) {
+      if (roll < gachaCommon) {
         id = ['fire', 'water', 'earth', 'air'][random.nextInt(4)];
-      } else if (roll < 0.92) {
+      } else if (roll < gachaCommon + gachaRare) {
         id = ['steam', 'mud'][random.nextInt(2)];
-      } else if (roll < 0.992) {
+      } else if (roll < gachaCommon + gachaRare + gachaSpecial) {
         id = 'dust';
       } else {
         id = 'energy';
@@ -179,6 +190,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
     );
     final e = FieldElement(uid: '${DateTime.now().microsecondsSinceEpoch}_${random.nextInt(9999)}', elementId: id, position: p);
     elements.add(e);
+    lastSpawnUid = e.uid;
     discovered.add(id);
   }
 
@@ -269,11 +281,21 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
             Positioned(
               left: 12,
               top: 12,
-              child: Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(8),
-                  child: Text('Tickets: $tickets/$ticketCap · 전설 <1%'),
-                ),
+              child: Row(
+                children: [
+                  Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: Text('Tickets: $tickets/$ticketCap · 전설 <1%'),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  FilledButton.tonalIcon(
+                    onPressed: _autoArrangeElements,
+                    icon: const Icon(Icons.auto_fix_high),
+                    label: const Text('정렬'),
+                  ),
+                ],
               ),
             ),
             ...elements.map(_elementWidget),
@@ -328,8 +350,8 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
                 color: _rarityColor(def.rarity),
                 borderRadius: BorderRadius.circular(28),
                 border: Border.all(
-                  color: isDragging ? Colors.black : (isHoverTarget ? Colors.amber : Colors.white),
-                  width: isDragging ? 3 : 2,
+                  color: isDragging ? Colors.black : (isHoverTarget ? Colors.amber : (lastSpawnUid == e.uid ? Colors.green : Colors.white)),
+                  width: isDragging ? 3 : (lastSpawnUid == e.uid ? 3 : 2),
                 ),
               ),
               child: Center(
@@ -407,10 +429,11 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
         ...megaRecipes.map((r) {
           final active = _canMega(r);
           final reward = elementDefs[r.rewardMythicId]!;
+          final status = _megaIngredientStatus(r);
           return Card(
             child: ListTile(
               title: Text('${r.ingredients.join(' + ')} => ${reward.name}'),
-              subtitle: Text(active ? '활성화됨 (3초 꾹 눌러 발동)' : '재료 부족'),
+              subtitle: Text(active ? '활성화됨 (3초 꾹 눌러 발동)' : '재료 부족: $status'),
               trailing: _Hold3sButton(
                 enabled: active,
                 onCommit: () {
@@ -494,7 +517,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text('원소 가챠 확률', style: TextStyle(fontWeight: FontWeight.bold)),
-              const Text('일반 72% / 희귀 20% / 특수 7.2% / 전설 0.8% (<1%)'),
+              Text('일반 ${(gachaCommon*100).toStringAsFixed(1)}% / 희귀 ${(gachaRare*100).toStringAsFixed(1)}% / 특수 ${(gachaSpecial*100).toStringAsFixed(1)}% / 전설 ${(gachaLegendary*100).toStringAsFixed(2)}%'),
               const SizedBox(height: 8),
               Row(
                 children: [
@@ -583,6 +606,66 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
     });
 
     await prefs.setInt(_adCountKey, adRewardUsedToday);
+  }
+
+  Future<void> _loadDesignConfig() async {
+    try {
+      final raw = await rootBundle.loadString('assets/config/app1_design.json');
+      final json = jsonDecode(raw) as Map<String, dynamic>;
+      final g = json['gacha'] as Map<String, dynamic>?;
+      if (g != null) {
+        gachaCommon = (g['common'] as num?)?.toDouble() ?? gachaCommon;
+        gachaRare = (g['rare'] as num?)?.toDouble() ?? gachaRare;
+        gachaSpecial = (g['special'] as num?)?.toDouble() ?? gachaSpecial;
+        gachaLegendary = (g['legendary'] as num?)?.toDouble() ?? gachaLegendary;
+      }
+      final list = json['megaRecipes'];
+      if (list is List) {
+        megaRecipes = list
+            .whereType<Map>()
+            .map((m) => MegaRecipe(
+                  id: (m['id'] ?? '').toString(),
+                  ingredients: ((m['ingredients'] as List?) ?? const []).map((e) => e.toString()).toList(),
+                  rewardMythicId: (m['rewardMythicId'] ?? '').toString(),
+                ))
+            .where((r) => r.id.isNotEmpty && r.ingredients.length == 4 && r.rewardMythicId.isNotEmpty)
+            .toList();
+        if (megaRecipes.isEmpty) {
+          megaRecipes = List<MegaRecipe>.from(defaultMegaRecipes);
+        }
+      }
+      if (mounted) setState(() {});
+    } catch (_) {
+      // fallback to defaults
+    }
+  }
+
+  void _autoArrangeElements() {
+    const col = 6;
+    const x0 = 20.0;
+    const y0 = 90.0;
+    const gapX = 60.0;
+    const gapY = 64.0;
+    for (var i = 0; i < elements.length; i++) {
+      final r = i ~/ col;
+      final c = i % col;
+      elements[i].position = Offset(x0 + c * gapX, y0 + r * gapY);
+    }
+    setState(() {});
+  }
+
+  String _megaIngredientStatus(MegaRecipe r) {
+    final counts = <String, int>{};
+    for (final e in elements) {
+      counts[e.elementId] = (counts[e.elementId] ?? 0) + 1;
+    }
+    final chunks = <String>[];
+    for (final ing in r.ingredients) {
+      final has = (counts[ing] ?? 0) > 0;
+      chunks.add('${elementDefs[ing]?.name ?? ing}:${has ? 'O' : 'X'}');
+      if (has) counts[ing] = (counts[ing] ?? 1) - 1;
+    }
+    return chunks.join(', ');
   }
 
   Color _rarityColor(Rarity r) {
