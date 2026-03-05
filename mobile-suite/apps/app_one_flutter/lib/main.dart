@@ -68,6 +68,8 @@ const defaultMegaRecipes = <MegaRecipe>[
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -95,6 +97,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
   static const _adDayKey = 'app1_ad_day';
   static const _adCountKey = 'app1_ad_count';
   static const _adExpireKey = 'app1_ad_expire_ms';
+  static const _saveStateKey = 'app1_state_v2';
   static const double holdSec = 2.0;
   static const int maxFieldElements = 80;
 
@@ -136,6 +139,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
   double trashHoldSec = 0;
 
   Timer? loop;
+  double _autosaveSec = 0;
 
   @override
   void initState() {
@@ -143,6 +147,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
     _loadAdRewardState();
     _loadDesignConfig();
     _loadBalanceConfig();
+    _loadGameState();
     loop = Timer.periodic(const Duration(milliseconds: 100), (_) {
       setState(() => _tick(0.1));
     });
@@ -151,6 +156,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
   @override
   void dispose() {
     loop?.cancel();
+    _saveGameState();
     super.dispose();
   }
 
@@ -175,6 +181,12 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
 
     if (_isAdBuffActive && DateTime.now().isAfter(adBuffExpiresAt!)) {
       adBuffExpiresAt = null;
+    }
+
+    _autosaveSec += dt;
+    if (_autosaveSec >= 5) {
+      _autosaveSec = 0;
+      _saveGameState();
     }
 
     if (dragging != null) {
@@ -220,6 +232,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
       elementPoint -= total;
       tickets = (tickets + count).clamp(0, ticketCap);
     });
+    _saveGameState();
   }
 
   void _spawnFromGacha({int count = 1}) {
@@ -249,6 +262,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
     final e = FieldElement(uid: '${DateTime.now().microsecondsSinceEpoch}_${random.nextInt(9999)}', elementId: id, position: p);
     elements.add(e);
     discovered.add(id);
+    _saveGameState();
   }
 
 
@@ -367,6 +381,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
       if (idx >= 0) elements.removeAt(idx);
     }
     _spawnElement(r.rewardMythicId);
+    _saveGameState();
   }
 
   void _autoArrangeElements() {
@@ -438,6 +453,92 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
     } catch (_) {}
   }
 
+
+  Future<void> _saveGameState() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final map = {
+        'page': page,
+        'tickets': tickets,
+        'ticketCap': ticketCap,
+        'elementPoint': elementPoint,
+        'clickBase': clickBase,
+        'passivePointPerSec': passivePointPerSec,
+        'finalElementClickBonus': finalElementClickBonus,
+        'ticketPointCost': ticketPointCost,
+        'adRewardUsedToday': adRewardUsedToday,
+        'adDailyClaims': adDailyClaims,
+        'adTicketRewardAmount': adTicketRewardAmount,
+        'adBuffHours': adBuffHours,
+        'adBuffMultiplier': adBuffMultiplier,
+        'adBuffExpiresAtMs': adBuffExpiresAt?.millisecondsSinceEpoch,
+        'discovered': discovered.toList(),
+        'elements': elements
+            .map((e) => {
+                  'uid': e.uid,
+                  'elementId': e.elementId,
+                  'x': e.position.dx,
+                  'y': e.position.dy,
+                })
+            .toList(),
+      };
+      await prefs.setString(_saveStateKey, jsonEncode(map));
+    } catch (_) {}
+  }
+
+  Future<void> _loadGameState() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final raw = prefs.getString(_saveStateKey);
+      if (raw == null || raw.isEmpty) return;
+      final map = jsonDecode(raw) as Map<String, dynamic>;
+
+      final loadedElements = <FieldElement>[];
+      final els = map['elements'];
+      if (els is List) {
+        for (final it in els.whereType<Map>()) {
+          loadedElements.add(FieldElement(
+            uid: (it['uid'] ?? '').toString(),
+            elementId: (it['elementId'] ?? 'fire').toString(),
+            position: Offset(
+              (it['x'] as num?)?.toDouble() ?? 30,
+              (it['y'] as num?)?.toDouble() ?? 100,
+            ),
+          ));
+        }
+      }
+
+      if (!mounted) return;
+      setState(() {
+        page = (map['page'] as num?)?.toInt() ?? page;
+        tickets = (map['tickets'] as num?)?.toInt() ?? tickets;
+        ticketCap = (map['ticketCap'] as num?)?.toInt() ?? ticketCap;
+        elementPoint = (map['elementPoint'] as num?)?.toInt() ?? elementPoint;
+        clickBase = (map['clickBase'] as num?)?.toInt() ?? clickBase;
+        passivePointPerSec = (map['passivePointPerSec'] as num?)?.toDouble() ?? passivePointPerSec;
+        finalElementClickBonus = (map['finalElementClickBonus'] as num?)?.toInt() ?? finalElementClickBonus;
+        ticketPointCost = (map['ticketPointCost'] as num?)?.toInt() ?? ticketPointCost;
+        adRewardUsedToday = (map['adRewardUsedToday'] as num?)?.toInt() ?? adRewardUsedToday;
+        adDailyClaims = (map['adDailyClaims'] as num?)?.toInt() ?? adDailyClaims;
+        adTicketRewardAmount = (map['adTicketRewardAmount'] as num?)?.toInt() ?? adTicketRewardAmount;
+        adBuffHours = (map['adBuffHours'] as num?)?.toInt() ?? adBuffHours;
+        adBuffMultiplier = (map['adBuffMultiplier'] as num?)?.toInt() ?? adBuffMultiplier;
+        final expMs = (map['adBuffExpiresAtMs'] as num?)?.toInt();
+        adBuffExpiresAt = expMs == null ? adBuffExpiresAt : DateTime.fromMillisecondsSinceEpoch(expMs);
+
+        discovered
+          ..clear()
+          ..addAll(((map['discovered'] as List?) ?? const []).map((e) => e.toString()));
+
+        if (loadedElements.isNotEmpty) {
+          elements
+            ..clear()
+            ..addAll(loadedElements);
+        }
+      });
+    } catch (_) {}
+  }
+
   Future<void> _loadAdRewardState() async {
     final prefs = await SharedPreferences.getInstance();
     final now = DateTime.now();
@@ -481,6 +582,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
     });
 
     await prefs.setInt(_adCountKey, adRewardUsedToday);
+    _saveGameState();
   }
 
   Future<void> _activateAdBuff() async {
@@ -489,7 +591,10 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
     final exp = DateTime.now().add(Duration(hours: adBuffHours));
     setState(() => adBuffExpiresAt = exp);
     await prefs.setInt(_adExpireKey, exp.millisecondsSinceEpoch);
+    _saveGameState();
   }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -550,7 +655,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
                     color: const Color(0x55222B3A),
                     child: Padding(
                       padding: const EdgeInsets.all(8),
-                      child: Text('Tickets: $tickets/$ticketCap · 포인트: $elementPoint · 원소 ${elements.length}/$maxFieldElements', style: const TextStyle(color: Color(0xFFE5E7EB))),
+                      child: Text('Tickets: $tickets/$ticketCap · 포인트: $elementPoint · 원소 ${elements.length}/$maxFieldElements${elements.length >= maxFieldElements ? ' (가득 참)' : ''}', style: const TextStyle(color: Color(0xFFE5E7EB))),
                     ),
                   ),
                   const SizedBox(width: 8),
@@ -908,7 +1013,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
   Widget _navBtn(String label, int idx, IconData icon) {
     final selected = page == idx;
     return InkWell(
-      onTap: () => setState(() => page = idx),
+      onTap: () { setState(() => page = idx); _saveGameState(); },
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 2),
         padding: const EdgeInsets.symmetric(vertical: 2),
@@ -997,6 +1102,8 @@ class _Hold3sButtonState extends State<_Hold3sButton> {
     timer?.cancel();
     super.dispose();
   }
+
+
 
   @override
   Widget build(BuildContext context) {
