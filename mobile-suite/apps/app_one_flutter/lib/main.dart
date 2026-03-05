@@ -140,6 +140,8 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
 
   Timer? loop;
   double _autosaveSec = 0;
+  bool megaActiveOnly = false;
+  String megaQuery = '';
 
   @override
   void initState() {
@@ -306,17 +308,27 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
   }
 
   FieldElement? _findNearestTarget(FieldElement src) {
-    FieldElement? best;
-    var bestDist = 999999.0;
+    FieldElement? bestAny;
+    var bestAnyDist = 999999.0;
+    FieldElement? bestCombinable;
+    var bestCombDist = 999999.0;
+
     for (final e in elements) {
       if (e.uid == src.uid) continue;
       final d = (e.position - src.position).distance;
-      if (d < bestDist && d <= 56) {
-        bestDist = d;
-        best = e;
+      if (d > 56) continue;
+
+      if (d < bestAnyDist) {
+        bestAnyDist = d;
+        bestAny = e;
+      }
+
+      if (_isCombinable(src.elementId, e.elementId) && d < bestCombDist) {
+        bestCombDist = d;
+        bestCombinable = e;
       }
     }
-    return best;
+    return bestCombinable ?? bestAny;
   }
 
   bool _isOverTrash(Offset p) {
@@ -346,6 +358,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
   void _commitTrashIfReady() {
     if (dragging == null || trashHoldSec < holdSec) return;
     elements.removeWhere((e) => e.uid == dragging!.uid);
+    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('원소 삭제됨'), duration: Duration(milliseconds: 450)));
   }
 
   bool _canMega(MegaRecipe r) {
@@ -383,6 +396,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
     }
     _spawnElement(r.rewardMythicId);
     _saveGameState();
+    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('대규모 합성 성공! 신화 원소 획득'), duration: Duration(milliseconds: 700)));
   }
 
   void _autoArrangeElements() {
@@ -963,12 +977,45 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
 
   Widget _buildMega() {
     final normalEntries = mergeRecipes.entries.toList();
+
+    final filteredMega = megaRecipes.where((r) {
+      final txt = '${r.ingredients.join(' ')} ${r.rewardMythicId}'.toLowerCase();
+      if (megaQuery.isNotEmpty && !txt.contains(megaQuery.toLowerCase())) return false;
+      if (megaActiveOnly && !_canMega(r)) return false;
+      return true;
+    }).toList();
+
+    final activeCount = megaRecipes.where(_canMega).length;
+
     return ListView(
       padding: const EdgeInsets.all(12),
       children: [
         _title('대규모 합성'),
         const SizedBox(height: 8),
-        ...megaRecipes.map((r) {
+        Text('활성 레시피: $activeCount / ${megaRecipes.length}'),
+        const SizedBox(height: 8),
+        Row(
+          children: [
+            Expanded(
+              child: TextField(
+                decoration: const InputDecoration(
+                  isDense: true,
+                  hintText: '레시피 검색',
+                  filled: true,
+                ),
+                onChanged: (v) => setState(() => megaQuery = v),
+              ),
+            ),
+            const SizedBox(width: 8),
+            FilterChip(
+              label: const Text('활성만'),
+              selected: megaActiveOnly,
+              onSelected: (v) => setState(() => megaActiveOnly = v),
+            ),
+          ],
+        ),
+        const SizedBox(height: 8),
+        ...filteredMega.map((r) {
           final active = _canMega(r);
           final reward = elementDefs[r.rewardMythicId]!;
           return Card(

@@ -6,10 +6,15 @@
     "legendary": 0.008
   },
   "megaRecipes": [
-    {
-      "id": "mega_1",
-      "ingredients": ["fire", "water", "earth", "air"],
-      "rewardMythicId": "phoenix_seed"
-    }
+    { "id": "mega_1", "ingredients": ["fire", "water", "earth", "air"], "rewardMythicId": "phoenix_seed" },
+    { "id": "mega_2", "ingredients": ["steam", "mud", "dust", "energy"], "rewardMythicId": "phoenix_seed" },
+    { "id": "mega_3", "ingredients": ["fire", "steam", "earth", "dust"], "rewardMythicId": "phoenix_seed" },
+    { "id": "mega_4", "ingredients": ["water", "mud", "air", "energy"], "rewardMythicId": "phoenix_seed" },
+    { "id": "mega_5", "ingredients": ["fire", "water", "steam", "energy"], "rewardMythicId": "phoenix_seed" },
+    { "id": "mega_6", "ingredients": ["earth", "air", "dust", "mud"], "rewardMythicId": "phoenix_seed" },
+    { "id": "mega_7", "ingredients": ["energy", "steam", "air", "water"], "rewardMythicId": "phoenix_seed" },
+    { "id": "mega_8", "ingredients": ["energy", "dust", "fire", "earth"], "rewardMythicId": "phoenix_seed" },
+    { "id": "mega_9", "ingredients": ["mud", "steam", "water", "earth"], "rewardMythicId": "phoenix_seed" },
+    { "id": "mega_10", "ingredients": ["fire", "air", "dust", "steam"], "rewardMythicId": "phoenix_seed" }
   ]
 }
