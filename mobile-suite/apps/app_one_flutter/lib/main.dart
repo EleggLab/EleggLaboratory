@@ -105,7 +105,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
   final elements = <FieldElement>[];
   final discovered = <String>{};
 
-  int page = 2; // 0 time, 1 gacha, 2 home, 3 codex, 4 mega, 5 ads
+  int page = 2; // 0 time, 1 gacha, 2 home, 3 codex, 4 mega
 
   int tickets = 20;
   int ticketCap = 30;
@@ -150,6 +150,14 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
     _loadDesignConfig();
     _loadBalanceConfig();
     _loadGameState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (elements.isEmpty) {
+        _spawnElement('fire');
+        _spawnElement('water');
+        _spawnElement('earth');
+        _spawnElement('air');
+      }
+    });
     loop = Timer.periodic(const Duration(milliseconds: 100), (_) {
       setState(() => _tick(0.1));
     });
@@ -632,8 +640,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
           1 => _buildGachaPage(),
           2 => _buildHome(),
           3 => _buildCodex(),
-          4 => _buildMega(),
-          _ => _buildAdsPage(),
+          _ => _buildMega(),
         },
       ),
       bottomNavigationBar: _bottomNav(),
@@ -738,13 +745,13 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
               (e.position.dx + d.delta.dx).clamp(0, canvasSize.width - 56),
               (e.position.dy + d.delta.dy).clamp(0, canvasSize.height - 96),
             );
-            _pushAwayNearby(e);
           });
         },
         onPanEnd: (_) {
           setState(() {
             _commitMergeIfReady();
             _commitTrashIfReady();
+            if (dragging != null) _pushAwayNearby(dragging!);
             dragging = null;
             hoverTargetUid = null;
             hoverTargetCombinable = false;
@@ -868,16 +875,41 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
           Text('원소 포인트: $elementPoint'),
           Text('클릭 파워: $_clickPower'),
           const SizedBox(height: 12),
-          FilledButton.icon(
-            style: FilledButton.styleFrom(backgroundColor: const Color(0xFF2CCFBF), foregroundColor: Colors.black87),
-            onPressed: _clickGain,
-            icon: const Icon(Icons.touch_app),
-            label: const Text('클릭 (+포인트)'),
+          const SizedBox(height: 12),
+          Center(
+            child: SizedBox(
+              width: 260,
+              height: 72,
+              child: FilledButton.icon(
+                style: FilledButton.styleFrom(
+                  backgroundColor: const Color(0xFF2CCFBF),
+                  foregroundColor: Colors.black87,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+                ),
+                onPressed: _clickGain,
+                icon: const Icon(Icons.touch_app, size: 28),
+                label: const Text('클릭 (+포인트)', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+              ),
+            ),
           ),
           const SizedBox(height: 8),
           Text('기본: 1초당 포인트 ${passivePointPerSec.toStringAsFixed(1)}개, 클릭 시 +$clickBase (최종원소 보너스 +$finalElementClickBonus)'),
           if (_isAdBuffActive)
             Text('광고 버프 적용 중: ${adBuffExpiresAt!.difference(DateTime.now()).inHours}h 남음'),
+          const SizedBox(height: 18),
+          const Divider(),
+          const SizedBox(height: 8),
+          const Text('광고 버프', style: TextStyle(fontWeight: FontWeight.bold)),
+          Text(_isAdBuffActive
+              ? '버프 활성: ${adBuffExpiresAt!.difference(DateTime.now()).inHours}h ${(adBuffExpiresAt!.difference(DateTime.now()).inMinutes) % 60}m 남음'
+              : '버프 비활성'),
+          const SizedBox(height: 8),
+          FilledButton(
+            onPressed: _isAdBuffActive ? null : _activateAdBuff,
+            child: Text('광고 시청 ($adBuffHours시간 모든 수치 $adBuffMultiplier배)'),
+          ),
+          const SizedBox(height: 4),
+          const Text('버프 지속 중에는 재시청 누적되지 않습니다.'),
         ],
       ),
     );
@@ -1052,29 +1084,6 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
     );
   }
 
-  Widget _buildAdsPage() {
-    final remain = adBuffExpiresAt?.difference(DateTime.now());
-    return Padding(
-      padding: const EdgeInsets.all(16),
-      child: ListView(
-        children: [
-          _title('광고 페이지'),
-          const SizedBox(height: 8),
-          Text(_isAdBuffActive
-              ? '버프 활성: ${remain?.inHours ?? 0}h ${(remain?.inMinutes ?? 0) % 60}m 남음'
-              : '버프 비활성'),
-          const SizedBox(height: 10),
-          FilledButton(
-            onPressed: _isAdBuffActive ? null : _activateAdBuff,
-            child: Text('광고 시청 ($adBuffHours시간 모든 수치 $adBuffMultiplier배)'),
-          ),
-          const SizedBox(height: 6),
-          const Text('버프 지속 중에는 재시청으로 누적되지 않습니다.'),
-        ],
-      ),
-    );
-  }
-
   Widget _bottomNav() {
     return BottomAppBar(
       child: Padding(
@@ -1086,7 +1095,6 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
             Expanded(child: _navBtn('홈', 2, 'assets/art/icons/home.png')),
             Expanded(child: _navBtn('도감', 3, 'assets/art/icons/codex.png')),
             Expanded(child: _navBtn('합성', 4, 'assets/art/icons/mega.png')),
-            Expanded(child: _navBtn('광고', 5, 'assets/art/icons/ads.png')),
           ],
         ),
       ),
