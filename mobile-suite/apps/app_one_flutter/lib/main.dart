@@ -600,13 +600,13 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/art/bg_blue.png'),
+            image: AssetImage(_pageBgAsset()),
             fit: BoxFit.cover,
-            opacity: 0.22,
+            opacity: 0.18,
           ),
-          gradient: LinearGradient(
+          gradient: const LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [Color(0xEE0B1220), Color(0xEE111827), Color(0xEE0F172A)],
@@ -814,7 +814,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('시간 페이지', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          _title('시간 페이지'),
           const SizedBox(height: 8),
           Text('원소 포인트: $elementPoint'),
           Text('클릭 파워: $_clickPower'),
@@ -838,7 +838,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
       padding: const EdgeInsets.all(16),
       child: ListView(
         children: [
-          const Text('가챠샵', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          _title('가챠샵'),
           const SizedBox(height: 8),
           Text('티켓: $tickets/$ticketCap'),
           Text('원소 포인트: $elementPoint'),
@@ -917,7 +917,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
     return ListView(
       padding: const EdgeInsets.all(12),
       children: [
-        const Text('도감', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        _title('도감'),
         Text('발견 ${found.length}/${all.length}'),
         section('발견한 원소', found),
         section('미발견 원소', missing),
@@ -930,7 +930,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
     return ListView(
       padding: const EdgeInsets.all(12),
       children: [
-        const Text('대규모 합성', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        _title('대규모 합성'),
         const SizedBox(height: 8),
         ...megaRecipes.map((r) {
           final active = _canMega(r);
@@ -975,7 +975,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
       padding: const EdgeInsets.all(16),
       child: ListView(
         children: [
-          const Text('광고 페이지', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          _title('광고 페이지'),
           const SizedBox(height: 8),
           Text(_isAdBuffActive
               ? '버프 활성: ${remain?.inHours ?? 0}h ${(remain?.inMinutes ?? 0) % 60}m 남음'
@@ -998,19 +998,19 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
         padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
         child: Row(
           children: [
-            Expanded(child: _navBtn('시간', 0, Icons.schedule)),
-            Expanded(child: _navBtn('가챠', 1, Icons.casino)),
-            Expanded(child: _navBtn('홈', 2, Icons.home)),
-            Expanded(child: _navBtn('도감', 3, Icons.menu_book)),
-            Expanded(child: _navBtn('합성', 4, Icons.auto_awesome)),
-            Expanded(child: _navBtn('광고', 5, Icons.ondemand_video)),
+            Expanded(child: _navBtn('시간', 0, 'assets/art/icons/time.png')),
+            Expanded(child: _navBtn('가챠', 1, 'assets/art/icons/gacha.png')),
+            Expanded(child: _navBtn('홈', 2, 'assets/art/icons/home.png')),
+            Expanded(child: _navBtn('도감', 3, 'assets/art/icons/codex.png')),
+            Expanded(child: _navBtn('합성', 4, 'assets/art/icons/mega.png')),
+            Expanded(child: _navBtn('광고', 5, 'assets/art/icons/ads.png')),
           ],
         ),
       ),
     );
   }
 
-  Widget _navBtn(String label, int idx, IconData icon) {
+  Widget _navBtn(String label, int idx, String iconAsset) {
     final selected = page == idx;
     return InkWell(
       onTap: () { setState(() => page = idx); _saveGameState(); },
@@ -1024,12 +1024,37 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(icon, size: 18, color: selected ? const Color(0xFF2CCFBF) : Colors.grey),
+            Opacity(
+              opacity: selected ? 1.0 : 0.65,
+              child: Image.asset(iconAsset, width: 18, height: 18, color: selected ? const Color(0xFF2CCFBF) : Colors.grey),
+            ),
             Text(label, style: TextStyle(fontSize: 10, color: selected ? const Color(0xFF2CCFBF) : Colors.grey)),
           ],
         ),
       ),
     );
+  }
+
+  Widget _title(String text) {
+    return Text(
+      text,
+      style: const TextStyle(
+        fontSize: 18,
+        fontWeight: FontWeight.bold,
+        shadows: [Shadow(color: Colors.black54, blurRadius: 4, offset: Offset(0, 1))],
+      ),
+    );
+  }
+
+  String _pageBgAsset() {
+    return switch (page) {
+      0 => 'assets/art/bg/time_bg.png',
+      1 => 'assets/art/bg/gacha_bg.png',
+      2 => 'assets/art/bg/home_bg.png',
+      3 => 'assets/art/bg/codex_bg.png',
+      4 => 'assets/art/bg/codex_bg.png',
+      _ => 'assets/art/bg/home_bg.png',
+    };
   }
 
   String _rarityLabel(Rarity r) {
