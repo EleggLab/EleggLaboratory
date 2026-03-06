@@ -11,6 +11,7 @@ void main() {
 }
 
 enum Rarity { common, rare, special, legendary, finalTier, mythic }
+enum ArrangeMode { kind, rarity, recent }
 
 class ElementDef {
   const ElementDef(this.id, this.name, this.rarity);
@@ -140,6 +141,7 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
 
   Timer? loop;
   double _autosaveSec = 0;
+  ArrangeMode arrangeMode = ArrangeMode.kind;
   bool megaActiveOnly = false;
   String megaQuery = '';
 
@@ -407,18 +409,50 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('대규모 합성 성공! 신화 원소 획득'), duration: Duration(milliseconds: 700)));
   }
 
+  String _arrangeModeLabel(ArrangeMode m) {
+    return switch (m) {
+      ArrangeMode.kind => '종류',
+      ArrangeMode.rarity => '등급',
+      ArrangeMode.recent => '최근',
+    };
+  }
+
+  void _nextArrangeModeAndApply() {
+    arrangeMode = ArrangeMode.values[(arrangeMode.index + 1) % ArrangeMode.values.length];
+    _autoArrangeElements();
+  }
+
   void _autoArrangeElements() {
     const col = 6;
     const x0 = 16.0;
     const y0 = 80.0;
     const dx = 60.0;
     const dy = 64.0;
-    for (var i = 0; i < elements.length; i++) {
+
+    final list = List<FieldElement>.from(elements);
+    if (arrangeMode == ArrangeMode.kind) {
+      list.sort((a, b) => a.elementId.compareTo(b.elementId));
+    } else if (arrangeMode == ArrangeMode.rarity) {
+      list.sort((a, b) {
+        final ra = elementDefs[a.elementId]!.rarity.index;
+        final rb = elementDefs[b.elementId]!.rarity.index;
+        return ra.compareTo(rb);
+      });
+    } else {
+      list.sort((a, b) => b.uid.compareTo(a.uid));
+    }
+
+    for (var i = 0; i < list.length; i++) {
       final r = i ~/ col;
       final c = i % col;
-      elements[i].position = Offset(x0 + c * dx, y0 + r * dy);
+      list[i].position = Offset(x0 + c * dx, y0 + r * dy);
     }
+
+    elements
+      ..clear()
+      ..addAll(list);
     setState(() {});
+    _saveGameState();
   }
 
   Future<void> _loadDesignConfig() async {
@@ -689,9 +723,9 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
                   const SizedBox(width: 8),
                   FilledButton.tonalIcon(
                     style: FilledButton.styleFrom(backgroundColor: const Color(0x3314B8A6)),
-                    onPressed: _autoArrangeElements,
+                    onPressed: _nextArrangeModeAndApply,
                     icon: const Icon(Icons.auto_fix_high),
-                    label: const Text('정렬'),
+                    label: Text('정렬:${_arrangeModeLabel(arrangeMode)}'),
                   ),
                 ],
               ),
@@ -707,9 +741,23 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(color: const Color(0x552CCFBF)),
                 ),
-                child: Text(
-                  _homePrimaryHint(),
-                  style: const TextStyle(color: Color(0xFFE5E7EB), fontSize: 12, fontWeight: FontWeight.w600),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        _homePrimaryHint(),
+                        style: const TextStyle(color: Color(0xFFE5E7EB), fontSize: 12, fontWeight: FontWeight.w600),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    FilledButton.tonal(
+                      onPressed: () {
+                        setState(() => page = _homeHintTargetPage());
+                        _saveGameState();
+                      },
+                      child: const Text('이동'),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -1124,6 +1172,13 @@ class _ElementalIdleHomeState extends State<ElementalIdleHome> {
         ),
       ),
     );
+  }
+
+  int _homeHintTargetPage() {
+    if (tickets <= 0) return 1;
+    if (elements.length < 2) return 1;
+    if (discovered.length < 6) return 2;
+    return 4;
   }
 
   String _homePrimaryHint() {
