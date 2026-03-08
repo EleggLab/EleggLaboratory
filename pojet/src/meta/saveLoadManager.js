@@ -1,4 +1,6 @@
-﻿const SAVE_KEY = "ashmark.save.current";
+﻿import { normalizeLogEntry } from "../narrative/narrativeEngine.js";
+
+const SAVE_KEY = "ashmark.save.current";
 const AUTO_KEY = "ashmark.save.auto";
 const ARCHIVE_KEY = "ashmark.save.archive";
 const VERSION = 1;
@@ -47,6 +49,11 @@ function migrate(payload) {
   if (payload.saveVersion > VERSION) return null;
   const s = payload.state || {};
   s.history = s.history || { logs: [], events: [] };
+  s.history.logs = Array.isArray(s.history.logs) ? s.history.logs.map((log) => normalizeLogEntry(log, { source: "migrated" })) : [];
+  s.history.events = Array.isArray(s.history.events) ? s.history.events : [];
+  s.history.majorChoices = Array.isArray(s.history.majorChoices) ? s.history.majorChoices : [];
+  s.history.relationChanges = Array.isArray(s.history.relationChanges) ? s.history.relationChanges : [];
+  s.history.completedQuests = Array.isArray(s.history.completedQuests) ? s.history.completedQuests : [];
   s.chronicle = s.chronicle || { entries: [], legacyFlags: [], inheritancePool: [] };
   return s;
 }

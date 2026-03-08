@@ -22,6 +22,7 @@ import { resolveLegacyReward, applyLegacyToRun } from "./src/meta/legacyUnlockRe
 import { initNextRunFromLineage } from "./src/meta/lineageInitializer.js";
 import { createChronicleEntry } from "./src/meta/chronicleWriter.js";
 import { runSimulationTests } from "./src/tests/simulationTests.js";
+import { normalizeLogEntry } from "./src/narrative/narrativeEngine.js";
 
 const store = createStore();
 const contentPack = await loadContentPack();
@@ -119,7 +120,7 @@ function init() {
   ui.tutorial.textContent = tutorials[0];
 
   const tests = runSimulationTests();
-  tests.forEach((t) => pushLog(`[테스트] ${t.name}: ${t.pass ? "PASS" : "FAIL"}`));
+  tests.forEach((t) => pushLog(`[테스트] ${t.name}: ${t.pass ? "PASS" : "FAIL"}${t.summary ? ` | ${t.summary}` : ""}`));
   pushLog(`[초상화] 조합 프리셋 ${portraitStateCount(presentationPack.portraitStateMap)}개 준비됨`);
 
   store.subscribe((state, action) => {
@@ -407,7 +408,7 @@ function renderEvent(event, state) {
   (event.choices || []).forEach((choice) => {
     const btn = document.createElement("button");
     btn.textContent = choice.label;
-    btn.onclick = () => applyDecisionChoice(store, choice, false);
+    btn.onclick = () => applyDecisionChoice(store, choice, false, contentPack);
     ui.eventChoices.appendChild(btn);
   });
 
@@ -444,7 +445,7 @@ function renderHistoryTabs() {
 function renderHistory(state) {
   const rows = [];
   if (currentHistoryTab === "현재 런 로그") {
-    (state.history.logs || []).slice(0, 40).forEach((x) => rows.push(x));
+    (state.history.logs || []).slice(0, 40).forEach((x) => rows.push(historyLogLine(x)));
   } else if (currentHistoryTab === "주요 선택") {
     (state.history.majorChoices || []).slice(0, 30).forEach((x) => rows.push(`${x.tier || "선택"} ${x.eventId || "-"} ${x.choiceId || ""}`));
   } else if (currentHistoryTab === "완료 퀘스트") {
@@ -554,10 +555,9 @@ function setActiveSpeed(speed) {
 }
 
 function appendLog(text) {
-  const p = document.createElement("p");
-  p.className = "log-entry";
-  p.textContent = text;
-  ui.log.prepend(p);
+  const entry = normalizeLogEntry(text, { source: "ui-log" });
+  const node = isImportantLog(entry) ? createLogCard(entry) : createLogRow(entry);
+  ui.log.prepend(node);
   if (ui.log.children.length > 260) ui.log.removeChild(ui.log.lastChild);
 }
 
@@ -570,6 +570,81 @@ function pushLog(text) {
 
 function escapeHtml(v) {
   return v.replace(/[&<>\"]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]));
+}
+
+function historyLogLine(logInput) {
+  if (typeof logInput === "string") return logInput;
+  const entry = normalizeLogEntry(logInput, { source: "history" });
+  return entry.tier ? `[${entry.tier}] ${entry.feedLine}` : entry.feedLine;
+}
+
+function isImportantLog(entry) {
+  return entry.tier === "T2" || entry.tier === "T3" || entry.causalNotes.length > 0 || entry.followupHooks.length > 0;
+}
+
+function createLogRow(entry) {
+  const p = document.createElement("p");
+  p.className = "log-entry";
+  p.textContent = entry.feedLine || entry.text;
+  return p;
+}
+
+function createLogCard(entry) {
+  const card = document.createElement("article");
+  card.className = `log-card ${entry.tier ? `tier-${entry.tier.toLowerCase()}` : ""}`.trim();
+
+  const head = document.createElement("div");
+  head.className = "log-card-head";
+  const title = document.createElement("strong");
+  title.textContent = entry.feedLine || entry.text;
+  head.appendChild(title);
+  if (entry.tier) {
+    const tier = document.createElement("span");
+    tier.className = "log-tier";
+    tier.textContent = entry.tier;
+    head.appendChild(tier);
+  }
+  card.appendChild(head);
+
+  if (entry.bodyParagraph) {
+    const body = document.createElement("p");
+    body.className = "log-card-body";
+    body.textContent = entry.bodyParagraph;
+    card.appendChild(body);
+  }
+
+  const detail = document.createElement("details");
+  detail.className = "log-card-detail";
+  const summary = document.createElement("summary");
+  summary.textContent = "왜 이런 일이?";
+  detail.appendChild(summary);
+
+  const ul = document.createElement("ul");
+  ul.className = "log-reason-list";
+  entry.causalNotes.forEach((note) => {
+    const li = document.createElement("li");
+    li.textContent = note;
+    ul.appendChild(li);
+  });
+  entry.followupHooks.forEach((hook) => {
+    const li = document.createElement("li");
+    li.textContent = `후속: ${hook}`;
+    ul.appendChild(li);
+  });
+  if (entry.visualStateReason) {
+    const li = document.createElement("li");
+    li.textContent = `연출: ${entry.visualStateReason}`;
+    ul.appendChild(li);
+  }
+  if (entry.refs.length) {
+    const li = document.createElement("li");
+    li.textContent = `참조: ${entry.refs.join(", ")}`;
+    ul.appendChild(li);
+  }
+  detail.appendChild(ul);
+  card.appendChild(detail);
+
+  return card;
 }
 
 function axis(v) { return clamp(v, 0, 100); }

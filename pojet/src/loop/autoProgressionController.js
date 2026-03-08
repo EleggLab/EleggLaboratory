@@ -4,10 +4,12 @@ import { resolveSocial } from "../resolvers/socialResolver.js";
 import { applyResolutionEffects, applyEventChoiceEffects, maybeLevelUp } from "../resolvers/rewardResolver.js";
 import { maybeDispatchDecisionEvent, resolveTimedChoice, shouldForcePause } from "../events/eventDispatcher.js";
 import { LOCATIONS_BY_ACT } from "../config/runtimeData.js";
+import { createNarrativeEngine } from "../narrative/narrativeEngine.js";
 
 export function createAutoProgressionController(store, contentPack) {
   let timer = null;
   let t2Timer = null;
+  const narrative = createNarrativeEngine(contentPack);
 
   function start() {
     if (timer) return;
@@ -31,15 +33,22 @@ export function createAutoProgressionController(store, contentPack) {
     const current = store.getState();
     const phase = pick(["exploration", "combat", "social", "rest"]);
 
-    if (phase === "exploration") applyPhaseResolution(store, resolveExploration(current), contentPack);
-    if (phase === "combat") applyPhaseResolution(store, resolveCombat(current), contentPack);
-    if (phase === "social") applyPhaseResolution(store, resolveSocial(current), contentPack);
+    if (phase === "exploration") applyPhaseResolution(store, resolveExploration(current), contentPack, narrative);
+    if (phase === "combat") applyPhaseResolution(store, resolveCombat(current), contentPack, narrative);
+    if (phase === "social") applyPhaseResolution(store, resolveSocial(current), contentPack, narrative);
     if (phase === "rest") {
       const hp = Math.min(current.character.maxHp, current.character.hp + rand(4, 7));
       const prevFatigue = current.resources.fatigue;
       const nextFatigue = Math.max(0, prevFatigue - 5);
       store.dispatch({ type: "APPLY_PATCH", payload: { patch: { character: { hp }, resources: { fatigue: nextFatigue } } } });
-      store.dispatch({ type: "LOG", payload: { log: `[휴식] ${pickLogLine(contentPack, "rest", "자동 휴식으로 호흡을 가다듬었다.")}` } });
+      const restLog = narrative.makePhaseLog({
+        state: current,
+        nextState: store.getState(),
+        phase: "rest",
+        resolution: { summary: "자동 휴식으로 호흡을 가다듬었다." },
+        source: "auto-loop"
+      });
+      store.dispatch({ type: "LOG", payload: { log: restLog } });
     }
 
     const afterPhase = store.getState();
@@ -47,14 +56,22 @@ export function createAutoProgressionController(store, contentPack) {
       const nextAct = Math.min(5, afterPhase.world.act + 1);
       const pool = (contentPack?.locationPools || []).find((x) => x.act === nextAct)?.locations || LOCATIONS_BY_ACT[nextAct];
       store.dispatch({ type: "APPLY_PATCH", payload: { patch: { world: { act: nextAct, actProgress: 0, locationId: pick(pool) } } } });
-      store.dispatch({ type: "LOG", payload: { log: `[막 전환] 막 ${nextAct}로 진입했다.` } });
+      const actLog = narrative.makeGenericLog({
+        state: store.getState(),
+        kind: "act-transition",
+        source: "auto-loop",
+        text: `[막 전환] 막 ${nextAct}로 진입했다.`,
+        refs: [`act:${nextAct}`]
+      });
+      store.dispatch({ type: "LOG", payload: { log: actLog, meta: { tier: "T2" } } });
     }
 
     const possibleEvent = maybeDispatchDecisionEvent(store.getState(), contentPack);
     if (possibleEvent) {
       store.dispatch({ type: "SET_ACTIVE_EVENT", payload: { event: { ...possibleEvent, openedAt: Date.now() } } });
       store.dispatch({ type: "HISTORY_EVENT", payload: { entry: { eventId: possibleEvent.id || possibleEvent.eventId, tier: possibleEvent.tier, category: possibleEvent.category, openedAt: new Date().toISOString() } } });
-      store.dispatch({ type: "LOG", payload: { log: `[${possibleEvent.tier}] ${possibleEvent.title || possibleEvent.logSummary}` } });
+      const eventLog = narrative.makeEventOpenLog({ state: store.getState(), event: possibleEvent });
+      store.dispatch({ type: "LOG", payload: { log: eventLog, meta: { tier: possibleEvent.tier } } });
 
       if (shouldForcePause(possibleEvent)) {
         store.dispatch({ type: "RUN_PAUSE" });
@@ -64,14 +81,21 @@ export function createAutoProgressionController(store, contentPack) {
           const live = store.getState();
           if (!live.activeDecisionEvent || (live.activeDecisionEvent.id !== possibleEvent.id && live.activeDecisionEvent.eventId !== possibleEvent.eventId)) return;
           const autoChoice = resolveTimedChoice(live, live.activeDecisionEvent);
-          applyDecisionChoice(store, autoChoice, true);
+          applyDecisionChoice(store, autoChoice, true, contentPack);
         }, (possibleEvent.timeoutSec || 10) * 1000);
       }
     }
 
     const ended = store.getState().character.hp <= 0;
     if (ended) {
-      store.dispatch({ type: "LOG", payload: { log: "[종결] 캐릭터가 쓰러졌다. 연대기에 기록된다." } });
+      const endLog = narrative.makeGenericLog({
+        state: store.getState(),
+        kind: "run-end",
+        source: "auto-loop",
+        text: "[종결] 캐릭터가 쓰러졌다. 연대기에 기록된다.",
+        refs: ["ending:battle_death"]
+      });
+      store.dispatch({ type: "LOG", payload: { log: endLog, meta: { tier: "T3" } } });
       store.dispatch({ type: "RUN_END", payload: { cause: "battle_death" } });
       stop();
     }
@@ -80,11 +104,19 @@ export function createAutoProgressionController(store, contentPack) {
   return { start, stop, step };
 }
 
-function applyPhaseResolution(store, resolution, contentPack) {
+function applyPhaseResolution(store, resolution, contentPack, narrative) {
   const prev = store.getState();
   const patch = applyResolutionEffects(prev, resolution);
   store.dispatch({ type: "APPLY_PATCH", payload: { patch } });
-  store.dispatch({ type: "LOG", payload: { log: `[${phaseLabel(resolution.type)}] ${pickLogLine(contentPack, resolution.type, resolution.summary)}` } });
+
+  const phaseLog = narrative.makePhaseLog({
+    state: prev,
+    nextState: store.getState(),
+    phase: resolution.type,
+    resolution,
+    source: "auto-loop"
+  });
+  store.dispatch({ type: "LOG", payload: { log: phaseLog } });
 
   const next = store.getState();
   const beforeCore = prev.relationships.npcRelations.core || {};
@@ -104,19 +136,35 @@ function applyPhaseResolution(store, resolution, contentPack) {
   const lvl = maybeLevelUp(next);
   if (lvl) {
     store.dispatch({ type: "APPLY_PATCH", payload: { patch: lvl } });
-    store.dispatch({ type: "LOG", payload: { log: `[성장] 레벨 ${store.getState().character.level} 달성.` } });
+    const lvlLog = narrative.makeGenericLog({
+      state: store.getState(),
+      kind: "level-up",
+      source: "progression",
+      text: `[성장] 레벨 ${store.getState().character.level} 달성.`,
+      refs: ["level-up"]
+    });
+    store.dispatch({ type: "LOG", payload: { log: lvlLog } });
   }
 }
 
-export function applyDecisionChoice(store, choice, auto = false) {
+export function applyDecisionChoice(store, choice, auto = false, contentPack = null) {
   const state = store.getState();
   const event = state.activeDecisionEvent;
   if (!event || !choice) return;
 
+  const narrative = createNarrativeEngine(contentPack);
   const before = state.relationships.npcRelations.core || {};
   const patch = applyEventChoiceEffects(state, choice, event.defaultEffects || []);
   store.dispatch({ type: "APPLY_PATCH", payload: { patch } });
-  store.dispatch({ type: "LOG", payload: { log: `${auto ? "[자동 선택]" : "[선택]"} ${choice.label}` } });
+
+  const choiceLog = narrative.makeDecisionLog({
+    state,
+    nextState: store.getState(),
+    event,
+    choice,
+    auto
+  });
+  store.dispatch({ type: "LOG", payload: { log: choiceLog, meta: { tier: event.tier } } });
   store.dispatch({ type: "HISTORY_EVENT", payload: { entry: { eventId: event.id || event.eventId, choiceId: choice.id, auto, tier: event.tier, category: event.category, resolvedAt: new Date().toISOString() } } });
   store.dispatch({ type: "CLEAR_ACTIVE_EVENT" });
 
@@ -139,18 +187,6 @@ export function evaluateRunEndType(state) {
   if (state.world.act >= 4 && state.time.tick >= 65) return "glorious_retirement";
   if (state.time.tick >= 80) return "vanished_legend";
   return null;
-}
-
-function phaseLabel(type) {
-  return ({ exploration: "탐험", combat: "전투", social: "사회", rest: "휴식" })[type] || "루프";
-}
-
-function pickLogLine(contentPack, phase, fallback) {
-  const logs = contentPack?.logLines || {};
-  const keyMap = { exploration: "movement", combat: "combat", social: "rumor", rest: "rest" };
-  const pool = logs[keyMap[phase]];
-  if (Array.isArray(pool) && pool.length) return pool[rand(0, pool.length - 1)];
-  return fallback;
 }
 
 function rand(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }

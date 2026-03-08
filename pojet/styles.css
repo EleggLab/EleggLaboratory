@@ -252,6 +252,57 @@ button:hover { filter: brightness(1.1); }
 .log-entry.dim { color: #8f8a7f; }
 .log-entry.roll { color: #8eb8a8; }
 
+.log-card {
+  border: 1px solid #3c4c5e;
+  border-left: 3px solid #6c8db2;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #171c25, #131820);
+  padding: 10px 11px;
+  margin: 0 0 9px;
+}
+.log-card.tier-t3 {
+  border-left-color: #d27777;
+  box-shadow: inset 0 0 0 1px rgba(210, 119, 119, 0.18);
+}
+.log-card.tier-t2 {
+  border-left-color: #c79a5f;
+  box-shadow: inset 0 0 0 1px rgba(199, 154, 95, 0.16);
+}
+.log-card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+.log-tier {
+  border: 1px solid #706458;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  color: #e6d9ca;
+}
+.log-card-body {
+  margin: 7px 0 0;
+  color: #d8d0c4;
+  line-height: 1.45;
+  font-size: 0.86rem;
+}
+.log-card-detail {
+  margin-top: 7px;
+}
+.log-card-detail summary {
+  cursor: pointer;
+  color: #b8c5d3;
+  font-size: 0.8rem;
+}
+.log-reason-list {
+  margin: 7px 0 0;
+  padding-left: 16px;
+  color: #c8c0b4;
+  font-size: 0.8rem;
+}
+.log-reason-list li { margin: 0 0 4px; }
+
 #info-panel {
   height: calc(100vh - 24px);
   overflow-y: auto;

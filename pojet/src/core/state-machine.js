@@ -1,4 +1,5 @@
 ﻿import { ABILITIES, CLASS_LABELS_KO, LINEAGE_LABELS_KO, BACKGROUND_LABELS_KO, QUEST_NAMES, QUEST_MOODS } from "../config/runtimeData.js";
+import { normalizeLogEntry } from "../narrative/narrativeEngine.js";
 
 export function createInitialState() {
   return {
@@ -115,7 +116,8 @@ export function reduce(state, action) {
       return next;
     }
     case "LOG": {
-      next.history.logs.unshift(action.payload.log);
+      const log = normalizeLogEntry(action.payload?.log, action.payload?.meta || {});
+      next.history.logs.unshift(log);
       if (next.history.logs.length > 240) next.history.logs.length = 240;
       return next;
     }

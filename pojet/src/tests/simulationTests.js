@@ -3,6 +3,7 @@ import { createCharacterTemplate, buildCharacterFromTemplate } from "../core/sta
 import { ruleResolver } from "../resolvers/ruleResolver.js";
 import { CLASS_AI, DECISION_PRESETS } from "../config/runtimeData.js";
 import { shouldForcePause } from "../events/eventDispatcher.js";
+import { buildLogQualityReport } from "../narrative/logQualityValidator.js";
 
 export function runSimulationTests() {
   const results = [];
@@ -32,6 +33,8 @@ export function runSimulationTests() {
   store.dispatch({ type: "HISTORY_EVENT", payload: { entry: { eventId: "test", tier: "T1" } } });
   const final = store.getState();
   results.push({ name: "런 상태 로그/히스토리 기록", pass: final.history.logs.length > 0 && final.history.events.length > 0 });
+  const quality = buildLogQualityReport(final.history.logs);
+  results.push({ name: "서사 로그 품질 리포트", pass: quality.pass, summary: quality.summary });
 
   return results;
 }
