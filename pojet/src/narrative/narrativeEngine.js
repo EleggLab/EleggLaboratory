@@ -46,6 +46,16 @@ function choiceEffectSummary(choice) {
   return bits.join(", ");
 }
 
+function pickVariant(seed, variants = [], fallback = "") {
+  if (!Array.isArray(variants) || !variants.length) return fallback;
+  const idx = Math.abs(Number(seed || 0)) % variants.length;
+  return variants[idx] || fallback;
+}
+
+function cleanupIngredient(text = "") {
+  return String(text || "").replace("도적와", "도적과").replace(/\s+/g, " ").trim();
+}
+
 function pickPoolLine(packet, phase, fallbackLine = "") {
   const map = { exploration: "movement", combat: "combat", social: "rumor", rest: "rest" };
   const key = map[phase] || "movement";
@@ -157,7 +167,7 @@ export function createNarrativeEngine(contentPack) {
   const memory = createChronicleMemoryStore();
 
   function synthesize(packet, options = {}) {
-    const ingredient = pickPoolLine(packet, packet.phase, packet.fallbackLine);
+    const ingredient = cleanupIngredient(pickPoolLine(packet, packet.phase, packet.fallbackLine));
     const feedSource = options.feedSource || ingredient;
     const feedLine = `${packet.locationId} | ${feedSource}`;
     const causalNotes = generateCausalNotes(packet);
@@ -174,10 +184,22 @@ export function createNarrativeEngine(contentPack) {
     const activeQuest = packet?.contextActors?.activeQuest || "미완의 의뢰";
 
     const adultTone = maturityTags.includes("adult:desire")
-      ? `${npcName}의 낮은 숨소리와 함께 거래의 온도도 노골적으로 올라갔다`
+      ? pickVariant(packet.tick + 1, [
+          `${npcName}의 낮은 숨소리와 함께 거래의 온도도 노골적으로 올라갔다`,
+          `${npcName}가 거리를 좁히자 협상은 말보다 체온으로 진행되기 시작했다`,
+          `${npcName}의 손끝이 맴도는 동안, 유혹과 계산이 한 문장으로 겹쳐졌다`
+        ])
       : maturityTags.includes("adult:control")
-        ? `${factionName}의 시선이 닿는 순간, 우위와 복종의 기색이 공기처럼 번졌다`
-        : `${npcName}조차 계산된 미소 뒤에 숨은 의도를 읽기 시작했다`;
+        ? pickVariant(packet.tick + 2, [
+          `${factionName}의 시선이 닿는 순간, 우위와 복종의 기색이 공기처럼 번졌다`,
+          `${factionName}의 감시 아래, 대화는 허락과 복종의 순서로 정렬됐다`,
+          `${factionName}가 규칙을 들이밀자 모두의 말끝이 짧아지고 숨은 길어졌다`
+        ])
+        : pickVariant(packet.tick + 3, [
+            `${npcName}조차 계산된 미소 뒤에 숨은 의도를 읽기 시작했다`,
+            `${npcName}의 눈빛은 친절했지만, 그 뒤엔 분명한 계산서가 붙어 있었다`,
+            `${npcName}가 던진 짧은 농담 하나가 분위기의 가격표를 바꿔 놓았다`
+          ]);
 
     const tier = packet.event?.tier || options.tier || "T1";
     const eventNarrative = packet?.event?.narrativeText || packet?.event?.text || "";
@@ -203,8 +225,22 @@ export function createNarrativeEngine(contentPack) {
       ensureDot(`${connective} ${causalNotes[0] || "지난 선택의 대가가 지금 장면에 드러났다"}`),
       ensureDot(adultTone),
       tierPressure ? ensureDot(tierPressure) : null,
-      ensureDot(`${activeQuest}의 줄기는 끊기지 않았고, 다음 장면의 빚은 더 커졌다`),
-      followupHooks[0] ? ensureDot(`다음 장면에서는 ${followupHooks[0]} 같은 후폭풍이 기다린다`) : "정적은 잠깐뿐이고, 다음 선택은 더 비싼 값을 요구할 가능성이 크다."
+      ensureDot(pickVariant(packet.tick + 4, [
+        `${activeQuest}의 줄기는 끊기지 않았고, 다음 장면의 빚은 더 커졌다`,
+        `${activeQuest}는 봉합되지 못한 채 남았고, 누군가는 그 미결을 값으로 청구할 것이다`,
+        `${activeQuest}의 균열은 그대로 남아 다음 장면의 협박거리가 되었다`
+      ])),
+      followupHooks[0]
+        ? ensureDot(pickVariant(packet.tick + 5, [
+            `다음 장면에서는 ${followupHooks[0]} 같은 후폭풍이 기다린다`,
+            `${followupHooks[0]} 쪽으로 사건의 무게가 기울기 시작했다`,
+            `이 선택의 반동은 곧 ${followupHooks[0]} 형태로 돌아올 가능성이 높다`
+          ]))
+        : pickVariant(packet.tick + 6, [
+            "정적은 잠깐뿐이고, 다음 선택은 더 비싼 값을 요구할 가능성이 크다.",
+            "침묵은 오래 가지 못한다. 다음 장면은 분명 더 거친 대가를 부를 것이다.",
+            "간신히 넘어간 듯 보여도, 다음 국면의 청구서는 이미 작성되고 있다."
+          ])
     ], 3, 5);
 
     const entry = normalizeLogEntry({
