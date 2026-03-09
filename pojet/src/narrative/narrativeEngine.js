@@ -59,7 +59,7 @@ function buildVisualStateTags(packet) {
 }
 
 function visualTagReason(visualStateTags, packet) {
-  if (visualStateTags.includes("mood-danger")) return "T3 급 분기라 긴장 연출이 강화되었다.";
+  if (visualStateTags.includes("mood-danger")) return "T3 급 분기라 긴장 연출이 강화되었고, 권력 구도가 전면에 부각됐다.";
   if (visualStateTags.includes("mood-shadow")) return `오염 수치 ${packet?.current?.taint || 0}로 어두운 분위기가 반영되었다.`;
   if (visualStateTags.includes("mood-win")) return "신뢰 기반 상태가 유지되어 안정적인 톤으로 표현됐다.";
   if (visualStateTags.includes("mood-fatigue")) return `피로 수치 ${packet?.current?.fatigue || 0}로 소진 연출이 적용되었다.`;
@@ -159,10 +159,24 @@ export function createNarrativeEngine(contentPack) {
         ? `${factionName}의 시선이 닿는 순간, 우위와 복종의 기색이 공기처럼 번졌다`
         : `${npcName}조차 계산된 미소 뒤에 숨은 의도를 읽기 시작했다`;
 
+    const tier = packet.event?.tier || options.tier || "T1";
+    const tierLead = tier === "T3"
+      ? `${actor} ${placeObj} 디딘 순간, ${factionName}의 질서와 ${npcName}의 사적인 의도가 정면으로 충돌했다.`
+      : tier === "T2"
+        ? `${actor} ${placeObj} 멈춰 섰을 때, ${npcName}의 한마디가 ${activeQuest}의 방향을 비틀었다.`
+        : `${actor} ${placeObj} 지나며 ${ingredient}`;
+
+    const tierPressure = tier === "T3"
+      ? "이번 분기는 되돌릴 수 없어서, 선택 하나가 관계의 위계와 이후 생존 루트를 함께 고정한다."
+      : tier === "T2"
+        ? "시간을 끌수록 자동 선택 압력이 높아져, 망설임 자체가 비용이 된다."
+        : null;
+
     const sentences = clampSentences([
-      `${actor} ${placeObj} 지나며 ${ingredient}`,
+      tierLead,
       `${connective} ${causalNotes[0] || "지난 선택의 대가가 지금 장면에 드러났다"}`,
       `${adultTone}.`,
+      tierPressure,
       `${activeQuest}의 줄기는 끊기지 않았고, 다음 장면의 빚은 더 커졌다.`,
       followupHooks[0] ? `다음 장면에서는 ${followupHooks[0]} 같은 후폭풍이 기다린다.` : "정적은 잠깐뿐이고, 다음 선택은 더 비싼 값을 요구할 가능성이 크다."
     ], 3, 5);
