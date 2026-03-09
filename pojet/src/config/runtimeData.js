@@ -5,8 +5,8 @@ export const CLASS_IDS = [
 ];
 
 export const CLASS_LABELS_KO = {
-  barbarian: "바바리안", bard: "바드", cleric: "클레릭", druid: "드루이드", fighter: "파이터", monk: "몽크",
-  paladin: "팔라딘", ranger: "레인저", rogue: "로그", sorcerer: "소서러", warlock: "워락", wizard: "위저드"
+  barbarian: "야성 집행자", bard: "유혹의 연출가", cleric: "참회 심문관", druid: "본능의 조율자", fighter: "피의 계약검", monk: "금욕 파수자",
+  paladin: "맹세 집정관", ranger: "추적 사냥인", rogue: "밤의 협상가", sorcerer: "욕망 공명술사", warlock: "금단 서약자", wizard: "비밀 문장가"
 };
 
 export const LINEAGES = ["draconic", "stonefolk", "longkin", "smallkin", "mixed-grace", "mixed-fury", "smallfoot", "human", "infernal"];
@@ -29,16 +29,16 @@ export const BACKGROUNDS = [
 ];
 
 export const BACKGROUND_LABELS_KO = {
-  "border-conscript": "변경의 징집병",
-  "crusade-runner": "성전의 잔심부름꾼",
-  "orphan-cutpurse": "고아원 출신 소매치기",
+  "border-conscript": "변경 징집 생존자",
+  "crusade-runner": "성전 전령 겸 심부름꾼",
+  "orphan-cutpurse": "고아 지구 출신 손기술꾼",
   "tower-dropout": "유리탑 낙오 견습생",
-  "funeral-aide": "장송 의식 도우미",
-  "fallen-bastard": "몰락 귀족의 사생아",
-  "caravan-guard": "대상단 경비",
-  "smuggler-runner": "밀수업자 심부름꾼",
-  "forest-watch": "숲 경계 감시자",
-  "relic-digger": "유물 발굴 인부"
+  "funeral-aide": "장송 의식 시종",
+  "fallen-bastard": "몰락 귀족의 숨겨진 사생아",
+  "caravan-guard": "대상단 호위검",
+  "smuggler-runner": "밀수 노선 연락책",
+  "forest-watch": "숲 경계 추적자",
+  "relic-digger": "금단 유물 인양꾼"
 };
 
 export const DECISION_PRESETS = {
@@ -69,8 +69,8 @@ export const LOCATIONS_BY_ACT = {
   5: ["계승의 전당", "무명인의 묘역", "잿빛 관문", "이름 없는 첨탑"]
 };
 
-export const QUEST_NAMES = ["굶주린 순찰", "흙벽 아래 기도", "회색 계약", "잿더미의 열쇠", "피 묻은 서약", "밤 항구의 빚", "부서진 성상", "침묵의 증인"];
-export const QUEST_MOODS = ["굶주림", "죄책감", "충성", "탐욕", "광신", "슬픔", "해방"];
+export const QUEST_NAMES = ["굶주린 순찰", "흙벽 아래 기도", "회색 계약", "잿더미의 열쇠", "피 묻은 서약", "밤 항구의 빚", "부서진 성상", "침묵의 증인", "비단 장막의 제안", "가면 연회의 대가"];
+export const QUEST_MOODS = ["굶주림", "죄책감", "충성", "탐욕", "광신", "슬픔", "해방", "유혹", "집착", "의존"];
 export const GEAR_POOL = ["마모된 쇠검", "재봉선 망토", "기도 매듭띠", "낡은 사슬갑", "검은 가죽장갑", "은실 성물", "균열 반지", "무언의 부적"];
 
 export const SAMPLE_EVENTS = {
@@ -80,7 +80,7 @@ export const SAMPLE_EVENTS = {
       tier: "T2",
       category: "contract",
       title: "입막음의 봉투",
-      text: "밀수 조합이 금화를 제시한다. 눈감아 주면 금화는 늘고, 명성은 흐려진다.",
+      text: "밀수 조합이 밀실 거래를 제안한다. 눈감아 주면 금화와 향락은 늘지만, 이름과 명성은 어두워진다.",
       timeoutSec: 12,
       mustPause: false,
       choices: [
@@ -94,7 +94,7 @@ export const SAMPLE_EVENTS = {
       tier: "T2",
       category: "identity",
       title: "이름을 숨길 기회",
-      text: "연회 초대장이 도착했다. 가면은 안전을 주지만 이름은 희미해진다.",
+      text: "비밀 연회 초대장이 도착했다. 가면은 쾌락과 안전을 주지만, 본명과 주도권은 흐려진다.",
       timeoutSec: 12,
       mustPause: false,
       choices: [
@@ -110,7 +110,7 @@ export const SAMPLE_EVENTS = {
       tier: "T3",
       category: "faction",
       title: "세력 맹세의 밤",
-      text: "길드, 신전, 용병단이 동시에 손을 내민다. 어느 깃발 아래 설지 결정해야 한다.",
+      text: "길드, 신전, 용병단이 동시에 손을 내민다. 후원과 지배, 보호의 조건 중 무엇에 몸을 맡길지 결정해야 한다.",
       mustPause: true,
       choices: [
         { id: "guild", label: "검은 길드", effects: [{ kind: "faction", value: { guild: 6, temple: -2 } }, { kind: "renown", value: 2 }] },
