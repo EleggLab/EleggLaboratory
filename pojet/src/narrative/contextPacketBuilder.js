@@ -50,6 +50,10 @@ export function buildContextPacket({
   const coreBefore = cloneCoreRelation(before);
   const coreAfter = cloneCoreRelation(after);
 
+  const npcName = (contentPack?.npcs || [])[Number(base?.time?.tick || 0) % Math.max((contentPack?.npcs || []).length, 1)]?.name || "이름 없는 목격자";
+  const factionName = (contentPack?.factions || [])[Number(base?.world?.act || 1) % Math.max((contentPack?.factions || []).length, 1)]?.name || "변경의 잔당";
+  const activeQuest = (after?.world?.quests || [])[0]?.name || "미완의 의뢰";
+
   return {
     kind: kind || "generic",
     phase: phase || null,
@@ -66,6 +70,7 @@ export function buildContextPacket({
     fallbackLine: fallbackLine || "",
     refs: refs || [],
     contentPack,
+    contextActors: { npcName, factionName, activeQuest },
     current: {
       characterName: base?.character?.name || "무명인",
       fatigue: Number(base?.resources?.fatigue || 0),

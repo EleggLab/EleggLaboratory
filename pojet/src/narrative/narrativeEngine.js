@@ -70,10 +70,13 @@ function baseRefs(packet) {
   const refs = [
     `run:${packet?.runId || "-"}`,
     `tick:${packet?.tick || 0}`,
-    `loc:${packet?.locationId || "-"}`
+    `loc:${packet?.locationId || "-"}`,
+    `npc:${packet?.contextActors?.npcName || "-"}`,
+    `faction:${packet?.contextActors?.factionName || "-"}`,
+    `quest:${packet?.contextActors?.activeQuest || "-"}`
   ];
   if (packet?.event?.eventId || packet?.event?.id) refs.push(`event:${packet.event.eventId || packet.event.id}`);
-  return refs.concat(packet?.refs || []).slice(0, 6);
+  return refs.concat(packet?.refs || []).slice(0, 8);
 }
 
 function toLegacyText(entry) {
@@ -146,18 +149,23 @@ export function createNarrativeEngine(contentPack) {
     const actor = withTopic(packet.current.characterName || "무명인");
     const placeObj = withObject(packet.locationId || "거리");
     const connective = options.connective || "그 여파로";
+    const npcName = packet?.contextActors?.npcName || "이름 없는 목격자";
+    const factionName = packet?.contextActors?.factionName || "변경의 잔당";
+    const activeQuest = packet?.contextActors?.activeQuest || "미완의 의뢰";
+
     const adultTone = maturityTags.includes("adult:desire")
-      ? "숨이 가까워질수록 거래의 온도도 노골적으로 올라갔다"
+      ? `${npcName}의 낮은 숨소리와 함께 거래의 온도도 노골적으로 올라갔다`
       : maturityTags.includes("adult:control")
-        ? "눈길 하나에도 우위와 복종의 기색이 번졌다"
-        : "사람들은 계산된 미소 뒤에 숨은 의도를 읽기 시작했다";
+        ? `${factionName}의 시선이 닿는 순간, 우위와 복종의 기색이 공기처럼 번졌다`
+        : `${npcName}조차 계산된 미소 뒤에 숨은 의도를 읽기 시작했다`;
 
     const sentences = clampSentences([
       `${actor} ${placeObj} 지나며 ${ingredient}`,
       `${connective} ${causalNotes[0] || "지난 선택의 대가가 지금 장면에 드러났다"}`,
       `${adultTone}.`,
+      `${activeQuest}의 줄기는 끊기지 않았고, 다음 장면의 빚은 더 커졌다.`,
       followupHooks[0] ? `다음 장면에서는 ${followupHooks[0]} 같은 후폭풍이 기다린다.` : "정적은 잠깐뿐이고, 다음 선택은 더 비싼 값을 요구할 가능성이 크다."
-    ]);
+    ], 3, 5);
 
     const entry = normalizeLogEntry({
       kind: packet.kind,
