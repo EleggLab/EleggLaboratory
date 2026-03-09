@@ -31,7 +31,7 @@ export function createAutoProgressionController(store, contentPack) {
     store.dispatch({ type: "TIME_TICK" });
 
     const current = store.getState();
-    const phase = pick(["exploration", "combat", "social", "rest"]);
+    const phase = pickPhase(current);
 
     if (phase === "exploration") applyPhaseResolution(store, resolveExploration(current), contentPack, narrative);
     if (phase === "combat") applyPhaseResolution(store, resolveCombat(current), contentPack, narrative);
@@ -119,7 +119,26 @@ function applyPhaseResolution(store, resolution, contentPack, narrative) {
   });
   store.dispatch({ type: "LOG", payload: { log: phaseLog } });
 
-  const next = store.getState();
+  let next = store.getState();
+
+  const hp = Number(next?.character?.hp || 0);
+  const maxHp = Number(next?.character?.maxHp || 1);
+  const hpRatio = maxHp > 0 ? hp / maxHp : 1;
+  if (hpRatio <= 0.22 && next?.resources?.consumables?.potion > 0 && next?.automation?.autoPotion) {
+    const healed = Math.min(maxHp, hp + rand(8, 14));
+    const leftPotion = Math.max(0, Number(next.resources.consumables.potion || 0) - 1);
+    store.dispatch({ type: "APPLY_PATCH", payload: { patch: { character: { hp: healed }, resources: { consumables: { ...next.resources.consumables, potion: leftPotion } } } } });
+    const emergencyLog = narrative.makeGenericLog({
+      state: store.getState(),
+      kind: "emergency-heal",
+      source: "auto-survival",
+      text: "치명상 직전, 자동으로 물약을 사용해 숨을 붙들었다.",
+      refs: ["survival:potion"]
+    });
+    store.dispatch({ type: "LOG", payload: { log: emergencyLog } });
+    next = store.getState();
+  }
+
   const beforeCore = prev.relationships.npcRelations.core || {};
   const afterCore = next.relationships.npcRelations.core || {};
   if (JSON.stringify(beforeCore) !== JSON.stringify(afterCore)) {
@@ -188,6 +207,21 @@ export function evaluateRunEndType(state) {
   if (state.world.act >= 4 && state.time.tick >= 65) return "glorious_retirement";
   if (state.time.tick >= 80) return "vanished_legend";
   return null;
+}
+
+function pickPhase(state) {
+  const hp = Number(state?.character?.hp || 1);
+  const maxHp = Number(state?.character?.maxHp || 1);
+  const fatigue = Number(state?.resources?.fatigue || 0);
+  const hpRatio = maxHp > 0 ? hp / maxHp : 1;
+
+  if (hpRatio <= 0.3 || fatigue >= 65) {
+    return Math.random() < 0.65 ? "rest" : (Math.random() < 0.5 ? "social" : "exploration");
+  }
+  if (hpRatio <= 0.5) {
+    return pick(["rest", "exploration", "social", "combat"]);
+  }
+  return pick(["exploration", "combat", "social", "rest"]);
 }
 
 function rand(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
