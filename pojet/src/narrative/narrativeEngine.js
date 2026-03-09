@@ -26,6 +26,26 @@ function withObject(word = "") {
   return `${word}${hasBatchim(word) ? "을" : "를"}`;
 }
 
+function ensureDot(text = "") {
+  const t = String(text || "").trim();
+  if (!t) return "";
+  return /[.!?…]$/.test(t) ? t : `${t}.`;
+}
+
+function choiceEffectSummary(choice) {
+  const fx = Array.isArray(choice?.effects) ? choice.effects : [];
+  if (!fx.length) return "대가는 아직 드러나지 않았다";
+  const bits = fx.slice(0, 2).map((e) => {
+    if (e.kind === "gain_gold") return `금화 ${e.value > 0 ? "+" : ""}${e.value}`;
+    if (e.kind === "renown") return `명성 ${e.value > 0 ? "+" : ""}${e.value}`;
+    if (e.kind === "taint") return `오염 ${e.value > 0 ? "+" : ""}${e.value}`;
+    if (e.kind === "fatigue") return `피로 ${e.value > 0 ? "+" : ""}${e.value}`;
+    if (e.kind === "relation") return "관계 수치 변동";
+    return e.kind;
+  });
+  return bits.join(", ");
+}
+
 function pickPoolLine(packet, phase, fallbackLine = "") {
   const map = { exploration: "movement", combat: "combat", social: "rumor", rest: "rest" };
   const key = map[phase] || "movement";
@@ -160,11 +180,16 @@ export function createNarrativeEngine(contentPack) {
         : `${npcName}조차 계산된 미소 뒤에 숨은 의도를 읽기 시작했다`;
 
     const tier = packet.event?.tier || options.tier || "T1";
-    const tierLead = tier === "T3"
+    const eventNarrative = packet?.event?.narrativeText || packet?.event?.text || "";
+    const genericLead = packet.kind === "run-end"
+      ? `${actor} ${placeObj} 끝내 버티지 못했고, 기록은 마지막 장으로 넘어갔다.`
+      : `${actor} ${placeObj} 지나며 ${ingredient}`;
+
+    const tierLead = options.tierLead || (tier === "T3"
       ? `${actor} ${placeObj} 디딘 순간, ${factionName}의 질서와 ${npcName}의 사적인 의도가 정면으로 충돌했다.`
       : tier === "T2"
         ? `${actor} ${placeObj} 멈춰 섰을 때, ${npcName}의 한마디가 ${activeQuest}의 방향을 비틀었다.`
-        : `${actor} ${placeObj} 지나며 ${ingredient}`;
+        : genericLead);
 
     const tierPressure = tier === "T3"
       ? "이번 분기는 되돌릴 수 없어서, 선택 하나가 관계의 위계와 이후 생존 루트를 함께 고정한다."
@@ -173,12 +198,13 @@ export function createNarrativeEngine(contentPack) {
         : null;
 
     const sentences = clampSentences([
-      tierLead,
-      `${connective} ${causalNotes[0] || "지난 선택의 대가가 지금 장면에 드러났다"}`,
-      `${adultTone}.`,
-      tierPressure,
-      `${activeQuest}의 줄기는 끊기지 않았고, 다음 장면의 빚은 더 커졌다.`,
-      followupHooks[0] ? `다음 장면에서는 ${followupHooks[0]} 같은 후폭풍이 기다린다.` : "정적은 잠깐뿐이고, 다음 선택은 더 비싼 값을 요구할 가능성이 크다."
+      ensureDot(tierLead),
+      eventNarrative ? ensureDot(eventNarrative) : null,
+      ensureDot(`${connective} ${causalNotes[0] || "지난 선택의 대가가 지금 장면에 드러났다"}`),
+      ensureDot(adultTone),
+      tierPressure ? ensureDot(tierPressure) : null,
+      ensureDot(`${activeQuest}의 줄기는 끊기지 않았고, 다음 장면의 빚은 더 커졌다`),
+      followupHooks[0] ? ensureDot(`다음 장면에서는 ${followupHooks[0]} 같은 후폭풍이 기다린다`) : "정적은 잠깐뿐이고, 다음 선택은 더 비싼 값을 요구할 가능성이 크다."
     ], 3, 5);
 
     const entry = normalizeLogEntry({
@@ -248,7 +274,14 @@ export function createNarrativeEngine(contentPack) {
       fallbackLine: choice?.label || "선택",
       refs: [`choice:${choice?.id || "unknown"}`]
     });
-    return synthesize(packet, { tier: event?.tier, connective: "이 선택으로", feedSource: `${auto ? "[자동 선택]" : "[선택]"} ${choice?.label || "선택"}` });
+    const effectLine = choiceEffectSummary(choice);
+    const feedSource = `${auto ? "[자동 선택]" : "[선택]"} ${choice?.label || "선택"}`;
+    return synthesize(packet, {
+      tier: event?.tier,
+      connective: "이 선택으로",
+      feedSource,
+      tierLead: `${packet.current.characterName}의 결정은 곧장 대가를 불렀고(${effectLine}), ${packet.contextActors?.factionName || "세력"}의 반응도 거칠어졌다.`
+    });
   }
 
   function makeGenericLog({ state, kind, source, text, refs }) {
