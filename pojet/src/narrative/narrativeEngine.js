@@ -176,29 +176,29 @@ export function createNarrativeEngine(contentPack) {
     const visualStateTags = buildVisualStateTags(packet);
     const refs = baseRefs(packet);
 
-    const actor = withTopic(packet.current.characterName || "무명인");
-    const placeObj = withObject(packet.locationId || "거리");
+    const actor = withTopic(packet.current.characterName || "레나");
+    const placeObj = withObject(packet.locationId || "회랑");
     const connective = options.connective || "그 여파로";
-    const npcName = packet?.contextActors?.npcName || "이름 없는 목격자";
-    const factionName = packet?.contextActors?.factionName || "변경의 잔당";
-    const activeQuest = packet?.contextActors?.activeQuest || "미완의 의뢰";
+    const npcName = packet?.contextActors?.npcName || "세라 쏜";
+    const factionName = packet?.contextActors?.factionName || "밀수 조합";
+    const activeQuest = packet?.contextActors?.activeQuest || "피 묻은 서약";
 
     const adultTone = maturityTags.includes("adult:desire")
       ? pickVariant(packet.tick + 1, [
-          `${npcName}의 낮은 숨소리와 함께 거래의 온도도 노골적으로 올라갔다`,
-          `${npcName}가 거리를 좁히자 협상은 말보다 체온으로 진행되기 시작했다`,
-          `${npcName}의 손끝이 맴도는 동안, 유혹과 계산이 한 문장으로 겹쳐졌다`
+          `${npcName}의 젖은 속삭임이 귓가를 스치자, 협상은 입술과 숨결의 거리에서 결정되기 시작했다`,
+          `${npcName}가 손등을 오래 쓸어내리며 값을 제시하자, 유혹과 거래의 경계가 대놓고 흐려졌다`,
+          `${npcName}의 시선이 허리선을 따라 내려오는 동안, 욕망과 계산은 같은 박자로 움직였다`
         ])
       : maturityTags.includes("adult:control")
         ? pickVariant(packet.tick + 2, [
-          `${factionName}의 시선이 닿는 순간, 우위와 복종의 기색이 공기처럼 번졌다`,
-          `${factionName}의 감시 아래, 대화는 허락과 복종의 순서로 정렬됐다`,
-          `${factionName}가 규칙을 들이밀자 모두의 말끝이 짧아지고 숨은 길어졌다`
+          `${factionName}의 감시 아래, 허락받은 쾌락과 금지된 선택의 선이 노골적으로 그어졌다`,
+          `${factionName}가 규칙을 읊자 모두의 태도는 복종 쪽으로 기울고, 반항은 더 비싼 대가가 됐다`,
+          `${factionName}의 눈빛 하나에 방 안의 권력 질서가 재배열됐고, 누구도 그 순서를 거스르지 못했다`
         ])
         : pickVariant(packet.tick + 3, [
-            `${npcName}조차 계산된 미소 뒤에 숨은 의도를 읽기 시작했다`,
-            `${npcName}의 눈빛은 친절했지만, 그 뒤엔 분명한 계산서가 붙어 있었다`,
-            `${npcName}가 던진 짧은 농담 하나가 분위기의 가격표를 바꿔 놓았다`
+            `${npcName}의 친절한 미소 뒤엔 침대와 계약서를 함께 흔드는 계산이 숨어 있었다`,
+            `${npcName}의 낮은 농담 한마디가 공기의 농도를 바꾸자, 모두가 욕망의 값을 재기 시작했다`,
+            `${npcName}는 다정한 말투로 다가왔지만, 그 다정함엔 분명한 조건과 청구서가 붙어 있었다`
           ]);
 
     const tier = packet.event?.tier || options.tier || "T1";

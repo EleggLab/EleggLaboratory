@@ -50,9 +50,15 @@ export function buildContextPacket({
   const coreBefore = cloneCoreRelation(before);
   const coreAfter = cloneCoreRelation(after);
 
-  const npcName = (contentPack?.npcs || [])[Number(base?.time?.tick || 0) % Math.max((contentPack?.npcs || []).length, 1)]?.name || "이름 없는 목격자";
-  const factionName = (contentPack?.factions || [])[Number(base?.world?.act || 1) % Math.max((contentPack?.factions || []).length, 1)]?.name || "변경의 잔당";
-  const activeQuest = (after?.world?.quests || [])[0]?.name || "미완의 의뢰";
+  const fallbackNpcs = ["세라 쏜", "레브 모트", "도브 차펠", "이벳 살트"];
+  const fallbackFactions = ["밀수 조합", "공동의 합창단", "재필사단", "유리수도원"];
+  const fallbackQuests = ["피 묻은 서약", "부서진 성상", "잿빛 계약", "숨은 장부"];
+  const npcName = (contentPack?.npcs || [])[Number(base?.time?.tick || 0) % Math.max((contentPack?.npcs || []).length, 1)]?.name
+    || fallbackNpcs[Number(base?.time?.tick || 0) % fallbackNpcs.length];
+  const factionName = (contentPack?.factions || [])[Number(base?.world?.act || 1) % Math.max((contentPack?.factions || []).length, 1)]?.name
+    || fallbackFactions[Number(base?.world?.act || 1) % fallbackFactions.length];
+  const activeQuest = (after?.world?.quests || [])[0]?.name
+    || fallbackQuests[Number(base?.time?.tick || 0) % fallbackQuests.length];
 
   return {
     kind: kind || "generic",

@@ -28,9 +28,9 @@ export function createInitialState() {
 }
 
 export function createCharacterTemplate(overrides = {}) {
-  const nowTag = Date.now().toString().slice(-4);
+  const namePool = ["엘린", "세라", "레이나", "브란", "도브", "마리브", "타스", "오르덴", "리안", "카일"].map((n) => `${n}${Math.floor(Math.random() * 90 + 10)}`);
   return {
-    name: overrides.name || `무명인-${nowTag}`,
+    name: overrides.name || namePool[Math.floor(Math.random() * namePool.length)],
     classId: overrides.classId || "fighter",
     lineageId: overrides.lineageId || "human",
     backgroundId: overrides.backgroundId || "border-conscript",

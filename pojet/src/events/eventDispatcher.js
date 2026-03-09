@@ -6,15 +6,21 @@ export function maybeDispatchDecisionEvent(state, contentPack) {
   const tick = state.time.tick;
   const t2Pool = contentPack?.eventsT2?.length ? contentPack.eventsT2 : SAMPLE_EVENTS.t2;
   const t3Pool = contentPack?.eventsT3?.length ? contentPack.eventsT3 : SAMPLE_EVENTS.t3;
+  const decisionCount = Number(state?.history?.events?.length || 0);
 
-  if (tick === 6) return normalizeEvent(structuredClone(t2Pool[0 % t2Pool.length]));
-  if (tick === 12) return normalizeEvent(structuredClone(t2Pool[1 % t2Pool.length]));
-  if (tick === 18) return normalizeEvent(structuredClone(t3Pool[0 % t3Pool.length]));
-  if (tick === 24 || (state.world.act >= 2 && tick % 10 === 0)) return normalizeEvent(structuredClone(t3Pool[1 % t3Pool.length]));
+  if (tick === 4) return normalizeEvent(structuredClone(t2Pool[0 % t2Pool.length]));
+  if (tick === 7) return normalizeEvent(structuredClone(t2Pool[1 % t2Pool.length]));
 
-  if (tick % 10 === 0 && Math.random() < 0.42) return normalizeEvent(structuredClone(t2Pool[Math.floor(Math.random() * t2Pool.length)]));
-  if (state.world.act >= 2 && tick % 16 === 0 && Math.random() < 0.32) return normalizeEvent(structuredClone(t3Pool[Math.floor(Math.random() * t3Pool.length)]));
-  return null;
+  const interval = state.world.act >= 2 ? 2 : 3; // 2~3개 로그마다 선택지
+  const shouldOpenChoice = tick >= 8 && tick % interval === 0;
+  if (!shouldOpenChoice) return null;
+
+  const forceT3 = (decisionCount > 0 && decisionCount % 4 === 0) || (state.world.act >= 2 && tick % 6 === 0);
+  if (forceT3) return normalizeEvent(structuredClone(t3Pool[Math.floor(Math.random() * t3Pool.length)]));
+
+  if (Math.random() < 0.78) return normalizeEvent(structuredClone(t2Pool[Math.floor(Math.random() * t2Pool.length)]));
+  if (state.world.act >= 2) return normalizeEvent(structuredClone(t3Pool[Math.floor(Math.random() * t3Pool.length)]));
+  return normalizeEvent(structuredClone(t2Pool[Math.floor(Math.random() * t2Pool.length)]));
 }
 
 export function resolveTimedChoice(state, event) {

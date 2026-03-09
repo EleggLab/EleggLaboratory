@@ -46,9 +46,21 @@ export function resolveCombat(state) {
     taken,
     effects,
     summary: victory
-      ? `${enemy}을(를) 자동 전투로 제압했다.`
+      ? `${withObject(enemy)} 자동 전투로 제압했다.`
       : `${enemy}와의 충돌에서 밀려 후퇴했다.`
   };
+}
+
+function hasBatchim(word = "") {
+  const ch = String(word).trim().slice(-1);
+  if (!ch) return false;
+  const code = ch.charCodeAt(0);
+  if (code < 0xac00 || code > 0xd7a3) return false;
+  return (code - 0xac00) % 28 !== 0;
+}
+
+function withObject(word = "") {
+  return `${word}${hasBatchim(word) ? "을" : "를"}`;
 }
 
 function inferCombatAbility(classId) {
