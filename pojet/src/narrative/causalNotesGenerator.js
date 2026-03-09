@@ -2,6 +2,23 @@ function formatDelta(value) {
   return value > 0 ? `+${value}` : `${value}`;
 }
 
+function labelOf(key) {
+  return {
+    gold: "금화",
+    supplies: "보급",
+    fatigue: "피로",
+    taint: "오염",
+    renown: "명성",
+    infamy: "악명",
+    trust: "신뢰",
+    intimacy: "친밀",
+    tension: "긴장",
+    desire: "욕망",
+    respect: "존중",
+    fear: "두려움"
+  }[key] || key;
+}
+
 export function generateCausalNotes(packet) {
   const notes = [];
   const res = packet?.delta?.resources || {};
@@ -10,23 +27,24 @@ export function generateCausalNotes(packet) {
 
   Object.entries(res).forEach(([key, value]) => {
     if (!value) return;
-    notes.push(`${key} 변화 ${formatDelta(value)}가 흐름을 바꿨다.`);
+    const dir = value > 0 ? "올라" : "떨어";
+    notes.push(`${labelOf(key)} 수치가 ${Math.abs(value)}만큼 ${dir} 다음 선택의 기준이 달라졌다.`);
   });
 
   Object.entries(rel).forEach(([key, value]) => {
     if (!value) return;
-    notes.push(`핵심 관계의 ${key} 값이 ${formatDelta(value)}만큼 조정됐다.`);
+    notes.push(`${labelOf(key)} 흐름이 ${formatDelta(value)} 변하며 인물 간 힘의 균형이 틀어졌다.`);
   });
 
   if (hp !== 0) {
-    notes.push(`체력 변동 ${formatDelta(hp)}로 위험 판단이 달라졌다.`);
+    notes.push(`체력 변화(${formatDelta(hp)})가 생겨 위험 감수 범위가 재조정됐다.`);
   }
 
-  if (packet?.event?.tier === "T3") notes.push("T3 이벤트라 수동 개입이 우선된다.");
-  if (packet?.event?.tier === "T2") notes.push("T2 이벤트는 시간 초과 시 자동 선택 규칙이 적용된다.");
+  if (packet?.event?.tier === "T3") notes.push("핵심 분기(T3)라 지금 선택이 이후 서사 결을 고정한다.");
+  if (packet?.event?.tier === "T2") notes.push("중간 분기(T2)라 지연 시 자동 선택 규칙이 개입한다.");
 
-  if (packet?.phase === "rest") notes.push("휴식 단계에서 피로/체력 회복 규칙이 우선 적용됐다.");
-  if (packet?.phase === "combat") notes.push("전투 단계라 생존성과 소모 자원 비중이 커졌다.");
+  if (packet?.phase === "rest") notes.push("휴식 구간이라 회복과 경계 완화가 우선 적용됐다.");
+  if (packet?.phase === "combat") notes.push("충돌 구간이라 생존과 소모 효율이 관계 감정보다 앞섰다.");
 
   return notes.slice(0, 4);
 }

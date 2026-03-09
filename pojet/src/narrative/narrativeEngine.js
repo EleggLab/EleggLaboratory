@@ -5,9 +5,25 @@ import { generateCausalNotes, deriveFollowupHooks } from "./causalNotesGenerator
 function clampSentences(sentences, min = 2, max = 4) {
   const filtered = sentences.filter(Boolean);
   if (filtered.length < min) {
-    while (filtered.length < min) filtered.push("기록자는 짧은 원인과 결과를 남겨 다음 판단의 실마리로 삼는다.");
+    while (filtered.length < min) filtered.push("기록자는 원인과 결과를 짧게 묶어 다음 선택의 실마리로 남겼다.");
   }
   return filtered.slice(0, max);
+}
+
+function hasBatchim(word = "") {
+  const ch = String(word).trim().slice(-1);
+  if (!ch) return false;
+  const code = ch.charCodeAt(0);
+  if (code < 0xac00 || code > 0xd7a3) return false;
+  return (code - 0xac00) % 28 !== 0;
+}
+
+function withTopic(word = "") {
+  return `${word}${hasBatchim(word) ? "은" : "는"}`;
+}
+
+function withObject(word = "") {
+  return `${word}${hasBatchim(word) ? "을" : "를"}`;
 }
 
 function pickPoolLine(packet, phase, fallbackLine = "") {
@@ -27,6 +43,8 @@ function buildMaturityTags(packet) {
   if (Number(packet?.current?.fatigue || 0) >= 55) tags.push("fatigue:high");
   if (Number(packet?.current?.relation?.trust || 0) >= 45) tags.push("bond:stable");
   if (Number(packet?.current?.relation?.tension || 0) >= 35) tags.push("bond:tense");
+  if (Number(packet?.current?.relation?.desire || 0) >= 26) tags.push("adult:desire");
+  if (Number(packet?.current?.relation?.fear || 0) >= 20) tags.push("adult:control");
   return tags;
 }
 
@@ -125,11 +143,20 @@ export function createNarrativeEngine(contentPack) {
     const visualStateTags = buildVisualStateTags(packet);
     const refs = baseRefs(packet);
 
+    const actor = withTopic(packet.current.characterName || "무명인");
+    const placeObj = withObject(packet.locationId || "거리");
+    const connective = options.connective || "그 여파로";
+    const adultTone = maturityTags.includes("adult:desire")
+      ? "숨이 가까워질수록 거래의 온도도 노골적으로 올라갔다"
+      : maturityTags.includes("adult:control")
+        ? "눈길 하나에도 우위와 복종의 기색이 번졌다"
+        : "사람들은 계산된 미소 뒤에 숨은 의도를 읽기 시작했다";
+
     const sentences = clampSentences([
-      `${packet.current.characterName}은(는) ${packet.locationId}에서 ${ingredient}`,
-      `${options.connective || "그 결과"} ${causalNotes[0] || "자원과 관계 지표가 다음 행동 기준을 바꿨다."}`,
-      followupHooks[0] ? `이후에는 ${followupHooks[0]} 가능성이 높다.` : "추가 분기는 현재 지표 안정화 이후 열린다.",
-      packet.event?.title ? `관련 사건: ${packet.event.title}.` : "사건 식별자는 내부 참조에 보존됐다."
+      `${actor} ${placeObj} 지나며 ${ingredient}`,
+      `${connective} ${causalNotes[0] || "지난 선택의 대가가 지금 장면에 드러났다"}`,
+      `${adultTone}.`,
+      followupHooks[0] ? `다음 장면에서는 ${followupHooks[0]} 같은 후폭풍이 기다린다.` : "정적은 잠깐뿐이고, 다음 선택은 더 비싼 값을 요구할 가능성이 크다."
     ]);
 
     const entry = normalizeLogEntry({
