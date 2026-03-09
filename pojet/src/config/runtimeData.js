@@ -87,7 +87,8 @@ export const SAMPLE_EVENTS = {
       choices: [
         { id: "take", label: "받는다", effects: [{ kind: "gain_gold", value: 45 }, { kind: "renown", value: -3 }, { kind: "taint", value: 3 }] },
         { id: "reject", label: "거절한다", effects: [{ kind: "gain_gold", value: 0 }, { kind: "renown", value: 4 }, { kind: "faction", value: { underbelly: -2, guild: 1 } }] },
-        { id: "spy", label: "정보만 챙긴다", effects: [{ kind: "gain_gold", value: 12 }, { kind: "relation", value: { trust: 1, tension: 1 } }] }
+        { id: "spy", label: "정보만 챙긴다", effects: [{ kind: "gain_gold", value: 12 }, { kind: "relation", value: { trust: 1, tension: 1 } }] },
+        { id: "counter", label: "더 독한 조건으로 역제안", effects: [{ kind: "gain_gold", value: 22 }, { kind: "relation", value: { tension: 2, desire: 1 } }] }
       ]
     },
     {
@@ -101,7 +102,8 @@ export const SAMPLE_EVENTS = {
       choices: [
         { id: "mask", label: "가면을 쓴다", effects: [{ kind: "gain_gold", value: 20 }, { kind: "renown", value: -1 }, { kind: "relation", value: { tension: 1 } }] },
         { id: "reveal", label: "본명을 밝힌다", effects: [{ kind: "renown", value: 5 }, { kind: "faction", value: { nobility: 2 } }] },
-        { id: "decline", label: "초대를 찢는다", effects: [{ kind: "gain_gold", value: -5 }, { kind: "relation", value: { trust: 2 } }] }
+        { id: "decline", label: "초대를 찢는다", effects: [{ kind: "gain_gold", value: -5 }, { kind: "relation", value: { trust: 2 } }] },
+        { id: "private-room", label: "밀실 제안을 받는다", effects: [{ kind: "gain_gold", value: 15 }, { kind: "relation", value: { desire: 2, trust: -1 } }] }
       ]
     }
   ],

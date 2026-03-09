@@ -57,7 +57,7 @@ export function shouldForcePause(event) {
 
 function normalizeEvent(event) {
   if (!event) return null;
-  return {
+  const normalized = {
     ...event,
     eventId: event.eventId || event.id,
     title: event.title || event.logSummary || event.id,
@@ -65,4 +65,63 @@ function normalizeEvent(event) {
     timeoutSec: event.timeoutSec ?? (event.tier === "T2" ? 12 : 0),
     mustPause: event.mustPause ?? event.tier === "T3"
   };
+
+  normalized.choices = diversifyChoices(normalized);
+  return normalized;
+}
+
+function diversifyChoices(event) {
+  const base = Array.isArray(event?.choices) ? structuredClone(event.choices) : [];
+  if (!base.length) return base;
+
+  const add = buildBonusChoice(event, base.length);
+  if (add) base.push(add);
+
+  // keep 3~4 choices and rotate ordering by event hash for variety
+  const seed = String(event.eventId || event.id || event.title || "").length + (event?.timeoutSec || 0);
+  const rotated = rotate(base, seed % base.length);
+  return rotated.slice(0, Math.min(4, rotated.length));
+}
+
+function buildBonusChoice(event, idx) {
+  const c = String(event?.category || "");
+  if (c === "relationship") {
+    return {
+      id: `bonus-${idx}`,
+      label: "유혹적으로 압박한다",
+      effects: [{ kind: "renown", value: -1 }, { kind: "relation", value: { desire: 2, tension: 1 } }]
+    };
+  }
+  if (c === "faction") {
+    return {
+      id: `bonus-${idx}`,
+      label: "양쪽에 여지를 남긴다",
+      effects: [{ kind: "faction", value: { guild: 1, temple: 1 } }, { kind: "renown", value: -1 }]
+    };
+  }
+  if (c === "relic") {
+    return {
+      id: `bonus-${idx}`,
+      label: "봉인각인만 남기고 물러난다",
+      effects: [{ kind: "taint", value: 2 }, { kind: "renown", value: 1 }]
+    };
+  }
+  if (c === "social" || c === "contract" || c === "identity") {
+    return {
+      id: `bonus-${idx}`,
+      label: "조건을 재협상한다",
+      effects: [{ kind: "gain_gold", value: 10 }, { kind: "relation", value: { trust: 1, tension: 1 } }]
+    };
+  }
+  return {
+    id: `bonus-${idx}`,
+    label: "대가를 낮춰 타협한다",
+    effects: [{ kind: "gain_gold", value: 6 }, { kind: "renown", value: 1 }]
+  };
+}
+
+function rotate(arr, n) {
+  if (!arr.length) return arr;
+  const k = ((n % arr.length) + arr.length) % arr.length;
+  return arr.slice(k).concat(arr.slice(0, k));
 }
