@@ -9,6 +9,8 @@ export function resolveCombat(state) {
   let taken = 0;
   const rounds = rand(2, 4);
 
+  const earlyProtection = state.time?.tick <= 12;
+
   for (let i = 0; i < rounds; i += 1) {
     const dc = 12 + Math.floor(state.world.act / 2);
     const primaryAbility = inferCombatAbility(state.character.classId);
@@ -21,13 +23,13 @@ export function resolveCombat(state) {
       if (!save.success) taken += rand(2, 5);
     }
 
-    if (Math.random() < 0.4) taken += rand(1, 4);
+    if (Math.random() < (earlyProtection ? 0.28 : 0.4)) taken += rand(1, earlyProtection ? 3 : 4);
   }
 
   const victory = dealt >= rand(10, 22);
   const effects = {
-    hpDelta: -(taken + (victory ? 0 : rand(1, 3))),
-    fatigueDelta: victory ? 3 : 6,
+    hpDelta: -(taken + (victory ? 0 : rand(earlyProtection ? 0 : 1, earlyProtection ? 2 : 3))),
+    fatigueDelta: victory ? 3 : (earlyProtection ? 4 : 6),
     xpDelta: victory ? rand(18, 36) : 8,
     goldDelta: victory ? rand(8, 16) : rand(1, 4),
     renownDelta: victory ? 1 : 0,

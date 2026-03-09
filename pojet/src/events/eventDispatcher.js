@@ -7,12 +7,13 @@ export function maybeDispatchDecisionEvent(state, contentPack) {
   const t2Pool = contentPack?.eventsT2?.length ? contentPack.eventsT2 : SAMPLE_EVENTS.t2;
   const t3Pool = contentPack?.eventsT3?.length ? contentPack.eventsT3 : SAMPLE_EVENTS.t3;
 
-  if (tick === 8) return normalizeEvent(structuredClone(t2Pool[0 % t2Pool.length]));
-  if (tick === 14) return normalizeEvent(structuredClone(t2Pool[1 % t2Pool.length]));
-  if (tick === 20) return normalizeEvent(structuredClone(t3Pool[0 % t3Pool.length]));
-  if (tick === 28 || (state.world.act >= 3 && tick % 11 === 0)) return normalizeEvent(structuredClone(t3Pool[1 % t3Pool.length]));
+  if (tick === 6) return normalizeEvent(structuredClone(t2Pool[0 % t2Pool.length]));
+  if (tick === 12) return normalizeEvent(structuredClone(t2Pool[1 % t2Pool.length]));
+  if (tick === 18) return normalizeEvent(structuredClone(t3Pool[0 % t3Pool.length]));
+  if (tick === 24 || (state.world.act >= 2 && tick % 10 === 0)) return normalizeEvent(structuredClone(t3Pool[1 % t3Pool.length]));
 
-  if (tick % 12 === 0 && Math.random() < 0.3) return normalizeEvent(structuredClone(t2Pool[Math.floor(Math.random() * t2Pool.length)]));
+  if (tick % 10 === 0 && Math.random() < 0.42) return normalizeEvent(structuredClone(t2Pool[Math.floor(Math.random() * t2Pool.length)]));
+  if (state.world.act >= 2 && tick % 16 === 0 && Math.random() < 0.32) return normalizeEvent(structuredClone(t3Pool[Math.floor(Math.random() * t3Pool.length)]));
   return null;
 }
 
@@ -21,6 +22,14 @@ export function resolveTimedChoice(state, event) {
   const mode = preset.t2DefaultChoice;
 
   if (!event?.choices?.length) return null;
+
+  const hp = Number(state?.character?.hp || 0);
+  const maxHp = Number(state?.character?.maxHp || 1);
+  const hpRatio = maxHp > 0 ? hp / maxHp : 1;
+  if (hpRatio <= 0.25) {
+    const safe = event.choices.find((c) => c.id === "c3" || c.id === "withdraw" || c.id === "seal" || c.id === "decline" || c.id === "reject");
+    return safe || event.choices[event.choices.length - 1];
+  }
 
   if (mode === "safest") return event.choices[event.choices.length - 1];
   if (mode === "bold") return event.choices[0];

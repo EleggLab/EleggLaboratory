@@ -37,9 +37,10 @@ export function createAutoProgressionController(store, contentPack) {
     if (phase === "combat") applyPhaseResolution(store, resolveCombat(current), contentPack, narrative);
     if (phase === "social") applyPhaseResolution(store, resolveSocial(current), contentPack, narrative);
     if (phase === "rest") {
-      const hp = Math.min(current.character.maxHp, current.character.hp + rand(4, 7));
+      const lowHp = current.character.hp <= Math.floor(current.character.maxHp * 0.25);
+      const hp = Math.min(current.character.maxHp, current.character.hp + rand(lowHp ? 6 : 4, lowHp ? 10 : 7));
       const prevFatigue = current.resources.fatigue;
-      const nextFatigue = Math.max(0, prevFatigue - 5);
+      const nextFatigue = Math.max(0, prevFatigue - (lowHp ? 8 : 5));
       store.dispatch({ type: "APPLY_PATCH", payload: { patch: { character: { hp }, resources: { fatigue: nextFatigue } } } });
       const restLog = narrative.makePhaseLog({
         state: current,
