@@ -26,6 +26,10 @@ function withObject(word = "") {
   return `${word}${hasBatchim(word) ? "을" : "를"}`;
 }
 
+function withSubject(word = "") {
+  return `${word}${hasBatchim(word) ? "이" : "가"}`;
+}
+
 function ensureDot(text = "") {
   const t = String(text || "").trim();
   if (!t) return "";
@@ -50,6 +54,46 @@ function pickVariant(seed, variants = [], fallback = "") {
   if (!Array.isArray(variants) || !variants.length) return fallback;
   const idx = Math.abs(Number(seed || 0)) % variants.length;
   return variants[idx] || fallback;
+}
+
+function trpgBeat(packet, tier, npcName, factionName, activeQuest) {
+  const phase = packet?.phase || "exploration";
+  if (tier === "T3") {
+    return {
+      scene: `장면: ${factionName}의 대표와 ${withSubject(npcName)} 같은 탁자에 앉았고, ${activeQuest}의 처리권이 너에게 넘어왔다.`,
+      check: pickVariant(packet.tick + 20, [
+        "판정: 설득/기만/위협 중 하나를 택해야 한다. 실패하면 평판과 관계를 동시에 잃는다.",
+        "판정: 의지와 절제를 시험한다. 욕망을 따르거나, 대가를 치르고 거절할 수 있다.",
+        "판정: 계약 조항을 읽어낼 지능 검정. 놓친 문구 하나가 다음 장면의 족쇄가 된다."
+      ])
+    };
+  }
+  if (tier === "T2") {
+    return {
+      scene: `장면: ${withSubject(npcName)} ${withObject(activeQuest)} 둘러싼 조건을 내밀었다. 웃고 있지만 계산은 이미 끝난 얼굴이다.`,
+      check: pickVariant(packet.tick + 21, [
+        "판정: 지금 고르면 즉시 이익, 미루면 자동 처리로 리스크가 커진다.",
+        "판정: 관계를 택하면 자원이 줄고, 자원을 택하면 관계가 흔들린다.",
+        "판정: 은밀한 제안을 수락하면 단기 보상은 크지만 장기 부채가 남는다."
+      ])
+    };
+  }
+  if (phase === "combat") {
+    return {
+      scene: `장면: ${npcName}의 제보로 추적한 표적이 골목 끝에서 칼을 뽑았다.`,
+      check: "판정: 전투 판정이 연속으로 이어진다. 지금 입은 상처는 다음 이벤트 선택지 난이도에 반영된다."
+    };
+  }
+  if (phase === "social") {
+    return {
+      scene: `장면: ${factionName}의 연회장, 속삭임 하나가 소문 두 개로 증식하는 밤이다.`,
+      check: "판정: 정보 획득 vs 노출 위험. 입을 열수록 보상은 커지지만 약점도 드러난다."
+    };
+  }
+  return {
+    scene: `장면: ${activeQuest}를 따라 이동하던 중 ${npcName}가 새로운 단서를 건넸다.`,
+    check: "판정: 단서를 쫓아 속도를 올릴지, 안전하게 우회할지 선택해야 한다."
+  };
 }
 
 function cleanupIngredient(text = "") {
@@ -207,6 +251,8 @@ export function createNarrativeEngine(contentPack) {
       ? `${actor} ${placeObj} 끝내 버티지 못했고, 기록은 마지막 장으로 넘어갔다.`
       : `${actor} ${placeObj} 지나며 ${ingredient}`;
 
+    const beat = trpgBeat(packet, tier, npcName, factionName, activeQuest);
+
     const tierLead = options.tierLead || (tier === "T3"
       ? `${actor} ${placeObj} 디딘 순간, ${factionName}의 질서와 ${npcName}의 사적인 의도가 정면으로 충돌했다.`
       : tier === "T2"
@@ -221,7 +267,9 @@ export function createNarrativeEngine(contentPack) {
 
     const sentences = clampSentences([
       ensureDot(tierLead),
+      ensureDot(beat.scene),
       eventNarrative ? ensureDot(eventNarrative) : null,
+      ensureDot(beat.check),
       ensureDot(`${connective} ${causalNotes[0] || "지난 선택의 대가가 지금 장면에 드러났다"}`),
       ensureDot(adultTone),
       tierPressure ? ensureDot(tierPressure) : null,
@@ -232,16 +280,16 @@ export function createNarrativeEngine(contentPack) {
       ])),
       followupHooks[0]
         ? ensureDot(pickVariant(packet.tick + 5, [
-            `다음 장면에서는 ${followupHooks[0]} 같은 후폭풍이 기다린다`,
-            `${followupHooks[0]} 쪽으로 사건의 무게가 기울기 시작했다`,
-            `이 선택의 반동은 곧 ${followupHooks[0]} 형태로 돌아올 가능성이 높다`
+            `결과: 다음 장면에서는 ${followupHooks[0]} 같은 후폭풍이 기다린다`,
+            `결과: ${followupHooks[0]} 쪽으로 사건의 무게가 기울기 시작했다`,
+            `결과: 이 선택의 반동은 곧 ${followupHooks[0]} 형태로 돌아올 가능성이 높다`
           ]))
         : pickVariant(packet.tick + 6, [
-            "정적은 잠깐뿐이고, 다음 선택은 더 비싼 값을 요구할 가능성이 크다.",
-            "침묵은 오래 가지 못한다. 다음 장면은 분명 더 거친 대가를 부를 것이다.",
-            "간신히 넘어간 듯 보여도, 다음 국면의 청구서는 이미 작성되고 있다."
+            "결과: 정적은 잠깐뿐이고, 다음 선택은 더 비싼 값을 요구할 가능성이 크다.",
+            "결과: 침묵은 오래 가지 못한다. 다음 장면은 분명 더 거친 대가를 부를 것이다.",
+            "결과: 간신히 넘어간 듯 보여도, 다음 국면의 청구서는 이미 작성되고 있다."
           ])
-    ], 3, 5);
+    ], 5, 7);
 
     const entry = normalizeLogEntry({
       kind: packet.kind,

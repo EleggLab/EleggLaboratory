@@ -47,7 +47,7 @@ export function resolveCombat(state) {
     effects,
     summary: victory
       ? `${withObject(enemy)} 자동 전투로 제압했다.`
-      : `${enemy}와의 충돌에서 밀려 후퇴했다.`
+      : `${withWith(enemy)} 충돌에서 밀려 후퇴했다.`
   };
 }
 
@@ -61,6 +61,10 @@ function hasBatchim(word = "") {
 
 function withObject(word = "") {
   return `${word}${hasBatchim(word) ? "을" : "를"}`;
+}
+
+function withWith(word = "") {
+  return `${word}${hasBatchim(word) ? "과" : "와"}의`;
 }
 
 function inferCombatAbility(classId) {
