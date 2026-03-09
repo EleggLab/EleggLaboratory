@@ -9,7 +9,7 @@ export const CLASS_LABELS_KO = {
   paladin: "맹세 집정관", ranger: "추적 사냥인", rogue: "밤의 협상가", sorcerer: "욕망 공명술사", warlock: "금단 서약자", wizard: "비밀 문장가"
 };
 
-export const LINEAGES = ["draconic", "stonefolk", "longkin", "smallkin", "mixed-grace", "mixed-fury", "smallfoot", "human", "infernal"];
+export const LINEAGES = ["draconic", "stonefolk", "longkin", "smallkin", "mixed-grace", "mixed-fury", "smallfoot", "human", "infernal", "succubus"];
 
 export const LINEAGE_LABELS_KO = {
   draconic: "용혈족",
@@ -20,7 +20,8 @@ export const LINEAGE_LABELS_KO = {
   "mixed-fury": "혼혈(격노)",
   smallfoot: "소족",
   human: "인간",
-  infernal: "지옥혈통"
+  infernal: "지옥혈통",
+  succubus: "서큐버스"
 };
 
 export const BACKGROUNDS = [
