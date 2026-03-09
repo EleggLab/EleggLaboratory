@@ -41,7 +41,7 @@ export function createCharacterTemplate(overrides = {}) {
 
 export function buildCharacterFromTemplate(template) {
   const conMod = abilityModifier(template.abilities.CON);
-  const baseHp = 10 + conMod;
+  const baseHp = 18 + (conMod * 2);
   return {
     ...template,
     level: 1,

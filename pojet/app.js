@@ -103,6 +103,7 @@ let eventCountdown = null;
 let currentHistoryTab = "현재 런 로그";
 let lastVisualTags = [];
 let alreadyEnded = false;
+let currentSpeed = 1;
 
 const abilityAlloc = { STR: 15, DEX: 14, CON: 13, INT: 12, WIS: 10, CHA: 8 };
 
@@ -297,6 +298,7 @@ function finalizeRun(endType) {
 }
 
 function renderState(state) {
+  currentSpeed = state?.time?.speed || 1;
   const c = state.character;
   if (!c) {
     ui.charName.textContent = "아직 이름 없는 자";
@@ -606,6 +608,19 @@ function createLogCard(entry) {
   }
   card.appendChild(head);
 
+  const badges = [...(entry.maturityTags || []).slice(0, 2), ...(entry.visualStateTags || []).slice(0, 2)];
+  if (badges.length) {
+    const wrap = document.createElement("div");
+    wrap.className = "log-badges";
+    badges.forEach((b) => {
+      const s = document.createElement("span");
+      s.className = "log-badge";
+      s.textContent = b;
+      wrap.appendChild(s);
+    });
+    card.appendChild(wrap);
+  }
+
   if (entry.bodyParagraph) {
     const body = document.createElement("p");
     body.className = "log-card-body";
@@ -615,6 +630,7 @@ function createLogCard(entry) {
 
   const detail = document.createElement("details");
   detail.className = "log-card-detail";
+  detail.open = entry.tier === "T3" || currentSpeed <= 2;
   const summary = document.createElement("summary");
   summary.textContent = "왜 이런 일이?";
   detail.appendChild(summary);

@@ -281,6 +281,20 @@ button:hover { filter: brightness(1.1); }
   font-size: 0.72rem;
   color: #e6d9ca;
 }
+.log-badges {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.log-badge {
+  font-size: 0.68rem;
+  border: 1px solid #4f6073;
+  border-radius: 999px;
+  padding: 1px 7px;
+  color: #c8d4e2;
+  background: #1a2230;
+}
 .log-card-body {
   margin: 7px 0 0;
   color: #d8d0c4;

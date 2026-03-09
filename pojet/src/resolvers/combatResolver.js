@@ -21,13 +21,13 @@ export function resolveCombat(state) {
       if (!save.success) taken += rand(2, 5);
     }
 
-    if (Math.random() < 0.55) taken += rand(1, 6);
+    if (Math.random() < 0.4) taken += rand(1, 4);
   }
 
   const victory = dealt >= rand(10, 22);
   const effects = {
-    hpDelta: -(taken + (victory ? 0 : rand(2, 6))),
-    fatigueDelta: victory ? 4 : 8,
+    hpDelta: -(taken + (victory ? 0 : rand(1, 3))),
+    fatigueDelta: victory ? 3 : 6,
     xpDelta: victory ? rand(18, 36) : 8,
     goldDelta: victory ? rand(8, 16) : rand(1, 4),
     renownDelta: victory ? 1 : 0,
