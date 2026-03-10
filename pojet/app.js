@@ -1,6 +1,6 @@
 ﻿import { createStore } from "./src/core/store.js";
 import { createCharacterTemplate, buildCharacterFromTemplate, createQuest, describeCharacter } from "./src/core/state-machine.js";
-import { createAutoProgressionController, applyDecisionChoice, evaluateRunEndType } from "./src/loop/autoProgressionController.js";
+import { createAutoProgressionController, applyDecisionChoice, evaluateRunEndType } from "./runtime/loop/autoProgressionController.js";
 import {
   ABILITIES,
   CLASS_IDS,
@@ -21,7 +21,7 @@ import { createSaveLoadManager } from "./src/meta/saveLoadManager.js";
 import { resolveLegacyReward, applyLegacyToRun } from "./src/meta/legacyUnlockResolver.js";
 import { initNextRunFromLineage } from "./src/meta/lineageInitializer.js";
 import { createChronicleEntry } from "./src/meta/chronicleWriter.js";
-import { runSimulationTests } from "./src/tests/simulationTests.js";
+import { runSimulationTests } from "./runtime/tests/simulationTests.js";
 import { normalizeLogEntry } from "./src/narrative/narrativeEngine.js";
 
 const store = createStore();
@@ -671,3 +671,4 @@ function sign(n) { return n >= 0 ? `+${n}` : `${n}`; }
 function rand(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
 function pick(arr) { return arr[rand(0, arr.length - 1)]; }
 function clamp(n, min, max) { return Math.max(min, Math.min(max, n)); }
+
