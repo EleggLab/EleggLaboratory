@@ -15,7 +15,7 @@ export function createInitialState() {
       autoQuest: true,
       autoRest: true,
       autoPotion: true,
-      t2Policy: "timed-auto",
+      t2Policy: "ask",
       manualCategories: ["faction", "relationship", "relic", "legacy"],
       eventTypePolicies: {},
       eventResolutionOverrides: {}

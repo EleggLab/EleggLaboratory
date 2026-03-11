@@ -1,12 +1,12 @@
 [
   {
     "id": "npc-01",
-    "name": "인물-001",
-    "role": "도시의 중개인",
-    "publicFace": "겉으로는 침착한 인상",
-    "hiddenAngle": "숨겨진 이해관계를 품고 있다.",
+    "name": "Broker One",
+    "role": "City broker",
+    "publicFace": "Calm and polite on the surface.",
+    "hiddenAngle": "Keeps hidden leverage for every deal.",
     "faction": "black-gate-guild",
-    "firstImpression": "첫인상은 단정하지만 경계를 늦출 수 없다.",
+    "firstImpression": "A precise smile with controlled distance.",
     "relationshipAxes": {
       "trust": 45,
       "intimacy": 10,
@@ -17,21 +17,21 @@
     },
     "preferredChecks": [
       "persuasion",
-      "insight"
+      "seduction"
     ],
     "trustHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Keeps terms when value is mutual.",
+      "Opens routes after proof of discipline."
     ],
     "conflictHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Punishes delayed payment immediately.",
+      "Escalates pressure when betrayal appears."
     ],
     "portraitMoodTags": [
       "resolved",
-      "rain_soaked"
+      "tempted"
     ],
-    "routePotential": "동맹/경쟁 루트",
+    "routePotential": "ally/rival/control route",
     "eventLinks": [
       "evt-t2-001",
       "evt-t3-001"
@@ -39,12 +39,12 @@
   },
   {
     "id": "npc-02",
-    "name": "인물-002",
-    "role": "도시의 중개인",
-    "publicFace": "겉으로는 침착한 인상",
-    "hiddenAngle": "숨겨진 이해관계를 품고 있다.",
+    "name": "Broker Two",
+    "role": "Temple liaison",
+    "publicFace": "Looks composed and principled.",
+    "hiddenAngle": "Obsessed with forbidden leverage.",
     "faction": "lamp-sanctum",
-    "firstImpression": "첫인상은 단정하지만 경계를 늦출 수 없다.",
+    "firstImpression": "Measured tone, dangerous intent.",
     "relationshipAxes": {
       "trust": 40,
       "intimacy": 18,
@@ -55,21 +55,21 @@
     },
     "preferredChecks": [
       "religion",
-      "insight"
+      "corruption"
     ],
     "trustHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Keeps terms when value is mutual.",
+      "Opens routes after proof of discipline."
     ],
     "conflictHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Punishes delayed payment immediately.",
+      "Escalates pressure when betrayal appears."
     ],
     "portraitMoodTags": [
       "blessed",
-      "tempted"
+      "tainted"
     ],
-    "routePotential": "동맹/경쟁 루트",
+    "routePotential": "ally/rival/control route",
     "eventLinks": [
       "evt-t2-003",
       "evt-t3-004"
@@ -77,12 +77,12 @@
   },
   {
     "id": "npc-03",
-    "name": "인물-003",
-    "role": "도시의 중개인",
-    "publicFace": "겉으로는 침착한 인상",
-    "hiddenAngle": "숨겨진 이해관계를 품고 있다.",
+    "name": "Broker Three",
+    "role": "Edict officer",
+    "publicFace": "Formal and disciplined.",
+    "hiddenAngle": "Uses people as strategic pieces.",
     "faction": "gray-edict-office",
-    "firstImpression": "첫인상은 단정하지만 경계를 늦출 수 없다.",
+    "firstImpression": "Eyes weigh outcomes before words.",
     "relationshipAxes": {
       "trust": 30,
       "intimacy": 6,
@@ -92,22 +92,22 @@
       "fear": 24
     },
     "preferredChecks": [
-      "investigation",
-      "persuasion"
+      "intimidation",
+      "manipulation"
     ],
     "trustHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Keeps terms when value is mutual.",
+      "Opens routes after proof of discipline."
     ],
     "conflictHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Punishes delayed payment immediately.",
+      "Escalates pressure when betrayal appears."
     ],
     "portraitMoodTags": [
       "resolved",
-      "noble_favor"
+      "dominant"
     ],
-    "routePotential": "동맹/경쟁 루트",
+    "routePotential": "ally/rival/control route",
     "eventLinks": [
       "evt-t2-005",
       "evt-t3-001"
@@ -115,12 +115,12 @@
   },
   {
     "id": "npc-04",
-    "name": "인물-004",
-    "role": "도시의 중개인",
-    "publicFace": "겉으로는 침착한 인상",
-    "hiddenAngle": "숨겨진 이해관계를 품고 있다.",
+    "name": "Broker Four",
+    "role": "Night network broker",
+    "publicFace": "Charismatic and inviting.",
+    "hiddenAngle": "Turns intimacy into transactional control.",
     "faction": "red-night-syndicate",
-    "firstImpression": "첫인상은 단정하지만 경계를 늦출 수 없다.",
+    "firstImpression": "Warm voice, calculated steps.",
     "relationshipAxes": {
       "trust": 26,
       "intimacy": 22,
@@ -130,22 +130,22 @@
       "fear": 18
     },
     "preferredChecks": [
-      "deception",
-      "sleight_of_hand"
+      "seduction",
+      "deception"
     ],
     "trustHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Keeps terms when value is mutual.",
+      "Opens routes after proof of discipline."
     ],
     "conflictHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Punishes delayed payment immediately.",
+      "Escalates pressure when betrayal appears."
     ],
     "portraitMoodTags": [
       "tempted",
-      "rain_soaked"
+      "seductive"
     ],
-    "routePotential": "동맹/경쟁 루트",
+    "routePotential": "ally/rival/control route",
     "eventLinks": [
       "evt-t2-002",
       "evt-t3-003"
@@ -153,12 +153,12 @@
   },
   {
     "id": "npc-05",
-    "name": "인물-005",
-    "role": "도시의 중개인",
-    "publicFace": "겉으로는 침착한 인상",
-    "hiddenAngle": "숨겨진 이해관계를 품고 있다.",
+    "name": "Broker Five",
+    "role": "Reliquary researcher",
+    "publicFace": "Elegant and reserved.",
+    "hiddenAngle": "Pays personal cost for forbidden research.",
     "faction": "glass-reliquary",
-    "firstImpression": "첫인상은 단정하지만 경계를 늦출 수 없다.",
+    "firstImpression": "Refined posture with visible strain.",
     "relationshipAxes": {
       "trust": 22,
       "intimacy": 9,
@@ -169,21 +169,21 @@
     },
     "preferredChecks": [
       "arcana",
-      "investigation"
+      "insight"
     ],
     "trustHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Keeps terms when value is mutual.",
+      "Opens routes after proof of discipline."
     ],
     "conflictHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Punishes delayed payment immediately.",
+      "Escalates pressure when betrayal appears."
     ],
     "portraitMoodTags": [
       "spellglow_arcane",
-      "tainted"
+      "corrupted"
     ],
-    "routePotential": "동맹/경쟁 루트",
+    "routePotential": "ally/rival/control route",
     "eventLinks": [
       "evt-t2-005",
       "evt-t3-004"
@@ -191,126 +191,144 @@
   },
   {
     "id": "npc-06",
-    "name": "인물-006",
-    "role": "도시의 중개인",
-    "publicFace": "겉으로는 침착한 인상",
-    "hiddenAngle": "숨겨진 이해관계를 품고 있다.",
-    "faction": "black-gate-guild",
-    "firstImpression": "첫인상은 단정하지만 경계를 늦출 수 없다.",
+    "name": "Bellatrix",
+    "role": "Shadow innkeeper",
+    "publicFace": "Runs harbor order through contracts.",
+    "hiddenAngle": "Converts weakness into long-term debt.",
+    "faction": "red-night-syndicate",
+    "firstImpression": "Friendly offer, sealed exits.",
     "relationshipAxes": {
-      "trust": 38,
-      "intimacy": 16,
-      "tension": 12,
-      "desire": 7,
-      "respect": 27,
-      "fear": 8
+      "trust": 15,
+      "intimacy": 10,
+      "tension": 40,
+      "desire": 30,
+      "respect": 25,
+      "fear": 20
     },
     "preferredChecks": [
-      "insight",
+      "seduction",
+      "manipulation",
+      "intimidation",
       "persuasion"
     ],
     "trustHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Keeps terms when value is mutual.",
+      "Opens routes after proof of discipline."
     ],
     "conflictHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Punishes delayed payment immediately.",
+      "Escalates pressure when betrayal appears."
     ],
     "portraitMoodTags": [
-      "resolved",
-      "grieving"
+      "seductive",
+      "mysterious",
+      "calculating",
+      "alluring",
+      "dominant"
     ],
-    "routePotential": "동맹/경쟁 루트",
+    "routePotential": "ally/rival/control route",
     "eventLinks": [
-      "evt-t1-007",
-      "evt-t2-004"
+      "evt-t2-033",
+      "evt-t2-034",
+      "evt-t3-017"
     ]
   },
   {
     "id": "npc-07",
-    "name": "인물-007",
-    "role": "도시의 중개인",
-    "publicFace": "겉으로는 침착한 인상",
-    "hiddenAngle": "숨겨진 이해관계를 품고 있다.",
-    "faction": "gray-edict-office",
-    "firstImpression": "첫인상은 단정하지만 경계를 늦출 수 없다.",
+    "name": "Caius",
+    "role": "Fallen paladin",
+    "publicFace": "Holds the line with fractured faith.",
+    "hiddenAngle": "Will trade purity for battlefield force.",
+    "faction": "lamp-sanctum",
+    "firstImpression": "Noble frame, collapse at the edge.",
     "relationshipAxes": {
-      "trust": 24,
-      "intimacy": 19,
-      "tension": 29,
-      "desire": 17,
-      "respect": 31,
-      "fear": 15
+      "trust": 0,
+      "intimacy": 5,
+      "tension": 60,
+      "desire": 10,
+      "respect": 10,
+      "fear": 50
     },
     "preferredChecks": [
-      "history",
-      "persuasion"
+      "intimidation",
+      "taint",
+      "dependency",
+      "brutality"
     ],
     "trustHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Keeps terms when value is mutual.",
+      "Opens routes after proof of discipline."
     ],
     "conflictHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Punishes delayed payment immediately.",
+      "Escalates pressure when betrayal appears."
     ],
     "portraitMoodTags": [
-      "noble_favor",
-      "tempted"
+      "tormented",
+      "corrupted",
+      "desperate",
+      "powerful",
+      "dependent"
     ],
-    "routePotential": "동맹/경쟁 루트",
+    "routePotential": "ally/rival/control route",
     "eventLinks": [
-      "evt-t2-006",
-      "evt-t3-002"
+      "evt-t2-035",
+      "evt-t2-036",
+      "evt-t3-018"
     ]
   },
   {
     "id": "npc-08",
-    "name": "인물-008",
-    "role": "도시의 중개인",
-    "publicFace": "겉으로는 침착한 인상",
-    "hiddenAngle": "숨겨진 이해관계를 품고 있다.",
-    "faction": "lamp-sanctum",
-    "firstImpression": "첫인상은 단정하지만 경계를 늦출 수 없다.",
+    "name": "Serena",
+    "role": "Secret alchemist",
+    "publicFace": "Cold analyst with clean delivery.",
+    "hiddenAngle": "Treats people and bonds as test variables.",
+    "faction": "glass-reliquary",
+    "firstImpression": "Sharp logic with dangerous curiosity.",
     "relationshipAxes": {
-      "trust": 34,
-      "intimacy": 8,
-      "tension": 18,
-      "desire": 4,
-      "respect": 36,
-      "fear": 19
+      "trust": 10,
+      "intimacy": 5,
+      "tension": 50,
+      "desire": 40,
+      "respect": 35,
+      "fear": 30
     },
     "preferredChecks": [
-      "survival",
-      "religion"
+      "control",
+      "desire",
+      "knowledge",
+      "corruption"
     ],
     "trustHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Keeps terms when value is mutual.",
+      "Opens routes after proof of discipline."
     ],
     "conflictHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Punishes delayed payment immediately.",
+      "Escalates pressure when betrayal appears."
     ],
     "portraitMoodTags": [
-      "grieving",
-      "rain_soaked"
+      "cold",
+      "intelligent",
+      "obsessive",
+      "manipulative",
+      "experimental"
     ],
-    "routePotential": "동맹/경쟁 루트",
+    "routePotential": "ally/rival/control route",
     "eventLinks": [
-      "evt-t1-010",
-      "evt-t2-009"
+      "evt-t2-037",
+      "evt-t2-038",
+      "evt-t3-019"
     ]
   },
   {
     "id": "npc-09",
-    "name": "인물-009",
-    "role": "도시의 중개인",
-    "publicFace": "겉으로는 침착한 인상",
-    "hiddenAngle": "숨겨진 이해관계를 품고 있다.",
+    "name": "\uc778\ubb3c-009",
+    "role": "\ub3c4\uc2dc\uc758 \uc911\uac1c\uc778",
+    "publicFace": "\uac89\uc73c\ub85c\ub294 \uce68\ucc29\ud55c \uc778\uc0c1",
+    "hiddenAngle": "\uc228\uaca8\uc9c4 \uc774\ud574\uad00\uacc4\ub97c \ud488\uace0 \uc788\ub2e4.",
     "faction": "red-night-syndicate",
-    "firstImpression": "첫인상은 단정하지만 경계를 늦출 수 없다.",
+    "firstImpression": "\uccab\uc778\uc0c1\uc740 \ub2e8\uc815\ud558\uc9c0\ub9cc \uacbd\uacc4\ub97c \ub2a6\ucd9c \uc218 \uc5c6\ub2e4.",
     "relationshipAxes": {
       "trust": 18,
       "intimacy": 14,
@@ -324,18 +342,18 @@
       "deception"
     ],
     "trustHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "\uc815\ub9ac \ubb38\uad6c 1",
+      "\uc815\ub9ac \ubb38\uad6c 2"
     ],
     "conflictHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "\uc815\ub9ac \ubb38\uad6c 1",
+      "\uc815\ub9ac \ubb38\uad6c 2"
     ],
     "portraitMoodTags": [
       "tainted",
       "bloodied"
     ],
-    "routePotential": "동맹/경쟁 루트",
+    "routePotential": "\ub3d9\ub9f9/\uacbd\uc7c1 \ub8e8\ud2b8",
     "eventLinks": [
       "evt-t2-010",
       "evt-t3-003"
@@ -343,12 +361,12 @@
   },
   {
     "id": "npc-10",
-    "name": "인물-010",
-    "role": "도시의 중개인",
-    "publicFace": "겉으로는 침착한 인상",
-    "hiddenAngle": "숨겨진 이해관계를 품고 있다.",
+    "name": "\uc778\ubb3c-010",
+    "role": "\ub3c4\uc2dc\uc758 \uc911\uac1c\uc778",
+    "publicFace": "\uac89\uc73c\ub85c\ub294 \uce68\ucc29\ud55c \uc778\uc0c1",
+    "hiddenAngle": "\uc228\uaca8\uc9c4 \uc774\ud574\uad00\uacc4\ub97c \ud488\uace0 \uc788\ub2e4.",
     "faction": "black-gate-guild",
-    "firstImpression": "첫인상은 단정하지만 경계를 늦출 수 없다.",
+    "firstImpression": "\uccab\uc778\uc0c1\uc740 \ub2e8\uc815\ud558\uc9c0\ub9cc \uacbd\uacc4\ub97c \ub2a6\ucd9c \uc218 \uc5c6\ub2e4.",
     "relationshipAxes": {
       "trust": 33,
       "intimacy": 7,
@@ -362,18 +380,18 @@
       "intimidation"
     ],
     "trustHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "\uc815\ub9ac \ubb38\uad6c 1",
+      "\uc815\ub9ac \ubb38\uad6c 2"
     ],
     "conflictHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "\uc815\ub9ac \ubb38\uad6c 1",
+      "\uc815\ub9ac \ubb38\uad6c 2"
     ],
     "portraitMoodTags": [
       "resolved",
       "bloodied"
     ],
-    "routePotential": "동맹/경쟁 루트",
+    "routePotential": "\ub3d9\ub9f9/\uacbd\uc7c1 \ub8e8\ud2b8",
     "eventLinks": [
       "evt-t1-008",
       "evt-t3-001"
@@ -381,12 +399,12 @@
   },
   {
     "id": "npc-11",
-    "name": "인물-011",
-    "role": "도시의 중개인",
-    "publicFace": "겉으로는 침착한 인상",
-    "hiddenAngle": "숨겨진 이해관계를 품고 있다.",
+    "name": "\uc778\ubb3c-011",
+    "role": "\ub3c4\uc2dc\uc758 \uc911\uac1c\uc778",
+    "publicFace": "\uac89\uc73c\ub85c\ub294 \uce68\ucc29\ud55c \uc778\uc0c1",
+    "hiddenAngle": "\uc228\uaca8\uc9c4 \uc774\ud574\uad00\uacc4\ub97c \ud488\uace0 \uc788\ub2e4.",
     "faction": "glass-reliquary",
-    "firstImpression": "첫인상은 단정하지만 경계를 늦출 수 없다.",
+    "firstImpression": "\uccab\uc778\uc0c1\uc740 \ub2e8\uc815\ud558\uc9c0\ub9cc \uacbd\uacc4\ub97c \ub2a6\ucd9c \uc218 \uc5c6\ub2e4.",
     "relationshipAxes": {
       "trust": 28,
       "intimacy": 24,
@@ -400,18 +418,18 @@
       "persuasion"
     ],
     "trustHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "\uc815\ub9ac \ubb38\uad6c 1",
+      "\uc815\ub9ac \ubb38\uad6c 2"
     ],
     "conflictHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "\uc815\ub9ac \ubb38\uad6c 1",
+      "\uc815\ub9ac \ubb38\uad6c 2"
     ],
     "portraitMoodTags": [
       "spellglow_arcane",
       "tempted"
     ],
-    "routePotential": "동맹/경쟁 루트",
+    "routePotential": "\ub3d9\ub9f9/\uacbd\uc7c1 \ub8e8\ud2b8",
     "eventLinks": [
       "evt-t2-011",
       "evt-t3-005"
@@ -419,12 +437,12 @@
   },
   {
     "id": "npc-12",
-    "name": "인물-012",
-    "role": "도시의 중개인",
-    "publicFace": "겉으로는 침착한 인상",
-    "hiddenAngle": "숨겨진 이해관계를 품고 있다.",
+    "name": "\uc778\ubb3c-012",
+    "role": "\ub3c4\uc2dc\uc758 \uc911\uac1c\uc778",
+    "publicFace": "\uac89\uc73c\ub85c\ub294 \uce68\ucc29\ud55c \uc778\uc0c1",
+    "hiddenAngle": "\uc228\uaca8\uc9c4 \uc774\ud574\uad00\uacc4\ub97c \ud488\uace0 \uc788\ub2e4.",
     "faction": "gray-edict-office",
-    "firstImpression": "첫인상은 단정하지만 경계를 늦출 수 없다.",
+    "firstImpression": "\uccab\uc778\uc0c1\uc740 \ub2e8\uc815\ud558\uc9c0\ub9cc \uacbd\uacc4\ub97c \ub2a6\ucd9c \uc218 \uc5c6\ub2e4.",
     "relationshipAxes": {
       "trust": 36,
       "intimacy": 11,
@@ -438,18 +456,18 @@
       "investigation"
     ],
     "trustHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "\uc815\ub9ac \ubb38\uad6c 1",
+      "\uc815\ub9ac \ubb38\uad6c 2"
     ],
     "conflictHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "\uc815\ub9ac \ubb38\uad6c 1",
+      "\uc815\ub9ac \ubb38\uad6c 2"
     ],
     "portraitMoodTags": [
       "resolved",
       "wounded_minor"
     ],
-    "routePotential": "동맹/경쟁 루트",
+    "routePotential": "\ub3d9\ub9f9/\uacbd\uc7c1 \ub8e8\ud2b8",
     "eventLinks": [
       "evt-t1-009",
       "evt-t2-012"

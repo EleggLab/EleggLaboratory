@@ -69,10 +69,21 @@ export function createAutoProgressionController(store, contentPack) {
 
     const possibleEvent = maybeDispatchDecisionEvent(store.getState(), contentPack);
     if (possibleEvent) {
+      const openedTick = Number(store.getState().time.tick || 0);
       store.dispatch({ type: "SET_ACTIVE_EVENT", payload: { event: { ...possibleEvent, openedAt: Date.now() } } });
-      store.dispatch({ type: "HISTORY_EVENT", payload: { entry: { eventId: possibleEvent.id || possibleEvent.eventId, tier: possibleEvent.tier, category: possibleEvent.category, openedAt: new Date().toISOString() } } });
-      const eventLog = narrative.makeEventOpenLog({ state: store.getState(), event: possibleEvent });
-      store.dispatch({ type: "LOG", payload: { log: eventLog, meta: { tier: possibleEvent.tier } } });
+      store.dispatch({
+        type: "HISTORY_EVENT",
+        payload: {
+          entry: {
+            eventId: possibleEvent.id || possibleEvent.eventId,
+            tier: possibleEvent.tier,
+            category: possibleEvent.category,
+            stage: "opened",
+            tick: openedTick,
+            openedAt: new Date().toISOString()
+          }
+        }
+      });
 
       if (shouldForcePause(possibleEvent)) {
         store.dispatch({ type: "RUN_PAUSE" });
@@ -185,7 +196,21 @@ export function applyDecisionChoice(store, choice, auto = false, contentPack = n
     auto
   });
   store.dispatch({ type: "LOG", payload: { log: choiceLog, meta: { tier: event.tier } } });
-  store.dispatch({ type: "HISTORY_EVENT", payload: { entry: { eventId: event.id || event.eventId, choiceId: choice.id, auto, tier: event.tier, category: event.category, resolvedAt: new Date().toISOString() } } });
+  store.dispatch({
+    type: "HISTORY_EVENT",
+    payload: {
+      entry: {
+        eventId: event.id || event.eventId,
+        choiceId: choice.id,
+        auto,
+        tier: event.tier,
+        category: event.category,
+        stage: "resolved",
+        tick: Number(store.getState().time.tick || 0),
+        resolvedAt: new Date().toISOString()
+      }
+    }
+  });
   store.dispatch({ type: "CLEAR_ACTIVE_EVENT" });
 
   const after = store.getState().relationships.npcRelations.core || {};

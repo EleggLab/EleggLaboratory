@@ -21,8 +21,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "검은비 변경에서 사회 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "사회 사건 #1",
+    "narrativeText": "\uac80\uc740\ube44 \ubcc0\uacbd\uc758 \uc5b4\ub450\uc6b4 \ub4b7\uace8\ubaa9\uc5d0\uc11c, \ud55c \uc80a\uc740 \uc9d5\uc9d1\ubcd1\uc774 \ube5a\ub354\ubbf8\uc5d0 \uc549\uc544 \ubab8\uc744 \ud314\uc544\uc57c \ud560 \uc704\uae30\uc5d0 \ucc98\ud588\ub2e4. \uadf8\uc758 \ubd89\uc5b4\uc9c4 \uc5bc\uad74\uacfc \ub5a8\ub9ac\ub294 \uc190\uc740 \uc808\ubc15\ud568\uc744 \ub118\uc5b4\uc120 \ubb34\uc5b8\uac00\ub97c \uac08\uad6c\ud558\uace0 \uc788\uc5c8\ub2e4. \ub2f9\uc2e0\uc774 \uac1c\uc785\ud558\uc9c0 \uc54a\ub294\ub2e4\uba74, \uadf8\uc758 \uc6b4\uba85\uc740 \ucc28\uac00\uc6b4 \ubc24\uac70\ub9ac\uc758 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub420 \uac83\uc774\ub2e4.",
+    "logSummary": "\uc0ac\ud68c \uc0ac\uac74 #1",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -47,7 +47,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -61,7 +61,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -77,7 +77,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -113,8 +113,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "회색 항구에서 관계 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "관계 사건 #2",
+    "narrativeText": "\ud68c\uc0c9 \ud56d\uad6c\uc758 \ub205\uc9c4\ud55c \ubc24, \ud55c \uace0\uc544 \ub3c4\ub451\uc774 \uac70\ubb3c \uc0c1\uc778\uc758 \uc740\ubc00\ud55c \uc81c\uc548\uc5d0 \ud754\ub4e4\ub9ac\uace0 \uc788\ub2e4. \uadf8\uc758 \ub208\ube5b\uc740 \ud0d0\uc695\uacfc \ub450\ub824\uc6c0 \uc0ac\uc774\uc5d0\uc11c \uac08\ub4f1\ud558\uba70, \uc587\uc740 \uc637 \uc544\ub798\ub85c \ub4dc\ub7ec\ub09c \ubab8\uc740 \uae34\uc7a5\uc73c\ub85c \ubbf8\uc138\ud558\uac8c \ub5a8\ub9ac\uace0 \uc788\uc5c8\ub2e4. \ub2f9\uc2e0\uc758 \uac1c\uc785 \uc5c6\uc774\ub294, \uadf8\ub294 \uc0c1\uc778\uc758 \ub2ec\ucf64\ud55c \uc18d\uc0ad\uc784\uc5d0 \uad74\ubcf5\ud558\uac70\ub098, \ud639\uc740 \ub354 \uae4a\uc740 \ub098\ub77d\uc73c\ub85c \ub5a8\uc5b4\uc9c8 \uac83\uc774\ub2e4.",
+    "logSummary": "\uad00\uacc4 \uc0ac\uac74 #2",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -139,7 +139,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -153,7 +153,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -169,7 +169,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -205,8 +205,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "성좌 언덕에서 세력 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "세력 사건 #3",
+    "narrativeText": "\uc131\uc88c \uc5b8\ub355\uc5d0\uc11c \uc138\ub825 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc138\ub825 \uc0ac\uac74 #3",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -231,7 +231,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -245,7 +245,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -261,7 +261,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -297,8 +297,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "유리탑 하층에서 유물 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "유물 사건 #4",
+    "narrativeText": "\uc720\ub9ac\ud0d1 \ud558\uce35\uc5d0\uc11c \uc720\ubb3c \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc720\ubb3c \uc0ac\uac74 #4",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -323,7 +323,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -337,7 +337,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -353,7 +353,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -389,8 +389,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "재문 폐허에서 시장 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "시장 사건 #5",
+    "narrativeText": "\uc7ac\ubb38 \ud3d0\ud5c8\uc5d0\uc11c \uc2dc\uc7a5 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc2dc\uc7a5 \uc0ac\uac74 #5",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -415,7 +415,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -429,7 +429,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -445,7 +445,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -481,8 +481,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "검은비 변경에서 신앙 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "신앙 사건 #6",
+    "narrativeText": "\uac80\uc740\ube44 \ubcc0\uacbd\uc5d0\uc11c \uc2e0\uc559 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc2e0\uc559 \uc0ac\uac74 #6",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -507,7 +507,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -521,7 +521,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -537,7 +537,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -573,8 +573,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "회색 항구에서 오염 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "오염 사건 #7",
+    "narrativeText": "\ud68c\uc0c9 \ud56d\uad6c\uc5d0\uc11c \uc624\uc5fc \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc624\uc5fc \uc0ac\uac74 #7",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -599,7 +599,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -613,7 +613,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -629,7 +629,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -665,8 +665,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "성좌 언덕에서 여정 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "여정 사건 #8",
+    "narrativeText": "\uc131\uc88c \uc5b8\ub355\uc5d0\uc11c \uc5ec\uc815 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc5ec\uc815 \uc0ac\uac74 #8",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -691,7 +691,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -705,7 +705,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -721,7 +721,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -757,8 +757,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "유리탑 하층에서 사회 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "사회 사건 #9",
+    "narrativeText": "\uc720\ub9ac\ud0d1 \ud558\uce35\uc5d0\uc11c \uc0ac\ud68c \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc0ac\ud68c \uc0ac\uac74 #9",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -783,7 +783,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -797,7 +797,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -813,7 +813,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -849,8 +849,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "재문 폐허에서 관계 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "관계 사건 #10",
+    "narrativeText": "\uc7ac\ubb38 \ud3d0\ud5c8\uc5d0\uc11c \uad00\uacc4 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uad00\uacc4 \uc0ac\uac74 #10",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -875,7 +875,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -889,7 +889,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -905,7 +905,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -941,8 +941,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "검은비 변경에서 세력 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "세력 사건 #11",
+    "narrativeText": "\uac80\uc740\ube44 \ubcc0\uacbd\uc5d0\uc11c \uc138\ub825 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc138\ub825 \uc0ac\uac74 #11",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -967,7 +967,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -981,7 +981,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -997,7 +997,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -1033,8 +1033,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "회색 항구에서 유물 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "유물 사건 #12",
+    "narrativeText": "\ud68c\uc0c9 \ud56d\uad6c\uc5d0\uc11c \uc720\ubb3c \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc720\ubb3c \uc0ac\uac74 #12",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -1059,7 +1059,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -1073,7 +1073,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1089,7 +1089,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -1125,8 +1125,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "성좌 언덕에서 시장 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "시장 사건 #13",
+    "narrativeText": "\uc131\uc88c \uc5b8\ub355\uc5d0\uc11c \uc2dc\uc7a5 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc2dc\uc7a5 \uc0ac\uac74 #13",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -1151,7 +1151,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -1165,7 +1165,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1181,7 +1181,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -1217,8 +1217,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "유리탑 하층에서 신앙 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "신앙 사건 #14",
+    "narrativeText": "\uc720\ub9ac\ud0d1 \ud558\uce35\uc5d0\uc11c \uc2e0\uc559 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc2e0\uc559 \uc0ac\uac74 #14",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -1243,7 +1243,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -1257,7 +1257,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1273,7 +1273,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -1309,8 +1309,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "재문 폐허에서 오염 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "오염 사건 #15",
+    "narrativeText": "\uc7ac\ubb38 \ud3d0\ud5c8\uc5d0\uc11c \uc624\uc5fc \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc624\uc5fc \uc0ac\uac74 #15",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -1335,7 +1335,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -1349,7 +1349,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1365,7 +1365,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -1401,8 +1401,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "검은비 변경에서 여정 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "여정 사건 #16",
+    "narrativeText": "\uac80\uc740\ube44 \ubcc0\uacbd\uc5d0\uc11c \uc5ec\uc815 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc5ec\uc815 \uc0ac\uac74 #16",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -1427,7 +1427,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -1441,7 +1441,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1457,7 +1457,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -1493,8 +1493,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "회색 항구에서 사회 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "사회 사건 #17",
+    "narrativeText": "\ud68c\uc0c9 \ud56d\uad6c\uc5d0\uc11c \uc0ac\ud68c \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc0ac\ud68c \uc0ac\uac74 #17",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -1519,7 +1519,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -1533,7 +1533,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1549,7 +1549,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -1585,8 +1585,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "성좌 언덕에서 관계 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "관계 사건 #18",
+    "narrativeText": "\uc131\uc88c \uc5b8\ub355\uc5d0\uc11c \uad00\uacc4 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uad00\uacc4 \uc0ac\uac74 #18",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -1611,7 +1611,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -1625,7 +1625,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1641,7 +1641,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -1677,8 +1677,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "유리탑 하층에서 세력 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "세력 사건 #19",
+    "narrativeText": "\uc720\ub9ac\ud0d1 \ud558\uce35\uc5d0\uc11c \uc138\ub825 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc138\ub825 \uc0ac\uac74 #19",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -1703,7 +1703,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -1717,7 +1717,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1733,7 +1733,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -1769,8 +1769,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "재문 폐허에서 유물 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "유물 사건 #20",
+    "narrativeText": "\uc7ac\ubb38 \ud3d0\ud5c8\uc5d0\uc11c \uc720\ubb3c \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc720\ubb3c \uc0ac\uac74 #20",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -1795,7 +1795,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -1809,7 +1809,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1825,7 +1825,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -1861,8 +1861,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "검은비 변경에서 시장 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "시장 사건 #21",
+    "narrativeText": "\uac80\uc740\ube44 \ubcc0\uacbd\uc5d0\uc11c \uc2dc\uc7a5 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc2dc\uc7a5 \uc0ac\uac74 #21",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -1887,7 +1887,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -1901,7 +1901,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1917,7 +1917,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -1953,8 +1953,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "회색 항구에서 신앙 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "신앙 사건 #22",
+    "narrativeText": "\ud68c\uc0c9 \ud56d\uad6c\uc5d0\uc11c \uc2e0\uc559 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc2e0\uc559 \uc0ac\uac74 #22",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -1979,7 +1979,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -1993,7 +1993,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -2009,7 +2009,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -2045,8 +2045,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "성좌 언덕에서 오염 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "오염 사건 #23",
+    "narrativeText": "\uc131\uc88c \uc5b8\ub355\uc5d0\uc11c \uc624\uc5fc \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc624\uc5fc \uc0ac\uac74 #23",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -2071,7 +2071,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -2085,7 +2085,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -2101,7 +2101,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -2137,8 +2137,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "유리탑 하층에서 여정 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "여정 사건 #24",
+    "narrativeText": "\uc720\ub9ac\ud0d1 \ud558\uce35\uc5d0\uc11c \uc5ec\uc815 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc5ec\uc815 \uc0ac\uac74 #24",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -2163,7 +2163,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -2177,7 +2177,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -2193,7 +2193,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -2229,8 +2229,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "재문 폐허에서 사회 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "사회 사건 #25",
+    "narrativeText": "\uc7ac\ubb38 \ud3d0\ud5c8\uc5d0\uc11c \uc0ac\ud68c \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc0ac\ud68c \uc0ac\uac74 #25",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -2255,7 +2255,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -2269,7 +2269,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -2285,7 +2285,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -2321,8 +2321,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "검은비 변경에서 관계 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "관계 사건 #26",
+    "narrativeText": "\uac80\uc740\ube44 \ubcc0\uacbd\uc5d0\uc11c \uad00\uacc4 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uad00\uacc4 \uc0ac\uac74 #26",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -2347,7 +2347,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -2361,7 +2361,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -2377,7 +2377,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -2413,8 +2413,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "회색 항구에서 세력 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "세력 사건 #27",
+    "narrativeText": "\ud68c\uc0c9 \ud56d\uad6c\uc5d0\uc11c \uc138\ub825 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc138\ub825 \uc0ac\uac74 #27",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -2439,7 +2439,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -2453,7 +2453,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -2469,7 +2469,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -2505,8 +2505,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "성좌 언덕에서 유물 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "유물 사건 #28",
+    "narrativeText": "\uc131\uc88c \uc5b8\ub355\uc5d0\uc11c \uc720\ubb3c \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc720\ubb3c \uc0ac\uac74 #28",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -2531,7 +2531,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -2545,7 +2545,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -2561,7 +2561,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -2597,8 +2597,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "유리탑 하층에서 시장 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "시장 사건 #29",
+    "narrativeText": "\uc720\ub9ac\ud0d1 \ud558\uce35\uc5d0\uc11c \uc2dc\uc7a5 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc2dc\uc7a5 \uc0ac\uac74 #29",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -2623,7 +2623,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -2637,7 +2637,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -2653,7 +2653,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -2689,8 +2689,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "재문 폐허에서 신앙 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "신앙 사건 #30",
+    "narrativeText": "\uc7ac\ubb38 \ud3d0\ud5c8\uc5d0\uc11c \uc2e0\uc559 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc2e0\uc559 \uc0ac\uac74 #30",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -2715,7 +2715,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -2729,7 +2729,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -2745,7 +2745,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -2781,8 +2781,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "검은비 변경에서 오염 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "오염 사건 #31",
+    "narrativeText": "\uac80\uc740\ube44 \ubcc0\uacbd\uc5d0\uc11c \uc624\uc5fc \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc624\uc5fc \uc0ac\uac74 #31",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -2807,7 +2807,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -2821,7 +2821,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -2837,7 +2837,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -2873,8 +2873,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "회색 항구에서 여정 문제가 불거졌다. 개입하지 않으면 성향 프리셋에 따라 자동 처리된다.",
-    "logSummary": "여정 사건 #32",
+    "narrativeText": "\ud68c\uc0c9 \ud56d\uad6c\uc5d0\uc11c \uc5ec\uc815 \ubb38\uc81c\uac00 \ubd88\uac70\uc84c\ub2e4. \uac1c\uc785\ud558\uc9c0 \uc54a\uc73c\uba74 \uc131\ud5a5 \ud504\ub9ac\uc14b\uc5d0 \ub530\ub77c \uc790\ub3d9 \ucc98\ub9ac\ub41c\ub2e4.",
+    "logSummary": "\uc5ec\uc815 \uc0ac\uac74 #32",
     "defaultResolution": "preset",
     "outcomes": [
       {
@@ -2899,7 +2899,7 @@
     "choices": [
       {
         "id": "c1",
-        "label": "강행한다",
+        "label": "\uac15\ud589\ud55c\ub2e4",
         "effects": [
           {
             "kind": "gain_gold",
@@ -2913,7 +2913,7 @@
       },
       {
         "id": "c2",
-        "label": "신중히 처리한다",
+        "label": "\uc2e0\uc911\ud788 \ucc98\ub9ac\ud55c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -2929,7 +2929,7 @@
       },
       {
         "id": "c3",
-        "label": "물러선다",
+        "label": "\ubb3c\ub7ec\uc120\ub2e4",
         "effects": [
           {
             "kind": "gain_xp",
@@ -2938,6 +2938,782 @@
           {
             "kind": "fatigue",
             "value": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evt-t2-033",
+    "tier": "T2",
+    "category": "market",
+    "regionTags": [
+      "gray-harbor"
+    ],
+    "classAffinity": [
+      "bard",
+      "rogue",
+      "warlock"
+    ],
+    "statAffinity": [
+      "CHA",
+      "DEX"
+    ],
+    "backgroundAffinity": [
+      "smuggler-runner",
+      "orphan-cutpurse"
+    ],
+    "triggerConditions": {
+      "actMin": 1,
+      "minLevel": 1,
+      "requires": [],
+      "excludes": []
+    },
+    "narrativeText": "In market tension, Bellatrix offers a risky deal. You can take fast gains, stabilize terms, or cut the link and protect future control. This choice shifts resources, trust, and long-tail consequences.",
+    "logSummary": "Market decision with bellatrix",
+    "defaultResolution": "preset",
+    "outcomes": [
+      {
+        "id": "default",
+        "effects": [
+          {
+            "kind": "gain_xp",
+            "value": 10
+          }
+        ]
+      }
+    ],
+    "cooldown": 10,
+    "oneShot": false,
+    "chronicleTags": [
+      "t2-choice",
+      "adult:desire",
+      "adult:control",
+      "npc:bellatrix"
+    ],
+    "portraitStateEffects": [
+      "tempted",
+      "rain_soaked"
+    ],
+    "followUpEventIds": [
+      "evt-t3-017"
+    ],
+    "choices": [
+      {
+        "id": "c1",
+        "label": "Push forward",
+        "effects": [
+          {
+            "kind": "gain_gold",
+            "value": 22
+          },
+          {
+            "kind": "infamy",
+            "value": 1
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "desire": 2,
+              "tension": 1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "bellatrix-contract"
+          }
+        ]
+      },
+      {
+        "id": "c2",
+        "label": "Negotiate terms",
+        "effects": [
+          {
+            "kind": "renown",
+            "value": 2
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "trust": 2,
+              "tension": -1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "bellatrix-neutral"
+          }
+        ]
+      },
+      {
+        "id": "c3",
+        "label": "Step back",
+        "effects": [
+          {
+            "kind": "gain_gold",
+            "value": 14
+          },
+          {
+            "kind": "infamy",
+            "value": 2
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "fear": 2,
+              "trust": -1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "bellatrix-blackmail"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evt-t2-034",
+    "tier": "T2",
+    "category": "relationship",
+    "regionTags": [
+      "gray-harbor"
+    ],
+    "classAffinity": [
+      "bard",
+      "warlock",
+      "paladin"
+    ],
+    "statAffinity": [
+      "CHA",
+      "WIS"
+    ],
+    "backgroundAffinity": [
+      "fallen-bastard",
+      "crusade-runner"
+    ],
+    "triggerConditions": {
+      "actMin": 1,
+      "minLevel": 1,
+      "requires": [],
+      "excludes": []
+    },
+    "narrativeText": "In relationship tension, Bellatrix offers a risky deal. You can take fast gains, stabilize terms, or cut the link and protect future control. This choice shifts resources, trust, and long-tail consequences.",
+    "logSummary": "Relationship decision with bellatrix",
+    "defaultResolution": "preset",
+    "outcomes": [
+      {
+        "id": "default",
+        "effects": [
+          {
+            "kind": "gain_xp",
+            "value": 10
+          }
+        ]
+      }
+    ],
+    "cooldown": 9,
+    "oneShot": false,
+    "chronicleTags": [
+      "t2-choice",
+      "adult:desire",
+      "bond:tense",
+      "npc:bellatrix"
+    ],
+    "portraitStateEffects": [
+      "tempted",
+      "intimate_afterglow"
+    ],
+    "followUpEventIds": [
+      "evt-t3-017"
+    ],
+    "choices": [
+      {
+        "id": "c1",
+        "label": "Push forward",
+        "effects": [
+          {
+            "kind": "relation",
+            "value": {
+              "desire": 3,
+              "trust": 1
+            }
+          },
+          {
+            "kind": "taint",
+            "value": 1
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "bellatrix-intimate"
+          }
+        ]
+      },
+      {
+        "id": "c2",
+        "label": "Negotiate terms",
+        "effects": [
+          {
+            "kind": "renown",
+            "value": 2
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "respect": 2,
+              "tension": 1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "bellatrix-powerplay"
+          }
+        ]
+      },
+      {
+        "id": "c3",
+        "label": "Step back",
+        "effects": [
+          {
+            "kind": "gain_gold",
+            "value": 8
+          },
+          {
+            "kind": "fatigue",
+            "value": 1
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "trust": 1,
+              "desire": -1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "bellatrix-escape"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evt-t2-035",
+    "tier": "T2",
+    "category": "corruption",
+    "regionTags": [
+      "ashen-frontier"
+    ],
+    "classAffinity": [
+      "fighter",
+      "paladin",
+      "barbarian"
+    ],
+    "statAffinity": [
+      "STR",
+      "CON"
+    ],
+    "backgroundAffinity": [
+      "border-conscript",
+      "caravan-guard"
+    ],
+    "triggerConditions": {
+      "actMin": 1,
+      "minLevel": 1,
+      "requires": [],
+      "excludes": []
+    },
+    "narrativeText": "In corruption tension, Caius offers a risky deal. You can take fast gains, stabilize terms, or cut the link and protect future control. This choice shifts resources, trust, and long-tail consequences.",
+    "logSummary": "Corruption decision with caius",
+    "defaultResolution": "preset",
+    "outcomes": [
+      {
+        "id": "default",
+        "effects": [
+          {
+            "kind": "gain_xp",
+            "value": 11
+          }
+        ]
+      }
+    ],
+    "cooldown": 10,
+    "oneShot": false,
+    "chronicleTags": [
+      "t2-choice",
+      "adult:control",
+      "adult:taint",
+      "npc:caius"
+    ],
+    "portraitStateEffects": [
+      "bloodied",
+      "tainted"
+    ],
+    "followUpEventIds": [
+      "evt-t3-018"
+    ],
+    "choices": [
+      {
+        "id": "c1",
+        "label": "Push forward",
+        "effects": [
+          {
+            "kind": "taint",
+            "value": 3
+          },
+          {
+            "kind": "renown",
+            "value": 1
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "respect": 2,
+              "fear": 1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "caius-shared-oath"
+          }
+        ]
+      },
+      {
+        "id": "c2",
+        "label": "Negotiate terms",
+        "effects": [
+          {
+            "kind": "renown",
+            "value": 2
+          },
+          {
+            "kind": "taint",
+            "value": -1
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "trust": 1,
+              "tension": 1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "caius-ritual-restraint"
+          }
+        ]
+      },
+      {
+        "id": "c3",
+        "label": "Step back",
+        "effects": [
+          {
+            "kind": "gain_gold",
+            "value": 24
+          },
+          {
+            "kind": "infamy",
+            "value": 2
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "fear": 2,
+              "trust": -2
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "caius-sold-out"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evt-t2-036",
+    "tier": "T2",
+    "category": "faith",
+    "regionTags": [
+      "ashen-frontier"
+    ],
+    "classAffinity": [
+      "cleric",
+      "paladin",
+      "druid"
+    ],
+    "statAffinity": [
+      "WIS",
+      "CON"
+    ],
+    "backgroundAffinity": [
+      "funeral-aide",
+      "crusade-runner"
+    ],
+    "triggerConditions": {
+      "actMin": 1,
+      "minLevel": 1,
+      "requires": [],
+      "excludes": []
+    },
+    "narrativeText": "In faith tension, Caius offers a risky deal. You can take fast gains, stabilize terms, or cut the link and protect future control. This choice shifts resources, trust, and long-tail consequences.",
+    "logSummary": "Faith decision with caius",
+    "defaultResolution": "preset",
+    "outcomes": [
+      {
+        "id": "default",
+        "effects": [
+          {
+            "kind": "gain_xp",
+            "value": 11
+          }
+        ]
+      }
+    ],
+    "cooldown": 9,
+    "oneShot": false,
+    "chronicleTags": [
+      "t2-choice",
+      "adult:dependency",
+      "bond:tense",
+      "npc:caius"
+    ],
+    "portraitStateEffects": [
+      "bloodied",
+      "grieving"
+    ],
+    "followUpEventIds": [
+      "evt-t3-018"
+    ],
+    "choices": [
+      {
+        "id": "c1",
+        "label": "Push forward",
+        "effects": [
+          {
+            "kind": "renown",
+            "value": 2
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "trust": 2,
+              "desire": -1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "caius-stabilized"
+          }
+        ]
+      },
+      {
+        "id": "c2",
+        "label": "Negotiate terms",
+        "effects": [
+          {
+            "kind": "gain_gold",
+            "value": 18
+          },
+          {
+            "kind": "taint",
+            "value": 2
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "fear": 2,
+              "tension": 2
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "caius-weaponized"
+          }
+        ]
+      },
+      {
+        "id": "c3",
+        "label": "Step back",
+        "effects": [
+          {
+            "kind": "fatigue",
+            "value": 1
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "tension": -1,
+              "trust": -1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "caius-observed"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evt-t2-037",
+    "tier": "T2",
+    "category": "relic",
+    "regionTags": [
+      "glass-lower"
+    ],
+    "classAffinity": [
+      "wizard",
+      "sorcerer",
+      "warlock"
+    ],
+    "statAffinity": [
+      "INT",
+      "CHA"
+    ],
+    "backgroundAffinity": [
+      "tower-dropout",
+      "relic-digger"
+    ],
+    "triggerConditions": {
+      "actMin": 1,
+      "minLevel": 1,
+      "requires": [],
+      "excludes": []
+    },
+    "narrativeText": "In relic tension, Serena offers a risky deal. You can take fast gains, stabilize terms, or cut the link and protect future control. This choice shifts resources, trust, and long-tail consequences.",
+    "logSummary": "Relic decision with serena",
+    "defaultResolution": "preset",
+    "outcomes": [
+      {
+        "id": "default",
+        "effects": [
+          {
+            "kind": "gain_xp",
+            "value": 12
+          }
+        ]
+      }
+    ],
+    "cooldown": 10,
+    "oneShot": false,
+    "chronicleTags": [
+      "t2-choice",
+      "adult:taint",
+      "adult:desire",
+      "npc:serena"
+    ],
+    "portraitStateEffects": [
+      "spellglow_arcane",
+      "tainted"
+    ],
+    "followUpEventIds": [
+      "evt-t3-019"
+    ],
+    "choices": [
+      {
+        "id": "c1",
+        "label": "Push forward",
+        "effects": [
+          {
+            "kind": "gain_gold",
+            "value": 15
+          },
+          {
+            "kind": "taint",
+            "value": 3
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "desire": 1,
+              "trust": 1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "serena-dose-accepted"
+          }
+        ]
+      },
+      {
+        "id": "c2",
+        "label": "Negotiate terms",
+        "effects": [
+          {
+            "kind": "renown",
+            "value": 2
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "respect": 2,
+              "trust": -1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "serena-data-only"
+          }
+        ]
+      },
+      {
+        "id": "c3",
+        "label": "Step back",
+        "effects": [
+          {
+            "kind": "gain_gold",
+            "value": 20
+          },
+          {
+            "kind": "infamy",
+            "value": 2
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "fear": 2,
+              "tension": 1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "serena-vial-smuggled"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evt-t2-038",
+    "tier": "T2",
+    "category": "social",
+    "regionTags": [
+      "glass-lower"
+    ],
+    "classAffinity": [
+      "wizard",
+      "bard",
+      "rogue"
+    ],
+    "statAffinity": [
+      "INT",
+      "CHA",
+      "DEX"
+    ],
+    "backgroundAffinity": [
+      "tower-dropout",
+      "smuggler-runner",
+      "fallen-bastard"
+    ],
+    "triggerConditions": {
+      "actMin": 1,
+      "minLevel": 1,
+      "requires": [],
+      "excludes": []
+    },
+    "narrativeText": "In social tension, Serena offers a risky deal. You can take fast gains, stabilize terms, or cut the link and protect future control. This choice shifts resources, trust, and long-tail consequences.",
+    "logSummary": "Social decision with serena",
+    "defaultResolution": "preset",
+    "outcomes": [
+      {
+        "id": "default",
+        "effects": [
+          {
+            "kind": "gain_xp",
+            "value": 12
+          }
+        ]
+      }
+    ],
+    "cooldown": 9,
+    "oneShot": false,
+    "chronicleTags": [
+      "t2-choice",
+      "adult:control",
+      "adult:dependency",
+      "npc:serena"
+    ],
+    "portraitStateEffects": [
+      "spellglow_arcane",
+      "tempted"
+    ],
+    "followUpEventIds": [
+      "evt-t3-019"
+    ],
+    "choices": [
+      {
+        "id": "c1",
+        "label": "Push forward",
+        "effects": [
+          {
+            "kind": "gain_gold",
+            "value": 22
+          },
+          {
+            "kind": "taint",
+            "value": 2
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "desire": 2,
+              "fear": 1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "serena-clinical-pact"
+          }
+        ]
+      },
+      {
+        "id": "c2",
+        "label": "Negotiate terms",
+        "effects": [
+          {
+            "kind": "renown",
+            "value": 2
+          },
+          {
+            "kind": "taint",
+            "value": -1
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "trust": 2,
+              "tension": -1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "serena-safer-method"
+          }
+        ]
+      },
+      {
+        "id": "c3",
+        "label": "Step back",
+        "effects": [
+          {
+            "kind": "renown",
+            "value": 1
+          },
+          {
+            "kind": "infamy",
+            "value": 1
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "tension": 2,
+              "trust": -2
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "serena-rumor-route"
           }
         ]
       }

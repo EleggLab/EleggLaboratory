@@ -2,7 +2,7 @@
 import { createCharacterTemplate, buildCharacterFromTemplate } from "../../src/core/state-machine.js";
 import { ruleResolver } from "../../src/resolvers/ruleResolver.js";
 import { CLASS_AI, DECISION_PRESETS } from "../../src/config/runtimeData.js";
-import { shouldForcePause } from "../../src/events/eventDispatcher.js";
+import { shouldForcePause, maybeDispatchDecisionEvent } from "../../src/events/eventDispatcher.js";
 import { createNarrativeEngine } from "../../src/narrative/narrativeEngine.js";
 import { buildLogQualityReport } from "../narrative/logQualityValidator.js";
 import { maybeLevelUp } from "../resolvers/rewardResolver.js";
@@ -64,6 +64,38 @@ export function runSimulationTests() {
   const generated = narrative.makeGenericLog({ state: final, kind: "phase", source: "test", text: "생성 로그 검증" });
   const generatedQuality = buildLogQualityReport([generated]);
   results.push({ name: "서사 로그 품질 리포트(generated)", pass: generatedQuality.pass, summary: generatedQuality.summary });
+
+  const eventState = structuredClone(final);
+  eventState.time.tick = 7;
+  eventState.world.act = 2;
+  eventState.character.classId = "bard";
+  eventState.character.lineageId = "succubus";
+  eventState.character.backgroundId = "smuggler-runner";
+  eventState.character.abilities.CHA = 16;
+  eventState.history.events = [{ stage: "opened", tick: 5 }];
+
+  const gatedPack = {
+    eventsT2: [
+      {
+        id: "t2-test-social",
+        tier: "T2",
+        category: "social",
+        classAffinity: ["bard"],
+        backgroundAffinity: ["smuggler-runner"],
+        statAffinity: ["CHA"],
+        triggerConditions: { actMin: 1, minLevel: 1, requires: [], excludes: [] },
+        narrativeText: "밀실 협상이 시작됐다.",
+        choices: [{ id: "c1", label: "받아들인다", effects: [{ kind: "gain_gold", value: 8 }] }]
+      }
+    ],
+    eventsT3: []
+  };
+  const dispatched = maybeDispatchDecisionEvent(eventState, gatedPack);
+  const hasTraitChoice = Boolean((dispatched?.choices || []).find((c) => String(c.id).startsWith("trait-")));
+  const hasExpandedText = String(dispatched?.text || "").includes("\n\n");
+  results.push({ name: "조건 기반 이벤트 선택", pass: Boolean(dispatched && dispatched.eventId === "t2-test-social") });
+  results.push({ name: "특성 기반 선택지 주입", pass: hasTraitChoice });
+  results.push({ name: "이벤트 텍스트 확장", pass: hasExpandedText });
 
   return results;
 }

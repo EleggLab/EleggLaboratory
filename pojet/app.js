@@ -16,6 +16,7 @@ import { loadContentPack } from "./src/config/contentLoader.js";
 import { loadPresentationPack } from "./src/presentation/presentationLoader.js";
 import { derivePortraitTags, mapPortraitVisual, portraitStateCount } from "./src/presentation/portraitStateMapper.js";
 import { applyPortraitRender } from "./src/presentation/portraitRenderer.js";
+import { resolveAssetPortrait, applyAssetPortrait } from "./src/presentation/assetPortraitRenderer.js";
 import { createPanelEmphasisController } from "./src/presentation/panelEmphasisController.js";
 import { createSaveLoadManager } from "./src/meta/saveLoadManager.js";
 import { resolveLegacyReward, applyLegacyToRun } from "./src/meta/legacyUnlockResolver.js";
@@ -45,6 +46,7 @@ const ui = {
   charTags: gid("char-status-tags"),
   portraitStates: gid("portrait-state-list"),
   portrait: gid("portrait"),
+  portraitArt: gid("portrait-art"),
   face: gid("portrait-face"),
   relBars: gid("relationship-bars"),
   axisBars: gid("axis-bars"),
@@ -253,6 +255,7 @@ function beginRun() {
   }
 
   store.dispatch({ type: "RUN_START" });
+  store.dispatch({ type: "APPLY_PATCH", payload: { patch: { automation: { t2Policy: "ask" } } } });
   store.dispatch({ type: "LOG", payload: { log: `${store.getState().character.name}의 연대기가 시작된다.` } });
 
   if (companion) store.dispatch({ type: "LOG", payload: { log: `[동료] ${companion.name}이(가) 합류했다.` } });
@@ -325,6 +328,7 @@ function renderState(state) {
   lastVisualTags = tags;
   const visual = mapPortraitVisual(tags, presentationPack.portraitStateMap);
   applyPortraitRender(ui.portrait, ui.face, ui.portraitStates, visual);
+  applyAssetPortrait(ui.portrait, ui.portraitArt, resolveAssetPortrait(state, visual));
 
   if ((state.history.events[0]?.tier || "") === "T3") emphasis.apply(ui.portrait, "T3");
   else if ((state.history.events[0]?.tier || "") === "T2") emphasis.apply(ui.portrait, "T2");
@@ -404,7 +408,9 @@ function renderEvent(event, state) {
   ui.eventCard.classList.remove("hidden");
   ui.eventTitle.textContent = `[${event.tier}] ${event.title}`;
   ui.eventText.textContent = event.text;
-  ui.eventMeta.textContent = event.tier === "T3" ? "필수 선택: 시간 정지" : "미응답 시 자동 처리";
+  ui.eventMeta.textContent = event.tier === "T3"
+    ? "필수 선택: 시간 정지"
+    : (state.automation.t2Policy === "ask" ? "수동 선택 대기" : "미응답 시 자동 처리");
   ui.eventChoices.innerHTML = "";
 
   (event.choices || []).forEach((choice) => {

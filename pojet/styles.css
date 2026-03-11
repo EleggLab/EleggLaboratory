@@ -57,6 +57,7 @@ body {
 
 .portrait-wrap { padding: 12px; }
 .portrait {
+  --portrait-scene-image: none;
   height: 340px;
   border-radius: 12px;
   border: 1px solid #38404a;
@@ -67,7 +68,11 @@ body {
 }
 .portrait-bg {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, #39424f 0%, #141820 56%, #111318 100%);
+  background-image:
+    linear-gradient(180deg, rgba(57,66,79,.75) 0%, rgba(20,24,32,.76) 56%, rgba(17,19,24,.9) 100%),
+    var(--portrait-scene-image);
+  background-size: cover, cover;
+  background-position: center center;
   opacity: 0.72;
 }
 .portrait-body {
@@ -78,6 +83,21 @@ body {
   background: linear-gradient(180deg, #4a4f5a, #242934);
   box-shadow: 0 -12px 34px rgba(0,0,0,.45);
 }
+.portrait-art {
+  position: absolute;
+  width: 74%;
+  height: 78%;
+  left: 13%;
+  top: 12%;
+  object-fit: contain;
+  opacity: .7;
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,.52)) saturate(1.08);
+}
+.portrait.has-scene-asset .portrait-body {
+  background: linear-gradient(180deg, rgba(74,79,90,.54), rgba(36,41,52,.82));
+}
 .portrait-face {
   position: absolute;
   left: 50%; top: 16%; transform: translateX(-50%);
@@ -86,6 +106,7 @@ body {
   border-radius: 999px;
   padding: 6px 12px;
   font-size: 0.82rem;
+  z-index: 3;
 }
 .portrait-glow {
   position: absolute;
@@ -140,6 +161,10 @@ body {
 .portrait.expr-soft .portrait-face { border-color: #8a7e87; background: rgba(23,20,24,.72); }
 .portrait.expr-guarded .portrait-face { border-color: #636f85; background: rgba(14,18,24,.75); }
 .portrait.expr-grim .portrait-face { border-color: #7a5252; }
+.portrait.portrait-theme-frontier .portrait-art { filter: drop-shadow(0 10px 22px rgba(0,0,0,.52)) hue-rotate(-8deg) saturate(1.05); }
+.portrait.portrait-theme-underbelly .portrait-art { filter: drop-shadow(0 10px 22px rgba(0,0,0,.55)) hue-rotate(14deg) saturate(1.2); }
+.portrait.portrait-theme-ritual .portrait-art { filter: drop-shadow(0 10px 22px rgba(0,0,0,.5)) hue-rotate(-14deg) saturate(1.12); }
+.portrait.portrait-theme-elite .portrait-art { filter: drop-shadow(0 10px 22px rgba(0,0,0,.5)) hue-rotate(24deg) saturate(1.16); }
 .portrait-meta h2 { margin: 10px 0 2px; font-size: 1.1rem; }
 .portrait-meta p { margin: 0; color: var(--muted); }
 
@@ -228,6 +253,10 @@ button:hover { filter: brightness(1.1); }
   padding: 12px;
 }
 .event-card h2 { margin: 0 0 8px; }
+#event-text {
+  white-space: pre-line;
+  line-height: 1.45;
+}
 .event-meta, .timer { color: var(--muted); font-size: .85rem; }
 .choices { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
 .choices button { background: #2c2521; border-color: #6f593f; }

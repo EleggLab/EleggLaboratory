@@ -21,8 +21,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "검은비 변경에서 운명을 바꿀 세력 결단의 순간이 찾아왔다.",
-    "logSummary": "세력 사건 #1",
+    "narrativeText": "\uac80\uc740\ube44 \ubcc0\uacbd\uc5d0\uc11c \uc6b4\uba85\uc744 \ubc14\uafc0 \uc138\ub825 \uacb0\ub2e8\uc758 \uc21c\uac04\uc774 \ucc3e\uc544\uc654\ub2e4.",
+    "logSummary": "\uc138\ub825 \uc0ac\uac74 #1",
     "defaultResolution": "none",
     "outcomes": [
       {
@@ -48,7 +48,7 @@
     "choices": [
       {
         "id": "oath",
-        "label": "맹세를 따른다",
+        "label": "\ub9f9\uc138\ub97c \ub530\ub978\ub2e4",
         "effects": [
           {
             "kind": "faction",
@@ -65,7 +65,7 @@
       },
       {
         "id": "break",
-        "label": "대가를 감수한다",
+        "label": "\ub300\uac00\ub97c \uac10\uc218\ud55c\ub2e4",
         "effects": [
           {
             "kind": "taint",
@@ -83,7 +83,7 @@
       },
       {
         "id": "withdraw",
-        "label": "봉인하고 떠난다",
+        "label": "\ubd09\uc778\ud558\uace0 \ub5a0\ub09c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -122,8 +122,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "회색 항구에서 운명을 바꿀 유물 결단의 순간이 찾아왔다.",
-    "logSummary": "유물 사건 #2",
+    "narrativeText": "\ud68c\uc0c9 \ud56d\uad6c\uc5d0\uc11c \uc6b4\uba85\uc744 \ubc14\uafc0 \uc720\ubb3c \uacb0\ub2e8\uc758 \uc21c\uac04\uc774 \ucc3e\uc544\uc654\ub2e4.",
+    "logSummary": "\uc720\ubb3c \uc0ac\uac74 #2",
     "defaultResolution": "none",
     "outcomes": [
       {
@@ -149,7 +149,7 @@
     "choices": [
       {
         "id": "oath",
-        "label": "맹세를 따른다",
+        "label": "\ub9f9\uc138\ub97c \ub530\ub978\ub2e4",
         "effects": [
           {
             "kind": "faction",
@@ -166,7 +166,7 @@
       },
       {
         "id": "break",
-        "label": "대가를 감수한다",
+        "label": "\ub300\uac00\ub97c \uac10\uc218\ud55c\ub2e4",
         "effects": [
           {
             "kind": "taint",
@@ -184,7 +184,7 @@
       },
       {
         "id": "withdraw",
-        "label": "봉인하고 떠난다",
+        "label": "\ubd09\uc778\ud558\uace0 \ub5a0\ub09c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -223,8 +223,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "성좌 언덕에서 운명을 바꿀 관계 결단의 순간이 찾아왔다.",
-    "logSummary": "관계 사건 #3",
+    "narrativeText": "\uc131\uc88c \uc5b8\ub355\uc5d0\uc11c \uc6b4\uba85\uc744 \ubc14\uafc0 \uad00\uacc4 \uacb0\ub2e8\uc758 \uc21c\uac04\uc774 \ucc3e\uc544\uc654\ub2e4.",
+    "logSummary": "\uad00\uacc4 \uc0ac\uac74 #3",
     "defaultResolution": "none",
     "outcomes": [
       {
@@ -250,7 +250,7 @@
     "choices": [
       {
         "id": "oath",
-        "label": "맹세를 따른다",
+        "label": "\ub9f9\uc138\ub97c \ub530\ub978\ub2e4",
         "effects": [
           {
             "kind": "faction",
@@ -267,7 +267,7 @@
       },
       {
         "id": "break",
-        "label": "대가를 감수한다",
+        "label": "\ub300\uac00\ub97c \uac10\uc218\ud55c\ub2e4",
         "effects": [
           {
             "kind": "taint",
@@ -285,7 +285,7 @@
       },
       {
         "id": "withdraw",
-        "label": "봉인하고 떠난다",
+        "label": "\ubd09\uc778\ud558\uace0 \ub5a0\ub09c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -324,8 +324,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "유리탑 하층에서 운명을 바꿀 계승 결단의 순간이 찾아왔다.",
-    "logSummary": "계승 사건 #4",
+    "narrativeText": "\uc720\ub9ac\ud0d1 \ud558\uce35\uc5d0\uc11c \uc6b4\uba85\uc744 \ubc14\uafc0 \uacc4\uc2b9 \uacb0\ub2e8\uc758 \uc21c\uac04\uc774 \ucc3e\uc544\uc654\ub2e4.",
+    "logSummary": "\uacc4\uc2b9 \uc0ac\uac74 #4",
     "defaultResolution": "none",
     "outcomes": [
       {
@@ -351,7 +351,7 @@
     "choices": [
       {
         "id": "oath",
-        "label": "맹세를 따른다",
+        "label": "\ub9f9\uc138\ub97c \ub530\ub978\ub2e4",
         "effects": [
           {
             "kind": "faction",
@@ -368,7 +368,7 @@
       },
       {
         "id": "break",
-        "label": "대가를 감수한다",
+        "label": "\ub300\uac00\ub97c \uac10\uc218\ud55c\ub2e4",
         "effects": [
           {
             "kind": "taint",
@@ -386,7 +386,7 @@
       },
       {
         "id": "withdraw",
-        "label": "봉인하고 떠난다",
+        "label": "\ubd09\uc778\ud558\uace0 \ub5a0\ub09c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -425,8 +425,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "재문 폐허에서 운명을 바꿀 오염 결단의 순간이 찾아왔다.",
-    "logSummary": "오염 사건 #5",
+    "narrativeText": "\uc7ac\ubb38 \ud3d0\ud5c8\uc5d0\uc11c \uc6b4\uba85\uc744 \ubc14\uafc0 \uc624\uc5fc \uacb0\ub2e8\uc758 \uc21c\uac04\uc774 \ucc3e\uc544\uc654\ub2e4.",
+    "logSummary": "\uc624\uc5fc \uc0ac\uac74 #5",
     "defaultResolution": "none",
     "outcomes": [
       {
@@ -452,7 +452,7 @@
     "choices": [
       {
         "id": "oath",
-        "label": "맹세를 따른다",
+        "label": "\ub9f9\uc138\ub97c \ub530\ub978\ub2e4",
         "effects": [
           {
             "kind": "faction",
@@ -469,7 +469,7 @@
       },
       {
         "id": "break",
-        "label": "대가를 감수한다",
+        "label": "\ub300\uac00\ub97c \uac10\uc218\ud55c\ub2e4",
         "effects": [
           {
             "kind": "taint",
@@ -487,7 +487,7 @@
       },
       {
         "id": "withdraw",
-        "label": "봉인하고 떠난다",
+        "label": "\ubd09\uc778\ud558\uace0 \ub5a0\ub09c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -526,8 +526,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "검은비 변경에서 운명을 바꿀 신앙 결단의 순간이 찾아왔다.",
-    "logSummary": "신앙 사건 #6",
+    "narrativeText": "\uac80\uc740\ube44 \ubcc0\uacbd\uc5d0\uc11c \uc6b4\uba85\uc744 \ubc14\uafc0 \uc2e0\uc559 \uacb0\ub2e8\uc758 \uc21c\uac04\uc774 \ucc3e\uc544\uc654\ub2e4.",
+    "logSummary": "\uc2e0\uc559 \uc0ac\uac74 #6",
     "defaultResolution": "none",
     "outcomes": [
       {
@@ -553,7 +553,7 @@
     "choices": [
       {
         "id": "oath",
-        "label": "맹세를 따른다",
+        "label": "\ub9f9\uc138\ub97c \ub530\ub978\ub2e4",
         "effects": [
           {
             "kind": "faction",
@@ -570,7 +570,7 @@
       },
       {
         "id": "break",
-        "label": "대가를 감수한다",
+        "label": "\ub300\uac00\ub97c \uac10\uc218\ud55c\ub2e4",
         "effects": [
           {
             "kind": "taint",
@@ -588,7 +588,7 @@
       },
       {
         "id": "withdraw",
-        "label": "봉인하고 떠난다",
+        "label": "\ubd09\uc778\ud558\uace0 \ub5a0\ub09c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -627,8 +627,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "회색 항구에서 운명을 바꿀 세력 결단의 순간이 찾아왔다.",
-    "logSummary": "세력 사건 #7",
+    "narrativeText": "\ud68c\uc0c9 \ud56d\uad6c\uc5d0\uc11c \uc6b4\uba85\uc744 \ubc14\uafc0 \uc138\ub825 \uacb0\ub2e8\uc758 \uc21c\uac04\uc774 \ucc3e\uc544\uc654\ub2e4.",
+    "logSummary": "\uc138\ub825 \uc0ac\uac74 #7",
     "defaultResolution": "none",
     "outcomes": [
       {
@@ -654,7 +654,7 @@
     "choices": [
       {
         "id": "oath",
-        "label": "맹세를 따른다",
+        "label": "\ub9f9\uc138\ub97c \ub530\ub978\ub2e4",
         "effects": [
           {
             "kind": "faction",
@@ -671,7 +671,7 @@
       },
       {
         "id": "break",
-        "label": "대가를 감수한다",
+        "label": "\ub300\uac00\ub97c \uac10\uc218\ud55c\ub2e4",
         "effects": [
           {
             "kind": "taint",
@@ -689,7 +689,7 @@
       },
       {
         "id": "withdraw",
-        "label": "봉인하고 떠난다",
+        "label": "\ubd09\uc778\ud558\uace0 \ub5a0\ub09c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -728,8 +728,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "성좌 언덕에서 운명을 바꿀 유물 결단의 순간이 찾아왔다.",
-    "logSummary": "유물 사건 #8",
+    "narrativeText": "\uc131\uc88c \uc5b8\ub355\uc5d0\uc11c \uc6b4\uba85\uc744 \ubc14\uafc0 \uc720\ubb3c \uacb0\ub2e8\uc758 \uc21c\uac04\uc774 \ucc3e\uc544\uc654\ub2e4.",
+    "logSummary": "\uc720\ubb3c \uc0ac\uac74 #8",
     "defaultResolution": "none",
     "outcomes": [
       {
@@ -755,7 +755,7 @@
     "choices": [
       {
         "id": "oath",
-        "label": "맹세를 따른다",
+        "label": "\ub9f9\uc138\ub97c \ub530\ub978\ub2e4",
         "effects": [
           {
             "kind": "faction",
@@ -772,7 +772,7 @@
       },
       {
         "id": "break",
-        "label": "대가를 감수한다",
+        "label": "\ub300\uac00\ub97c \uac10\uc218\ud55c\ub2e4",
         "effects": [
           {
             "kind": "taint",
@@ -790,7 +790,7 @@
       },
       {
         "id": "withdraw",
-        "label": "봉인하고 떠난다",
+        "label": "\ubd09\uc778\ud558\uace0 \ub5a0\ub09c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -829,8 +829,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "유리탑 하층에서 운명을 바꿀 관계 결단의 순간이 찾아왔다.",
-    "logSummary": "관계 사건 #9",
+    "narrativeText": "\uc720\ub9ac\ud0d1 \ud558\uce35\uc5d0\uc11c \uc6b4\uba85\uc744 \ubc14\uafc0 \uad00\uacc4 \uacb0\ub2e8\uc758 \uc21c\uac04\uc774 \ucc3e\uc544\uc654\ub2e4.",
+    "logSummary": "\uad00\uacc4 \uc0ac\uac74 #9",
     "defaultResolution": "none",
     "outcomes": [
       {
@@ -856,7 +856,7 @@
     "choices": [
       {
         "id": "oath",
-        "label": "맹세를 따른다",
+        "label": "\ub9f9\uc138\ub97c \ub530\ub978\ub2e4",
         "effects": [
           {
             "kind": "faction",
@@ -873,7 +873,7 @@
       },
       {
         "id": "break",
-        "label": "대가를 감수한다",
+        "label": "\ub300\uac00\ub97c \uac10\uc218\ud55c\ub2e4",
         "effects": [
           {
             "kind": "taint",
@@ -891,7 +891,7 @@
       },
       {
         "id": "withdraw",
-        "label": "봉인하고 떠난다",
+        "label": "\ubd09\uc778\ud558\uace0 \ub5a0\ub09c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -930,8 +930,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "재문 폐허에서 운명을 바꿀 계승 결단의 순간이 찾아왔다.",
-    "logSummary": "계승 사건 #10",
+    "narrativeText": "\uc7ac\ubb38 \ud3d0\ud5c8\uc5d0\uc11c \uc6b4\uba85\uc744 \ubc14\uafc0 \uacc4\uc2b9 \uacb0\ub2e8\uc758 \uc21c\uac04\uc774 \ucc3e\uc544\uc654\ub2e4.",
+    "logSummary": "\uacc4\uc2b9 \uc0ac\uac74 #10",
     "defaultResolution": "none",
     "outcomes": [
       {
@@ -957,7 +957,7 @@
     "choices": [
       {
         "id": "oath",
-        "label": "맹세를 따른다",
+        "label": "\ub9f9\uc138\ub97c \ub530\ub978\ub2e4",
         "effects": [
           {
             "kind": "faction",
@@ -974,7 +974,7 @@
       },
       {
         "id": "break",
-        "label": "대가를 감수한다",
+        "label": "\ub300\uac00\ub97c \uac10\uc218\ud55c\ub2e4",
         "effects": [
           {
             "kind": "taint",
@@ -992,7 +992,7 @@
       },
       {
         "id": "withdraw",
-        "label": "봉인하고 떠난다",
+        "label": "\ubd09\uc778\ud558\uace0 \ub5a0\ub09c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1031,8 +1031,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "검은비 변경에서 운명을 바꿀 오염 결단의 순간이 찾아왔다.",
-    "logSummary": "오염 사건 #11",
+    "narrativeText": "\uac80\uc740\ube44 \ubcc0\uacbd\uc5d0\uc11c \uc6b4\uba85\uc744 \ubc14\uafc0 \uc624\uc5fc \uacb0\ub2e8\uc758 \uc21c\uac04\uc774 \ucc3e\uc544\uc654\ub2e4.",
+    "logSummary": "\uc624\uc5fc \uc0ac\uac74 #11",
     "defaultResolution": "none",
     "outcomes": [
       {
@@ -1058,7 +1058,7 @@
     "choices": [
       {
         "id": "oath",
-        "label": "맹세를 따른다",
+        "label": "\ub9f9\uc138\ub97c \ub530\ub978\ub2e4",
         "effects": [
           {
             "kind": "faction",
@@ -1075,7 +1075,7 @@
       },
       {
         "id": "break",
-        "label": "대가를 감수한다",
+        "label": "\ub300\uac00\ub97c \uac10\uc218\ud55c\ub2e4",
         "effects": [
           {
             "kind": "taint",
@@ -1093,7 +1093,7 @@
       },
       {
         "id": "withdraw",
-        "label": "봉인하고 떠난다",
+        "label": "\ubd09\uc778\ud558\uace0 \ub5a0\ub09c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1132,8 +1132,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "회색 항구에서 운명을 바꿀 신앙 결단의 순간이 찾아왔다.",
-    "logSummary": "신앙 사건 #12",
+    "narrativeText": "\ud68c\uc0c9 \ud56d\uad6c\uc5d0\uc11c \uc6b4\uba85\uc744 \ubc14\uafc0 \uc2e0\uc559 \uacb0\ub2e8\uc758 \uc21c\uac04\uc774 \ucc3e\uc544\uc654\ub2e4.",
+    "logSummary": "\uc2e0\uc559 \uc0ac\uac74 #12",
     "defaultResolution": "none",
     "outcomes": [
       {
@@ -1159,7 +1159,7 @@
     "choices": [
       {
         "id": "oath",
-        "label": "맹세를 따른다",
+        "label": "\ub9f9\uc138\ub97c \ub530\ub978\ub2e4",
         "effects": [
           {
             "kind": "faction",
@@ -1176,7 +1176,7 @@
       },
       {
         "id": "break",
-        "label": "대가를 감수한다",
+        "label": "\ub300\uac00\ub97c \uac10\uc218\ud55c\ub2e4",
         "effects": [
           {
             "kind": "taint",
@@ -1194,7 +1194,7 @@
       },
       {
         "id": "withdraw",
-        "label": "봉인하고 떠난다",
+        "label": "\ubd09\uc778\ud558\uace0 \ub5a0\ub09c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1233,8 +1233,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "성좌 언덕에서 운명을 바꿀 세력 결단의 순간이 찾아왔다.",
-    "logSummary": "세력 사건 #13",
+    "narrativeText": "\uc131\uc88c \uc5b8\ub355\uc5d0\uc11c \uc6b4\uba85\uc744 \ubc14\uafc0 \uc138\ub825 \uacb0\ub2e8\uc758 \uc21c\uac04\uc774 \ucc3e\uc544\uc654\ub2e4.",
+    "logSummary": "\uc138\ub825 \uc0ac\uac74 #13",
     "defaultResolution": "none",
     "outcomes": [
       {
@@ -1260,7 +1260,7 @@
     "choices": [
       {
         "id": "oath",
-        "label": "맹세를 따른다",
+        "label": "\ub9f9\uc138\ub97c \ub530\ub978\ub2e4",
         "effects": [
           {
             "kind": "faction",
@@ -1277,7 +1277,7 @@
       },
       {
         "id": "break",
-        "label": "대가를 감수한다",
+        "label": "\ub300\uac00\ub97c \uac10\uc218\ud55c\ub2e4",
         "effects": [
           {
             "kind": "taint",
@@ -1295,7 +1295,7 @@
       },
       {
         "id": "withdraw",
-        "label": "봉인하고 떠난다",
+        "label": "\ubd09\uc778\ud558\uace0 \ub5a0\ub09c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1334,8 +1334,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "유리탑 하층에서 운명을 바꿀 유물 결단의 순간이 찾아왔다.",
-    "logSummary": "유물 사건 #14",
+    "narrativeText": "\uc720\ub9ac\ud0d1 \ud558\uce35\uc5d0\uc11c \uc6b4\uba85\uc744 \ubc14\uafc0 \uc720\ubb3c \uacb0\ub2e8\uc758 \uc21c\uac04\uc774 \ucc3e\uc544\uc654\ub2e4.",
+    "logSummary": "\uc720\ubb3c \uc0ac\uac74 #14",
     "defaultResolution": "none",
     "outcomes": [
       {
@@ -1361,7 +1361,7 @@
     "choices": [
       {
         "id": "oath",
-        "label": "맹세를 따른다",
+        "label": "\ub9f9\uc138\ub97c \ub530\ub978\ub2e4",
         "effects": [
           {
             "kind": "faction",
@@ -1378,7 +1378,7 @@
       },
       {
         "id": "break",
-        "label": "대가를 감수한다",
+        "label": "\ub300\uac00\ub97c \uac10\uc218\ud55c\ub2e4",
         "effects": [
           {
             "kind": "taint",
@@ -1396,7 +1396,7 @@
       },
       {
         "id": "withdraw",
-        "label": "봉인하고 떠난다",
+        "label": "\ubd09\uc778\ud558\uace0 \ub5a0\ub09c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1435,8 +1435,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "재문 폐허에서 운명을 바꿀 관계 결단의 순간이 찾아왔다.",
-    "logSummary": "관계 사건 #15",
+    "narrativeText": "\uc7ac\ubb38 \ud3d0\ud5c8\uc5d0\uc11c \uc6b4\uba85\uc744 \ubc14\uafc0 \uad00\uacc4 \uacb0\ub2e8\uc758 \uc21c\uac04\uc774 \ucc3e\uc544\uc654\ub2e4.",
+    "logSummary": "\uad00\uacc4 \uc0ac\uac74 #15",
     "defaultResolution": "none",
     "outcomes": [
       {
@@ -1462,7 +1462,7 @@
     "choices": [
       {
         "id": "oath",
-        "label": "맹세를 따른다",
+        "label": "\ub9f9\uc138\ub97c \ub530\ub978\ub2e4",
         "effects": [
           {
             "kind": "faction",
@@ -1479,7 +1479,7 @@
       },
       {
         "id": "break",
-        "label": "대가를 감수한다",
+        "label": "\ub300\uac00\ub97c \uac10\uc218\ud55c\ub2e4",
         "effects": [
           {
             "kind": "taint",
@@ -1497,7 +1497,7 @@
       },
       {
         "id": "withdraw",
-        "label": "봉인하고 떠난다",
+        "label": "\ubd09\uc778\ud558\uace0 \ub5a0\ub09c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1536,8 +1536,8 @@
       "requires": [],
       "excludes": []
     },
-    "narrativeText": "검은비 변경에서 운명을 바꿀 계승 결단의 순간이 찾아왔다.",
-    "logSummary": "계승 사건 #16",
+    "narrativeText": "\uac80\uc740\ube44 \ubcc0\uacbd\uc5d0\uc11c \uc6b4\uba85\uc744 \ubc14\uafc0 \uacc4\uc2b9 \uacb0\ub2e8\uc758 \uc21c\uac04\uc774 \ucc3e\uc544\uc654\ub2e4.",
+    "logSummary": "\uacc4\uc2b9 \uc0ac\uac74 #16",
     "defaultResolution": "none",
     "outcomes": [
       {
@@ -1563,7 +1563,7 @@
     "choices": [
       {
         "id": "oath",
-        "label": "맹세를 따른다",
+        "label": "\ub9f9\uc138\ub97c \ub530\ub978\ub2e4",
         "effects": [
           {
             "kind": "faction",
@@ -1580,7 +1580,7 @@
       },
       {
         "id": "break",
-        "label": "대가를 감수한다",
+        "label": "\ub300\uac00\ub97c \uac10\uc218\ud55c\ub2e4",
         "effects": [
           {
             "kind": "taint",
@@ -1598,7 +1598,7 @@
       },
       {
         "id": "withdraw",
-        "label": "봉인하고 떠난다",
+        "label": "\ubd09\uc778\ud558\uace0 \ub5a0\ub09c\ub2e4",
         "effects": [
           {
             "kind": "renown",
@@ -1610,6 +1610,397 @@
               "tension": -1,
               "trust": 1
             }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evt-t3-017",
+    "tier": "T3",
+    "category": "legacy",
+    "regionTags": [
+      "gray-harbor"
+    ],
+    "classAffinity": [
+      "bard",
+      "rogue",
+      "warlock"
+    ],
+    "statAffinity": [
+      "CHA",
+      "DEX"
+    ],
+    "backgroundAffinity": [
+      "smuggler-runner",
+      "fallen-bastard"
+    ],
+    "triggerConditions": {
+      "actMin": 2,
+      "minLevel": 2,
+      "requires": [],
+      "excludes": []
+    },
+    "narrativeText": "This is a major branch tied to Bellatrix. One path grants immediate power with heavy future cost, one path balances risk, and one path severs the chain. The result reshapes later acts and relationship pressure.",
+    "logSummary": "Final legacy break with bellatrix",
+    "defaultResolution": "none",
+    "outcomes": [
+      {
+        "id": "default",
+        "effects": [
+          {
+            "kind": "gain_xp",
+            "value": 14
+          }
+        ]
+      }
+    ],
+    "cooldown": 24,
+    "oneShot": true,
+    "chronicleTags": [
+      "t3-fork",
+      "adult:control",
+      "adult:desire",
+      "npc:bellatrix"
+    ],
+    "portraitStateEffects": [
+      "tempted",
+      "resolved"
+    ],
+    "followUpEventIds": [],
+    "choices": [
+      {
+        "id": "patron",
+        "label": "Commit to power",
+        "effects": [
+          {
+            "kind": "faction",
+            "value": {
+              "red-night-syndicate": 4,
+              "gray-edict-office": -2
+            }
+          },
+          {
+            "kind": "infamy",
+            "value": 2
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "desire": 2,
+              "trust": 1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "bellatrix-patron-route"
+          }
+        ]
+      },
+      {
+        "id": "expose",
+        "label": "Balance and contain",
+        "effects": [
+          {
+            "kind": "renown",
+            "value": 4
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "tension": 2,
+              "trust": -2
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "bellatrix-ledger-breaker"
+          }
+        ]
+      },
+      {
+        "id": "double",
+        "label": "Break and reset",
+        "effects": [
+          {
+            "kind": "taint",
+            "value": 4
+          },
+          {
+            "kind": "infamy",
+            "value": 3
+          },
+          {
+            "kind": "faction",
+            "value": {
+              "red-night-syndicate": 3,
+              "lamp-sanctum": 1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "bellatrix-double-pact"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evt-t3-018",
+    "tier": "T3",
+    "category": "corruption",
+    "regionTags": [
+      "ashen-frontier"
+    ],
+    "classAffinity": [
+      "fighter",
+      "paladin",
+      "cleric"
+    ],
+    "statAffinity": [
+      "STR",
+      "WIS",
+      "CON"
+    ],
+    "backgroundAffinity": [
+      "border-conscript",
+      "funeral-aide",
+      "crusade-runner"
+    ],
+    "triggerConditions": {
+      "actMin": 2,
+      "minLevel": 2,
+      "requires": [],
+      "excludes": []
+    },
+    "narrativeText": "This is a major branch tied to Caius. One path grants immediate power with heavy future cost, one path balances risk, and one path severs the chain. The result reshapes later acts and relationship pressure.",
+    "logSummary": "Final corruption break with caius",
+    "defaultResolution": "none",
+    "outcomes": [
+      {
+        "id": "default",
+        "effects": [
+          {
+            "kind": "gain_xp",
+            "value": 14
+          }
+        ]
+      }
+    ],
+    "cooldown": 24,
+    "oneShot": true,
+    "chronicleTags": [
+      "t3-fork",
+      "adult:dependency",
+      "adult:taint",
+      "npc:caius"
+    ],
+    "portraitStateEffects": [
+      "bloodied",
+      "tainted"
+    ],
+    "followUpEventIds": [],
+    "choices": [
+      {
+        "id": "inherit",
+        "label": "Commit to power",
+        "effects": [
+          {
+            "kind": "taint",
+            "value": 8
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "respect": 2,
+              "fear": 2
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "caius-rust-oath-heir"
+          }
+        ]
+      },
+      {
+        "id": "release",
+        "label": "Balance and contain",
+        "effects": [
+          {
+            "kind": "renown",
+            "value": 3
+          },
+          {
+            "kind": "faction",
+            "value": {
+              "lamp-sanctum": 3
+            }
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "trust": 3,
+              "tension": -1
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "caius-redeemed-route"
+          }
+        ]
+      },
+      {
+        "id": "execute",
+        "label": "Break and reset",
+        "effects": [
+          {
+            "kind": "gain_gold",
+            "value": 40
+          },
+          {
+            "kind": "infamy",
+            "value": 4
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "fear": 4,
+              "trust": -3
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "caius-oath-executioner"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "evt-t3-019",
+    "tier": "T3",
+    "category": "relic",
+    "regionTags": [
+      "glass-lower"
+    ],
+    "classAffinity": [
+      "wizard",
+      "sorcerer",
+      "warlock"
+    ],
+    "statAffinity": [
+      "INT",
+      "CHA",
+      "WIS"
+    ],
+    "backgroundAffinity": [
+      "tower-dropout",
+      "relic-digger",
+      "smuggler-runner"
+    ],
+    "triggerConditions": {
+      "actMin": 2,
+      "minLevel": 2,
+      "requires": [],
+      "excludes": []
+    },
+    "narrativeText": "This is a major branch tied to Serena. One path grants immediate power with heavy future cost, one path balances risk, and one path severs the chain. The result reshapes later acts and relationship pressure.",
+    "logSummary": "Final relic break with serena",
+    "defaultResolution": "none",
+    "outcomes": [
+      {
+        "id": "default",
+        "effects": [
+          {
+            "kind": "gain_xp",
+            "value": 14
+          }
+        ]
+      }
+    ],
+    "cooldown": 24,
+    "oneShot": true,
+    "chronicleTags": [
+      "t3-fork",
+      "adult:taint",
+      "adult:control",
+      "npc:serena"
+    ],
+    "portraitStateEffects": [
+      "spellglow_arcane",
+      "tainted",
+      "resolved"
+    ],
+    "followUpEventIds": [],
+    "choices": [
+      {
+        "id": "metamorph",
+        "label": "Commit to power",
+        "effects": [
+          {
+            "kind": "taint",
+            "value": 10
+          },
+          {
+            "kind": "gain_gold",
+            "value": 30
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "desire": 2,
+              "fear": 2
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "serena-metamorph-route"
+          }
+        ]
+      },
+      {
+        "id": "seal",
+        "label": "Balance and contain",
+        "effects": [
+          {
+            "kind": "renown",
+            "value": 4
+          },
+          {
+            "kind": "relation",
+            "value": {
+              "trust": -2,
+              "tension": 2
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "serena-sealed-lab"
+          }
+        ]
+      },
+      {
+        "id": "auction",
+        "label": "Break and reset",
+        "effects": [
+          {
+            "kind": "gain_gold",
+            "value": 60
+          },
+          {
+            "kind": "infamy",
+            "value": 3
+          },
+          {
+            "kind": "faction",
+            "value": {
+              "glass-reliquary": 4,
+              "black-gate-guild": 2
+            }
+          },
+          {
+            "kind": "chronicle_tag",
+            "value": "serena-auction-route"
           }
         ]
       }
