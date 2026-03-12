@@ -1,142 +1,146 @@
 [
   {
     "id": "black-gate-guild",
-    "name": "무명 세력 1",
-    "identity": "도시의 균형을 흔드는 단체다.",
+    "name": "Black Gate Guild",
+    "identity": "Controls shadow logistics and private debt lines.",
     "playerBenefits": [
-      "정리 문구 1",
-      "정리 문구 2",
-      "정리 문구 3"
+      "smuggling route access",
+      "emergency funding",
+      "broker support"
     ],
-    "hiddenCost": "숨겨진 대가가 따른다.",
+    "hiddenCost": "Debt claims return as delayed pressure.",
     "preferredAttitude": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "strict deadlines",
+      "selective disclosure"
     ],
     "relationshipHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Strong results reduce protection cost.",
+      "Betrayal signs trigger immediate collection."
     ],
     "repThresholds": [
       {
         "min": 20,
-        "reward": "보상 획득"
+        "reward": "reward unlocked"
       },
       {
         "min": -20,
-        "risk": "위험 증가"
+        "risk": "risk increased"
       }
     ]
   },
   {
     "id": "lamp-sanctum",
-    "name": "무명 세력 2",
-    "identity": "도시의 균형을 흔드는 단체다.",
+    "name": "Lamp Sanctum",
+    "identity": "Runs purification rites and taboo tribunals.",
     "playerBenefits": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "taint mitigation rite",
+      "faith route unlock",
+      "sanctum escort"
     ],
-    "hiddenCost": "숨겨진 대가가 따른다.",
+    "hiddenCost": "Taboo breaches stack distrust quickly.",
     "preferredAttitude": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "public oath keeping",
+      "ritual compliance"
     ],
     "relationshipHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Discipline grants blessing resources.",
+      "Hidden deals trigger inquiry events."
     ],
     "repThresholds": [
       {
         "min": 25,
-        "reward": "보상 획득"
+        "reward": "reward unlocked"
       },
       {
         "min": -15,
-        "risk": "위험 증가"
+        "risk": "risk increased"
       }
     ]
   },
   {
     "id": "gray-edict-office",
-    "name": "무명 세력 3",
-    "identity": "도시의 균형을 흔드는 단체다.",
+    "name": "Gray Edict Office",
+    "identity": "Admin force controlling permits and civic law.",
     "playerBenefits": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "transit permit",
+      "legal shield",
+      "official investigation support"
     ],
-    "hiddenCost": "숨겨진 대가가 따른다.",
+    "hiddenCost": "Illegal route history increases surveillance.",
     "preferredAttitude": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "record submission",
+      "procedural negotiation"
     ],
     "relationshipHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Evidence boosts reputation fast.",
+      "False reports trigger sanctions."
     ],
     "repThresholds": [
       {
         "min": 25,
-        "reward": "보상 획득"
+        "reward": "reward unlocked"
       },
       {
         "min": -15,
-        "risk": "위험 증가"
+        "risk": "risk increased"
       }
     ]
   },
   {
     "id": "red-night-syndicate",
-    "name": "무명 세력 4",
-    "identity": "도시의 균형을 흔드는 단체다.",
+    "name": "Red Night Syndicate",
+    "identity": "Dominates nightlife channels and black markets.",
     "playerBenefits": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "covert intel net",
+      "high-value client access",
+      "risky mission brokerage"
     ],
-    "hiddenCost": "숨겨진 대가가 따른다.",
+    "hiddenCost": "Pleasure-linked contracts become long debt.",
     "preferredAttitude": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "fast response",
+      "private agreements"
     ],
     "relationshipHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Big results unlock deeper offers.",
+      "Broken promises spread reputational damage."
     ],
     "repThresholds": [
       {
         "min": 20,
-        "reward": "보상 획득"
+        "reward": "reward unlocked"
       },
       {
         "min": -20,
-        "risk": "위험 증가"
+        "risk": "risk increased"
       }
     ]
   },
   {
     "id": "glass-reliquary",
-    "name": "무명 세력 5",
-    "identity": "도시의 균형을 흔드는 단체다.",
+    "name": "Glass Reliquary",
+    "identity": "Keeps forbidden relics and experimental archives.",
     "playerBenefits": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "relic appraisal",
+      "ritual gear rental",
+      "research archive access"
     ],
-    "hiddenCost": "숨겨진 대가가 따른다.",
+    "hiddenCost": "Borrowed power raises taint and dependency.",
     "preferredAttitude": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "data sharing",
+      "risk consent"
     ],
     "relationshipHooks": [
-      "정리 문구 1",
-      "정리 문구 2"
+      "Cooperation unlocks special options.",
+      "Failed trials shake relation axes hard."
     ],
     "repThresholds": [
       {
         "min": 20,
-        "reward": "보상 획득"
+        "reward": "reward unlocked"
       },
       {
         "min": -20,
-        "risk": "위험 증가"
+        "risk": "risk increased"
       }
     ]
   }

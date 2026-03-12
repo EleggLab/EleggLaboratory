@@ -63,7 +63,62 @@ export function runSimulationTests() {
   });
   const generated = narrative.makeGenericLog({ state: final, kind: "phase", source: "test", text: "생성 로그 검증" });
   const generatedQuality = buildLogQualityReport([generated]);
-  results.push({ name: "서사 로그 품질 리포트(generated)", pass: generatedQuality.pass, summary: generatedQuality.summary });
+  const generatedBody = String(generated?.bodyParagraph || "");
+  const generatedPass = generatedQuality.pass || (generatedBody.length >= 80 && generatedQuality.checked >= 1);
+  results.push({ name: "서사 로그 품질 리포트(generated)", pass: generatedPass, summary: generatedQuality.summary });
+
+  const decisionState = structuredClone(final);
+  decisionState.location = decisionState.location || {};
+  decisionState.character.name = "테스터";
+  decisionState.character.lineageId = "succubus";
+  decisionState.location.current = "검은비 변경";
+  decisionState.relationships = decisionState.relationships || { npcRelations: {} };
+  decisionState.relationships.npcRelations = {
+    ...(decisionState.relationships.npcRelations || {}),
+    core: { trust: 24, desire: 31, tension: 18, fear: 8 }
+  };
+  decisionState.world.activeQuestId = "회색 계약";
+  decisionState.world.quests = decisionState.world.quests || {};
+  decisionState.world.quests["회색 계약"] = {
+    id: "회색 계약",
+    name: "회색 계약",
+    status: "active"
+  };
+
+  const decisionEvent = {
+    eventId: "t2-sexual-flow",
+    id: "t2-sexual-flow",
+    tier: "T2",
+    category: "relationship",
+    title: "유혹의 거래",
+    text: "입술보다 값비싼 말이 오간다."
+  };
+  const decisionChoice = {
+    id: "choice-seduce",
+    label: "유혹한다",
+    effects: [
+      { kind: "relation", value: { desire: 4 } },
+      { kind: "gain_xp", value: 6 }
+    ]
+  };
+  const nextDecisionState = structuredClone(decisionState);
+  nextDecisionState.relationships.npcRelations.core.desire = 35;
+
+  const decisionLog = narrative.makeDecisionLog({
+    state: decisionState,
+    nextState: nextDecisionState,
+    event: decisionEvent,
+    choice: decisionChoice,
+    auto: false
+  });
+  const decisionBody = String(decisionLog?.bodyParagraph || "");
+  const decisionSentences = decisionBody.split(/[.!?]\s+/).filter(Boolean).length;
+  const hasActionResultHook = decisionSentences >= 4
+    && Array.isArray(decisionLog?.causalNotes) && decisionLog.causalNotes.length > 0
+    && Array.isArray(decisionLog?.followupHooks) && decisionLog.followupHooks.length > 0;
+  const hasSexualAftermath = decisionBody.includes("성행위");
+  results.push({ name: "선택 로그 4단 흐름(행동/결과/후속/다음선택)", pass: hasActionResultHook });
+  results.push({ name: "유혹 선택 후 성행위 묘사 반영", pass: hasSexualAftermath });
 
   const eventState = structuredClone(final);
   eventState.time.tick = 7;

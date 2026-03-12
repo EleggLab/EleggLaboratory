@@ -1,12 +1,12 @@
 [
   {
     "id": "npc-01",
-    "name": "Broker One",
-    "role": "City broker",
-    "publicFace": "Calm and polite on the surface.",
-    "hiddenAngle": "Keeps hidden leverage for every deal.",
+    "name": "Nox Vello",
+    "role": "Harbor broker",
+    "publicFace": "Composed and procedural on the surface.",
+    "hiddenAngle": "Calculates leverage behind every offer.",
     "faction": "black-gate-guild",
-    "firstImpression": "A precise smile with controlled distance.",
+    "firstImpression": "A precise smile with strict distance.",
     "relationshipAxes": {
       "trust": 45,
       "intimacy": 10,
@@ -20,12 +20,12 @@
       "seduction"
     ],
     "trustHooks": [
-      "Keeps terms when value is mutual.",
-      "Opens routes after proof of discipline."
+      "Opens routes when terms are respected.",
+      "Rewards disciplined risk with better access."
     ],
     "conflictHooks": [
-      "Punishes delayed payment immediately.",
-      "Escalates pressure when betrayal appears."
+      "Raises pressure when deadlines are missed.",
+      "Turns relationships into contracts after betrayal."
     ],
     "portraitMoodTags": [
       "resolved",
@@ -39,12 +39,12 @@
   },
   {
     "id": "npc-02",
-    "name": "Broker Two",
-    "role": "Temple liaison",
-    "publicFace": "Looks composed and principled.",
-    "hiddenAngle": "Obsessed with forbidden leverage.",
+    "name": "Rian Estel",
+    "role": "Sanctum liaison",
+    "publicFace": "Composed and procedural on the surface.",
+    "hiddenAngle": "Calculates leverage behind every offer.",
     "faction": "lamp-sanctum",
-    "firstImpression": "Measured tone, dangerous intent.",
+    "firstImpression": "Calm tone, dangerous intent.",
     "relationshipAxes": {
       "trust": 40,
       "intimacy": 18,
@@ -58,12 +58,12 @@
       "corruption"
     ],
     "trustHooks": [
-      "Keeps terms when value is mutual.",
-      "Opens routes after proof of discipline."
+      "Opens routes when terms are respected.",
+      "Rewards disciplined risk with better access."
     ],
     "conflictHooks": [
-      "Punishes delayed payment immediately.",
-      "Escalates pressure when betrayal appears."
+      "Raises pressure when deadlines are missed.",
+      "Turns relationships into contracts after betrayal."
     ],
     "portraitMoodTags": [
       "blessed",
@@ -77,12 +77,12 @@
   },
   {
     "id": "npc-03",
-    "name": "Broker Three",
+    "name": "Dominic Hale",
     "role": "Edict officer",
-    "publicFace": "Formal and disciplined.",
-    "hiddenAngle": "Uses people as strategic pieces.",
+    "publicFace": "Composed and procedural on the surface.",
+    "hiddenAngle": "Calculates leverage behind every offer.",
     "faction": "gray-edict-office",
-    "firstImpression": "Eyes weigh outcomes before words.",
+    "firstImpression": "Measures outcomes before words.",
     "relationshipAxes": {
       "trust": 30,
       "intimacy": 6,
@@ -96,12 +96,12 @@
       "manipulation"
     ],
     "trustHooks": [
-      "Keeps terms when value is mutual.",
-      "Opens routes after proof of discipline."
+      "Opens routes when terms are respected.",
+      "Rewards disciplined risk with better access."
     ],
     "conflictHooks": [
-      "Punishes delayed payment immediately.",
-      "Escalates pressure when betrayal appears."
+      "Raises pressure when deadlines are missed.",
+      "Turns relationships into contracts after betrayal."
     ],
     "portraitMoodTags": [
       "resolved",
@@ -115,12 +115,12 @@
   },
   {
     "id": "npc-04",
-    "name": "Broker Four",
-    "role": "Night network broker",
-    "publicFace": "Charismatic and inviting.",
-    "hiddenAngle": "Turns intimacy into transactional control.",
+    "name": "Marena Volt",
+    "role": "Night syndicate coordinator",
+    "publicFace": "Composed and procedural on the surface.",
+    "hiddenAngle": "Calculates leverage behind every offer.",
     "faction": "red-night-syndicate",
-    "firstImpression": "Warm voice, calculated steps.",
+    "firstImpression": "Warm voice, closed exits.",
     "relationshipAxes": {
       "trust": 26,
       "intimacy": 22,
@@ -134,12 +134,12 @@
       "deception"
     ],
     "trustHooks": [
-      "Keeps terms when value is mutual.",
-      "Opens routes after proof of discipline."
+      "Opens routes when terms are respected.",
+      "Rewards disciplined risk with better access."
     ],
     "conflictHooks": [
-      "Punishes delayed payment immediately.",
-      "Escalates pressure when betrayal appears."
+      "Raises pressure when deadlines are missed.",
+      "Turns relationships into contracts after betrayal."
     ],
     "portraitMoodTags": [
       "tempted",
@@ -153,10 +153,10 @@
   },
   {
     "id": "npc-05",
-    "name": "Broker Five",
+    "name": "Selene Arco",
     "role": "Reliquary researcher",
-    "publicFace": "Elegant and reserved.",
-    "hiddenAngle": "Pays personal cost for forbidden research.",
+    "publicFace": "Composed and procedural on the surface.",
+    "hiddenAngle": "Calculates leverage behind every offer.",
     "faction": "glass-reliquary",
     "firstImpression": "Refined posture with visible strain.",
     "relationshipAxes": {
@@ -172,12 +172,12 @@
       "insight"
     ],
     "trustHooks": [
-      "Keeps terms when value is mutual.",
-      "Opens routes after proof of discipline."
+      "Opens routes when terms are respected.",
+      "Rewards disciplined risk with better access."
     ],
     "conflictHooks": [
-      "Punishes delayed payment immediately.",
-      "Escalates pressure when betrayal appears."
+      "Raises pressure when deadlines are missed.",
+      "Turns relationships into contracts after betrayal."
     ],
     "portraitMoodTags": [
       "spellglow_arcane",
@@ -193,8 +193,8 @@
     "id": "npc-06",
     "name": "Bellatrix",
     "role": "Shadow innkeeper",
-    "publicFace": "Runs harbor order through contracts.",
-    "hiddenAngle": "Converts weakness into long-term debt.",
+    "publicFace": "Composed and procedural on the surface.",
+    "hiddenAngle": "Calculates leverage behind every offer.",
     "faction": "red-night-syndicate",
     "firstImpression": "Friendly offer, sealed exits.",
     "relationshipAxes": {
@@ -212,12 +212,12 @@
       "persuasion"
     ],
     "trustHooks": [
-      "Keeps terms when value is mutual.",
-      "Opens routes after proof of discipline."
+      "Opens routes when terms are respected.",
+      "Rewards disciplined risk with better access."
     ],
     "conflictHooks": [
-      "Punishes delayed payment immediately.",
-      "Escalates pressure when betrayal appears."
+      "Raises pressure when deadlines are missed.",
+      "Turns relationships into contracts after betrayal."
     ],
     "portraitMoodTags": [
       "seductive",
@@ -237,10 +237,10 @@
     "id": "npc-07",
     "name": "Caius",
     "role": "Fallen paladin",
-    "publicFace": "Holds the line with fractured faith.",
-    "hiddenAngle": "Will trade purity for battlefield force.",
+    "publicFace": "Composed and procedural on the surface.",
+    "hiddenAngle": "Calculates leverage behind every offer.",
     "faction": "lamp-sanctum",
-    "firstImpression": "Noble frame, collapse at the edge.",
+    "firstImpression": "Noble frame at the edge of collapse.",
     "relationshipAxes": {
       "trust": 0,
       "intimacy": 5,
@@ -256,12 +256,12 @@
       "brutality"
     ],
     "trustHooks": [
-      "Keeps terms when value is mutual.",
-      "Opens routes after proof of discipline."
+      "Opens routes when terms are respected.",
+      "Rewards disciplined risk with better access."
     ],
     "conflictHooks": [
-      "Punishes delayed payment immediately.",
-      "Escalates pressure when betrayal appears."
+      "Raises pressure when deadlines are missed.",
+      "Turns relationships into contracts after betrayal."
     ],
     "portraitMoodTags": [
       "tormented",
@@ -281,8 +281,8 @@
     "id": "npc-08",
     "name": "Serena",
     "role": "Secret alchemist",
-    "publicFace": "Cold analyst with clean delivery.",
-    "hiddenAngle": "Treats people and bonds as test variables.",
+    "publicFace": "Composed and procedural on the surface.",
+    "hiddenAngle": "Calculates leverage behind every offer.",
     "faction": "glass-reliquary",
     "firstImpression": "Sharp logic with dangerous curiosity.",
     "relationshipAxes": {
@@ -300,12 +300,12 @@
       "corruption"
     ],
     "trustHooks": [
-      "Keeps terms when value is mutual.",
-      "Opens routes after proof of discipline."
+      "Opens routes when terms are respected.",
+      "Rewards disciplined risk with better access."
     ],
     "conflictHooks": [
-      "Punishes delayed payment immediately.",
-      "Escalates pressure when betrayal appears."
+      "Raises pressure when deadlines are missed.",
+      "Turns relationships into contracts after betrayal."
     ],
     "portraitMoodTags": [
       "cold",
@@ -323,12 +323,12 @@
   },
   {
     "id": "npc-09",
-    "name": "\uc778\ubb3c-009",
-    "role": "\ub3c4\uc2dc\uc758 \uc911\uac1c\uc778",
-    "publicFace": "\uac89\uc73c\ub85c\ub294 \uce68\ucc29\ud55c \uc778\uc0c1",
-    "hiddenAngle": "\uc228\uaca8\uc9c4 \uc774\ud574\uad00\uacc4\ub97c \ud488\uace0 \uc788\ub2e4.",
+    "name": "Ira Beln",
+    "role": "Back-alley broker",
+    "publicFace": "Composed and procedural on the surface.",
+    "hiddenAngle": "Calculates leverage behind every offer.",
     "faction": "red-night-syndicate",
-    "firstImpression": "\uccab\uc778\uc0c1\uc740 \ub2e8\uc815\ud558\uc9c0\ub9cc \uacbd\uacc4\ub97c \ub2a6\ucd9c \uc218 \uc5c6\ub2e4.",
+    "firstImpression": "Low laughter, delayed truth.",
     "relationshipAxes": {
       "trust": 18,
       "intimacy": 14,
@@ -342,18 +342,18 @@
       "deception"
     ],
     "trustHooks": [
-      "\uc815\ub9ac \ubb38\uad6c 1",
-      "\uc815\ub9ac \ubb38\uad6c 2"
+      "Opens routes when terms are respected.",
+      "Rewards disciplined risk with better access."
     ],
     "conflictHooks": [
-      "\uc815\ub9ac \ubb38\uad6c 1",
-      "\uc815\ub9ac \ubb38\uad6c 2"
+      "Raises pressure when deadlines are missed.",
+      "Turns relationships into contracts after betrayal."
     ],
     "portraitMoodTags": [
       "tainted",
       "bloodied"
     ],
-    "routePotential": "\ub3d9\ub9f9/\uacbd\uc7c1 \ub8e8\ud2b8",
+    "routePotential": "ally/rival/control route",
     "eventLinks": [
       "evt-t2-010",
       "evt-t3-003"
@@ -361,12 +361,12 @@
   },
   {
     "id": "npc-10",
-    "name": "\uc778\ubb3c-010",
-    "role": "\ub3c4\uc2dc\uc758 \uc911\uac1c\uc778",
-    "publicFace": "\uac89\uc73c\ub85c\ub294 \uce68\ucc29\ud55c \uc778\uc0c1",
-    "hiddenAngle": "\uc228\uaca8\uc9c4 \uc774\ud574\uad00\uacc4\ub97c \ud488\uace0 \uc788\ub2e4.",
+    "name": "Noad Krin",
+    "role": "Guild debt manager",
+    "publicFace": "Composed and procedural on the surface.",
+    "hiddenAngle": "Calculates leverage behind every offer.",
     "faction": "black-gate-guild",
-    "firstImpression": "\uccab\uc778\uc0c1\uc740 \ub2e8\uc815\ud558\uc9c0\ub9cc \uacbd\uacc4\ub97c \ub2a6\ucd9c \uc218 \uc5c6\ub2e4.",
+    "firstImpression": "Ledger hands like a blade.",
     "relationshipAxes": {
       "trust": 33,
       "intimacy": 7,
@@ -380,18 +380,18 @@
       "intimidation"
     ],
     "trustHooks": [
-      "\uc815\ub9ac \ubb38\uad6c 1",
-      "\uc815\ub9ac \ubb38\uad6c 2"
+      "Opens routes when terms are respected.",
+      "Rewards disciplined risk with better access."
     ],
     "conflictHooks": [
-      "\uc815\ub9ac \ubb38\uad6c 1",
-      "\uc815\ub9ac \ubb38\uad6c 2"
+      "Raises pressure when deadlines are missed.",
+      "Turns relationships into contracts after betrayal."
     ],
     "portraitMoodTags": [
       "resolved",
       "bloodied"
     ],
-    "routePotential": "\ub3d9\ub9f9/\uacbd\uc7c1 \ub8e8\ud2b8",
+    "routePotential": "ally/rival/control route",
     "eventLinks": [
       "evt-t1-008",
       "evt-t3-001"
@@ -399,12 +399,12 @@
   },
   {
     "id": "npc-11",
-    "name": "\uc778\ubb3c-011",
-    "role": "\ub3c4\uc2dc\uc758 \uc911\uac1c\uc778",
-    "publicFace": "\uac89\uc73c\ub85c\ub294 \uce68\ucc29\ud55c \uc778\uc0c1",
-    "hiddenAngle": "\uc228\uaca8\uc9c4 \uc774\ud574\uad00\uacc4\ub97c \ud488\uace0 \uc788\ub2e4.",
+    "name": "Sylvia Renn",
+    "role": "Relic recovery lead",
+    "publicFace": "Composed and procedural on the surface.",
+    "hiddenAngle": "Calculates leverage behind every offer.",
     "faction": "glass-reliquary",
-    "firstImpression": "\uccab\uc778\uc0c1\uc740 \ub2e8\uc815\ud558\uc9c0\ub9cc \uacbd\uacc4\ub97c \ub2a6\ucd9c \uc218 \uc5c6\ub2e4.",
+    "firstImpression": "Polite words, no retreat window.",
     "relationshipAxes": {
       "trust": 28,
       "intimacy": 24,
@@ -418,18 +418,18 @@
       "persuasion"
     ],
     "trustHooks": [
-      "\uc815\ub9ac \ubb38\uad6c 1",
-      "\uc815\ub9ac \ubb38\uad6c 2"
+      "Opens routes when terms are respected.",
+      "Rewards disciplined risk with better access."
     ],
     "conflictHooks": [
-      "\uc815\ub9ac \ubb38\uad6c 1",
-      "\uc815\ub9ac \ubb38\uad6c 2"
+      "Raises pressure when deadlines are missed.",
+      "Turns relationships into contracts after betrayal."
     ],
     "portraitMoodTags": [
       "spellglow_arcane",
       "tempted"
     ],
-    "routePotential": "\ub3d9\ub9f9/\uacbd\uc7c1 \ub8e8\ud2b8",
+    "routePotential": "ally/rival/control route",
     "eventLinks": [
       "evt-t2-011",
       "evt-t3-005"
@@ -437,12 +437,12 @@
   },
   {
     "id": "npc-12",
-    "name": "\uc778\ubb3c-012",
-    "role": "\ub3c4\uc2dc\uc758 \uc911\uac1c\uc778",
-    "publicFace": "\uac89\uc73c\ub85c\ub294 \uce68\ucc29\ud55c \uc778\uc0c1",
-    "hiddenAngle": "\uc228\uaca8\uc9c4 \uc774\ud574\uad00\uacc4\ub97c \ud488\uace0 \uc788\ub2e4.",
+    "name": "Darion Mel",
+    "role": "Edict investigator",
+    "publicFace": "Composed and procedural on the surface.",
+    "hiddenAngle": "Calculates leverage behind every offer.",
     "faction": "gray-edict-office",
-    "firstImpression": "\uccab\uc778\uc0c1\uc740 \ub2e8\uc815\ud558\uc9c0\ub9cc \uacbd\uacc4\ub97c \ub2a6\ucd9c \uc218 \uc5c6\ub2e4.",
+    "firstImpression": "Short questions, long costs.",
     "relationshipAxes": {
       "trust": 36,
       "intimacy": 11,
@@ -456,18 +456,18 @@
       "investigation"
     ],
     "trustHooks": [
-      "\uc815\ub9ac \ubb38\uad6c 1",
-      "\uc815\ub9ac \ubb38\uad6c 2"
+      "Opens routes when terms are respected.",
+      "Rewards disciplined risk with better access."
     ],
     "conflictHooks": [
-      "\uc815\ub9ac \ubb38\uad6c 1",
-      "\uc815\ub9ac \ubb38\uad6c 2"
+      "Raises pressure when deadlines are missed.",
+      "Turns relationships into contracts after betrayal."
     ],
     "portraitMoodTags": [
       "resolved",
       "wounded_minor"
     ],
-    "routePotential": "\ub3d9\ub9f9/\uacbd\uc7c1 \ub8e8\ud2b8",
+    "routePotential": "ally/rival/control route",
     "eventLinks": [
       "evt-t1-009",
       "evt-t2-012"

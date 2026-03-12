@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crimson Wasteland Web Play</title>
+    <link rel="stylesheet" href="./play.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Browser Play</p>
+          <h1>Crimson Wasteland</h1>
+          <p id="status-text">세션 없음</p>
+        </div>
+        <div class="actions">
+          <button id="start-btn" type="button">새 게임 시작</button>
+          <button id="stop-btn" type="button" class="ghost">세션 종료</button>
+          <a href="./index.html" class="ghost link-btn">상태 대시보드</a>
+        </div>
+      </header>
+
+      <section class="console-panel">
+        <div class="console-head">
+          <strong>게임 로그</strong>
+          <span id="session-text">session: -</span>
+        </div>
+        <pre id="console-log" class="console-log"></pre>
+      </section>
+
+      <section class="input-panel">
+        <p id="prompt-text">입력 대기 중이 아닙니다.</p>
+        <form id="input-form">
+          <input id="input-box" type="text" autocomplete="off" placeholder="선택 번호 또는 텍스트 입력" />
+          <button id="send-btn" type="submit">전송</button>
+        </form>
+        <div id="quick-buttons" class="quick-buttons"></div>
+      </section>
+    </main>
+
+    <script src="./play.js"></script>
+  </body>
+</html>

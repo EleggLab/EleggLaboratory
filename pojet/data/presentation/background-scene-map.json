@@ -1,0 +1,50 @@
+{
+  "selectionAudit": {
+    "approvedAt": "2026-03-12",
+    "policy": "Only use assets that render without distortion and preserve dark fantasy readability.",
+    "approvedSources": [
+      "assets/backgrounds/* (runtime-safe copies)",
+      "assets/ui/clean_renpy/day.jpg",
+      "assets/ui/clean_renpy/night.jpg"
+    ],
+    "blockedSources": [
+      "Asset/DatingGameUI/* (tone mismatch)",
+      "Asset/Garden cozy kit/* (tone mismatch)"
+    ]
+  },
+  "byLocationKeyword": {
+    "도심": "./assets/backgrounds/urban_outskirts/night.jpg",
+    "여관": "./assets/backgrounds/urban_outskirts/night.jpg",
+    "아카데미": "./assets/backgrounds/battle_academy/day.jpg",
+    "기숙": "./assets/backgrounds/battle_academy/day.jpg",
+    "산문": "./assets/backgrounds/mountain_hermitage/day.jpg",
+    "산속": "./assets/backgrounds/mountain_hermitage/day.jpg",
+    "창녀촌": "./assets/backgrounds/brothel_district/night.jpg",
+    "유흥가": "./assets/backgrounds/brothel_district/night.jpg",
+    "도적": "./assets/backgrounds/thieves_den/night.jpg",
+    "도둑": "./assets/backgrounds/thieves_den/night.jpg",
+    "은신처": "./assets/backgrounds/thieves_den/night.jpg"
+  },
+  "byClassFallback": {
+    "fighter": "./assets/backgrounds/urban_outskirts/night.jpg",
+    "bard": "./assets/backgrounds/brothel_district/night.jpg",
+    "ranger": "./assets/backgrounds/mountain_hermitage/day.jpg",
+    "warlock": "./assets/backgrounds/brothel_district/night.jpg",
+    "monk": "./assets/backgrounds/battle_academy/day.jpg",
+    "wizard": "./assets/backgrounds/battle_academy/day.jpg",
+    "druid": "./assets/backgrounds/mountain_hermitage/day.jpg",
+    "rogue": "./assets/backgrounds/thieves_den/night.jpg",
+    "sorcerer": "./assets/backgrounds/urban_outskirts/day.jpg"
+  },
+  "timeTone": {
+    "day": "scene-tone-day",
+    "dusk": "scene-tone-dusk",
+    "night": "scene-tone-night"
+  },
+  "stateOverlay": {
+    "none": "scene-overlay-none",
+    "battle": "scene-overlay-battle",
+    "romance": "scene-overlay-romance",
+    "corruption": "scene-overlay-corruption"
+  }
+}

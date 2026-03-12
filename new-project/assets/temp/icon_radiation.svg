@@ -1,0 +1,11 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Radiation icon placeholder">
+  <circle cx="128" cy="128" r="120" fill="#F0CE4E"/>
+  <circle cx="128" cy="128" r="26" fill="#1F1F1F"/>
+
+  <path d="M128 36 L155 95 L101 95 Z" fill="#1F1F1F"/>
+  <path d="M44 172 L103 145 L103 199 Z" fill="#1F1F1F"/>
+  <path d="M212 172 L153 145 L153 199 Z" fill="#1F1F1F"/>
+
+  <circle cx="128" cy="128" r="120" fill="none" stroke="#1F1F1F" stroke-width="8"/>
+</svg>
+

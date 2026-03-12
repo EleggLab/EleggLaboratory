@@ -1,0 +1,20 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Env files
+.env
+.env.local
+
+# Build / cache
+node_modules/
+dist/
+build/
+coverage/
+*.log
+__pycache__/
+*.py[cod]
+saves/*.json
+ui/state/live_state.json

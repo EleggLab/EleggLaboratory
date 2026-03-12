@@ -1,0 +1,32 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wasteland dawn placeholder">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3E2A3B"/>
+      <stop offset="45%" stop-color="#9C4B57"/>
+      <stop offset="100%" stop-color="#D08C62"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6A3B3B"/>
+      <stop offset="100%" stop-color="#2C1E1E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect y="520" width="1600" height="380" fill="url(#ground)"/>
+
+  <circle cx="1180" cy="270" r="110" fill="#F4C67E" opacity="0.6"/>
+
+  <polygon points="80,620 280,430 430,620" fill="#2A2328"/>
+  <polygon points="370,620 620,390 780,620" fill="#34272F"/>
+  <polygon points="690,620 980,360 1170,620" fill="#2B252C"/>
+  <polygon points="1030,620 1340,410 1540,620" fill="#3A2A32"/>
+
+  <rect x="130" y="610" width="55" height="120" fill="#1B171A"/>
+  <line x1="158" y1="610" x2="158" y2="540" stroke="#1B171A" stroke-width="7"/>
+  <rect x="142" y="540" width="32" height="16" fill="#A8B3BB"/>
+
+  <text x="60" y="820" fill="#F0E7D6" font-family="Arial, sans-serif" font-size="28">
+    TEMP BACKGROUND - WASTELAND DAWN
+  </text>
+</svg>
+

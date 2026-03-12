@@ -1,0 +1,73 @@
+{
+  "sources": [
+    {
+      "id": "local_face_pack",
+      "name": "Local Face Pack (Asset/Face/Face)",
+      "type": "local",
+      "usage": "portrait facial expression layer",
+      "commercialUse": "license-check-required",
+      "notes": "Imported as runtime face layers for neutral/soft/guarded/grim/sad moods."
+    },
+    {
+      "id": "clean_renpy_gui_fshift",
+      "name": "Clean RenPy GUI Kit_FShift",
+      "type": "local",
+      "usage": "portrait scene frame fallback",
+      "commercialUse": "license-check-required",
+      "notes": "Used for safe background frame fallback only."
+    }
+  ],
+  "notes": [
+    "Portrait face assets are now bound at runtime and can be swapped by mood + gender.",
+    "All mapped files are ASCII-renamed copies under /assets for stable loading.",
+    "Before external distribution, verify and archive asset license files in docs/research/legal."
+  ],
+  "selectionAudit": {
+    "approvedAt": "2026-03-12",
+    "approved": [
+      "assets/characters/face/face_neutral.png",
+      "assets/characters/face/face_soft.png",
+      "assets/characters/face/face_guarded.png",
+      "assets/characters/face/face_grim.png",
+      "assets/characters/face/face_sad.png"
+    ],
+    "rejected": [
+      "Asset/DatingGameUI/* (tone mismatch)",
+      "Asset/FREE KAWAII GUI PACK/* (style mismatch)"
+    ]
+  },
+  "portraitByClass": {
+    "fighter": "./assets/backgrounds/urban_outskirts/night.jpg",
+    "bard": "./assets/backgrounds/brothel_district/night.jpg",
+    "ranger": "./assets/backgrounds/mountain_hermitage/day.jpg",
+    "warlock": "./assets/backgrounds/brothel_district/night.jpg",
+    "monk": "./assets/backgrounds/battle_academy/day.jpg",
+    "wizard": "./assets/backgrounds/battle_academy/day.jpg",
+    "druid": "./assets/backgrounds/mountain_hermitage/day.jpg",
+    "rogue": "./assets/backgrounds/thieves_den/night.jpg",
+    "sorcerer": "./assets/backgrounds/urban_outskirts/day.jpg"
+  },
+  "faceByMood": {
+    "neutral": "./assets/characters/face/face_neutral.png",
+    "soft": "./assets/characters/face/face_soft.png",
+    "guarded": "./assets/characters/face/face_guarded.png",
+    "grim": "./assets/characters/face/face_grim.png",
+    "sad": "./assets/characters/face/face_sad.png"
+  },
+  "faceByGenderMood": {
+    "male": {
+      "neutral": "./assets/characters/face/face_neutral.png",
+      "soft": "./assets/characters/face/face_guarded.png",
+      "guarded": "./assets/characters/face/face_guarded.png",
+      "grim": "./assets/characters/face/face_grim.png",
+      "sad": "./assets/characters/face/face_sad.png"
+    },
+    "female": {
+      "neutral": "./assets/characters/face/face_neutral.png",
+      "soft": "./assets/characters/face/face_soft.png",
+      "guarded": "./assets/characters/face/face_soft.png",
+      "grim": "./assets/characters/face/face_grim.png",
+      "sad": "./assets/characters/face/face_sad.png"
+    }
+  }
+}

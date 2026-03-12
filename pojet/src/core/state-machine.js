@@ -1,6 +1,18 @@
 ﻿import { ABILITIES, CLASS_LABELS_KO, LINEAGE_LABELS_KO, BACKGROUND_LABELS_KO, QUEST_NAMES, QUEST_MOODS } from "../config/runtimeData.js";
 import { normalizeLogEntry } from "../narrative/narrativeEngine.js";
 
+const BEAST_KIND_LABELS = {
+  wolf: "늑대",
+  fox: "여우",
+  sheep: "양",
+  rabbit: "토끼"
+};
+
+const GENDER_LABELS = {
+  male: "남",
+  female: "여"
+};
+
 export function createInitialState() {
   return {
     run: { id: `run-${Date.now()}`, status: "idle", seed: Math.floor(Math.random() * 1000000), startedAt: null, endedAt: null, causeOfEnd: null },
@@ -8,7 +20,7 @@ export function createInitialState() {
     resources: { gold: 0, supplies: 5, fatigue: 0, taint: 0, renown: 0, infamy: 0, consumables: { potion: 1, scroll: 0, kit: 1 } },
     relationships: { npcRelations: { core: { trust: 20, intimacy: 5, tension: 8, desire: 6, respect: 10, fear: 4 } }, partyMood: 50 },
     factions: { reputation: { guild: 0, temple: 0, mercenary: 0, nobility: 0, underbelly: 0 } },
-    world: { act: 1, day: 1, locationId: "검은비 변경", actProgress: 0, quests: [] },
+    world: { act: 1, day: 1, locationId: "검은비 변경", actProgress: 0, quests: [], deferredOutcomes: [] },
     automation: {
       decisionPresetId: "신중형",
       autoEquip: true,
@@ -34,8 +46,13 @@ export function createCharacterTemplate(overrides = {}) {
     classId: overrides.classId || "fighter",
     lineageId: overrides.lineageId || "human",
     backgroundId: overrides.backgroundId || "border-conscript",
+    gender: overrides.gender || "male",
+    difficultyId: overrides.difficultyId || "normal",
+    beastKind: overrides.beastKind || null,
+    storylineId: overrides.storylineId || "battleworn-veteran",
     abilities: overrides.abilities || { STR: 15, DEX: 13, CON: 14, INT: 10, WIS: 12, CHA: 8 },
-    automationPreset: overrides.automationPreset || "신중형"
+    automationPreset: overrides.automationPreset || "신중형",
+    sexualStats: normalizeSexualStats(overrides.sexualStats)
   };
 }
 
@@ -55,7 +72,8 @@ export function buildCharacterFromTemplate(template) {
     tags: [],
     gear: ["헐거운 여행복"],
     inventory: [],
-    questLog: [createQuest()]
+    questLog: [createQuest()],
+    sexualStats: normalizeSexualStats(template.sexualStats)
   };
 }
 
@@ -96,6 +114,7 @@ export function reduce(state, action) {
       next.world.day = 1;
       next.world.act = 1;
       next.world.actProgress = 0;
+      next.world.deferredOutcomes = [];
       return next;
     }
     case "TIME_SPEED": {
@@ -128,6 +147,20 @@ export function reduce(state, action) {
         next.history.majorChoices.unshift(action.payload.entry);
         if (next.history.majorChoices.length > 80) next.history.majorChoices.length = 80;
       }
+      return next;
+    }
+    case "QUEUE_DEFERRED_OUTCOME": {
+      const entry = action.payload?.entry;
+      if (!entry) return next;
+      next.world.deferredOutcomes = Array.isArray(next.world.deferredOutcomes) ? next.world.deferredOutcomes : [];
+      next.world.deferredOutcomes.push(entry);
+      if (next.world.deferredOutcomes.length > 80) next.world.deferredOutcomes = next.world.deferredOutcomes.slice(-80);
+      return next;
+    }
+    case "RESOLVE_DEFERRED_OUTCOME": {
+      const id = action.payload?.id;
+      if (!id) return next;
+      next.world.deferredOutcomes = (next.world.deferredOutcomes || []).filter((x) => x?.id !== id);
       return next;
     }
     case "RELATION_CHANGE": {
@@ -170,7 +203,11 @@ export function questLabel(quest) {
 
 export function describeCharacter(character) {
   if (!character) return "아직 이름 없는 자";
-  return `${character.name} | ${LINEAGE_LABELS_KO[character.lineageId] || character.lineageId} ${CLASS_LABELS_KO[character.classId] || character.classId} | ${BACKGROUND_LABELS_KO[character.backgroundId] || character.backgroundId}`;
+  const lineageLabel = resolveLineageLabel(character);
+  const classLabel = CLASS_LABELS_KO[character.classId] || character.classId;
+  const backgroundLabel = BACKGROUND_LABELS_KO[character.backgroundId] || character.backgroundId;
+  const genderLabel = GENDER_LABELS[character.gender] || "남";
+  return `${character.name} | ${genderLabel} · ${lineageLabel} ${classLabel} | ${backgroundLabel}`;
 }
 
 export function createQuest() {
@@ -186,6 +223,25 @@ export function createQuest() {
 
 export function abilityModifier(score) {
   return Math.floor((score - 10) / 2);
+}
+
+function resolveLineageLabel(character) {
+  const base = LINEAGE_LABELS_KO[character.lineageId] || character.lineageId;
+  if (character.lineageId === "succubus" && character.gender === "male") return "인큐버스";
+  if (character.lineageId === "mixed-grace" && character.beastKind) {
+    const beast = BEAST_KIND_LABELS[character.beastKind] || character.beastKind;
+    return `수인족(${beast})`;
+  }
+  return base;
+}
+
+function normalizeSexualStats(input = {}) {
+  return {
+    experienceFactor: Math.max(0, Number(input.experienceFactor || 0)),
+    lustfulness: Math.max(0, Number(input.lustfulness || 0)),
+    arousal: Math.max(0, Number(input.arousal || 0)),
+    auraOfLust: Math.max(0, Number(input.auraOfLust || 0))
+  };
 }
 
 function deepMerge(target, patch) {

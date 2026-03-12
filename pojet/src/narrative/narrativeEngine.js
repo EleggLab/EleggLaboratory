@@ -2,19 +2,25 @@ import { buildContextPacket } from "./contextPacketBuilder.js";
 import { createChronicleMemoryStore } from "./chronicleMemoryStore.js";
 import { generateCausalNotes, deriveFollowupHooks } from "./causalNotesGenerator.js";
 
-function clampSentences(sentences, min = 2, max = 4) {
+function clampSentences(sentences, min = 3, max = 4) {
   const filtered = sentences.filter(Boolean);
   if (filtered.length < min) {
-    while (filtered.length < min) filtered.push("기록자는 원인과 결과를 짧게 묶어 다음 선택의 실마리로 남겼다.");
+    while (filtered.length < min) filtered.push("기록은 원인과 결과를 연결하며 다음 선택을 준비한다.");
   }
   return filtered.slice(0, max);
+}
+
+function ensureDot(text = "") {
+  const t = String(text || "").trim();
+  if (!t) return "";
+  return /[.!?]$/.test(t) ? t : `${t}.`;
 }
 
 function hasBatchim(word = "") {
   const ch = String(word).trim().slice(-1);
   if (!ch) return false;
   const code = ch.charCodeAt(0);
-  if (code < 0xac00 || code > 0xd7a3) return false;
+  if (code < 0xac00 || code > 0xd7a3) return true;
   return (code - 0xac00) % 28 !== 0;
 }
 
@@ -22,32 +28,16 @@ function withTopic(word = "") {
   return `${word}${hasBatchim(word) ? "은" : "는"}`;
 }
 
-function withObject(word = "") {
-  return `${word}${hasBatchim(word) ? "을" : "를"}`;
-}
-
 function withSubject(word = "") {
   return `${word}${hasBatchim(word) ? "이" : "가"}`;
 }
 
-function ensureDot(text = "") {
-  const t = String(text || "").trim();
-  if (!t) return "";
-  return /[.!?…]$/.test(t) ? t : `${t}.`;
+function withObject(word = "") {
+  return `${word}${hasBatchim(word) ? "을" : "를"}`;
 }
 
-function choiceEffectSummary(choice) {
-  const fx = Array.isArray(choice?.effects) ? choice.effects : [];
-  if (!fx.length) return "대가는 아직 드러나지 않았다";
-  const bits = fx.slice(0, 2).map((e) => {
-    if (e.kind === "gain_gold") return `금화 ${e.value > 0 ? "+" : ""}${e.value}`;
-    if (e.kind === "renown") return `명성 ${e.value > 0 ? "+" : ""}${e.value}`;
-    if (e.kind === "taint") return `오염 ${e.value > 0 ? "+" : ""}${e.value}`;
-    if (e.kind === "fatigue") return `피로 ${e.value > 0 ? "+" : ""}${e.value}`;
-    if (e.kind === "relation") return "관계 수치 변동";
-    return e.kind;
-  });
-  return bits.join(", ");
+function withAnd(word = "") {
+  return `${word}${hasBatchim(word) ? "과" : "와"}`;
 }
 
 function pickVariant(seed, variants = [], fallback = "") {
@@ -56,69 +46,78 @@ function pickVariant(seed, variants = [], fallback = "") {
   return variants[idx] || fallback;
 }
 
-function trpgBeat(packet, tier, npcName, factionName, activeQuest) {
-  const phase = packet?.phase || "exploration";
-  if (tier === "T3") {
-    return {
-      scene: `장면: ${factionName}의 대표와 ${withSubject(npcName)} 같은 탁자에 앉았고, ${activeQuest}의 처리권이 너에게 넘어왔다.`,
-      check: pickVariant(packet.tick + 20, [
-        "판정: 설득/기만/위협 중 하나를 택해야 한다. 실패하면 평판과 관계를 동시에 잃는다.",
-        "판정: 의지와 절제를 시험한다. 욕망을 따르거나, 대가를 치르고 거절할 수 있다.",
-        "판정: 계약 조항을 읽어낼 지능 검정. 놓친 문구 하나가 다음 장면의 족쇄가 된다."
-      ])
-    };
-  }
-  if (tier === "T2") {
-    return {
-      scene: `장면: ${withSubject(npcName)} ${withObject(activeQuest)} 둘러싼 조건을 내밀었다. 웃고 있지만 계산은 이미 끝난 얼굴이다.`,
-      check: pickVariant(packet.tick + 21, [
-        "판정: 지금 고르면 즉시 이익, 미루면 자동 처리로 리스크가 커진다.",
-        "판정: 관계를 택하면 자원이 줄고, 자원을 택하면 관계가 흔들린다.",
-        "판정: 은밀한 제안을 수락하면 단기 보상은 크지만 장기 부채가 남는다."
-      ])
-    };
-  }
-  if (phase === "combat") {
-    return {
-      scene: `장면: ${npcName}의 제보로 추적한 표적이 골목 끝에서 칼을 뽑았다.`,
-      check: "판정: 전투 판정이 연속으로 이어진다. 지금 입은 상처는 다음 이벤트 선택지 난이도에 반영된다."
-    };
-  }
-  if (phase === "social") {
-    return {
-      scene: `장면: ${factionName}의 연회장, 속삭임 하나가 소문 두 개로 증식하는 밤이다.`,
-      check: "판정: 정보 획득 vs 노출 위험. 입을 열수록 보상은 커지지만 약점도 드러난다."
-    };
-  }
-  return {
-    scene: `장면: ${activeQuest}를 따라 이동하던 중 ${npcName}가 새로운 단서를 건넸다.`,
-    check: "판정: 단서를 쫓아 속도를 올릴지, 안전하게 우회할지 선택해야 한다."
-  };
+function oneLine(text = "", maxLen = 90) {
+  const t = String(text || "").replace(/\s+/g, " ").trim();
+  if (!t) return "";
+  if (t.length <= maxLen) return t;
+  return `${t.slice(0, maxLen - 3)}...`;
 }
 
-function cleanupIngredient(text = "") {
-  return String(text || "").replace("도적와", "도적과").replace(/\s+/g, " ").trim();
+function buildContinuityBridge(packet, previousEntry) {
+  if (!previousEntry) return "";
+  const prevHook = oneLine(previousEntry?.followupHooks?.[0] || "");
+  const prevCause = oneLine(previousEntry?.causalNotes?.[0] || "");
+  if (prevHook) return `Previous thread impact: ${prevHook}`;
+  if (prevCause) return `Previous scene result: ${prevCause}`;
+  if (packet?.contextActors?.activeQuest) return `The previous choice still shapes the ${packet.contextActors.activeQuest} route`;
+  return "";
+}
+
+function buildProfileFocusLine(packet) {
+  const p = packet?.contextProfile || {};
+  const bits = [p?.lineageName, p?.className, p?.backgroundName].filter(Boolean);
+  const storyline = p?.storylineName ? `origin ${p.storylineName}` : "";
+  if (!bits.length && !storyline) return "";
+  return `${bits.join(" / ")} profile drives how this scene is interpreted and resolved${storyline ? ` (${storyline})` : ""}`;
+}
+
+function fallbackFollowupHooks(packet) {
+  const quest = packet?.contextActors?.activeQuest || "active route";
+  const category = String(packet?.event?.category || packet?.phase || packet?.kind || "branch");
+  return [`Resolve the ${category} aftermath on the ${quest} route`];
+}
+
+function choiceEffectSummary(choice) {
+  const fx = Array.isArray(choice?.effects) ? choice.effects : [];
+  if (!fx.length) return "즉시 수치 변화 없음";
+  const bits = fx.slice(0, 2).map((e) => {
+    if (e.kind === "gain_gold") return `금화 ${e.value > 0 ? "+" : ""}${e.value}`;
+    if (e.kind === "gain_xp") return `경험치 ${e.value > 0 ? "+" : ""}${e.value}`;
+    if (e.kind === "renown") return `명성 ${e.value > 0 ? "+" : ""}${e.value}`;
+    if (e.kind === "infamy") return `악명 ${e.value > 0 ? "+" : ""}${e.value}`;
+    if (e.kind === "taint") return `오염 ${e.value > 0 ? "+" : ""}${e.value}`;
+    if (e.kind === "fatigue") return `피로 ${e.value > 0 ? "+" : ""}${e.value}`;
+    if (e.kind === "blessing") return `축복 ${e.value > 0 ? "+" : ""}${e.value}`;
+    if (e.kind === "relation") return "관계 수치 변화";
+    if (e.kind === "faction") return "세력 평판 변화";
+    if (e.kind === "chronicle_tag") return "연대기 플래그";
+    return e.kind;
+  });
+  return bits.join(", ");
 }
 
 function pickPoolLine(packet, phase, fallbackLine = "") {
-  const map = { exploration: "movement", combat: "combat", social: "rumor", rest: "rest" };
+  const map = { exploration: "movement", combat: "combat", social: "rumor", rest: "rest", event: "rumor" };
   const key = map[phase] || "movement";
   const pool = packet?.contentPack?.logLines?.[key];
-  if (!Array.isArray(pool) || !pool.length) return fallbackLine || "흐름을 기록했다.";
+  if (!Array.isArray(pool) || !pool.length) return fallbackLine || "다음 장면이 열린다";
   const idx = Math.abs(Number(packet?.tick || 0) + Number(packet?.day || 0) + key.length) % pool.length;
   return pool[idx];
 }
 
 function buildMaturityTags(packet) {
   const tags = [];
+  const maturity = packet?.maturity || { level: 1, label: "S1", style: "restrained" };
   if (packet?.phase) tags.push(`phase:${packet.phase}`);
   if (packet?.event?.tier) tags.push(`tier:${packet.event.tier}`);
+  tags.push(`maturity:${maturity.label}`);
+  tags.push(`tone-style:${maturity.style}`);
   if (Number(packet?.current?.taint || 0) >= 40) tags.push("taint:high");
   if (Number(packet?.current?.fatigue || 0) >= 55) tags.push("fatigue:high");
   if (Number(packet?.current?.relation?.trust || 0) >= 45) tags.push("bond:stable");
   if (Number(packet?.current?.relation?.tension || 0) >= 35) tags.push("bond:tense");
-  if (Number(packet?.current?.relation?.desire || 0) >= 26) tags.push("adult:desire");
-  if (Number(packet?.current?.relation?.fear || 0) >= 20) tags.push("adult:control");
+  if (Number(packet?.current?.relation?.desire || 0) >= 26) tags.push("tone:desire");
+  if (Number(packet?.current?.relation?.fear || 0) >= 20) tags.push("tone:control");
   return tags;
 }
 
@@ -133,11 +132,14 @@ function buildVisualStateTags(packet) {
 }
 
 function visualTagReason(visualStateTags, packet) {
-  if (visualStateTags.includes("mood-danger")) return "T3 급 분기라 긴장 연출이 강화되었고, 권력 구도가 전면에 부각됐다.";
-  if (visualStateTags.includes("mood-shadow")) return `오염 수치 ${packet?.current?.taint || 0}로 어두운 분위기가 반영되었다.`;
-  if (visualStateTags.includes("mood-win")) return "신뢰 기반 상태가 유지되어 안정적인 톤으로 표현됐다.";
-  if (visualStateTags.includes("mood-fatigue")) return `피로 수치 ${packet?.current?.fatigue || 0}로 소진 연출이 적용되었다.`;
-  return "중립 상태라 기본 연출을 유지한다.";
+  if ((packet?.maturity?.level || 1) >= 4 && visualStateTags.includes("mood-shadow")) {
+    return "고강도 톤(S4+)과 오염 누적으로 어두운 연출을 강화했다.";
+  }
+  if (visualStateTags.includes("mood-danger")) return "T3 분기라서 긴장 연출이 강화되었다.";
+  if (visualStateTags.includes("mood-shadow")) return `오염 수치 ${packet?.current?.taint || 0}이 어두운 분위기를 만들었다.`;
+  if (visualStateTags.includes("mood-win")) return "신뢰 기반 구간이라 안정적인 톤이 유지되었다.";
+  if (visualStateTags.includes("mood-fatigue")) return `피로 수치 ${packet?.current?.fatigue || 0}으로 지친 톤이 적용되었다.`;
+  return "중립 상태의 기본 연출이 적용되었다.";
 }
 
 function baseRefs(packet) {
@@ -153,21 +155,191 @@ function baseRefs(packet) {
   return refs.concat(packet?.refs || []).slice(0, 8);
 }
 
+function phaseNarrative(packet, tier) {
+  const npcName = packet?.contextActors?.npcName || "익명 인물";
+  const factionName = packet?.contextActors?.factionName || "무소속";
+  const activeQuest = packet?.contextActors?.activeQuest || "미확정 임무";
+  const phase = packet?.phase || "exploration";
+  const undertone = relationUndertone(packet);
+  const maturityTone = maturityUndertone(packet);
+
+  if (tier === "T3") {
+    const line = pickVariant(packet.tick + 20, [
+      `${factionName}의 압력이 높아지고, ${withSubject(npcName)} 제안이 ${activeQuest}의 향방을 가른다`,
+      `${activeQuest}는 후퇴가 어려운 분기로 진입했고, ${npcName}의 재촉이 공기를 잠근다`,
+      `${factionName} 내부 균열이 드러나며, ${activeQuest}는 지금 당장 결단을 요구한다`
+    ], `${activeQuest}가 대형 분기로 진입한다`);
+    return line;
+  }
+
+  if (tier === "T2") {
+    const line = pickVariant(packet.tick + 21, [
+      `${withSubject(npcName)} ${activeQuest}의 조건을 내밀며, 이득과 관계의 저울을 흔든다`,
+      `${factionName}의 제안은 짧은 보상과 긴 후폭풍을 동시에 요구한다`,
+      `${activeQuest}는 서둘러도 늦어도 대가가 남는 중형 분기로 열린다`
+    ], `${activeQuest}에 대한 중형 선택지가 열린다`);
+    return line;
+  }
+
+  if (phase === "combat") {
+    const line = `${withAnd(npcName)} 대치한 여파가 남아 있고, 생존과 체면이 동시에 시험대에 오른다`;
+    return [line, undertone, maturityTone].filter(Boolean).join(". ");
+  }
+  if (phase === "social") {
+    const line = `${factionName}의 대화석에서 짧은 한마디가 신뢰와 욕망 축을 함께 건드린다`;
+    return [line, undertone, maturityTone].filter(Boolean).join(". ");
+  }
+  if (phase === "rest") {
+    const line = `짧은 휴식으로 숨을 고르지만 ${activeQuest}의 압박은 밤새 남아 있다`;
+    return [line, undertone, maturityTone].filter(Boolean).join(". ");
+  }
+  const moveLine = `${withObject(activeQuest)} 향해 이동하며 ${withSubject(npcName)} 남긴 단서와 숨은 의도를 맞춰 본다`;
+  return [moveLine, undertone, maturityTone].filter(Boolean).join(". ");
+}
+
+function tierPressureLine(tier) {
+  if (tier === "T3") return "대형 분기다. 한번 넘기면 관계선과 메인 루트가 크게 재배치된다";
+  if (tier === "T2") return "중형 분기다. 짧은 지연도 주도권과 평판의 손실로 연결된다";
+  return "일반 진행 구간이지만, 다음 선택의 압력은 이미 바닥에서 올라오고 있다";
+}
+
+function relationUndertone(packet) {
+  const relation = packet?.current?.relation || {};
+  const desire = Number(relation.desire || 0);
+  const tension = Number(relation.tension || 0);
+  const fear = Number(relation.fear || 0);
+  const trust = Number(relation.trust || 0);
+
+  if (desire >= 28 && tension >= 28) return "시선이 오래 머물며 유혹과 경계가 같은 온도로 번진다";
+  if (desire >= 26) return "말 사이 침묵이 길어져 은밀한 긴장감이 공기층에 남는다";
+  if (fear >= 22) return "공기가 눌리듯 가라앉아 지배와 복종의 기색이 드러난다";
+  if (trust >= 45) return "조심스러운 신뢰가 형성되어 제안의 무게가 더 깊게 스민다";
+  return "";
+}
+
+function maturityUndertone(packet) {
+  const level = Number(packet?.maturity?.level || 1);
+  if (level <= 1) return "";
+  if (level === 2) return "말끝에 은밀한 여운이 남아 선택의 유혹을 키운다";
+  if (level === 3) return "대화의 간격마다 긴장과 끌림이 교차하며 분위기를 달군다";
+  if (level === 4) return "주도권을 둘러싼 욕망의 압력이 강해져 관계선이 빠르게 흔들린다";
+  return "극단적인 밀도 속에서 지배와 굴복의 기색이 동시에 부상한다";
+}
+
+function safeText(value = "") {
+  return String(value || "").trim();
+}
+
+function normalizeForMatch(text = "") {
+  return safeText(text)
+    .replace(/\s+/g, "")
+    .toLowerCase();
+}
+
+function hasDesireUp(choice) {
+  const fx = Array.isArray(choice?.effects) ? choice.effects : [];
+  return fx.some((e) => e?.kind === "relation" && Number(e?.value?.desire || 0) > 0);
+}
+
+function isSexualChoice(packet, event, choice, state, nextState) {
+  const labelRaw = safeText(choice?.label);
+  const label = normalizeForMatch(labelRaw);
+  const id = normalizeForMatch(choice?.id || "");
+  const category = normalizeForMatch(event?.category || "");
+  const lineage = normalizeForMatch(state?.character?.lineageId || "");
+  const nextDesire = Number(nextState?.relationships?.npcRelations?.core?.desire || packet?.current?.relation?.desire || 0);
+
+  const keywordHit = /(유혹|몸을판|몸으로협상|성행위|잠자리|애무|쾌락|육체|정사|침대|매춘|창부|유혹한다|몸판다|몸으로)/.test(labelRaw) ||
+    /(seduce|sex|bed|lust|courtesan|succubus|incubus)/.test(label);
+  const succubusLineage = lineage === "succubus";
+  const succubusSkillLike = succubusLineage && (id.includes("trait-lineage") || category === "relationship" || category === "corruption" || hasDesireUp(choice));
+  const highLustFlow = nextDesire >= 28 && (category === "relationship" || category === "social" || category === "market");
+
+  return Boolean(keywordHit || succubusSkillLike || highLustFlow);
+}
+
+function buildDecisionActionLine(packet, choice, sexual) {
+  const actor = packet?.current?.characterName || "당신";
+  const npc = packet?.contextActors?.npcName || "상대";
+  const action = safeText(choice?.label) || "결정";
+
+  if (sexual) {
+    return `${actor}은(는) ${npc}에게 ${action}를 밀어붙였다. 손끝과 입맞춤, 노골적인 신체 접촉으로 분위기를 성행위 쪽으로 틀어버렸다.`;
+  }
+  return `${actor}은(는) ${npc} 앞에서 ${action}를 실행했다. 말투와 자세, 타이밍까지 계산해 현재 국면의 주도권을 잡으려 했다.`;
+}
+
+function buildDecisionResultLine(packet, effectLine, sexual) {
+  const relation = packet?.delta?.relation || {};
+  const plusDesire = Number(relation?.desire || 0);
+  const plusTension = Number(relation?.tension || 0);
+  const plusTrust = Number(relation?.trust || 0);
+
+  if (sexual) {
+    const reaction = plusDesire > 0
+      ? "상대의 호흡은 더 거칠어졌고, 관계의 욕망 축이 눈에 띄게 치솟았다."
+      : "짧은 쾌락 뒤에 경계와 긴장이 동시에 남아 관계의 결이 날카로워졌다.";
+    return `행동의 즉시 결과: ${effectLine}. ${reaction}`;
+  }
+
+  const relationTone = plusTrust > 0
+    ? "신뢰가 조금 올라갔다."
+    : plusTension > 0
+      ? "긴장이 높아져 다음 대화 난도가 올라간다."
+      : "관계의 축은 크게 흔들리지 않았다.";
+  return `행동의 즉시 결과: ${effectLine}. ${relationTone}`;
+}
+
+function buildDecisionAftermathLine(packet, event, sexual) {
+  const location = packet?.locationId || "현장";
+  const faction = packet?.contextActors?.factionName || "주변 세력";
+  const category = String(event?.category || "social");
+
+  if (sexual) {
+    return `${location}의 공기는 노골적으로 달아올랐고, ${faction} 쪽 시선도 변했다. 성행위로 만든 균열은 단순한 쾌락이 아니라 다음 협상 조건으로 남는다.`;
+  }
+
+  if (category === "faction" || category === "legacy") {
+    return `${location}에서 남긴 결정은 개인 감정이 아니라 세력 계산표에 바로 기록된다.`;
+  }
+  return `${location}의 분위기가 바뀌면서 주변 인물들의 반응이 재정렬됐다.`;
+}
+
+function buildDecisionNextHookLine(packet, event) {
+  const quest = packet?.contextActors?.activeQuest || "현재 과제";
+  const tier = String(event?.tier || "T2");
+  if (tier === "T3") {
+    return `다음 선택을 위한 흐름: ${quest}의 핵심 분기가 열렸고, 여기서의 한 번 더 선택이 메인 루트를 고정한다.`;
+  }
+  return `다음 선택을 위한 흐름: ${quest} 주변에 새로운 변수들이 생겼고, 이어지는 장면에서 다시 선택지가 열린다.`;
+}
+
 function toLegacyText(entry) {
-  return entry?.feedLine || entry?.text || "기록 없음";
+  return entry?.feedLine || entry?.text || "?? ??";
+}
+
+function scrubArtifactText(value = "") {
+  return String(value || "")
+    .replace(/\?{2,}/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 export function normalizeLogEntry(logInput, meta = {}) {
   if (logInput && typeof logInput === "object" && !Array.isArray(logInput)) {
-    const feedLine = logInput.feedLine || logInput.text || logInput.bodyParagraph || meta.fallbackLine || "기록됨";
-    const bodyParagraph = logInput.bodyParagraph || logInput.body || "";
-    const causalNotes = Array.isArray(logInput.causalNotes) ? logInput.causalNotes : [];
-    const followupHooks = Array.isArray(logInput.followupHooks) ? logInput.followupHooks : [];
+    const feedLine = scrubArtifactText(logInput.feedLine || logInput.text || logInput.bodyParagraph || meta.fallbackLine || "기록");
+    const bodyParagraph = scrubArtifactText(logInput.bodyParagraph || logInput.body || "");
+    const causalNotes = (Array.isArray(logInput.causalNotes) ? logInput.causalNotes : [])
+      .map((line) => scrubArtifactText(line))
+      .filter(Boolean);
+    const followupHooks = (Array.isArray(logInput.followupHooks) ? logInput.followupHooks : [])
+      .map((line) => scrubArtifactText(line))
+      .filter(Boolean);
     const tags = Array.isArray(logInput.tags) ? logInput.tags : [];
     const visualStateTags = Array.isArray(logInput.visualStateTags) ? logInput.visualStateTags : [];
     const refs = Array.isArray(logInput.refs) ? logInput.refs : [];
     const createdAt = logInput.createdAt || meta.createdAt || new Date().toISOString();
-    const entry = {
+    return {
       id: logInput.id || `log-${Date.now()}-${Math.floor(Math.random() * 10000)}`,
       kind: logInput.kind || meta.kind || "generic",
       tier: logInput.tier || meta.tier || null,
@@ -180,14 +352,13 @@ export function normalizeLogEntry(logInput, meta = {}) {
       tags,
       maturityTags: Array.isArray(logInput.maturityTags) ? logInput.maturityTags : [],
       visualStateTags,
-      visualStateReason: logInput.visualStateReason || meta.visualStateReason || "",
+      visualStateReason: scrubArtifactText(logInput.visualStateReason || meta.visualStateReason || ""),
       refs,
-      text: logInput.text || feedLine
+      text: scrubArtifactText(logInput.text || feedLine)
     };
-    return entry;
   }
 
-  const text = String(logInput ?? "").trim() || meta.fallbackLine || "기록 없음";
+  const text = scrubArtifactText(String(logInput ?? "").trim() || meta.fallbackLine || "기록 없음");
   return {
     id: `log-${Date.now()}-${Math.floor(Math.random() * 10000)}`,
     kind: meta.kind || "legacy",
@@ -211,85 +382,51 @@ export function createNarrativeEngine(contentPack) {
   const memory = createChronicleMemoryStore();
 
   function synthesize(packet, options = {}) {
-    const ingredient = cleanupIngredient(pickPoolLine(packet, packet.phase, packet.fallbackLine));
+    const previousEntry = memory.recent(1)[0] || null;
+    const ingredient = pickPoolLine(packet, packet.phase, packet.fallbackLine);
     const feedSource = options.feedSource || ingredient;
     const feedLine = `${packet.locationId} | ${feedSource}`;
+
     const causalNotes = generateCausalNotes(packet);
-    const followupHooks = deriveFollowupHooks(packet);
+    const followupHooksRaw = deriveFollowupHooks(packet);
+    const followupHooks = Array.isArray(followupHooksRaw) && followupHooksRaw.length
+      ? followupHooksRaw
+      : fallbackFollowupHooks(packet);
     const maturityTags = buildMaturityTags(packet);
     const visualStateTags = buildVisualStateTags(packet);
     const refs = baseRefs(packet);
 
-    const actor = withTopic(packet.current.characterName || "레나");
-    const placeObj = withObject(packet.locationId || "회랑");
-    const connective = options.connective || "그 여파로";
-    const npcName = packet?.contextActors?.npcName || "세라 쏜";
-    const factionName = packet?.contextActors?.factionName || "밀수 조합";
-    const activeQuest = packet?.contextActors?.activeQuest || "피 묻은 서약";
-
-    const adultTone = maturityTags.includes("adult:desire")
-      ? pickVariant(packet.tick + 1, [
-          `${npcName}의 젖은 속삭임이 귓가를 스치자, 협상은 입술과 숨결의 거리에서 결정되기 시작했다`,
-          `${npcName}가 손등을 오래 쓸어내리며 값을 제시하자, 유혹과 거래의 경계가 대놓고 흐려졌다`,
-          `${npcName}의 시선이 허리선을 따라 내려오는 동안, 욕망과 계산은 같은 박자로 움직였다`
-        ])
-      : maturityTags.includes("adult:control")
-        ? pickVariant(packet.tick + 2, [
-          `${factionName}의 감시 아래, 허락받은 쾌락과 금지된 선택의 선이 노골적으로 그어졌다`,
-          `${factionName}가 규칙을 읊자 모두의 태도는 복종 쪽으로 기울고, 반항은 더 비싼 대가가 됐다`,
-          `${factionName}의 눈빛 하나에 방 안의 권력 질서가 재배열됐고, 누구도 그 순서를 거스르지 못했다`
-        ])
-        : pickVariant(packet.tick + 3, [
-            `${npcName}의 친절한 미소 뒤엔 침대와 계약서를 함께 흔드는 계산이 숨어 있었다`,
-            `${npcName}의 낮은 농담 한마디가 공기의 농도를 바꾸자, 모두가 욕망의 값을 재기 시작했다`,
-            `${npcName}는 다정한 말투로 다가왔지만, 그 다정함엔 분명한 조건과 청구서가 붙어 있었다`
-          ]);
-
     const tier = packet.event?.tier || options.tier || "T1";
-    const eventNarrative = packet?.event?.narrativeText || packet?.event?.text || "";
-    const genericLead = packet.kind === "run-end"
-      ? `${actor} ${placeObj} 끝내 버티지 못했고, 기록은 마지막 장으로 넘어갔다.`
-      : `${actor} ${placeObj} 지나며 ${ingredient}`;
+    const eventNarrative = packet?.event?.text || packet?.event?.narrativeText || "";
+    const lead = options.tierLead || `${withTopic(packet.current.characterName)} positions the next beat at ${packet.locationId}`;
+    const phaseLine = phaseNarrative(packet, tier);
+    const causalLine = causalNotes[0] || "This shift alters the setup for the next branch";
+    const pressureLine = tierPressureLine(tier);
+    const continuityLine = buildContinuityBridge(packet, previousEntry);
+    const profileFocusLine = buildProfileFocusLine(packet);
+    const hookLine = followupHooks[0]
+      ? `Next beat: ${followupHooks[0]}`
+      : "Next beat: the consequence chain is still unfolding";
 
-    const beat = trpgBeat(packet, tier, npcName, factionName, activeQuest);
+    const customSentences = Array.isArray(options.bodySentences) ? options.bodySentences : null;
+    const seededCustomSentences = customSentences
+      ? [continuityLine, profileFocusLine, ...customSentences].filter(Boolean)
+      : null;
+    const sentences = seededCustomSentences
+      ? clampSentences(seededCustomSentences.map((s) => ensureDot(s)), 4, 5)
+      : clampSentences([
+        ensureDot(lead),
+        continuityLine ? ensureDot(continuityLine) : "",
+        profileFocusLine ? ensureDot(profileFocusLine) : "",
+        ensureDot(phaseLine),
+        eventNarrative ? ensureDot(eventNarrative) : ensureDot(pressureLine),
+        ensureDot(`${options.connective || "As a result,"} ${causalLine}`),
+        ensureDot(hookLine)
+      ], 4, 5);
 
-    const tierLead = options.tierLead || (tier === "T3"
-      ? `${actor} ${placeObj} 디딘 순간, ${factionName}의 질서와 ${npcName}의 사적인 의도가 정면으로 충돌했다.`
-      : tier === "T2"
-        ? `${actor} ${placeObj} 멈춰 섰을 때, ${npcName}의 한마디가 ${activeQuest}의 방향을 비틀었다.`
-        : genericLead);
-
-    const tierPressure = tier === "T3"
-      ? "이번 분기는 되돌릴 수 없어서, 선택 하나가 관계의 위계와 이후 생존 루트를 함께 고정한다."
-      : tier === "T2"
-        ? "시간을 끌수록 자동 선택 압력이 높아져, 망설임 자체가 비용이 된다."
-        : null;
-
-    const sentences = clampSentences([
-      ensureDot(tierLead),
-      ensureDot(beat.scene),
-      eventNarrative ? ensureDot(eventNarrative) : null,
-      ensureDot(beat.check),
-      ensureDot(`${connective} ${causalNotes[0] || "지난 선택의 대가가 지금 장면에 드러났다"}`),
-      ensureDot(adultTone),
-      tierPressure ? ensureDot(tierPressure) : null,
-      ensureDot(pickVariant(packet.tick + 4, [
-        `${activeQuest}의 줄기는 끊기지 않았고, 다음 장면의 빚은 더 커졌다`,
-        `${activeQuest}는 봉합되지 못한 채 남았고, 누군가는 그 미결을 값으로 청구할 것이다`,
-        `${activeQuest}의 균열은 그대로 남아 다음 장면의 협박거리가 되었다`
-      ])),
-      followupHooks[0]
-        ? ensureDot(pickVariant(packet.tick + 5, [
-            `결과: 다음 장면에서는 ${followupHooks[0]} 같은 후폭풍이 기다린다`,
-            `결과: ${followupHooks[0]} 쪽으로 사건의 무게가 기울기 시작했다`,
-            `결과: 이 선택의 반동은 곧 ${followupHooks[0]} 형태로 돌아올 가능성이 높다`
-          ]))
-        : pickVariant(packet.tick + 6, [
-            "결과: 정적은 잠깐뿐이고, 다음 선택은 더 비싼 값을 요구할 가능성이 크다.",
-            "결과: 침묵은 오래 가지 못한다. 다음 장면은 분명 더 거친 대가를 부를 것이다.",
-            "결과: 간신히 넘어간 듯 보여도, 다음 국면의 청구서는 이미 작성되고 있다."
-          ])
-    ], 5, 7);
+    const tags = [packet.kind, packet.phase || "none"].filter(Boolean);
+    if (continuityLine) tags.push("continuity-bridge");
+    if (profileFocusLine) tags.push("profile-focus");
 
     const entry = normalizeLogEntry({
       kind: packet.kind,
@@ -299,7 +436,7 @@ export function createNarrativeEngine(contentPack) {
       bodyParagraph: sentences.join(" "),
       causalNotes,
       followupHooks,
-      tags: [packet.kind, packet.phase || "none"].filter(Boolean),
+      tags,
       maturityTags,
       visualStateTags,
       visualStateReason: visualTagReason(visualStateTags, packet),
@@ -326,7 +463,10 @@ export function createNarrativeEngine(contentPack) {
       fallbackLine: resolution?.summary || "단계 진행",
       refs: [`phase:${phase}`]
     });
-    return synthesize(packet, { connective: "그래서", feedSource: resolution?.summary || pickPoolLine(packet, phase) });
+    return synthesize(packet, {
+      connective: "이 변화로",
+      feedSource: resolution?.summary || pickPoolLine(packet, phase)
+    });
   }
 
   function makeEventOpenLog({ state, event }) {
@@ -341,7 +481,11 @@ export function createNarrativeEngine(contentPack) {
       fallbackLine: event?.title || event?.logSummary || "이벤트 발생",
       refs: [`event-tier:${event?.tier || "T1"}`]
     });
-    return synthesize(packet, { tier: event?.tier, connective: "때문에", feedSource: `[${event?.tier || "T1"}] ${event?.title || event?.logSummary || "사건"}` });
+    return synthesize(packet, {
+      tier: event?.tier,
+      connective: "이 시점에",
+      feedSource: `[${event?.tier || "T1"}] ${event?.title || event?.logSummary || "분기"}`
+    });
   }
 
   function makeDecisionLog({ state, nextState, event, choice, auto }) {
@@ -358,13 +502,23 @@ export function createNarrativeEngine(contentPack) {
       fallbackLine: choice?.label || "선택",
       refs: [`choice:${choice?.id || "unknown"}`]
     });
+
     const effectLine = choiceEffectSummary(choice);
+    const maturityLabel = packet?.maturity?.label || "S1";
+    const sexual = isSexualChoice(packet, event, choice, state, nextState);
     const feedSource = `${auto ? "[자동 선택]" : "[선택]"} ${choice?.label || "선택"}`;
+    const bodySentences = [
+      buildDecisionActionLine(packet, choice, sexual),
+      buildDecisionResultLine(packet, effectLine, sexual),
+      buildDecisionAftermathLine(packet, event, sexual),
+      buildDecisionNextHookLine(packet, event)
+    ];
     return synthesize(packet, {
       tier: event?.tier,
-      connective: "이 선택으로",
+      connective: "선택 결과로",
       feedSource,
-      tierLead: `${packet.current.characterName}의 결정은 곧장 대가를 불렀고(${effectLine}), ${packet.contextActors?.factionName || "세력"}의 반응도 거칠어졌다.`
+      tierLead: `${packet.current.characterName}이 결정을 확정했다. 톤 강도 ${maturityLabel}에서 대가와 보상이 즉시 반영된다: ${effectLine}`,
+      bodySentences
     });
   }
 

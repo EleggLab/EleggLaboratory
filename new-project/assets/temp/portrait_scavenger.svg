@@ -1,0 +1,25 @@
+<svg width="768" height="1024" viewBox="0 0 768 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scavenger portrait placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4B2E2E"/>
+      <stop offset="100%" stop-color="#231B1B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="768" height="1024" fill="url(#bg)"/>
+  <ellipse cx="384" cy="540" rx="210" ry="260" fill="#2F2626"/>
+  <ellipse cx="384" cy="470" rx="140" ry="170" fill="#B8876B"/>
+
+  <circle cx="340" cy="460" r="12" fill="#191919"/>
+  <circle cx="428" cy="460" r="12" fill="#191919"/>
+  <path d="M332 535 Q384 575 436 535" fill="none" stroke="#41251A" stroke-width="8" stroke-linecap="round"/>
+
+  <path d="M230 390 Q384 260 540 390" fill="none" stroke="#1E1717" stroke-width="58" stroke-linecap="round"/>
+  <rect x="260" y="620" width="248" height="240" rx="24" fill="#3B4A54"/>
+  <rect x="312" y="670" width="144" height="70" rx="12" fill="#202A31"/>
+
+  <text x="42" y="960" fill="#F3E6D7" font-family="Arial, sans-serif" font-size="34">
+    TEMP PORTRAIT - SCAVENGER
+  </text>
+</svg>
+

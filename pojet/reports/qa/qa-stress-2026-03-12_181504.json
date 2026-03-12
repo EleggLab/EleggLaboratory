@@ -1,0 +1,36 @@
+﻿{
+  "pass": true,
+  "runsRequested": 130,
+  "runsPassed": 130,
+  "runsFailed": 0,
+  "stepsPerRun": 50,
+  "simulationSummary": {
+    "runtime": "15/15",
+    "src": "7/7"
+  },
+  "simulationFailures": [],
+  "globalIssues": [],
+  "storylineDominance": {
+    "academy-prodigy": {
+      "category": "social",
+      "ratio": 0.19333333333333333
+    },
+    "battleworn-veteran": {
+      "category": "corruption",
+      "ratio": 0.19538461538461538
+    },
+    "mountain-adept": {
+      "category": "faith",
+      "ratio": 0.18580645161290324
+    },
+    "brothel-fixer": {
+      "category": "social",
+      "ratio": 0.19195046439628483
+    },
+    "thief-crew": {
+      "category": "market",
+      "ratio": 0.19586206896551725
+    }
+  },
+  "failureSamples": []
+}

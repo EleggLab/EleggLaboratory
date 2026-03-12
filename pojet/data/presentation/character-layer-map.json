@@ -1,0 +1,57 @@
+{
+  "baseByLineage": {
+    "human": "base_human_default",
+    "draconic": "base_draconic_scaled",
+    "stonefolk": "base_stonefolk_heavy",
+    "longkin": "base_longkin_slim",
+    "smallkin": "base_smallkin_light",
+    "smallfoot": "base_smallfoot_compact",
+    "mixed-grace": "base_mixed_grace",
+    "mixed-fury": "base_mixed_fury",
+    "infernal": "base_infernal_marked",
+    "succubus": "base_succubus_charm"
+  },
+  "faceByMood": {
+    "neutral": "face_neutral",
+    "soft": "face_soft",
+    "guarded": "face_guarded",
+    "grim": "face_grim",
+    "sad": "face_sad"
+  },
+  "outfitByClass": {
+    "fighter": "outfit_armor_light",
+    "barbarian": "outfit_armor_rough",
+    "paladin": "outfit_armor_blessed",
+    "rogue": "outfit_stealth_leather",
+    "ranger": "outfit_pathfinder",
+    "monk": "outfit_monk_wrap",
+    "wizard": "outfit_mage_robe",
+    "warlock": "outfit_warlock_coat",
+    "sorcerer": "outfit_sorcerer_flow",
+    "bard": "outfit_bard_formal",
+    "cleric": "outfit_cleric_ritual",
+    "druid": "outfit_druid_nature"
+  },
+  "outfitByBackground": {
+    "smuggler-runner": "outfit_underbelly_runner",
+    "orphan-cutpurse": "outfit_underbelly_light",
+    "fallen-bastard": "outfit_elite_faded",
+    "tower-dropout": "outfit_arcane_dropout",
+    "crusade-runner": "outfit_temple_messenger",
+    "funeral-aide": "outfit_ritual_dark"
+  },
+  "effectByTag": {
+    "wounded_minor": "fx_scratch_light",
+    "wounded_severe": "fx_blood_edge",
+    "tainted": "fx_shadow_vein",
+    "blessed": "fx_halo_soft",
+    "intimate_afterglow": "fx_rose_glow",
+    "rain_soaked": "fx_rain_layer",
+    "resolved": "fx_focus_outline",
+    "bloodied": "fx_blood_splash",
+    "relic_bearer": "fx_arcane_pulse",
+    "exhausted": "fx_sweat_sheen",
+    "tempted": "fx_iris_shift"
+  }
+}
+

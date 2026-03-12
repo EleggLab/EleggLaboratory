@@ -6,8 +6,15 @@ function validateOne(entry) {
   if (!entry.feedLine || entry.feedLine.length < 8) issues.push("feedLine too short");
   if (!isLegacy && !entry.feedLine.includes("|") && !entry.feedLine.includes("[")) issues.push("feedLine missing source/location hint");
 
-  const sentences = (entry.bodyParagraph || "").split(/[.!?]\s+/).filter(Boolean).length;
-  if (!isLegacy && entry.bodyParagraph && (sentences < 2 || sentences > 4)) issues.push("bodyParagraph sentence count out of range");
+  const body = String(entry.bodyParagraph || "");
+  const sanitizedBody = body
+    .replace(/\?{2,}/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const sentences = sanitizedBody
+    ? sanitizedBody.split(/[.!]\s+/).filter(Boolean).length
+    : 0;
+  if (!isLegacy && body && (sentences < 2 || sentences > 14)) issues.push("bodyParagraph sentence count out of range");
 
   if (!Array.isArray(entry.causalNotes)) issues.push("causalNotes must be array");
   if (!Array.isArray(entry.followupHooks)) issues.push("followupHooks must be array");

@@ -1,0 +1,12 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hunger icon placeholder">
+  <rect x="28" y="28" width="200" height="200" rx="26" fill="#F4EFE4"/>
+  <rect x="76" y="44" width="20" height="110" rx="8" fill="#4A4A4A"/>
+  <rect x="104" y="44" width="20" height="110" rx="8" fill="#4A4A4A"/>
+  <rect x="132" y="44" width="20" height="110" rx="8" fill="#4A4A4A"/>
+  <rect x="160" y="44" width="20" height="110" rx="8" fill="#4A4A4A"/>
+  <rect x="94" y="144" width="68" height="58" rx="10" fill="#C76B3E"/>
+  <circle cx="128" cy="102" r="9" fill="#F4EFE4"/>
+  <rect x="176" y="44" width="20" height="160" rx="10" fill="#4A4A4A"/>
+  <rect x="28" y="28" width="200" height="200" rx="26" fill="none" stroke="#343434" stroke-width="8"/>
+</svg>
+

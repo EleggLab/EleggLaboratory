@@ -1,0 +1,641 @@
+{
+  "generated_at": "2026-03-12T17:25:04.823222",
+  "minimum_required": 5000,
+  "category_file_count": 126,
+  "min_char_count": 22883,
+  "max_char_count": 25657,
+  "total_char_count": 3068871,
+  "below_minimum_count": 0,
+  "records": [
+    {
+      "file": "boss__abyssal_howler.json",
+      "category_id": "boss.abyssal_howler",
+      "char_count": 24676
+    },
+    {
+      "file": "boss__crimson_matriarch.json",
+      "category_id": "boss.crimson_matriarch",
+      "char_count": 25165
+    },
+    {
+      "file": "boss__dune_colossus.json",
+      "category_id": "boss.dune_colossus",
+      "char_count": 24513
+    },
+    {
+      "file": "boss__dune_executioner.json",
+      "category_id": "boss.dune_executioner",
+      "char_count": 25002
+    },
+    {
+      "file": "boss__eclipse_harbinger.json",
+      "category_id": "boss.eclipse_harbinger",
+      "char_count": 25165
+    },
+    {
+      "file": "boss__glass_tyrant.json",
+      "category_id": "boss.glass_tyrant",
+      "char_count": 24350
+    },
+    {
+      "file": "boss__marrow_king.json",
+      "category_id": "boss.marrow_king",
+      "char_count": 24187
+    },
+    {
+      "file": "boss__plague_oracle.json",
+      "category_id": "boss.plague_oracle",
+      "char_count": 24513
+    },
+    {
+      "file": "boss__prophet_ash.json",
+      "category_id": "boss.prophet_ash",
+      "char_count": 24187
+    },
+    {
+      "file": "boss__reactor_guardian.json",
+      "category_id": "boss.reactor_guardian",
+      "char_count": 25002
+    },
+    {
+      "file": "boss__scavenger_lord.json",
+      "category_id": "boss.scavenger_lord",
+      "char_count": 24676
+    },
+    {
+      "file": "boss__signal_revenant.json",
+      "category_id": "boss.signal_revenant",
+      "char_count": 24839
+    },
+    {
+      "file": "boss__vault_warden.json",
+      "category_id": "boss.vault_warden",
+      "char_count": 24350
+    },
+    {
+      "file": "boss__warlord_kaine.json",
+      "category_id": "boss.warlord_kaine",
+      "char_count": 24513
+    },
+    {
+      "file": "character__archetype.json",
+      "category_id": "character.archetype",
+      "char_count": 24353
+    },
+    {
+      "file": "character__belief.json",
+      "category_id": "character.belief",
+      "char_count": 23864
+    },
+    {
+      "file": "character__dialogue_casual.json",
+      "category_id": "character.dialogue_casual",
+      "char_count": 25331
+    },
+    {
+      "file": "character__dialogue_formal.json",
+      "category_id": "character.dialogue_formal",
+      "char_count": 25331
+    },
+    {
+      "file": "character__emotional_shift.json",
+      "category_id": "character.emotional_shift",
+      "char_count": 25331
+    },
+    {
+      "file": "character__identity.json",
+      "category_id": "character.identity",
+      "char_count": 24190
+    },
+    {
+      "file": "character__morality_axis.json",
+      "category_id": "character.morality_axis",
+      "char_count": 25005
+    },
+    {
+      "file": "character__mutation_sign.json",
+      "category_id": "character.mutation_sign",
+      "char_count": 25005
+    },
+    {
+      "file": "character__origin.json",
+      "category_id": "character.origin",
+      "char_count": 23864
+    },
+    {
+      "file": "character__personality.json",
+      "category_id": "character.personality",
+      "char_count": 24679
+    },
+    {
+      "file": "character__relationship_hook.json",
+      "category_id": "character.relationship_hook",
+      "char_count": 25657
+    },
+    {
+      "file": "character__survival_habit.json",
+      "category_id": "character.survival_habit",
+      "char_count": 25168
+    },
+    {
+      "file": "character__taboo.json",
+      "category_id": "character.taboo",
+      "char_count": 23701
+    },
+    {
+      "file": "character__trauma.json",
+      "category_id": "character.trauma",
+      "char_count": 23864
+    },
+    {
+      "file": "faction__ash_cartel.json",
+      "category_id": "faction.ash_cartel",
+      "char_count": 24270
+    },
+    {
+      "file": "faction__atomic_children.json",
+      "category_id": "faction.atomic_children",
+      "char_count": 25085
+    },
+    {
+      "file": "faction__blackflag_raiders.json",
+      "category_id": "faction.blackflag_raiders",
+      "char_count": 25411
+    },
+    {
+      "file": "faction__crimson_clan.json",
+      "category_id": "faction.crimson_clan",
+      "char_count": 24596
+    },
+    {
+      "file": "faction__dust_nomads.json",
+      "category_id": "faction.dust_nomads",
+      "char_count": 24433
+    },
+    {
+      "file": "faction__frontier_guard.json",
+      "category_id": "faction.frontier_guard",
+      "char_count": 24922
+    },
+    {
+      "file": "faction__iron_brokers.json",
+      "category_id": "faction.iron_brokers",
+      "char_count": 24596
+    },
+    {
+      "file": "faction__marrow_cult.json",
+      "category_id": "faction.marrow_cult",
+      "char_count": 24433
+    },
+    {
+      "file": "faction__neutral_traders.json",
+      "category_id": "faction.neutral_traders",
+      "char_count": 25085
+    },
+    {
+      "file": "faction__oasis_union.json",
+      "category_id": "faction.oasis_union",
+      "char_count": 24433
+    },
+    {
+      "file": "faction__ruin_collective.json",
+      "category_id": "faction.ruin_collective",
+      "char_count": 25085
+    },
+    {
+      "file": "faction__sentinel_order.json",
+      "category_id": "faction.sentinel_order",
+      "char_count": 24922
+    },
+    {
+      "file": "faction__signal_hunters.json",
+      "category_id": "faction.signal_hunters",
+      "char_count": 24922
+    },
+    {
+      "file": "faction__veritas.json",
+      "category_id": "faction.veritas",
+      "char_count": 23781
+    },
+    {
+      "file": "item__antidote.json",
+      "category_id": "item.antidote",
+      "char_count": 23780
+    },
+    {
+      "file": "item__armor_plate.json",
+      "category_id": "item.armor_plate",
+      "char_count": 24269
+    },
+    {
+      "file": "item__bandage.json",
+      "category_id": "item.bandage",
+      "char_count": 23617
+    },
+    {
+      "file": "item__battery_core.json",
+      "category_id": "item.battery_core",
+      "char_count": 24432
+    },
+    {
+      "file": "item__iodine_tablet.json",
+      "category_id": "item.iodine_tablet",
+      "char_count": 24595
+    },
+    {
+      "file": "item__mutation_serum.json",
+      "category_id": "item.mutation_serum",
+      "char_count": 24758
+    },
+    {
+      "file": "item__painkiller.json",
+      "category_id": "item.painkiller",
+      "char_count": 24106
+    },
+    {
+      "file": "item__purified_water.json",
+      "category_id": "item.purified_water",
+      "char_count": 24758
+    },
+    {
+      "file": "item__ration_pack.json",
+      "category_id": "item.ration_pack",
+      "char_count": 24269
+    },
+    {
+      "file": "item__rifle_part.json",
+      "category_id": "item.rifle_part",
+      "char_count": 24106
+    },
+    {
+      "file": "item__rusty_pistol.json",
+      "category_id": "item.rusty_pistol",
+      "char_count": 24432
+    },
+    {
+      "file": "item__scrap_metal.json",
+      "category_id": "item.scrap_metal",
+      "char_count": 24269
+    },
+    {
+      "file": "item__signal_kit.json",
+      "category_id": "item.signal_kit",
+      "char_count": 24106
+    },
+    {
+      "file": "item__stim_shot.json",
+      "category_id": "item.stim_shot",
+      "char_count": 23943
+    },
+    {
+      "file": "job__chemist.json",
+      "category_id": "job.chemist",
+      "char_count": 23453
+    },
+    {
+      "file": "job__engineer.json",
+      "category_id": "job.engineer",
+      "char_count": 23616
+    },
+    {
+      "file": "job__gunslinger.json",
+      "category_id": "job.gunslinger",
+      "char_count": 23942
+    },
+    {
+      "file": "job__hunter.json",
+      "category_id": "job.hunter",
+      "char_count": 23290
+    },
+    {
+      "file": "job__infiltrator.json",
+      "category_id": "job.infiltrator",
+      "char_count": 24105
+    },
+    {
+      "file": "job__mechanic.json",
+      "category_id": "job.mechanic",
+      "char_count": 23616
+    },
+    {
+      "file": "job__medic.json",
+      "category_id": "job.medic",
+      "char_count": 23127
+    },
+    {
+      "file": "job__negotiator.json",
+      "category_id": "job.negotiator",
+      "char_count": 23942
+    },
+    {
+      "file": "job__raider.json",
+      "category_id": "job.raider",
+      "char_count": 23290
+    },
+    {
+      "file": "job__scavenger.json",
+      "category_id": "job.scavenger",
+      "char_count": 23779
+    },
+    {
+      "file": "job__sentinel.json",
+      "category_id": "job.sentinel",
+      "char_count": 23616
+    },
+    {
+      "file": "job__stalker.json",
+      "category_id": "job.stalker",
+      "char_count": 23453
+    },
+    {
+      "file": "job__tactician.json",
+      "category_id": "job.tactician",
+      "char_count": 23779
+    },
+    {
+      "file": "job__trader.json",
+      "category_id": "job.trader",
+      "char_count": 23290
+    },
+    {
+      "file": "monster__ash_serpent.json",
+      "category_id": "monster.ash_serpent",
+      "char_count": 24515
+    },
+    {
+      "file": "monster__bloodthorn_beast.json",
+      "category_id": "monster.bloodthorn_beast",
+      "char_count": 25330
+    },
+    {
+      "file": "monster__bone_hyena.json",
+      "category_id": "monster.bone_hyena",
+      "char_count": 24352
+    },
+    {
+      "file": "monster__dust_wolf.json",
+      "category_id": "monster.dust_wolf",
+      "char_count": 24189
+    },
+    {
+      "file": "monster__feral_raider.json",
+      "category_id": "monster.feral_raider",
+      "char_count": 24678
+    },
+    {
+      "file": "monster__ghost_stalker.json",
+      "category_id": "monster.ghost_stalker",
+      "char_count": 24841
+    },
+    {
+      "file": "monster__irradiated_crow.json",
+      "category_id": "monster.irradiated_crow",
+      "char_count": 25167
+    },
+    {
+      "file": "monster__plague_hulk.json",
+      "category_id": "monster.plague_hulk",
+      "char_count": 24515
+    },
+    {
+      "file": "monster__rad_rat.json",
+      "category_id": "monster.rad_rat",
+      "char_count": 23863
+    },
+    {
+      "file": "monster__rust_spider.json",
+      "category_id": "monster.rust_spider",
+      "char_count": 24515
+    },
+    {
+      "file": "monster__scrap_hound.json",
+      "category_id": "monster.scrap_hound",
+      "char_count": 24515
+    },
+    {
+      "file": "monster__steel_mantis.json",
+      "category_id": "monster.steel_mantis",
+      "char_count": 24678
+    },
+    {
+      "file": "monster__toxic_slug.json",
+      "category_id": "monster.toxic_slug",
+      "char_count": 24352
+    },
+    {
+      "file": "monster__tunnel_mole.json",
+      "category_id": "monster.tunnel_mole",
+      "char_count": 24515
+    },
+    {
+      "file": "npc__atlas.json",
+      "category_id": "npc.atlas",
+      "char_count": 23209
+    },
+    {
+      "file": "npc__blaze.json",
+      "category_id": "npc.blaze",
+      "char_count": 23209
+    },
+    {
+      "file": "npc__dante.json",
+      "category_id": "npc.dante",
+      "char_count": 23209
+    },
+    {
+      "file": "npc__drake.json",
+      "category_id": "npc.drake",
+      "char_count": 23209
+    },
+    {
+      "file": "npc__finch.json",
+      "category_id": "npc.finch",
+      "char_count": 23209
+    },
+    {
+      "file": "npc__iris.json",
+      "category_id": "npc.iris",
+      "char_count": 23046
+    },
+    {
+      "file": "npc__juno.json",
+      "category_id": "npc.juno",
+      "char_count": 23046
+    },
+    {
+      "file": "npc__kate.json",
+      "category_id": "npc.kate",
+      "char_count": 23046
+    },
+    {
+      "file": "npc__mira.json",
+      "category_id": "npc.mira",
+      "char_count": 23046
+    },
+    {
+      "file": "npc__nox.json",
+      "category_id": "npc.nox",
+      "char_count": 22883
+    },
+    {
+      "file": "npc__rhea.json",
+      "category_id": "npc.rhea",
+      "char_count": 23046
+    },
+    {
+      "file": "npc__sol.json",
+      "category_id": "npc.sol",
+      "char_count": 22883
+    },
+    {
+      "file": "npc__sora.json",
+      "category_id": "npc.sora",
+      "char_count": 23046
+    },
+    {
+      "file": "npc__vega.json",
+      "category_id": "npc.vega",
+      "char_count": 23046
+    },
+    {
+      "file": "quest__artifact_retrieval.json",
+      "category_id": "quest.artifact_retrieval",
+      "char_count": 25492
+    },
+    {
+      "file": "quest__black_market_deal.json",
+      "category_id": "quest.black_market_deal",
+      "char_count": 25329
+    },
+    {
+      "file": "quest__bounty_contract.json",
+      "category_id": "quest.bounty_contract",
+      "char_count": 25003
+    },
+    {
+      "file": "quest__caravan_escort.json",
+      "category_id": "quest.caravan_escort",
+      "char_count": 24840
+    },
+    {
+      "file": "quest__diplomacy_meeting.json",
+      "category_id": "quest.diplomacy_meeting",
+      "char_count": 25329
+    },
+    {
+      "file": "quest__missing_scout.json",
+      "category_id": "quest.missing_scout",
+      "char_count": 24677
+    },
+    {
+      "file": "quest__oasis_relief.json",
+      "category_id": "quest.oasis_relief",
+      "char_count": 24514
+    },
+    {
+      "file": "quest__rescue_operation.json",
+      "category_id": "quest.rescue_operation",
+      "char_count": 25166
+    },
+    {
+      "file": "quest__sabotage_mission.json",
+      "category_id": "quest.sabotage_mission",
+      "char_count": 25166
+    },
+    {
+      "file": "quest__shrine_ritual.json",
+      "category_id": "quest.shrine_ritual",
+      "char_count": 24677
+    },
+    {
+      "file": "quest__supply_run.json",
+      "category_id": "quest.supply_run",
+      "char_count": 24188
+    },
+    {
+      "file": "quest__territory_defense.json",
+      "category_id": "quest.territory_defense",
+      "char_count": 25329
+    },
+    {
+      "file": "quest__veritas_relay.json",
+      "category_id": "quest.veritas_relay",
+      "char_count": 24677
+    },
+    {
+      "file": "quest__wasteland_hunt.json",
+      "category_id": "quest.wasteland_hunt",
+      "char_count": 24840
+    },
+    {
+      "file": "region__atomic_shrine.json",
+      "category_id": "region.atomic_shrine",
+      "char_count": 24677
+    },
+    {
+      "file": "region__black_sand_dunes.json",
+      "category_id": "region.black_sand_dunes",
+      "char_count": 25166
+    },
+    {
+      "file": "region__bloodthorn_zone.json",
+      "category_id": "region.bloodthorn_zone",
+      "char_count": 25003
+    },
+    {
+      "file": "region__canyon_settlement.json",
+      "category_id": "region.canyon_settlement",
+      "char_count": 25329
+    },
+    {
+      "file": "region__frozen_reservoir.json",
+      "category_id": "region.frozen_reservoir",
+      "char_count": 25166
+    },
+    {
+      "file": "region__oasis_camp.json",
+      "category_id": "region.oasis_camp",
+      "char_count": 24188
+    },
+    {
+      "file": "region__old_vault.json",
+      "category_id": "region.old_vault",
+      "char_count": 24025
+    },
+    {
+      "file": "region__radio_tower.json",
+      "category_id": "region.radio_tower",
+      "char_count": 24351
+    },
+    {
+      "file": "region__ruined_city.json",
+      "category_id": "region.ruined_city",
+      "char_count": 24351
+    },
+    {
+      "file": "region__rust_factory.json",
+      "category_id": "region.rust_factory",
+      "char_count": 24514
+    },
+    {
+      "file": "region__scrap_market.json",
+      "category_id": "region.scrap_market",
+      "char_count": 24514
+    },
+    {
+      "file": "region__shattered_highway.json",
+      "category_id": "region.shattered_highway",
+      "char_count": 25329
+    },
+    {
+      "file": "region__sunken_subway.json",
+      "category_id": "region.sunken_subway",
+      "char_count": 24677
+    },
+    {
+      "file": "region__veritas_outpost.json",
+      "category_id": "region.veritas_outpost",
+      "char_count": 25003
+    }
+  ]
+}

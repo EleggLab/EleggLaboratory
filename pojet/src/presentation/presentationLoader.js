@@ -1,11 +1,15 @@
-﻿export async function loadPresentationPack() {
+export async function loadPresentationPack() {
   const keys = [
     "portrait-state-map",
+    "character-asset-catalog",
+    "character-layer-map",
+    "background-scene-map",
     "emotion-presets",
     "panel-emphasis-rules",
     "run-end-types",
     "legacy-rewards"
   ];
+
   const pack = {};
   for (const key of keys) {
     try {
@@ -16,8 +20,29 @@
       pack[toKey(key)] = null;
     }
   }
+
   return {
     portraitStateMap: pack.portraitStateMap || { baseLayers: {}, tagRules: [], priority: [] },
+    characterAssetCatalog: pack.characterAssetCatalog || {
+      sources: [],
+      notes: [],
+      portraitByClass: {},
+      faceByMood: {},
+      faceByGenderMood: {}
+    },
+    characterLayerMap: pack.characterLayerMap || {
+      baseByLineage: {},
+      faceByMood: {},
+      outfitByClass: {},
+      outfitByBackground: {},
+      effectByTag: {}
+    },
+    backgroundSceneMap: pack.backgroundSceneMap || {
+      byLocationKeyword: {},
+      byClassFallback: {},
+      timeTone: {},
+      stateOverlay: {}
+    },
     emotionPresets: pack.emotionPresets || {},
     panelEmphasisRules: pack.panelEmphasisRules || { default: { border: "normal", glow: 0.1, scale: 1 } },
     runEndTypes: pack.runEndTypes || [],
@@ -25,4 +50,6 @@
   };
 }
 
-function toKey(v) { return v.replace(/-([a-z])/g, (_, c) => c.toUpperCase()); }
+function toKey(v) {
+  return v.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
+}

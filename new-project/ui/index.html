@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crimson Wasteland UI Shell</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise-layer"></div>
+    <main class="app-shell">
+      <header class="hero" id="hero">
+        <div class="hero-overlay">
+          <p class="eyebrow">UI / UX Prototype</p>
+          <h1 id="hero-title">Crimson Wasteland</h1>
+          <p id="hero-subtitle">저장 파일을 불러와 현재 상태를 확인하세요.</p>
+          <p class="live-status">
+            <span id="live-status">라이브 동기화: OFF</span>
+            <span id="live-updated">최근 갱신: -</span>
+          </p>
+          <div class="hero-actions">
+            <label class="file-picker">
+              <span>저장 파일 불러오기</span>
+              <input id="save-input" type="file" accept=".json,application/json" />
+            </label>
+            <button type="button" class="ghost-btn" id="live-sync-btn">라이브 동기화 시작</button>
+            <button type="button" class="ghost-btn" id="toggle-bg-btn">배경 전환</button>
+            <button type="button" class="ghost-btn" id="demo-safe-btn">시연: 안정 상태</button>
+            <button type="button" class="ghost-btn" id="demo-danger-btn">시연: 붕괴 직전</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="layout-grid">
+        <article class="panel identity-panel">
+          <div class="identity-head">
+            <img id="portrait" alt="character portrait" />
+            <div>
+              <h2 id="player-name">Unnamed</h2>
+              <p id="player-meta">Unknown / Unknown</p>
+              <p id="player-level">LV 1 · XP 0/100 · Perk 0</p>
+            </div>
+          </div>
+          <p id="player-appearance" class="appearance-text">외형 정보 없음</p>
+        </article>
+
+        <article class="panel stats-panel">
+          <h3>생존 상태</h3>
+          <div class="stat-grid">
+            <div class="stat-card hp">
+              <span>HP</span>
+              <strong id="hp-value">100</strong>
+            </div>
+            <div class="stat-card humanity">
+              <span>인간성</span>
+              <strong id="humanity-value">60</strong>
+            </div>
+            <div class="stat-card hunger">
+              <img src="../assets/temp/icon_hunger.svg" alt="" />
+              <span>허기</span>
+              <strong id="hunger-value">100</strong>
+            </div>
+            <div class="stat-card thirst">
+              <span>갈증</span>
+              <strong id="thirst-value">100</strong>
+            </div>
+            <div class="stat-card radiation">
+              <img src="../assets/temp/icon_radiation.svg" alt="" />
+              <span>방사능</span>
+              <strong id="radiation-value">0</strong>
+            </div>
+            <div class="stat-card caps">
+              <span>캡</span>
+              <strong id="caps-value">0</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel factions-panel">
+          <h3>세력 평판</h3>
+          <ul id="faction-list" class="faction-list"></ul>
+        </article>
+
+        <article class="panel quest-panel">
+          <h3>퀘스트</h3>
+          <ul id="quest-list" class="chip-list"></ul>
+        </article>
+
+        <article class="panel inventory-panel">
+          <h3>인벤토리</h3>
+          <ul id="inventory-list" class="chip-list"></ul>
+        </article>
+
+        <article class="panel rumors-panel">
+          <h3>최근 소문</h3>
+          <ul id="rumor-list" class="feed-list"></ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

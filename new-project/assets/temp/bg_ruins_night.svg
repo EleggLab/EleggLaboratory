@@ -1,0 +1,31 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ruins night placeholder">
+  <defs>
+    <linearGradient id="nightSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141A2F"/>
+      <stop offset="55%" stop-color="#25354A"/>
+      <stop offset="100%" stop-color="#3F2B2B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#nightSky)"/>
+  <rect y="610" width="1600" height="290" fill="#241B1E"/>
+
+  <circle cx="1320" cy="140" r="72" fill="#C4D6FF" opacity="0.55"/>
+
+  <rect x="210" y="360" width="170" height="250" fill="#20242E"/>
+  <rect x="415" y="300" width="220" height="310" fill="#1C212A"/>
+  <rect x="670" y="330" width="140" height="280" fill="#232835"/>
+  <rect x="850" y="260" width="250" height="350" fill="#1F2631"/>
+  <rect x="1130" y="340" width="190" height="270" fill="#252A36"/>
+
+  <rect x="470" y="380" width="28" height="36" fill="#7AA0C4" opacity="0.45"/>
+  <rect x="520" y="380" width="28" height="36" fill="#7AA0C4" opacity="0.45"/>
+  <rect x="900" y="320" width="30" height="40" fill="#86A8CE" opacity="0.5"/>
+  <rect x="950" y="320" width="30" height="40" fill="#86A8CE" opacity="0.5"/>
+  <rect x="1200" y="410" width="24" height="30" fill="#739BBF" opacity="0.4"/>
+
+  <text x="60" y="820" fill="#DEE6F5" font-family="Arial, sans-serif" font-size="28">
+    TEMP BACKGROUND - RUINS NIGHT
+  </text>
+</svg>
+

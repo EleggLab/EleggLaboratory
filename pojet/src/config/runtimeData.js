@@ -5,22 +5,32 @@ export const CLASS_IDS = [
 ];
 
 export const CLASS_LABELS_KO = {
-  barbarian: "야성 집행자", bard: "유혹의 연출가", cleric: "참회 심문관", druid: "본능의 조율자", fighter: "피의 계약검", monk: "금욕 파수자",
-  paladin: "맹세 집정관", ranger: "추적 사냥인", rogue: "밤의 협상가", sorcerer: "욕망 공명술사", warlock: "금단 서약자", wizard: "비밀 문장가"
+  barbarian: "광전사",
+  bard: "바드",
+  cleric: "사제",
+  druid: "여행자",
+  fighter: "기사",
+  monk: "댄서",
+  paladin: "성기사",
+  ranger: "궁수",
+  rogue: "도둑",
+  sorcerer: "떠돌이 상인",
+  warlock: "창부",
+  wizard: "마법사"
 };
 
 export const LINEAGES = ["draconic", "stonefolk", "longkin", "smallkin", "mixed-grace", "mixed-fury", "smallfoot", "human", "infernal", "succubus"];
 
 export const LINEAGE_LABELS_KO = {
-  draconic: "용혈족",
-  stonefolk: "석민족",
-  longkin: "장귀인",
-  smallkin: "소인 기공족",
-  "mixed-grace": "혼혈(은총)",
-  "mixed-fury": "혼혈(격노)",
-  smallfoot: "소족",
+  draconic: "용족",
+  stonefolk: "드워프",
+  longkin: "엘프",
+  smallkin: "하플링",
+  "mixed-grace": "수인족",
+  "mixed-fury": "다크 엘프",
+  smallfoot: "뱀파이어",
   human: "인간",
-  infernal: "지옥혈통",
+  infernal: "마족",
   succubus: "서큐버스"
 };
 
@@ -30,16 +40,16 @@ export const BACKGROUNDS = [
 ];
 
 export const BACKGROUND_LABELS_KO = {
-  "border-conscript": "변경 징집 생존자",
-  "crusade-runner": "성전 전령 겸 심부름꾼",
-  "orphan-cutpurse": "고아 지구 출신 손기술꾼",
-  "tower-dropout": "유리탑 낙오 견습생",
-  "funeral-aide": "장송 의식 시종",
-  "fallen-bastard": "몰락 귀족의 숨겨진 사생아",
-  "caravan-guard": "대상단 호위검",
-  "smuggler-runner": "밀수 노선 연락책",
-  "forest-watch": "숲 경계 추적자",
-  "relic-digger": "금단 유물 인양꾼"
+  "border-conscript": "노예시장에 있었다가 도망침",
+  "crusade-runner": "성전 전령 출신",
+  "orphan-cutpurse": "고아 출신",
+  "tower-dropout": "숲속 마녀에게 주워져 길러짐",
+  "funeral-aide": "창녀의 자식으로 창녀촌에서 길러짐",
+  "fallen-bastard": "귀족 가문의 외동",
+  "caravan-guard": "시골 지방의 농부 부부의 자식으로 길러짐",
+  "smuggler-runner": "타국에서 배를 타고 따라 들어온 밀행자",
+  "forest-watch": "부모가 없어 산에서 동물들과 함께 길러짐",
+  "relic-digger": "왕가의 핏줄이지만 낮은 왕권 순위를 가진 이단아"
 };
 
 export const DECISION_PRESETS = {

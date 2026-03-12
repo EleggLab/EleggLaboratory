@@ -1,7 +1,7 @@
 ﻿import { resolveCombat } from "../resolvers/combatResolver.js";
 import { resolveExploration } from "../../src/resolvers/explorationResolver.js";
 import { resolveSocial } from "../../src/resolvers/socialResolver.js";
-import { applyResolutionEffects, applyEventChoiceEffects, maybeLevelUp } from "../resolvers/rewardResolver.js";
+import { applyResolutionEffects, applyEventChoiceEffects, maybeLevelUp, buildDeferredChoiceOutcome } from "../resolvers/rewardResolver.js";
 import { maybeDispatchDecisionEvent, resolveTimedChoice, shouldForcePause } from "../../src/events/eventDispatcher.js";
 import { LOCATIONS_BY_ACT } from "../../src/config/runtimeData.js";
 import { createNarrativeEngine } from "../../src/narrative/narrativeEngine.js";
@@ -10,6 +10,7 @@ export function createAutoProgressionController(store, contentPack) {
   let timer = null;
   let t2Timer = null;
   const narrative = createNarrativeEngine(contentPack);
+  store.__narrativeEngine = narrative;
 
   function start() {
     if (timer) return;
@@ -29,6 +30,7 @@ export function createAutoProgressionController(store, contentPack) {
     if (state.activeDecisionEvent) return;
 
     store.dispatch({ type: "TIME_TICK" });
+    processDeferredOutcomes(store, narrative);
 
     const current = store.getState();
     const phase = pickPhase(current);
@@ -78,6 +80,7 @@ export function createAutoProgressionController(store, contentPack) {
             eventId: possibleEvent.id || possibleEvent.eventId,
             tier: possibleEvent.tier,
             category: possibleEvent.category,
+            selectionDebug: possibleEvent.selectionDebug || null,
             stage: "opened",
             tick: openedTick,
             openedAt: new Date().toISOString()
@@ -93,7 +96,7 @@ export function createAutoProgressionController(store, contentPack) {
           const live = store.getState();
           if (!live.activeDecisionEvent || (live.activeDecisionEvent.id !== possibleEvent.id && live.activeDecisionEvent.eventId !== possibleEvent.eventId)) return;
           const autoChoice = resolveTimedChoice(live, live.activeDecisionEvent);
-          applyDecisionChoice(store, autoChoice, true, contentPack);
+          applyDecisionChoice(store, autoChoice, true, contentPack, narrative);
         }, (possibleEvent.timeoutSec || 10) * 1000);
       }
     }
@@ -178,14 +181,16 @@ function applyPhaseResolution(store, resolution, contentPack, narrative) {
   }
 }
 
-export function applyDecisionChoice(store, choice, auto = false, contentPack = null) {
+export function applyDecisionChoice(store, choice, auto = false, contentPack = null, narrativeOverride = null) {
   const state = store.getState();
   const event = state.activeDecisionEvent;
   if (!event || !choice) return;
 
-  const narrative = createNarrativeEngine(contentPack);
+  const narrative = narrativeOverride || store.__narrativeEngine || createNarrativeEngine(contentPack);
+  if (!store.__narrativeEngine) store.__narrativeEngine = narrative;
   const before = state.relationships.npcRelations.core || {};
   const patch = applyEventChoiceEffects(state, choice, event.defaultEffects || []);
+  const deferred = buildDeferredChoiceOutcome(state, event, choice, event.defaultEffects || []);
   store.dispatch({ type: "APPLY_PATCH", payload: { patch } });
 
   const choiceLog = narrative.makeDecisionLog({
@@ -202,9 +207,11 @@ export function applyDecisionChoice(store, choice, auto = false, contentPack = n
       entry: {
         eventId: event.id || event.eventId,
         choiceId: choice.id,
+        choiceLabel: choice.label || "",
         auto,
         tier: event.tier,
         category: event.category,
+        selectionDebug: event.selectionDebug || null,
         stage: "resolved",
         tick: Number(store.getState().time.tick || 0),
         resolvedAt: new Date().toISOString()
@@ -212,6 +219,9 @@ export function applyDecisionChoice(store, choice, auto = false, contentPack = n
     }
   });
   store.dispatch({ type: "CLEAR_ACTIVE_EVENT" });
+  if (deferred) {
+    store.dispatch({ type: "QUEUE_DEFERRED_OUTCOME", payload: { entry: deferred } });
+  }
 
   const after = store.getState().relationships.npcRelations.core || {};
   if (JSON.stringify(before) !== JSON.stringify(after)) {
@@ -221,6 +231,35 @@ export function applyDecisionChoice(store, choice, auto = false, contentPack = n
   if (event.tier === "T3" && store.getState().run.status === "paused") {
     store.dispatch({ type: "RUN_RESUME" });
   }
+}
+
+function processDeferredOutcomes(store, narrative) {
+  const state = store.getState();
+  const tick = Number(state?.time?.tick || 0);
+  const queue = Array.isArray(state?.world?.deferredOutcomes) ? state.world.deferredOutcomes : [];
+  if (!queue.length) return;
+
+  const due = queue.filter((entry) => Number(entry?.dueTick || Infinity) <= tick).slice(0, 4);
+  if (!due.length) return;
+
+  due.forEach((entry) => {
+    if (entry?.patch) {
+      store.dispatch({ type: "APPLY_PATCH", payload: { patch: entry.patch } });
+    }
+    const followupLog = narrative.makeGenericLog({
+      state: store.getState(),
+      kind: "deferred-outcome",
+      source: "deferred-loop",
+      text: `[후속] ${entry?.summary || "선택의 지연 효과가 반영되었다."}`,
+      refs: [
+        `defer:${entry?.id || "unknown"}`,
+        `event:${entry?.sourceEventId || "unknown"}`,
+        `choice:${entry?.sourceChoiceId || "unknown"}`
+      ]
+    });
+    store.dispatch({ type: "LOG", payload: { log: followupLog, meta: { tier: "T2" } } });
+    store.dispatch({ type: "RESOLVE_DEFERRED_OUTCOME", payload: { id: entry?.id } });
+  });
 }
 
 export function evaluateRunEndType(state) {

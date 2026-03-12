@@ -1,0 +1,25 @@
+<svg width="768" height="1024" viewBox="0 0 768 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Medic portrait placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1F3642"/>
+      <stop offset="100%" stop-color="#182127"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="768" height="1024" fill="url(#bg)"/>
+  <ellipse cx="384" cy="550" rx="220" ry="280" fill="#2B333B"/>
+  <ellipse cx="384" cy="480" rx="145" ry="180" fill="#C9967A"/>
+
+  <circle cx="338" cy="468" r="11" fill="#1A1A1A"/>
+  <circle cx="430" cy="468" r="11" fill="#1A1A1A"/>
+  <path d="M336 538 Q384 563 432 538" fill="none" stroke="#4A2D20" stroke-width="7" stroke-linecap="round"/>
+
+  <rect x="250" y="624" width="268" height="250" rx="22" fill="#D9E1E7"/>
+  <rect x="344" y="690" width="80" height="80" fill="#D44A4A"/>
+  <rect x="372" y="662" width="24" height="136" fill="#D44A4A"/>
+
+  <text x="58" y="960" fill="#EAF2F8" font-family="Arial, sans-serif" font-size="34">
+    TEMP PORTRAIT - MEDIC
+  </text>
+</svg>
+

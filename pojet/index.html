@@ -11,7 +11,7 @@
     <aside id="character-panel" aria-label="캐릭터 패널">
       <header class="panel-header">
         <h1>재의 표식 연대기</h1>
-        <p class="subtitle">Ashmark Chronicle</p>
+        <p class="subtitle">Ashmark Chronicle | 18+ Dark Fantasy Text RPG</p>
       </header>
       <div class="portrait-wrap">
         <div id="portrait" class="portrait mood-neutral">
@@ -66,11 +66,29 @@
         <h2 id="event-title"></h2>
         <p id="event-text"></p>
         <div id="event-meta" class="event-meta"></div>
-        <div id="event-choices" class="choices"></div>
-        <div id="event-timer" class="timer"></div>
+        <div class="event-decision-layout">
+          <div class="event-decision-main">
+            <div id="event-choices" class="choices"></div>
+            <div id="event-timer" class="timer"></div>
+          </div>
+          <aside class="event-decision-side" aria-label="선택 보조 정보">
+            <div id="event-choice-hints" class="choice-hints hidden" aria-live="polite"></div>
+            <div class="event-tools">
+              <button id="report-issue-btn" class="choice-btn choice-info issue-btn" type="button">버그 리포트 복사</button>
+              <span id="report-issue-status" class="report-status" aria-live="polite"></span>
+            </div>
+          </aside>
+        </div>
       </section>
 
-      <section id="log-panel" class="log-panel" aria-live="polite"></section>
+      <section id="log-panel" class="log-panel" aria-live="polite">
+        <div class="story-nav">
+          <button id="story-prev-btn" type="button">이전 장면</button>
+          <strong id="story-page-label">장면 0 / 0</strong>
+          <button id="story-next-btn" type="button">다음 장면</button>
+        </div>
+        <div id="story-stage" class="story-stage"></div>
+      </section>
     </main>
 
     <aside id="info-panel" aria-label="보조 정보 패널">
@@ -94,6 +112,11 @@
       <section class="panel-section">
         <h3>능력치</h3>
         <div id="stats-grid" class="stats-grid"></div>
+      </section>
+
+      <section class="panel-section">
+        <h3>성적 스탯</h3>
+        <div id="sexual-stats-grid" class="stats-grid sexual-stats-grid"></div>
       </section>
 
       <section class="panel-section">
@@ -137,28 +160,46 @@
       </header>
       <div class="creator-layout">
         <div>
-          <label>생성 방식
-            <select id="creation-mode">
-              <option value="precise">정밀 생성</option>
-              <option value="quick">빠른 생성</option>
-              <option value="random">랜덤 생성</option>
-            </select>
-          </label>
+          <div class="creator-segment">
+            <span class="creator-segment-title">난이도</span>
+            <div id="difficulty-group" class="pill-group">
+              <button type="button" class="pill-btn active" data-difficulty="normal">난이도 (최대 스탯 제안 없음)</button>
+              <button type="button" class="pill-btn" data-difficulty="high">난이도 높음 (최대 스탯 제안 있음)</button>
+            </div>
+            <p id="difficulty-note" class="creator-note">난이도: 원하는 빌드로 자유 분배 가능</p>
+          </div>
+          <div class="creator-segment">
+            <span class="creator-segment-title">성별</span>
+            <div id="gender-group" class="pill-group">
+              <button type="button" class="pill-btn active" data-gender="male">남</button>
+              <button type="button" class="pill-btn" data-gender="female">여</button>
+            </div>
+            <p id="gender-note" class="creator-note">남성 선택: 여러 여성 NPC와 만나는 스토리 중심</p>
+          </div>
           <label>이름 <input id="create-name" placeholder="예: 엘린" /></label>
           <label>종족 <select id="create-race"></select></label>
+          <label id="create-beastkind-wrap" class="hidden">수인 유형
+            <select id="create-beastkind">
+              <option value="wolf">늑대</option>
+              <option value="fox">여우</option>
+              <option value="sheep">양</option>
+              <option value="rabbit">토끼</option>
+            </select>
+          </label>
           <label>클래스 <select id="create-class"></select></label>
           <label>배경 <select id="create-background"></select></label>
-          <label>초상 분위기
-            <select id="create-portrait">
-              <option value="scarred">흉터와 결의</option>
-              <option value="solemn">의식의 잔광</option>
-              <option value="wild">거친 숨결</option>
-              <option value="noble">몰락한 품위</option>
+          <label>스토리 시작 라인
+            <select id="create-storyline">
+              <option value="battleworn-veteran">1. 많은 전투와 성행위를 경험하고 감정이 죽어가고 있다 (도심 외곽, 30살 시작)</option>
+              <option value="academy-prodigy">2. 추천으로 들어간 전투 아카데미 1학년 (학교에서 전투/성적 만남이 쉬움, 20살 시작)</option>
+              <option value="mountain-adept">3. 산속 수련자, 남들은 보지 못하는 기운을 본다 (23살 시작)</option>
+              <option value="brothel-fixer">4. 창녀촌 포주로 살아왔다 (성행위 경험/언행 능력 높음, 21살 시작)</option>
+              <option value="thief-crew">5. 도둑 크루 소속, 경험 많고 민첩하며 장난을 잘 친다 (25살 시작)</option>
             </select>
           </label>
         </div>
         <div>
-          <h3>능력치 (표준 배열, 슬라이더 배분)</h3>
+          <h3>능력치 (슬라이더 배분)</h3>
           <div id="ability-allocator"></div>
           <h3>자동화 성향</h3>
           <label>T2 자동 처리 성향

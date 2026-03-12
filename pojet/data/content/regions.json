@@ -1,9 +1,9 @@
 [
   {
     "id": "ashen-frontier",
-    "name": "무명 지역 1",
+    "name": "Ashen Frontier",
     "mood": "survival_gloom",
-    "summary": "오래된 소문이 떠도는 곳이다.",
+    "summary": "Rain-heavy borderland where small choices leave long scars.",
     "dangerTier": 1,
     "traits": [
       "frontier",
@@ -17,9 +17,9 @@
   },
   {
     "id": "gray-harbor",
-    "name": "무명 지역 2",
+    "name": "Gray Harbor",
     "mood": "trade_and_rumor",
-    "summary": "오래된 소문이 떠도는 곳이다.",
+    "summary": "Fog, ledgers, and whispers dominate the dock district.",
     "dangerTier": 2,
     "traits": [
       "market",
@@ -33,9 +33,9 @@
   },
   {
     "id": "stella-hill",
-    "name": "무명 지역 3",
+    "name": "Stella Hill",
     "mood": "sacred_tension",
-    "summary": "오래된 소문이 떠도는 곳이다.",
+    "summary": "Prayers and political bargains share the same hall.",
     "dangerTier": 2,
     "traits": [
       "faith",
@@ -49,9 +49,9 @@
   },
   {
     "id": "glass-lower",
-    "name": "무명 지역 4",
+    "name": "Glass Lower",
     "mood": "arcane_decay",
-    "summary": "오래된 소문이 떠도는 곳이다.",
+    "summary": "Layered vaults and lab corridors under the tower.",
     "dangerTier": 3,
     "traits": [
       "arcane",
@@ -65,9 +65,9 @@
   },
   {
     "id": "ashgate-ruins",
-    "name": "무명 지역 5",
+    "name": "Ashgate Ruins",
     "mood": "corruption_pressure",
-    "summary": "오래된 소문이 떠도는 곳이다.",
+    "summary": "Collapsed gates pulse with old corruption flows.",
     "dangerTier": 4,
     "traits": [
       "ruin",
@@ -81,9 +81,9 @@
   },
   {
     "id": "iron-corridor",
-    "name": "무명 지역 6",
+    "name": "Iron Corridor",
     "mood": "war_politics",
-    "summary": "오래된 소문이 떠도는 곳이다.",
+    "summary": "War command zone where oaths and orders collide.",
     "dangerTier": 5,
     "traits": [
       "siege",
