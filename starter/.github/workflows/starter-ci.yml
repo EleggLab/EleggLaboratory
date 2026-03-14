@@ -1,0 +1,11 @@
+name: starter-ci
+on: [push, pull_request]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify starter
+        run: bash starter/scripts/verify.sh starter
+      - name: Build locales index
+        run: bash starter/scripts/build-locales-index.sh starter

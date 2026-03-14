@@ -30,10 +30,10 @@
 - [x] locale fallback 정책 문서화
 
 ## Phase 5 — 실전 배포형 킷 (v0.5)
-- [ ] 템플릿 선택기 (`starter init --stack ...` 형태)
-- [ ] 웹앱/봇/CLI 3종 스타터 샘플
-- [ ] CI 예시(GitHub Actions) 내장
-- [ ] 릴리즈 태깅/체인지로그 자동화
+- [x] 템플릿 선택기 (`scripts/init.sh`)
+- [x] 웹앱/봇/CLI 3종 스타터 샘플
+- [x] CI 예시(GitHub Actions) 내장
+- [x] 릴리즈 태깅/체인지로그 자동화
 
 ## 우선순위 (즉시 실행)
 1. `bootstrap.sh` / `verify.sh` / `report.sh`

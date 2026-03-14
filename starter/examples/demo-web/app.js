@@ -1,0 +1,1 @@
+document.getElementById('ping').onclick=()=>{document.getElementById('out').textContent='pong '+new Date().toISOString()}
