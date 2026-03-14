@@ -1,19 +1,19 @@
 # Starter Change Report
 
-Generated: 2026-03-14 11:33:25 KST
+Generated: 2026-03-14 11:34:29 KST
 
 ## Git Status
  m samples
  M starter/backlog.md
  M starter/starter-report.md
 ?? research/src/
-?? starter/docs/learning-path.md
-?? starter/prompts/reference/system-prompt-patterns.md
-?? starter/scripts/agent-loop.sh
-?? starter/scripts/mcp-discovery-template.sh
+?? starter/checklists/release-gate-extended.md
+?? starter/docs/patterns/docs-adoption-notes.md
+?? starter/docs/patterns/script-adoption-notes.md
+?? starter/scripts/workflow-templates.md
 
 ## Last Commit
-- 41acf60 Advance continuous research loop with prompt QA assets and backlog progress tooling (OpenClaw Assistant, 68초 전)
+- 3967281 Apply first adoption batch: prompt patterns, ops scripts, and learning path (OpenClaw Assistant, 50초 전)
 ## Key Files
 starter/.github/workflows/starter-ci.yml
 starter/README.md
@@ -23,6 +23,7 @@ starter/changelog/CHANGELOG.md
 starter/checklists/agent-run-checklist.md
 starter/checklists/prompt-quality-checklist.md
 starter/checklists/release-checklist.md
+starter/checklists/release-gate-extended.md
 starter/checklists/research-ingestion-checklist.md
 starter/checklists/security-checklist.md
 starter/common/reference-top1.md
@@ -33,7 +34,9 @@ starter/docs/i18n/locale-fallback-policy.md
 starter/docs/i18n/translation-style-guide.md
 starter/docs/learning-path.md
 starter/docs/patterns/adoption-policy.md
+starter/docs/patterns/docs-adoption-notes.md
 starter/docs/patterns/research-loop-ops.md
+starter/docs/patterns/script-adoption-notes.md
 starter/docs/patterns/top30-synthesis.md
 starter/docs/postmortem.template.md
 starter/examples/demo-bot/README.md
@@ -80,6 +83,7 @@ starter/scripts/research-github.py
 starter/scripts/triage-research-cards.py
 starter/scripts/verify.sh
 starter/scripts/vibe-starter.js
+starter/scripts/workflow-templates.md
 starter/starter-report-node.md
 starter/starter-report.md
 starter/templates/bot/README.md
