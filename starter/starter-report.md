@@ -1,18 +1,18 @@
 # Starter Change Report
 
-Generated: 2026-03-14 11:40:35 KST
+Generated: 2026-03-14 11:41:49 KST
 
 ## Git Status
  m samples
  M starter/backlog.md
  M starter/starter-report.md
 ?? research/src/
-?? starter/checklists/docs-quality-checklist.md
-?? starter/docs/FAQ.md
-?? starter/docs/roles/
+?? starter/prompts/reference/domain-prompt-pack.md
+?? starter/prompts/reference/education-agent-cards.md
+?? starter/scripts/mobile-stack-note.md
 
 ## Last Commit
-- 3ecd376 Apply second adoption batch for scripts/docs and expand release gate assets (OpenClaw Assistant, 6분 전)
+- 44023cb Apply third adoption batch: docs quality assets and role-based onboarding (OpenClaw Assistant, 65초 전)
 ## Key Files
 starter/.github/workflows/starter-ci.yml
 starter/README.md
@@ -65,6 +65,8 @@ starter/locales/ko/README.md
 starter/locales/zh/README.md
 starter/package.json
 starter/prompts/reference/context-engineering-cards.md
+starter/prompts/reference/domain-prompt-pack.md
+starter/prompts/reference/education-agent-cards.md
 starter/prompts/reference/foundation-prompts.md
 starter/prompts/reference/prompt-eval-template.md
 starter/prompts/reference/system-prompt-patterns.md
@@ -78,6 +80,7 @@ starter/scripts/bootstrap.sh
 starter/scripts/build-locales-index.sh
 starter/scripts/init.sh
 starter/scripts/mcp-discovery-template.sh
+starter/scripts/mobile-stack-note.md
 starter/scripts/new-task.sh
 starter/scripts/refresh-research.sh
 starter/scripts/release-tag.sh
