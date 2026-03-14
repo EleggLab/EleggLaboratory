@@ -1,21 +1,20 @@
 # Starter Change Report
 
-Generated: 2026-03-14 11:41:49 KST
+Generated: 2026-03-14 11:47:16 KST
 
 ## Git Status
  m samples
- M starter/backlog.md
+ M starter/changelog/CHANGELOG.md
  M starter/starter-report.md
 ?? research/src/
-?? starter/prompts/reference/domain-prompt-pack.md
-?? starter/prompts/reference/education-agent-cards.md
-?? starter/scripts/mobile-stack-note.md
+?? starter/RELEASE.md
 
 ## Last Commit
-- 44023cb Apply third adoption batch: docs quality assets and role-based onboarding (OpenClaw Assistant, 65초 전)
+- 0ad16da Complete backlog to 100% with final prompt packs and mobile adoption notes (OpenClaw Assistant, 5분 전)
 ## Key Files
 starter/.github/workflows/starter-ci.yml
 starter/README.md
+starter/RELEASE.md
 starter/ROADMAP.md
 starter/backlog.md
 starter/changelog/CHANGELOG.md
