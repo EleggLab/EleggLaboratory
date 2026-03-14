@@ -8,6 +8,7 @@
 - `scripts/` : 리서치/스캐폴딩 보조 스크립트
 - `examples/` : 요청 템플릿
 - `locales/` : ko/en/ja/zh 언어별 가이드
+- `docs/` : PRD/ADR/Postmortem 템플릿
 
 ## Quick Start
 1. `prompts/system.base.md`를 복사해 프로젝트 목표 반영
