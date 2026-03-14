@@ -41,7 +41,7 @@ vibe-starter report ./starter-report.md
 
 ## 스크립트
 - `scripts/bootstrap.sh <name> [target_dir]` : 새 프로젝트 골격 생성
-- `scripts/init.sh <webapp|bot|cli> <name> [target_dir]` : 스택 기반 스타터 생성
+- `scripts/init.sh <webapp|bot|cli|mobile> <name> [target_dir]` : 스택 기반 스타터 생성
 - `scripts/verify.sh [root_dir]` : starter 구조 검증
 - `scripts/report.sh [output.md]` : 변경 요약 리포트 생성
 - `scripts/build-locales-index.sh [root_dir]` : locale 인덱스 README 자동 생성
@@ -52,6 +52,7 @@ vibe-starter report ./starter-report.md
 - `templates/webapp`
 - `templates/bot`
 - `templates/cli`
+- `templates/mobile` (flutter create 기반)
 
 ## i18n 문서
 - `docs/i18n/translation-style-guide.md`
@@ -64,7 +65,7 @@ vibe-starter report ./starter-report.md
 - `scripts/triage-research-cards.py` : 카드→starter 반영 후보 자동 분류
 - `scripts/apply-adoption-batch.py` : 반영 백로그 자동 생성 (`starter/backlog.md`)
 - `scripts/backlog-progress.py` : backlog 진행률 계산
-- `scripts/refresh-research.sh` : 수집→분류→백로그→리포트 원클릭 실행
+- `scripts/refresh-research.sh` : 수집→분류→백로그→리포트 원클릭 실행 (`--dry-run --retry N --log-level info|debug`)
 - `scripts/agent-loop.sh` : plan→act→verify→report 루프 실행 템플릿
 - `scripts/mcp-discovery-template.sh` : MCP 후보 조사 노트 자동 생성
 - `scripts/mobile-stack-note.md` : 모바일(iOS 계열) 흡수 포인트 노트

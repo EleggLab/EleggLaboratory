@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = path.resolve(__dirname, '..');
 const args = process.argv.slice(2);
 
 function usage() {
-  console.log(`vibe-starter usage:\n\n  vibe-starter init <webapp|bot|cli> <name> [targetDir]\n  vibe-starter verify [rootDir]\n  vibe-starter report [outputFile]\n`);
+  console.log(`vibe-starter usage:\n\n  vibe-starter init <webapp|bot|cli|mobile> <name> [targetDir]\n  vibe-starter verify [rootDir]\n  vibe-starter report [outputFile]\n`);
 }
 
 function copyDir(src, dest) {
@@ -39,13 +40,22 @@ function replaceProjectName(dir, name) {
 }
 
 function init(stack, name, targetDir) {
-  const allowed = new Set(['webapp', 'bot', 'cli']);
+  const allowed = new Set(['webapp', 'bot', 'cli', 'mobile']);
   if (!allowed.has(stack)) {
     console.error(`unknown stack: ${stack}`);
     process.exit(1);
   }
-  const src = path.join(root, 'templates', stack);
   const dest = path.resolve(targetDir || path.join(process.cwd(), name));
+
+  if (stack === 'mobile') {
+    const projectName = name.replace(/-/g, '_').replace(/[^a-zA-Z0-9_]/g, '');
+    const r = spawnSync('flutter', ['create', dest, '--project-name', projectName], { stdio: 'inherit' });
+    if (r.status !== 0) process.exit(r.status || 1);
+    console.log(`initialized: ${dest} (stack=mobile)`);
+    return;
+  }
+
+  const src = path.join(root, 'templates', stack);
   copyDir(src, dest);
   replaceProjectName(dest, name);
   console.log(`initialized: ${dest} (stack=${stack})`);

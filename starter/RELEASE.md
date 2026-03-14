@@ -25,6 +25,14 @@ bash scripts/verify.sh starter
 bash scripts/report.sh starter/starter-report.md
 ```
 
+## v1.1 Delivered
+- mobile stack + flutter 기반 초기화
+- refresh-research 옵션(`--dry-run --retry --log-level`)
+- 테스트 APK 빌드/산출물 생성 완료
+
+## Build Artifact
+- `starter/releases/v1.1-test/vibe-demo-app-release.apk`
+- SHA256: `650610cac1a028ad08643d80e319ce2dd4937ac61cb5022e0dd3fc9a9096cb04`
+
 ## Next
-- v1.1: mobile template + dry-run/retry/log-level 옵션
 - v1.2: scheduled research run + auto PR draft generation
