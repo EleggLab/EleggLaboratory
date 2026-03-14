@@ -37,13 +37,13 @@
   - action: 패턴 추출 → 템플릿화 → 검증
 
 ## SCRIPTS
-- [ ] (5) punkpeye/awesome-mcp-servers
+- [x] (5) punkpeye/awesome-mcp-servers
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
 - [ ] (5) mlabonne/llm-course
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (5) enescingoz/awesome-n8n-templates
+- [x] (5) enescingoz/awesome-n8n-templates
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
 - [ ] (5) enaqx/awesome-pentest
@@ -52,7 +52,7 @@
 - [ ] (5) activepieces/activepieces
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (4) wshobson/agents
+- [x] (4) wshobson/agents
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
 - [ ] (4) vuejs/awesome-vue
@@ -61,7 +61,7 @@
 - [ ] (4) vsouza/awesome-ios
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (4) vinta/awesome-python
+- [x] (4) vinta/awesome-python
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
 - [ ] (4) veggiemonk/awesome-docker
@@ -71,9 +71,9 @@
 ## CHECKLISTS
 
 ## DOCS
-- [ ] (3) prakhar1989/awesome-courses
+- [x] (3) prakhar1989/awesome-courses
   - target: `starter/docs/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (3) aishwaryanr/awesome-generative-ai-guide
+- [x] (3) aishwaryanr/awesome-generative-ai-guide
   - target: `starter/docs/`
   - action: 패턴 추출 → 템플릿화 → 검증
