@@ -53,3 +53,8 @@ vibe-starter report ./starter-report.md
 - `docs/i18n/translation-style-guide.md`
 - `docs/i18n/glossary.md`
 - `docs/i18n/locale-fallback-policy.md`
+
+## 리서치 자동화
+- `scripts/research-github.py` : 광범위 GitHub 1차 수집 + 카드 생성
+- `scripts/research-github-deep.py` : 샤딩 기반 반복 수집(coverage 확장)
+- 결과 위치: `research/github-wide/`

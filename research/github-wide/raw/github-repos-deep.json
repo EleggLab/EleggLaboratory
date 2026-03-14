@@ -1,0 +1,4391 @@
+[
+  {
+    "full_name": "sindresorhus/awesome",
+    "url": "https://github.com/sindresorhus/awesome",
+    "description": "😎 Awesome lists about all kinds of interesting topics",
+    "stars": 445278,
+    "language": "-",
+    "updated_at": "2026-03-14T02:08:23Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "public-apis/public-apis",
+    "url": "https://github.com/public-apis/public-apis",
+    "description": "A collective list of free APIs",
+    "stars": 409522,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:13:13Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "kamranahmedse/developer-roadmap",
+    "url": "https://github.com/kamranahmedse/developer-roadmap",
+    "description": "Interactive roadmaps, guides and other educational content to help developers grow in their careers.",
+    "stars": 350853,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:52:59Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "openclaw/openclaw",
+    "url": "https://github.com/openclaw/openclaw",
+    "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞",
+    "stars": 310873,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:13:45Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "vinta/awesome-python",
+    "url": "https://github.com/vinta/awesome-python",
+    "description": "An opinionated list of awesome Python frameworks, libraries, software and resources.",
+    "stars": 286998,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:01:00Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "awesome-selfhosted/awesome-selfhosted",
+    "url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+    "description": "A list of Free Software network services and web applications which can be hosted on your own servers",
+    "stars": 279776,
+    "language": "-",
+    "updated_at": "2026-03-14T01:59:19Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "trimstray/the-book-of-secret-knowledge",
+    "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+    "description": "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.",
+    "stars": 209909,
+    "language": "-",
+    "updated_at": "2026-03-14T01:59:24Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Significant-Gravitas/AutoGPT",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT",
+    "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+    "stars": 182442,
+    "language": "Python",
+    "updated_at": "2026-03-14T00:15:07Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "n8n-io/n8n",
+    "url": "https://github.com/n8n-io/n8n",
+    "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+    "stars": 179012,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:52:45Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "avelino/awesome-go",
+    "url": "https://github.com/avelino/awesome-go",
+    "description": "A curated list of awesome Go frameworks, libraries and software",
+    "stars": 167293,
+    "language": "Go",
+    "updated_at": "2026-03-14T01:55:11Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ollama/ollama",
+    "url": "https://github.com/ollama/ollama",
+    "description": "Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+    "stars": 164982,
+    "language": "Go",
+    "updated_at": "2026-03-14T02:02:06Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "f/prompts.chat",
+    "url": "https://github.com/f/prompts.chat",
+    "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
+    "stars": 152187,
+    "language": "HTML",
+    "updated_at": "2026-03-14T02:12:27Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "langflow-ai/langflow",
+    "url": "https://github.com/langflow-ai/langflow",
+    "description": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows.",
+    "stars": 145625,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:23:45Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "langgenius/dify",
+    "url": "https://github.com/langgenius/dify",
+    "description": "Production-ready platform for agentic workflow development.",
+    "stars": 132703,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:08:24Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "x1xhlol/system-prompts-and-models-of-ai-tools",
+    "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+    "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
+    "stars": 130791,
+    "language": "-",
+    "updated_at": "2026-03-14T02:13:18Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "langchain-ai/langchain",
+    "url": "https://github.com/langchain-ai/langchain",
+    "description": "The agent engineering platform",
+    "stars": 129374,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:05:25Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "open-webui/open-webui",
+    "url": "https://github.com/open-webui/open-webui",
+    "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+    "stars": 127080,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:08:55Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "krahets/hello-algo",
+    "url": "https://github.com/krahets/hello-algo",
+    "description": "《Hello 算法》：动画图解、一键运行的数据结构与算法教程。支持简中、繁中、English、日本語，提供 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart 等代码实现",
+    "stars": 123206,
+    "language": "Java",
+    "updated_at": "2026-03-14T02:03:24Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "anomalyco/opencode",
+    "url": "https://github.com/anomalyco/opencode",
+    "description": "The open source coding agent.",
+    "stars": 121719,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:13:10Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ripienaar/free-for-dev",
+    "url": "https://github.com/ripienaar/free-for-dev",
+    "description": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev",
+    "stars": 119899,
+    "language": "HTML",
+    "updated_at": "2026-03-14T01:37:31Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "microsoft/generative-ai-for-beginners",
+    "url": "https://github.com/microsoft/generative-ai-for-beginners",
+    "description": "21 Lessons, Get Started Building with Generative AI",
+    "stars": 107945,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-14T01:39:23Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Shubhamsaboo/awesome-llm-apps",
+    "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+    "description": "Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource models.",
+    "stars": 101988,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:13:27Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "jaywcjlove/awesome-mac",
+    "url": "https://github.com/jaywcjlove/awesome-mac",
+    "description": " Now we have become very big, Different from the original idea. Collect premium software in various categories.",
+    "stars": 100127,
+    "language": "JavaScript",
+    "updated_at": "2026-03-14T02:05:02Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ggml-org/llama.cpp",
+    "url": "https://github.com/ggml-org/llama.cpp",
+    "description": "LLM inference in C/C++",
+    "stars": 97845,
+    "language": "C++",
+    "updated_at": "2026-03-14T02:09:09Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "google-gemini/gemini-cli",
+    "url": "https://github.com/google-gemini/gemini-cli",
+    "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+    "stars": 97610,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:11:43Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "microsoft/Web-Dev-For-Beginners",
+    "url": "https://github.com/microsoft/Web-Dev-For-Beginners",
+    "description": "24 Lessons, 12 Weeks, Get Started as a Web Developer",
+    "stars": 95418,
+    "language": "JavaScript",
+    "updated_at": "2026-03-14T01:54:25Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "anthropics/skills",
+    "url": "https://github.com/anthropics/skills",
+    "description": "Public repository for Agent Skills",
+    "stars": 92876,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:12:37Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "firecrawl/firecrawl",
+    "url": "https://github.com/firecrawl/firecrawl",
+    "description": "🔥 The Web Data API for AI - Turn entire websites into LLM-ready markdown or structured data",
+    "stars": 92637,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:11:25Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "microsoft/ML-For-Beginners",
+    "url": "https://github.com/microsoft/ML-For-Beginners",
+    "description": "12 weeks, 26 lessons, 52 quizzes, classic Machine Learning for all",
+    "stars": 84337,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-14T02:07:57Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "punkpeye/awesome-mcp-servers",
+    "url": "https://github.com/punkpeye/awesome-mcp-servers",
+    "description": "A collection of MCP servers.",
+    "stars": 83023,
+    "language": "-",
+    "updated_at": "2026-03-14T01:45:31Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "modelcontextprotocol/servers",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "description": "Model Context Protocol Servers",
+    "stars": 81026,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:11:40Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "browser-use/browser-use",
+    "url": "https://github.com/browser-use/browser-use",
+    "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
+    "stars": 80693,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:40:33Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ByteByteGoHq/system-design-101",
+    "url": "https://github.com/ByteByteGoHq/system-design-101",
+    "description": "Explain complex systems using visuals and simple terms. Help you prepare for system design interviews.",
+    "stars": 80497,
+    "language": "-",
+    "updated_at": "2026-03-14T01:25:46Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "fighting41love/funNLP",
+    "url": "https://github.com/fighting41love/funNLP",
+    "description": "中英文敏感词、语言检测、中外手机/电话归属地/运营商查询、名字推断性别、手机号抽取、身份证抽取、邮箱抽取、中日文人名库、中文缩写库、拆字词典、词汇情感值、停用词、反动词表、暴恐词表、繁简体转换、英文模拟中文发音、汪峰歌词生成器、职业名称词库、同义词库、反义词库、否定词库、汽车品牌词库、汽车零件词库、连续英文切割、各种中文词向量、公司名字大全、古诗词库、IT词库、财经词库、成语词库、地名词库、历史名人词库、诗词词库、医学词库、饮食词库、法律词库、汽车词库、动物词库、中文聊天语料、中文谣言数据、百度中文问答数据集、句子相似度匹配算法集合、bert资源、文本生成&摘要相关工具、cocoNLP信息抽取工具、国内电话号码正则匹配、清华大学XLORE:中英文跨语言百科知识图谱、清华大学人工智能技术系列报告、自然语言生成、NLU太难了系列、自动对联数据及机器人、用户名黑名单列表、罪名法务名词及分类模型、微信公众号语料、cs224n深度学习自然语言处理课程、中文手写汉字识别、中文自然语言处理 语料/数据集、变量命名神器、分词语料库+代码、任务型对话英文数据集、ASR 语音数据集 + 基于深度学习的中文语音识别系统、笑声检测器、Microsoft多语言数字/单位/如日期时间识别包、中华新华字典数据库及api(包括常用歇后语、成语、词语和汉字)、文档图谱自动生成、SpaCy 中文模型、Common Voice语音识别数据集新版、神经网络关系抽取、基于bert的命名实体识别、关键词(Keyphrase)抽取包pke、基于医疗领域知识图谱的问答系统、基于依存句法与语义角色标注的事件三元组抽取、依存句法分析4万句高质量标注数据、cnocr：用来做中文OCR的Python3包、中文人物关系知识图谱项目、中文nlp竞赛项目及代码汇总、中文字符数据、speech-aligner: 从“人声语音”及其“语言文本”产生音素级别时间对齐标注的工具、AmpliGraph: 知识图谱表示学习(Python)库：知识图谱概念链接预测、Scattertext 文本可视化(python)、语言/知识表示工具：BERT & ERNIE、中文对比英文自然语言处理NLP的区别综述、Synonyms中文近义词工具包、HarvestText领域自适应文本挖掘工具（新词发现-情感分析-实体链接等）、word2word：(Python)方便易用的多语言词-词对集：62种语言/3,564个多语言对、语音识别语料生成工具：从具有音频/字幕的在线视频创建自动语音识别(ASR)语料库、构建医疗实体识别的模型（包含词典和语料标注）、单文档非监督的关键词抽取、Kashgari中使用gpt-2语言模型、开源的金融投资数据提取工具、文本自动摘要库TextTeaser: 仅支持英文、人民日报语料处理工具集、一些关于自然语言的基本模型、基于14W歌曲知识库的问答尝试--功能包括歌词接龙and已知歌词找歌曲以及歌曲歌手歌词三角关系的问答、基于Siamese bilstm模型的相似句子判定模型并提供训练数据集和测试数据集、用Transformer编解码模型实现的根据Hacker News文章标题自动生成评论、用BERT进行序列标记和文本分类的模板代码、LitBank：NLP数据集——支持自然语言处理和计算人文学科任务的100部带标记英文小说语料、百度开源的基准信息抽取系统、虚假新闻数据集、Facebook: LAMA语言模型分析，提供Transformer-XL/BERT/ELMo/GPT预训练语言模型的统一访问接口、CommonsenseQA：面向常识的英文QA挑战、中文知识图谱资料、数据及工具、各大公司内部里大牛分享的技术文档 PDF 或者 PPT、自然语言生成SQL语句（英文）、中文NLP数据增强（EDA）工具、英文NLP数据增强工具 、基于医药知识图谱的智能问答系统、京东商品知识图谱、基于mongodb存储的军事领域知识图谱问答项目、基于远监督的中文关系抽取、语音情感分析、中文ULMFiT-情感分析-文本分类-语料及模型、一个拍照做题程序、世界各国大规模人名库、一个利用有趣中文语料库 qingyun 训练出来的中文聊天机器人、中文聊天机器人seqGAN、省市区镇行政区划数据带拼音标注、教育行业新闻语料库包含自动文摘功能、开放了对话机器人-知识图谱-语义理解-自然语言处理工具及数据、中文知识图谱：基于百度百科中文页面-抽取三元组信息-构建中文知识图谱、masr: 中文语音识别-提供预训练模型-高识别率、Python音频数据增广库、中文全词覆盖BERT及两份阅读理解数据、ConvLab：开源多域端到端对话系统平台、中文自然语言处理数据集、基于最新版本rasa搭建的对话系统、基于TensorFlow和BERT的管道式实体及关系抽取、一个小型的证券知识图谱/知识库、复盘所有NLP比赛的TOP方案、OpenCLaP：多领域开源中文预训练语言模型仓库、UER：基于不同语料+编码器+目标任务的中文预训练模型仓库、中文自然语言处理向量合集、基于金融-司法领域(兼有闲聊性质)的聊天机器人、g2pC：基于上下文的汉语读音自动标记模块、Zincbase 知识图谱构建工具包、诗歌质量评价/细粒度情感诗歌语料库、快速转化「中文数字」和「阿拉伯数字」、百度知道问答语料库、基于知识图谱的问答系统、jieba_fast 加速版的jieba、正则表达式教程、中文阅读理解数据集、基于BERT等最新语言模型的抽取式摘要提取、Python利用深度学习进行文本摘要的综合指南、知识图谱深度学习相关资料整理、维基大规模平行文本语料、StanfordNLP 0.2.0：纯Python版自然语言处理包、NeuralNLP-NeuralClassifier：腾讯开源深度学习文本分类工具、端到端的封闭域对话系统、中文命名实体识别：NeuroNER vs. BertNER、新闻事件线索抽取、2019年百度的三元组抽取比赛：“科学空间队”源码、基于依存句法的开放域文本知识三元组抽取和知识库构建、中文的GPT2训练代码、ML-NLP - 机器学习(Machine Learning)NLP面试中常考到的知识点和代码实现、nlp4han:中文自然语言处理工具集(断句/分词/词性标注/组块/句法分析/语义分析/NER/N元语法/HMM/代词消解/情感分析/拼写检查、XLM：Facebook的跨语言预训练语言模型、用基于BERT的微调和特征提取方法来进行知识图谱百度百科人物词条属性抽取、中文自然语言处理相关的开放任务-数据集-当前最佳结果、CoupletAI - 基于CNN+Bi-LSTM+Attention 的自动对对联系统、抽象知识图谱、MiningZhiDaoQACorpus - 580万百度知道问答数据挖掘项目、brat rapid annotation tool: 序列标注工具、大规模中文知识图谱数据：1.4亿实体、数据增强在机器翻译及其他nlp任务中的应用及效果、allennlp阅读理解:支持多种数据和模型、PDF表格数据提取工具 、 Graphbrain：AI开源软件库和科研工具，目的是促进自动意义提取和文本理解以及知识的探索和推断、简历自动筛选系统、基于命名实体识别的简历自动摘要、中文语言理解测评基准，包括代表性的数据集&基准模型&语料库&排行榜、树洞 OCR 文字识别 、从包含表格的扫描图片中识别表格和文字、语声迁移、Python口语自然语言处理工具集(英文)、 similarity：相似度计算工具包，java编写、海量中文预训练ALBERT模型 、Transformers 2.0 、基于大规模音频数据集Audioset的音频增强 、Poplar：网页版自然语言标注工具、图片文字去除，可用于漫画翻译 、186种语言的数字叫法库、Amazon发布基于知识的人-人开放领域对话数据集 、中文文本纠错模块代码、繁简体转换 、 Python实现的多种文本可读性评价指标、类似于人名/地名/组织机构名的命名体识别数据集 、东南大学《知识图谱》研究生课程(资料)、. 英文拼写检查库 、 wwsearch是企业微信后台自研的全文检索引擎、CHAMELEON：深度学习新闻推荐系统元架构 、 8篇论文梳理BERT相关模型进展与反思、DocSearch：免费文档搜索引擎、 LIDA：轻量交互式对话标注工具 、aili - the fastest in-memory index in the East 东半球最快并发索引 、知识图谱车音工作项目、自然语言生成资源大全 、中日韩分词库mecab的Python接口库、中文文本摘要/关键词提取、汉字字符特征提取器 (featurizer)，提取汉字的特征（发音特征、字形特征）用做深度学习的特征、中文生成任务基准测评 、中文缩写数据集、中文任务基准测评 - 代表性的数据集-基准(预训练)模型-语料库-baseline-工具包-排行榜、PySS3：面向可解释AI的SS3文本分类器机器可视化工具 、中文NLP数据集列表、COPE - 格律诗编辑程序、doccano：基于网页的开源协同多语言文本标注工具 、PreNLP：自然语言预处理库、简单的简历解析器，用来从简历中提取关键信息、用于中文闲聊的GPT2模型：GPT2-chitchat、基于检索聊天机器人多轮响应选择相关资源列表(Leaderboards、Datasets、Papers)、(Colab)抽象文本摘要实现集锦(教程 、词语拼音数据、高效模糊搜索工具、NLP数据增广资源集、微软对话机器人框架 、 GitHub Typo Corpus：大规模GitHub多语言拼写错误/语法错误数据集、TextCluster：短文本聚类预处理模块 Short text cluster、面向语音识别的中文文本规范化、BLINK：最先进的实体链接库、BertPunc：基于BERT的最先进标点修复模型、Tokenizer：快速、可定制的文本词条化库、中文语言理解测评基准，包括代表性的数据集、基准(预训练)模型、语料库、排行榜、spaCy 医学文本挖掘与信息提取 、 NLP任务示例项目代码集、 python拼写检查库、chatbot-list - 行业内关于智能客服、聊天机器人的应用和架构、算法分享和介绍、语音质量评价指标(MOSNet, BSSEval, STOI, PESQ, SRMR)、 用138GB语料训练的法文RoBERTa预训练语言模型 、BERT-NER-Pytorch：三种不同模式的BERT中文NER实验、无道词典 - 有道词典的命令行版本，支持英汉互查和在线查询、2019年NLP亮点回顾、 Chinese medical dialogue data 中文医疗对话数据集 、最好的汉字数字(中文数字)-阿拉伯数字转换工具、 基于百科知识库的中文词语多词义/义项获取与特定句子词语语义消歧、awesome-nlp-sentiment-analysis - 情感分析、情绪原因识别、评价对象和评价词抽取、LineFlow：面向所有深度学习框架的NLP数据高效加载器、中文医学NLP公开资源整理 、MedQuAD：(英文)医学问答数据集、将自然语言数字串解析转换为整数和浮点数、Transfer Learning in Natural Language Processing (NLP) 、面向语音识别的中文/英文发音辞典、Tokenizers：注重性能与多功能性的最先进分词器、CLUENER 细粒度命名实体识别 Fine Grained Named Entity Recognition、 基于BERT的中文命名实体识别、中文谣言数据库、NLP数据集/基准任务大列表、nlp相关的一些论文及代码, 包括主题模型、词向量(Word Embedding)、命名实体识别(NER)、文本分类(Text Classificatin)、文本生成(Text Generation)、文本相似性(Text Similarity)计算等，涉及到各种与nlp相关的算法，基于keras和tensorflow 、Python文本挖掘/NLP实战示例、 Blackstone：面向非结构化法律文本的spaCy pipeline和NLP模型通过同义词替换实现文本“变脸” 、中文 预训练 ELECTREA 模型: 基于对抗学习 pretrain Chinese Model 、albert-chinese-ner - 用预训练语言模型ALBERT做中文NER 、基于GPT2的特定主题文本生成/文本增广、开源预训练语言模型合集、多语言句向量包、编码、标记和实现：一种可控高效的文本生成方法、 英文脏话大列表 、attnvis：GPT2、BERT等transformer语言模型注意力交互可视化、CoVoST：Facebook发布的多语种语音-文本翻译语料库，包括11种语言(法语、德语、荷兰语、俄语、西班牙语、意大利语、土耳其语、波斯语、瑞典语、蒙古语和中文)的语音、文字转录及英文译文、Jiagu自然语言处理工具 - 以BiLSTM等模型为基础，提供知识图谱关系抽取 中文分词 词性标注 命名实体识别 情感分析 新词发现 关键词 文本摘要 文本聚类等功能、用unet实现对文档表格的自动检测，表格重建、NLP事件提取文献资源列表 、 金融领域自然语言处理研究资源大列表、CLUEDatasetSearch - 中英文NLP数据集：搜索所有中文NLP数据集，附常用英文NLP数据集 、medical_NER - 中文医学知识图谱命名实体识别 、(哈佛)讲因果推理的免费书、知识图谱相关学习资料/数据集/工具资源大列表、Forte：灵活强大的自然语言处理pipeline工具集 、Python字符串相似性算法库、PyLaia：面向手写文档分析的深度学习工具包、TextFooler：针对文本分类/推理的对抗文本生成模块、Haystack：灵活、强大的可扩展问答(QA)框架、中文关键短语抽取工具",
+    "stars": 79373,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:01:54Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "netdata/netdata",
+    "url": "https://github.com/netdata/netdata",
+    "description": "The fastest path to AI-powered full stack observability, even for lean teams.",
+    "stars": 78055,
+    "language": "C",
+    "updated_at": "2026-03-14T00:20:02Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "anthropics/claude-code",
+    "url": "https://github.com/anthropics/claude-code",
+    "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+    "stars": 77645,
+    "language": "Shell",
+    "updated_at": "2026-03-14T02:13:00Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Developer-Y/cs-video-courses",
+    "url": "https://github.com/Developer-Y/cs-video-courses",
+    "description": "List of Computer Science courses with video lectures.",
+    "stars": 77073,
+    "language": "-",
+    "updated_at": "2026-03-14T00:25:15Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "mlabonne/llm-course",
+    "url": "https://github.com/mlabonne/llm-course",
+    "description": "Course to get into Large Language Models (LLMs) with roadmaps and Colab notebooks.",
+    "stars": 76621,
+    "language": "-",
+    "updated_at": "2026-03-14T02:08:10Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "github/spec-kit",
+    "url": "https://github.com/github/spec-kit",
+    "description": "💫 Toolkit to help you get started with Spec-Driven Development",
+    "stars": 76583,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:12:34Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "sdmg15/Best-websites-a-programmer-should-visit",
+    "url": "https://github.com/sdmg15/Best-websites-a-programmer-should-visit",
+    "description": ":link: Some useful websites for programmers.",
+    "stars": 75841,
+    "language": "-",
+    "updated_at": "2026-03-14T00:33:43Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "infiniflow/ragflow",
+    "url": "https://github.com/infiniflow/ragflow",
+    "description": "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
+    "stars": 74956,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:10:26Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "affaan-m/everything-claude-code",
+    "url": "https://github.com/affaan-m/everything-claude-code",
+    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "stars": 74886,
+    "language": "JavaScript",
+    "updated_at": "2026-03-14T02:12:33Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "vuejs/awesome-vue",
+    "url": "https://github.com/vuejs/awesome-vue",
+    "description": "🎉 A curated list of awesome things related to Vue.js",
+    "stars": 73628,
+    "language": "-",
+    "updated_at": "2026-03-13T20:23:04Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "lobehub/lobehub",
+    "url": "https://github.com/lobehub/lobehub",
+    "description": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+    "stars": 73594,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:08:04Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "PaddlePaddle/PaddleOCR",
+    "url": "https://github.com/PaddlePaddle/PaddleOCR",
+    "description": "Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.",
+    "stars": 72208,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:08:46Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "josephmisiti/awesome-machine-learning",
+    "url": "https://github.com/josephmisiti/awesome-machine-learning",
+    "description": "A curated list of awesome Machine Learning frameworks, libraries and software.",
+    "stars": 71958,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:14:57Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "dair-ai/Prompt-Engineering-Guide",
+    "url": "https://github.com/dair-ai/Prompt-Engineering-Guide",
+    "description": "🐙 Guides, papers, lessons, notebooks and resources for prompt engineering, context engineering, RAG, and AI Agents.",
+    "stars": 71560,
+    "language": "MDX",
+    "updated_at": "2026-03-14T01:49:34Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "caddyserver/caddy",
+    "url": "https://github.com/caddyserver/caddy",
+    "description": "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
+    "stars": 70772,
+    "language": "Go",
+    "updated_at": "2026-03-14T00:48:04Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Eugeny/tabby",
+    "url": "https://github.com/Eugeny/tabby",
+    "description": "A terminal for a more modern age",
+    "stars": 69510,
+    "language": "TypeScript",
+    "updated_at": "2026-03-13T22:35:19Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "danielmiessler/SecLists",
+    "url": "https://github.com/danielmiessler/SecLists",
+    "description": "SecLists is the security tester's companion. It's a collection of multiple types of lists used during security assessments, collected in one place. List types include usernames, passwords, URLs, sensitive data patterns, fuzzing payloads, web shells, and many more.",
+    "stars": 69445,
+    "language": "PHP",
+    "updated_at": "2026-03-14T01:21:47Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "OpenHands/OpenHands",
+    "url": "https://github.com/OpenHands/OpenHands",
+    "description": "🙌 OpenHands: AI-Driven Development",
+    "stars": 69079,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:10:29Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "hiyouga/LlamaFactory",
+    "url": "https://github.com/hiyouga/LlamaFactory",
+    "description": "Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024)",
+    "stars": 68376,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:54:00Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "prakhar1989/awesome-courses",
+    "url": "https://github.com/prakhar1989/awesome-courses",
+    "description": ":books: List of awesome university courses for learning Computer Science!",
+    "stars": 67009,
+    "language": "-",
+    "updated_at": "2026-03-14T01:16:10Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "sindresorhus/awesome-nodejs",
+    "url": "https://github.com/sindresorhus/awesome-nodejs",
+    "description": ":zap: Delightful Node.js packages and resources",
+    "stars": 65285,
+    "language": "-",
+    "updated_at": "2026-03-13T23:36:15Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "FoundationAgents/MetaGPT",
+    "url": "https://github.com/FoundationAgents/MetaGPT",
+    "description": "🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming",
+    "stars": 65108,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:11:32Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "unclecode/crawl4ai",
+    "url": "https://github.com/unclecode/crawl4ai",
+    "description": "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here: https://discord.gg/jP8KfhDhyN",
+    "stars": 61912,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:31:38Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "commaai/openpilot",
+    "url": "https://github.com/commaai/openpilot",
+    "description": "openpilot is an operating system for robotics. Currently, it upgrades the driver assistance system on 300+ supported cars.",
+    "stars": 60304,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:43:36Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "pathwaycom/pathway",
+    "url": "https://github.com/pathwaycom/pathway",
+    "description": "Python ETL framework for stream processing, real-time analytics, LLM pipelines, and RAG.",
+    "stars": 59403,
+    "language": "Python",
+    "updated_at": "2026-03-13T20:53:27Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "meta-llama/llama",
+    "url": "https://github.com/meta-llama/llama",
+    "description": "Inference code for Llama models",
+    "stars": 59216,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:36:29Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "cline/cline",
+    "url": "https://github.com/cline/cline",
+    "description": "Autonomous coding agent right in your IDE, capable of creating/editing files, executing commands, using the browser, and more with your permission every step of the way.",
+    "stars": 58955,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:10:05Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Mintplex-Labs/anything-llm",
+    "url": "https://github.com/Mintplex-Labs/anything-llm",
+    "description": "The all-in-one AI productivity accelerator. On device and privacy first with no annoying setup or configration.",
+    "stars": 56182,
+    "language": "JavaScript",
+    "updated_at": "2026-03-14T01:58:19Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "rust-unofficial/awesome-rust",
+    "url": "https://github.com/rust-unofficial/awesome-rust",
+    "description": "A curated list of Rust code and resources.",
+    "stars": 56141,
+    "language": "Rust",
+    "updated_at": "2026-03-14T02:10:04Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "opendatalab/MinerU",
+    "url": "https://github.com/opendatalab/MinerU",
+    "description": "Transforms complex documents like PDFs into LLM-ready markdown/JSON for your Agentic workflows.",
+    "stars": 56123,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:11:19Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "docling-project/docling",
+    "url": "https://github.com/docling-project/docling",
+    "description": "Get your documents ready for gen AI",
+    "stars": 55752,
+    "language": "Python",
+    "updated_at": "2026-03-14T00:32:18Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "microsoft/autogen",
+    "url": "https://github.com/microsoft/autogen",
+    "description": "A programming framework for agentic AI",
+    "stars": 55578,
+    "language": "Python",
+    "updated_at": "2026-03-14T00:42:30Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "AntonOsika/gpt-engineer",
+    "url": "https://github.com/AntonOsika/gpt-engineer",
+    "description": "CLI platform to experiment with codegen. Precursor to: https://lovable.dev",
+    "stars": 55220,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:21:26Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "FoundationAgents/OpenManus",
+    "url": "https://github.com/FoundationAgents/OpenManus",
+    "description": "No fortress, purely open ground.  OpenManus is Coming.",
+    "stars": 55214,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:16:23Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "microsoft/ai-agents-for-beginners",
+    "url": "https://github.com/microsoft/ai-agents-for-beginners",
+    "description": "12 Lessons to Get Started Building AI Agents",
+    "stars": 53916,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-14T02:05:28Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Zie619/n8n-workflows",
+    "url": "https://github.com/Zie619/n8n-workflows",
+    "description": "all of the workflows of n8n i could find (also from the site itself)",
+    "stars": 52882,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:51:44Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "termux/termux-app",
+    "url": "https://github.com/termux/termux-app",
+    "description": "Termux - a terminal emulator application for Android OS extendible by variety of packages.",
+    "stars": 51906,
+    "language": "Java",
+    "updated_at": "2026-03-14T01:56:38Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "vsouza/awesome-ios",
+    "url": "https://github.com/vsouza/awesome-ios",
+    "description": "A curated list of awesome iOS ecosystem, including Objective-C and Swift Projects",
+    "stars": 51523,
+    "language": "Swift",
+    "updated_at": "2026-03-14T02:07:19Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "FlowiseAI/Flowise",
+    "url": "https://github.com/FlowiseAI/Flowise",
+    "description": "Build AI Agents, Visually",
+    "stars": 50705,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:34:44Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "charlax/professional-programming",
+    "url": "https://github.com/charlax/professional-programming",
+    "description": "A collection of learning resources for curious software engineers",
+    "stars": 50659,
+    "language": "Python",
+    "updated_at": "2026-03-13T22:44:08Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "upstash/context7",
+    "url": "https://github.com/upstash/context7",
+    "description": "Context7 Platform -- Up-to-date code documentation for LLMs and AI code editors",
+    "stars": 48941,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:05:56Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "sansan0/TrendRadar",
+    "url": "https://github.com/sansan0/TrendRadar",
+    "description": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架构，赋能 AI 自然语言对话分析、情感洞察与趋势预测等。支持 Docker ，数据本地/云端自持。集成微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 等渠道智能推送。",
+    "stars": 48862,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:03:25Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "x64dbg/x64dbg",
+    "url": "https://github.com/x64dbg/x64dbg",
+    "description": "An open-source user mode debugger for Windows. Optimized for reverse engineering and malware analysis.",
+    "stars": 47885,
+    "language": "C++",
+    "updated_at": "2026-03-14T00:55:18Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "akullpp/awesome-java",
+    "url": "https://github.com/akullpp/awesome-java",
+    "description": "A curated list of awesome frameworks, libraries and software for the Java programming language.",
+    "stars": 47300,
+    "language": "-",
+    "updated_at": "2026-03-14T01:24:53Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "1c7/chinese-independent-developer",
+    "url": "https://github.com/1c7/chinese-independent-developer",
+    "description": "👩🏿‍💻👨🏾‍💻👩🏼‍💻👨🏽‍💻👩🏻‍💻中国独立开发者项目列表 -- 分享大家都在做什么",
+    "stars": 47085,
+    "language": "-",
+    "updated_at": "2026-03-13T17:06:12Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "metabase/metabase",
+    "url": "https://github.com/metabase/metabase",
+    "description": "The easy-to-use open source Business Intelligence and Embedded Analytics tool that lets everyone work with data :bar_chart:",
+    "stars": 46394,
+    "language": "Clojure",
+    "updated_at": "2026-03-13T23:22:52Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "oobabooga/text-generation-webui",
+    "url": "https://github.com/oobabooga/text-generation-webui",
+    "description": "The best local UI for large language models, with easy setup and powerful features. 100% offline.",
+    "stars": 46245,
+    "language": "Python",
+    "updated_at": "2026-03-14T00:07:10Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "microsoft/AI-For-Beginners",
+    "url": "https://github.com/microsoft/AI-For-Beginners",
+    "description": "12 Weeks, 24 Lessons, AI for All!",
+    "stars": 46037,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-14T00:49:27Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "crewAIInc/crewAI",
+    "url": "https://github.com/crewAIInc/crewAI",
+    "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.",
+    "stars": 45995,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:10:57Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "tldraw/tldraw",
+    "url": "https://github.com/tldraw/tldraw",
+    "description": "very good whiteboard infinite canvas SDK",
+    "stars": 45810,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:08:28Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "NanmiCoder/MediaCrawler",
+    "url": "https://github.com/NanmiCoder/MediaCrawler",
+    "description": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  | 知乎问答文章｜评论爬虫",
+    "stars": 45723,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:03:39Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "GitHubDaily/GitHubDaily",
+    "url": "https://github.com/GitHubDaily/GitHubDaily",
+    "description": "坚持分享 GitHub 上高质量、有趣实用的开源技术教程、开发者工具、编程网站、技术资讯。A list cool, interesting projects of GitHub.",
+    "stars": 45599,
+    "language": "-",
+    "updated_at": "2026-03-14T01:02:51Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "lukasz-madon/awesome-remote-job",
+    "url": "https://github.com/lukasz-madon/awesome-remote-job",
+    "description": "A curated list of awesome remote jobs and resources. Inspired by https://github.com/vinta/awesome-python",
+    "stars": 44039,
+    "language": "-",
+    "updated_at": "2026-03-14T00:33:03Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ComposioHQ/awesome-claude-skills",
+    "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+    "stars": 43792,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:05:33Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "mudler/LocalAI",
+    "url": "https://github.com/mudler/LocalAI",
+    "description": ":robot: The free, Open Source alternative to OpenAI, Claude and others. Self-hosted and local-first. Drop-in replacement,  running on consumer-grade hardware. No GPU required. Runs gguf, transformers, diffusers and many more. Features: Generate Text, MCP, Audio, Video, Images, Voice Cloning, Distributed, P2P and decentralized inference",
+    "stars": 43552,
+    "language": "Go",
+    "updated_at": "2026-03-14T01:06:35Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Kong/kong",
+    "url": "https://github.com/Kong/kong",
+    "description": "🦍 The API and AI Gateway",
+    "stars": 42946,
+    "language": "Lua",
+    "updated_at": "2026-03-13T23:03:13Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "zhayujie/chatgpt-on-wechat",
+    "url": "https://github.com/zhayujie/chatgpt-on-wechat",
+    "description": "CowAgent是基于大模型的超级AI助理，能主动思考和任务规划、访问操作系统和外部资源、创造和执行Skills、拥有长期记忆并不断成长。同时支持飞书、钉钉、企业微信应用、微信公众号、网页等接入，可选择OpenAI/Claude/Gemini/DeepSeek/ Qwen/GLM/Kimi/LinkAI，能处理文本、语音、图片和文件，可快速搭建个人AI助手和企业数字员工。",
+    "stars": 42191,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:04:30Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "gradio-app/gradio",
+    "url": "https://github.com/gradio-app/gradio",
+    "description": "Build and share delightful machine learning apps, all in Python. 🌟 Star to support our work!",
+    "stars": 42015,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:07:20Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Aider-AI/aider",
+    "url": "https://github.com/Aider-AI/aider",
+    "description": "aider is AI pair programming in your terminal",
+    "stars": 41927,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:09:20Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "CherryHQ/cherry-studio",
+    "url": "https://github.com/CherryHQ/cherry-studio",
+    "description": "AI productivity studio with smart chat, autonomous agents, and 300+ assistants. Unified access to frontier LLMs",
+    "stars": 41438,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:10:09Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "jingyaogong/minimind",
+    "url": "https://github.com/jingyaogong/minimind",
+    "description": "🚀🚀 「大模型」2小时完全从0训练26M的小参数GPT！🌏 Train a 26M-parameter GPT from scratch in just 2h!",
+    "stars": 41172,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:28:53Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "bmad-code-org/BMAD-METHOD",
+    "url": "https://github.com/bmad-code-org/BMAD-METHOD",
+    "description": "Breakthrough Method for Agile Ai Driven Development",
+    "stars": 40567,
+    "language": "JavaScript",
+    "updated_at": "2026-03-14T01:31:43Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "calcom/cal.com",
+    "url": "https://github.com/calcom/cal.com",
+    "description": "Scheduling infrastructure for absolutely everyone.",
+    "stars": 40558,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T00:15:43Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "msitarzewski/agency-agents",
+    "url": "https://github.com/msitarzewski/agency-agents",
+    "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+    "stars": 40320,
+    "language": "Shell",
+    "updated_at": "2026-03-14T02:13:45Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "code-yeongyu/oh-my-openagent",
+    "url": "https://github.com/code-yeongyu/oh-my-openagent",
+    "description": "omo; the best agent harness - previously oh-my-opencode",
+    "stars": 39786,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:09:43Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "danielmiessler/Fabric",
+    "url": "https://github.com/danielmiessler/Fabric",
+    "description": "Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.",
+    "stars": 39715,
+    "language": "Go",
+    "updated_at": "2026-03-13T23:06:33Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "appsmithorg/appsmith",
+    "url": "https://github.com/appsmithorg/appsmith",
+    "description": "Platform to build admin panels, internal tools, and dashboards. Integrates with 25+ databases and any API.",
+    "stars": 39372,
+    "language": "TypeScript",
+    "updated_at": "2026-03-13T18:58:22Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "BerriAI/litellm",
+    "url": "https://github.com/BerriAI/litellm",
+    "description": "Python SDK, Proxy Server (AI Gateway) to call 100+ LLM APIs in OpenAI (or native) format, with cost tracking, guardrails, loadbalancing and logging. [Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, VLLM, NVIDIA NIM]",
+    "stars": 38981,
+    "language": "Python",
+    "updated_at": "2026-03-14T00:35:48Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "mindsdb/mindsdb",
+    "url": "https://github.com/mindsdb/mindsdb",
+    "description": "Query Engine for AI Analytics: Build self-reasoning agents across all your live data",
+    "stars": 38715,
+    "language": "Python",
+    "updated_at": "2026-03-13T22:49:05Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "microsoft/qlib",
+    "url": "https://github.com/microsoft/qlib",
+    "description": "Qlib is an AI-oriented Quant investment platform that aims to use AI tech to empower Quant Research, from exploring ideas to implementing productions. Qlib supports diverse ML modeling paradigms, including supervised learning, market dynamics modeling, and RL, and is now equipped with https://github.com/microsoft/RD-Agent to automate R&D process.",
+    "stars": 38695,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:18:36Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ToolJet/ToolJet",
+    "url": "https://github.com/ToolJet/ToolJet",
+    "description": "ToolJet is the open-source foundation of ToolJet AI - the AI-native platform for building internal tools, dashboard, business applications, workflows and AI agents 🚀",
+    "stars": 37597,
+    "language": "JavaScript",
+    "updated_at": "2026-03-13T21:01:47Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "VoltAgent/awesome-openclaw-skills",
+    "url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+    "description": "The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞",
+    "stars": 36942,
+    "language": "-",
+    "updated_at": "2026-03-14T02:10:46Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ruvnet/RuView",
+    "url": "https://github.com/ruvnet/RuView",
+    "description": "π RuView: WiFi DensePose turns commodity WiFi signals into real-time human pose estimation, vital sign monitoring, and presence detection — all without a single pixel of video.",
+    "stars": 36240,
+    "language": "Rust",
+    "updated_at": "2026-03-14T02:10:57Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "veggiemonk/awesome-docker",
+    "url": "https://github.com/veggiemonk/awesome-docker",
+    "description": ":whale: A curated list of Docker resources and projects",
+    "stars": 35664,
+    "language": "Makefile",
+    "updated_at": "2026-03-13T23:35:20Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "vadimdemedes/ink",
+    "url": "https://github.com/vadimdemedes/ink",
+    "description": "🌈 React for interactive command-line apps",
+    "stars": 35559,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:33:37Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "sahat/hackathon-starter",
+    "url": "https://github.com/sahat/hackathon-starter",
+    "description": "A boilerplate for Node.js web applications",
+    "stars": 35218,
+    "language": "JavaScript",
+    "updated_at": "2026-03-13T23:17:00Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "TriliumNext/Trilium",
+    "url": "https://github.com/TriliumNext/Trilium",
+    "description": "Build your personal knowledge base with Trilium Notes",
+    "stars": 35031,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:18:38Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "anthropics/claude-cookbooks",
+    "url": "https://github.com/anthropics/claude-cookbooks",
+    "description": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+    "stars": 34890,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-14T01:40:31Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem",
+    "description": "A Claude Code plugin that automatically captures everything Claude does during your coding sessions, compresses it with AI (using Claude's agent-sdk), and injects relevant context back into future sessions.",
+    "stars": 34678,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:12:27Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "danny-avila/LibreChat",
+    "url": "https://github.com/danny-avila/LibreChat",
+    "description": "Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.",
+    "stars": 34615,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:49:27Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "refinedev/refine",
+    "url": "https://github.com/refinedev/refine",
+    "description": "A React Framework for building  internal tools, admin panels, dashboards & B2B apps with unmatched flexibility.",
+    "stars": 34220,
+    "language": "TypeScript",
+    "updated_at": "2026-03-13T23:28:59Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "microsoft/Data-Science-For-Beginners",
+    "url": "https://github.com/microsoft/Data-Science-For-Beginners",
+    "description": "10 Weeks, 20 Lessons, Data Science for All!",
+    "stars": 34200,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-13T23:45:46Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "KeygraphHQ/shannon",
+    "url": "https://github.com/KeygraphHQ/shannon",
+    "description": "Shannon Lite is an autonomous, white-box AI pentester for web applications and APIs. It analyzes your source code, identifies attack vectors, and executes real exploits to prove vulnerabilities before they reach production.",
+    "stars": 33467,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:45:47Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "moeru-ai/airi",
+    "url": "https://github.com/moeru-ai/airi",
+    "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+    "stars": 33316,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:13:52Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "HKUDS/nanobot",
+    "url": "https://github.com/HKUDS/nanobot",
+    "description": "\"🐈 nanobot: The Ultra-Lightweight OpenClaw\"",
+    "stars": 33249,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:07:31Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "block/goose",
+    "url": "https://github.com/block/goose",
+    "description": "an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM",
+    "stars": 32986,
+    "language": "Rust",
+    "updated_at": "2026-03-14T02:11:04Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "stanfordnlp/dspy",
+    "url": "https://github.com/stanfordnlp/dspy",
+    "description": "DSPy: The framework for programming—not prompting—language models",
+    "stars": 32782,
+    "language": "Python",
+    "updated_at": "2026-03-14T00:50:27Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "patchy631/ai-engineering-hub",
+    "url": "https://github.com/patchy631/ai-engineering-hub",
+    "description": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications.",
+    "stars": 31942,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-14T02:09:42Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "continuedev/continue",
+    "url": "https://github.com/continuedev/continue",
+    "description": "⏩ Source-controlled AI checks, enforceable in CI. Powered by the open-source Continue CLI",
+    "stars": 31830,
+    "language": "TypeScript",
+    "updated_at": "2026-03-13T23:24:02Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "karpathy/autoresearch",
+    "url": "https://github.com/karpathy/autoresearch",
+    "description": "AI agents running research on single-GPU nanochat training automatically",
+    "stars": 31759,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:13:06Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "surrealdb/surrealdb",
+    "url": "https://github.com/surrealdb/surrealdb",
+    "description": "A scalable, distributed, collaborative, document-graph database, for the realtime web",
+    "stars": 31540,
+    "language": "Rust",
+    "updated_at": "2026-03-14T02:04:57Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "conductor-oss/conductor",
+    "url": "https://github.com/conductor-oss/conductor",
+    "description": "Conductor is an event driven agentic orchestration platform providing durable and highly resilient execution engine for applications and AI Agents",
+    "stars": 31499,
+    "language": "Java",
+    "updated_at": "2026-03-13T23:04:00Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "SagerNet/sing-box",
+    "url": "https://github.com/SagerNet/sing-box",
+    "description": "The universal proxy platform",
+    "stars": 31360,
+    "language": "Go",
+    "updated_at": "2026-03-14T02:11:52Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "pear-devs/pear-desktop",
+    "url": "https://github.com/pear-devs/pear-desktop",
+    "description": "Pear 🍐 is extension for music player",
+    "stars": 31042,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:11:56Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "fabricjs/fabric.js",
+    "url": "https://github.com/fabricjs/fabric.js",
+    "description": "Javascript Canvas Library, SVG-to-Canvas (& canvas-to-SVG) Parser",
+    "stars": 31000,
+    "language": "TypeScript",
+    "updated_at": "2026-03-13T22:40:41Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Fission-AI/OpenSpec",
+    "url": "https://github.com/Fission-AI/OpenSpec",
+    "description": "Spec-driven development (SDD) for AI coding assistants.",
+    "stars": 30365,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:07:14Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "bytedance/deer-flow",
+    "url": "https://github.com/bytedance/deer-flow",
+    "description": "An open-source SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skills and subagents, it handles different levels of tasks that could take minutes to hours.",
+    "stars": 30254,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:08:01Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "dragonflydb/dragonfly",
+    "url": "https://github.com/dragonflydb/dragonfly",
+    "description": "A modern replacement for Redis and Memcached",
+    "stars": 30169,
+    "language": "C++",
+    "updated_at": "2026-03-13T20:42:32Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "filamentphp/filament",
+    "url": "https://github.com/filamentphp/filament",
+    "description": "A powerful open-source UI framework for Laravel • Build and ship apps & admin panels fast with Livewire",
+    "stars": 29774,
+    "language": "PHP",
+    "updated_at": "2026-03-13T23:18:50Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "sampotts/plyr",
+    "url": "https://github.com/sampotts/plyr",
+    "description": "A simple HTML5, YouTube and Vimeo player",
+    "stars": 29657,
+    "language": "JavaScript",
+    "updated_at": "2026-03-14T01:19:39Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "musistudio/claude-code-router",
+    "url": "https://github.com/musistudio/claude-code-router",
+    "description": "Use Claude Code as the foundation for coding infrastructure, allowing you to decide how to interact with the model while enjoying updates from Anthropic.",
+    "stars": 29606,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:12:50Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "gsd-build/get-shit-done",
+    "url": "https://github.com/gsd-build/get-shit-done",
+    "description": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
+    "stars": 29550,
+    "language": "JavaScript",
+    "updated_at": "2026-03-14T02:11:10Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "HKUDS/LightRAG",
+    "url": "https://github.com/HKUDS/LightRAG",
+    "description": "[EMNLP2025] \"LightRAG: Simple and Fast Retrieval-Augmented Generation\"",
+    "stars": 29336,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:06:00Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "meta-llama/llama3",
+    "url": "https://github.com/meta-llama/llama3",
+    "description": "The official Meta Llama 3 GitHub site",
+    "stars": 29278,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:59:15Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "binwiederhier/ntfy",
+    "url": "https://github.com/binwiederhier/ntfy",
+    "description": "Send push notifications to your phone or desktop using PUT/POST",
+    "stars": 29184,
+    "language": "Go",
+    "updated_at": "2026-03-14T01:48:27Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "datawhalechina/self-llm",
+    "url": "https://github.com/datawhalechina/self-llm",
+    "description": "《开源大模型食用指南》针对中国宝宝量身打造的基于Linux环境快速微调（全参数/Lora）、部署国内外开源大模型（LLM）/多模态大模型（MLLM）教程",
+    "stars": 28938,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-13T18:05:27Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "microsoft/playwright-mcp",
+    "url": "https://github.com/microsoft/playwright-mcp",
+    "description": "Playwright MCP server",
+    "stars": 28846,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:52:11Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ChromeDevTools/chrome-devtools-mcp",
+    "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "description": "Chrome DevTools for coding agents",
+    "stars": 28840,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:11:53Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "bytedance/UI-TARS-desktop",
+    "url": "https://github.com/bytedance/UI-TARS-desktop",
+    "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+    "stars": 28814,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:36:27Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "eugeneyan/applied-ml",
+    "url": "https://github.com/eugeneyan/applied-ml",
+    "description": "📚 Papers & tech blogs by companies sharing their work on data science & machine learning in production.",
+    "stars": 28713,
+    "language": "-",
+    "updated_at": "2026-03-13T19:13:25Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "academic/awesome-datascience",
+    "url": "https://github.com/academic/awesome-datascience",
+    "description": ":memo: An awesome Data Science repository to learn and apply for real world problems.",
+    "stars": 28572,
+    "language": "-",
+    "updated_at": "2026-03-14T01:24:16Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "voideditor/void",
+    "url": "https://github.com/voideditor/void",
+    "description": "",
+    "stars": 28331,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:45:59Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "nrwl/nx",
+    "url": "https://github.com/nrwl/nx",
+    "description": "The Monorepo Platform that amplifies both developers and AI agents. Nx optimizes your builds, scales your CI, and fixes failed PRs automatically. Ship in half the time.",
+    "stars": 28326,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:53:41Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Genesis-Embodied-AI/Genesis",
+    "url": "https://github.com/Genesis-Embodied-AI/Genesis",
+    "description": "A generative world for general-purpose robotics & embodied AI learning.",
+    "stars": 28274,
+    "language": "Python",
+    "updated_at": "2026-03-13T23:35:09Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "stanford-oval/storm",
+    "url": "https://github.com/stanford-oval/storm",
+    "description": "An LLM-powered knowledge curation system that researches a topic and generates a full-length report with citations.",
+    "stars": 28005,
+    "language": "Python",
+    "updated_at": "2026-03-13T23:39:22Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "hesreallyhim/awesome-claude-code",
+    "url": "https://github.com/hesreallyhim/awesome-claude-code",
+    "description": "A curated list of awesome skills, hooks, slash-commands, agent orchestrators, applications, and plugins for Claude Code by Anthropic",
+    "stars": 27988,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:07:50Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "NvChad/NvChad",
+    "url": "https://github.com/NvChad/NvChad",
+    "description": "Blazing fast Neovim framework providing solid defaults and a beautiful UI, enhancing your neovim experience.",
+    "stars": 27963,
+    "language": "Lua",
+    "updated_at": "2026-03-14T02:03:35Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "github/github-mcp-server",
+    "url": "https://github.com/github/github-mcp-server",
+    "description": "GitHub's official MCP Server",
+    "stars": 27865,
+    "language": "Go",
+    "updated_at": "2026-03-14T02:07:37Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "farion1231/cc-switch",
+    "url": "https://github.com/farion1231/cc-switch",
+    "description": "A cross-platform desktop All-in-One assistant tool for Claude Code, Codex, OpenCode, openclaw & Gemini CLI.",
+    "stars": 27822,
+    "language": "Rust",
+    "updated_at": "2026-03-14T02:11:49Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Budibase/budibase",
+    "url": "https://github.com/Budibase/budibase",
+    "description": "Build AI Agents the easy way. Supports PostgreSQL, MySQL, MariaDB, MSSQL, MongoDB, Rest API, Docker, K8s, and more 🚀  AI Workflow toolkit",
+    "stars": 27726,
+    "language": "TypeScript",
+    "updated_at": "2026-03-13T22:14:45Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ChristosChristofidis/awesome-deep-learning",
+    "url": "https://github.com/ChristosChristofidis/awesome-deep-learning",
+    "description": "A curated list of awesome Deep Learning tutorials, projects and communities.",
+    "stars": 27698,
+    "language": "-",
+    "updated_at": "2026-03-14T00:58:04Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "microsoft/semantic-kernel",
+    "url": "https://github.com/microsoft/semantic-kernel",
+    "description": "Integrate cutting-edge LLM technology quickly and easily into your apps",
+    "stars": 27447,
+    "language": "C#",
+    "updated_at": "2026-03-13T21:57:58Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ComposioHQ/composio",
+    "url": "https://github.com/ComposioHQ/composio",
+    "description": "Composio powers 1000+ toolkits, tool search, context management, authentication, and a sandboxed workbench to help you build AI agents that turn intent into action.",
+    "stars": 27363,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:59:06Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "datawhalechina/hello-agents",
+    "url": "https://github.com/datawhalechina/hello-agents",
+    "description": "📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程",
+    "stars": 27350,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:03:17Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "gitroomhq/postiz-app",
+    "url": "https://github.com/gitroomhq/postiz-app",
+    "description": "📨 The ultimate social media scheduling tool, with a bunch of AI  🤖",
+    "stars": 27263,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:03:09Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "simstudioai/sim",
+    "url": "https://github.com/simstudioai/sim",
+    "description": "Build, deploy, and orchestrate AI agents. Sim is the central intelligence layer for your AI workforce.",
+    "stars": 26992,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:12:38Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "QwenLM/Qwen3",
+    "url": "https://github.com/QwenLM/Qwen3",
+    "description": "Qwen3 is the large language model series developed by Qwen team, Alibaba Cloud.",
+    "stars": 26896,
+    "language": "Python",
+    "updated_at": "2026-03-13T23:40:35Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "zeroclaw-labs/zeroclaw",
+    "url": "https://github.com/zeroclaw-labs/zeroclaw",
+    "description": "Fast, small, and fully autonomous AI assistant infrastructure — deploy anywhere, swap anything 🦀",
+    "stars": 26843,
+    "language": "Rust",
+    "updated_at": "2026-03-14T02:08:43Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "NickeManarin/ScreenToGif",
+    "url": "https://github.com/NickeManarin/ScreenToGif",
+    "description": "🎬 ScreenToGif allows you to record a selected area of your screen, edit and save it as a gif or video.",
+    "stars": 26529,
+    "language": "C#",
+    "updated_at": "2026-03-13T21:19:35Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Hannibal046/Awesome-LLM",
+    "url": "https://github.com/Hannibal046/Awesome-LLM",
+    "description": "Awesome-LLM: a curated list of Large Language Model",
+    "stars": 26441,
+    "language": "-",
+    "updated_at": "2026-03-13T20:03:14Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "e2b-dev/awesome-ai-agents",
+    "url": "https://github.com/e2b-dev/awesome-ai-agents",
+    "description": "A list of AI autonomous agents",
+    "stars": 26425,
+    "language": "-",
+    "updated_at": "2026-03-14T02:07:19Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ashishpatel26/500-AI-Agents-Projects",
+    "url": "https://github.com/ashishpatel26/500-AI-Agents-Projects",
+    "description": "The 500 AI Agents Projects is a curated collection of AI agent use cases across various industries. It showcases practical applications and provides links to open-source projects for implementation, illustrating how AI agents are transforming sectors such as healthcare, finance, education, retail, and more.",
+    "stars": 26354,
+    "language": "-",
+    "updated_at": "2026-03-14T02:08:33Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "langchain-ai/langgraph",
+    "url": "https://github.com/langchain-ai/langgraph",
+    "description": "Build resilient language agents as graphs.",
+    "stars": 26342,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:11:42Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "keepassxreboot/keepassxc",
+    "url": "https://github.com/keepassxreboot/keepassxc",
+    "description": "KeePassXC is a cross-platform community-driven port of the Windows application “KeePass Password Safe”.",
+    "stars": 26206,
+    "language": "C++",
+    "updated_at": "2026-03-14T01:34:20Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "lbjlaq/Antigravity-Manager",
+    "url": "https://github.com/lbjlaq/Antigravity-Manager",
+    "description": "Professional Antigravity Account Manager & Switcher. One-click seamless account switching for Antigravity Tools. Built with Tauri v2 + React (Rust).专业的 Antigravity 账号管理与切换工具。为 Antigravity 提供一键无缝账号切换功能。",
+    "stars": 26173,
+    "language": "Rust",
+    "updated_at": "2026-03-14T01:52:50Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "shareAI-lab/learn-claude-code",
+    "url": "https://github.com/shareAI-lab/learn-claude-code",
+    "description": "Bash is all you need -  A nano Claude Code–like agent, built from 0 to 1",
+    "stars": 26159,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:13:21Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "warpdotdev/Warp",
+    "url": "https://github.com/warpdotdev/Warp",
+    "description": "Warp is the agentic development environment, built for coding with multiple AI agents.",
+    "stars": 26116,
+    "language": "-",
+    "updated_at": "2026-03-14T01:30:25Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Igglybuff/awesome-piracy",
+    "url": "https://github.com/Igglybuff/awesome-piracy",
+    "description": "A curated list of awesome warez and piracy links",
+    "stars": 26098,
+    "language": "HTML",
+    "updated_at": "2026-03-13T18:57:41Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "datasciencemasters/go",
+    "url": "https://github.com/datasciencemasters/go",
+    "description": "The Open Source Data Science Masters",
+    "stars": 26033,
+    "language": "-",
+    "updated_at": "2026-03-13T17:33:34Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "huggingface/smolagents",
+    "url": "https://github.com/huggingface/smolagents",
+    "description": "🤗 smolagents: a barebones library for agents that think in code.",
+    "stars": 25998,
+    "language": "Python",
+    "updated_at": "2026-03-14T00:34:47Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "OpenAPITools/openapi-generator",
+    "url": "https://github.com/OpenAPITools/openapi-generator",
+    "description": "OpenAPI Generator allows generation of API client libraries (SDK generation), server stubs, documentation and configuration automatically given an OpenAPI Spec (v2, v3)",
+    "stars": 25956,
+    "language": "Java",
+    "updated_at": "2026-03-13T20:19:52Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "NirDiamant/RAG_Techniques",
+    "url": "https://github.com/NirDiamant/RAG_Techniques",
+    "description": "This repository showcases various advanced techniques for Retrieval-Augmented Generation (RAG) systems. RAG systems combine information retrieval with generative models to provide accurate and contextually rich responses.",
+    "stars": 25919,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-14T01:24:02Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "assafelovic/gpt-researcher",
+    "url": "https://github.com/assafelovic/gpt-researcher",
+    "description": "An autonomous agent that conducts deep research on any data using any LLM providers",
+    "stars": 25709,
+    "language": "Python",
+    "updated_at": "2026-03-13T18:04:25Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "enaqx/awesome-pentest",
+    "url": "https://github.com/enaqx/awesome-pentest",
+    "description": "A collection of awesome penetration testing resources, tools and other shiny things",
+    "stars": 25541,
+    "language": "-",
+    "updated_at": "2026-03-13T17:51:01Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Fosowl/agenticSeek",
+    "url": "https://github.com/Fosowl/agenticSeek",
+    "description": "Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity. 🔔 Official updates only via twitter @Martin993886460 (Beware of fake account)",
+    "stars": 25499,
+    "language": "Python",
+    "updated_at": "2026-03-13T21:56:17Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "aishwaryanr/awesome-generative-ai-guide",
+    "url": "https://github.com/aishwaryanr/awesome-generative-ai-guide",
+    "description": "A one stop repository for generative AI research updates, interview resources, notebooks and much more!",
+    "stars": 25302,
+    "language": "HTML",
+    "updated_at": "2026-03-13T23:39:53Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "jivoi/awesome-osint",
+    "url": "https://github.com/jivoi/awesome-osint",
+    "description": ":scream: A curated list of amazingly awesome OSINT",
+    "stars": 25244,
+    "language": "-",
+    "updated_at": "2026-03-13T23:35:43Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "goldfire/howler.js",
+    "url": "https://github.com/goldfire/howler.js",
+    "description": "Javascript audio library for the modern web.",
+    "stars": 25214,
+    "language": "JavaScript",
+    "updated_at": "2026-03-13T19:39:23Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "github/awesome-copilot",
+    "url": "https://github.com/github/awesome-copilot",
+    "description": "Community-contributed instructions, agents, skills, and configurations to help you make the most of GitHub Copilot.",
+    "stars": 25074,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:57:36Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "onlook-dev/onlook",
+    "url": "https://github.com/onlook-dev/onlook",
+    "description": "The Cursor for Designers • An Open-Source AI-First Design tool • Visually build, style, and edit your React App with AI",
+    "stars": 24883,
+    "language": "TypeScript",
+    "updated_at": "2026-03-13T18:52:01Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "wilsonfreitas/awesome-quant",
+    "url": "https://github.com/wilsonfreitas/awesome-quant",
+    "description": "A curated list of insanely awesome libraries, packages and resources for Quants (Quantitative Finance)",
+    "stars": 24863,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-14T01:27:10Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "taosdata/TDengine",
+    "url": "https://github.com/taosdata/TDengine",
+    "description": "High-performance, scalable time-series database designed for Industrial IoT (IIoT) scenarios",
+    "stars": 24775,
+    "language": "C",
+    "updated_at": "2026-03-13T22:33:32Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "mxgmn/WaveFunctionCollapse",
+    "url": "https://github.com/mxgmn/WaveFunctionCollapse",
+    "description": "Bitmap & tilemap generation from a single example with the help of ideas from quantum mechanics",
+    "stars": 24769,
+    "language": "C#",
+    "updated_at": "2026-03-13T23:42:41Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "apache/skywalking",
+    "url": "https://github.com/apache/skywalking",
+    "description": "APM, Application Performance Monitoring System",
+    "stars": 24746,
+    "language": "Java",
+    "updated_at": "2026-03-13T12:28:56Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "mlflow/mlflow",
+    "url": "https://github.com/mlflow/mlflow",
+    "description": "The open source AI engineering platform. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI agents, LLM applications, and ML models while controlling costs and managing access to models and data.",
+    "stars": 24721,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:05:57Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "microsoft/JARVIS",
+    "url": "https://github.com/microsoft/JARVIS",
+    "description": "JARVIS, a system to connect LLMs with ML community. Paper: https://arxiv.org/pdf/2303.17580.pdf",
+    "stars": 24573,
+    "language": "Python",
+    "updated_at": "2026-03-13T23:46:19Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "haotian-liu/LLaVA",
+    "url": "https://github.com/haotian-liu/LLaVA",
+    "description": "[NeurIPS'23 Oral] Visual Instruction Tuning (LLaVA) built towards GPT-4V level capabilities and beyond.",
+    "stars": 24559,
+    "language": "Python",
+    "updated_at": "2026-03-13T23:20:50Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "sipeed/picoclaw",
+    "url": "https://github.com/sipeed/picoclaw",
+    "description": "Tiny, Fast, and Deployable anywhere — automate the mundane, unleash your creativity",
+    "stars": 24548,
+    "language": "Go",
+    "updated_at": "2026-03-14T02:11:23Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "hesamsheikh/awesome-openclaw-usecases",
+    "url": "https://github.com/hesamsheikh/awesome-openclaw-usecases",
+    "description": "A community collection of OpenClaw use cases for making life easier.",
+    "stars": 24438,
+    "language": "-",
+    "updated_at": "2026-03-14T02:11:42Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "zai-org/Open-AutoGLM",
+    "url": "https://github.com/zai-org/Open-AutoGLM",
+    "description": "An Open Phone Agent Model & Framework. Unlocking the AI Phone for Everyone",
+    "stars": 24280,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:56:15Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Lissy93/dashy",
+    "url": "https://github.com/Lissy93/dashy",
+    "description": "🚀 A self-hostable personal dashboard built for you. Includes status-checking, widgets, themes, icon packs, a UI editor and tons more!",
+    "stars": 24222,
+    "language": "Vue",
+    "updated_at": "2026-03-13T23:09:54Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills",
+    "description": "The Ultimate Collection of 1000+ Agentic Skills for Claude Code/Antigravity/Cursor. Battle-tested, high-performance skills for AI agents including official skills from Anthropic and Vercel.",
+    "stars": 24079,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:11:57Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "AstrBotDevs/AstrBot",
+    "url": "https://github.com/AstrBotDevs/AstrBot",
+    "description": "Agentic IM Chatbot infrastructure that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+    "stars": 23865,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:13:33Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "getzep/graphiti",
+    "url": "https://github.com/getzep/graphiti",
+    "description": "Build Real-Time Knowledge Graphs for AI Agents",
+    "stars": 23697,
+    "language": "Python",
+    "updated_at": "2026-03-14T00:25:28Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "liguodongiot/llm-action",
+    "url": "https://github.com/liguodongiot/llm-action",
+    "description": "本项目旨在分享大模型相关技术原理以及实战经验（大模型工程化、大模型应用落地）",
+    "stars": 23513,
+    "language": "HTML",
+    "updated_at": "2026-03-13T21:28:32Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "badlogic/pi-mono",
+    "url": "https://github.com/badlogic/pi-mono",
+    "description": "AI agent toolkit: coding agent CLI, unified LLM API, TUI & web UI libraries, Slack bot, vLLM pods",
+    "stars": 23372,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:12:31Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "lukasmasuch/best-of-ml-python",
+    "url": "https://github.com/lukasmasuch/best-of-ml-python",
+    "description": "🏆 A ranked list of awesome machine learning Python libraries. Updated weekly.",
+    "stars": 23317,
+    "language": "-",
+    "updated_at": "2026-03-13T20:44:59Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "resemble-ai/chatterbox",
+    "url": "https://github.com/resemble-ai/chatterbox",
+    "description": "SoTA open-source TTS",
+    "stars": 23279,
+    "language": "Python",
+    "updated_at": "2026-03-14T00:44:55Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "langfuse/langfuse",
+    "url": "https://github.com/langfuse/langfuse",
+    "description": "🪢 Open source LLM engineering platform: LLM Observability, metrics, evals, prompt management, playground, datasets. Integrates with OpenTelemetry, Langchain, OpenAI SDK, LiteLLM, and more. 🍊YC W23",
+    "stars": 23139,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:36:30Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "BloopAI/vibe-kanban",
+    "url": "https://github.com/BloopAI/vibe-kanban",
+    "description": "Get 10X more out of Claude Code, Codex or any coding agent",
+    "stars": 23126,
+    "language": "Rust",
+    "updated_at": "2026-03-14T02:07:25Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "n0shake/Public-APIs",
+    "url": "https://github.com/n0shake/Public-APIs",
+    "description": "📚 A public list of APIs from round the web.",
+    "stars": 23089,
+    "language": "-",
+    "updated_at": "2026-03-13T18:39:17Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "slimtoolkit/slim",
+    "url": "https://github.com/slimtoolkit/slim",
+    "description": "Slim(toolkit): Don't change anything in your container image and minify it by up to 30x (and for compiled languages even more) making it secure too! (free and open source)",
+    "stars": 23048,
+    "language": "Go",
+    "updated_at": "2026-03-14T01:07:13Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "timqian/chinese-independent-blogs",
+    "url": "https://github.com/timqian/chinese-independent-blogs",
+    "description": "中文独立博客列表",
+    "stars": 23038,
+    "language": "Python",
+    "updated_at": "2026-03-13T16:10:47Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "vanna-ai/vanna",
+    "url": "https://github.com/vanna-ai/vanna",
+    "description": "🤖 Chat with your SQL database 📊. Accurate Text-to-SQL Generation via LLMs using Agentic Retrieval 🔄.",
+    "stars": 22964,
+    "language": "Python",
+    "updated_at": "2026-03-13T19:34:45Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ScrapeGraphAI/Scrapegraph-ai",
+    "url": "https://github.com/ScrapeGraphAI/Scrapegraph-ai",
+    "description": "Python scraper based on AI",
+    "stars": 22954,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:55:16Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "vercel-labs/agent-skills",
+    "url": "https://github.com/vercel-labs/agent-skills",
+    "description": "Vercel's official collection of agent skills",
+    "stars": 22949,
+    "language": "JavaScript",
+    "updated_at": "2026-03-14T01:10:33Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates",
+    "description": "CLI tool for configuring and monitoring Claude Code",
+    "stars": 22885,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:28:27Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "DayuanJiang/next-ai-draw-io",
+    "url": "https://github.com/DayuanJiang/next-ai-draw-io",
+    "description": "A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.",
+    "stars": 22829,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:43:31Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "spmallick/learnopencv",
+    "url": "https://github.com/spmallick/learnopencv",
+    "description": "Learn OpenCV  : C++ and Python Examples",
+    "stars": 22785,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-13T18:44:50Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "micro/go-micro",
+    "url": "https://github.com/micro/go-micro",
+    "description": "A Go microservices framework",
+    "stars": 22723,
+    "language": "Go",
+    "updated_at": "2026-03-13T03:38:26Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "RooCodeInc/Roo-Code",
+    "url": "https://github.com/RooCodeInc/Roo-Code",
+    "description": "Roo Code gives you a whole dev team of AI agents in your code editor.",
+    "stars": 22661,
+    "language": "TypeScript",
+    "updated_at": "2026-03-13T22:39:49Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "forem/forem",
+    "url": "https://github.com/forem/forem",
+    "description": "For empowering community 🌱",
+    "stars": 22617,
+    "language": "Ruby",
+    "updated_at": "2026-03-13T22:53:46Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "vercel/ai",
+    "url": "https://github.com/vercel/ai",
+    "description": "The AI Toolkit for TypeScript. From the creators of Next.js, the AI SDK is a free open-source library for building AI-powered applications and agents",
+    "stars": 22600,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T00:15:49Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "harvard-edge/cs249r_book",
+    "url": "https://github.com/harvard-edge/cs249r_book",
+    "description": "Machine Learning Systems",
+    "stars": 22577,
+    "language": "JavaScript",
+    "updated_at": "2026-03-14T01:17:36Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "qwibitai/nanoclaw",
+    "url": "https://github.com/qwibitai/nanoclaw",
+    "description": "A lightweight alternative to OpenClaw that runs in containers for security. Connects to WhatsApp, Telegram, Slack, Discord, Gmail and other messaging apps,, has memory, scheduled jobs, and runs directly on Anthropic's Agents SDK",
+    "stars": 22505,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:09:24Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "paperclipai/paperclip",
+    "url": "https://github.com/paperclipai/paperclip",
+    "description": "Open-source orchestration for zero-human companies",
+    "stars": 22450,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:12:25Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "yamadashy/repomix",
+    "url": "https://github.com/yamadashy/repomix",
+    "description": "📦 Repomix is a powerful tool that packs your entire repository into a single, AI-friendly file. Perfect for when you need to feed your codebase to Large Language Models (LLMs) or other AI tools like Claude, ChatGPT, DeepSeek, Perplexity, Gemini, Gemma, Llama, Grok, and more.",
+    "stars": 22418,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:40:28Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "HqWu-HITCS/Awesome-Chinese-LLM",
+    "url": "https://github.com/HqWu-HITCS/Awesome-Chinese-LLM",
+    "description": "整理开源的中文大语言模型，以规模较小、可私有化部署、训练成本较低的模型为主，包括底座模型，垂直领域微调及应用，数据集与教程等。",
+    "stars": 22374,
+    "language": "-",
+    "updated_at": "2026-03-13T16:06:42Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "PromtEngineer/localGPT",
+    "url": "https://github.com/PromtEngineer/localGPT",
+    "description": "Chat with your documents on your local device using GPT models. No data leaves your device and 100% private.",
+    "stars": 22208,
+    "language": "Python",
+    "updated_at": "2026-03-13T10:43:35Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "yoheinakajima/babyagi",
+    "url": "https://github.com/yoheinakajima/babyagi",
+    "description": "",
+    "stars": 22185,
+    "language": "Python",
+    "updated_at": "2026-03-13T14:28:48Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "amusi/CVPR2026-Papers-with-Code",
+    "url": "https://github.com/amusi/CVPR2026-Papers-with-Code",
+    "description": "CVPR 2026 论文和开源项目合集",
+    "stars": 22111,
+    "language": "-",
+    "updated_at": "2026-03-14T01:46:28Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "timescale/timescaledb",
+    "url": "https://github.com/timescale/timescaledb",
+    "description": "A time-series database for high-performance real-time analytics packaged as a Postgres extension",
+    "stars": 22082,
+    "language": "C",
+    "updated_at": "2026-03-14T02:09:53Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "mastra-ai/mastra",
+    "url": "https://github.com/mastra-ai/mastra",
+    "description": "From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.",
+    "stars": 21960,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:53:12Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "systemdesign42/system-design-academy",
+    "url": "https://github.com/systemdesign42/system-design-academy",
+    "description": "If you want to become good at system design, join this newsletter now 👇",
+    "stars": 21879,
+    "language": "-",
+    "updated_at": "2026-03-14T02:13:43Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "vercel-labs/agent-browser",
+    "url": "https://github.com/vercel-labs/agent-browser",
+    "description": "Browser automation CLI for AI agents",
+    "stars": 21698,
+    "language": "Rust",
+    "updated_at": "2026-03-14T02:13:15Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "letta-ai/letta",
+    "url": "https://github.com/letta-ai/letta",
+    "description": "Letta is the platform for building stateful agents: AI with advanced memory that can learn and self-improve over time.",
+    "stars": 21563,
+    "language": "Python",
+    "updated_at": "2026-03-13T23:58:58Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "browserbase/stagehand",
+    "url": "https://github.com/browserbase/stagehand",
+    "description": "The AI Browser Automation Framework",
+    "stars": 21501,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:03:44Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "dipakkr/A-to-Z-Resources-for-Students",
+    "url": "https://github.com/dipakkr/A-to-Z-Resources-for-Students",
+    "description": "✅  Curated list of resources for developers",
+    "stars": 21498,
+    "language": "-",
+    "updated_at": "2026-03-13T17:24:49Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "charmbracelet/crush",
+    "url": "https://github.com/charmbracelet/crush",
+    "description": "Glamourous agentic coding for all 💘",
+    "stars": 21318,
+    "language": "Go",
+    "updated_at": "2026-03-14T02:13:16Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "activepieces/activepieces",
+    "url": "https://github.com/activepieces/activepieces",
+    "description": "AI Agents & MCPs & AI Workflow Automation • (~400 MCP servers for AI agents) • AI Automation / AI Agent with MCPs • AI Workflows & AI Agents • MCPs for AI Agents",
+    "stars": 21202,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T00:05:42Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "nautechsystems/nautilus_trader",
+    "url": "https://github.com/nautechsystems/nautilus_trader",
+    "description": "Production-grade Rust-native trading engine with deterministic event-driven architecture",
+    "stars": 21122,
+    "language": "Rust",
+    "updated_at": "2026-03-14T02:12:06Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "emmabostian/developer-portfolios",
+    "url": "https://github.com/emmabostian/developer-portfolios",
+    "description": "A list of developer portfolios for your inspiration",
+    "stars": 21117,
+    "language": "Python",
+    "updated_at": "2026-03-13T23:06:15Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Skyvern-AI/skyvern",
+    "url": "https://github.com/Skyvern-AI/skyvern",
+    "description": "Automate browser based workflows with AI",
+    "stars": 20798,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:08:59Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code",
+    "description": "An open-source AI agent that lives in your terminal.",
+    "stars": 20489,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:47:21Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "gravitational/teleport",
+    "url": "https://github.com/gravitational/teleport",
+    "description": "The easiest, and most secure way to access and protect all of your infrastructure.",
+    "stars": 20011,
+    "language": "Go",
+    "updated_at": "2026-03-13T22:45:35Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "googleworkspace/cli",
+    "url": "https://github.com/googleworkspace/cli",
+    "description": "Google Workspace CLI — one command-line tool for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more. Dynamically built from Google Discovery Service. Includes AI agent skills.",
+    "stars": 20006,
+    "language": "Rust",
+    "updated_at": "2026-03-14T02:10:08Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "gitbutlerapp/gitbutler",
+    "url": "https://github.com/gitbutlerapp/gitbutler",
+    "description": "The GitButler version control client, backed by Git, powered by Tauri/Rust/Svelte",
+    "stars": 19884,
+    "language": "Rust",
+    "updated_at": "2026-03-14T01:50:22Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ZhuLinsen/daily_stock_analysis",
+    "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+    "description": "LLM驱动的 A/H/美股智能分析器，多数据源行情 + 实时新闻 + Gemini 决策仪表盘 + 多渠道推送，零成本，纯白嫖，定时运行",
+    "stars": 19607,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:13:45Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "steveyegge/beads",
+    "url": "https://github.com/steveyegge/beads",
+    "description": "Beads - A memory upgrade for your coding agent",
+    "stars": 18983,
+    "language": "Go",
+    "updated_at": "2026-03-14T02:03:14Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "google/adk-python",
+    "url": "https://github.com/google/adk-python",
+    "description": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+    "stars": 18346,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:48:10Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "comet-ml/opik",
+    "url": "https://github.com/comet-ml/opik",
+    "description": "Debug, evaluate, and monitor your LLM applications, RAG systems, and agentic workflows with comprehensive tracing, automated evaluations, and production-ready dashboards.",
+    "stars": 18225,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:57:27Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "wasp-lang/wasp",
+    "url": "https://github.com/wasp-lang/wasp",
+    "description": "The batteries-included full-stack framework for the AI era. Develop JS/TS web apps (React, Node.js, and Prisma) using declarative code that abstracts away complex full-stack features like auth, background jobs, RPC, email sending, end-to-end type safety, single-command deployment, and more.",
+    "stars": 18183,
+    "language": "TypeScript",
+    "updated_at": "2026-03-13T23:13:19Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "super-productivity/super-productivity",
+    "url": "https://github.com/super-productivity/super-productivity",
+    "description": "Super Productivity is an advanced todo list app with integrated Timeboxing and time tracking capabilities. It also comes with integrations for Jira, GitLab, GitHub and Open Project.",
+    "stars": 17952,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:24:00Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "onyx-dot-app/onyx",
+    "url": "https://github.com/onyx-dot-app/onyx",
+    "description": "Open Source AI Platform - AI Chat with advanced features that works with every LLM",
+    "stars": 17862,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:12:28Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "arc53/DocsGPT",
+    "url": "https://github.com/arc53/DocsGPT",
+    "description": "Private AI platform for agents, assistants and enterprise search. Built-in Agent Builder, Deep research, Document analysis, Multi-model support, and API connectivity for agents.",
+    "stars": 17762,
+    "language": "Python",
+    "updated_at": "2026-03-13T21:03:03Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "huggingface/trl",
+    "url": "https://github.com/huggingface/trl",
+    "description": "Train transformer language models with reinforcement learning.",
+    "stars": 17640,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:53:38Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "rothgar/awesome-tuis",
+    "url": "https://github.com/rothgar/awesome-tuis",
+    "description": "List of projects that provide terminal user interfaces",
+    "stars": 17612,
+    "language": "-",
+    "updated_at": "2026-03-14T01:08:50Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe",
+    "description": "screenpipe turns your computer into a personal AI that knows everything you've done. record. search. automate. all local, all private, all yours.",
+    "stars": 17216,
+    "language": "Rust",
+    "updated_at": "2026-03-14T02:02:46Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "nukeop/nuclear",
+    "url": "https://github.com/nukeop/nuclear",
+    "description": "Streaming music player that finds free music for you",
+    "stars": 17046,
+    "language": "TypeScript",
+    "updated_at": "2026-03-13T23:21:19Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Kilo-Org/kilocode",
+    "url": "https://github.com/Kilo-Org/kilocode",
+    "description": "Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent. #1 coding agent on OpenRouter. 1.5M+ Kilo Coders. 25T+ tokens processed",
+    "stars": 16658,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T00:28:31Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "VictoriaMetrics/VictoriaMetrics",
+    "url": "https://github.com/VictoriaMetrics/VictoriaMetrics",
+    "description": "VictoriaMetrics: fast, cost-effective monitoring solution and time series database",
+    "stars": 16509,
+    "language": "Go",
+    "updated_at": "2026-03-13T22:13:06Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "SimplifyJobs/New-Grad-Positions",
+    "url": "https://github.com/SimplifyJobs/New-Grad-Positions",
+    "description": "A collection of full time roles in SWE, Quant, and PM for new grads.",
+    "stars": 16488,
+    "language": "-",
+    "updated_at": "2026-03-14T02:01:21Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "keploy/keploy",
+    "url": "https://github.com/keploy/keploy",
+    "description": "API, Integration, E2E Testing Agent for Developers that actually work. Generate tests, mocks/stubs for your APIs!",
+    "stars": 16283,
+    "language": "Go",
+    "updated_at": "2026-03-13T21:54:01Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "AlexsJones/llmfit",
+    "url": "https://github.com/AlexsJones/llmfit",
+    "description": "Hundreds of models & providers. One command to find what runs on your hardware.",
+    "stars": 16238,
+    "language": "Rust",
+    "updated_at": "2026-03-14T02:10:29Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "GoogleCloudPlatform/generative-ai",
+    "url": "https://github.com/GoogleCloudPlatform/generative-ai",
+    "description": "Sample code and notebooks for Generative AI on Google Cloud, with Gemini on Vertex AI",
+    "stars": 16134,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-14T01:08:11Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "agent0ai/agent-zero",
+    "url": "https://github.com/agent0ai/agent-zero",
+    "description": "Agent Zero AI framework",
+    "stars": 16071,
+    "language": "Python",
+    "updated_at": "2026-03-13T23:36:58Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "windmill-labs/windmill",
+    "url": "https://github.com/windmill-labs/windmill",
+    "description": "Open-source developer platform to power your entire infra and turn scripts into webhooks, workflows and UIs. Fastest workflow engine (13x vs Airflow). Open-source alternative to Retool and Temporal.",
+    "stars": 15994,
+    "language": "HTML",
+    "updated_at": "2026-03-14T01:27:45Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "termux/termux-packages",
+    "url": "https://github.com/termux/termux-packages",
+    "description": "A package build system for Termux.",
+    "stars": 15858,
+    "language": "Shell",
+    "updated_at": "2026-03-14T01:18:31Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "weaviate/weaviate",
+    "url": "https://github.com/weaviate/weaviate",
+    "description": "Weaviate is an open-source vector database that stores both objects and vectors, allowing for the combination of vector search with structured filtering with the fault tolerance and scalability of a cloud-native database​.",
+    "stars": 15798,
+    "language": "Go",
+    "updated_at": "2026-03-13T23:07:26Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "lightpanda-io/browser",
+    "url": "https://github.com/lightpanda-io/browser",
+    "description": "Lightpanda: the headless browser designed for AI and automation",
+    "stars": 15540,
+    "language": "Zig",
+    "updated_at": "2026-03-14T02:13:51Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "pydantic/pydantic-ai",
+    "url": "https://github.com/pydantic/pydantic-ai",
+    "description": "GenAI Agent Framework, the Pydantic way",
+    "stars": 15451,
+    "language": "Python",
+    "updated_at": "2026-03-13T23:38:55Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "PyO3/pyo3",
+    "url": "https://github.com/PyO3/pyo3",
+    "description": "Rust bindings for the Python interpreter",
+    "stars": 15438,
+    "language": "Rust",
+    "updated_at": "2026-03-13T19:32:17Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "promptfoo/promptfoo",
+    "url": "https://github.com/promptfoo/promptfoo",
+    "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, Llama, and more. Simple declarative configs with command line and CI/CD integration.",
+    "stars": 15320,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:13:03Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "shanraisshan/claude-code-best-practice",
+    "url": "https://github.com/shanraisshan/claude-code-best-practice",
+    "description": "practice made claude perfect",
+    "stars": 15072,
+    "language": "HTML",
+    "updated_at": "2026-03-14T02:13:58Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "triggerdotdev/trigger.dev",
+    "url": "https://github.com/triggerdotdev/trigger.dev",
+    "description": "Trigger.dev – build and deploy fully‑managed AI agents and workflows",
+    "stars": 14023,
+    "language": "TypeScript",
+    "updated_at": "2026-03-13T23:53:06Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "xpipe-io/xpipe",
+    "url": "https://github.com/xpipe-io/xpipe",
+    "description": "Access your entire server infrastructure from your local desktop",
+    "stars": 13856,
+    "language": "Java",
+    "updated_at": "2026-03-13T19:39:32Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "wasp-lang/open-saas",
+    "url": "https://github.com/wasp-lang/open-saas",
+    "description": "A 100% free modern JS SaaS boilerplate (React, NodeJS, Prisma). Full-featured: Auth (email, google, github, slack, MS), Email sending, Background jobs, Landing page, Payments (Stripe, Polar.sh), Shadcn UI, S3 file upload. AI-ready with tailored AGENTS.md, skills, and Claude Code plugin. One cmd deploy. Powered by Wasp full-stack framework.",
+    "stars": 13567,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:33:47Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "grokability/snipe-it",
+    "url": "https://github.com/grokability/snipe-it",
+    "description": "A free open source IT asset/license management system",
+    "stars": 13512,
+    "language": "PHP",
+    "updated_at": "2026-03-13T19:22:04Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "memvid/memvid",
+    "url": "https://github.com/memvid/memvid",
+    "description": "Memory layer for AI Agents. Replace complex RAG pipelines with a serverless, single-file memory layer. Give your agents instant retrieval and long-term memory.",
+    "stars": 13425,
+    "language": "Rust",
+    "updated_at": "2026-03-13T22:35:08Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "googleapis/genai-toolbox",
+    "url": "https://github.com/googleapis/genai-toolbox",
+    "description": "MCP Toolbox for Databases is an open source MCP server for databases.",
+    "stars": 13410,
+    "language": "Go",
+    "updated_at": "2026-03-14T00:29:20Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "topoteretes/cognee",
+    "url": "https://github.com/topoteretes/cognee",
+    "description": "Knowledge Engine for AI Agent Memory in 6 lines of code",
+    "stars": 13276,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:48:06Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "AndyMik90/Aperant",
+    "url": "https://github.com/AndyMik90/Aperant",
+    "description": "Autonomous multi-session AI coding",
+    "stars": 13264,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T00:01:18Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "coreyhaines31/marketingskills",
+    "url": "https://github.com/coreyhaines31/marketingskills",
+    "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+    "stars": 13258,
+    "language": "JavaScript",
+    "updated_at": "2026-03-14T01:58:51Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "google/A2UI",
+    "url": "https://github.com/google/A2UI",
+    "description": "",
+    "stars": 13066,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:11:30Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "trycua/cua",
+    "url": "https://github.com/trycua/cua",
+    "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
+    "stars": 13049,
+    "language": "Python",
+    "updated_at": "2026-03-13T20:16:20Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "abhigyanpatwari/GitNexus",
+    "url": "https://github.com/abhigyanpatwari/GitNexus",
+    "description": "GitNexus: The Zero-Server Code Intelligence Engine -       GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration",
+    "stars": 12569,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:13:43Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ag-ui-protocol/ag-ui",
+    "url": "https://github.com/ag-ui-protocol/ag-ui",
+    "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+    "stars": 12448,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:03:45Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "MemoriLabs/Memori",
+    "url": "https://github.com/MemoriLabs/Memori",
+    "description": "SQL Native Memory Layer for LLMs, AI Agents & Multi-Agent Systems",
+    "stars": 12353,
+    "language": "Python",
+    "updated_at": "2026-03-13T23:58:06Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "steveyegge/gastown",
+    "url": "https://github.com/steveyegge/gastown",
+    "description": "Gas Town - multi-agent workspace manager",
+    "stars": 12026,
+    "language": "Go",
+    "updated_at": "2026-03-14T01:40:38Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "fuzhengwei/CodeGuide",
+    "url": "https://github.com/fuzhengwei/CodeGuide",
+    "description": ":books: 本代码库是作者小傅哥多年从事一线互联网 Java 开发的学习历程技术汇总，旨在为大家提供一个清晰详细的学习教程，侧重点更倾向编写Java核心内容。如果本仓库能为您提供帮助，请给予支持(关注、点赞、分享)！",
+    "stars": 11830,
+    "language": "Shell",
+    "updated_at": "2026-03-13T22:43:29Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "different-ai/openwork",
+    "url": "https://github.com/different-ai/openwork",
+    "description": "An open-source alternative to Claude Cowork built for teams, powered by opencode",
+    "stars": 11698,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:05:25Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "datahub-project/datahub",
+    "url": "https://github.com/datahub-project/datahub",
+    "description": "The Metadata Platform for your Data and AI Stack",
+    "stars": 11657,
+    "language": "Java",
+    "updated_at": "2026-03-13T23:14:16Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "e2b-dev/E2B",
+    "url": "https://github.com/e2b-dev/E2B",
+    "description": "Open-source, secure environment with real-world tools for enterprise-grade agents.",
+    "stars": 11272,
+    "language": "MDX",
+    "updated_at": "2026-03-13T19:55:41Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "kornia/kornia",
+    "url": "https://github.com/kornia/kornia",
+    "description": "🐍 Geometric Computer Vision Library for Spatial AI",
+    "stars": 11114,
+    "language": "Python",
+    "updated_at": "2026-03-13T20:48:41Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "langchain4j/langchain4j",
+    "url": "https://github.com/langchain4j/langchain4j",
+    "description": "LangChain4j is an open-source Java library that simplifies the integration of LLMs into Java applications through a unified API, providing access to popular LLMs and vector databases. It makes implementing RAG, tool calling (including support for MCP), and agents easy. LangChain4j integrates seamlessly with various enterprise Java frameworks.",
+    "stars": 11095,
+    "language": "Java",
+    "updated_at": "2026-03-14T01:20:35Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "tensorzero/tensorzero",
+    "url": "https://github.com/tensorzero/tensorzero",
+    "description": "TensorZero is an open-source stack for industrial-grade LLM applications. It unifies an LLM gateway, observability, optimization, evaluation, and experimentation.",
+    "stars": 11086,
+    "language": "Rust",
+    "updated_at": "2026-03-13T21:23:51Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "unicodeveloper/awesome-nextjs",
+    "url": "https://github.com/unicodeveloper/awesome-nextjs",
+    "description": ":notebook_with_decorative_cover: :books: A curated list of awesome resources : books, videos, articles about using Next.js (A minimalistic framework for universal server-rendered React applications)",
+    "stars": 11054,
+    "language": "-",
+    "updated_at": "2026-03-13T16:13:38Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "0xJacky/nginx-ui",
+    "url": "https://github.com/0xJacky/nginx-ui",
+    "description": "Yet another WebUI for Nginx",
+    "stars": 10840,
+    "language": "Go",
+    "updated_at": "2026-03-14T01:24:54Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "langchain-ai/deepagents",
+    "url": "https://github.com/langchain-ai/deepagents",
+    "description": "Agent harness built with LangChain and LangGraph. Equipped with a planning tool, a filesystem backend, and the ability to spawn subagents - well-equipped to handle complex agentic tasks.",
+    "stars": 10701,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:23:26Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "pipecat-ai/pipecat",
+    "url": "https://github.com/pipecat-ai/pipecat",
+    "description": "Open Source framework for voice and multimodal conversational AI",
+    "stars": 10694,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:07:10Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "HKUDS/DeepTutor",
+    "url": "https://github.com/HKUDS/DeepTutor",
+    "description": "\"DeepTutor: AI-Powered Personalized Learning Assistant\"",
+    "stars": 10694,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:55:49Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "qodo-ai/pr-agent",
+    "url": "https://github.com/qodo-ai/pr-agent",
+    "description": "🚀 PR Agent - The Original Open-Source PR Reviewer. This repo is not the Qodo free tier! Try the free version on our website.",
+    "stars": 10530,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:01:48Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "triton-inference-server/server",
+    "url": "https://github.com/triton-inference-server/server",
+    "description": "The Triton Inference Server provides an optimized cloud and edge inferencing solution.",
+    "stars": 10428,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:12:12Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "EveryInc/compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin",
+    "description": "Official Claude Code compound engineering plugin",
+    "stars": 10363,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:12:49Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "TEN-framework/ten-framework",
+    "url": "https://github.com/TEN-framework/ten-framework",
+    "description": "Open-source framework for conversational voice AI agents",
+    "stars": 10243,
+    "language": "Python",
+    "updated_at": "2026-03-13T17:00:25Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "vercel-labs/skills",
+    "url": "https://github.com/vercel-labs/skills",
+    "description": "The open agent skills tool - npx skills",
+    "stars": 10102,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:00:16Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "PatrickJS/awesome-angular",
+    "url": "https://github.com/PatrickJS/awesome-angular",
+    "description": ":page_facing_up: A curated list of awesome Angular resources",
+    "stars": 9978,
+    "language": "HTML",
+    "updated_at": "2026-03-13T15:43:40Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "KalyanKS-NLP/llm-engineer-toolkit",
+    "url": "https://github.com/KalyanKS-NLP/llm-engineer-toolkit",
+    "description": "A curated list of  120+ LLM libraries category wise.",
+    "stars": 9949,
+    "language": "-",
+    "updated_at": "2026-03-14T02:08:50Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "nearai/ironclaw",
+    "url": "https://github.com/nearai/ironclaw",
+    "description": "IronClaw is OpenClaw inspired implementation in Rust focused on privacy and security",
+    "stars": 9910,
+    "language": "Rust",
+    "updated_at": "2026-03-14T01:57:48Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "danielmiessler/Personal_AI_Infrastructure",
+    "url": "https://github.com/danielmiessler/Personal_AI_Infrastructure",
+    "description": "Agentic AI Infrastructure for magnifying HUMAN capabilities.",
+    "stars": 9882,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:12:45Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "IDEA-Research/GroundingDINO",
+    "url": "https://github.com/IDEA-Research/GroundingDINO",
+    "description": "[ECCV 2024] Official implementation of the paper \"Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection\"",
+    "stars": 9831,
+    "language": "Python",
+    "updated_at": "2026-03-13T14:11:35Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "humanlayer/humanlayer",
+    "url": "https://github.com/humanlayer/humanlayer",
+    "description": "The best way to get AI coding agents to solve hard problems in complex codebases.",
+    "stars": 9825,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:53:41Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "accomplish-ai/accomplish",
+    "url": "https://github.com/accomplish-ai/accomplish",
+    "description": "Accomplish™ is the open source Al coworker that lives on your desktop",
+    "stars": 9759,
+    "language": "TypeScript",
+    "updated_at": "2026-03-13T18:32:23Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "browseros-ai/BrowserOS",
+    "url": "https://github.com/browseros-ai/BrowserOS",
+    "description": "🌐 The open-source Agentic browser; alternative to ChatGPT Atlas, Perplexity Comet, Dia.",
+    "stars": 9749,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:58:39Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "swyxio/spark-joy",
+    "url": "https://github.com/swyxio/spark-joy",
+    "description": "✨😂 2000+ ways to add design flair, user delight, and whimsy to your product.",
+    "stars": 9736,
+    "language": "-",
+    "updated_at": "2026-03-14T01:20:02Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "microsoft/magentic-ui",
+    "url": "https://github.com/microsoft/magentic-ui",
+    "description": "A research prototype of a human-centered web agent",
+    "stars": 9719,
+    "language": "Python",
+    "updated_at": "2026-03-13T23:51:26Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "livekit/agents",
+    "url": "https://github.com/livekit/agents",
+    "description": "A framework for building realtime voice AI agents 🤖🎙️📹",
+    "stars": 9702,
+    "language": "Python",
+    "updated_at": "2026-03-13T23:53:33Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode",
+    "description": "Teams-first Multi-agent orchestration for Claude Code",
+    "stars": 9634,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:12:31Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "aikorea/awesome-rl",
+    "url": "https://github.com/aikorea/awesome-rl",
+    "description": "Reinforcement learning resources curated",
+    "stars": 9614,
+    "language": "-",
+    "updated_at": "2026-03-14T01:24:35Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "rothgar/awesome-tmux",
+    "url": "https://github.com/rothgar/awesome-tmux",
+    "description": "A list of awesome resources for tmux",
+    "stars": 9612,
+    "language": "-",
+    "updated_at": "2026-03-13T20:52:09Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "liyupi/ai-guide",
+    "url": "https://github.com/liyupi/ai-guide",
+    "description": "程序员鱼皮的 AI 资源大全 + Vibe Coding 零基础教程，分享大模型选择指南（DeepSeek / GPT / Gemini / Claude）、最新 AI 资讯、Prompt 提示词大全、AI 知识百科（RAG / MCP / A2A）、AI 编程教程、AI 工具用法（Cursor / Claude Code / OpenClaw / TRAE / Lovable / Agent Skills）、AI 开发框架教程（Spring AI / LangChain）、AI 产品变现指南，帮你快速掌握 AI 技术，走在时代前沿。本项目为开源文档版本，已升级为鱼皮 AI 导航网站",
+    "stars": 9608,
+    "language": "JavaScript",
+    "updated_at": "2026-03-14T01:16:58Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "microsoft/vscode-copilot-chat",
+    "url": "https://github.com/microsoft/vscode-copilot-chat",
+    "description": "Copilot Chat extension for VS Code",
+    "stars": 9607,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:51:36Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "cloudflare/moltworker",
+    "url": "https://github.com/cloudflare/moltworker",
+    "description": "Run OpenClaw, (formerly Moltbot, formerly Clawdbot) on Cloudflare Workers",
+    "stars": 9602,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T00:44:44Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ValueCell-ai/valuecell",
+    "url": "https://github.com/ValueCell-ai/valuecell",
+    "description": "ValueCell is a community-driven, multi-agent platform for financial applications.",
+    "stars": 9584,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:09:15Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "skypilot-org/skypilot",
+    "url": "https://github.com/skypilot-org/skypilot",
+    "description": "Run, manage, and scale AI workloads on any AI infrastructure. Use one system to access & manage all AI compute (Kubernetes, 20+ clouds, or on-prem).",
+    "stars": 9571,
+    "language": "Python",
+    "updated_at": "2026-03-13T23:29:57Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "sigoden/aichat",
+    "url": "https://github.com/sigoden/aichat",
+    "description": "All-in-one LLM CLI tool featuring Shell Assistant, Chat-REPL, RAG, AI Tools & Agents, with access to OpenAI, Claude, Gemini, Ollama, Groq, and more.",
+    "stars": 9538,
+    "language": "Rust",
+    "updated_at": "2026-03-13T17:51:12Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "a16z-infra/ai-town",
+    "url": "https://github.com/a16z-infra/ai-town",
+    "description": "A MIT-licensed, deployable starter kit for building and customizing your own version of AI town - a virtual town where AI characters live, chat and socialize.",
+    "stars": 9530,
+    "language": "TypeScript",
+    "updated_at": "2026-03-13T22:39:02Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "NoeFabris/opencode-antigravity-auth",
+    "url": "https://github.com/NoeFabris/opencode-antigravity-auth",
+    "description": "Enable Opencode to authenticate against Antigravity (Google's IDE) via OAuth so you can use Antigravity rate limits and access models like gemini-3-pro and claude-opus-4-5-thinking with your Google credentials.",
+    "stars": 9501,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T00:53:59Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "brexhq/prompt-engineering",
+    "url": "https://github.com/brexhq/prompt-engineering",
+    "description": "Tips and tricks for working with Large Language Models like OpenAI's GPT-4.",
+    "stars": 9501,
+    "language": "-",
+    "updated_at": "2026-03-14T00:12:50Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "onnx/models",
+    "url": "https://github.com/onnx/models",
+    "description": "A collection of pre-trained, state-of-the-art models in the ONNX format",
+    "stars": 9481,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-13T14:44:49Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "vxcontrol/pentagi",
+    "url": "https://github.com/vxcontrol/pentagi",
+    "description": "✨ Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+    "stars": 9477,
+    "language": "Go",
+    "updated_at": "2026-03-14T01:56:41Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Wei-Shaw/claude-relay-service",
+    "url": "https://github.com/Wei-Shaw/claude-relay-service",
+    "description": "CRS-自建Claude Code镜像，一站式开源中转服务，让 Claude、OpenAI、Gemini、Droid 订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。",
+    "stars": 9460,
+    "language": "JavaScript",
+    "updated_at": "2026-03-13T17:32:18Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "mcp-use/mcp-use",
+    "url": "https://github.com/mcp-use/mcp-use",
+    "description": "The fullstack MCP framework to develop MCP Apps for ChatGPT / Claude & MCP Servers for AI Agents.",
+    "stars": 9434,
+    "language": "TypeScript",
+    "updated_at": "2026-03-13T19:39:46Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "aden-hive/hive",
+    "url": "https://github.com/aden-hive/hive",
+    "description": "Outcome driven agent development framework that evolves",
+    "stars": 9386,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:04:43Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "anomalyco/opentui",
+    "url": "https://github.com/anomalyco/opentui",
+    "description": "OpenTUI is a library for building terminal user interfaces (TUIs)",
+    "stars": 9377,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:49:07Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ZeroLu/awesome-nanobanana-pro",
+    "url": "https://github.com/ZeroLu/awesome-nanobanana-pro",
+    "description": "🚀 An awesome list of curated Nano Banana pro prompts and examples. Your go-to resource for mastering prompt engineering and exploring the creative potential of the Nano banana pro(Nano banana 2) AI image model.",
+    "stars": 9362,
+    "language": "-",
+    "updated_at": "2026-03-14T01:51:35Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "github/copilot-cli",
+    "url": "https://github.com/github/copilot-cli",
+    "description": "GitHub Copilot CLI brings the power of Copilot coding agent directly to your terminal.",
+    "stars": 9322,
+    "language": "Shell",
+    "updated_at": "2026-03-14T00:37:04Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "AdrienTorris/awesome-blazor",
+    "url": "https://github.com/AdrienTorris/awesome-blazor",
+    "description": "Resources for Blazor, a .NET web framework using C#/Razor and HTML that runs in the browser with WebAssembly.",
+    "stars": 9318,
+    "language": "-",
+    "updated_at": "2026-03-11T21:01:23Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "zarazhangrui/frontend-slides",
+    "url": "https://github.com/zarazhangrui/frontend-slides",
+    "description": "Create beautiful slides on the web using Claude's frontend skills",
+    "stars": 9314,
+    "language": "CSS",
+    "updated_at": "2026-03-14T02:03:56Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "diet103/claude-code-infrastructure-showcase",
+    "url": "https://github.com/diet103/claude-code-infrastructure-showcase",
+    "description": "Examples of my Claude Code infrastructure with skill auto-activation, hooks, and agents",
+    "stars": 9239,
+    "language": "Shell",
+    "updated_at": "2026-03-13T23:32:28Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "friuns2/BlackFriday-GPTs-Prompts",
+    "url": "https://github.com/friuns2/BlackFriday-GPTs-Prompts",
+    "description": "List of free GPTs that doesn't require plus subscription",
+    "stars": 9234,
+    "language": "-",
+    "updated_at": "2026-03-14T01:45:29Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "kyrolabs/awesome-langchain",
+    "url": "https://github.com/kyrolabs/awesome-langchain",
+    "description": "😎 Awesome list of tools and projects with the awesome LangChain framework",
+    "stars": 9227,
+    "language": "-",
+    "updated_at": "2026-03-13T23:24:46Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Arindam200/awesome-ai-apps",
+    "url": "https://github.com/Arindam200/awesome-ai-apps",
+    "description": "A collection of projects showcasing RAG, agents, workflows, and other AI use cases",
+    "stars": 9227,
+    "language": "Python",
+    "updated_at": "2026-03-13T20:13:06Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "yzhao062/anomaly-detection-resources",
+    "url": "https://github.com/yzhao062/anomaly-detection-resources",
+    "description": "Anomaly detection related books, papers, videos, and toolboxes. Last update late 2025 for LLM and VLM works!",
+    "stars": 9201,
+    "language": "Python",
+    "updated_at": "2026-03-13T14:15:57Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "OpenRLHF/OpenRLHF",
+    "url": "https://github.com/OpenRLHF/OpenRLHF",
+    "description": "An Easy-to-use, Scalable and High-performance Agentic RL Framework based on Ray (PPO & DAPO & REINFORCE++ & TIS & vLLM & Ray & Async  RL)",
+    "stars": 9163,
+    "language": "Python",
+    "updated_at": "2026-03-13T18:20:22Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Lissy93/awesome-privacy",
+    "url": "https://github.com/Lissy93/awesome-privacy",
+    "description": "🦄  A curated list of privacy & security-focused software and services",
+    "stars": 9058,
+    "language": "Astro",
+    "updated_at": "2026-03-14T01:07:03Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "volcengine/OpenViking",
+    "url": "https://github.com/volcengine/OpenViking",
+    "description": "OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system paradigm, enabling hierarchical context delivery and self-evolving.",
+    "stars": 9049,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:13:29Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "OpenPipe/ART",
+    "url": "https://github.com/OpenPipe/ART",
+    "description": "Agent Reinforcement Trainer: train multi-step agents for real-world tasks using GRPO. Give your agents on-the-job training. Reinforcement learning for Qwen3.5, GPT-OSS, Llama, and more!",
+    "stars": 9013,
+    "language": "Python",
+    "updated_at": "2026-03-13T23:43:40Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "numman-ali/openskills",
+    "url": "https://github.com/numman-ali/openskills",
+    "description": "Universal skills loader for AI coding agents - npm i -g openskills",
+    "stars": 9001,
+    "language": "TypeScript",
+    "updated_at": "2026-03-13T16:08:42Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "cft0808/edict",
+    "url": "https://github.com/cft0808/edict",
+    "description": "🏛️ 三省六部制 · OpenClaw Multi-Agent Orchestration System — 9 specialized AI agents with real-time dashboard, model config, and full audit trails",
+    "stars": 8988,
+    "language": "Python",
+    "updated_at": "2026-03-14T02:08:44Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Panniantong/Agent-Reach",
+    "url": "https://github.com/Panniantong/Agent-Reach",
+    "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+    "stars": 8958,
+    "language": "Python",
+    "updated_at": "2026-03-14T01:57:54Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "huggingface/skills",
+    "url": "https://github.com/huggingface/skills",
+    "description": "",
+    "stars": 8953,
+    "language": "Python",
+    "updated_at": "2026-03-14T00:58:04Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "53AI/53AIHub",
+    "url": "https://github.com/53AI/53AIHub",
+    "description": "53AI Hub is an open-source AI portal, which enables you to quickly build a operational-level AI portal to launch and operate AI agents, prompts, and AI tools. It supports seamless integration with development platforms like Coze, Dify, FastGPT, RAGFlow.",
+    "stars": 8939,
+    "language": "Go",
+    "updated_at": "2026-03-14T01:19:06Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "oumi-ai/oumi",
+    "url": "https://github.com/oumi-ai/oumi",
+    "description": "Easily fine-tune, evaluate and deploy gpt-oss, Qwen3, DeepSeek-R1, or any open source LLM / VLM!",
+    "stars": 8908,
+    "language": "Python",
+    "updated_at": "2026-03-13T18:38:10Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Arize-ai/phoenix",
+    "url": "https://github.com/Arize-ai/phoenix",
+    "description": "AI Observability & Evaluation",
+    "stars": 8852,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-14T01:56:33Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "davidsonfellipe/awesome-wpo",
+    "url": "https://github.com/davidsonfellipe/awesome-wpo",
+    "description": ":pencil: A curated list of Web Performance Optimization. Everyone can contribute here!",
+    "stars": 8849,
+    "language": "JavaScript",
+    "updated_at": "2026-03-13T18:08:26Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "assistant-ui/assistant-ui",
+    "url": "https://github.com/assistant-ui/assistant-ui",
+    "description": "Typescript/React Library for AI Chat💬🚀",
+    "stars": 8818,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:57:37Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "JimLiu/baoyu-skills",
+    "url": "https://github.com/JimLiu/baoyu-skills",
+    "description": "",
+    "stars": 8812,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T02:11:53Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ai-collection/ai-collection",
+    "url": "https://github.com/ai-collection/ai-collection",
+    "description": "The Generative AI Landscape - A Collection of Awesome Generative AI Applications",
+    "stars": 8811,
+    "language": "-",
+    "updated_at": "2026-03-13T20:25:58Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "travisvn/awesome-claude-skills",
+    "url": "https://github.com/travisvn/awesome-claude-skills",
+    "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows — particularly Claude Code",
+    "stars": 8807,
+    "language": "-",
+    "updated_at": "2026-03-14T02:11:51Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "alibaba/spring-ai-alibaba",
+    "url": "https://github.com/alibaba/spring-ai-alibaba",
+    "description": "Agentic AI Framework for Java Developers",
+    "stars": 8720,
+    "language": "Java",
+    "updated_at": "2026-03-14T01:48:43Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "OpenBMB/MiniCPM",
+    "url": "https://github.com/OpenBMB/MiniCPM",
+    "description": "MiniCPM4 & MiniCPM4.1: Ultra-Efficient LLMs on End Devices, achieving 3+ generation speedup on reasoning tasks",
+    "stars": 8710,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-13T07:12:02Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "awslabs/llrt",
+    "url": "https://github.com/awslabs/llrt",
+    "description": "LLRT (Low Latency Runtime) is an experimental, lightweight JavaScript runtime designed to address the growing demand for fast and efficient Serverless applications.",
+    "stars": 8709,
+    "language": "Rust",
+    "updated_at": "2026-03-13T22:10:09Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "aimacode/aima-python",
+    "url": "https://github.com/aimacode/aima-python",
+    "description": "Python implementation of algorithms from Russell And Norvig's \"Artificial Intelligence - A Modern Approach\"",
+    "stars": 8694,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-13T15:29:30Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "HKUDS/AutoAgent",
+    "url": "https://github.com/HKUDS/AutoAgent",
+    "description": "\"AutoAgent: Fully-Automated and Zero-Code LLM Agent Framework\"",
+    "stars": 8656,
+    "language": "Python",
+    "updated_at": "2026-03-13T18:53:54Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "brave-people/Dev-Event",
+    "url": "https://github.com/brave-people/Dev-Event",
+    "description": "🎉🎈 개발자 {웨비나, 컨퍼런스, 해커톤} 행사를 알려드립니다. [with 남송리 삼번지]",
+    "stars": 8577,
+    "language": "-",
+    "updated_at": "2026-03-14T00:33:42Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "A-poc/RedTeam-Tools",
+    "url": "https://github.com/A-poc/RedTeam-Tools",
+    "description": "Tools and Techniques for Red Team / Penetration Testing",
+    "stars": 8567,
+    "language": "-",
+    "updated_at": "2026-03-13T17:49:47Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "davidkimai/Context-Engineering",
+    "url": "https://github.com/davidkimai/Context-Engineering",
+    "description": "\"Context engineering is the delicate art and science of filling the context window with just the right information for the next step.\" — Andrej Karpathy. A frontier, first-principles handbook inspired by Karpathy and 3Blue1Brown for moving beyond prompt engineering to the wider discipline of context design, orchestration, and optimization.",
+    "stars": 8558,
+    "language": "Python",
+    "updated_at": "2026-03-13T13:55:17Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "getanteon/anteon",
+    "url": "https://github.com/getanteon/anteon",
+    "description": "Anteon (formerly Ddosify): eBPF-based Kubernetes Monitoring and Performance Testing",
+    "stars": 8542,
+    "language": "Go",
+    "updated_at": "2026-03-13T08:43:42Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "dair-ai/ML-Papers-Explained",
+    "url": "https://github.com/dair-ai/ML-Papers-Explained",
+    "description": "Explanation to key concepts in ML",
+    "stars": 8531,
+    "language": "-",
+    "updated_at": "2026-03-10T06:27:09Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Atarity/deploy-your-own-saas",
+    "url": "https://github.com/Atarity/deploy-your-own-saas",
+    "description": "List of \"only yours\" cloud services for everyday needs :black_flag:",
+    "stars": 8491,
+    "language": "-",
+    "updated_at": "2026-03-13T23:10:37Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "awslabs/mcp",
+    "url": "https://github.com/awslabs/mcp",
+    "description": "Official MCP Servers for AWS",
+    "stars": 8450,
+    "language": "Python",
+    "updated_at": "2026-03-14T00:25:01Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "firmai/financial-machine-learning",
+    "url": "https://github.com/firmai/financial-machine-learning",
+    "description": "A curated list of practical financial machine learning tools and applications.",
+    "stars": 8447,
+    "language": "Python",
+    "updated_at": "2026-03-13T14:16:41Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "digoal/blog",
+    "url": "https://github.com/digoal/blog",
+    "description": "Opensource,Database,AI,Business,Minds. git clone --depth 1 https://github.com/digoal/blog",
+    "stars": 8433,
+    "language": "PLpgSQL",
+    "updated_at": "2026-03-13T13:18:14Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "siteboon/claudecodeui",
+    "url": "https://github.com/siteboon/claudecodeui",
+    "description": "Use Claude Code, Cursor CLI or Codex on mobile and web with CloudCLI (aka Claude Code UI). CloudCLI is a free open source webui/GUI that helps you manage your Claude Code session and projects remotely",
+    "stars": 8391,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:47:01Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "marcelscruz/public-apis",
+    "url": "https://github.com/marcelscruz/public-apis",
+    "description": "A collaborative list of public APIs for developers",
+    "stars": 8385,
+    "language": "JavaScript",
+    "updated_at": "2026-03-14T00:10:13Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "igorbarinov/awesome-data-engineering",
+    "url": "https://github.com/igorbarinov/awesome-data-engineering",
+    "description": "A curated list of data engineering tools for software developers",
+    "stars": 8370,
+    "language": "-",
+    "updated_at": "2026-03-13T14:28:28Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "timschneeb/awesome-shizuku",
+    "url": "https://github.com/timschneeb/awesome-shizuku",
+    "description": "Curated list of awesome Android apps making use of Shizuku",
+    "stars": 8321,
+    "language": "-",
+    "updated_at": "2026-03-14T02:02:46Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "llamastack/llama-stack",
+    "url": "https://github.com/llamastack/llama-stack",
+    "description": "Composable building blocks to build LLM Apps",
+    "stars": 8293,
+    "language": "Python",
+    "updated_at": "2026-03-14T00:30:09Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Future-House/paper-qa",
+    "url": "https://github.com/Future-House/paper-qa",
+    "description": "High accuracy RAG for answering questions from scientific documents with citations",
+    "stars": 8266,
+    "language": "Python",
+    "updated_at": "2026-03-13T17:42:16Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "lukilabs/beautiful-mermaid",
+    "url": "https://github.com/lukilabs/beautiful-mermaid",
+    "description": "",
+    "stars": 8233,
+    "language": "TypeScript",
+    "updated_at": "2026-03-13T23:56:25Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "ariga/atlas",
+    "url": "https://github.com/ariga/atlas",
+    "description": "Declarative schema migrations with schema-as-code workflows",
+    "stars": 8165,
+    "language": "Go",
+    "updated_at": "2026-03-13T18:57:28Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "spring-projects/spring-ai",
+    "url": "https://github.com/spring-projects/spring-ai",
+    "description": "An Application Framework for AI Engineering",
+    "stars": 8163,
+    "language": "Java",
+    "updated_at": "2026-03-14T02:06:01Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "TeamWiseFlow/wiseflow",
+    "url": "https://github.com/TeamWiseFlow/wiseflow",
+    "description": "enhance any agent's browser use skill",
+    "stars": 8106,
+    "language": "JavaScript",
+    "updated_at": "2026-03-13T23:25:19Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "lastmile-ai/mcp-agent",
+    "url": "https://github.com/lastmile-ai/mcp-agent",
+    "description": "Build effective agents using Model Context Protocol and simple workflow patterns",
+    "stars": 8099,
+    "language": "Python",
+    "updated_at": "2026-03-13T20:49:31Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "HariSekhon/DevOps-Bash-tools",
+    "url": "https://github.com/HariSekhon/DevOps-Bash-tools",
+    "description": "1000+ DevOps Bash Scripts - AWS, GCP, Kubernetes, Docker, CI/CD, APIs, SQL, PostgreSQL, MySQL, Hive, Impala, Kafka, Hadoop, Jenkins, GitHub, GitLab, BitBucket, Azure DevOps, TeamCity, Spotify, MP3, LDAP, Code/Build Linting, pkg mgmt for Linux, Mac, Python, Perl, Ruby, NodeJS, Golang, Advanced dotfiles: .bashrc, .vimrc, .gitconfig, .screenrc, tmux..",
+    "stars": 8095,
+    "language": "Shell",
+    "updated_at": "2026-03-13T23:42:20Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "WooooDyy/LLM-Agent-Paper-List",
+    "url": "https://github.com/WooooDyy/LLM-Agent-Paper-List",
+    "description": "The paper list of the 86-page SCIS cover paper \"The Rise and Potential of Large Language Model Based Agents: A Survey\" by Zhiheng Xi et al.",
+    "stars": 8074,
+    "language": "-",
+    "updated_at": "2026-03-14T01:19:18Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "mxgmn/MarkovJunior",
+    "url": "https://github.com/mxgmn/MarkovJunior",
+    "description": "Probabilistic language based on pattern matching and constraint propagation, 153 examples",
+    "stars": 8047,
+    "language": "C#",
+    "updated_at": "2026-03-13T23:50:36Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "datahaven-xyz/datahaven",
+    "url": "https://github.com/datahaven-xyz/datahaven",
+    "description": "An EVM compatible Substrate chain, powered by StorageHub and secured by EigenLayer",
+    "stars": 8033,
+    "language": "Rust",
+    "updated_at": "2026-03-13T15:40:38Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "bnb/awesome-developer-streams",
+    "url": "https://github.com/bnb/awesome-developer-streams",
+    "description": "👩🏿‍💻👨🏾‍💻👩🏼‍💻👨🏽‍💻👩🏻‍💻 Awesome Developers, Streaming",
+    "stars": 7970,
+    "language": "-",
+    "updated_at": "2026-03-10T20:14:51Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "acheong08/EdgeGPT",
+    "url": "https://github.com/acheong08/EdgeGPT",
+    "description": "Reverse engineered API of Microsoft's Bing Chat AI",
+    "stars": 7933,
+    "language": "Python",
+    "updated_at": "2026-03-13T06:53:37Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "alirezadir/Machine-Learning-Interviews",
+    "url": "https://github.com/alirezadir/Machine-Learning-Interviews",
+    "description": "This repo is meant to serve as a guide for Machine Learning/AI technical interviews.",
+    "stars": 7900,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-13T22:53:02Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "01-ai/Yi",
+    "url": "https://github.com/01-ai/Yi",
+    "description": "A series of large language models trained from scratch by developers @01-ai",
+    "stars": 7843,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-13T23:57:48Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "frankbria/ralph-claude-code",
+    "url": "https://github.com/frankbria/ralph-claude-code",
+    "description": "Autonomous AI development loop for Claude Code with intelligent exit detection",
+    "stars": 7811,
+    "language": "Shell",
+    "updated_at": "2026-03-14T01:30:34Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "Upsonic/Upsonic",
+    "url": "https://github.com/Upsonic/Upsonic",
+    "description": "Agent Framework For Fintech and Banks",
+    "stars": 7809,
+    "language": "Python",
+    "updated_at": "2026-03-13T20:49:27Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "microsoft/botframework-sdk",
+    "url": "https://github.com/microsoft/botframework-sdk",
+    "description": "Bot Framework provides the most comprehensive experience for building conversation applications.",
+    "stars": 7807,
+    "language": "JavaScript",
+    "updated_at": "2026-03-12T19:48:44Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "PWhiddy/PokemonRedExperiments",
+    "url": "https://github.com/PWhiddy/PokemonRedExperiments",
+    "description": "Playing Pokemon Red with Reinforcement Learning",
+    "stars": 7790,
+    "language": "Jupyter Notebook",
+    "updated_at": "2026-03-13T06:40:04Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "xixu-me/xget",
+    "url": "https://github.com/xixu-me/xget",
+    "description": "Ultra-high-performance, secure, all-in-one acceleration engine for developer resources",
+    "stars": 7783,
+    "language": "JavaScript",
+    "updated_at": "2026-03-13T18:17:42Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "bytedance/flowgram.ai",
+    "url": "https://github.com/bytedance/flowgram.ai",
+    "description": "FlowGram is an extensible workflow development framework with built-in canvas, form, variable, and materials that helps developers build AI workflow platforms faster and simpler.",
+    "stars": 7771,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T01:37:50Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "idosal/git-mcp",
+    "url": "https://github.com/idosal/git-mcp",
+    "description": "Put an end to code hallucinations! GitMCP is a free, open-source, remote MCP server for any GitHub project",
+    "stars": 7760,
+    "language": "TypeScript",
+    "updated_at": "2026-03-14T00:28:58Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "BoundaryML/baml",
+    "url": "https://github.com/BoundaryML/baml",
+    "description": "The AI framework that adds the engineering to prompt engineering (Python/TS/Ruby/Java/C#/Rust/Go compatible)",
+    "stars": 7754,
+    "language": "Rust",
+    "updated_at": "2026-03-14T00:38:56Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "alibaba/OpenSandbox",
+    "url": "https://github.com/alibaba/OpenSandbox",
+    "description": "OpenSandbox is a general-purpose sandbox platform for AI applications, offering multi-language SDKs, unified sandbox APIs, and Docker/Kubernetes runtimes for scenarios like Coding Agents, GUI Agents, Agent Evaluation, AI Code Execution, and RL Training.",
+    "stars": 7747,
+    "language": "Python",
+    "updated_at": "2026-03-14T00:48:05Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "meirwah/awesome-workflow-engines",
+    "url": "https://github.com/meirwah/awesome-workflow-engines",
+    "description": "A curated list of awesome open source workflow engines",
+    "stars": 7713,
+    "language": "-",
+    "updated_at": "2026-03-13T16:27:45Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "WangRongsheng/awesome-LLM-resources",
+    "url": "https://github.com/WangRongsheng/awesome-LLM-resources",
+    "description": "🧑‍🚀 全世界最好的LLM资料总结（多模态生成、Agent、辅助编程、AI审稿、数据处理、模型训练、模型推理、o1 模型、MCP、小语言模型、视觉语言模型） | Summary of the world's best LLM resources.",
+    "stars": 7706,
+    "language": "-",
+    "updated_at": "2026-03-13T15:09:20Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "firerpa/lamda",
+    "url": "https://github.com/firerpa/lamda",
+    "description": "The most powerful Android RPA agent framework, next generation of mobile automation robots.",
+    "stars": 7665,
+    "language": "Python",
+    "updated_at": "2026-03-13T08:32:26Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  },
+  {
+    "full_name": "dongyubin/DockerHub",
+    "url": "https://github.com/dongyubin/DockerHub",
+    "description": "2026年3月更新，目前国内可用Docker镜像源汇总，DockerHub国内镜像加速列表，🚀DockerHub镜像加速器",
+    "stars": 7647,
+    "language": "-",
+    "updated_at": "2026-03-14T00:43:20Z",
+    "labels": [
+      "ai coding agent"
+    ]
+  }
+]
