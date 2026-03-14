@@ -1,7 +1,7 @@
 # HandsOnLLM/Hands-On-Large-Language-Models
 
 - URL: https://github.com/HandsOnLLM/Hands-On-Large-Language-Models
-- Stars: 23369
+- Stars: 23370
 - Main language: Jupyter Notebook
 - Labels: prompt engineering
 - Relevance score: 5

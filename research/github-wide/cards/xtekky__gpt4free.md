@@ -1,7 +1,7 @@
 # xtekky/gpt4free
 
 - URL: https://github.com/xtekky/gpt4free
-- Stars: 65752
+- Stars: 65751
 - Main language: Python
 - Labels: mcp
 - Relevance score: 5

@@ -1,7 +1,7 @@
 # charmbracelet/crush
 
 - URL: https://github.com/charmbracelet/crush
-- Stars: 21317
+- Stars: 21319
 - Main language: Go
 - Labels: mcp
 - Relevance score: 6

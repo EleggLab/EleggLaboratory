@@ -1,7 +1,7 @@
 # DayuanJiang/next-ai-draw-io
 
 - URL: https://github.com/DayuanJiang/next-ai-draw-io
-- Stars: 22829
+- Stars: 22830
 - Main language: TypeScript
 - Labels: mcp
 - Relevance score: 4

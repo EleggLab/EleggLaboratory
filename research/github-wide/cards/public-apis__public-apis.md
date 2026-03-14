@@ -1,7 +1,7 @@
 # public-apis/public-apis
 
 - URL: https://github.com/public-apis/public-apis
-- Stars: 409521
+- Stars: 409535
 - Main language: Python
 - Labels: agent workflow
 - Relevance score: 5

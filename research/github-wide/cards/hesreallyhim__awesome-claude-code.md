@@ -1,7 +1,7 @@
 # hesreallyhim/awesome-claude-code
 
 - URL: https://github.com/hesreallyhim/awesome-claude-code
-- Stars: 27988
+- Stars: 27993
 - Main language: Python
 - Labels: agent workflow
 - Relevance score: 8

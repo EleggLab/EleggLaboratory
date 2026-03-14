@@ -1,7 +1,7 @@
 # anthropics/claude-code
 
 - URL: https://github.com/anthropics/claude-code
-- Stars: 77644
+- Stars: 77648
 - Main language: Shell
 - Labels: agent workflow
 - Relevance score: 9

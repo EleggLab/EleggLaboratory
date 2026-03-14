@@ -1,7 +1,7 @@
 # jaywcjlove/awesome-mac
 
 - URL: https://github.com/jaywcjlove/awesome-mac
-- Stars: 100127
+- Stars: 100128
 - Main language: JavaScript
 - Labels: agent workflow
 - Relevance score: 5

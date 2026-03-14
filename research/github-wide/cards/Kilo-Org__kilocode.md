@@ -1,7 +1,7 @@
 # Kilo-Org/kilocode
 
 - URL: https://github.com/Kilo-Org/kilocode
-- Stars: 16658
+- Stars: 16659
 - Main language: TypeScript
 - Labels: prompt engineering
 - Relevance score: 6

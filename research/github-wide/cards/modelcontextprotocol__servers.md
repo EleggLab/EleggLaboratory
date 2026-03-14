@@ -1,7 +1,7 @@
 # modelcontextprotocol/servers
 
 - URL: https://github.com/modelcontextprotocol/servers
-- Stars: 81026
+- Stars: 81028
 - Main language: TypeScript
 - Labels: agent workflow
 - Relevance score: 6

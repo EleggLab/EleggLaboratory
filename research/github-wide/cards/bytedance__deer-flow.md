@@ -1,7 +1,7 @@
 # bytedance/deer-flow
 
 - URL: https://github.com/bytedance/deer-flow
-- Stars: 30254
+- Stars: 30258
 - Main language: Python
 - Labels: agent workflow
 - Relevance score: 7

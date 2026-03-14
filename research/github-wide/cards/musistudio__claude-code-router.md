@@ -1,7 +1,7 @@
 # musistudio/claude-code-router
 
 - URL: https://github.com/musistudio/claude-code-router
-- Stars: 29605
+- Stars: 29606
 - Main language: TypeScript
 - Labels: agent workflow
 - Relevance score: 8

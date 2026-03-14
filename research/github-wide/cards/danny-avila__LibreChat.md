@@ -1,7 +1,7 @@
 # danny-avila/LibreChat
 
 - URL: https://github.com/danny-avila/LibreChat
-- Stars: 34615
+- Stars: 34616
 - Main language: TypeScript
 - Labels: mcp
 - Relevance score: 8

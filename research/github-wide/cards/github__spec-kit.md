@@ -1,7 +1,7 @@
 # github/spec-kit
 
 - URL: https://github.com/github/spec-kit
-- Stars: 76583
+- Stars: 76589
 - Main language: Python
 - Labels: agent workflow
 - Relevance score: 6

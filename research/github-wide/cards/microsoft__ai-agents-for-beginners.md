@@ -1,7 +1,7 @@
 # microsoft/ai-agents-for-beginners
 
 - URL: https://github.com/microsoft/ai-agents-for-beginners
-- Stars: 53916
+- Stars: 53917
 - Main language: Jupyter Notebook
 - Labels: context engineering
 - Relevance score: 6

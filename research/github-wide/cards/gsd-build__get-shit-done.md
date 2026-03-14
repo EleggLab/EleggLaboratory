@@ -1,7 +1,7 @@
 # gsd-build/get-shit-done
 
 - URL: https://github.com/gsd-build/get-shit-done
-- Stars: 29550
+- Stars: 29557
 - Main language: JavaScript
 - Labels: agent workflow
 - Relevance score: 10

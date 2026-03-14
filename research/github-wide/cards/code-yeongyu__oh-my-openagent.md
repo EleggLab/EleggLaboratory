@@ -1,7 +1,7 @@
 # code-yeongyu/oh-my-openagent
 
 - URL: https://github.com/code-yeongyu/oh-my-openagent
-- Stars: 39786
+- Stars: 39789
 - Main language: TypeScript
 - Labels: agent workflow
 - Relevance score: 7

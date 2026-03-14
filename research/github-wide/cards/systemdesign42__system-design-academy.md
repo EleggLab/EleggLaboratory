@@ -1,7 +1,7 @@
 # systemdesign42/system-design-academy
 
 - URL: https://github.com/systemdesign42/system-design-academy
-- Stars: 21877
+- Stars: 21886
 - Main language: -
 - Labels: context engineering
 - Relevance score: 4

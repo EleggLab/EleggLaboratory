@@ -1,7 +1,7 @@
 # linshenkx/prompt-optimizer
 
 - URL: https://github.com/linshenkx/prompt-optimizer
-- Stars: 24325
+- Stars: 24330
 - Main language: TypeScript
 - Labels: mcp
 - Relevance score: 5

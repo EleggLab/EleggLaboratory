@@ -1,7 +1,7 @@
 # microsoft/playwright-mcp
 
 - URL: https://github.com/microsoft/playwright-mcp
-- Stars: 28846
+- Stars: 28848
 - Main language: TypeScript
 - Labels: agent workflow
 - Relevance score: 6

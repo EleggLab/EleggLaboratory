@@ -1,7 +1,7 @@
 # oraios/serena
 
 - URL: https://github.com/oraios/serena
-- Stars: 21473
+- Stars: 21474
 - Main language: Python
 - Labels: mcp
 - Relevance score: 7

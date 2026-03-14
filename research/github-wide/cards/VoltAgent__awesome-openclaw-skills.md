@@ -1,7 +1,7 @@
 # VoltAgent/awesome-openclaw-skills
 
 - URL: https://github.com/VoltAgent/awesome-openclaw-skills
-- Stars: 36942
+- Stars: 36954
 - Main language: -
 - Labels: agent workflow
 - Relevance score: 7

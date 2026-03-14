@@ -1,7 +1,7 @@
 # punkpeye/awesome-mcp-servers
 
 - URL: https://github.com/punkpeye/awesome-mcp-servers
-- Stars: 83023
+- Stars: 83024
 - Main language: -
 - Labels: agent workflow
 - Relevance score: 6

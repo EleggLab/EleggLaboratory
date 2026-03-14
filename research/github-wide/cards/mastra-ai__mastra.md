@@ -1,7 +1,7 @@
 # mastra-ai/mastra
 
 - URL: https://github.com/mastra-ai/mastra
-- Stars: 21960
+- Stars: 21961
 - Main language: TypeScript
 - Labels: mcp
 - Relevance score: 5

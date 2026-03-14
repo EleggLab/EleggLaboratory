@@ -1,7 +1,7 @@
 # Fission-AI/OpenSpec
 
 - URL: https://github.com/Fission-AI/OpenSpec
-- Stars: 30365
+- Stars: 30369
 - Main language: TypeScript
 - Labels: agent workflow
 - Relevance score: 7

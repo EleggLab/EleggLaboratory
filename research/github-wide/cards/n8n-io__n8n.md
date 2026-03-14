@@ -1,7 +1,7 @@
 # n8n-io/n8n
 
 - URL: https://github.com/n8n-io/n8n
-- Stars: 179012
+- Stars: 179013
 - Main language: TypeScript
 - Labels: agent workflow
 - Relevance score: 7

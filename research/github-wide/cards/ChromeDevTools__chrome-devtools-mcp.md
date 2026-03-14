@@ -1,7 +1,7 @@
 # ChromeDevTools/chrome-devtools-mcp
 
 - URL: https://github.com/ChromeDevTools/chrome-devtools-mcp
-- Stars: 28840
+- Stars: 28841
 - Main language: TypeScript
 - Labels: mcp
 - Relevance score: 9

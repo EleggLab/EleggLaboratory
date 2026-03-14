@@ -1,7 +1,7 @@
 # Mintplex-Labs/anything-llm
 
 - URL: https://github.com/Mintplex-Labs/anything-llm
-- Stars: 56182
+- Stars: 56183
 - Main language: JavaScript
 - Labels: mcp
 - Relevance score: 6

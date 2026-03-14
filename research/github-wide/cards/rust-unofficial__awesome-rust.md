@@ -1,7 +1,7 @@
 # rust-unofficial/awesome-rust
 
 - URL: https://github.com/rust-unofficial/awesome-rust
-- Stars: 56141
+- Stars: 56140
 - Main language: Rust
 - Labels: agent workflow
 - Relevance score: 6

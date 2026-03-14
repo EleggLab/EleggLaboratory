@@ -1,7 +1,7 @@
 # nicolargo/glances
 
 - URL: https://github.com/nicolargo/glances
-- Stars: 32038
+- Stars: 32039
 - Main language: Python
 - Labels: mcp
 - Relevance score: 5

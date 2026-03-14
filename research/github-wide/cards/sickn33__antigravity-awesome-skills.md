@@ -1,7 +1,7 @@
 # sickn33/antigravity-awesome-skills
 
 - URL: https://github.com/sickn33/antigravity-awesome-skills
-- Stars: 24079
+- Stars: 24083
 - Main language: Python
 - Labels: prompt engineering
 - Relevance score: 9

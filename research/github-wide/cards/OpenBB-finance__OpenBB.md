@@ -1,7 +1,7 @@
 # OpenBB-finance/OpenBB
 
 - URL: https://github.com/OpenBB-finance/OpenBB
-- Stars: 62996
+- Stars: 62997
 - Main language: Python
 - Labels: mcp
 - Relevance score: 6

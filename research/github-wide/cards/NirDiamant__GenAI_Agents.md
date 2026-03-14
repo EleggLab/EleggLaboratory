@@ -1,7 +1,7 @@
 # NirDiamant/GenAI_Agents
 
 - URL: https://github.com/NirDiamant/GenAI_Agents
-- Stars: 20483
+- Stars: 20484
 - Main language: Jupyter Notebook
 - Labels: prompt engineering
 - Relevance score: 5

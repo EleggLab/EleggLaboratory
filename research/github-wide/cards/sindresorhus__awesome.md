@@ -1,7 +1,7 @@
 # sindresorhus/awesome
 
 - URL: https://github.com/sindresorhus/awesome
-- Stars: 445278
+- Stars: 445279
 - Main language: -
 - Labels: agent workflow
 - Relevance score: 5

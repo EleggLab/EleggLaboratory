@@ -1,7 +1,7 @@
 # lbjlaq/Antigravity-Manager
 
 - URL: https://github.com/lbjlaq/Antigravity-Manager
-- Stars: 26173
+- Stars: 26176
 - Main language: Rust
 - Labels: prompt engineering
 - Relevance score: 5

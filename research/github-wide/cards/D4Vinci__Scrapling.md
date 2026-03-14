@@ -1,7 +1,7 @@
 # D4Vinci/Scrapling
 
 - URL: https://github.com/D4Vinci/Scrapling
-- Stars: 29325
+- Stars: 29330
 - Main language: Python
 - Labels: mcp
 - Relevance score: 5

@@ -1,7 +1,7 @@
 # assafelovic/gpt-researcher
 
 - URL: https://github.com/assafelovic/gpt-researcher
-- Stars: 25709
+- Stars: 25710
 - Main language: Python
 - Labels: agent workflow
 - Relevance score: 6

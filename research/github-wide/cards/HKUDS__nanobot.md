@@ -1,7 +1,7 @@
 # HKUDS/nanobot
 
 - URL: https://github.com/HKUDS/nanobot
-- Stars: 33249
+- Stars: 33251
 - Main language: Python
 - Labels: mcp
 - Relevance score: 6

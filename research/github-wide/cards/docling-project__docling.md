@@ -1,7 +1,7 @@
 # docling-project/docling
 
 - URL: https://github.com/docling-project/docling
-- Stars: 55752
+- Stars: 55753
 - Main language: Python
 - Labels: mcp
 - Relevance score: 5

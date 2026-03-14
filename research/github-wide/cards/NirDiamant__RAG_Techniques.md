@@ -1,7 +1,7 @@
 # NirDiamant/RAG_Techniques
 
 - URL: https://github.com/NirDiamant/RAG_Techniques
-- Stars: 25919
+- Stars: 25920
 - Main language: Jupyter Notebook
 - Labels: prompt engineering
 - Relevance score: 6

@@ -1,7 +1,7 @@
 # a2aproject/A2A
 
 - URL: https://github.com/a2aproject/A2A
-- Stars: 22504
+- Stars: 22505
 - Main language: Shell
 - Labels: mcp
 - Relevance score: 5

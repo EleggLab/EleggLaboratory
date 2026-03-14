@@ -1,7 +1,7 @@
 # vinta/awesome-python
 
 - URL: https://github.com/vinta/awesome-python
-- Stars: 286998
+- Stars: 286999
 - Main language: Python
 - Labels: agent workflow
 - Relevance score: 5

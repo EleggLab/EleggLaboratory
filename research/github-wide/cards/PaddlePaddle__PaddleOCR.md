@@ -1,7 +1,7 @@
 # PaddlePaddle/PaddleOCR
 
 - URL: https://github.com/PaddlePaddle/PaddleOCR
-- Stars: 72208
+- Stars: 72207
 - Main language: Python
 - Labels: mcp
 - Relevance score: 5

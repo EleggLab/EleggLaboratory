@@ -1,7 +1,7 @@
 # getmaxun/maxun
 
 - URL: https://github.com/getmaxun/maxun
-- Stars: 15250
+- Stars: 15251
 - Main language: TypeScript
 - Labels: context engineering
 - Relevance score: 4

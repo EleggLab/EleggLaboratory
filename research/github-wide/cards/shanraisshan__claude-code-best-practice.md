@@ -1,7 +1,7 @@
 # shanraisshan/claude-code-best-practice
 
 - URL: https://github.com/shanraisshan/claude-code-best-practice
-- Stars: 15069
+- Stars: 15082
 - Main language: HTML
 - Labels: context engineering
 - Relevance score: 5

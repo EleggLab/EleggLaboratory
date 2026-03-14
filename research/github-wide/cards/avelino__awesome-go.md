@@ -1,7 +1,7 @@
 # avelino/awesome-go
 
 - URL: https://github.com/avelino/awesome-go
-- Stars: 167293
+- Stars: 167291
 - Main language: Go
 - Labels: agent workflow
 - Relevance score: 5

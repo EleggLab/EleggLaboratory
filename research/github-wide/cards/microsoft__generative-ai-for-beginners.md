@@ -1,7 +1,7 @@
 # microsoft/generative-ai-for-beginners
 
 - URL: https://github.com/microsoft/generative-ai-for-beginners
-- Stars: 107945
+- Stars: 107946
 - Main language: Jupyter Notebook
 - Labels: agent workflow
 - Relevance score: 5
