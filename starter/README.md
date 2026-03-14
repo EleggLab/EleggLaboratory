@@ -4,6 +4,7 @@
 
 ## 포함 내용
 - `prompts/` : 공통/언어별 프롬프트
+- `prompts/reference/foundation-prompts.md` : 기초 프롬프트 레퍼런스(명령 강제 X)
 - `checklists/` : 품질 점검 체크리스트
 - `scripts/` : 리서치/스캐폴딩 보조 스크립트
 - `examples/` : 요청 템플릿
