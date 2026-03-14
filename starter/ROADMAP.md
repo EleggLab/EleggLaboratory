@@ -18,10 +18,10 @@
 - [x] `.env.example` + 설정 가이드(bootstrap 산출물 포함)
 
 ## Phase 3 — 품질 프레임워크 (v0.3)
-- [ ] PRD 템플릿 (`docs/PRD.template.md`)
-- [ ] 아키텍처 결정 기록 ADR 템플릿 (`docs/ADR.template.md`)
-- [ ] 실패 회고 템플릿 (`docs/postmortem.template.md`)
-- [ ] 보안 체크리스트 (`checklists/security-checklist.md`)
+- [x] PRD 템플릿 (`docs/PRD.template.md`)
+- [x] 아키텍처 결정 기록 ADR 템플릿 (`docs/ADR.template.md`)
+- [x] 실패 회고 템플릿 (`docs/postmortem.template.md`)
+- [x] 보안 체크리스트 (`checklists/security-checklist.md`)
 
 ## Phase 4 — 다국어 운영 고도화 (v0.4)
 - [ ] 언어별 프롬프트 패키지 분리 (`prompts/lang/*`)
