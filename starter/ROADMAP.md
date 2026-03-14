@@ -12,10 +12,10 @@
 - [x] 언어권별 TOP1 레퍼런스 연결
 
 ## Phase 2 — 실행 자동화 (v0.2)
-- [ ] `scripts/bootstrap.sh` : 새 프로젝트 초기 세팅
-- [ ] `scripts/verify.sh` : 린트/테스트/문서 점검 통합
-- [ ] `scripts/report.sh` : 변경 요약 자동 생성
-- [ ] `.env.example` + 설정 가이드
+- [x] `scripts/bootstrap.sh` : 새 프로젝트 초기 세팅
+- [x] `scripts/verify.sh` : 템플릿 구조 검증
+- [x] `scripts/report.sh` : 변경 요약 자동 생성
+- [x] `.env.example` + 설정 가이드(bootstrap 산출물 포함)
 
 ## Phase 3 — 품질 프레임워크 (v0.3)
 - [ ] PRD 템플릿 (`docs/PRD.template.md`)
