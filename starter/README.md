@@ -7,7 +7,7 @@
 - `prompts/reference/foundation-prompts.md` : 기초 프롬프트 레퍼런스(명령 강제 X)
 - `prompts/reference/context-engineering-cards.md` : 컨텍스트 엔지니어링 카드(명령 강제 X)
 - `prompts/reference/system-prompt-patterns.md` : 시스템 프롬프트 패턴 카드(명령 강제 X)
-- `checklists/` : 품질 점검 체크리스트 (release/security/agent-run/prompt-quality/research-ingestion)
+- `checklists/` : 품질 점검 체크리스트 (release/security/agent-run/prompt-quality/research-ingestion/docs-quality)
 - `scripts/` : 리서치/스캐폴딩 보조 스크립트
 - `examples/` : 요청 템플릿
 - `locales/` : ko/en/ja/zh 언어별 가이드

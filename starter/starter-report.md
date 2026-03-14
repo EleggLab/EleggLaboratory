@@ -1,19 +1,18 @@
 # Starter Change Report
 
-Generated: 2026-03-14 11:34:29 KST
+Generated: 2026-03-14 11:40:35 KST
 
 ## Git Status
  m samples
  M starter/backlog.md
  M starter/starter-report.md
 ?? research/src/
-?? starter/checklists/release-gate-extended.md
-?? starter/docs/patterns/docs-adoption-notes.md
-?? starter/docs/patterns/script-adoption-notes.md
-?? starter/scripts/workflow-templates.md
+?? starter/checklists/docs-quality-checklist.md
+?? starter/docs/FAQ.md
+?? starter/docs/roles/
 
 ## Last Commit
-- 3967281 Apply first adoption batch: prompt patterns, ops scripts, and learning path (OpenClaw Assistant, 50초 전)
+- 3ecd376 Apply second adoption batch for scripts/docs and expand release gate assets (OpenClaw Assistant, 6분 전)
 ## Key Files
 starter/.github/workflows/starter-ci.yml
 starter/README.md
@@ -21,6 +20,7 @@ starter/ROADMAP.md
 starter/backlog.md
 starter/changelog/CHANGELOG.md
 starter/checklists/agent-run-checklist.md
+starter/checklists/docs-quality-checklist.md
 starter/checklists/prompt-quality-checklist.md
 starter/checklists/release-checklist.md
 starter/checklists/release-gate-extended.md
@@ -28,6 +28,7 @@ starter/checklists/research-ingestion-checklist.md
 starter/checklists/security-checklist.md
 starter/common/reference-top1.md
 starter/docs/ADR.template.md
+starter/docs/FAQ.md
 starter/docs/PRD.template.md
 starter/docs/i18n/glossary.md
 starter/docs/i18n/locale-fallback-policy.md
@@ -39,6 +40,9 @@ starter/docs/patterns/research-loop-ops.md
 starter/docs/patterns/script-adoption-notes.md
 starter/docs/patterns/top30-synthesis.md
 starter/docs/postmortem.template.md
+starter/docs/roles/onboarding-developer.md
+starter/docs/roles/onboarding-operator.md
+starter/docs/roles/onboarding-reviewer.md
 starter/examples/demo-bot/README.md
 starter/examples/demo-bot/bot.py
 starter/examples/demo-cli/README.md

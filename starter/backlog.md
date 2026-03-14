@@ -40,22 +40,22 @@
 - [x] (5) punkpeye/awesome-mcp-servers
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (5) mlabonne/llm-course
+- [x] (5) mlabonne/llm-course
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
 - [x] (5) enescingoz/awesome-n8n-templates
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (5) enaqx/awesome-pentest
+- [x] (5) enaqx/awesome-pentest
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (5) activepieces/activepieces
+- [x] (5) activepieces/activepieces
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
 - [x] (4) wshobson/agents
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (4) vuejs/awesome-vue
+- [x] (4) vuejs/awesome-vue
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
 - [ ] (4) vsouza/awesome-ios
@@ -64,7 +64,7 @@
 - [x] (4) vinta/awesome-python
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (4) veggiemonk/awesome-docker
+- [x] (4) veggiemonk/awesome-docker
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
 
