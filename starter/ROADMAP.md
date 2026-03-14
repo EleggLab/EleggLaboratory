@@ -24,10 +24,10 @@
 - [x] 보안 체크리스트 (`checklists/security-checklist.md`)
 
 ## Phase 4 — 다국어 운영 고도화 (v0.4)
-- [ ] 언어별 프롬프트 패키지 분리 (`prompts/lang/*`)
-- [ ] 번역 품질 가이드(용어집, 금칙어, 톤 규칙)
-- [ ] 다국어 README 자동 생성 스크립트
-- [ ] locale fallback 정책 문서화
+- [x] 언어별 프롬프트 패키지 분리 (`prompts/lang/*`)
+- [x] 번역 품질 가이드(용어집, 톤 규칙)
+- [x] 다국어 README 자동 생성 스크립트
+- [x] locale fallback 정책 문서화
 
 ## Phase 5 — 실전 배포형 킷 (v0.5)
 - [ ] 템플릿 선택기 (`starter init --stack ...` 형태)
