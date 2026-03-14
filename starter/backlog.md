@@ -8,10 +8,10 @@
 - 반영 후 verify/report 실행 필수
 
 ## PROMPTS
-- [ ] (4) dontriskit/awesome-ai-system-prompts
+- [x] (4) dontriskit/awesome-ai-system-prompts
   - target: `starter/prompts/reference/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (4) dair-ai/Prompt-Engineering-Guide
+- [x] (4) dair-ai/Prompt-Engineering-Guide
   - target: `starter/prompts/reference/`
   - action: 패턴 추출 → 템플릿화 → 검증
 - [ ] (3) wilsonfreitas/awesome-quant
@@ -32,7 +32,7 @@
 - [ ] (3) hesamsheikh/awesome-openclaw-usecases
   - target: `starter/prompts/reference/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (3) f/prompts.chat
+- [x] (3) f/prompts.chat
   - target: `starter/prompts/reference/`
   - action: 패턴 추출 → 템플릿화 → 검증
 

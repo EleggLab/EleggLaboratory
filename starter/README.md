@@ -6,6 +6,7 @@
 - `prompts/` : 공통/언어별 프롬프트
 - `prompts/reference/foundation-prompts.md` : 기초 프롬프트 레퍼런스(명령 강제 X)
 - `prompts/reference/context-engineering-cards.md` : 컨텍스트 엔지니어링 카드(명령 강제 X)
+- `prompts/reference/system-prompt-patterns.md` : 시스템 프롬프트 패턴 카드(명령 강제 X)
 - `checklists/` : 품질 점검 체크리스트 (release/security/agent-run/prompt-quality/research-ingestion)
 - `scripts/` : 리서치/스캐폴딩 보조 스크립트
 - `examples/` : 요청 템플릿
@@ -62,4 +63,6 @@ vibe-starter report ./starter-report.md
 - `scripts/apply-adoption-batch.py` : 반영 백로그 자동 생성 (`starter/backlog.md`)
 - `scripts/backlog-progress.py` : backlog 진행률 계산
 - `scripts/refresh-research.sh` : 수집→분류→백로그→리포트 원클릭 실행
+- `scripts/agent-loop.sh` : plan→act→verify→report 루프 실행 템플릿
+- `scripts/mcp-discovery-template.sh` : MCP 후보 조사 노트 자동 생성
 - 결과 위치: `research/github-wide/`
