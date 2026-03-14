@@ -19,3 +19,7 @@
 - 스펙 정의 → 구현 → 테스트 → 회고를 짧은 루프로 반복
 - 작은 단위로 커밋
 - 결과물은 반드시 실행/검증 로그 남기기
+
+## 문서
+- 고도화 로드맵: `starter/ROADMAP.md`
+- 추가 조사 플랜: `research/additional-research-plan.md`
