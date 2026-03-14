@@ -14,22 +14,22 @@
 - [x] (4) dair-ai/Prompt-Engineering-Guide
   - target: `starter/prompts/reference/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (3) wilsonfreitas/awesome-quant
+- [x] (3) wilsonfreitas/awesome-quant
   - target: `starter/prompts/reference/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (3) sickn33/antigravity-awesome-skills
+- [x] (3) sickn33/antigravity-awesome-skills
   - target: `starter/prompts/reference/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (3) mikeroyal/Self-Hosting-Guide
+- [x] (3) mikeroyal/Self-Hosting-Guide
   - target: `starter/prompts/reference/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (3) microsoft/ai-agents-for-beginners
+- [x] (3) microsoft/ai-agents-for-beginners
   - target: `starter/prompts/reference/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (3) microsoft/AI-For-Beginners
+- [x] (3) microsoft/AI-For-Beginners
   - target: `starter/prompts/reference/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (3) hesamsheikh/awesome-openclaw-usecases
+- [x] (3) hesamsheikh/awesome-openclaw-usecases
   - target: `starter/prompts/reference/`
   - action: 패턴 추출 → 템플릿화 → 검증
 - [x] (3) f/prompts.chat
@@ -58,7 +58,7 @@
 - [x] (4) vuejs/awesome-vue
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
-- [ ] (4) vsouza/awesome-ios
+- [x] (4) vsouza/awesome-ios
   - target: `starter/scripts/`
   - action: 패턴 추출 → 템플릿화 → 검증
 - [x] (4) vinta/awesome-python

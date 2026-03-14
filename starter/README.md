@@ -7,6 +7,8 @@
 - `prompts/reference/foundation-prompts.md` : 기초 프롬프트 레퍼런스(명령 강제 X)
 - `prompts/reference/context-engineering-cards.md` : 컨텍스트 엔지니어링 카드(명령 강제 X)
 - `prompts/reference/system-prompt-patterns.md` : 시스템 프롬프트 패턴 카드(명령 강제 X)
+- `prompts/reference/domain-prompt-pack.md` : 도메인형 프롬프트 카드(명령 강제 X)
+- `prompts/reference/education-agent-cards.md` : 학습/온보딩 프롬프트 카드(명령 강제 X)
 - `checklists/` : 품질 점검 체크리스트 (release/security/agent-run/prompt-quality/research-ingestion/docs-quality)
 - `scripts/` : 리서치/스캐폴딩 보조 스크립트
 - `examples/` : 요청 템플릿
@@ -65,4 +67,5 @@ vibe-starter report ./starter-report.md
 - `scripts/refresh-research.sh` : 수집→분류→백로그→리포트 원클릭 실행
 - `scripts/agent-loop.sh` : plan→act→verify→report 루프 실행 템플릿
 - `scripts/mcp-discovery-template.sh` : MCP 후보 조사 노트 자동 생성
+- `scripts/mobile-stack-note.md` : 모바일(iOS 계열) 흡수 포인트 노트
 - 결과 위치: `research/github-wide/`
