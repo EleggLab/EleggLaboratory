@@ -23,3 +23,8 @@
 ## 문서
 - 고도화 로드맵: `starter/ROADMAP.md`
 - 추가 조사 플랜: `research/additional-research-plan.md`
+
+## 스크립트
+- `scripts/bootstrap.sh <name> [target_dir]` : 새 프로젝트 골격 생성
+- `scripts/verify.sh [root_dir]` : starter 구조 검증
+- `scripts/report.sh [output.md]` : 변경 요약 리포트 생성
