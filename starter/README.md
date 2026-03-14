@@ -5,7 +5,8 @@
 ## 포함 내용
 - `prompts/` : 공통/언어별 프롬프트
 - `prompts/reference/foundation-prompts.md` : 기초 프롬프트 레퍼런스(명령 강제 X)
-- `checklists/` : 품질 점검 체크리스트
+- `prompts/reference/context-engineering-cards.md` : 컨텍스트 엔지니어링 카드(명령 강제 X)
+- `checklists/` : 품질 점검 체크리스트 (release/security/agent-run)
 - `scripts/` : 리서치/스캐폴딩 보조 스크립트
 - `examples/` : 요청 템플릿
 - `locales/` : ko/en/ja/zh 언어별 가이드
@@ -57,4 +58,5 @@ vibe-starter report ./starter-report.md
 ## 리서치 자동화
 - `scripts/research-github.py` : 광범위 GitHub 1차 수집 + 카드 생성
 - `scripts/research-github-deep.py` : 샤딩 기반 반복 수집(coverage 확장)
+- `scripts/triage-research-cards.py` : 카드→starter 반영 후보 자동 분류
 - 결과 위치: `research/github-wide/`
