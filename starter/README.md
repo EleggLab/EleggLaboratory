@@ -59,4 +59,6 @@ vibe-starter report ./starter-report.md
 - `scripts/research-github.py` : 광범위 GitHub 1차 수집 + 카드 생성
 - `scripts/research-github-deep.py` : 샤딩 기반 반복 수집(coverage 확장)
 - `scripts/triage-research-cards.py` : 카드→starter 반영 후보 자동 분류
+- `scripts/apply-adoption-batch.py` : 반영 백로그 자동 생성 (`starter/backlog.md`)
+- `scripts/refresh-research.sh` : 수집→분류→백로그→리포트 원클릭 실행
 - 결과 위치: `research/github-wide/`
