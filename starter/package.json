@@ -1,0 +1,16 @@
+{
+  "name": "vibe-starter-kit",
+  "version": "0.1.0",
+  "description": "Multilingual vibe-coding starter toolkit",
+  "bin": {
+    "vibe-starter": "scripts/vibe-starter.js"
+  },
+  "type": "commonjs",
+  "license": "MIT",
+  "scripts": {
+    "verify": "bash scripts/verify.sh .",
+    "init:web": "node scripts/vibe-starter.js init webapp demo-web",
+    "init:bot": "node scripts/vibe-starter.js init bot demo-bot",
+    "init:cli": "node scripts/vibe-starter.js init cli demo-cli"
+  }
+}
