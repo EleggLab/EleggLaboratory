@@ -27,9 +27,16 @@
 
 ## 스크립트
 - `scripts/bootstrap.sh <name> [target_dir]` : 새 프로젝트 골격 생성
+- `scripts/init.sh <webapp|bot|cli> <name> [target_dir]` : 스택 기반 스타터 생성
 - `scripts/verify.sh [root_dir]` : starter 구조 검증
 - `scripts/report.sh [output.md]` : 변경 요약 리포트 생성
 - `scripts/build-locales-index.sh [root_dir]` : locale 인덱스 README 자동 생성
+- `scripts/release-tag.sh vX.Y.Z` : 릴리즈 태그 생성
+
+## 스택 템플릿
+- `templates/webapp`
+- `templates/bot`
+- `templates/cli`
 
 ## i18n 문서
 - `docs/i18n/translation-style-guide.md`
