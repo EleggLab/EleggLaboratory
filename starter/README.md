@@ -29,3 +29,9 @@
 - `scripts/bootstrap.sh <name> [target_dir]` : 새 프로젝트 골격 생성
 - `scripts/verify.sh [root_dir]` : starter 구조 검증
 - `scripts/report.sh [output.md]` : 변경 요약 리포트 생성
+- `scripts/build-locales-index.sh [root_dir]` : locale 인덱스 README 자동 생성
+
+## i18n 문서
+- `docs/i18n/translation-style-guide.md`
+- `docs/i18n/glossary.md`
+- `docs/i18n/locale-fallback-policy.md`
