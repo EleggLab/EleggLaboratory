@@ -1,7 +1,7 @@
 # langchain-ai/langchain
 
 - URL: https://github.com/langchain-ai/langchain
-- Stars: 129374
+- Stars: 129375
 - Main language: Python
 - Labels: agent workflow
 - Relevance score: 6

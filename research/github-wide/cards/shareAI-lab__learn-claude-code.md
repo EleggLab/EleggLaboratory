@@ -1,7 +1,7 @@
 # shareAI-lab/learn-claude-code
 
 - URL: https://github.com/shareAI-lab/learn-claude-code
-- Stars: 26158
+- Stars: 26177
 - Main language: TypeScript
 - Labels: agent workflow
 - Relevance score: 8

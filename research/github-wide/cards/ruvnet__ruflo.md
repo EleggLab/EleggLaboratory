@@ -1,7 +1,7 @@
 # ruvnet/ruflo
 
 - URL: https://github.com/ruvnet/ruflo
-- Stars: 20901
+- Stars: 20902
 - Main language: TypeScript
 - Labels: prompt engineering
 - Relevance score: 7

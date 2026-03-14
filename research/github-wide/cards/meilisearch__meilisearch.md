@@ -1,7 +1,7 @@
 # meilisearch/meilisearch
 
 - URL: https://github.com/meilisearch/meilisearch
-- Stars: 56386
+- Stars: 56385
 - Main language: Rust
 - Labels: mcp
 - Relevance score: 5

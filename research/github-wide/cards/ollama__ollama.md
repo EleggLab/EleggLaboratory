@@ -1,7 +1,7 @@
 # ollama/ollama
 
 - URL: https://github.com/ollama/ollama
-- Stars: 164982
+- Stars: 164983
 - Main language: Go
 - Labels: agent workflow
 - Relevance score: 5

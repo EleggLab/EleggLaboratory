@@ -1,7 +1,7 @@
 # f/prompts.chat
 
 - URL: https://github.com/f/prompts.chat
-- Stars: 152187
+- Stars: 152189
 - Main language: HTML
 - Labels: mcp
 - Relevance score: 6

@@ -1,7 +1,7 @@
 # karanpratapsingh/system-design
 
 - URL: https://github.com/karanpratapsingh/system-design
-- Stars: 41773
+- Stars: 41775
 - Main language: -
 - Labels: prompt engineering
 - Relevance score: 5

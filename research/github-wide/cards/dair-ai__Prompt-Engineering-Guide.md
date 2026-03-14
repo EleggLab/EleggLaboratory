@@ -1,7 +1,7 @@
 # dair-ai/Prompt-Engineering-Guide
 
 - URL: https://github.com/dair-ai/Prompt-Engineering-Guide
-- Stars: 71560
+- Stars: 71564
 - Main language: MDX
 - Labels: prompt engineering
 - Relevance score: 8

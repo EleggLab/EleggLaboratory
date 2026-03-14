@@ -1,7 +1,7 @@
 # anthropics/skills
 
 - URL: https://github.com/anthropics/skills
-- Stars: 92876
+- Stars: 92885
 - Main language: Python
 - Labels: agent workflow
 - Relevance score: 6

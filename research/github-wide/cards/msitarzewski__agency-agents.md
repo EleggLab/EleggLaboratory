@@ -1,9 +1,9 @@
 # msitarzewski/agency-agents
 
 - URL: https://github.com/msitarzewski/agency-agents
-- Stars: 40318
+- Stars: 40370
 - Main language: Shell
-- Labels: agent workflow, context engineering
+- Labels: agent workflow, mcp
 - Relevance score: 6
 
 ## Summary

@@ -1,7 +1,7 @@
 # bmad-code-org/BMAD-METHOD
 
 - URL: https://github.com/bmad-code-org/BMAD-METHOD
-- Stars: 40567
+- Stars: 40568
 - Main language: JavaScript
 - Labels: agent workflow
 - Relevance score: 7

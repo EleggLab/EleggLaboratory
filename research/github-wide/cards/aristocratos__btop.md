@@ -1,7 +1,7 @@
 # aristocratos/btop
 
 - URL: https://github.com/aristocratos/btop
-- Stars: 30914
+- Stars: 30915
 - Main language: C++
 - Labels: vibe coding
 - Relevance score: 5

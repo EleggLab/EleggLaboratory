@@ -1,7 +1,7 @@
 # mlabonne/llm-course
 
 - URL: https://github.com/mlabonne/llm-course
-- Stars: 76621
+- Stars: 76622
 - Main language: -
 - Labels: agent workflow
 - Relevance score: 5

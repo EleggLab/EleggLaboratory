@@ -1,7 +1,7 @@
 # farion1231/cc-switch
 
 - URL: https://github.com/farion1231/cc-switch
-- Stars: 27822
+- Stars: 27830
 - Main language: Rust
 - Labels: mcp
 - Relevance score: 8

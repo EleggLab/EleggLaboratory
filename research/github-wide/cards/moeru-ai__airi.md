@@ -1,7 +1,7 @@
 # moeru-ai/airi
 
 - URL: https://github.com/moeru-ai/airi
-- Stars: 33315
+- Stars: 33320
 - Main language: TypeScript
 - Labels: mcp
 - Relevance score: 5

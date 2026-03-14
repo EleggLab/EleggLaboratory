@@ -1,7 +1,7 @@
 # infiniflow/ragflow
 
 - URL: https://github.com/infiniflow/ragflow
-- Stars: 74956
+- Stars: 74957
 - Main language: Python
 - Labels: agent workflow
 - Relevance score: 7

@@ -1,7 +1,7 @@
 # paperclipai/paperclip
 
 - URL: https://github.com/paperclipai/paperclip
-- Stars: 22450
+- Stars: 22465
 - Main language: TypeScript
 - Labels: context engineering
 - Relevance score: 4

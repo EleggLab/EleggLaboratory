@@ -1,7 +1,7 @@
 # karpathy/llm-council
 
 - URL: https://github.com/karpathy/llm-council
-- Stars: 15612
+- Stars: 15613
 - Main language: Python
 - Labels: vibe coding
 - Relevance score: 3

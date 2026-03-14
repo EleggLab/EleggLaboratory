@@ -1,7 +1,7 @@
 # BloopAI/vibe-kanban
 
 - URL: https://github.com/BloopAI/vibe-kanban
-- Stars: 23126
+- Stars: 23125
 - Main language: Rust
 - Labels: mcp
 - Relevance score: 8

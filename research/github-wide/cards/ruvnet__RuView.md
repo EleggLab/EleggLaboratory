@@ -1,7 +1,7 @@
 # ruvnet/RuView
 
 - URL: https://github.com/ruvnet/RuView
-- Stars: 36240
+- Stars: 36241
 - Main language: Rust
 - Labels: agent workflow
 - Relevance score: 5

@@ -1,7 +1,7 @@
 # super-productivity/super-productivity
 
 - URL: https://github.com/super-productivity/super-productivity
-- Stars: 17952
+- Stars: 17951
 - Main language: TypeScript
 - Labels: context engineering
 - Relevance score: 3

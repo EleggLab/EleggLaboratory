@@ -50,171 +50,171 @@ total: 199
 16. mudler/LocalAI · area=scripts · score=4
    - breakdown: prompts=1 scripts=3 checklists=0 docs=0
    - card: `research/github-wide/cards/mudler__LocalAI.md`
-17. microsoft/playwright-mcp · area=scripts · score=4
+17. msitarzewski/agency-agents · area=scripts · score=4
+   - breakdown: prompts=1 scripts=3 checklists=0 docs=0
+   - card: `research/github-wide/cards/msitarzewski__agency-agents.md`
+18. microsoft/playwright-mcp · area=scripts · score=4
    - breakdown: prompts=1 scripts=3 checklists=0 docs=0
    - card: `research/github-wide/cards/microsoft__playwright-mcp.md`
-18. microsoft/mcp-for-beginners · area=scripts · score=4
+19. microsoft/mcp-for-beginners · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/microsoft__mcp-for-beginners.md`
-19. microsoft/generative-ai-for-beginners · area=scripts · score=4
+20. microsoft/generative-ai-for-beginners · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/microsoft__generative-ai-for-beginners.md`
-20. microsoft/Data-Science-For-Beginners · area=scripts · score=4
+21. microsoft/Data-Science-For-Beginners · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/microsoft__Data-Science-For-Beginners.md`
-21. lukasz-madon/awesome-remote-job · area=scripts · score=4
+22. lukasz-madon/awesome-remote-job · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/lukasz-madon__awesome-remote-job.md`
-22. liyupi/ai-guide · area=scripts · score=4
+23. liyupi/ai-guide · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/liyupi__ai-guide.md`
-23. josephmisiti/awesome-machine-learning · area=scripts · score=4
+24. josephmisiti/awesome-machine-learning · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/josephmisiti__awesome-machine-learning.md`
-24. jaywcjlove/awesome-mac · area=scripts · score=4
+25. jaywcjlove/awesome-mac · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/jaywcjlove__awesome-mac.md`
-25. hesreallyhim/awesome-claude-code · area=scripts · score=4
+26. hesreallyhim/awesome-claude-code · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/hesreallyhim__awesome-claude-code.md`
-26. google-gemini/gemini-cli · area=scripts · score=4
+27. google-gemini/gemini-cli · area=scripts · score=4
    - breakdown: prompts=1 scripts=3 checklists=0 docs=0
    - card: `research/github-wide/cards/google-gemini__gemini-cli.md`
-27. github/github-mcp-server · area=scripts · score=4
+28. github/github-mcp-server · area=scripts · score=4
    - breakdown: prompts=1 scripts=3 checklists=0 docs=0
    - card: `research/github-wide/cards/github__github-mcp-server.md`
-28. github/awesome-copilot · area=scripts · score=4
+29. github/awesome-copilot · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/github__awesome-copilot.md`
-29. e2b-dev/awesome-ai-agents · area=scripts · score=4
+30. e2b-dev/awesome-ai-agents · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/e2b-dev__awesome-ai-agents.md`
-30. dontriskit/awesome-ai-system-prompts · area=prompts · score=4
+31. dontriskit/awesome-ai-system-prompts · area=prompts · score=4
    - breakdown: prompts=2 scripts=1 checklists=0 docs=1
    - card: `research/github-wide/cards/dontriskit__awesome-ai-system-prompts.md`
-31. deepset-ai/haystack · area=scripts · score=4
+32. deepset-ai/haystack · area=scripts · score=4
    - breakdown: prompts=1 scripts=3 checklists=0 docs=0
    - card: `research/github-wide/cards/deepset-ai__haystack.md`
-32. deepseek-ai/awesome-deepseek-integration · area=scripts · score=4
+33. deepseek-ai/awesome-deepseek-integration · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/deepseek-ai__awesome-deepseek-integration.md`
-33. dair-ai/Prompt-Engineering-Guide · area=prompts · score=4
+34. dair-ai/Prompt-Engineering-Guide · area=prompts · score=4
    - breakdown: prompts=2 scripts=1 checklists=0 docs=1
    - card: `research/github-wide/cards/dair-ai__Prompt-Engineering-Guide.md`
-34. cline/cline · area=scripts · score=4
+35. cline/cline · area=scripts · score=4
    - breakdown: prompts=1 scripts=3 checklists=0 docs=0
    - card: `research/github-wide/cards/cline__cline.md`
-35. chatboxai/chatbox · area=scripts · score=4
+36. chatboxai/chatbox · area=scripts · score=4
    - breakdown: prompts=1 scripts=3 checklists=0 docs=0
    - card: `research/github-wide/cards/chatboxai__chatbox.md`
-36. awesome-selfhosted/awesome-selfhosted · area=scripts · score=4
+37. awesome-selfhosted/awesome-selfhosted · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/awesome-selfhosted__awesome-selfhosted.md`
-37. avelino/awesome-go · area=scripts · score=4
+38. avelino/awesome-go · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/avelino__awesome-go.md`
-38. akullpp/awesome-java · area=scripts · score=4
+39. akullpp/awesome-java · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/akullpp__awesome-java.md`
-39. affaan-m/everything-claude-code · area=scripts · score=4
+40. affaan-m/everything-claude-code · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=1 docs=0
    - card: `research/github-wide/cards/affaan-m__everything-claude-code.md`
-40. academic/awesome-datascience · area=scripts · score=4
+41. academic/awesome-datascience · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/academic__awesome-datascience.md`
-41. VoltAgent/awesome-openclaw-skills · area=scripts · score=4
+42. VoltAgent/awesome-openclaw-skills · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/VoltAgent__awesome-openclaw-skills.md`
-42. VoltAgent/awesome-agent-skills · area=scripts · score=4
+43. VoltAgent/awesome-agent-skills · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/VoltAgent__awesome-agent-skills.md`
-43. PatrickJS/awesome-cursorrules · area=scripts · score=4
+44. PatrickJS/awesome-cursorrules · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/PatrickJS__awesome-cursorrules.md`
-44. OpenAPITools/openapi-generator · area=scripts · score=4
+45. OpenAPITools/openapi-generator · area=scripts · score=4
    - breakdown: prompts=1 scripts=3 checklists=0 docs=0
    - card: `research/github-wide/cards/OpenAPITools__openapi-generator.md`
-45. Hannibal046/Awesome-LLM · area=scripts · score=4
+46. Hannibal046/Awesome-LLM · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/Hannibal046__Awesome-LLM.md`
-46. ComposioHQ/awesome-claude-skills · area=scripts · score=4
+47. ComposioHQ/awesome-claude-skills · area=scripts · score=4
    - breakdown: prompts=1 scripts=2 checklists=0 docs=1
    - card: `research/github-wide/cards/ComposioHQ__awesome-claude-skills.md`
-47. zeroclaw-labs/zeroclaw · area=scripts · score=3
+48. zeroclaw-labs/zeroclaw · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/zeroclaw-labs__zeroclaw.md`
-48. wilsonfreitas/awesome-quant · area=prompts · score=3
+49. wilsonfreitas/awesome-quant · area=prompts · score=3
    - breakdown: prompts=1 scripts=1 checklists=0 docs=1
    - card: `research/github-wide/cards/wilsonfreitas__awesome-quant.md`
-49. warpdotdev/Warp · area=scripts · score=3
+50. warpdotdev/Warp · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/warpdotdev__Warp.md`
-50. unclecode/crawl4ai · area=scripts · score=3
+51. unclecode/crawl4ai · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/unclecode__crawl4ai.md`
-51. tldraw/tldraw · area=scripts · score=3
+52. tldraw/tldraw · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/tldraw__tldraw.md`
-52. thedotmack/claude-mem · area=scripts · score=3
+53. thedotmack/claude-mem · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/thedotmack__claude-mem.md`
-53. termux/termux-app · area=scripts · score=3
+54. termux/termux-app · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/termux__termux-app.md`
-54. taosdata/TDengine · area=scripts · score=3
+55. taosdata/TDengine · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/taosdata__TDengine.md`
-55. simstudioai/sim · area=scripts · score=3
+56. simstudioai/sim · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/simstudioai__sim.md`
-56. sickn33/antigravity-awesome-skills · area=prompts · score=3
+57. sickn33/antigravity-awesome-skills · area=prompts · score=3
    - breakdown: prompts=1 scripts=1 checklists=0 docs=1
    - card: `research/github-wide/cards/sickn33__antigravity-awesome-skills.md`
-57. shareAI-lab/learn-claude-code · area=scripts · score=3
+58. shareAI-lab/learn-claude-code · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/shareAI-lab__learn-claude-code.md`
-58. sahat/hackathon-starter · area=scripts · score=3
+59. sahat/hackathon-starter · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/sahat__hackathon-starter.md`
-59. ruvnet/ruflo · area=scripts · score=3
+60. ruvnet/ruflo · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/ruvnet__ruflo.md`
-60. ruvnet/RuView · area=scripts · score=3
+61. ruvnet/RuView · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/ruvnet__RuView.md`
-61. ripienaar/free-for-dev · area=scripts · score=3
+62. ripienaar/free-for-dev · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/ripienaar__free-for-dev.md`
-62. refly-ai/refly · area=scripts · score=3
+63. refly-ai/refly · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/refly-ai__refly.md`
-63. public-apis/public-apis · area=scripts · score=3
+64. public-apis/public-apis · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/public-apis__public-apis.md`
-64. prakhar1989/awesome-courses · area=docs · score=3
+65. prakhar1989/awesome-courses · area=docs · score=3
    - breakdown: prompts=1 scripts=0 checklists=0 docs=2
    - card: `research/github-wide/cards/prakhar1989__awesome-courses.md`
-65. patchy631/ai-engineering-hub · area=scripts · score=3
+66. patchy631/ai-engineering-hub · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/patchy631__ai-engineering-hub.md`
-66. oraios/serena · area=scripts · score=3
+67. oraios/serena · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/oraios__serena.md`
-67. opendatalab/MinerU · area=scripts · score=3
+68. opendatalab/MinerU · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/opendatalab__MinerU.md`
-68. open-webui/open-webui · area=scripts · score=3
+69. open-webui/open-webui · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/open-webui__open-webui.md`
-69. ollama/ollama · area=scripts · score=3
+70. ollama/ollama · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/ollama__ollama.md`
-70. musistudio/claude-code-router · area=scripts · score=3
+71. musistudio/claude-code-router · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/musistudio__claude-code-router.md`
-71. msitarzewski/agency-agents · area=scripts · score=3
-   - breakdown: prompts=1 scripts=2 checklists=0 docs=0
-   - card: `research/github-wide/cards/msitarzewski__agency-agents.md`
 72. modelcontextprotocol/servers · area=scripts · score=3
    - breakdown: prompts=1 scripts=2 checklists=0 docs=0
    - card: `research/github-wide/cards/modelcontextprotocol__servers.md`

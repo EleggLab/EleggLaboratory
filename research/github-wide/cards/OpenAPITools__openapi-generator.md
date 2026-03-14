@@ -1,7 +1,7 @@
 # OpenAPITools/openapi-generator
 
 - URL: https://github.com/OpenAPITools/openapi-generator
-- Stars: 25956
+- Stars: 25957
 - Main language: Java
 - Labels: agent workflow
 - Relevance score: 5

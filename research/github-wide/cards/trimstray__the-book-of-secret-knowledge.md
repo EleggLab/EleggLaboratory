@@ -1,7 +1,7 @@
 # trimstray/the-book-of-secret-knowledge
 
 - URL: https://github.com/trimstray/the-book-of-secret-knowledge
-- Stars: 209909
+- Stars: 209910
 - Main language: -
 - Labels: prompt engineering
 - Relevance score: 5

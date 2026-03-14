@@ -1,7 +1,7 @@
 # affaan-m/everything-claude-code
 
 - URL: https://github.com/affaan-m/everything-claude-code
-- Stars: 74886
+- Stars: 74901
 - Main language: JavaScript
 - Labels: agent workflow
 - Relevance score: 10

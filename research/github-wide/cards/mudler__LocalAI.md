@@ -1,7 +1,7 @@
 # mudler/LocalAI
 
 - URL: https://github.com/mudler/LocalAI
-- Stars: 43552
+- Stars: 43554
 - Main language: Go
 - Labels: agent workflow
 - Relevance score: 7

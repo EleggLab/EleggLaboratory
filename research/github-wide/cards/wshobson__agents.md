@@ -1,7 +1,7 @@
 # wshobson/agents
 
 - URL: https://github.com/wshobson/agents
-- Stars: 31179
+- Stars: 31180
 - Main language: Python
 - Labels: agent workflow
 - Relevance score: 9

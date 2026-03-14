@@ -1,7 +1,7 @@
 # AstrBotDevs/AstrBot
 
 - URL: https://github.com/AstrBotDevs/AstrBot
-- Stars: 23864
+- Stars: 23875
 - Main language: Python
 - Labels: mcp
 - Relevance score: 7

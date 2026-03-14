@@ -1,7 +1,7 @@
 # PDFMathTranslate/PDFMathTranslate
 
 - URL: https://github.com/PDFMathTranslate/PDFMathTranslate
-- Stars: 32230
+- Stars: 32231
 - Main language: Python
 - Labels: mcp
 - Relevance score: 6

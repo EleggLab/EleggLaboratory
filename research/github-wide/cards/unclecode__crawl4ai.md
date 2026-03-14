@@ -1,7 +1,7 @@
 # unclecode/crawl4ai
 
 - URL: https://github.com/unclecode/crawl4ai
-- Stars: 61912
+- Stars: 61913
 - Main language: Python
 - Labels: agent workflow
 - Relevance score: 6
