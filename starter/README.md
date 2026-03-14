@@ -16,6 +16,15 @@
 3. `checklists/release-checklist.md`로 품질 점검
 4. 필요 시 `locales/<lang>/README.md`로 언어 전환
 
+## 설치형 CLI 사용
+```bash
+cd starter
+./install.sh
+vibe-starter init webapp my-app
+vibe-starter verify ./starter
+vibe-starter report ./starter-report.md
+```
+
 ## 추천 워크플로우
 - 스펙 정의 → 구현 → 테스트 → 회고를 짧은 루프로 반복
 - 작은 단위로 커밋
@@ -32,6 +41,7 @@
 - `scripts/report.sh [output.md]` : 변경 요약 리포트 생성
 - `scripts/build-locales-index.sh [root_dir]` : locale 인덱스 README 자동 생성
 - `scripts/release-tag.sh vX.Y.Z` : 릴리즈 태그 생성
+- `scripts/vibe-starter.js` : 설치형 Node CLI 엔트리
 
 ## 스택 템플릿
 - `templates/webapp`
