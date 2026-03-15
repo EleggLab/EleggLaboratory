@@ -1,0 +1,132 @@
+[
+  {
+    "branch": "\uc790",
+    "hanja": "\u5b50",
+    "elementPrimary": "\uc218",
+    "season": "winter",
+    "keywords": ["start", "flow"],
+    "hiddenStems": [{ "stem": "\uacc4", "weight": 1.0 }]
+  },
+  {
+    "branch": "\ucd95",
+    "hanja": "\u4e11",
+    "elementPrimary": "\ud1a0",
+    "season": "winter",
+    "keywords": ["accumulate", "steady"],
+    "hiddenStems": [
+      { "stem": "\uae30", "weight": 0.5 },
+      { "stem": "\uacc4", "weight": 0.3 },
+      { "stem": "\uc2e0", "weight": 0.2 }
+    ]
+  },
+  {
+    "branch": "\uc778",
+    "hanja": "\u5bc5",
+    "elementPrimary": "\ubaa9",
+    "season": "spring",
+    "keywords": ["launch", "growth"],
+    "hiddenStems": [
+      { "stem": "\uac11", "weight": 0.5 },
+      { "stem": "\ubcd1", "weight": 0.3 },
+      { "stem": "\ubb34", "weight": 0.2 }
+    ]
+  },
+  {
+    "branch": "\ubb18",
+    "hanja": "\u536f",
+    "elementPrimary": "\ubaa9",
+    "season": "spring",
+    "keywords": ["expand", "connect"],
+    "hiddenStems": [{ "stem": "\uc744", "weight": 1.0 }]
+  },
+  {
+    "branch": "\uc9c4",
+    "hanja": "\u8fb0",
+    "elementPrimary": "\ud1a0",
+    "season": "spring",
+    "keywords": ["transition", "organize"],
+    "hiddenStems": [
+      { "stem": "\ubb34", "weight": 0.5 },
+      { "stem": "\uc744", "weight": 0.3 },
+      { "stem": "\uacc4", "weight": 0.2 }
+    ]
+  },
+  {
+    "branch": "\uc0ac",
+    "hanja": "\u5df3",
+    "elementPrimary": "\ud654",
+    "season": "summer",
+    "keywords": ["radiate", "push"],
+    "hiddenStems": [
+      { "stem": "\ubcd1", "weight": 0.5 },
+      { "stem": "\ubb34", "weight": 0.3 },
+      { "stem": "\uacbd", "weight": 0.2 }
+    ]
+  },
+  {
+    "branch": "\uc624",
+    "hanja": "\u5348",
+    "elementPrimary": "\ud654",
+    "season": "summer",
+    "keywords": ["peak", "display"],
+    "hiddenStems": [
+      { "stem": "\uc815", "weight": 0.6 },
+      { "stem": "\uae30", "weight": 0.4 }
+    ]
+  },
+  {
+    "branch": "\ubbf8",
+    "hanja": "\u672a",
+    "elementPrimary": "\ud1a0",
+    "season": "summer",
+    "keywords": ["complete", "mediate"],
+    "hiddenStems": [
+      { "stem": "\uae30", "weight": 0.5 },
+      { "stem": "\uc815", "weight": 0.3 },
+      { "stem": "\uc744", "weight": 0.2 }
+    ]
+  },
+  {
+    "branch": "\uc2e0",
+    "hanja": "\u7533",
+    "elementPrimary": "\uae08",
+    "season": "autumn",
+    "keywords": ["tidy", "harvest"],
+    "hiddenStems": [
+      { "stem": "\uacbd", "weight": 0.5 },
+      { "stem": "\uc784", "weight": 0.3 },
+      { "stem": "\ubb34", "weight": 0.2 }
+    ]
+  },
+  {
+    "branch": "\uc720",
+    "hanja": "\u9149",
+    "elementPrimary": "\uae08",
+    "season": "autumn",
+    "keywords": ["refine", "finalize"],
+    "hiddenStems": [{ "stem": "\uc2e0", "weight": 1.0 }]
+  },
+  {
+    "branch": "\uc220",
+    "hanja": "\u620c",
+    "elementPrimary": "\ud1a0",
+    "season": "autumn",
+    "keywords": ["stabilize", "preserve"],
+    "hiddenStems": [
+      { "stem": "\ubb34", "weight": 0.5 },
+      { "stem": "\uc2e0", "weight": 0.3 },
+      { "stem": "\uc815", "weight": 0.2 }
+    ]
+  },
+  {
+    "branch": "\ud574",
+    "hanja": "\u4ea5",
+    "elementPrimary": "\uc218",
+    "season": "winter",
+    "keywords": ["store", "recover"],
+    "hiddenStems": [
+      { "stem": "\uc784", "weight": 0.6 },
+      { "stem": "\uac11", "weight": 0.4 }
+    ]
+  }
+]

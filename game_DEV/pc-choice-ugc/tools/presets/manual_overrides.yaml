@@ -1,0 +1,48 @@
+﻿schemaVersion: 1
+games:
+  umamusume-pretty-derby:
+    displayName: "우마무스메 프리티 더비"
+    aliases:
+      - "우마무스메"
+      - "Umamusume"
+      - "Uma Musume"
+    defaultRegion: "South Korea"
+    packageNameHints:
+      - "com.kakaogames.umamusume"
+    regions:
+      South Korea:
+        resetTimeKst: "05:00"
+        confidence: "official"
+        sourceUrl: "https://kakaogames.oqupie.com/portals/1576/articles/35175"
+        sourceNote: "Kakao Games KR notice confirms daily reset at 05:00 KST."
+
+  princess-connect-re-dive:
+    displayName: "프린세스 커넥트 Re:Dive"
+    aliases:
+      - "프리코네"
+      - "Princess Connect"
+      - "Princess Connect! Re:Dive"
+    defaultRegion: "South Korea"
+    packageNameHints:
+      - "com.kakaogames.priconne"
+    regions:
+      South Korea:
+        resetTimeKst: "05:00"
+        confidence: "community"
+        sourceUrl: "https://gachalist.com/princess-connect-re-dive"
+        sourceNote: "Pinned override for KR tracker consistency."
+
+  azur-lane:
+    displayName: "Azur Lane"
+    aliases:
+      - "아주르레인"
+      - "벽람항로"
+    defaultRegion: "Global"
+    packageNameHints:
+      - "com.YoStarEN.AzurLane"
+    regions:
+      Global:
+        resetTimeKst: "16:00"
+        confidence: "official"
+        sourceUrl: "https://gachalist.com/daily-resets"
+        sourceNote: "Global reset pinned to 16:00 KST override."

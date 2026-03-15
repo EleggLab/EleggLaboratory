@@ -1,0 +1,332 @@
+# 소설가 프롬(구) 아카이브 인덱스
+
+- 상대 경로: `소설가 프롬(구)`
+- 총 파일 수: 80
+- 최신 버전: 46.0
+- 포맷 분포: package 54, preset 26
+- 확장자 분포: .zip 54, .risup 18, .risupreset 8
+
+## 뉴 소설가
+- 최신 버전: 46.0
+
+- v46.0 | 일반 | package | zip | 📚 뉴 소설가 v46.0.zip
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v46.0.zip`
+  - 크기: 129649 bytes
+  - 태그: zip-package
+- v45.0 | 일반 | package | zip | 📚 뉴 소설가 v45.0.zip
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v45.0.zip`
+  - 크기: 129655 bytes
+  - 태그: zip-package
+- v44.1 | 일반 | package | zip | 📚 뉴 소설가 v44.1.zip
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v44.1.zip`
+  - 크기: 129325 bytes
+  - 태그: zip-package
+- v44.0 | 일반 | package | zip | 📚 뉴 소설가 v44.0.zip
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v44.0.zip`
+  - 크기: 129385 bytes
+  - 태그: zip-package
+- v43.1 | 일반 | package | zip | 📚 뉴 소설가 v43.1.zip
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v43.1.zip`
+  - 크기: 129610 bytes
+  - 태그: zip-package
+- v43.0 | 일반 | package | zip | 📚 뉴 소설가 v43.0.zip
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v43.0.zip`
+  - 크기: 129261 bytes
+  - 태그: zip-package
+- v42.0 | 일반 | package | zip | 📚 뉴 소설가 v42.0.zip
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v42.0.zip`
+  - 크기: 128502 bytes
+  - 태그: zip-package
+- v41.1 | 일반 | package | zip | 📚 뉴 소설가 v41.1.zip
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v41.1.zip`
+  - 크기: 128500 bytes
+  - 태그: zip-package
+- v41.0 | 일반 | package | zip | 📚 뉴 소설가 v41.0.zip
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v41.0.zip`
+  - 크기: 128476 bytes
+  - 태그: zip-package
+- v40.5 | 일반 | package | zip | 📚 뉴 소설가 v40.5.zip
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v40.5.zip`
+  - 크기: 123787 bytes
+  - 태그: zip-package
+- v40.1 | 일반 | package | zip | 📚 뉴 소설가 v40.1.zip
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v40.1.zip`
+  - 크기: 123733 bytes
+  - 태그: zip-package
+- v40.0 | 일반 | package | zip | 📚 뉴 소설가 v40.0.zip
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v40.0.zip`
+  - 크기: 122646 bytes
+  - 태그: zip-package
+- v39.1 | 최종 수정본 | package | zip | 뉴 소설가 v39.1 최종 수정본.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v39.1 최종 수정본.zip`
+  - 크기: 122556 bytes
+  - 태그: zip-package, final-revision
+- v39.0 | 일반 | package | zip | 뉴 소설가 v39.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v39.0.zip`
+  - 크기: 122970 bytes
+  - 태그: zip-package
+- v38.5 | 일반 | package | zip | 뉴 소설가 v38.5.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v38.5.zip`
+  - 크기: 122246 bytes
+  - 태그: zip-package
+- v38.0 | 일반 | package | zip | 뉴 소설가 v38.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v38.0.zip`
+  - 크기: 122708 bytes
+  - 태그: zip-package
+- v37.5 | 일반 | package | zip | 뉴 소설가 v37.5.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v37.5.zip`
+  - 크기: 122222 bytes
+  - 태그: zip-package
+- v37.2 | 일반 | package | zip | 뉴 소설가 v37.2.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v37.2.zip`
+  - 크기: 122276 bytes
+  - 태그: zip-package
+- v37.0 | 일반 | package | zip | 뉴 소설가 v37.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v37.0.zip`
+  - 크기: 122318 bytes
+  - 태그: zip-package
+- v36.5 | 일반 | package | zip | 뉴 소설가 v36.5.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v36.5.zip`
+  - 크기: 122198 bytes
+  - 태그: zip-package
+- v36.0 | 일반 | package | zip | 뉴 소설가 v36.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v36.0.zip`
+  - 크기: 123786 bytes
+  - 태그: zip-package
+- v35.0 | 일반 | package | zip | 뉴 소설가 v35.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v35.0.zip`
+  - 크기: 122343 bytes
+  - 태그: zip-package
+- v34.6 | 일반 | package | zip | 뉴 소설가 v34.6.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v34.6.zip`
+  - 크기: 120365 bytes
+  - 태그: zip-package
+- v34.0 | 일반 | package | zip | 뉴 소설가 v34.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v34.0.zip`
+  - 크기: 118475 bytes
+  - 태그: zip-package
+- v33.6 | 일반 | package | zip | 뉴 소설가 v33.6.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v33.6.zip`
+  - 크기: 117911 bytes
+  - 태그: zip-package
+- v33.5 | 일반 | package | zip | 뉴 소설가 v33.5.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v33.5.zip`
+  - 크기: 117875 bytes
+  - 태그: zip-package
+- v33.1 | 일반 | package | zip | 뉴 소설가 v33.1.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v33.1.zip`
+  - 크기: 116923 bytes
+  - 태그: zip-package
+- v33.0 | 일반 | package | zip | 뉴 소설가 v33.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v33.0.zip`
+  - 크기: 116935 bytes
+  - 태그: zip-package
+- v32.0 | 일반 | package | zip | 뉴 소설가 v32.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v32.0.zip`
+  - 크기: 114373 bytes
+  - 태그: zip-package
+- v31.0 | 일반 | package | zip | 뉴 소설가 v31.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v31.0.zip`
+  - 크기: 113585 bytes
+  - 태그: zip-package
+- v30.3 | 일반 | package | zip | 뉴 소설가 v30.3.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v30.3.zip`
+  - 크기: 113119 bytes
+  - 태그: zip-package
+- v30.1 | 일반 | package | zip | 뉴 소설가 v30.1.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v30.1.zip`
+  - 크기: 114076 bytes
+  - 태그: zip-package
+- v30.0 | 일반 | package | zip | 뉴 소설가 v30.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v30.0.zip`
+  - 크기: 112728 bytes
+  - 태그: zip-package
+- v29.0 | 일반 | package | zip | 뉴 소설가 v29.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v29.0.zip`
+  - 크기: 113099 bytes
+  - 태그: zip-package
+- v28.5 | 일반 | package | zip | 뉴 소설가 v28.5.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v28.5.zip`
+  - 크기: 113085 bytes
+  - 태그: zip-package
+- v28.0 | 수정 | package | zip | 뉴 소설가 v28.0 (수정).zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v28.0 (수정).zip`
+  - 크기: 113891 bytes
+  - 태그: zip-package, revision
+- v27.5 | 일반 | package | zip | 뉴 소설가 v27.5.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v27.5.zip`
+  - 크기: 113940 bytes
+  - 태그: zip-package
+- v27.2 | 일반 | package | zip | 뉴 소설가 v27.2.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v27.2.zip`
+  - 크기: 114962 bytes
+  - 태그: zip-package
+- v27.1 | 일반 | package | zip | 뉴 소설가 v27.1.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v27.1.zip`
+  - 크기: 114936 bytes
+  - 태그: zip-package
+- v27.0 | 일반 | package | zip | 뉴 소설가 v27.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v27.0.zip`
+  - 크기: 114896 bytes
+  - 태그: zip-package
+- v26.5 | 일반 | package | zip | 뉴 소설가 v26.5.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v26.5.zip`
+  - 크기: 113953 bytes
+  - 태그: zip-package
+- v26.1 | 일반 | package | zip | 뉴 소설가 v26.1.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v26.1.zip`
+  - 크기: 113933 bytes
+  - 태그: zip-package
+- v26.0 | 일반 | package | zip | 뉴 소설가 v26.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v26.0.zip`
+  - 크기: 113909 bytes
+  - 태그: zip-package
+- v25.6 | 수정 | package | zip | 뉴 소설가 v25.6(수정).zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v25.6(수정).zip`
+  - 크기: 115183 bytes
+  - 태그: zip-package, revision
+- v25.5 | 일반 | package | zip | 뉴 소설가 v25.5.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v25.5.zip`
+  - 크기: 114799 bytes
+  - 태그: zip-package
+- v25.0 | 일반 | package | zip | 뉴 소설가 v25.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v25.0.zip`
+  - 크기: 113411 bytes
+  - 태그: zip-package
+- v25.0 | Gemini | package | zip | 뉴 소설가 v25.0(Gemini).zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v25.0(Gemini).zip`
+  - 크기: 36724 bytes
+  - 태그: zip-package, gemini
+- v24.9 | 일반 | package | zip | 뉴 소설가 v24.9.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v24.9.zip`
+  - 크기: 113147 bytes
+  - 태그: zip-package
+- v24.6 | 일반 | package | zip | 뉴 소설가 v24.6.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v24.6.zip`
+  - 크기: 112774 bytes
+  - 태그: zip-package
+- v24.5 | 일반 | package | zip | 뉴 소설가 v24.5.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v24.5.zip`
+  - 크기: 111038 bytes
+  - 태그: zip-package
+- v24.1 | 일반 | package | zip | 뉴 소설가 v24.1.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v24.1.zip`
+  - 크기: 110470 bytes
+  - 태그: zip-package
+- v24.0 | 일반 | package | zip | 뉴 소설가 v24.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v24.0.zip`
+  - 크기: 41505 bytes
+  - 태그: zip-package
+- v23.0 | 일반 | package | zip | 뉴 소설가 v23.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v23.0.zip`
+  - 크기: 36963 bytes
+  - 태그: zip-package
+- v22.0 | 일반 | package | zip | 뉴 소설가 v22.0.zip
+  - 경로: `소설가 프롬(구)/뉴 소설가 v22.0.zip`
+  - 크기: 35696 bytes
+  - 태그: zip-package
+- v21.1 | 소설 | preset | risup | 📚 뉴 소설가 v21.1 소설_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v21.1 소설_preset.risup`
+  - 크기: 17482 bytes
+  - 태그: preset-format, novel-track
+- v21.1 | RP | preset | risup | 📚 뉴 소설가 v21.1 RP_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v21.1 RP_preset.risup`
+  - 크기: 17456 bytes
+  - 태그: preset-format, rp-track
+- v21.0 | 소설 | preset | risup | 📚 뉴 소설가 v21.0 소설_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v21.0 소설_preset.risup`
+  - 크기: 17449 bytes
+  - 태그: preset-format, novel-track
+- v21.0 | RP | preset | risup | 📚 뉴 소설가 v21.0 RP_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v21.0 RP_preset.risup`
+  - 크기: 17423 bytes
+  - 태그: preset-format, rp-track
+- v20.0 | 소설 | preset | risup | 📚 뉴 소설가 v20.0 소설_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v20.0 소설_preset.risup`
+  - 크기: 17405 bytes
+  - 태그: preset-format, novel-track
+- v20.0 | RP | preset | risup | 📚 뉴 소설가 v20.0 RP_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v20.0 RP_preset.risup`
+  - 크기: 17379 bytes
+  - 태그: preset-format, rp-track
+- v19.5 | 소설 | preset | risup | 📚 뉴 소설가 v19.5 소설_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v19.5 소설_preset.risup`
+  - 크기: 17401 bytes
+  - 태그: preset-format, novel-track
+- v19.5 | RP | preset | risup | 📚 뉴 소설가 v19.5 RP_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v19.5 RP_preset.risup`
+  - 크기: 17375 bytes
+  - 태그: preset-format, rp-track
+- v19.0 | 소설 | preset | risup | 📚 뉴 소설가 v19.0 소설_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v19.0 소설_preset.risup`
+  - 크기: 17266 bytes
+  - 태그: preset-format, novel-track
+- v19.0 | RP | preset | risup | 📚 뉴 소설가 v19.0 RP_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v19.0 RP_preset.risup`
+  - 크기: 17240 bytes
+  - 태그: preset-format, rp-track
+- v18.0 | 소설 | preset | risup | 📚 뉴 소설가 v18.0 소설_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v18.0 소설_preset.risup`
+  - 크기: 16527 bytes
+  - 태그: preset-format, novel-track
+- v18.0 | RP | preset | risup | 📚 뉴 소설가 v18.0 RP_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v18.0 RP_preset.risup`
+  - 크기: 16531 bytes
+  - 태그: preset-format, rp-track
+- v17.0 | 소설 | preset | risup | 📚 뉴 소설가 v17.0 소설_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v17.0 소설_preset.risup`
+  - 크기: 16524 bytes
+  - 태그: preset-format, novel-track
+- v17.0 | RP | preset | risup | 📚 뉴 소설가 v17.0 RP_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v17.0 RP_preset.risup`
+  - 크기: 16533 bytes
+  - 태그: preset-format, rp-track
+- v16.0 | 소설 | preset | risup | 📚 뉴 소설가 v16.0 소설_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v16.0 소설_preset.risup`
+  - 크기: 16279 bytes
+  - 태그: preset-format, novel-track
+- v16.0 | RP | preset | risup | 📚 뉴 소설가 v16.0 RP_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v16.0 RP_preset.risup`
+  - 크기: 16288 bytes
+  - 태그: preset-format, rp-track
+- v15.0 | 소설 | preset | risup | 📚 뉴 소설가 v15.0 소설_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v15.0 소설_preset.risup`
+  - 크기: 16238 bytes
+  - 태그: preset-format, novel-track
+- v15.0 | RP | preset | risup | 📚 뉴 소설가 v15.0 RP_preset.risup
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v15.0 RP_preset.risup`
+  - 크기: 16262 bytes
+  - 태그: preset-format, rp-track
+- v14.0 | 소설 | preset | risupreset | 📚 뉴 소설가 v14.0 소설_preset.risupreset
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v14.0 소설_preset.risupreset`
+  - 크기: 15742 bytes
+  - 태그: legacy-preset-format, novel-track
+- v14.0 | RP | preset | risupreset | 📚 뉴 소설가 v14.0 RP_preset.risupreset
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v14.0 RP_preset.risupreset`
+  - 크기: 15765 bytes
+  - 태그: legacy-preset-format, rp-track
+- v13.1 | 소설 | preset | risupreset | 📚 뉴 소설가 v13.1 소설_preset.risupreset
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v13.1 소설_preset.risupreset`
+  - 크기: 15611 bytes
+  - 태그: legacy-preset-format, novel-track
+- v13.1 | RP | preset | risupreset | 📚 뉴 소설가 v13.1 RP_preset.risupreset
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v13.1 RP_preset.risupreset`
+  - 크기: 15622 bytes
+  - 태그: legacy-preset-format, rp-track
+- v11.0 | 소설 | preset | risupreset | 📚 뉴 소설가 v11.0 소설_preset.risupreset
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v11.0 소설_preset.risupreset`
+  - 크기: 15510 bytes
+  - 태그: legacy-preset-format, novel-track
+- v11.0 | RP | preset | risupreset | 📚 뉴 소설가 v11.0 RP_preset.risupreset
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v11.0 RP_preset.risupreset`
+  - 크기: 15519 bytes
+  - 태그: legacy-preset-format, rp-track
+- v10.5 | 소설 | preset | risupreset | 📚 뉴 소설가 v10.5 소설_preset.risupreset
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v10.5 소설_preset.risupreset`
+  - 크기: 15470 bytes
+  - 태그: legacy-preset-format, novel-track
+- v10.5 | RP | preset | risupreset | 📚 뉴 소설가 v10.5 RP_preset.risupreset
+  - 경로: `소설가 프롬(구)/📚 뉴 소설가 v10.5 RP_preset.risupreset`
+  - 크기: 15481 bytes
+  - 태그: legacy-preset-format, rp-track
+

@@ -1,0 +1,100 @@
+{
+  "generatedAt": "2026-03-12T10:52:08.562Z",
+  "config": {
+    "suites": 6,
+    "runs": 2,
+    "steps": 24,
+    "mode": "mock",
+    "seedBase": 100,
+    "outDir": "reports/ai",
+    "strict": true,
+    "maxFailRate": 0.2,
+    "preset": "",
+    "presetDir": "",
+    "presetRegistry": "data/ai-presets/preset-registry.json",
+    "presetPolicy": "rotate"
+  },
+  "summary": {
+    "total": 6,
+    "failed": 1,
+    "failRate": 0.1667,
+    "avgDuplicateRate": 0.0833,
+    "avgBeforeLength": 149.89,
+    "avgResultSentences": 2
+  },
+  "pass": true,
+  "runs": [
+    {
+      "suiteIndex": 1,
+      "seed": 100,
+      "pass": true,
+      "turns": 24,
+      "duplicateBeforeRate": 0.0833,
+      "avgBeforeLength": 149.96,
+      "avgResultSentences": 2,
+      "errors": 0,
+      "reportJson": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-195207-869.json",
+      "reportMd": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-195207-869.md"
+    },
+    {
+      "suiteIndex": 2,
+      "seed": 101,
+      "pass": true,
+      "turns": 24,
+      "duplicateBeforeRate": 0.0417,
+      "avgBeforeLength": 149.21,
+      "avgResultSentences": 2,
+      "errors": 0,
+      "reportJson": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-195208-022.json",
+      "reportMd": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-195208-022.md"
+    },
+    {
+      "suiteIndex": 3,
+      "seed": 102,
+      "pass": true,
+      "turns": 24,
+      "duplicateBeforeRate": 0.0417,
+      "avgBeforeLength": 149.54,
+      "avgResultSentences": 2,
+      "errors": 0,
+      "reportJson": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-195208-159.json",
+      "reportMd": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-195208-159.md"
+    },
+    {
+      "suiteIndex": 4,
+      "seed": 103,
+      "pass": true,
+      "turns": 24,
+      "duplicateBeforeRate": 0.125,
+      "avgBeforeLength": 150.58,
+      "avgResultSentences": 2,
+      "errors": 0,
+      "reportJson": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-195208-301.json",
+      "reportMd": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-195208-301.md"
+    },
+    {
+      "suiteIndex": 5,
+      "seed": 104,
+      "pass": false,
+      "turns": 24,
+      "duplicateBeforeRate": 0.2083,
+      "avgBeforeLength": 148.25,
+      "avgResultSentences": 2,
+      "errors": 0,
+      "reportJson": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-195208-427.json",
+      "reportMd": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-195208-427.md"
+    },
+    {
+      "suiteIndex": 6,
+      "seed": 105,
+      "pass": true,
+      "turns": 24,
+      "duplicateBeforeRate": 0,
+      "avgBeforeLength": 151.79,
+      "avgResultSentences": 2,
+      "errors": 0,
+      "reportJson": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-195208-561.json",
+      "reportMd": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-195208-561.md"
+    }
+  ]
+}

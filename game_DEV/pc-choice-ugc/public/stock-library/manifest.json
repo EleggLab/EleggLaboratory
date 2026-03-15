@@ -1,0 +1,583 @@
+{
+  "version": 1,
+  "generatedBy": "tools/prepare_stock_assets.py",
+  "entries": [
+    {
+      "id": "bg_dating_main",
+      "kind": "background",
+      "style": "subculture-ui",
+      "usage": "template-background",
+      "tags": [
+        "배경",
+        "서브컬쳐",
+        "연애시뮬레이션",
+        "실내",
+        "임시태그배경"
+      ],
+      "source": "Asset/DatingGameUI/Exports/Background.jpg",
+      "output": "/stock-library/backgrounds/dating_main.webp",
+      "originalWidth": 1920,
+      "originalHeight": 1080,
+      "width": 1440,
+      "height": 810,
+      "bytes": 68562
+    },
+    {
+      "id": "bg_dating_home",
+      "kind": "background",
+      "style": "subculture-ui",
+      "usage": "template-background",
+      "tags": [
+        "배경",
+        "서브컬쳐",
+        "홈화면",
+        "실내",
+        "임시태그배경"
+      ],
+      "source": "Asset/DatingGameUI/Exports/HomeScreen/HomeScreenBackground.jpg",
+      "output": "/stock-library/backgrounds/dating_home.webp",
+      "originalWidth": 1920,
+      "originalHeight": 1080,
+      "width": 1440,
+      "height": 810,
+      "bytes": 69730
+    },
+    {
+      "id": "bg_renpy_day",
+      "kind": "background",
+      "style": "subculture-renpy",
+      "usage": "template-background",
+      "tags": [
+        "배경",
+        "서브컬쳐",
+        "주간",
+        "미연시",
+        "임시태그배경"
+      ],
+      "source": "Asset/Clean RenPy GUI Kit_FShift/Clean RenPy GUI Kit_FShift/𝐩𝐫𝐞𝐯𝐢𝐞𝐰/Day.jpg",
+      "output": "/stock-library/backgrounds/renpy_day.webp",
+      "originalWidth": 1280,
+      "originalHeight": 720,
+      "width": 1280,
+      "height": 720,
+      "bytes": 57202
+    },
+    {
+      "id": "bg_renpy_night",
+      "kind": "background",
+      "style": "subculture-renpy",
+      "usage": "template-background",
+      "tags": [
+        "배경",
+        "서브컬쳐",
+        "야간",
+        "미연시",
+        "임시태그배경"
+      ],
+      "source": "Asset/Clean RenPy GUI Kit_FShift/Clean RenPy GUI Kit_FShift/𝐩𝐫𝐞𝐯𝐢𝐞𝐰/Night.jpg",
+      "output": "/stock-library/backgrounds/renpy_night.webp",
+      "originalWidth": 1280,
+      "originalHeight": 720,
+      "width": 1280,
+      "height": 720,
+      "bytes": 41226
+    },
+    {
+      "id": "bg_messaging_room",
+      "kind": "background",
+      "style": "subculture-ui",
+      "usage": "situation-background",
+      "tags": [
+        "배경",
+        "상황",
+        "메신저",
+        "서브컬쳐",
+        "임시태그배경"
+      ],
+      "source": "Asset/DatingGameUI/Exports/Messaging/MessagingBackground.png",
+      "output": "/stock-library/backgrounds/messaging_room.webp",
+      "originalWidth": 939,
+      "originalHeight": 1080,
+      "width": 782,
+      "height": 900,
+      "bytes": 5256
+    },
+    {
+      "id": "bg_settings_room",
+      "kind": "background",
+      "style": "subculture-ui",
+      "usage": "situation-background",
+      "tags": [
+        "배경",
+        "설정화면",
+        "서브컬쳐",
+        "UI",
+        "임시태그배경"
+      ],
+      "source": "Asset/DatingGameUI/Exports/Settings/SettingsBackground.png",
+      "output": "/stock-library/backgrounds/settings_room.webp",
+      "originalWidth": 1564,
+      "originalHeight": 913,
+      "width": 1440,
+      "height": 840,
+      "bytes": 7038
+    },
+    {
+      "id": "ted_normal",
+      "kind": "character",
+      "style": "subculture-portrait",
+      "usage": "character-standing",
+      "tags": [
+        "사람",
+        "남성",
+        "서브컬쳐",
+        "초상",
+        "표정",
+        "임시태그캐릭터"
+      ],
+      "source": "Asset/Face/Face/Visage Neutre.png",
+      "output": "/stock-library/characters/ted_normal.webp",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "width": 512,
+      "height": 512,
+      "bytes": 4368
+    },
+    {
+      "id": "ted_sick",
+      "kind": "character",
+      "style": "subculture-portrait",
+      "usage": "character-status",
+      "tags": [
+        "사람",
+        "남성",
+        "서브컬쳐",
+        "아픔",
+        "표정",
+        "임시태그캐릭터"
+      ],
+      "source": "Asset/Face/Face/Visage Triste.png",
+      "output": "/stock-library/characters/ted_sick.webp",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "width": 512,
+      "height": 512,
+      "bytes": 3640
+    },
+    {
+      "id": "ted_insane",
+      "kind": "character",
+      "style": "subculture-portrait",
+      "usage": "character-status",
+      "tags": [
+        "사람",
+        "남성",
+        "서브컬쳐",
+        "불안정",
+        "표정",
+        "임시태그캐릭터"
+      ],
+      "source": "Asset/Face/Face/Visage Énerver.png",
+      "output": "/stock-library/characters/ted_insane.webp",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "width": 512,
+      "height": 512,
+      "bytes": 4366
+    },
+    {
+      "id": "dolores_normal",
+      "kind": "character",
+      "style": "subculture-portrait",
+      "usage": "character-standing",
+      "tags": [
+        "사람",
+        "여성",
+        "서브컬쳐",
+        "초상",
+        "표정",
+        "임시태그캐릭터"
+      ],
+      "source": "Asset/Face/Face/Visage Sourire.png",
+      "output": "/stock-library/characters/dolores_normal.webp",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "width": 512,
+      "height": 512,
+      "bytes": 5448
+    },
+    {
+      "id": "dolores_sick",
+      "kind": "character",
+      "style": "subculture-portrait",
+      "usage": "character-status",
+      "tags": [
+        "사람",
+        "여성",
+        "서브컬쳐",
+        "아픔",
+        "표정",
+        "임시태그캐릭터"
+      ],
+      "source": "Asset/Face/Face/Visage Pleure.png",
+      "output": "/stock-library/characters/dolores_sick.webp",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "width": 512,
+      "height": 512,
+      "bytes": 4084
+    },
+    {
+      "id": "dolores_insane",
+      "kind": "character",
+      "style": "subculture-portrait",
+      "usage": "character-status",
+      "tags": [
+        "사람",
+        "여성",
+        "서브컬쳐",
+        "불안정",
+        "표정",
+        "임시태그캐릭터"
+      ],
+      "source": "Asset/Face/Face/Visage Suspicieux.png",
+      "output": "/stock-library/characters/dolores_insane.webp",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "width": 512,
+      "height": 512,
+      "bytes": 4450
+    },
+    {
+      "id": "mary_normal",
+      "kind": "character",
+      "style": "subculture-portrait",
+      "usage": "character-standing",
+      "tags": [
+        "사람",
+        "여성",
+        "서브컬쳐",
+        "초상",
+        "표정",
+        "임시태그캐릭터"
+      ],
+      "source": "Asset/Face/Face/Visage Clindoeil2.png",
+      "output": "/stock-library/characters/mary_normal.webp",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "width": 512,
+      "height": 512,
+      "bytes": 4248
+    },
+    {
+      "id": "mary_sick",
+      "kind": "character",
+      "style": "subculture-portrait",
+      "usage": "character-status",
+      "tags": [
+        "사람",
+        "여성",
+        "서브컬쳐",
+        "아픔",
+        "표정",
+        "임시태그캐릭터"
+      ],
+      "source": "Asset/Face/Face/Visage Peur.png",
+      "output": "/stock-library/characters/mary_sick.webp",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "width": 512,
+      "height": 512,
+      "bytes": 5160
+    },
+    {
+      "id": "mary_insane",
+      "kind": "character",
+      "style": "subculture-portrait",
+      "usage": "character-status",
+      "tags": [
+        "사람",
+        "여성",
+        "서브컬쳐",
+        "불안정",
+        "표정",
+        "임시태그캐릭터"
+      ],
+      "source": "Asset/Face/Face/Visage Pucca 2.png",
+      "output": "/stock-library/characters/mary_insane.webp",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "width": 512,
+      "height": 512,
+      "bytes": 3236
+    },
+    {
+      "id": "timmy_normal",
+      "kind": "character",
+      "style": "subculture-portrait",
+      "usage": "character-standing",
+      "tags": [
+        "사람",
+        "남성",
+        "서브컬쳐",
+        "초상",
+        "표정",
+        "임시태그캐릭터"
+      ],
+      "source": "Asset/Face/Face/Visage 1.png",
+      "output": "/stock-library/characters/timmy_normal.webp",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "width": 512,
+      "height": 512,
+      "bytes": 5370
+    },
+    {
+      "id": "timmy_sick",
+      "kind": "character",
+      "style": "subculture-portrait",
+      "usage": "character-status",
+      "tags": [
+        "사람",
+        "남성",
+        "서브컬쳐",
+        "아픔",
+        "표정",
+        "임시태그캐릭터"
+      ],
+      "source": "Asset/Face/Face/Visage 2.png",
+      "output": "/stock-library/characters/timmy_sick.webp",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "width": 512,
+      "height": 512,
+      "bytes": 4994
+    },
+    {
+      "id": "timmy_insane",
+      "kind": "character",
+      "style": "subculture-portrait",
+      "usage": "character-status",
+      "tags": [
+        "사람",
+        "남성",
+        "서브컬쳐",
+        "불안정",
+        "표정",
+        "임시태그캐릭터"
+      ],
+      "source": "Asset/Face/Face/Visage 3.png",
+      "output": "/stock-library/characters/timmy_insane.webp",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "width": 512,
+      "height": 512,
+      "bytes": 5480
+    },
+    {
+      "id": "ted_dead",
+      "kind": "character",
+      "style": "subculture-portrait",
+      "usage": "character-status",
+      "tags": [
+        "사람",
+        "흑백",
+        "사망",
+        "표정",
+        "임시태그캐릭터"
+      ],
+      "source": "generated-from:ted_normal",
+      "output": "/stock-library/characters/ted_dead.webp",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "width": 512,
+      "height": 512,
+      "bytes": 2154
+    },
+    {
+      "id": "dolores_dead",
+      "kind": "character",
+      "style": "subculture-portrait",
+      "usage": "character-status",
+      "tags": [
+        "사람",
+        "흑백",
+        "사망",
+        "표정",
+        "임시태그캐릭터"
+      ],
+      "source": "generated-from:dolores_normal",
+      "output": "/stock-library/characters/dolores_dead.webp",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "width": 512,
+      "height": 512,
+      "bytes": 2246
+    },
+    {
+      "id": "mary_dead",
+      "kind": "character",
+      "style": "subculture-portrait",
+      "usage": "character-status",
+      "tags": [
+        "사람",
+        "흑백",
+        "사망",
+        "표정",
+        "임시태그캐릭터"
+      ],
+      "source": "generated-from:mary_normal",
+      "output": "/stock-library/characters/mary_dead.webp",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "width": 512,
+      "height": 512,
+      "bytes": 1142
+    },
+    {
+      "id": "timmy_dead",
+      "kind": "character",
+      "style": "subculture-portrait",
+      "usage": "character-status",
+      "tags": [
+        "사람",
+        "흑백",
+        "사망",
+        "표정",
+        "임시태그캐릭터"
+      ],
+      "source": "generated-from:timmy_normal",
+      "output": "/stock-library/characters/timmy_dead.webp",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "width": 512,
+      "height": 512,
+      "bytes": 2246
+    }
+  ],
+  "packSummary": {
+    "kenney_new-platformer-pack-1.1": {
+      "images": 879,
+      "styles": [
+        "flat-gamepack"
+      ],
+      "types": [
+        "background",
+        "character",
+        "misc"
+      ]
+    },
+    "kenney_ui-pack": {
+      "images": 870,
+      "styles": [
+        "flat-gamepack"
+      ],
+      "types": [
+        "misc",
+        "ui"
+      ]
+    },
+    "kenney_emotes-pack": {
+      "images": 513,
+      "styles": [
+        "flat-gamepack",
+        "subculture-portrait"
+      ],
+      "types": [
+        "character",
+        "misc"
+      ]
+    },
+    "kenney_game-icons": {
+      "images": 425,
+      "styles": [
+        "flat-gamepack"
+      ],
+      "types": [
+        "ui"
+      ]
+    },
+    "Garden cozy kit": {
+      "images": 265,
+      "styles": [
+        "cute-casual"
+      ],
+      "types": [
+        "background",
+        "misc",
+        "ui"
+      ]
+    },
+    "kenney_shape-characters": {
+      "images": 212,
+      "styles": [
+        "flat-gamepack",
+        "subculture-portrait"
+      ],
+      "types": [
+        "background",
+        "character"
+      ]
+    },
+    "kenney_pattern-pack": {
+      "images": 171,
+      "styles": [
+        "flat-gamepack"
+      ],
+      "types": [
+        "misc"
+      ]
+    },
+    "DatingGameUI": {
+      "images": 55,
+      "styles": [
+        "subculture-ui"
+      ],
+      "types": [
+        "background",
+        "character",
+        "misc",
+        "ui"
+      ]
+    },
+    "Clean RenPy GUI Kit_FShift": {
+      "images": 36,
+      "styles": [
+        "subculture-ui"
+      ],
+      "types": [
+        "background",
+        "misc",
+        "ui"
+      ]
+    },
+    "kenney_development-essentials": {
+      "images": 19,
+      "styles": [
+        "flat-gamepack"
+      ],
+      "types": [
+        "misc"
+      ]
+    },
+    "Face": {
+      "images": 18,
+      "styles": [
+        "subculture-portrait"
+      ],
+      "types": [
+        "character"
+      ]
+    },
+    "FREE KAWAII GUI PACK": {
+      "images": 5,
+      "styles": [
+        "cute-casual"
+      ],
+      "types": [
+        "misc",
+        "ui"
+      ]
+    }
+  }
+}

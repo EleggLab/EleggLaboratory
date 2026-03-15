@@ -1,0 +1,83 @@
+{
+  "generatedAt": "2026-03-12T11:33:45.332Z",
+  "config": {
+    "mode": "mock",
+    "runs": 2,
+    "steps": 20,
+    "suites": 4,
+    "seedBase": 500,
+    "outDir": "reports/ai",
+    "profilePack": "data/ai-presets/profile-pack-core.json",
+    "profileRuns": 0,
+    "canaryMode": "",
+    "canaryRuns": 1,
+    "canarySteps": 10,
+    "canarySeedOffset": 10000,
+    "promptCostPer1k": 0,
+    "completionCostPer1k": 0,
+    "minHealthScore": 0.92,
+    "maxBacklogCount": 0,
+    "requireCanaryWhenLive": true,
+    "trendRequired": false,
+    "trendMinSampleCount": 4,
+    "trendRequirePass": true,
+    "strict": true,
+    "preset": "",
+    "presetDir": "",
+    "presetRegistry": "",
+    "presetPolicy": "rotate",
+    "configPath": "config/narrative-release-gate.json",
+    "configProfile": "default",
+    "configLoaded": true,
+    "configFileAbsolute": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\config\\narrative-release-gate.json",
+    "configProfileApplied": "default",
+    "canaryModeResolved": ""
+  },
+  "pass": false,
+  "checks": [
+    {
+      "key": "opsPass",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "key": "healthScore",
+      "actual": 1,
+      "expected": ">= 0.92",
+      "pass": true
+    },
+    {
+      "key": "backlogCount",
+      "actual": 1,
+      "expected": "<= 0",
+      "pass": false
+    },
+    {
+      "key": "trendPass",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    }
+  ],
+  "ops": {
+    "pass": true,
+    "healthScore": 1,
+    "qualityPass": true,
+    "regressionPass": true,
+    "profilePass": true,
+    "storylinePass": true,
+    "semanticPass": true,
+    "canaryPass": true,
+    "trendPass": true,
+    "backlogCount": 1,
+    "jsonPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-ops-suite-20260312-203345-331.json",
+    "mdPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-ops-suite-20260312-203345-331.md",
+    "trend": {
+      "executed": true,
+      "pass": true,
+      "sampleCount": 8,
+      "reason": ""
+    }
+  }
+}

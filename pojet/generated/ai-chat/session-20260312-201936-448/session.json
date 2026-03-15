@@ -1,0 +1,1322 @@
+{
+  "generatedAt": "2026-03-12T11:19:36.448Z",
+  "config": {
+    "mode": "mock",
+    "model": "gpt-4.1-mini",
+    "baseUrl": "https://api.openai.com/v1",
+    "runs": 2,
+    "steps": 20,
+    "cache": false,
+    "seed": 412,
+    "profilePackPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\data\\ai-presets\\profile-pack-core.json",
+    "profileCount": 8,
+    "presetPolicy": "rotate",
+    "singlePresetName": null,
+    "singlePresetPath": null,
+    "presetPoolSize": 0
+  },
+  "stats": {
+    "turns": 20,
+    "apiCalls": 0,
+    "mockCalls": 20,
+    "cacheHits": 0,
+    "parseFallbacks": 0,
+    "errors": 0,
+    "usageSamples": 20,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "totalTokens": 0,
+    "responseMsAvg": 0.1,
+    "responseMsP95": 1,
+    "responseMsMin": 0,
+    "responseMsMax": 1
+  },
+  "runs": [
+    {
+      "runIndex": 1,
+      "profile": {
+        "classId": "fighter",
+        "lineageId": "human",
+        "backgroundId": "border-conscript",
+        "storylineId": "battleworn-veteran",
+        "profileId": "veteran-knight-human",
+        "profileName": "도시 외곽의 냉혈 기사"
+      },
+      "turns": [
+        {
+          "turnIndex": 1,
+          "eventId": "evt-t2-001",
+          "eventCategory": "social",
+          "eventTitle": "검은비 변경 사회 분기",
+          "choiceId": "c3",
+          "locationId": "검은비 변경",
+          "storylineId": "battleworn-veteran",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 폐허 도적과의 충돌에서 밀려 후퇴했다.\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 1,\n    \"turnIndex\": 1\n  },\n  \"world\": {\n    \"day\": 1,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"도시 외곽의 냉혈 기사\",\n    \"gender\": \"male\",\n    \"lineageId\": \"human\",\n    \"classId\": \"fighter\",\n    \"backgroundId\": \"border-conscript\",\n    \"storylineId\": \"battleworn-veteran\",\n    \"topAbilities\": [\n      {\n        \"key\": \"STR\",\n        \"value\": 16\n      },\n      {\n        \"key\": \"CON\",\n        \"value\": 15\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 12\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-001\",\n    \"tier\": \"T2\",\n    \"category\": \"social\",\n    \"title\": \"검은비 변경 사회 분기\",\n    \"text\": \"검은비 변경의 사교석에서는 낮은 목소리 하나가 소문과 계약을 동시에 움직인다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 짧은 대화도 소문과 욕망을 동시에 부른다. 인간 기사 (노예시장에 있었다가 도망침)는 강점 STR/CON/DEX 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"압박으로 판을 뒤집는다 · 협상\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"기록만 남기고 빠져나온다 · 여론\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"기록만 남기고 빠져나온다 · 무대 뒤\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"조건을 재정렬해 안전장치를 건다 · 체면\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 12\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1,\n              \"tension\": 1\n            }\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c3\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 0,\n      \"taint\": 0,\n      \"renown\": 0,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 폐허 도적과의 충돌에서 밀려 후퇴했다.\",\n        \"hook\": \"Resolve the combat aftermath on the 부서진 성상 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the combat aftermath on the 부서진 성상 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 폐허 도적과의 충돌에서 밀려 후퇴했다.\"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 표정 하나, 침묵 한 번이 협상의 방향을 바꿀 수 있는 분위기였다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 폐허 도적과의 충돌에서 밀려 후퇴했다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "압박으로 판을 뒤집는다 · 협상"
+              },
+              {
+                "id": "c2",
+                "label": "기록만 남기고 빠져나온다 · 여론"
+              },
+              {
+                "id": "c3",
+                "label": "기록만 남기고 빠져나온다 · 무대 뒤"
+              },
+              {
+                "id": "bonus-3",
+                "label": "조건을 재정렬해 안전장치를 건다 · 체면"
+              }
+            ],
+            "action_log": "주인공은 상대의 반응 속도를 먼저 읽고 말을 꺼냈다. 주인공은 \"기록만 남기고 빠져나온다 · 무대 뒤\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다.",
+            "result_log": "수치 변화는 제한적이었지만, 서사의 압력은 분명히 증가했다. 합의는 이뤄졌고, 그 대가로 다른 문이 닫히기 시작했다. 표면 변화는 작지만 다음 사건의 해석 프레임은 분명히 조정됐다. 겉보기 안정과 달리 내부 우선순위는 재정렬됐다 (기록만 남기고 빠져나온다 · 무대 뒤).",
+            "aftermath_log": "day 1 / turn 1의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "이번 대화의 여파가 추후 전투/거래 판정에 반영될 수 있다. [검은비 변경 사회 분기] 직전 훅 \"Resolve the combat aftermath on the 부서진 성상 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "social",
+              "검은비-변경",
+              "battleworn-veteran",
+              "t2",
+              "steady-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 표정 하나, 침묵 한 번이 협상의 방향을 바꿀 수 있는 분위기였다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 폐허 도적과의 충돌에서 밀려 후퇴했다.의 여운이 아직 남아 있었다. 검은비 변경의 사교석에서는 낮은 목소리 하나가 소문과 계약을 동시에 움직인다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"압박으로 판을 뒤집는다 · 협상\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"기록만 남기고 빠져나온다 · 여론\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"기록만 남기고 빠져나온다 · 무대 뒤\"\n    }\n  ],\n  \"action_log\": \"주인공은 상대의 반응 속도를 먼저 읽고 말을 꺼냈다. 주인공은 \\\"기록만 남기고 빠져나온다 · 무대 뒤\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"수치 변화는 제한적이었지만, 서사의 압력은 분명히 증가했다. 합의는 이뤄졌고, 그 대가로 다른 문이 닫히기 시작했다. 표면 변화는 작지만 다음 사건의 해석 프레임은 분명히 조정됐다. 겉보기 안정과 달리 내부 우선순위는 재정렬됐다 (기록만 남기고 빠져나온다 · 무대 뒤)\",\n  \"aftermath_log\": \"day 1 / turn 1의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"이번 대화의 여파가 추후 전투/거래 판정에 반영될 수 있다. [검은비 변경 사회 분기] 직전 훅 \\\"Resolve the combat aftermath on the 부서진 성상 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"social\",\n    \"검은비-변경\",\n    \"battleworn-veteran\",\n    \"t2\",\n    \"steady-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 2,
+          "eventId": "evt-t2-003",
+          "eventCategory": "faction",
+          "eventTitle": "성좌 언덕 세력 분기",
+          "choiceId": "c1",
+          "locationId": "검은비 변경",
+          "storylineId": "battleworn-veteran",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다. | 검은비 변경 | [선택] 기록만 남기고 빠져나온다 ·  | 검은비 변경 | 폐허 도적과의 충돌에서 밀려 후퇴했다.\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 1,\n    \"turnIndex\": 2\n  },\n  \"world\": {\n    \"day\": 1,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"도시 외곽의 냉혈 기사\",\n    \"gender\": \"male\",\n    \"lineageId\": \"human\",\n    \"classId\": \"fighter\",\n    \"backgroundId\": \"border-conscript\",\n    \"storylineId\": \"battleworn-veteran\",\n    \"topAbilities\": [\n      {\n        \"key\": \"STR\",\n        \"value\": 16\n      },\n      {\n        \"key\": \"CON\",\n        \"value\": 15\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 12\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-003\",\n    \"tier\": \"T2\",\n    \"category\": \"faction\",\n    \"title\": \"성좌 언덕 세력 분기\",\n    \"text\": \"성좌 언덕의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 한 진영의 손을 잡는 순간 다른 진영의 문이 닫힌다. 인간 기사 (노예시장에 있었다가 도망침)는 강점 STR/CON/DEX 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"양측의 균형을 맞춘다\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"양측의 균형을 맞춘다 · 압박\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"공개 지지를 보류한다 · 정치\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"양측 모두에 빚을 남겨 다음 판을 연다 · 세력\",\n        \"effects\": [\n          {\n            \"kind\": \"faction\",\n            \"value\": {\n              \"guild\": 1,\n              \"temple\": 1\n            }\n          },\n          {\n            \"kind\": \"infamy\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c1\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 14,\n      \"taint\": 0,\n      \"renown\": -1,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.\",\n        \"hook\": \"Resolve the social aftermath on the 부서진 성상 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 기록만 남기고 빠져나온다 · 무대 뒤\",\n        \"hook\": \"Resolve the social aftermath on the 부서진 성상 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | 폐허 도적과의 충돌에서 밀려 후퇴했다.\",\n        \"hook\": \"Resolve the combat aftermath on the 부서진 성상 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the social aftermath on the 부서진 성상 route\",\n      \"Resolve the social aftermath on the 부서진 성상 route\",\n      \"Resolve the combat aftermath on the 부서진 성상 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.\",\n      \"검은비 변경 | [선택] 기록만 남기고 빠져나온다 · \",\n      \"검은비 변경 | 폐허 도적과의 충돌에서 밀려 후퇴했다.\"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 표정 하나, 침묵 한 번이 협상의 방향을 바꿀 수 있는 분위기였다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "양측의 균형을 맞춘다"
+              },
+              {
+                "id": "c2",
+                "label": "양측의 균형을 맞춘다 · 압박"
+              },
+              {
+                "id": "c3",
+                "label": "공개 지지를 보류한다 · 정치"
+              },
+              {
+                "id": "bonus-3",
+                "label": "양측 모두에 빚을 남겨 다음 판을 연다 · 세력"
+              }
+            ],
+            "action_log": "주인공은 상대의 반응 속도를 먼저 읽고 말을 꺼냈다. 주인공은 \"양측의 균형을 맞춘다\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다.",
+            "result_log": "변화량은 골드 +14, 명성 -1로 정리됐다. 합의는 이뤄졌고, 그 대가로 다른 문이 닫히기 시작했다. 수치 변동의 폭이 커서 다음 분기 난도가 즉시 상승한다. 겉보기 안정과 달리 내부 우선순위는 재정렬됐다 (양측의 균형을 맞춘다).",
+            "aftermath_log": "day 1 / turn 2의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "이번 대화의 여파가 추후 전투/거래 판정에 반영될 수 있다. [성좌 언덕 세력 분기] 직전 훅 \"Resolve the social aftermath on the 부서진 성상 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "faction",
+              "검은비-변경",
+              "battleworn-veteran",
+              "t2",
+              "high-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 표정 하나, 침묵 한 번이 협상의 방향을 바꿀 수 있는 분위기였다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.의 여운이 아직 남아 있었다. 성좌 언덕의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"양측의 균형을 맞춘다\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"양측의 균형을 맞춘다 · 압박\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"공개 지지를 보류한다 · 정치\"\n    }\n  ],\n  \"action_log\": \"주인공은 상대의 반응 속도를 먼저 읽고 말을 꺼냈다. 주인공은 \\\"양측의 균형을 맞춘다\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 골드 +14, 명성 -1로 정리됐다. 합의는 이뤄졌고, 그 대가로 다른 문이 닫히기 시작했다. 수치 변동의 폭이 커서 다음 분기 난도가 즉시 상승한다. 겉보기 안정과 달리 내부 우선순위는 재정렬됐다 (양측의 균형을 맞춘다)\",\n  \"aftermath_log\": \"day 1 / turn 2의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"이번 대화의 여파가 추후 전투/거래 판정에 반영될 수 있다. [성좌 언덕 세력 분기] 직전 훅 \\\"Resolve the social aftermath on the 부서진 성상 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"faction\",\n    \"검은비-변경\",\n    \"battleworn-veteran\",\n    \"t2\",\n    \"high-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 3,
+          "eventId": "evt-t2-019",
+          "eventCategory": "faction",
+          "eventTitle": "유리탑 하층 세력 분기",
+          "choiceId": "c3",
+          "locationId": "검은비 변경",
+          "storylineId": "battleworn-veteran",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다. | 검은비 변경 | [선택] 양측의 균형을 맞춘다 | 검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 1,\n    \"turnIndex\": 3\n  },\n  \"world\": {\n    \"day\": 1,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"도시 외곽의 냉혈 기사\",\n    \"gender\": \"male\",\n    \"lineageId\": \"human\",\n    \"classId\": \"fighter\",\n    \"backgroundId\": \"border-conscript\",\n    \"storylineId\": \"battleworn-veteran\",\n    \"topAbilities\": [\n      {\n        \"key\": \"STR\",\n        \"value\": 16\n      },\n      {\n        \"key\": \"CON\",\n        \"value\": 15\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 12\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-019\",\n    \"tier\": \"T2\",\n    \"category\": \"faction\",\n    \"title\": \"유리탑 하층 세력 분기\",\n    \"text\": \"유리탑 하층의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 한 진영의 손을 잡는 순간 다른 진영의 문이 닫힌다. 인간 기사 (노예시장에 있었다가 도망침)는 강점 STR/CON/DEX 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"한 세력에 힘을 실어준다\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"공개 지지를 보류한다 · 균형\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"공개 지지를 보류한다 · 압박\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"양측 모두에 빚을 남겨 다음 판을 연다 · 정치\",\n        \"effects\": [\n          {\n            \"kind\": \"faction\",\n            \"value\": {\n              \"guild\": 1,\n              \"temple\": 1\n            }\n          },\n          {\n            \"kind\": \"infamy\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c3\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 0,\n      \"taint\": 0,\n      \"renown\": 0,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n        \"hook\": \"Resolve the rest aftermath on the 부서진 성상 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 양측의 균형을 맞춘다\",\n        \"hook\": \"장비 강화 혹은 소비 선택\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.\",\n        \"hook\": \"Resolve the social aftermath on the 부서진 성상 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the rest aftermath on the 부서진 성상 route\",\n      \"장비 강화 혹은 소비 선택\",\n      \"Resolve the social aftermath on the 부서진 성상 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n      \"검은비 변경 | [선택] 양측의 균형을 맞춘다\",\n      \"검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.\"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 말보다 타이밍이 중요한 대화 구간이 열렸다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "한 세력에 힘을 실어준다"
+              },
+              {
+                "id": "c2",
+                "label": "공개 지지를 보류한다 · 균형"
+              },
+              {
+                "id": "c3",
+                "label": "공개 지지를 보류한다 · 압박"
+              },
+              {
+                "id": "bonus-3",
+                "label": "양측 모두에 빚을 남겨 다음 판을 연다 · 정치"
+              }
+            ],
+            "action_log": "감정선을 건드리되 되돌릴 여지를 남기는 문장을 골랐다. 주인공은 \"공개 지지를 보류한다 · 압박\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다.",
+            "result_log": "수치 변화는 제한적이었지만, 서사의 압력은 분명히 증가했다. 호감·긴장·신뢰 수치의 미세한 차이가 다음 선택의 난도를 바꿨다. 표면 변화는 작지만 다음 사건의 해석 프레임은 분명히 조정됐다. 인물 간 해석 차이가 다음 충돌의 원인으로 남는다 (공개 지지를 보류한다 · 압박).",
+            "aftermath_log": "day 1 / turn 3의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "후속 이벤트에서 숨은 감정축이 본격적으로 표면화된다. [유리탑 하층 세력 분기] 직전 훅 \"Resolve the rest aftermath on the 부서진 성상 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "faction",
+              "검은비-변경",
+              "battleworn-veteran",
+              "t2",
+              "steady-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 말보다 타이밍이 중요한 대화 구간이 열렸다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.의 여운이 아직 남아 있었다. 유리탑 하층의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"한 세력에 힘을 실어준다\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"공개 지지를 보류한다 · 균형\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"공개 지지를 보류한다 · 압박\"\n    }\n  ],\n  \"action_log\": \"감정선을 건드리되 되돌릴 여지를 남기는 문장을 골랐다. 주인공은 \\\"공개 지지를 보류한다 · 압박\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"수치 변화는 제한적이었지만, 서사의 압력은 분명히 증가했다. 호감·긴장·신뢰 수치의 미세한 차이가 다음 선택의 난도를 바꿨다. 표면 변화는 작지만 다음 사건의 해석 프레임은 분명히 조정됐다. 인물 간 해석 차이가 다음 충돌의 원인으로 남는다 (공개 지지를 보류한다 · 압박)\",\n  \"aftermath_log\": \"day 1 / turn 3의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"후속 이벤트에서 숨은 감정축이 본격적으로 표면화된다. [유리탑 하층 세력 분기] 직전 훅 \\\"Resolve the rest aftermath on the 부서진 성상 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"faction\",\n    \"검은비-변경\",\n    \"battleworn-veteran\",\n    \"t2\",\n    \"steady-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 4,
+          "eventId": "evt-t2-035",
+          "eventCategory": "corruption",
+          "eventTitle": "검은비 변경 오염 분기",
+          "choiceId": "c1",
+          "locationId": "검은비 변경",
+          "storylineId": "battleworn-veteran",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다. | 검은비 변경 | [후속] 짧은 이득 뒤에 피로와 소문이 | 검은비 변경 | [선택] 공개 지지를 보류한다 · 압박\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 1,\n    \"turnIndex\": 4\n  },\n  \"world\": {\n    \"day\": 2,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"도시 외곽의 냉혈 기사\",\n    \"gender\": \"male\",\n    \"lineageId\": \"human\",\n    \"classId\": \"fighter\",\n    \"backgroundId\": \"border-conscript\",\n    \"storylineId\": \"battleworn-veteran\",\n    \"topAbilities\": [\n      {\n        \"key\": \"STR\",\n        \"value\": 16\n      },\n      {\n        \"key\": \"CON\",\n        \"value\": 15\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 12\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-035\",\n    \"tier\": \"T2\",\n    \"category\": \"corruption\",\n    \"title\": \"검은비 변경 오염 분기\",\n    \"text\": \"검은비 변경의 봉인 틈에서 새는 기운이 피부를 데우고 판단을 서서히 흔든다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 금단의 이득은 달콤하지만 오염의 이자는 느리게 쌓인다. 인간 기사 (노예시장에 있었다가 도망침)는 강점 STR/CON/DEX 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"금단 제안을 받아들인다 · 균열\",\n        \"effects\": [\n          {\n            \"kind\": \"taint\",\n            \"value\": 3\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": 1\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"respect\": 2,\n              \"fear\": 1\n            }\n          },\n          {\n            \"kind\": \"chronicle_tag\",\n            \"value\": \"caius-shared-oath\"\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"오염을 통제하며 이득만 챙긴다 · 유혹\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": -1\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1,\n              \"tension\": 1\n            }\n          },\n          {\n            \"kind\": \"chronicle_tag\",\n            \"value\": \"caius-ritual-restraint\"\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"오염을 통제하며 이득만 챙긴다 · 금단\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 24\n          },\n          {\n            \"kind\": \"infamy\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"fear\": 2,\n              \"trust\": -2\n            }\n          },\n          {\n            \"kind\": \"chronicle_tag\",\n            \"value\": \"caius-sold-out\"\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"대가를 계산한 뒤 금지안을 받아들인다\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 16\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 3\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 1,\n              \"fear\": 1\n            }\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c1\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 1\n    },\n    \"resources\": {\n      \"gold\": 0,\n      \"taint\": 3,\n      \"renown\": 1,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.\",\n        \"hook\": \"Resolve the social aftermath on the 부서진 성상 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [후속] 짧은 이득 뒤에 피로와 소문이 따라붙었다.\",\n        \"hook\": \"Resolve the deferred-outcome aftermath on the 부서진 성상 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 공개 지지를 보류한다 · 압박\",\n        \"hook\": \"Resolve the faction aftermath on the 부서진 성상 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the social aftermath on the 부서진 성상 route\",\n      \"Resolve the deferred-outcome aftermath on the 부서진 성상 route\",\n      \"Resolve the faction aftermath on the 부서진 성상 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.\",\n      \"검은비 변경 | [후속] 짧은 이득 뒤에 피로와 소문이\",\n      \"검은비 변경 | [선택] 공개 지지를 보류한다 · 압박\"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 이득의 냄새와 위험의 기척이 같은 방향에서 밀려왔다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "금단 제안을 받아들인다 · 균열"
+              },
+              {
+                "id": "c2",
+                "label": "오염을 통제하며 이득만 챙긴다 · 유혹"
+              },
+              {
+                "id": "c3",
+                "label": "오염을 통제하며 이득만 챙긴다 · 금단"
+              },
+              {
+                "id": "bonus-3",
+                "label": "대가를 계산한 뒤 금지안을 받아들인다"
+              }
+            ],
+            "action_log": "손에 쥘 것과 버릴 것을 동시에 선택했다. 주인공은 \"금단 제안을 받아들인다 · 균열\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다.",
+            "result_log": "변화량은 오염 +3, 명성 +1, 공포 +1로 정리됐다. 얻은 이익은 즉시 기록됐고, 보이지 않는 비용도 함께 누적됐다. 중간 규모의 변동이 누적되어 후속 판정의 기준점이 이동한다. 이번 결과는 장면 전환 속도를 앞당기는 신호가 된다 (금단 제안을 받아들인다 · 균열).",
+            "aftermath_log": "day 2 / turn 4의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "후속 이벤트는 대가 청구 시점을 앞당길 가능성이 있다. [검은비 변경 오염 분기] 직전 훅 \"Resolve the social aftermath on the 부서진 성상 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "corruption",
+              "검은비-변경",
+              "battleworn-veteran",
+              "t2",
+              "mid-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 이득의 냄새와 위험의 기척이 같은 방향에서 밀려왔다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.의 여운이 아직 남아 있었다. 검은비 변경의 봉인 틈에서 새는 기운이 피부를 데우고 판단을 서서히 흔든다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"금단 제안을 받아들인다 · 균열\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"오염을 통제하며 이득만 챙긴다 · 유혹\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"오염을 통제하며 이득만 챙긴다 · 금단\"\n    }\n  ],\n  \"action_log\": \"손에 쥘 것과 버릴 것을 동시에 선택했다. 주인공은 \\\"금단 제안을 받아들인다 · 균열\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 오염 +3, 명성 +1, 공포 +1로 정리됐다. 얻은 이익은 즉시 기록됐고, 보이지 않는 비용도 함께 누적됐다. 중간 규모의 변동이 누적되어 후속 판정의 기준점이 이동한다. 이번 결과는 장면 전환 속도를 앞당기는 신호가 된다 (금단 제안을 받아들인다 · 균열)\",\n  \"aftermath_log\": \"day 2 / turn 4의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"후속 이벤트는 대가 청구 시점을 앞당길 가능성이 있다. [검은비 변경 오염 분기] 직전 훅 \\\"Resolve the social aftermath on the 부서진 성상 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"corruption\",\n    \"검은비-변경\",\n    \"battleworn-veteran\",\n    \"t2\",\n    \"mid-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 5,
+          "eventId": "evt-t2-015",
+          "eventCategory": "corruption",
+          "eventTitle": "재문 폐허 오염 분기",
+          "choiceId": "c3",
+          "locationId": "검은비 변경",
+          "storylineId": "battleworn-veteran",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 균열 짐승과의 충돌에서 밀려 후퇴했다. | 검은비 변경 | [선택] 금단 제안을 받아들인다 · 균 | 검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 1,\n    \"turnIndex\": 5\n  },\n  \"world\": {\n    \"day\": 2,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"도시 외곽의 냉혈 기사\",\n    \"gender\": \"male\",\n    \"lineageId\": \"human\",\n    \"classId\": \"fighter\",\n    \"backgroundId\": \"border-conscript\",\n    \"storylineId\": \"battleworn-veteran\",\n    \"topAbilities\": [\n      {\n        \"key\": \"STR\",\n        \"value\": 16\n      },\n      {\n        \"key\": \"CON\",\n        \"value\": 15\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 12\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-015\",\n    \"tier\": \"T2\",\n    \"category\": \"corruption\",\n    \"title\": \"재문 폐허 오염 분기\",\n    \"text\": \"재문 폐허의 봉인 틈에서 새는 기운이 피부를 데우고 판단을 서서히 흔든다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 금단의 이득은 달콤하지만 오염의 이자는 느리게 쌓인다. 인간 기사 (노예시장에 있었다가 도망침)는 강점 STR/CON/DEX 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"오염을 통제하며 이득만 챙긴다 · 금단\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"오염을 통제하며 이득만 챙긴다 · 대가\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"대가를 피하고 손을 뗀다 · 균열\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"대가를 계산한 뒤 금지안을 받아들인다 · 유혹\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 16\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 3\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 1,\n              \"fear\": 1\n            }\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c3\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 0,\n      \"taint\": 0,\n      \"renown\": 0,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 균열 짐승과의 충돌에서 밀려 후퇴했다.\",\n        \"hook\": \"Resolve the combat aftermath on the 부서진 성상 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 금단 제안을 받아들인다 · 균열\",\n        \"hook\": \"오염 누적에 따른 특수 이벤트\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.\",\n        \"hook\": \"Resolve the social aftermath on the 부서진 성상 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the combat aftermath on the 부서진 성상 route\",\n      \"오염 누적에 따른 특수 이벤트\",\n      \"Resolve the social aftermath on the 부서진 성상 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 균열 짐승과의 충돌에서 밀려 후퇴했다.\",\n      \"검은비 변경 | [선택] 금단 제안을 받아들인다 · 균\",\n      \"검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.\"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 보이지 않는 균열이 장면 전체를 느리게 흔들었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 균열 짐승과의 충돌에서 밀려 후퇴했다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "오염을 통제하며 이득만 챙긴다 · 금단"
+              },
+              {
+                "id": "c2",
+                "label": "오염을 통제하며 이득만 챙긴다 · 대가"
+              },
+              {
+                "id": "c3",
+                "label": "대가를 피하고 손을 뗀다 · 균열"
+              },
+              {
+                "id": "bonus-3",
+                "label": "대가를 계산한 뒤 금지안을 받아들인다 · 유혹"
+              }
+            ],
+            "action_log": "주인공은 대가를 감수할 범위를 먼저 정했다. 주인공은 \"대가를 피하고 손을 뗀다 · 균열\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다.",
+            "result_log": "수치 변화는 제한적이었지만, 서사의 압력은 분명히 증가했다. 관계의 온도는 미세하게 바뀌었고 그 차이가 장기 분기의 씨앗이 됐다. 표면 변화는 작지만 다음 사건의 해석 프레임은 분명히 조정됐다. 직접 보상보다 후속 분기 조건의 무게가 커졌다 (대가를 피하고 손을 뗀다 · 균열).",
+            "aftermath_log": "day 2 / turn 5의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "이번 파장은 가까운 인물의 신뢰와 욕망 수치에 직결된다. [재문 폐허 오염 분기] 직전 훅 \"Resolve the combat aftermath on the 부서진 성상 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "corruption",
+              "검은비-변경",
+              "battleworn-veteran",
+              "t2",
+              "steady-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 보이지 않는 균열이 장면 전체를 느리게 흔들었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 균열 짐승과의 충돌에서 밀려 후퇴했다.의 여운이 아직 남아 있었다. 재문 폐허의 봉인 틈에서 새는 기운이 피부를 데우고 판단을 서서히 흔든다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"오염을 통제하며 이득만 챙긴다 · 금단\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"오염을 통제하며 이득만 챙긴다 · 대가\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"대가를 피하고 손을 뗀다 · 균열\"\n    }\n  ],\n  \"action_log\": \"주인공은 대가를 감수할 범위를 먼저 정했다. 주인공은 \\\"대가를 피하고 손을 뗀다 · 균열\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"수치 변화는 제한적이었지만, 서사의 압력은 분명히 증가했다. 관계의 온도는 미세하게 바뀌었고 그 차이가 장기 분기의 씨앗이 됐다. 표면 변화는 작지만 다음 사건의 해석 프레임은 분명히 조정됐다. 직접 보상보다 후속 분기 조건의 무게가 커졌다 (대가를 피하고 손을 뗀다 · 균열)\",\n  \"aftermath_log\": \"day 2 / turn 5의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"이번 파장은 가까운 인물의 신뢰와 욕망 수치에 직결된다. [재문 폐허 오염 분기] 직전 훅 \\\"Resolve the combat aftermath on the 부서진 성상 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"corruption\",\n    \"검은비-변경\",\n    \"battleworn-veteran\",\n    \"t2\",\n    \"steady-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 6,
+          "eventId": "evt-t2-027",
+          "eventCategory": "faction",
+          "eventTitle": "회색 항구 세력 분기",
+          "choiceId": "c1",
+          "locationId": "검은비 변경",
+          "storylineId": "battleworn-veteran",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다. | 검은비 변경 | [후속] 평판 상승의 반작용으로 긴장이 | 검은비 변경 | [선택] 대가를 피하고 손을 뗀다 · \n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 1,\n    \"turnIndex\": 6\n  },\n  \"world\": {\n    \"day\": 2,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"도시 외곽의 냉혈 기사\",\n    \"gender\": \"male\",\n    \"lineageId\": \"human\",\n    \"classId\": \"fighter\",\n    \"backgroundId\": \"border-conscript\",\n    \"storylineId\": \"battleworn-veteran\",\n    \"topAbilities\": [\n      {\n        \"key\": \"STR\",\n        \"value\": 16\n      },\n      {\n        \"key\": \"CON\",\n        \"value\": 15\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 12\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-027\",\n    \"tier\": \"T2\",\n    \"category\": \"faction\",\n    \"title\": \"회색 항구 세력 분기\",\n    \"text\": \"회색 항구의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 한 진영의 손을 잡는 순간 다른 진영의 문이 닫힌다. 인간 기사 (노예시장에 있었다가 도망침)는 강점 STR/CON/DEX 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"양측의 균형을 맞춘다 · 정치\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"양측의 균형을 맞춘다 · 세력\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"공개 지지를 보류한다 · 균형\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"양측 모두에 빚을 남겨 다음 판을 연다 · 압박\",\n        \"effects\": [\n          {\n            \"kind\": \"faction\",\n            \"value\": {\n              \"guild\": 1,\n              \"temple\": 1\n            }\n          },\n          {\n            \"kind\": \"infamy\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c1\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 14,\n      \"taint\": 0,\n      \"renown\": -1,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.\",\n        \"hook\": \"Resolve the social aftermath on the 부서진 성상 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [후속] 평판 상승의 반작용으로 긴장이 높아졌다.\",\n        \"hook\": \"Resolve the deferred-outcome aftermath on the 부서진 성상 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 대가를 피하고 손을 뗀다 · 균열\",\n        \"hook\": \"Resolve the corruption aftermath on the 부서진 성상 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the social aftermath on the 부서진 성상 route\",\n      \"Resolve the deferred-outcome aftermath on the 부서진 성상 route\",\n      \"Resolve the corruption aftermath on the 부서진 성상 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.\",\n      \"검은비 변경 | [후속] 평판 상승의 반작용으로 긴장이\",\n      \"검은비 변경 | [선택] 대가를 피하고 손을 뗀다 · \"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 신뢰와 경계가 같은 테이블 위에 놓였다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "양측의 균형을 맞춘다 · 정치"
+              },
+              {
+                "id": "c2",
+                "label": "양측의 균형을 맞춘다 · 세력"
+              },
+              {
+                "id": "c3",
+                "label": "공개 지지를 보류한다 · 균형"
+              },
+              {
+                "id": "bonus-3",
+                "label": "양측 모두에 빚을 남겨 다음 판을 연다 · 압박"
+              }
+            ],
+            "action_log": "이득만 취하지 않고 관계의 지속 가능성까지 계산했다. 주인공은 \"양측의 균형을 맞춘다 · 정치\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다.",
+            "result_log": "변화량은 골드 +14, 명성 -1로 정리됐다. 장면은 조용히 끝났지만 관계 구조는 이전과 달라졌다. 수치 변동의 폭이 커서 다음 분기 난도가 즉시 상승한다. 겉보기 안정과 달리 내부 우선순위는 재정렬됐다 (양측의 균형을 맞춘다 · 정치).",
+            "aftermath_log": "day 2 / turn 6의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "다음 장면은 같은 인물과의 재협상으로 이어질 가능성이 높다. [회색 항구 세력 분기] 직전 훅 \"Resolve the social aftermath on the 부서진 성상 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "faction",
+              "검은비-변경",
+              "battleworn-veteran",
+              "t2",
+              "high-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 신뢰와 경계가 같은 테이블 위에 놓였다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.의 여운이 아직 남아 있었다. 회색 항구의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"양측의 균형을 맞춘다 · 정치\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"양측의 균형을 맞춘다 · 세력\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"공개 지지를 보류한다 · 균형\"\n    }\n  ],\n  \"action_log\": \"이득만 취하지 않고 관계의 지속 가능성까지 계산했다. 주인공은 \\\"양측의 균형을 맞춘다 · 정치\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 골드 +14, 명성 -1로 정리됐다. 장면은 조용히 끝났지만 관계 구조는 이전과 달라졌다. 수치 변동의 폭이 커서 다음 분기 난도가 즉시 상승한다. 겉보기 안정과 달리 내부 우선순위는 재정렬됐다 (양측의 균형을 맞춘다 · 정치)\",\n  \"aftermath_log\": \"day 2 / turn 6의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"다음 장면은 같은 인물과의 재협상으로 이어질 가능성이 높다. [회색 항구 세력 분기] 직전 훅 \\\"Resolve the social aftermath on the 부서진 성상 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"faction\",\n    \"검은비-변경\",\n    \"battleworn-veteran\",\n    \"t2\",\n    \"high-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 7,
+          "eventId": "evt-t2-011",
+          "eventCategory": "faction",
+          "eventTitle": "검은비 변경 세력 분기",
+          "choiceId": "c3",
+          "locationId": "검은비 변경",
+          "storylineId": "battleworn-veteran",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 검은 경비병을 자동 전투로 제압했다. | 검은비 변경 | [선택] 양측의 균형을 맞춘다 · 정치 | 검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 1,\n    \"turnIndex\": 7\n  },\n  \"world\": {\n    \"day\": 2,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"도시 외곽의 냉혈 기사\",\n    \"gender\": \"male\",\n    \"lineageId\": \"human\",\n    \"classId\": \"fighter\",\n    \"backgroundId\": \"border-conscript\",\n    \"storylineId\": \"battleworn-veteran\",\n    \"topAbilities\": [\n      {\n        \"key\": \"STR\",\n        \"value\": 16\n      },\n      {\n        \"key\": \"CON\",\n        \"value\": 15\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 12\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-011\",\n    \"tier\": \"T2\",\n    \"category\": \"faction\",\n    \"title\": \"검은비 변경 세력 분기\",\n    \"text\": \"검은비 변경의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 한 진영의 손을 잡는 순간 다른 진영의 문이 닫힌다. 인간 기사 (노예시장에 있었다가 도망침)는 강점 STR/CON/DEX 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"한 세력에 힘을 실어준다\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"양측의 균형을 맞춘다 · 권한 선점\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"양측의 균형을 맞춘다 · 압박\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"양측 모두에 빚을 남겨 다음 판을 연다 · 정치\",\n        \"effects\": [\n          {\n            \"kind\": \"faction\",\n            \"value\": {\n              \"guild\": 1,\n              \"temple\": 1\n            }\n          },\n          {\n            \"kind\": \"infamy\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c3\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 0,\n      \"taint\": 0,\n      \"renown\": 0,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 검은 경비병을 자동 전투로 제압했다.\",\n        \"hook\": \"장비 강화 혹은 소비 선택\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 양측의 균형을 맞춘다 · 정치\",\n        \"hook\": \"장비 강화 혹은 소비 선택\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.\",\n        \"hook\": \"Resolve the social aftermath on the 부서진 성상 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"장비 강화 혹은 소비 선택\",\n      \"장비 강화 혹은 소비 선택\",\n      \"Resolve the social aftermath on the 부서진 성상 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 검은 경비병을 자동 전투로 제압했다.\",\n      \"검은비 변경 | [선택] 양측의 균형을 맞춘다 · 정치\",\n      \"검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.\"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 표정 하나, 침묵 한 번이 협상의 방향을 바꿀 수 있는 분위기였다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 검은 경비병을 자동 전투로 제압했다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "한 세력에 힘을 실어준다"
+              },
+              {
+                "id": "c2",
+                "label": "양측의 균형을 맞춘다 · 권한 선점"
+              },
+              {
+                "id": "c3",
+                "label": "양측의 균형을 맞춘다 · 압박"
+              },
+              {
+                "id": "bonus-3",
+                "label": "양측 모두에 빚을 남겨 다음 판을 연다 · 정치"
+              }
+            ],
+            "action_log": "주인공은 상대의 반응 속도를 먼저 읽고 말을 꺼냈다. 주인공은 \"양측의 균형을 맞춘다 · 압박\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다.",
+            "result_log": "수치 변화는 제한적이었지만, 서사의 압력은 분명히 증가했다. 합의는 이뤄졌고, 그 대가로 다른 문이 닫히기 시작했다. 표면 변화는 작지만 다음 사건의 해석 프레임은 분명히 조정됐다. 직접 보상보다 후속 분기 조건의 무게가 커졌다 (양측의 균형을 맞춘다 · 압박).",
+            "aftermath_log": "day 2 / turn 7의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "이번 대화의 여파가 추후 전투/거래 판정에 반영될 수 있다. [검은비 변경 세력 분기] 직전 훅 \"장비 강화 혹은 소비 선택\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "faction",
+              "검은비-변경",
+              "battleworn-veteran",
+              "t2",
+              "steady-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 표정 하나, 침묵 한 번이 협상의 방향을 바꿀 수 있는 분위기였다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 검은 경비병을 자동 전투로 제압했다.의 여운이 아직 남아 있었다. 검은비 변경의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"한 세력에 힘을 실어준다\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"양측의 균형을 맞춘다 · 권한 선점\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"양측의 균형을 맞춘다 · 압박\"\n    }\n  ],\n  \"action_log\": \"주인공은 상대의 반응 속도를 먼저 읽고 말을 꺼냈다. 주인공은 \\\"양측의 균형을 맞춘다 · 압박\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"수치 변화는 제한적이었지만, 서사의 압력은 분명히 증가했다. 합의는 이뤄졌고, 그 대가로 다른 문이 닫히기 시작했다. 표면 변화는 작지만 다음 사건의 해석 프레임은 분명히 조정됐다. 직접 보상보다 후속 분기 조건의 무게가 커졌다 (양측의 균형을 맞춘다 · 압박)\",\n  \"aftermath_log\": \"day 2 / turn 7의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"이번 대화의 여파가 추후 전투/거래 판정에 반영될 수 있다. [검은비 변경 세력 분기] 직전 훅 \\\"장비 강화 혹은 소비 선택\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"faction\",\n    \"검은비-변경\",\n    \"battleworn-veteran\",\n    \"t2\",\n    \"steady-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 8,
+          "eventId": "evt-t2-023",
+          "eventCategory": "corruption",
+          "eventTitle": "성좌 언덕 오염 분기",
+          "choiceId": "c1",
+          "locationId": "검은비 변경",
+          "storylineId": "battleworn-veteran",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다. | 검은비 변경 | [후속] 짧은 이득 뒤에 피로와 소문이 | 검은비 변경 | [선택] 양측의 균형을 맞춘다 · 압박\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 1,\n    \"turnIndex\": 8\n  },\n  \"world\": {\n    \"day\": 3,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"도시 외곽의 냉혈 기사\",\n    \"gender\": \"male\",\n    \"lineageId\": \"human\",\n    \"classId\": \"fighter\",\n    \"backgroundId\": \"border-conscript\",\n    \"storylineId\": \"battleworn-veteran\",\n    \"topAbilities\": [\n      {\n        \"key\": \"STR\",\n        \"value\": 16\n      },\n      {\n        \"key\": \"CON\",\n        \"value\": 15\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 12\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-023\",\n    \"tier\": \"T2\",\n    \"category\": \"corruption\",\n    \"title\": \"성좌 언덕 오염 분기\",\n    \"text\": \"성좌 언덕의 봉인 틈에서 새는 기운이 피부를 데우고 판단을 서서히 흔든다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 금단의 이득은 달콤하지만 오염의 이자는 느리게 쌓인다. 인간 기사 (노예시장에 있었다가 도망침)는 강점 STR/CON/DEX 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"금단 제안을 받아들인다 · 유혹\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"오염을 통제하며 이득만 챙긴다 · 금단\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"오염을 통제하며 이득만 챙긴다 · 대가\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"대가를 계산한 뒤 금지안을 받아들인다 · 균열\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 16\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 3\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 1,\n              \"fear\": 1\n            }\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c1\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 14,\n      \"taint\": 0,\n      \"renown\": -1,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n        \"hook\": \"Resolve the rest aftermath on the 부서진 성상 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [후속] 짧은 이득 뒤에 피로와 소문이 따라붙었다.\",\n        \"hook\": \"Resolve the deferred-outcome aftermath on the 부서진 성상 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 양측의 균형을 맞춘다 · 압박\",\n        \"hook\": \"Resolve the faction aftermath on the 부서진 성상 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the rest aftermath on the 부서진 성상 route\",\n      \"Resolve the deferred-outcome aftermath on the 부서진 성상 route\",\n      \"Resolve the faction aftermath on the 부서진 성상 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n      \"검은비 변경 | [후속] 짧은 이득 뒤에 피로와 소문이\",\n      \"검은비 변경 | [선택] 양측의 균형을 맞춘다 · 압박\"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 보이지 않는 균열이 장면 전체를 느리게 흔들었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "금단 제안을 받아들인다 · 유혹"
+              },
+              {
+                "id": "c2",
+                "label": "오염을 통제하며 이득만 챙긴다 · 금단"
+              },
+              {
+                "id": "c3",
+                "label": "오염을 통제하며 이득만 챙긴다 · 대가"
+              },
+              {
+                "id": "bonus-3",
+                "label": "대가를 계산한 뒤 금지안을 받아들인다 · 균열"
+              }
+            ],
+            "action_log": "주인공은 대가를 감수할 범위를 먼저 정했다. 주인공은 \"금단 제안을 받아들인다 · 유혹\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다.",
+            "result_log": "변화량은 골드 +14, 명성 -1로 정리됐다. 관계의 온도는 미세하게 바뀌었고 그 차이가 장기 분기의 씨앗이 됐다. 수치 변동의 폭이 커서 다음 분기 난도가 즉시 상승한다. 인물 간 해석 차이가 다음 충돌의 원인으로 남는다 (금단 제안을 받아들인다 · 유혹).",
+            "aftermath_log": "day 3 / turn 8의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "이번 파장은 가까운 인물의 신뢰와 욕망 수치에 직결된다. [성좌 언덕 오염 분기] 직전 훅 \"Resolve the rest aftermath on the 부서진 성상 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "corruption",
+              "검은비-변경",
+              "battleworn-veteran",
+              "t2",
+              "high-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 보이지 않는 균열이 장면 전체를 느리게 흔들었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.의 여운이 아직 남아 있었다. 성좌 언덕의 봉인 틈에서 새는 기운이 피부를 데우고 판단을 서서히 흔든다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"금단 제안을 받아들인다 · 유혹\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"오염을 통제하며 이득만 챙긴다 · 금단\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"오염을 통제하며 이득만 챙긴다 · 대가\"\n    }\n  ],\n  \"action_log\": \"주인공은 대가를 감수할 범위를 먼저 정했다. 주인공은 \\\"금단 제안을 받아들인다 · 유혹\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 골드 +14, 명성 -1로 정리됐다. 관계의 온도는 미세하게 바뀌었고 그 차이가 장기 분기의 씨앗이 됐다. 수치 변동의 폭이 커서 다음 분기 난도가 즉시 상승한다. 인물 간 해석 차이가 다음 충돌의 원인으로 남는다 (금단 제안을 받아들인다 · 유혹)\",\n  \"aftermath_log\": \"day 3 / turn 8의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"이번 파장은 가까운 인물의 신뢰와 욕망 수치에 직결된다. [성좌 언덕 오염 분기] 직전 훅 \\\"Resolve the rest aftermath on the 부서진 성상 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"corruption\",\n    \"검은비-변경\",\n    \"battleworn-veteran\",\n    \"t2\",\n    \"high-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 9,
+          "eventId": "evt-t2-021",
+          "eventCategory": "market",
+          "eventTitle": "검은비 변경 시장 분기",
+          "choiceId": "c3",
+          "locationId": "검은비 변경",
+          "storylineId": "battleworn-veteran",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다. | 검은비 변경 | [선택] 금단 제안을 받아들인다 · 유\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 1,\n    \"turnIndex\": 9\n  },\n  \"world\": {\n    \"day\": 3,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"도시 외곽의 냉혈 기사\",\n    \"gender\": \"male\",\n    \"lineageId\": \"human\",\n    \"classId\": \"fighter\",\n    \"backgroundId\": \"border-conscript\",\n    \"storylineId\": \"battleworn-veteran\",\n    \"topAbilities\": [\n      {\n        \"key\": \"STR\",\n        \"value\": 16\n      },\n      {\n        \"key\": \"CON\",\n        \"value\": 15\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 12\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-021\",\n    \"tier\": \"T2\",\n    \"category\": \"market\",\n    \"title\": \"검은비 변경 시장 분기\",\n    \"text\": \"검은비 변경의 야시장은 웃음 뒤에 숨은 조건서로 가득하고, 손익표는 늘 마지막에 공개된다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 거래 성과와 평판 손실이 늘 같은 저울에 오른다. 인간 기사 (노예시장에 있었다가 도망침)는 강점 STR/CON/DEX 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"조건을 잘라 손실을 줄인다\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"조건을 잘라 손실을 줄인다 · 시장판\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"거래를 접고 시세를 관망한다 · 흥정\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"조건을 재정렬해 안전장치를 건다 · 거래\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 12\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1,\n              \"tension\": 1\n            }\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c3\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 0,\n      \"taint\": 0,\n      \"renown\": 0,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n        \"hook\": \"Resolve the rest aftermath on the 부서진 성상 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 금단 제안을 받아들인다 · 유혹\",\n        \"hook\": \"장비 강화 혹은 소비 선택\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n        \"hook\": \"Resolve the rest aftermath on the 부서진 성상 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the rest aftermath on the 부서진 성상 route\",\n      \"장비 강화 혹은 소비 선택\",\n      \"Resolve the rest aftermath on the 부서진 성상 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n      \"검은비 변경 | [선택] 금단 제안을 받아들인다 · 유\"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 말보다 타이밍이 중요한 대화 구간이 열렸다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "조건을 잘라 손실을 줄인다"
+              },
+              {
+                "id": "c2",
+                "label": "조건을 잘라 손실을 줄인다 · 시장판"
+              },
+              {
+                "id": "c3",
+                "label": "거래를 접고 시세를 관망한다 · 흥정"
+              },
+              {
+                "id": "bonus-3",
+                "label": "조건을 재정렬해 안전장치를 건다 · 거래"
+              }
+            ],
+            "action_log": "감정선을 건드리되 되돌릴 여지를 남기는 문장을 골랐다. 주인공은 \"거래를 접고 시세를 관망한다 · 흥정\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다.",
+            "result_log": "수치 변화는 제한적이었지만, 서사의 압력은 분명히 증가했다. 호감·긴장·신뢰 수치의 미세한 차이가 다음 선택의 난도를 바꿨다. 표면 변화는 작지만 다음 사건의 해석 프레임은 분명히 조정됐다. 직접 보상보다 후속 분기 조건의 무게가 커졌다 (거래를 접고 시세를 관망한다 · 흥정).",
+            "aftermath_log": "day 3 / turn 9의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "후속 이벤트에서 숨은 감정축이 본격적으로 표면화된다. [검은비 변경 시장 분기] 직전 훅 \"Resolve the rest aftermath on the 부서진 성상 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "market",
+              "검은비-변경",
+              "battleworn-veteran",
+              "t2",
+              "steady-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 말보다 타이밍이 중요한 대화 구간이 열렸다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.의 여운이 아직 남아 있었다. 검은비 변경의 야시장은 웃음 뒤에 숨은 조건서로 가득하고, 손익표는 늘 마지막에 공개된다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"조건을 잘라 손실을 줄인다\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"조건을 잘라 손실을 줄인다 · 시장판\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"거래를 접고 시세를 관망한다 · 흥정\"\n    }\n  ],\n  \"action_log\": \"감정선을 건드리되 되돌릴 여지를 남기는 문장을 골랐다. 주인공은 \\\"거래를 접고 시세를 관망한다 · 흥정\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"수치 변화는 제한적이었지만, 서사의 압력은 분명히 증가했다. 호감·긴장·신뢰 수치의 미세한 차이가 다음 선택의 난도를 바꿨다. 표면 변화는 작지만 다음 사건의 해석 프레임은 분명히 조정됐다. 직접 보상보다 후속 분기 조건의 무게가 커졌다 (거래를 접고 시세를 관망한다 · 흥정)\",\n  \"aftermath_log\": \"day 3 / turn 9의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"후속 이벤트에서 숨은 감정축이 본격적으로 표면화된다. [검은비 변경 시장 분기] 직전 훅 \\\"Resolve the rest aftermath on the 부서진 성상 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"market\",\n    \"검은비-변경\",\n    \"battleworn-veteran\",\n    \"t2\",\n    \"steady-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 10,
+          "eventId": "evt-t2-031",
+          "eventCategory": "corruption",
+          "eventTitle": "검은비 변경 오염 분기",
+          "choiceId": "c1",
+          "locationId": "검은비 변경",
+          "storylineId": "battleworn-veteran",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다. | 검은비 변경 | [후속] 짧은 이득 뒤에 피로와 소문이 | 검은비 변경 | [선택] 거래를 접고 시세를 관망한다 \n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 1,\n    \"turnIndex\": 10\n  },\n  \"world\": {\n    \"day\": 3,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"도시 외곽의 냉혈 기사\",\n    \"gender\": \"male\",\n    \"lineageId\": \"human\",\n    \"classId\": \"fighter\",\n    \"backgroundId\": \"border-conscript\",\n    \"storylineId\": \"battleworn-veteran\",\n    \"topAbilities\": [\n      {\n        \"key\": \"STR\",\n        \"value\": 16\n      },\n      {\n        \"key\": \"CON\",\n        \"value\": 15\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 12\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-031\",\n    \"tier\": \"T2\",\n    \"category\": \"corruption\",\n    \"title\": \"검은비 변경 오염 분기\",\n    \"text\": \"검은비 변경의 봉인 틈에서 새는 기운이 피부를 데우고 판단을 서서히 흔든다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 금단의 이득은 달콤하지만 오염의 이자는 느리게 쌓인다. 인간 기사 (노예시장에 있었다가 도망침)는 강점 STR/CON/DEX 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"금단 제안을 받아들인다 · 균열 · 오염 절충\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"대가를 피하고 손을 뗀다 · 유혹\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"대가를 피하고 손을 뗀다 · 금단\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"대가를 계산한 뒤 금지안을 받아들인다\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 16\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 3\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 1,\n              \"fear\": 1\n            }\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c1\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 14,\n      \"taint\": 0,\n      \"renown\": -1,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n        \"hook\": \"Resolve the rest aftermath on the 부서진 성상 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [후속] 짧은 이득 뒤에 피로와 소문이 따라붙었다.\",\n        \"hook\": \"Resolve the deferred-outcome aftermath on the 부서진 성상 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 거래를 접고 시세를 관망한다 · 흥정\",\n        \"hook\": \"Resolve the market aftermath on the 부서진 성상 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the rest aftermath on the 부서진 성상 route\",\n      \"Resolve the deferred-outcome aftermath on the 부서진 성상 route\",\n      \"Resolve the market aftermath on the 부서진 성상 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n      \"검은비 변경 | [후속] 짧은 이득 뒤에 피로와 소문이\",\n      \"검은비 변경 | [선택] 거래를 접고 시세를 관망한다 \"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 보이지 않는 균열이 장면 전체를 느리게 흔들었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "금단 제안을 받아들인다 · 균열 · 오염 절충"
+              },
+              {
+                "id": "c2",
+                "label": "대가를 피하고 손을 뗀다 · 유혹"
+              },
+              {
+                "id": "c3",
+                "label": "대가를 피하고 손을 뗀다 · 금단"
+              },
+              {
+                "id": "bonus-3",
+                "label": "대가를 계산한 뒤 금지안을 받아들인다"
+              }
+            ],
+            "action_log": "주인공은 대가를 감수할 범위를 먼저 정했다. 주인공은 \"금단 제안을 받아들인다 · 균열 · 오염 절충\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다.",
+            "result_log": "변화량은 골드 +14, 명성 -1로 정리됐다. 관계의 온도는 미세하게 바뀌었고 그 차이가 장기 분기의 씨앗이 됐다. 수치 변동의 폭이 커서 다음 분기 난도가 즉시 상승한다. 짧은 이득보다 장기 리스크 관리가 중요해졌다 (금단 제안을 받아들인다 · 균열 · 오염 절충).",
+            "aftermath_log": "day 3 / turn 10의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "이번 파장은 가까운 인물의 신뢰와 욕망 수치에 직결된다. [검은비 변경 오염 분기] 직전 훅 \"Resolve the rest aftermath on the 부서진 성상 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "corruption",
+              "검은비-변경",
+              "battleworn-veteran",
+              "t2",
+              "high-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 보이지 않는 균열이 장면 전체를 느리게 흔들었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 혈통은 human, 시작 라인은 battleworn-veteran, 핵심 능력은 STR 16/CON 15. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.의 여운이 아직 남아 있었다. 검은비 변경의 봉인 틈에서 새는 기운이 피부를 데우고 판단을 서서히 흔든다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"금단 제안을 받아들인다 · 균열 · 오염 절충\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"대가를 피하고 손을 뗀다 · 유혹\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"대가를 피하고 손을 뗀다 · 금단\"\n    }\n  ],\n  \"action_log\": \"주인공은 대가를 감수할 범위를 먼저 정했다. 주인공은 \\\"금단 제안을 받아들인다 · 균열 · 오염 절충\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(fighter/human/border-conscript/battleworn-veteran)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 골드 +14, 명성 -1로 정리됐다. 관계의 온도는 미세하게 바뀌었고 그 차이가 장기 분기의 씨앗이 됐다. 수치 변동의 폭이 커서 다음 분기 난도가 즉시 상승한다. 짧은 이득보다 장기 리스크 관리가 중요해졌다 (금단 제안을 받아들인다 · 균열 · 오염 절충)\",\n  \"aftermath_log\": \"day 3 / turn 10의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(battleworn-veteran)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"이번 파장은 가까운 인물의 신뢰와 욕망 수치에 직결된다. [검은비 변경 오염 분기] 직전 훅 \\\"Resolve the rest aftermath on the 부서진 성상 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"corruption\",\n    \"검은비-변경\",\n    \"battleworn-veteran\",\n    \"t2\",\n    \"high-pressure\"\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "runIndex": 2,
+      "profile": {
+        "classId": "bard",
+        "lineageId": "longkin",
+        "backgroundId": "fallen-bastard",
+        "storylineId": "academy-prodigy",
+        "profileId": "academy-bard-longkin",
+        "profileName": "아카데미의 유혹 바드"
+      },
+      "turns": [
+        {
+          "turnIndex": 1,
+          "eventId": "evt-t2-026",
+          "eventCategory": "relationship",
+          "eventTitle": "검은비 변경 관계 분기",
+          "choiceId": "c1",
+          "locationId": "검은비 변경",
+          "storylineId": "academy-prodigy",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 협상에서 우호적 합의를 끌어냈다.\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 2,\n    \"turnIndex\": 1\n  },\n  \"world\": {\n    \"day\": 1,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"아카데미의 유혹 바드\",\n    \"gender\": \"male\",\n    \"lineageId\": \"longkin\",\n    \"classId\": \"bard\",\n    \"backgroundId\": \"fallen-bastard\",\n    \"storylineId\": \"academy-prodigy\",\n    \"topAbilities\": [\n      {\n        \"key\": \"CHA\",\n        \"value\": 17\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 14\n      },\n      {\n        \"key\": \"INT\",\n        \"value\": 13\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-026\",\n    \"tier\": \"T2\",\n    \"category\": \"relationship\",\n    \"title\": \"검은비 변경 관계 분기\",\n    \"text\": \"검은비 변경의 좁은 회랑에서 시선과 숨이 교차하며, 거래인지 감정인지 경계가 흐려진다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 시선과 침묵의 간격이 관계 축을 빠르게 흔든다. 엘프 바드 (귀족 가문의 외동)는 강점 CHA/DEX/INT 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"유혹의 주도권을 잡는다 · 정면\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"감정선을 읽고 조율한다 · 완급조절\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"감정선을 읽고 조율한다\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"시선과 침묵으로 협상 우위를 만든다 · 밀실\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 1\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 2,\n              \"tension\": 1\n            }\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 1\n          }\n        ]\n      },\n      {\n        \"id\": \"trait-cha-4\",\n        \"label\": \"카리스마로 분위기를 장악한다 · 정면\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 2,\n              \"trust\": 1\n            }\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c1\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 14,\n      \"taint\": 0,\n      \"renown\": -1,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 협상에서 우호적 합의를 끌어냈다.\",\n        \"hook\": \"Resolve the social aftermath on the 가면 연회의 대가 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the social aftermath on the 가면 연회의 대가 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 협상에서 우호적 합의를 끌어냈다.\"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 신뢰와 경계가 같은 테이블 위에 놓였다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 협상에서 우호적 합의를 끌어냈다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "유혹의 주도권을 잡는다 · 정면"
+              },
+              {
+                "id": "c2",
+                "label": "감정선을 읽고 조율한다 · 완급조절"
+              },
+              {
+                "id": "c3",
+                "label": "감정선을 읽고 조율한다"
+              },
+              {
+                "id": "bonus-3",
+                "label": "시선과 침묵으로 협상 우위를 만든다 · 밀실"
+              }
+            ],
+            "action_log": "이득만 취하지 않고 관계의 지속 가능성까지 계산했다. 주인공은 \"유혹의 주도권을 잡는다 · 정면\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다.",
+            "result_log": "변화량은 골드 +14, 명성 -1로 정리됐다. 장면은 조용히 끝났지만 관계 구조는 이전과 달라졌다. 수치 변동의 폭이 커서 다음 분기 난도가 즉시 상승한다. 겉보기 안정과 달리 내부 우선순위는 재정렬됐다 (유혹의 주도권을 잡는다 · 정면).",
+            "aftermath_log": "day 1 / turn 1의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "다음 장면은 같은 인물과의 재협상으로 이어질 가능성이 높다. [검은비 변경 관계 분기] 직전 훅 \"Resolve the social aftermath on the 가면 연회의 대가 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "relationship",
+              "검은비-변경",
+              "academy-prodigy",
+              "t2",
+              "high-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 신뢰와 경계가 같은 테이블 위에 놓였다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 협상에서 우호적 합의를 끌어냈다.의 여운이 아직 남아 있었다. 검은비 변경의 좁은 회랑에서 시선과 숨이 교차하며, 거래인지 감정인지 경계가 흐려진다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"유혹의 주도권을 잡는다 · 정면\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"감정선을 읽고 조율한다 · 완급조절\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"감정선을 읽고 조율한다\"\n    }\n  ],\n  \"action_log\": \"이득만 취하지 않고 관계의 지속 가능성까지 계산했다. 주인공은 \\\"유혹의 주도권을 잡는다 · 정면\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 골드 +14, 명성 -1로 정리됐다. 장면은 조용히 끝났지만 관계 구조는 이전과 달라졌다. 수치 변동의 폭이 커서 다음 분기 난도가 즉시 상승한다. 겉보기 안정과 달리 내부 우선순위는 재정렬됐다 (유혹의 주도권을 잡는다 · 정면)\",\n  \"aftermath_log\": \"day 1 / turn 1의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"다음 장면은 같은 인물과의 재협상으로 이어질 가능성이 높다. [검은비 변경 관계 분기] 직전 훅 \\\"Resolve the social aftermath on the 가면 연회의 대가 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"relationship\",\n    \"검은비-변경\",\n    \"academy-prodigy\",\n    \"t2\",\n    \"high-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 2,
+          "eventId": "evt-t2-011",
+          "eventCategory": "faction",
+          "eventTitle": "검은비 변경 세력 분기",
+          "choiceId": "c2",
+          "locationId": "검은비 변경",
+          "storylineId": "academy-prodigy",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다. | 검은비 변경 | [선택] 유혹의 주도권을 잡는다 · 정 | 검은비 변경 | 협상에서 우호적 합의를 끌어냈다.\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 2,\n    \"turnIndex\": 2\n  },\n  \"world\": {\n    \"day\": 1,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"아카데미의 유혹 바드\",\n    \"gender\": \"male\",\n    \"lineageId\": \"longkin\",\n    \"classId\": \"bard\",\n    \"backgroundId\": \"fallen-bastard\",\n    \"storylineId\": \"academy-prodigy\",\n    \"topAbilities\": [\n      {\n        \"key\": \"CHA\",\n        \"value\": 17\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 14\n      },\n      {\n        \"key\": \"INT\",\n        \"value\": 13\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-011\",\n    \"tier\": \"T2\",\n    \"category\": \"faction\",\n    \"title\": \"검은비 변경 세력 분기\",\n    \"text\": \"검은비 변경의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 한 진영의 손을 잡는 순간 다른 진영의 문이 닫힌다. 엘프 바드 (귀족 가문의 외동)는 강점 CHA/DEX/INT 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"한 세력에 힘을 실어준다\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"양측의 균형을 맞춘다\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"양측의 균형을 맞춘다 · 압박\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"양측 모두에 빚을 남겨 다음 판을 연다 · 정치\",\n        \"effects\": [\n          {\n            \"kind\": \"faction\",\n            \"value\": {\n              \"guild\": 1,\n              \"temple\": 1\n            }\n          },\n          {\n            \"kind\": \"infamy\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c2\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 1,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 0,\n      \"taint\": 0,\n      \"renown\": 2,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n        \"hook\": \"Resolve the rest aftermath on the 가면 연회의 대가 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 유혹의 주도권을 잡는다 · 정면\",\n        \"hook\": \"장비 강화 혹은 소비 선택\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | 협상에서 우호적 합의를 끌어냈다.\",\n        \"hook\": \"Resolve the social aftermath on the 가면 연회의 대가 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the rest aftermath on the 가면 연회의 대가 route\",\n      \"장비 강화 혹은 소비 선택\",\n      \"Resolve the social aftermath on the 가면 연회의 대가 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n      \"검은비 변경 | [선택] 유혹의 주도권을 잡는다 · 정\",\n      \"검은비 변경 | 협상에서 우호적 합의를 끌어냈다.\"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 말보다 타이밍이 중요한 대화 구간이 열렸다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "한 세력에 힘을 실어준다"
+              },
+              {
+                "id": "c2",
+                "label": "양측의 균형을 맞춘다"
+              },
+              {
+                "id": "c3",
+                "label": "양측의 균형을 맞춘다 · 압박"
+              },
+              {
+                "id": "bonus-3",
+                "label": "양측 모두에 빚을 남겨 다음 판을 연다 · 정치"
+              }
+            ],
+            "action_log": "감정선을 건드리되 되돌릴 여지를 남기는 문장을 골랐다. 주인공은 \"양측의 균형을 맞춘다\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다.",
+            "result_log": "변화량은 명성 +2, 신뢰 +1로 정리됐다. 호감·긴장·신뢰 수치의 미세한 차이가 다음 선택의 난도를 바꿨다. 중간 규모의 변동이 누적되어 후속 판정의 기준점이 이동한다. 짧은 이득보다 장기 리스크 관리가 중요해졌다 (양측의 균형을 맞춘다).",
+            "aftermath_log": "day 1 / turn 2의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "후속 이벤트에서 숨은 감정축이 본격적으로 표면화된다. [검은비 변경 세력 분기] 직전 훅 \"Resolve the rest aftermath on the 가면 연회의 대가 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "faction",
+              "검은비-변경",
+              "academy-prodigy",
+              "t2",
+              "mid-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 말보다 타이밍이 중요한 대화 구간이 열렸다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.의 여운이 아직 남아 있었다. 검은비 변경의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"한 세력에 힘을 실어준다\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"양측의 균형을 맞춘다\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"양측의 균형을 맞춘다 · 압박\"\n    }\n  ],\n  \"action_log\": \"감정선을 건드리되 되돌릴 여지를 남기는 문장을 골랐다. 주인공은 \\\"양측의 균형을 맞춘다\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 명성 +2, 신뢰 +1로 정리됐다. 호감·긴장·신뢰 수치의 미세한 차이가 다음 선택의 난도를 바꿨다. 중간 규모의 변동이 누적되어 후속 판정의 기준점이 이동한다. 짧은 이득보다 장기 리스크 관리가 중요해졌다 (양측의 균형을 맞춘다)\",\n  \"aftermath_log\": \"day 1 / turn 2의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"후속 이벤트에서 숨은 감정축이 본격적으로 표면화된다. [검은비 변경 세력 분기] 직전 훅 \\\"Resolve the rest aftermath on the 가면 연회의 대가 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"faction\",\n    \"검은비-변경\",\n    \"academy-prodigy\",\n    \"t2\",\n    \"mid-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 3,
+          "eventId": "evt-t2-003",
+          "eventCategory": "faction",
+          "eventTitle": "성좌 언덕 세력 분기",
+          "choiceId": "bonus-3",
+          "locationId": "검은비 변경",
+          "storylineId": "academy-prodigy",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 탐험 경로를 안정적으로 확보했다. | 검은비 변경 | [후속] 짧은 이득 뒤에 피로와 소문이 | 검은비 변경 | [선택] 양측의 균형을 맞춘다\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 2,\n    \"turnIndex\": 3\n  },\n  \"world\": {\n    \"day\": 1,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"아카데미의 유혹 바드\",\n    \"gender\": \"male\",\n    \"lineageId\": \"longkin\",\n    \"classId\": \"bard\",\n    \"backgroundId\": \"fallen-bastard\",\n    \"storylineId\": \"academy-prodigy\",\n    \"topAbilities\": [\n      {\n        \"key\": \"CHA\",\n        \"value\": 17\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 14\n      },\n      {\n        \"key\": \"INT\",\n        \"value\": 13\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-003\",\n    \"tier\": \"T2\",\n    \"category\": \"faction\",\n    \"title\": \"성좌 언덕 세력 분기\",\n    \"text\": \"성좌 언덕의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 한 진영의 손을 잡는 순간 다른 진영의 문이 닫힌다. 엘프 바드 (귀족 가문의 외동)는 강점 CHA/DEX/INT 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"양측의 균형을 맞춘다 · 권한 선점\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"양측의 균형을 맞춘다 · 압박\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"공개 지지를 보류한다 · 정치\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"양측 모두에 빚을 남겨 다음 판을 연다 · 세력\",\n        \"effects\": [\n          {\n            \"kind\": \"faction\",\n            \"value\": {\n              \"guild\": 1,\n              \"temple\": 1\n            }\n          },\n          {\n            \"kind\": \"infamy\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"bonus-3\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 0,\n      \"taint\": 0,\n      \"renown\": 0,\n      \"infamy\": 1,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 탐험 경로를 안정적으로 확보했다.\",\n        \"hook\": \"장비 강화 혹은 소비 선택\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [후속] 짧은 이득 뒤에 피로와 소문이 따라붙었다.\",\n        \"hook\": \"Resolve the deferred-outcome aftermath on the 가면 연회의 대가 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 양측의 균형을 맞춘다\",\n        \"hook\": \"Resolve the faction aftermath on the 가면 연회의 대가 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"장비 강화 혹은 소비 선택\",\n      \"Resolve the deferred-outcome aftermath on the 가면 연회의 대가 route\",\n      \"Resolve the faction aftermath on the 가면 연회의 대가 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 탐험 경로를 안정적으로 확보했다.\",\n      \"검은비 변경 | [후속] 짧은 이득 뒤에 피로와 소문이\",\n      \"검은비 변경 | [선택] 양측의 균형을 맞춘다\"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 표정 하나, 침묵 한 번이 협상의 방향을 바꿀 수 있는 분위기였다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 탐험 경로를 안정적으로 확보했다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "양측의 균형을 맞춘다 · 권한 선점"
+              },
+              {
+                "id": "c2",
+                "label": "양측의 균형을 맞춘다 · 압박"
+              },
+              {
+                "id": "c3",
+                "label": "공개 지지를 보류한다 · 정치"
+              },
+              {
+                "id": "bonus-3",
+                "label": "양측 모두에 빚을 남겨 다음 판을 연다 · 세력"
+              }
+            ],
+            "action_log": "주인공은 상대의 반응 속도를 먼저 읽고 말을 꺼냈다. 주인공은 \"양측 모두에 빚을 남겨 다음 판을 연다 · 세력\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다.",
+            "result_log": "변화량은 악명 +1로 정리됐다. 합의는 이뤄졌고, 그 대가로 다른 문이 닫히기 시작했다. 표면 변화는 작지만 다음 사건의 해석 프레임은 분명히 조정됐다. 겉보기 안정과 달리 내부 우선순위는 재정렬됐다 (양측 모두에 빚을 남겨 다음 판을 연다 · 세력).",
+            "aftermath_log": "day 1 / turn 3의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "이번 대화의 여파가 추후 전투/거래 판정에 반영될 수 있다. [성좌 언덕 세력 분기] 직전 훅 \"장비 강화 혹은 소비 선택\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "faction",
+              "검은비-변경",
+              "academy-prodigy",
+              "t2",
+              "steady-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 표정 하나, 침묵 한 번이 협상의 방향을 바꿀 수 있는 분위기였다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 탐험 경로를 안정적으로 확보했다.의 여운이 아직 남아 있었다. 성좌 언덕의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"양측의 균형을 맞춘다 · 권한 선점\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"양측의 균형을 맞춘다 · 압박\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"공개 지지를 보류한다 · 정치\"\n    }\n  ],\n  \"action_log\": \"주인공은 상대의 반응 속도를 먼저 읽고 말을 꺼냈다. 주인공은 \\\"양측 모두에 빚을 남겨 다음 판을 연다 · 세력\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 악명 +1로 정리됐다. 합의는 이뤄졌고, 그 대가로 다른 문이 닫히기 시작했다. 표면 변화는 작지만 다음 사건의 해석 프레임은 분명히 조정됐다. 겉보기 안정과 달리 내부 우선순위는 재정렬됐다 (양측 모두에 빚을 남겨 다음 판을 연다 · 세력)\",\n  \"aftermath_log\": \"day 1 / turn 3의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"이번 대화의 여파가 추후 전투/거래 판정에 반영될 수 있다. [성좌 언덕 세력 분기] 직전 훅 \\\"장비 강화 혹은 소비 선택\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"faction\",\n    \"검은비-변경\",\n    \"academy-prodigy\",\n    \"t2\",\n    \"steady-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 4,
+          "eventId": "evt-t2-038",
+          "eventCategory": "social",
+          "eventTitle": "유리탑 하층 사회 분기",
+          "choiceId": "c2",
+          "locationId": "검은비 변경",
+          "storylineId": "academy-prodigy",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다. | 검은비 변경 | [후속] 신뢰가 쌓이며 긴장이 일부 완 | 검은비 변경 | [선택] 양측 모두에 빚을 남겨 다음 \n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 2,\n    \"turnIndex\": 4\n  },\n  \"world\": {\n    \"day\": 2,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"아카데미의 유혹 바드\",\n    \"gender\": \"male\",\n    \"lineageId\": \"longkin\",\n    \"classId\": \"bard\",\n    \"backgroundId\": \"fallen-bastard\",\n    \"storylineId\": \"academy-prodigy\",\n    \"topAbilities\": [\n      {\n        \"key\": \"CHA\",\n        \"value\": 17\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 14\n      },\n      {\n        \"key\": \"INT\",\n        \"value\": 13\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-038\",\n    \"tier\": \"T2\",\n    \"category\": \"social\",\n    \"title\": \"유리탑 하층 사회 분기\",\n    \"text\": \"유리탑 하층의 사교석에서는 낮은 목소리 하나가 소문과 계약을 동시에 움직인다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 짧은 대화도 소문과 욕망을 동시에 부른다. 엘프 바드 (귀족 가문의 외동)는 강점 CHA/DEX/INT 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"압박으로 판을 뒤집는다 · 협상\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 22\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 2,\n              \"fear\": 1\n            }\n          },\n          {\n            \"kind\": \"chronicle_tag\",\n            \"value\": \"serena-clinical-pact\"\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"표정과 말간격을 읽어 타협한다 · 여론\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": -1\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 2,\n              \"tension\": -1\n            }\n          },\n          {\n            \"kind\": \"chronicle_tag\",\n            \"value\": \"serena-safer-method\"\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"표정과 말간격을 읽어 타협한다 · 무대 뒤\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 1\n          },\n          {\n            \"kind\": \"infamy\",\n            \"value\": 1\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"tension\": 2,\n              \"trust\": -2\n            }\n          },\n          {\n            \"kind\": \"chronicle_tag\",\n            \"value\": \"serena-rumor-route\"\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"조건을 재정렬해 안전장치를 건다 · 체면\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 12\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1,\n              \"tension\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"trait-cha-4\",\n        \"label\": \"카리스마로 분위기를 장악한다 · 협상\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 2,\n              \"trust\": 1\n            }\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c2\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 2,\n      \"desire\": 0,\n      \"tension\": -1,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 0,\n      \"taint\": 0,\n      \"renown\": 2,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n        \"hook\": \"Resolve the rest aftermath on the 가면 연회의 대가 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [후속] 신뢰가 쌓이며 긴장이 일부 완화되었다.\",\n        \"hook\": \"Resolve the deferred-outcome aftermath on the 가면 연회의 대가 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 양측 모두에 빚을 남겨 다음 판을 연다 · 세력\",\n        \"hook\": \"Resolve the faction aftermath on the 가면 연회의 대가 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the rest aftermath on the 가면 연회의 대가 route\",\n      \"Resolve the deferred-outcome aftermath on the 가면 연회의 대가 route\",\n      \"Resolve the faction aftermath on the 가면 연회의 대가 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n      \"검은비 변경 | [후속] 신뢰가 쌓이며 긴장이 일부 완\",\n      \"검은비 변경 | [선택] 양측 모두에 빚을 남겨 다음 \"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 말보다 타이밍이 중요한 대화 구간이 열렸다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "압박으로 판을 뒤집는다 · 협상"
+              },
+              {
+                "id": "c2",
+                "label": "표정과 말간격을 읽어 타협한다 · 여론"
+              },
+              {
+                "id": "c3",
+                "label": "표정과 말간격을 읽어 타협한다 · 무대 뒤"
+              },
+              {
+                "id": "bonus-3",
+                "label": "조건을 재정렬해 안전장치를 건다 · 체면"
+              }
+            ],
+            "action_log": "감정선을 건드리되 되돌릴 여지를 남기는 문장을 골랐다. 주인공은 \"표정과 말간격을 읽어 타협한다 · 여론\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다.",
+            "result_log": "변화량은 명성 +2, 신뢰 +2, 긴장 -1로 정리됐다. 호감·긴장·신뢰 수치의 미세한 차이가 다음 선택의 난도를 바꿨다. 중간 규모의 변동이 누적되어 후속 판정의 기준점이 이동한다. 겉보기 안정과 달리 내부 우선순위는 재정렬됐다 (표정과 말간격을 읽어 타협한다 · 여론).",
+            "aftermath_log": "day 2 / turn 4의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "후속 이벤트에서 숨은 감정축이 본격적으로 표면화된다. [유리탑 하층 사회 분기] 직전 훅 \"Resolve the rest aftermath on the 가면 연회의 대가 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "social",
+              "검은비-변경",
+              "academy-prodigy",
+              "t2",
+              "mid-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 말보다 타이밍이 중요한 대화 구간이 열렸다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.의 여운이 아직 남아 있었다. 유리탑 하층의 사교석에서는 낮은 목소리 하나가 소문과 계약을 동시에 움직인다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"압박으로 판을 뒤집는다 · 협상\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"표정과 말간격을 읽어 타협한다 · 여론\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"표정과 말간격을 읽어 타협한다 · 무대 뒤\"\n    }\n  ],\n  \"action_log\": \"감정선을 건드리되 되돌릴 여지를 남기는 문장을 골랐다. 주인공은 \\\"표정과 말간격을 읽어 타협한다 · 여론\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 명성 +2, 신뢰 +2, 긴장 -1로 정리됐다. 호감·긴장·신뢰 수치의 미세한 차이가 다음 선택의 난도를 바꿨다. 중간 규모의 변동이 누적되어 후속 판정의 기준점이 이동한다. 겉보기 안정과 달리 내부 우선순위는 재정렬됐다 (표정과 말간격을 읽어 타협한다 · 여론)\",\n  \"aftermath_log\": \"day 2 / turn 4의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"후속 이벤트에서 숨은 감정축이 본격적으로 표면화된다. [유리탑 하층 사회 분기] 직전 훅 \\\"Resolve the rest aftermath on the 가면 연회의 대가 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"social\",\n    \"검은비-변경\",\n    \"academy-prodigy\",\n    \"t2\",\n    \"mid-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 5,
+          "eventId": "evt-t2-034",
+          "eventCategory": "relationship",
+          "eventTitle": "회색 항구 관계 분기",
+          "choiceId": "bonus-3",
+          "locationId": "검은비 변경",
+          "storylineId": "academy-prodigy",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 탐험 중 우회가 늘어나 진척이 느려졌다 | 검은비 변경 | [선택] 표정과 말간격을 읽어 타협한다 | 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 2,\n    \"turnIndex\": 5\n  },\n  \"world\": {\n    \"day\": 2,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"아카데미의 유혹 바드\",\n    \"gender\": \"male\",\n    \"lineageId\": \"longkin\",\n    \"classId\": \"bard\",\n    \"backgroundId\": \"fallen-bastard\",\n    \"storylineId\": \"academy-prodigy\",\n    \"topAbilities\": [\n      {\n        \"key\": \"CHA\",\n        \"value\": 17\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 14\n      },\n      {\n        \"key\": \"INT\",\n        \"value\": 13\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-034\",\n    \"tier\": \"T2\",\n    \"category\": \"relationship\",\n    \"title\": \"회색 항구 관계 분기\",\n    \"text\": \"회색 항구의 좁은 회랑에서 시선과 숨이 교차하며, 거래인지 감정인지 경계가 흐려진다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 시선과 침묵의 간격이 관계 축을 빠르게 흔든다. 엘프 바드 (귀족 가문의 외동)는 강점 CHA/DEX/INT 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"유혹의 주도권을 잡는다 · 밀실\",\n        \"effects\": [\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 3,\n              \"trust\": 1\n            }\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 1\n          },\n          {\n            \"kind\": \"chronicle_tag\",\n            \"value\": \"bellatrix-intimate\"\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"거리만 남기고 물러난다 · 정면\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"respect\": 2,\n              \"tension\": 1\n            }\n          },\n          {\n            \"kind\": \"chronicle_tag\",\n            \"value\": \"bellatrix-powerplay\"\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"거리만 남기고 물러난다 · 완급조절\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 8\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 1\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1,\n              \"desire\": -1\n            }\n          },\n          {\n            \"kind\": \"chronicle_tag\",\n            \"value\": \"bellatrix-escape\"\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"시선과 침묵으로 협상 우위를 만든다 · 감정선\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 1\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 2,\n              \"tension\": 1\n            }\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 1\n          }\n        ]\n      },\n      {\n        \"id\": \"trait-cha-4\",\n        \"label\": \"카리스마로 분위기를 장악한다 · 밀실\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 2,\n              \"trust\": 1\n            }\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"bonus-3\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 2,\n      \"tension\": 1,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 0,\n      \"taint\": 1,\n      \"renown\": 1,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 탐험 중 우회가 늘어나 진척이 느려졌다.\",\n        \"hook\": \"Resolve the exploration aftermath on the 가면 연회의 대가 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 표정과 말간격을 읽어 타협한다 · 여론\",\n        \"hook\": \"Resolve the social aftermath on the 가면 연회의 대가 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n        \"hook\": \"Resolve the rest aftermath on the 가면 연회의 대가 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the exploration aftermath on the 가면 연회의 대가 route\",\n      \"Resolve the social aftermath on the 가면 연회의 대가 route\",\n      \"Resolve the rest aftermath on the 가면 연회의 대가 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 탐험 중 우회가 늘어나 진척이 느려졌다\",\n      \"검은비 변경 | [선택] 표정과 말간격을 읽어 타협한다\",\n      \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 표정 하나, 침묵 한 번이 협상의 방향을 바꿀 수 있는 분위기였다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 탐험 중 우회가 늘어나 진척이 느려졌다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "유혹의 주도권을 잡는다 · 밀실"
+              },
+              {
+                "id": "c2",
+                "label": "거리만 남기고 물러난다 · 정면"
+              },
+              {
+                "id": "c3",
+                "label": "거리만 남기고 물러난다 · 완급조절"
+              },
+              {
+                "id": "bonus-3",
+                "label": "시선과 침묵으로 협상 우위를 만든다 · 감정선"
+              }
+            ],
+            "action_log": "주인공은 상대의 반응 속도를 먼저 읽고 말을 꺼냈다. 주인공은 \"시선과 침묵으로 협상 우위를 만든다 · 감정선\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다.",
+            "result_log": "변화량은 오염 +1, 명성 +1, 욕망 +2, 긴장 +1로 정리됐다. 합의는 이뤄졌고, 그 대가로 다른 문이 닫히기 시작했다. 중간 규모의 변동이 누적되어 후속 판정의 기준점이 이동한다. 이번 결과는 장면 전환 속도를 앞당기는 신호가 된다 (시선과 침묵으로 협상 우위를 만든다 · 감정선).",
+            "aftermath_log": "day 2 / turn 5의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "이번 대화의 여파가 추후 전투/거래 판정에 반영될 수 있다. [회색 항구 관계 분기] 직전 훅 \"Resolve the exploration aftermath on the 가면 연회의 대가 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "relationship",
+              "검은비-변경",
+              "academy-prodigy",
+              "t2",
+              "mid-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 표정 하나, 침묵 한 번이 협상의 방향을 바꿀 수 있는 분위기였다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 탐험 중 우회가 늘어나 진척이 느려졌다.의 여운이 아직 남아 있었다. 회색 항구의 좁은 회랑에서 시선과 숨이 교차하며, 거래인지 감정인지 경계가 흐려진다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"유혹의 주도권을 잡는다 · 밀실\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"거리만 남기고 물러난다 · 정면\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"거리만 남기고 물러난다 · 완급조절\"\n    }\n  ],\n  \"action_log\": \"주인공은 상대의 반응 속도를 먼저 읽고 말을 꺼냈다. 주인공은 \\\"시선과 침묵으로 협상 우위를 만든다 · 감정선\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 오염 +1, 명성 +1, 욕망 +2, 긴장 +1로 정리됐다. 합의는 이뤄졌고, 그 대가로 다른 문이 닫히기 시작했다. 중간 규모의 변동이 누적되어 후속 판정의 기준점이 이동한다. 이번 결과는 장면 전환 속도를 앞당기는 신호가 된다 (시선과 침묵으로 협상 우위를 만든다 · 감정선)\",\n  \"aftermath_log\": \"day 2 / turn 5의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"이번 대화의 여파가 추후 전투/거래 판정에 반영될 수 있다. [회색 항구 관계 분기] 직전 훅 \\\"Resolve the exploration aftermath on the 가면 연회의 대가 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"relationship\",\n    \"검은비-변경\",\n    \"academy-prodigy\",\n    \"t2\",\n    \"mid-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 6,
+          "eventId": "evt-t2-018",
+          "eventCategory": "relationship",
+          "eventTitle": "성좌 언덕 관계 분기",
+          "choiceId": "c1",
+          "locationId": "검은비 변경",
+          "storylineId": "academy-prodigy",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 재사냥꾼을 자동 전투로 제압했다. | 검은비 변경 | [후속] 신뢰가 쌓이며 긴장이 일부 완 | 검은비 변경 | [후속] 세력 반응이 지연되어 평판선이\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 2,\n    \"turnIndex\": 6\n  },\n  \"world\": {\n    \"day\": 2,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"아카데미의 유혹 바드\",\n    \"gender\": \"male\",\n    \"lineageId\": \"longkin\",\n    \"classId\": \"bard\",\n    \"backgroundId\": \"fallen-bastard\",\n    \"storylineId\": \"academy-prodigy\",\n    \"topAbilities\": [\n      {\n        \"key\": \"CHA\",\n        \"value\": 17\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 14\n      },\n      {\n        \"key\": \"INT\",\n        \"value\": 13\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-018\",\n    \"tier\": \"T2\",\n    \"category\": \"relationship\",\n    \"title\": \"성좌 언덕 관계 분기\",\n    \"text\": \"성좌 언덕의 좁은 회랑에서 시선과 숨이 교차하며, 거래인지 감정인지 경계가 흐려진다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 시선과 침묵의 간격이 관계 축을 빠르게 흔든다. 엘프 바드 (귀족 가문의 외동)는 강점 CHA/DEX/INT 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"감정선을 읽고 조율한다 · 완급조절\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"감정선을 읽고 조율한다\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"거리만 남기고 물러난다 · 밀실\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"시선과 침묵으로 협상 우위를 만든다 · 정면\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 1\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 2,\n              \"tension\": 1\n            }\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 1\n          }\n        ]\n      },\n      {\n        \"id\": \"trait-cha-4\",\n        \"label\": \"카리스마로 분위기를 장악한다 · 완급조절\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 2,\n              \"trust\": 1\n            }\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c1\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 14,\n      \"taint\": 0,\n      \"renown\": -1,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 재사냥꾼을 자동 전투로 제압했다.\",\n        \"hook\": \"장비 강화 혹은 소비 선택\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [후속] 신뢰가 쌓이며 긴장이 일부 완화되었다.\",\n        \"hook\": \"Resolve the deferred-outcome aftermath on the 가면 연회의 대가 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [후속] 세력 반응이 지연되어 평판선이 다시 조정되었다.\",\n        \"hook\": \"Resolve the deferred-outcome aftermath on the 가면 연회의 대가 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"장비 강화 혹은 소비 선택\",\n      \"Resolve the deferred-outcome aftermath on the 가면 연회의 대가 route\",\n      \"Resolve the deferred-outcome aftermath on the 가면 연회의 대가 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 재사냥꾼을 자동 전투로 제압했다.\",\n      \"검은비 변경 | [후속] 신뢰가 쌓이며 긴장이 일부 완\",\n      \"검은비 변경 | [후속] 세력 반응이 지연되어 평판선이\"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 신뢰와 경계가 같은 테이블 위에 놓였다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 재사냥꾼을 자동 전투로 제압했다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "감정선을 읽고 조율한다 · 완급조절"
+              },
+              {
+                "id": "c2",
+                "label": "감정선을 읽고 조율한다"
+              },
+              {
+                "id": "c3",
+                "label": "거리만 남기고 물러난다 · 밀실"
+              },
+              {
+                "id": "bonus-3",
+                "label": "시선과 침묵으로 협상 우위를 만든다 · 정면"
+              }
+            ],
+            "action_log": "이득만 취하지 않고 관계의 지속 가능성까지 계산했다. 주인공은 \"감정선을 읽고 조율한다 · 완급조절\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다.",
+            "result_log": "변화량은 골드 +14, 명성 -1로 정리됐다. 장면은 조용히 끝났지만 관계 구조는 이전과 달라졌다. 수치 변동의 폭이 커서 다음 분기 난도가 즉시 상승한다. 겉보기 안정과 달리 내부 우선순위는 재정렬됐다 (감정선을 읽고 조율한다 · 완급조절).",
+            "aftermath_log": "day 2 / turn 6의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "다음 장면은 같은 인물과의 재협상으로 이어질 가능성이 높다. [성좌 언덕 관계 분기] 직전 훅 \"장비 강화 혹은 소비 선택\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "relationship",
+              "검은비-변경",
+              "academy-prodigy",
+              "t2",
+              "high-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 신뢰와 경계가 같은 테이블 위에 놓였다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 재사냥꾼을 자동 전투로 제압했다.의 여운이 아직 남아 있었다. 성좌 언덕의 좁은 회랑에서 시선과 숨이 교차하며, 거래인지 감정인지 경계가 흐려진다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"감정선을 읽고 조율한다 · 완급조절\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"감정선을 읽고 조율한다\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"거리만 남기고 물러난다 · 밀실\"\n    }\n  ],\n  \"action_log\": \"이득만 취하지 않고 관계의 지속 가능성까지 계산했다. 주인공은 \\\"감정선을 읽고 조율한다 · 완급조절\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 골드 +14, 명성 -1로 정리됐다. 장면은 조용히 끝났지만 관계 구조는 이전과 달라졌다. 수치 변동의 폭이 커서 다음 분기 난도가 즉시 상승한다. 겉보기 안정과 달리 내부 우선순위는 재정렬됐다 (감정선을 읽고 조율한다 · 완급조절)\",\n  \"aftermath_log\": \"day 2 / turn 6의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"다음 장면은 같은 인물과의 재협상으로 이어질 가능성이 높다. [성좌 언덕 관계 분기] 직전 훅 \\\"장비 강화 혹은 소비 선택\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"relationship\",\n    \"검은비-변경\",\n    \"academy-prodigy\",\n    \"t2\",\n    \"high-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 7,
+          "eventId": "evt-t2-019",
+          "eventCategory": "faction",
+          "eventTitle": "유리탑 하층 세력 분기",
+          "choiceId": "bonus-3",
+          "locationId": "검은비 변경",
+          "storylineId": "academy-prodigy",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다. | 검은비 변경 | [선택] 감정선을 읽고 조율한다 · 완 | 검은비 변경 | 재사냥꾼을 자동 전투로 제압했다.\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 2,\n    \"turnIndex\": 7\n  },\n  \"world\": {\n    \"day\": 2,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"아카데미의 유혹 바드\",\n    \"gender\": \"male\",\n    \"lineageId\": \"longkin\",\n    \"classId\": \"bard\",\n    \"backgroundId\": \"fallen-bastard\",\n    \"storylineId\": \"academy-prodigy\",\n    \"topAbilities\": [\n      {\n        \"key\": \"CHA\",\n        \"value\": 17\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 14\n      },\n      {\n        \"key\": \"INT\",\n        \"value\": 13\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-019\",\n    \"tier\": \"T2\",\n    \"category\": \"faction\",\n    \"title\": \"유리탑 하층 세력 분기\",\n    \"text\": \"유리탑 하층의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 한 진영의 손을 잡는 순간 다른 진영의 문이 닫힌다. 엘프 바드 (귀족 가문의 외동)는 강점 CHA/DEX/INT 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"한 세력에 힘을 실어준다\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"공개 지지를 보류한다 · 균형\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"공개 지지를 보류한다 · 압박\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"양측 모두에 빚을 남겨 다음 판을 연다 · 정치\",\n        \"effects\": [\n          {\n            \"kind\": \"faction\",\n            \"value\": {\n              \"guild\": 1,\n              \"temple\": 1\n            }\n          },\n          {\n            \"kind\": \"infamy\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"bonus-3\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 0,\n      \"taint\": 0,\n      \"renown\": 0,\n      \"infamy\": 1,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n        \"hook\": \"Resolve the rest aftermath on the 가면 연회의 대가 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 감정선을 읽고 조율한다 · 완급조절\",\n        \"hook\": \"장비 강화 혹은 소비 선택\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | 재사냥꾼을 자동 전투로 제압했다.\",\n        \"hook\": \"장비 강화 혹은 소비 선택\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the rest aftermath on the 가면 연회의 대가 route\",\n      \"장비 강화 혹은 소비 선택\",\n      \"장비 강화 혹은 소비 선택\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n      \"검은비 변경 | [선택] 감정선을 읽고 조율한다 · 완\",\n      \"검은비 변경 | 재사냥꾼을 자동 전투로 제압했다.\"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 신뢰와 경계가 같은 테이블 위에 놓였다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "한 세력에 힘을 실어준다"
+              },
+              {
+                "id": "c2",
+                "label": "공개 지지를 보류한다 · 균형"
+              },
+              {
+                "id": "c3",
+                "label": "공개 지지를 보류한다 · 압박"
+              },
+              {
+                "id": "bonus-3",
+                "label": "양측 모두에 빚을 남겨 다음 판을 연다 · 정치"
+              }
+            ],
+            "action_log": "이득만 취하지 않고 관계의 지속 가능성까지 계산했다. 주인공은 \"양측 모두에 빚을 남겨 다음 판을 연다 · 정치\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다.",
+            "result_log": "변화량은 악명 +1로 정리됐다. 장면은 조용히 끝났지만 관계 구조는 이전과 달라졌다. 표면 변화는 작지만 다음 사건의 해석 프레임은 분명히 조정됐다. 직접 보상보다 후속 분기 조건의 무게가 커졌다 (양측 모두에 빚을 남겨 다음 판을 연다 · 정치).",
+            "aftermath_log": "day 2 / turn 7의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "다음 장면은 같은 인물과의 재협상으로 이어질 가능성이 높다. [유리탑 하층 세력 분기] 직전 훅 \"Resolve the rest aftermath on the 가면 연회의 대가 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "faction",
+              "검은비-변경",
+              "academy-prodigy",
+              "t2",
+              "steady-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 신뢰와 경계가 같은 테이블 위에 놓였다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.의 여운이 아직 남아 있었다. 유리탑 하층의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"한 세력에 힘을 실어준다\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"공개 지지를 보류한다 · 균형\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"공개 지지를 보류한다 · 압박\"\n    }\n  ],\n  \"action_log\": \"이득만 취하지 않고 관계의 지속 가능성까지 계산했다. 주인공은 \\\"양측 모두에 빚을 남겨 다음 판을 연다 · 정치\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 악명 +1로 정리됐다. 장면은 조용히 끝났지만 관계 구조는 이전과 달라졌다. 표면 변화는 작지만 다음 사건의 해석 프레임은 분명히 조정됐다. 직접 보상보다 후속 분기 조건의 무게가 커졌다 (양측 모두에 빚을 남겨 다음 판을 연다 · 정치)\",\n  \"aftermath_log\": \"day 2 / turn 7의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"다음 장면은 같은 인물과의 재협상으로 이어질 가능성이 높다. [유리탑 하층 세력 분기] 직전 훅 \\\"Resolve the rest aftermath on the 가면 연회의 대가 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"faction\",\n    \"검은비-변경\",\n    \"academy-prodigy\",\n    \"t2\",\n    \"steady-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 8,
+          "eventId": "evt-t2-002",
+          "eventCategory": "relationship",
+          "eventTitle": "회색 항구 관계 분기",
+          "choiceId": "trait-cha-4",
+          "locationId": "검은비 변경",
+          "storylineId": "academy-prodigy",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 1,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 협상에서 우호적 합의를 끌어냈다. | 검은비 변경 | [후속] 짧은 이득 뒤에 피로와 소문이 | 검은비 변경 | [후속] 금단의 선택이 오래 남아 관계\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 2,\n    \"turnIndex\": 8\n  },\n  \"world\": {\n    \"day\": 3,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"아카데미의 유혹 바드\",\n    \"gender\": \"male\",\n    \"lineageId\": \"longkin\",\n    \"classId\": \"bard\",\n    \"backgroundId\": \"fallen-bastard\",\n    \"storylineId\": \"academy-prodigy\",\n    \"topAbilities\": [\n      {\n        \"key\": \"CHA\",\n        \"value\": 17\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 14\n      },\n      {\n        \"key\": \"INT\",\n        \"value\": 13\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-002\",\n    \"tier\": \"T2\",\n    \"category\": \"relationship\",\n    \"title\": \"회색 항구 관계 분기\",\n    \"text\": \"회색 항구의 눅진한 밤, 한 고아 도둑이 거물 상인의 은밀한 제안에 흔들리고 있다. 그의 눈빛은 탐욕과 두려움 사이에서 갈등하며, 얇은 옷 아래로 드러난 몸은 긴장으로 미세하게 떨리고 있었다. 당신의 개입 없이는, 그는 상인의 달콤한 속삭임에 굴복하거나, 혹은 더 깊은 나락으로 떨어질 것이다. 시선과 침묵의 간격이 관계 축을 빠르게 흔든다. 엘프 바드 (귀족 가문의 외동)는 강점 CHA/DEX/INT 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"유혹의 주도권을 잡는다 · 감정선\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"감정선을 읽고 조율한다 · 밀실\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"감정선을 읽고 조율한다 · 정면\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"시선과 침묵으로 협상 우위를 만든다 · 완급조절\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 1\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 2,\n              \"tension\": 1\n            }\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 1\n          }\n        ]\n      },\n      {\n        \"id\": \"trait-cha-4\",\n        \"label\": \"카리스마로 분위기를 장악한다 · 감정선\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 2,\n              \"trust\": 1\n            }\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"trait-cha-4\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 1,\n      \"desire\": 2,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 0,\n      \"taint\": 1,\n      \"renown\": 2,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 협상에서 우호적 합의를 끌어냈다.\",\n        \"hook\": \"Resolve the social aftermath on the 가면 연회의 대가 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [후속] 짧은 이득 뒤에 피로와 소문이 따라붙었다.\",\n        \"hook\": \"Resolve the deferred-outcome aftermath on the 가면 연회의 대가 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [후속] 금단의 선택이 오래 남아 관계 온도를 밀어 올렸다.\",\n        \"hook\": \"Resolve the deferred-outcome aftermath on the 가면 연회의 대가 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the social aftermath on the 가면 연회의 대가 route\",\n      \"Resolve the deferred-outcome aftermath on the 가면 연회의 대가 route\",\n      \"Resolve the deferred-outcome aftermath on the 가면 연회의 대가 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 협상에서 우호적 합의를 끌어냈다.\",\n      \"검은비 변경 | [후속] 짧은 이득 뒤에 피로와 소문이\",\n      \"검은비 변경 | [후속] 금단의 선택이 오래 남아 관계\"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 말보다 타이밍이 중요한 대화 구간이 열렸다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 협상에서 우호적 합의를 끌어냈다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "유혹의 주도권을 잡는다 · 감정선"
+              },
+              {
+                "id": "c2",
+                "label": "감정선을 읽고 조율한다 · 밀실"
+              },
+              {
+                "id": "c3",
+                "label": "감정선을 읽고 조율한다 · 정면"
+              },
+              {
+                "id": "bonus-3",
+                "label": "시선과 침묵으로 협상 우위를 만든다 · 완급조절"
+              }
+            ],
+            "action_log": "감정선을 건드리되 되돌릴 여지를 남기는 문장을 골랐다. 주인공은 \"카리스마로 분위기를 장악한다 · 감정선\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다.",
+            "result_log": "변화량은 오염 +1, 명성 +2, 신뢰 +1, 욕망 +2로 정리됐다. 호감·긴장·신뢰 수치의 미세한 차이가 다음 선택의 난도를 바꿨다. 수치 변동의 폭이 커서 다음 분기 난도가 즉시 상승한다. 직접 보상보다 후속 분기 조건의 무게가 커졌다 (카리스마로 분위기를 장악한다 · 감정선).",
+            "aftermath_log": "day 3 / turn 8의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "후속 이벤트에서 숨은 감정축이 본격적으로 표면화된다. [회색 항구 관계 분기] 직전 훅 \"Resolve the social aftermath on the 가면 연회의 대가 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "relationship",
+              "검은비-변경",
+              "academy-prodigy",
+              "t2",
+              "high-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 말보다 타이밍이 중요한 대화 구간이 열렸다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 협상에서 우호적 합의를 끌어냈다.의 여운이 아직 남아 있었다. 회색 항구의 눅진한 밤, 한 고아 도둑이 거물 상인의 은밀한 제안에 흔들리고 있다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"유혹의 주도권을 잡는다 · 감정선\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"감정선을 읽고 조율한다 · 밀실\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"감정선을 읽고 조율한다 · 정면\"\n    }\n  ],\n  \"action_log\": \"감정선을 건드리되 되돌릴 여지를 남기는 문장을 골랐다. 주인공은 \\\"카리스마로 분위기를 장악한다 · 감정선\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 오염 +1, 명성 +2, 신뢰 +1, 욕망 +2로 정리됐다. 호감·긴장·신뢰 수치의 미세한 차이가 다음 선택의 난도를 바꿨다. 수치 변동의 폭이 커서 다음 분기 난도가 즉시 상승한다. 직접 보상보다 후속 분기 조건의 무게가 커졌다 (카리스마로 분위기를 장악한다 · 감정선)\",\n  \"aftermath_log\": \"day 3 / turn 8의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"후속 이벤트에서 숨은 감정축이 본격적으로 표면화된다. [회색 항구 관계 분기] 직전 훅 \\\"Resolve the social aftermath on the 가면 연회의 대가 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"relationship\",\n    \"검은비-변경\",\n    \"academy-prodigy\",\n    \"t2\",\n    \"high-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 9,
+          "eventId": "evt-t2-027",
+          "eventCategory": "faction",
+          "eventTitle": "회색 항구 세력 분기",
+          "choiceId": "bonus-3",
+          "locationId": "검은비 변경",
+          "storylineId": "academy-prodigy",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 1,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 협상에서 우호적 합의를 끌어냈다. | 검은비 변경 | [선택] 카리스마로 분위기를 장악한다 \n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 2,\n    \"turnIndex\": 9\n  },\n  \"world\": {\n    \"day\": 3,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"아카데미의 유혹 바드\",\n    \"gender\": \"male\",\n    \"lineageId\": \"longkin\",\n    \"classId\": \"bard\",\n    \"backgroundId\": \"fallen-bastard\",\n    \"storylineId\": \"academy-prodigy\",\n    \"topAbilities\": [\n      {\n        \"key\": \"CHA\",\n        \"value\": 17\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 14\n      },\n      {\n        \"key\": \"INT\",\n        \"value\": 13\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-027\",\n    \"tier\": \"T2\",\n    \"category\": \"faction\",\n    \"title\": \"회색 항구 세력 분기\",\n    \"text\": \"회색 항구의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 한 진영의 손을 잡는 순간 다른 진영의 문이 닫힌다. 엘프 바드 (귀족 가문의 외동)는 강점 CHA/DEX/INT 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"양측의 균형을 맞춘다 · 정치\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"양측의 균형을 맞춘다 · 세력\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"공개 지지를 보류한다 · 균형\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"양측 모두에 빚을 남겨 다음 판을 연다 · 압박\",\n        \"effects\": [\n          {\n            \"kind\": \"faction\",\n            \"value\": {\n              \"guild\": 1,\n              \"temple\": 1\n            }\n          },\n          {\n            \"kind\": \"infamy\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"bonus-3\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 0,\n      \"taint\": 0,\n      \"renown\": 0,\n      \"infamy\": 1,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 협상에서 우호적 합의를 끌어냈다.\",\n        \"hook\": \"Resolve the social aftermath on the 가면 연회의 대가 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 카리스마로 분위기를 장악한다 · 감정선\",\n        \"hook\": \"오염 누적에 따른 특수 이벤트\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | 협상에서 우호적 합의를 끌어냈다.\",\n        \"hook\": \"Resolve the social aftermath on the 가면 연회의 대가 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the social aftermath on the 가면 연회의 대가 route\",\n      \"오염 누적에 따른 특수 이벤트\",\n      \"Resolve the social aftermath on the 가면 연회의 대가 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 협상에서 우호적 합의를 끌어냈다.\",\n      \"검은비 변경 | [선택] 카리스마로 분위기를 장악한다 \"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 말보다 타이밍이 중요한 대화 구간이 열렸다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 협상에서 우호적 합의를 끌어냈다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "양측의 균형을 맞춘다 · 정치"
+              },
+              {
+                "id": "c2",
+                "label": "양측의 균형을 맞춘다 · 세력"
+              },
+              {
+                "id": "c3",
+                "label": "공개 지지를 보류한다 · 균형"
+              },
+              {
+                "id": "bonus-3",
+                "label": "양측 모두에 빚을 남겨 다음 판을 연다 · 압박"
+              }
+            ],
+            "action_log": "감정선을 건드리되 되돌릴 여지를 남기는 문장을 골랐다. 주인공은 \"양측 모두에 빚을 남겨 다음 판을 연다 · 압박\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다.",
+            "result_log": "변화량은 악명 +1로 정리됐다. 호감·긴장·신뢰 수치의 미세한 차이가 다음 선택의 난도를 바꿨다. 표면 변화는 작지만 다음 사건의 해석 프레임은 분명히 조정됐다. 직접 보상보다 후속 분기 조건의 무게가 커졌다 (양측 모두에 빚을 남겨 다음 판을 연다 · 압박).",
+            "aftermath_log": "day 3 / turn 9의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "후속 이벤트에서 숨은 감정축이 본격적으로 표면화된다. [회색 항구 세력 분기] 직전 훅 \"Resolve the social aftermath on the 가면 연회의 대가 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "faction",
+              "검은비-변경",
+              "academy-prodigy",
+              "t2",
+              "steady-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 말보다 타이밍이 중요한 대화 구간이 열렸다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 협상에서 우호적 합의를 끌어냈다.의 여운이 아직 남아 있었다. 회색 항구의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"양측의 균형을 맞춘다 · 정치\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"양측의 균형을 맞춘다 · 세력\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"공개 지지를 보류한다 · 균형\"\n    }\n  ],\n  \"action_log\": \"감정선을 건드리되 되돌릴 여지를 남기는 문장을 골랐다. 주인공은 \\\"양측 모두에 빚을 남겨 다음 판을 연다 · 압박\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 악명 +1로 정리됐다. 호감·긴장·신뢰 수치의 미세한 차이가 다음 선택의 난도를 바꿨다. 표면 변화는 작지만 다음 사건의 해석 프레임은 분명히 조정됐다. 직접 보상보다 후속 분기 조건의 무게가 커졌다 (양측 모두에 빚을 남겨 다음 판을 연다 · 압박)\",\n  \"aftermath_log\": \"day 3 / turn 9의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"후속 이벤트에서 숨은 감정축이 본격적으로 표면화된다. [회색 항구 세력 분기] 직전 훅 \\\"Resolve the social aftermath on the 가면 연회의 대가 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"faction\",\n    \"검은비-변경\",\n    \"academy-prodigy\",\n    \"t2\",\n    \"steady-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 10,
+          "eventId": "evt-t2-004",
+          "eventCategory": "relic",
+          "eventTitle": "유리탑 하층 유물 분기",
+          "choiceId": "c1",
+          "locationId": "검은비 변경",
+          "storylineId": "academy-prodigy",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "requestMs": 0,
+          "preset": null,
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- options must contain 2~4 unique entries.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n- Do not start multiple logs with near-identical opening phrase.\n- Avoid reusing phrases from continuity.avoidPhrases.\n- before/action/result/aftermath/next_hook must each serve different beat purpose.\n- memory_tags should be 3~6 concise kebab-case tags.\n\nBeat intent: before_choice_log sets scene tension, action_log executes selected choice, result_log states direct consequence, aftermath_log states broader fallout, next_hook_log sets a concrete next dilemma.\n\nAvoid repeating these lead phrases: 검은비 변경 | 탐험 경로를 안정적으로 확보했다. | 검은비 변경 | [후속] 세력 반응이 지연되어 평판선이 | 검은비 변경 | [선택] 양측 모두에 빚을 남겨 다음 \n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 2,\n    \"turnIndex\": 10\n  },\n  \"world\": {\n    \"day\": 3,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"아카데미의 유혹 바드\",\n    \"gender\": \"male\",\n    \"lineageId\": \"longkin\",\n    \"classId\": \"bard\",\n    \"backgroundId\": \"fallen-bastard\",\n    \"storylineId\": \"academy-prodigy\",\n    \"topAbilities\": [\n      {\n        \"key\": \"CHA\",\n        \"value\": 17\n      },\n      {\n        \"key\": \"DEX\",\n        \"value\": 14\n      },\n      {\n        \"key\": \"INT\",\n        \"value\": 13\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-004\",\n    \"tier\": \"T2\",\n    \"category\": \"relic\",\n    \"title\": \"유리탑 하층 유물 분기\",\n    \"text\": \"유리탑 하층의 유물실은 희미한 진동으로 응답하며, 만지는 순서조차 협상의 무기가 된다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 유물은 힘을 주는 대신 장기 분기의 문턱을 높인다. 엘프 바드 (귀족 가문의 외동)는 강점 CHA/DEX/INT 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c3\",\n        \"label\": \"봉인선을 복구하고 떠난다 · 공명\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"c1\",\n        \"label\": \"의식 절차를 지키며 접근한다 · 각성\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"의식 절차를 지키며 접근한다 · 정화\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c1\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 14,\n      \"taint\": 0,\n      \"renown\": -1,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 탐험 경로를 안정적으로 확보했다.\",\n        \"hook\": \"Resolve the exploration aftermath on the 가면 연회의 대가 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [후속] 세력 반응이 지연되어 평판선이 다시 조정되었다.\",\n        \"hook\": \"Resolve the deferred-outcome aftermath on the 가면 연회의 대가 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 양측 모두에 빚을 남겨 다음 판을 연다 · 압박\",\n        \"hook\": \"Resolve the faction aftermath on the 가면 연회의 대가 route\"\n      }\n    ],\n    \"recentHooks\": [\n      \"Resolve the exploration aftermath on the 가면 연회의 대가 route\",\n      \"Resolve the deferred-outcome aftermath on the 가면 연회의 대가 route\",\n      \"Resolve the faction aftermath on the 가면 연회의 대가 route\"\n    ],\n    \"avoidPhrases\": [\n      \"검은비 변경 | 탐험 경로를 안정적으로 확보했다.\",\n      \"검은비 변경 | [후속] 세력 반응이 지연되어 평판선이\",\n      \"검은비 변경 | [선택] 양측 모두에 빚을 남겨 다음 \"\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 표정 하나, 침묵 한 번이 협상의 방향을 바꿀 수 있는 분위기였다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 탐험 경로를 안정적으로 확보했다. 의 여운이 아직 남아 있었다.",
+            "options": [
+              {
+                "id": "c3",
+                "label": "봉인선을 복구하고 떠난다 · 공명"
+              },
+              {
+                "id": "c1",
+                "label": "의식 절차를 지키며 접근한다 · 각성"
+              },
+              {
+                "id": "c2",
+                "label": "의식 절차를 지키며 접근한다 · 정화"
+              },
+              {
+                "id": "observe-context",
+                "label": "상황을 더 자세히 살핀다."
+              }
+            ],
+            "action_log": "주인공은 상대의 반응 속도를 먼저 읽고 말을 꺼냈다. 주인공은 \"의식 절차를 지키며 접근한다 · 각성\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다.",
+            "result_log": "변화량은 골드 +14, 명성 -1로 정리됐다. 합의는 이뤄졌고, 그 대가로 다른 문이 닫히기 시작했다. 수치 변동의 폭이 커서 다음 분기 난도가 즉시 상승한다. 직접 보상보다 후속 분기 조건의 무게가 커졌다 (의식 절차를 지키며 접근한다 · 각성).",
+            "aftermath_log": "day 3 / turn 10의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.",
+            "next_hook_log": "이번 대화의 여파가 추후 전투/거래 판정에 반영될 수 있다. [유리탑 하층 유물 분기] 직전 훅 \"Resolve the exploration aftermath on the 가면 연회의 대가 route\"과 연결될 가능성이 높다.",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "relic",
+              "검은비-변경",
+              "academy-prodigy",
+              "t2",
+              "high-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 표정 하나, 침묵 한 번이 협상의 방향을 바꿀 수 있는 분위기였다. 주인공의 프로필상 직업은 bard, 배경은 fallen-bastard, 혈통은 longkin, 시작 라인은 academy-prodigy, 핵심 능력은 CHA 17/DEX 14. 검은비 변경 | 탐험 경로를 안정적으로 확보했다.의 여운이 아직 남아 있었다. 유리탑 하층의 유물실은 희미한 진동으로 응답하며, 만지는 순서조차 협상의 무기가 된다\",\n  \"options\": [\n    {\n      \"id\": \"c3\",\n      \"label\": \"봉인선을 복구하고 떠난다 · 공명\"\n    },\n    {\n      \"id\": \"c1\",\n      \"label\": \"의식 절차를 지키며 접근한다 · 각성\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"의식 절차를 지키며 접근한다 · 정화\"\n    }\n  ],\n  \"action_log\": \"주인공은 상대의 반응 속도를 먼저 읽고 말을 꺼냈다. 주인공은 \\\"의식 절차를 지키며 접근한다 · 각성\\\"을 선택했다. 이번 결정은 중간 분기(T2)에서 누적 리스크와 보상을 동시에 조정한다. 프로필 앵커(bard/longkin/fallen-bastard/academy-prodigy)가 이번 결정을 규정한다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 골드 +14, 명성 -1로 정리됐다. 합의는 이뤄졌고, 그 대가로 다른 문이 닫히기 시작했다. 수치 변동의 폭이 커서 다음 분기 난도가 즉시 상승한다. 직접 보상보다 후속 분기 조건의 무게가 커졌다 (의식 절차를 지키며 접근한다 · 각성)\",\n  \"aftermath_log\": \"day 3 / turn 10의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다. 현재 라우트(academy-prodigy)는 이번 선택을 기준으로 우선순위를 재평가한다.\",\n  \"next_hook_log\": \"이번 대화의 여파가 추후 전투/거래 판정에 반영될 수 있다. [유리탑 하층 유물 분기] 직전 훅 \\\"Resolve the exploration aftermath on the 가면 연회의 대가 route\\\"과 연결될 가능성이 높다.\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"relic\",\n    \"검은비-변경\",\n    \"academy-prodigy\",\n    \"t2\",\n    \"high-pressure\"\n  ]\n}"
+        }
+      ]
+    }
+  ]
+}

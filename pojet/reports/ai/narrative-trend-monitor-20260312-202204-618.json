@@ -1,0 +1,159 @@
+{
+  "generatedAt": "2026-03-12T11:22:04.616Z",
+  "config": {
+    "outDir": "reports/ai",
+    "reportPrefix": "narrative-ops-suite-",
+    "window": 8,
+    "minSamples": 4,
+    "passRateMin": 0.75,
+    "healthLatestMin": 0.8,
+    "healthDropMax": 0.15,
+    "healthSlopeMin": -0.03,
+    "canaryFailRateMax": 0.4,
+    "avgBacklogMax": 4,
+    "p0BacklogAvgMax": 1,
+    "strict": true
+  },
+  "executed": true,
+  "pass": true,
+  "reason": "",
+  "checks": [
+    {
+      "key": "passRate",
+      "actual": 0.75,
+      "expected": ">= 0.75",
+      "pass": true
+    },
+    {
+      "key": "latestHealth",
+      "actual": 1,
+      "expected": ">= 0.8",
+      "pass": true
+    },
+    {
+      "key": "healthDrop",
+      "actual": 0,
+      "expected": "<= 0.15",
+      "pass": true
+    },
+    {
+      "key": "healthSlope",
+      "actual": -0.004363,
+      "expected": ">= -0.03",
+      "pass": true
+    },
+    {
+      "key": "canaryFailRate",
+      "actual": 0,
+      "expected": "<= 0.4",
+      "pass": true
+    },
+    {
+      "key": "avgBacklog",
+      "actual": 0.625,
+      "expected": "<= 4",
+      "pass": true
+    },
+    {
+      "key": "avgP0Backlog",
+      "actual": 0.625,
+      "expected": "<= 1",
+      "pass": true
+    }
+  ],
+  "metrics": {
+    "sampleCount": 8,
+    "passRate": 0.75,
+    "latestHealth": 1,
+    "firstHealth": 1,
+    "healthDelta": 0,
+    "healthSlope": -0.004363,
+    "healthVolatility": 0.0355,
+    "avgBacklog": 0.625,
+    "avgP0Backlog": 0.625,
+    "canarySamples": 8,
+    "canaryFailRate": 0
+  },
+  "records": [
+    {
+      "generatedAt": 1773313938137,
+      "pass": true,
+      "healthScore": 1,
+      "backlogCount": 0,
+      "p0BacklogCount": 0,
+      "canaryExecuted": true,
+      "canaryPass": true,
+      "filePath": "reports\\ai\\narrative-ops-suite-20260312-201218-137.json"
+    },
+    {
+      "generatedAt": 1773314099764,
+      "pass": true,
+      "healthScore": 1,
+      "backlogCount": 0,
+      "p0BacklogCount": 0,
+      "canaryExecuted": true,
+      "canaryPass": true,
+      "filePath": "reports\\ai\\narrative-ops-suite-20260312-201459-764.json"
+    },
+    {
+      "generatedAt": 1773314214317,
+      "pass": false,
+      "healthScore": 0.9267,
+      "backlogCount": 1,
+      "p0BacklogCount": 1,
+      "canaryExecuted": true,
+      "canaryPass": true,
+      "filePath": "reports\\ai\\narrative-ops-suite-20260312-201654-317.json"
+    },
+    {
+      "generatedAt": 1773314258847,
+      "pass": false,
+      "healthScore": 0.9267,
+      "backlogCount": 1,
+      "p0BacklogCount": 1,
+      "canaryExecuted": true,
+      "canaryPass": true,
+      "filePath": "reports\\ai\\narrative-ops-suite-20260312-201738-848.json"
+    },
+    {
+      "generatedAt": 1773314288628,
+      "pass": true,
+      "healthScore": 0.9267,
+      "backlogCount": 1,
+      "p0BacklogCount": 1,
+      "canaryExecuted": true,
+      "canaryPass": true,
+      "filePath": "reports\\ai\\narrative-ops-suite-20260312-201808-628.json"
+    },
+    {
+      "generatedAt": 1773314377620,
+      "pass": true,
+      "healthScore": 0.9267,
+      "backlogCount": 1,
+      "p0BacklogCount": 1,
+      "canaryExecuted": true,
+      "canaryPass": true,
+      "filePath": "reports\\ai\\narrative-ops-suite-20260312-201937-621.json"
+    },
+    {
+      "generatedAt": 1773314412200,
+      "pass": true,
+      "healthScore": 0.9267,
+      "backlogCount": 1,
+      "p0BacklogCount": 1,
+      "canaryExecuted": true,
+      "canaryPass": true,
+      "filePath": "reports\\ai\\narrative-ops-suite-20260312-202012-200.json"
+    },
+    {
+      "generatedAt": 1773314449783,
+      "pass": true,
+      "healthScore": 1,
+      "backlogCount": 0,
+      "p0BacklogCount": 0,
+      "canaryExecuted": true,
+      "canaryPass": true,
+      "filePath": "reports\\ai\\narrative-ops-suite-20260312-202049-783.json"
+    }
+  ]
+}

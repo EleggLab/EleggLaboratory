@@ -1,0 +1,89 @@
+{
+  "generatedAt": "2026-03-12T11:20:12.177Z",
+  "config": {
+    "runs": 2,
+    "steps": 20,
+    "mode": "mock",
+    "seed": 410,
+    "outDir": "reports/ai",
+    "profilePack": "data/ai-presets/profile-pack-core.json",
+    "preset": "",
+    "presetDir": "",
+    "presetRegistry": "",
+    "presetPolicy": "rotate",
+    "strict": false,
+    "thresholds": {
+      "minOptionDistinctRate": 0.9,
+      "maxOptionSimilarityAvg": 0.68,
+      "maxOptionSimilarityP95": 0.82,
+      "minHookDensity": 0.98,
+      "minCategoryCount": 3,
+      "maxCategoryDominance": 0.6,
+      "maxBeforeLengthCv": 0.55,
+      "maxResultSentenceCv": 0.5
+    }
+  },
+  "sessionPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\ai-chat\\session-20260312-202012-074\\session.json",
+  "pass": true,
+  "checks": [
+    {
+      "key": "optionDistinctRate",
+      "actual": 1,
+      "expected": ">= 0.9",
+      "pass": true
+    },
+    {
+      "key": "optionSimilarityAvg",
+      "actual": 0.6361,
+      "expected": "<= 0.68",
+      "pass": true
+    },
+    {
+      "key": "optionSimilarityP95",
+      "actual": 0.75,
+      "expected": "<= 0.82",
+      "pass": true
+    },
+    {
+      "key": "hookDensity",
+      "actual": 1,
+      "expected": ">= 0.98",
+      "pass": true
+    },
+    {
+      "key": "categoryCount",
+      "actual": 8,
+      "expected": ">= 3",
+      "pass": true
+    },
+    {
+      "key": "categoryDominance",
+      "actual": 0.35,
+      "expected": "<= 0.6",
+      "pass": true
+    },
+    {
+      "key": "beforeLengthCv",
+      "actual": 0.0323,
+      "expected": "<= 0.55",
+      "pass": true
+    },
+    {
+      "key": "resultSentenceCv",
+      "actual": 0,
+      "expected": "<= 0.5",
+      "pass": true
+    }
+  ],
+  "metrics": {
+    "turns": 20,
+    "optionSimilarityAvg": 0.6361,
+    "optionSimilarityP95": 0.75,
+    "optionDistinctRate": 1,
+    "hookDensity": 1,
+    "categoryCount": 8,
+    "categoryDominance": 0.35,
+    "beforeLengthCv": 0.0323,
+    "resultSentenceCv": 0
+  }
+}

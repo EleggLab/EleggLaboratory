@@ -1,0 +1,56 @@
+{
+  "indexedAt": "2026-03-13T04:59:53.835Z",
+  "archiveRoot": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\risu-source\\archive",
+  "folders": [
+    {
+      "folderName": "구버전",
+      "relativePath": "구버전",
+      "summary": {
+        "total": 2,
+        "byExtension": {
+          ".risup": 1,
+          ".risum": 1
+        },
+        "byFormat": {
+          "preset": 1,
+          "module": 1
+        },
+        "bySeries": {
+          "컵케익": 2
+        },
+        "latestVersion": "0.1"
+      }
+    },
+    {
+      "folderName": "새 폴더",
+      "relativePath": "새 폴더",
+      "summary": {
+        "total": 0,
+        "byExtension": {},
+        "byFormat": {},
+        "bySeries": {},
+        "latestVersion": ""
+      }
+    },
+    {
+      "folderName": "소설가 프롬(구)",
+      "relativePath": "소설가 프롬(구)",
+      "summary": {
+        "total": 80,
+        "byExtension": {
+          ".zip": 54,
+          ".risup": 18,
+          ".risupreset": 8
+        },
+        "byFormat": {
+          "package": 54,
+          "preset": 26
+        },
+        "bySeries": {
+          "뉴 소설가": 80
+        },
+        "latestVersion": "46.0"
+      }
+    }
+  ]
+}

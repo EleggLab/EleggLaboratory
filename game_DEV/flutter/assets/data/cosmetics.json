@@ -1,0 +1,71 @@
+[
+  {
+    "id": "bg_default",
+    "category": "background",
+    "name": "Default Background"
+  },
+  {
+    "id": "bg_sunset",
+    "category": "background",
+    "name": "Sunset",
+    "unlockAchievementId": "ach_loop_20"
+  },
+  {
+    "id": "bg_terminal",
+    "category": "background",
+    "name": "Terminal",
+    "unlockAchievementId": "ach_seed_copy"
+  },
+  {
+    "id": "bg_royal",
+    "category": "background",
+    "name": "Royal",
+    "unlockAchievementId": "ach_buy_epic_shop"
+  },
+  {
+    "id": "block_default",
+    "category": "blockSkin",
+    "name": "Default Block Skin"
+  },
+  {
+    "id": "block_metal",
+    "category": "blockSkin",
+    "name": "Metal",
+    "unlockAchievementId": "ach_boss_first"
+  },
+  {
+    "id": "block_neon",
+    "category": "blockSkin",
+    "name": "Neon",
+    "unlockAchievementId": "ach_combo_60"
+  },
+  {
+    "id": "block_pastel",
+    "category": "blockSkin",
+    "name": "Pastel",
+    "unlockAchievementId": "ach_daily_complete"
+  },
+  {
+    "id": "trail_default",
+    "category": "ballTrail",
+    "name": "Default Trail"
+  },
+  {
+    "id": "trail_long",
+    "category": "ballTrail",
+    "name": "Long Trail",
+    "unlockAchievementId": "ach_loop_10"
+  },
+  {
+    "id": "trail_dots",
+    "category": "ballTrail",
+    "name": "Dot Trail",
+    "unlockAchievementId": "ach_unlock_3_chars"
+  },
+  {
+    "id": "trail_comet",
+    "category": "ballTrail",
+    "name": "Comet Trail",
+    "unlockAchievementId": "ach_run_clear"
+  }
+]

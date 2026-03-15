@@ -1,0 +1,98 @@
+[
+  {
+    "id": "boss_scrap_cube",
+    "name": "Scrap Cube",
+    "description": "A weak 2x2 machine boss.",
+    "tier": "weak",
+    "width": 2,
+    "height": 2,
+    "icon": "B1",
+    "themeColor": "#7E57C2",
+    "introText": "A rusty cube blocks your route.",
+    "optionalAbilityType": "weak"
+  },
+  {
+    "id": "boss_rail_maw",
+    "name": "Rail Maw",
+    "description": "A weak 3x2 predator boss.",
+    "tier": "weak",
+    "width": 3,
+    "height": 2,
+    "icon": "B2",
+    "themeColor": "#5C6BC0",
+    "introText": "The rail maw appears from the dark tunnel.",
+    "optionalAbilityType": "weak"
+  },
+  {
+    "id": "boss_forge_warden",
+    "name": "Forge Warden",
+    "description": "A medium 3x2 guardian boss.",
+    "tier": "medium",
+    "width": 3,
+    "height": 2,
+    "icon": "B3",
+    "themeColor": "#FF7043",
+    "introText": "A heated guardian stands in your path.",
+    "optionalAbilityType": "medium"
+  },
+  {
+    "id": "boss_thorn_matrix",
+    "name": "Thorn Matrix",
+    "description": "A medium 3x3 swarm boss.",
+    "tier": "medium",
+    "width": 3,
+    "height": 3,
+    "icon": "B4",
+    "themeColor": "#66BB6A",
+    "introText": "The matrix blooms with hazardous spikes.",
+    "optionalAbilityType": "medium"
+  },
+  {
+    "id": "boss_iron_colossus",
+    "name": "Iron Colossus",
+    "description": "A strong 3x3 armored boss.",
+    "tier": "strong",
+    "width": 3,
+    "height": 3,
+    "icon": "B5",
+    "themeColor": "#B0BEC5",
+    "introText": "Heavy footsteps shake the board.",
+    "optionalAbilityType": "strong"
+  },
+  {
+    "id": "boss_gravity_core",
+    "name": "Gravity Core",
+    "description": "A strong 2x3 gravity boss.",
+    "tier": "strong",
+    "width": 2,
+    "height": 3,
+    "icon": "B6",
+    "themeColor": "#AB47BC",
+    "introText": "A dense core bends every trajectory.",
+    "optionalAbilityType": "strong"
+  },
+  {
+    "id": "boss_signal_phantom",
+    "name": "Signal Phantom",
+    "description": "A medium 2x2 jammer that distorts trajectories.",
+    "tier": "medium",
+    "width": 2,
+    "height": 2,
+    "icon": "B7",
+    "themeColor": "#29B6F6",
+    "introText": "Signal interference detected.",
+    "optionalAbilityType": "medium"
+  },
+  {
+    "id": "boss_void_anvil",
+    "name": "Void Anvil",
+    "description": "A strong 3x2 mass that presses the board downward.",
+    "tier": "strong",
+    "width": 3,
+    "height": 2,
+    "icon": "B8",
+    "themeColor": "#8D6E63",
+    "introText": "The void anvil crashes into the arena.",
+    "optionalAbilityType": "strong"
+  }
+]

@@ -1,0 +1,2330 @@
+{
+  "folderName": "소설가 프롬(구)",
+  "relativePath": "소설가 프롬(구)",
+  "summary": {
+    "total": 80,
+    "byExtension": {
+      ".zip": 54,
+      ".risup": 18,
+      ".risupreset": 8
+    },
+    "byFormat": {
+      "package": 54,
+      "preset": 26
+    },
+    "bySeries": {
+      "뉴 소설가": 80
+    },
+    "latestVersion": "46.0"
+  },
+  "seriesGroups": [
+    {
+      "series": "뉴 소설가",
+      "latestVersion": "46.0",
+      "entries": [
+        {
+          "name": "📚 뉴 소설가 v46.0.zip",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v46.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "46.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 129649
+        },
+        {
+          "name": "📚 뉴 소설가 v45.0.zip",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v45.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "45.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 129655
+        },
+        {
+          "name": "📚 뉴 소설가 v44.1.zip",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v44.1.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "44.1",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 129325
+        },
+        {
+          "name": "📚 뉴 소설가 v44.0.zip",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v44.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "44.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 129385
+        },
+        {
+          "name": "📚 뉴 소설가 v43.1.zip",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v43.1.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "43.1",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 129610
+        },
+        {
+          "name": "📚 뉴 소설가 v43.0.zip",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v43.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "43.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 129261
+        },
+        {
+          "name": "📚 뉴 소설가 v42.0.zip",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v42.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "42.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 128502
+        },
+        {
+          "name": "📚 뉴 소설가 v41.1.zip",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v41.1.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "41.1",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 128500
+        },
+        {
+          "name": "📚 뉴 소설가 v41.0.zip",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v41.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "41.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 128476
+        },
+        {
+          "name": "📚 뉴 소설가 v40.5.zip",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v40.5.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "40.5",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 123787
+        },
+        {
+          "name": "📚 뉴 소설가 v40.1.zip",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v40.1.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "40.1",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 123733
+        },
+        {
+          "name": "📚 뉴 소설가 v40.0.zip",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v40.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "40.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 122646
+        },
+        {
+          "name": "뉴 소설가 v39.1 최종 수정본.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v39.1 최종 수정본.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "39.1",
+          "variant": "최종 수정본",
+          "tags": [
+            "zip-package",
+            "final-revision"
+          ],
+          "size": 122556
+        },
+        {
+          "name": "뉴 소설가 v39.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v39.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "39.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 122970
+        },
+        {
+          "name": "뉴 소설가 v38.5.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v38.5.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "38.5",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 122246
+        },
+        {
+          "name": "뉴 소설가 v38.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v38.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "38.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 122708
+        },
+        {
+          "name": "뉴 소설가 v37.5.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v37.5.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "37.5",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 122222
+        },
+        {
+          "name": "뉴 소설가 v37.2.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v37.2.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "37.2",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 122276
+        },
+        {
+          "name": "뉴 소설가 v37.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v37.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "37.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 122318
+        },
+        {
+          "name": "뉴 소설가 v36.5.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v36.5.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "36.5",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 122198
+        },
+        {
+          "name": "뉴 소설가 v36.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v36.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "36.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 123786
+        },
+        {
+          "name": "뉴 소설가 v35.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v35.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "35.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 122343
+        },
+        {
+          "name": "뉴 소설가 v34.6.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v34.6.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "34.6",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 120365
+        },
+        {
+          "name": "뉴 소설가 v34.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v34.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "34.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 118475
+        },
+        {
+          "name": "뉴 소설가 v33.6.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v33.6.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "33.6",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 117911
+        },
+        {
+          "name": "뉴 소설가 v33.5.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v33.5.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "33.5",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 117875
+        },
+        {
+          "name": "뉴 소설가 v33.1.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v33.1.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "33.1",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 116923
+        },
+        {
+          "name": "뉴 소설가 v33.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v33.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "33.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 116935
+        },
+        {
+          "name": "뉴 소설가 v32.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v32.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "32.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 114373
+        },
+        {
+          "name": "뉴 소설가 v31.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v31.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "31.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 113585
+        },
+        {
+          "name": "뉴 소설가 v30.3.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v30.3.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "30.3",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 113119
+        },
+        {
+          "name": "뉴 소설가 v30.1.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v30.1.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "30.1",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 114076
+        },
+        {
+          "name": "뉴 소설가 v30.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v30.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "30.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 112728
+        },
+        {
+          "name": "뉴 소설가 v29.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v29.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "29.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 113099
+        },
+        {
+          "name": "뉴 소설가 v28.5.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v28.5.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "28.5",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 113085
+        },
+        {
+          "name": "뉴 소설가 v28.0 (수정).zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v28.0 (수정).zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "28.0",
+          "variant": "수정",
+          "tags": [
+            "zip-package",
+            "revision"
+          ],
+          "size": 113891
+        },
+        {
+          "name": "뉴 소설가 v27.5.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v27.5.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "27.5",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 113940
+        },
+        {
+          "name": "뉴 소설가 v27.2.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v27.2.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "27.2",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 114962
+        },
+        {
+          "name": "뉴 소설가 v27.1.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v27.1.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "27.1",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 114936
+        },
+        {
+          "name": "뉴 소설가 v27.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v27.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "27.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 114896
+        },
+        {
+          "name": "뉴 소설가 v26.5.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v26.5.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "26.5",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 113953
+        },
+        {
+          "name": "뉴 소설가 v26.1.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v26.1.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "26.1",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 113933
+        },
+        {
+          "name": "뉴 소설가 v26.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v26.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "26.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 113909
+        },
+        {
+          "name": "뉴 소설가 v25.6(수정).zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v25.6(수정).zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "25.6",
+          "variant": "수정",
+          "tags": [
+            "zip-package",
+            "revision"
+          ],
+          "size": 115183
+        },
+        {
+          "name": "뉴 소설가 v25.5.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v25.5.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "25.5",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 114799
+        },
+        {
+          "name": "뉴 소설가 v25.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v25.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "25.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 113411
+        },
+        {
+          "name": "뉴 소설가 v25.0(Gemini).zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v25.0(Gemini).zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "25.0",
+          "variant": "Gemini",
+          "tags": [
+            "zip-package",
+            "gemini"
+          ],
+          "size": 36724
+        },
+        {
+          "name": "뉴 소설가 v24.9.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v24.9.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "24.9",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 113147
+        },
+        {
+          "name": "뉴 소설가 v24.6.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v24.6.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "24.6",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 112774
+        },
+        {
+          "name": "뉴 소설가 v24.5.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v24.5.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "24.5",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 111038
+        },
+        {
+          "name": "뉴 소설가 v24.1.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v24.1.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "24.1",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 110470
+        },
+        {
+          "name": "뉴 소설가 v24.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v24.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "24.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 41505
+        },
+        {
+          "name": "뉴 소설가 v23.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v23.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "23.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 36963
+        },
+        {
+          "name": "뉴 소설가 v22.0.zip",
+          "relativePath": "소설가 프롬(구)/뉴 소설가 v22.0.zip",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".zip",
+          "format": "package",
+          "series": "뉴 소설가",
+          "version": "22.0",
+          "variant": "",
+          "tags": [
+            "zip-package"
+          ],
+          "size": 35696
+        },
+        {
+          "name": "📚 뉴 소설가 v21.1 소설_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v21.1 소설_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "21.1",
+          "variant": "소설",
+          "tags": [
+            "preset-format",
+            "novel-track"
+          ],
+          "size": 17482
+        },
+        {
+          "name": "📚 뉴 소설가 v21.1 RP_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v21.1 RP_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "21.1",
+          "variant": "RP",
+          "tags": [
+            "preset-format",
+            "rp-track"
+          ],
+          "size": 17456
+        },
+        {
+          "name": "📚 뉴 소설가 v21.0 소설_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v21.0 소설_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "21.0",
+          "variant": "소설",
+          "tags": [
+            "preset-format",
+            "novel-track"
+          ],
+          "size": 17449
+        },
+        {
+          "name": "📚 뉴 소설가 v21.0 RP_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v21.0 RP_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "21.0",
+          "variant": "RP",
+          "tags": [
+            "preset-format",
+            "rp-track"
+          ],
+          "size": 17423
+        },
+        {
+          "name": "📚 뉴 소설가 v20.0 소설_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v20.0 소설_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "20.0",
+          "variant": "소설",
+          "tags": [
+            "preset-format",
+            "novel-track"
+          ],
+          "size": 17405
+        },
+        {
+          "name": "📚 뉴 소설가 v20.0 RP_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v20.0 RP_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "20.0",
+          "variant": "RP",
+          "tags": [
+            "preset-format",
+            "rp-track"
+          ],
+          "size": 17379
+        },
+        {
+          "name": "📚 뉴 소설가 v19.5 소설_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v19.5 소설_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "19.5",
+          "variant": "소설",
+          "tags": [
+            "preset-format",
+            "novel-track"
+          ],
+          "size": 17401
+        },
+        {
+          "name": "📚 뉴 소설가 v19.5 RP_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v19.5 RP_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "19.5",
+          "variant": "RP",
+          "tags": [
+            "preset-format",
+            "rp-track"
+          ],
+          "size": 17375
+        },
+        {
+          "name": "📚 뉴 소설가 v19.0 소설_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v19.0 소설_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "19.0",
+          "variant": "소설",
+          "tags": [
+            "preset-format",
+            "novel-track"
+          ],
+          "size": 17266
+        },
+        {
+          "name": "📚 뉴 소설가 v19.0 RP_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v19.0 RP_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "19.0",
+          "variant": "RP",
+          "tags": [
+            "preset-format",
+            "rp-track"
+          ],
+          "size": 17240
+        },
+        {
+          "name": "📚 뉴 소설가 v18.0 소설_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v18.0 소설_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "18.0",
+          "variant": "소설",
+          "tags": [
+            "preset-format",
+            "novel-track"
+          ],
+          "size": 16527
+        },
+        {
+          "name": "📚 뉴 소설가 v18.0 RP_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v18.0 RP_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "18.0",
+          "variant": "RP",
+          "tags": [
+            "preset-format",
+            "rp-track"
+          ],
+          "size": 16531
+        },
+        {
+          "name": "📚 뉴 소설가 v17.0 소설_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v17.0 소설_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "17.0",
+          "variant": "소설",
+          "tags": [
+            "preset-format",
+            "novel-track"
+          ],
+          "size": 16524
+        },
+        {
+          "name": "📚 뉴 소설가 v17.0 RP_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v17.0 RP_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "17.0",
+          "variant": "RP",
+          "tags": [
+            "preset-format",
+            "rp-track"
+          ],
+          "size": 16533
+        },
+        {
+          "name": "📚 뉴 소설가 v16.0 소설_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v16.0 소설_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "16.0",
+          "variant": "소설",
+          "tags": [
+            "preset-format",
+            "novel-track"
+          ],
+          "size": 16279
+        },
+        {
+          "name": "📚 뉴 소설가 v16.0 RP_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v16.0 RP_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "16.0",
+          "variant": "RP",
+          "tags": [
+            "preset-format",
+            "rp-track"
+          ],
+          "size": 16288
+        },
+        {
+          "name": "📚 뉴 소설가 v15.0 소설_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v15.0 소설_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "15.0",
+          "variant": "소설",
+          "tags": [
+            "preset-format",
+            "novel-track"
+          ],
+          "size": 16238
+        },
+        {
+          "name": "📚 뉴 소설가 v15.0 RP_preset.risup",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v15.0 RP_preset.risup",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "15.0",
+          "variant": "RP",
+          "tags": [
+            "preset-format",
+            "rp-track"
+          ],
+          "size": 16262
+        },
+        {
+          "name": "📚 뉴 소설가 v14.0 소설_preset.risupreset",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v14.0 소설_preset.risupreset",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risupreset",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "14.0",
+          "variant": "소설",
+          "tags": [
+            "legacy-preset-format",
+            "novel-track"
+          ],
+          "size": 15742
+        },
+        {
+          "name": "📚 뉴 소설가 v14.0 RP_preset.risupreset",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v14.0 RP_preset.risupreset",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risupreset",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "14.0",
+          "variant": "RP",
+          "tags": [
+            "legacy-preset-format",
+            "rp-track"
+          ],
+          "size": 15765
+        },
+        {
+          "name": "📚 뉴 소설가 v13.1 소설_preset.risupreset",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v13.1 소설_preset.risupreset",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risupreset",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "13.1",
+          "variant": "소설",
+          "tags": [
+            "legacy-preset-format",
+            "novel-track"
+          ],
+          "size": 15611
+        },
+        {
+          "name": "📚 뉴 소설가 v13.1 RP_preset.risupreset",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v13.1 RP_preset.risupreset",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risupreset",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "13.1",
+          "variant": "RP",
+          "tags": [
+            "legacy-preset-format",
+            "rp-track"
+          ],
+          "size": 15622
+        },
+        {
+          "name": "📚 뉴 소설가 v11.0 소설_preset.risupreset",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v11.0 소설_preset.risupreset",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risupreset",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "11.0",
+          "variant": "소설",
+          "tags": [
+            "legacy-preset-format",
+            "novel-track"
+          ],
+          "size": 15510
+        },
+        {
+          "name": "📚 뉴 소설가 v11.0 RP_preset.risupreset",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v11.0 RP_preset.risupreset",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risupreset",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "11.0",
+          "variant": "RP",
+          "tags": [
+            "legacy-preset-format",
+            "rp-track"
+          ],
+          "size": 15519
+        },
+        {
+          "name": "📚 뉴 소설가 v10.5 소설_preset.risupreset",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v10.5 소설_preset.risupreset",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risupreset",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "10.5",
+          "variant": "소설",
+          "tags": [
+            "legacy-preset-format",
+            "novel-track"
+          ],
+          "size": 15470
+        },
+        {
+          "name": "📚 뉴 소설가 v10.5 RP_preset.risupreset",
+          "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v10.5 RP_preset.risupreset",
+          "directoryPath": "소설가 프롬(구)",
+          "extension": ".risupreset",
+          "format": "preset",
+          "series": "뉴 소설가",
+          "version": "10.5",
+          "variant": "RP",
+          "tags": [
+            "legacy-preset-format",
+            "rp-track"
+          ],
+          "size": 15481
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "name": "📚 뉴 소설가 v46.0.zip",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v46.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "46.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 129649
+    },
+    {
+      "name": "📚 뉴 소설가 v45.0.zip",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v45.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "45.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 129655
+    },
+    {
+      "name": "📚 뉴 소설가 v44.1.zip",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v44.1.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "44.1",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 129325
+    },
+    {
+      "name": "📚 뉴 소설가 v44.0.zip",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v44.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "44.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 129385
+    },
+    {
+      "name": "📚 뉴 소설가 v43.1.zip",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v43.1.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "43.1",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 129610
+    },
+    {
+      "name": "📚 뉴 소설가 v43.0.zip",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v43.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "43.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 129261
+    },
+    {
+      "name": "📚 뉴 소설가 v42.0.zip",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v42.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "42.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 128502
+    },
+    {
+      "name": "📚 뉴 소설가 v41.1.zip",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v41.1.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "41.1",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 128500
+    },
+    {
+      "name": "📚 뉴 소설가 v41.0.zip",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v41.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "41.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 128476
+    },
+    {
+      "name": "📚 뉴 소설가 v40.5.zip",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v40.5.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "40.5",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 123787
+    },
+    {
+      "name": "📚 뉴 소설가 v40.1.zip",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v40.1.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "40.1",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 123733
+    },
+    {
+      "name": "📚 뉴 소설가 v40.0.zip",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v40.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "40.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 122646
+    },
+    {
+      "name": "뉴 소설가 v39.1 최종 수정본.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v39.1 최종 수정본.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "39.1",
+      "variant": "최종 수정본",
+      "tags": [
+        "zip-package",
+        "final-revision"
+      ],
+      "size": 122556
+    },
+    {
+      "name": "뉴 소설가 v39.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v39.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "39.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 122970
+    },
+    {
+      "name": "뉴 소설가 v38.5.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v38.5.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "38.5",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 122246
+    },
+    {
+      "name": "뉴 소설가 v38.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v38.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "38.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 122708
+    },
+    {
+      "name": "뉴 소설가 v37.5.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v37.5.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "37.5",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 122222
+    },
+    {
+      "name": "뉴 소설가 v37.2.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v37.2.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "37.2",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 122276
+    },
+    {
+      "name": "뉴 소설가 v37.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v37.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "37.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 122318
+    },
+    {
+      "name": "뉴 소설가 v36.5.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v36.5.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "36.5",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 122198
+    },
+    {
+      "name": "뉴 소설가 v36.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v36.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "36.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 123786
+    },
+    {
+      "name": "뉴 소설가 v35.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v35.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "35.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 122343
+    },
+    {
+      "name": "뉴 소설가 v34.6.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v34.6.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "34.6",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 120365
+    },
+    {
+      "name": "뉴 소설가 v34.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v34.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "34.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 118475
+    },
+    {
+      "name": "뉴 소설가 v33.6.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v33.6.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "33.6",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 117911
+    },
+    {
+      "name": "뉴 소설가 v33.5.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v33.5.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "33.5",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 117875
+    },
+    {
+      "name": "뉴 소설가 v33.1.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v33.1.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "33.1",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 116923
+    },
+    {
+      "name": "뉴 소설가 v33.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v33.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "33.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 116935
+    },
+    {
+      "name": "뉴 소설가 v32.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v32.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "32.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 114373
+    },
+    {
+      "name": "뉴 소설가 v31.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v31.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "31.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 113585
+    },
+    {
+      "name": "뉴 소설가 v30.3.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v30.3.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "30.3",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 113119
+    },
+    {
+      "name": "뉴 소설가 v30.1.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v30.1.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "30.1",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 114076
+    },
+    {
+      "name": "뉴 소설가 v30.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v30.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "30.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 112728
+    },
+    {
+      "name": "뉴 소설가 v29.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v29.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "29.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 113099
+    },
+    {
+      "name": "뉴 소설가 v28.5.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v28.5.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "28.5",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 113085
+    },
+    {
+      "name": "뉴 소설가 v28.0 (수정).zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v28.0 (수정).zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "28.0",
+      "variant": "수정",
+      "tags": [
+        "zip-package",
+        "revision"
+      ],
+      "size": 113891
+    },
+    {
+      "name": "뉴 소설가 v27.5.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v27.5.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "27.5",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 113940
+    },
+    {
+      "name": "뉴 소설가 v27.2.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v27.2.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "27.2",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 114962
+    },
+    {
+      "name": "뉴 소설가 v27.1.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v27.1.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "27.1",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 114936
+    },
+    {
+      "name": "뉴 소설가 v27.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v27.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "27.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 114896
+    },
+    {
+      "name": "뉴 소설가 v26.5.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v26.5.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "26.5",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 113953
+    },
+    {
+      "name": "뉴 소설가 v26.1.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v26.1.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "26.1",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 113933
+    },
+    {
+      "name": "뉴 소설가 v26.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v26.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "26.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 113909
+    },
+    {
+      "name": "뉴 소설가 v25.6(수정).zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v25.6(수정).zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "25.6",
+      "variant": "수정",
+      "tags": [
+        "zip-package",
+        "revision"
+      ],
+      "size": 115183
+    },
+    {
+      "name": "뉴 소설가 v25.5.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v25.5.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "25.5",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 114799
+    },
+    {
+      "name": "뉴 소설가 v25.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v25.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "25.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 113411
+    },
+    {
+      "name": "뉴 소설가 v25.0(Gemini).zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v25.0(Gemini).zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "25.0",
+      "variant": "Gemini",
+      "tags": [
+        "zip-package",
+        "gemini"
+      ],
+      "size": 36724
+    },
+    {
+      "name": "뉴 소설가 v24.9.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v24.9.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "24.9",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 113147
+    },
+    {
+      "name": "뉴 소설가 v24.6.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v24.6.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "24.6",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 112774
+    },
+    {
+      "name": "뉴 소설가 v24.5.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v24.5.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "24.5",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 111038
+    },
+    {
+      "name": "뉴 소설가 v24.1.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v24.1.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "24.1",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 110470
+    },
+    {
+      "name": "뉴 소설가 v24.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v24.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "24.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 41505
+    },
+    {
+      "name": "뉴 소설가 v23.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v23.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "23.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 36963
+    },
+    {
+      "name": "뉴 소설가 v22.0.zip",
+      "relativePath": "소설가 프롬(구)/뉴 소설가 v22.0.zip",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".zip",
+      "format": "package",
+      "series": "뉴 소설가",
+      "version": "22.0",
+      "variant": "",
+      "tags": [
+        "zip-package"
+      ],
+      "size": 35696
+    },
+    {
+      "name": "📚 뉴 소설가 v21.1 소설_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v21.1 소설_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "21.1",
+      "variant": "소설",
+      "tags": [
+        "preset-format",
+        "novel-track"
+      ],
+      "size": 17482
+    },
+    {
+      "name": "📚 뉴 소설가 v21.1 RP_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v21.1 RP_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "21.1",
+      "variant": "RP",
+      "tags": [
+        "preset-format",
+        "rp-track"
+      ],
+      "size": 17456
+    },
+    {
+      "name": "📚 뉴 소설가 v21.0 소설_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v21.0 소설_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "21.0",
+      "variant": "소설",
+      "tags": [
+        "preset-format",
+        "novel-track"
+      ],
+      "size": 17449
+    },
+    {
+      "name": "📚 뉴 소설가 v21.0 RP_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v21.0 RP_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "21.0",
+      "variant": "RP",
+      "tags": [
+        "preset-format",
+        "rp-track"
+      ],
+      "size": 17423
+    },
+    {
+      "name": "📚 뉴 소설가 v20.0 소설_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v20.0 소설_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "20.0",
+      "variant": "소설",
+      "tags": [
+        "preset-format",
+        "novel-track"
+      ],
+      "size": 17405
+    },
+    {
+      "name": "📚 뉴 소설가 v20.0 RP_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v20.0 RP_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "20.0",
+      "variant": "RP",
+      "tags": [
+        "preset-format",
+        "rp-track"
+      ],
+      "size": 17379
+    },
+    {
+      "name": "📚 뉴 소설가 v19.5 소설_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v19.5 소설_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "19.5",
+      "variant": "소설",
+      "tags": [
+        "preset-format",
+        "novel-track"
+      ],
+      "size": 17401
+    },
+    {
+      "name": "📚 뉴 소설가 v19.5 RP_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v19.5 RP_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "19.5",
+      "variant": "RP",
+      "tags": [
+        "preset-format",
+        "rp-track"
+      ],
+      "size": 17375
+    },
+    {
+      "name": "📚 뉴 소설가 v19.0 소설_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v19.0 소설_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "19.0",
+      "variant": "소설",
+      "tags": [
+        "preset-format",
+        "novel-track"
+      ],
+      "size": 17266
+    },
+    {
+      "name": "📚 뉴 소설가 v19.0 RP_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v19.0 RP_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "19.0",
+      "variant": "RP",
+      "tags": [
+        "preset-format",
+        "rp-track"
+      ],
+      "size": 17240
+    },
+    {
+      "name": "📚 뉴 소설가 v18.0 소설_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v18.0 소설_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "18.0",
+      "variant": "소설",
+      "tags": [
+        "preset-format",
+        "novel-track"
+      ],
+      "size": 16527
+    },
+    {
+      "name": "📚 뉴 소설가 v18.0 RP_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v18.0 RP_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "18.0",
+      "variant": "RP",
+      "tags": [
+        "preset-format",
+        "rp-track"
+      ],
+      "size": 16531
+    },
+    {
+      "name": "📚 뉴 소설가 v17.0 소설_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v17.0 소설_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "17.0",
+      "variant": "소설",
+      "tags": [
+        "preset-format",
+        "novel-track"
+      ],
+      "size": 16524
+    },
+    {
+      "name": "📚 뉴 소설가 v17.0 RP_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v17.0 RP_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "17.0",
+      "variant": "RP",
+      "tags": [
+        "preset-format",
+        "rp-track"
+      ],
+      "size": 16533
+    },
+    {
+      "name": "📚 뉴 소설가 v16.0 소설_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v16.0 소설_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "16.0",
+      "variant": "소설",
+      "tags": [
+        "preset-format",
+        "novel-track"
+      ],
+      "size": 16279
+    },
+    {
+      "name": "📚 뉴 소설가 v16.0 RP_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v16.0 RP_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "16.0",
+      "variant": "RP",
+      "tags": [
+        "preset-format",
+        "rp-track"
+      ],
+      "size": 16288
+    },
+    {
+      "name": "📚 뉴 소설가 v15.0 소설_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v15.0 소설_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "15.0",
+      "variant": "소설",
+      "tags": [
+        "preset-format",
+        "novel-track"
+      ],
+      "size": 16238
+    },
+    {
+      "name": "📚 뉴 소설가 v15.0 RP_preset.risup",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v15.0 RP_preset.risup",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "15.0",
+      "variant": "RP",
+      "tags": [
+        "preset-format",
+        "rp-track"
+      ],
+      "size": 16262
+    },
+    {
+      "name": "📚 뉴 소설가 v14.0 소설_preset.risupreset",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v14.0 소설_preset.risupreset",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risupreset",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "14.0",
+      "variant": "소설",
+      "tags": [
+        "legacy-preset-format",
+        "novel-track"
+      ],
+      "size": 15742
+    },
+    {
+      "name": "📚 뉴 소설가 v14.0 RP_preset.risupreset",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v14.0 RP_preset.risupreset",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risupreset",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "14.0",
+      "variant": "RP",
+      "tags": [
+        "legacy-preset-format",
+        "rp-track"
+      ],
+      "size": 15765
+    },
+    {
+      "name": "📚 뉴 소설가 v13.1 소설_preset.risupreset",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v13.1 소설_preset.risupreset",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risupreset",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "13.1",
+      "variant": "소설",
+      "tags": [
+        "legacy-preset-format",
+        "novel-track"
+      ],
+      "size": 15611
+    },
+    {
+      "name": "📚 뉴 소설가 v13.1 RP_preset.risupreset",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v13.1 RP_preset.risupreset",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risupreset",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "13.1",
+      "variant": "RP",
+      "tags": [
+        "legacy-preset-format",
+        "rp-track"
+      ],
+      "size": 15622
+    },
+    {
+      "name": "📚 뉴 소설가 v11.0 소설_preset.risupreset",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v11.0 소설_preset.risupreset",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risupreset",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "11.0",
+      "variant": "소설",
+      "tags": [
+        "legacy-preset-format",
+        "novel-track"
+      ],
+      "size": 15510
+    },
+    {
+      "name": "📚 뉴 소설가 v11.0 RP_preset.risupreset",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v11.0 RP_preset.risupreset",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risupreset",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "11.0",
+      "variant": "RP",
+      "tags": [
+        "legacy-preset-format",
+        "rp-track"
+      ],
+      "size": 15519
+    },
+    {
+      "name": "📚 뉴 소설가 v10.5 소설_preset.risupreset",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v10.5 소설_preset.risupreset",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risupreset",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "10.5",
+      "variant": "소설",
+      "tags": [
+        "legacy-preset-format",
+        "novel-track"
+      ],
+      "size": 15470
+    },
+    {
+      "name": "📚 뉴 소설가 v10.5 RP_preset.risupreset",
+      "relativePath": "소설가 프롬(구)/📚 뉴 소설가 v10.5 RP_preset.risupreset",
+      "directoryPath": "소설가 프롬(구)",
+      "extension": ".risupreset",
+      "format": "preset",
+      "series": "뉴 소설가",
+      "version": "10.5",
+      "variant": "RP",
+      "tags": [
+        "legacy-preset-format",
+        "rp-track"
+      ],
+      "size": 15481
+    }
+  ]
+}

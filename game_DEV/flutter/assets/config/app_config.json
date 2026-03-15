@@ -1,0 +1,9 @@
+{
+  "sentryDsn": "",
+  "privacyPolicyUrl": "",
+  "supportEmail": "support@example.com",
+  "ads": {
+    "admobAppIdAndroid": "",
+    "rewardedAdUnitIdAndroid": ""
+  }
+}

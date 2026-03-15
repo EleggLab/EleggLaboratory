@@ -1,0 +1,114 @@
+# Risu Prepared Workspace
+
+This folder is generated from top-level Risu artifacts.
+
+## Structure
+- `converted/`: simplified preset JSON extracted from direct-convertible Risu JSON.
+- `binary/`: normalized copies of `.risum` and `.risup` containers.
+- `source-json/`: copied source JSON for convertible artifacts.
+- `text/`: human-readable prompt extracts from converted presets.
+- `metadata/`: per-artifact metadata and usage hints.
+- `manifest.json`: full index for code or manual lookup.
+
+## Limitation
+- `.risum` and `.risup` are opaque containers here. Deep conversion still requires exporting them to JSON from Risu.
+
+## Summary
+- prepared: 11
+- direct-convertible json: 1
+- binary risum: 8
+- binary risup: 2
+- skipped: 0
+
+### 001-affection-module-v1-0
+- originalName: 💞범용 호감도 모듈 - V1.0.risum
+- kind: binary-risum
+- families: relationship-pressure
+- hint: Use this for affection tracking, tension, trust, and branching social fallout.
+- binary: binary/001-affection-module-v1-0.risum
+- metadata: metadata/001-affection-module-v1-0.meta.json
+
+### 002-affection-module-v1-1
+- originalName: 💞범용 호감도 모듈 - V1.1.risum
+- kind: binary-risum
+- families: relationship-pressure
+- hint: Use this for affection tracking, tension, trust, and branching social fallout.
+- binary: binary/002-affection-module-v1-1.risum
+- metadata: metadata/002-affection-module-v1-1.meta.json
+
+### 003-novelist-module
+- originalName: 📚 소설가 모듈.risum
+- kind: binary-risum
+- families: novelist-flow
+- hint: Use this for descriptive prose, paragraph cadence, and sensory details.
+- binary: binary/003-novelist-module.risum
+- metadata: metadata/003-novelist-module.meta.json
+
+### 004-adult-status-module-copy-1
+- originalName: 🔞에로 스테이터스❤️ (1).risum
+- kind: binary-risum
+- families: adult-consequence, status-visibility
+- hint: Use this for erotic escalation, explicit aftermath, and mature-tone gating.
+- hint: Use this for visible state labels, arousal/status surfaces, and stat-driven text.
+- binary: binary/004-adult-status-module-copy-1.risum
+- metadata: metadata/004-adult-status-module-copy-1.meta.json
+
+### 005-adult-log-module-copy-1
+- originalName: 🔞에로스테 로그 남길래❤️ (1).risum
+- kind: binary-risum
+- families: adult-consequence, chronicle-memory
+- hint: Use this for erotic escalation, explicit aftermath, and mature-tone gating.
+- hint: Use this for recap lines, event logs, and continuity anchors between turns.
+- binary: binary/005-adult-log-module-copy-1.risum
+- metadata: metadata/005-adult-log-module-copy-1.meta.json
+
+### 006-adult-module
+- originalName: 🔞에로스테 호환버전❤️.risum
+- kind: binary-risum
+- families: adult-consequence
+- hint: Use this for erotic escalation, explicit aftermath, and mature-tone gating.
+- binary: binary/006-adult-module.risum
+- metadata: metadata/006-adult-module.meta.json
+
+### 007-cupcake-preset-v0-2
+- originalName: 🧁컵케익 프롬프트 for 잼삼일 v0.2_preset (1).risup
+- kind: binary-risup
+- families: soft-dialogue-surface
+- hint: Use this for lighter or playful dialogue texture on top of heavier scenes.
+- binary: binary/007-cupcake-preset-v0-2.risup
+- metadata: metadata/007-cupcake-preset-v0-2.meta.json
+
+### 008-cupcake-module-v0-2
+- originalName: 🧁컵케익모듈 잼삼일 v0.2 (1).risum
+- kind: binary-risum
+- families: soft-dialogue-surface
+- hint: Use this for lighter or playful dialogue texture on top of heavier scenes.
+- binary: binary/008-cupcake-module-v0-2.risum
+- metadata: metadata/008-cupcake-module-v0-2.meta.json
+
+### 009-dramatist-module-v1-1
+- originalName: 🪶극작가 모듈 v1.1.risum
+- kind: binary-risum
+- families: dramatic-structure
+- hint: Use this for scene framing, beat escalation, and consequence hooks.
+- binary: binary/009-dramatist-module-v1-1.risum
+- metadata: metadata/009-dramatist-module-v1-1.meta.json
+
+### 010-dramatist-preset-v1-2-0
+- originalName: 🪶극작가 v1.2.0_preset.risup
+- kind: binary-risup
+- families: dramatic-structure
+- hint: Use this for scene framing, beat escalation, and consequence hooks.
+- binary: binary/010-dramatist-preset-v1-2-0.risup
+- metadata: metadata/010-dramatist-preset-v1-2-0.meta.json
+
+### 011-dramatist-hypa-module-v3
+- originalName: hypaV3_export_🪶 극작가 하이파 v1.0.json
+- kind: direct-convertible-json
+- families: dramatic-structure, hypa-style
+- hint: Use this for scene framing, beat escalation, and consequence hooks.
+- hint: Use this as a broad style baseline when no narrower module is available.
+- converted: converted/011-dramatist-hypa-module-v3.preset.json
+- sourceJson: source-json/011-dramatist-hypa-module-v3.source.json
+- promptText: text/011-dramatist-hypa-module-v3.prompt.md
+- metadata: metadata/011-dramatist-hypa-module-v3.meta.json

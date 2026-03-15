@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout:*)",
+      "Bash(npx vite build)",
+      "Bash(go build:*)",
+      "Read(//c/Users/rndhr/mygame/**)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\rndhr\\mygame"
+    ]
+  }
+}

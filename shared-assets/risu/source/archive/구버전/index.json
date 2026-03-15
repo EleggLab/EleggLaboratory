@@ -1,0 +1,81 @@
+{
+  "folderName": "구버전",
+  "relativePath": "구버전",
+  "summary": {
+    "total": 2,
+    "byExtension": {
+      ".risup": 1,
+      ".risum": 1
+    },
+    "byFormat": {
+      "preset": 1,
+      "module": 1
+    },
+    "bySeries": {
+      "컵케익": 2
+    },
+    "latestVersion": "0.1"
+  },
+  "seriesGroups": [
+    {
+      "series": "컵케익",
+      "latestVersion": "0.1",
+      "entries": [
+        {
+          "name": "🧁컵케익 프롬프트 for Gem3.1 v0.1_preset (1).risup",
+          "relativePath": "구버전/🧁컵케익 프롬프트 for Gem3.1 v0.1_preset (1).risup",
+          "directoryPath": "구버전",
+          "extension": ".risup",
+          "format": "preset",
+          "series": "컵케익",
+          "version": "0.1",
+          "variant": "",
+          "tags": [
+            "preset-format"
+          ],
+          "size": 233155
+        },
+        {
+          "name": "🧁컵케익모듈 Gem3.1 v0.1 (2).risum",
+          "relativePath": "구버전/🧁컵케익모듈 Gem3.1 v0.1 (2).risum",
+          "directoryPath": "구버전",
+          "extension": ".risum",
+          "format": "module",
+          "series": "컵케익",
+          "version": "0.1",
+          "variant": "",
+          "tags": [],
+          "size": 55723
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "name": "🧁컵케익 프롬프트 for Gem3.1 v0.1_preset (1).risup",
+      "relativePath": "구버전/🧁컵케익 프롬프트 for Gem3.1 v0.1_preset (1).risup",
+      "directoryPath": "구버전",
+      "extension": ".risup",
+      "format": "preset",
+      "series": "컵케익",
+      "version": "0.1",
+      "variant": "",
+      "tags": [
+        "preset-format"
+      ],
+      "size": 233155
+    },
+    {
+      "name": "🧁컵케익모듈 Gem3.1 v0.1 (2).risum",
+      "relativePath": "구버전/🧁컵케익모듈 Gem3.1 v0.1 (2).risum",
+      "directoryPath": "구버전",
+      "extension": ".risum",
+      "format": "module",
+      "series": "컵케익",
+      "version": "0.1",
+      "variant": "",
+      "tags": [],
+      "size": 55723
+    }
+  ]
+}

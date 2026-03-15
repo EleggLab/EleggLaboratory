@@ -1,0 +1,19 @@
+{
+  "id": "009-dramatist-module-v1-1",
+  "originalName": "🪶극작가 모듈 v1.1.risum",
+  "preparedName": "009-dramatist-module-v1-1.risum",
+  "sourcePath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\risu-source\\original\\🪶극작가 모듈 v1.1.risum",
+  "preparedRelativePath": "binary/009-dramatist-module-v1-1.risum",
+  "kind": "binary-risum",
+  "ext": ".risum",
+  "size": 1408,
+  "headHex": "6F 00 79 05 00 00 E6 6E 61 61 20 2D 40 E2 B2 4C 05 20 97 61 E6 6E 61 61",
+  "families": [
+    "dramatic-structure"
+  ],
+  "usageHints": [
+    "Use this for scene framing, beat escalation, and consequence hooks."
+  ],
+  "convertible": false,
+  "requiresRisuJsonExport": true
+}

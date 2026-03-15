@@ -1,0 +1,311 @@
+{
+  "generatedAt": "2026-03-12T10:03:12.474Z",
+  "tipsDir": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\TIPS",
+  "runs": 20,
+  "items": [
+    {
+      "index": 1,
+      "sceneType": "묘사",
+      "score": 100,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\01_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\01_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 2,
+      "sceneType": "대화",
+      "score": 88,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\02_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\02_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 3,
+      "sceneType": "전투",
+      "score": 100,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\03_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\03_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 4,
+      "sceneType": "묘사",
+      "score": 100,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\04_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\04_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 5,
+      "sceneType": "대화",
+      "score": 88,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\05_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\05_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 6,
+      "sceneType": "묘사",
+      "score": 100,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\06_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\06_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 7,
+      "sceneType": "대화",
+      "score": 88,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\07_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\07_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 8,
+      "sceneType": "전투",
+      "score": 100,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\08_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\08_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 9,
+      "sceneType": "묘사",
+      "score": 100,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\09_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\09_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 10,
+      "sceneType": "대화",
+      "score": 88,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\10_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\10_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 11,
+      "sceneType": "묘사",
+      "score": 100,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\11_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\11_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 12,
+      "sceneType": "대화",
+      "score": 88,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\12_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\12_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 13,
+      "sceneType": "전투",
+      "score": 100,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\13_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\13_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 14,
+      "sceneType": "묘사",
+      "score": 100,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\14_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\14_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 15,
+      "sceneType": "대화",
+      "score": 88,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\15_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\15_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 16,
+      "sceneType": "묘사",
+      "score": 100,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\16_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\16_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 17,
+      "sceneType": "대화",
+      "score": 88,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\17_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\17_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 18,
+      "sceneType": "전투",
+      "score": 100,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\18_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\18_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 19,
+      "sceneType": "묘사",
+      "score": 100,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\19_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\19_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    },
+    {
+      "index": 20,
+      "sceneType": "대화",
+      "score": 88,
+      "draftPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\20_draft.txt",
+      "reviewPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\tips-editor\\session-20260312-190312\\20_review.md",
+      "referencedTips": [
+        "00_기본_문장리듬.md",
+        "01_인과_연결_강화.md",
+        "02_대화문_몰입도.md",
+        "03_전투씬_박진감.md",
+        "04_묘사씬_감각밀도.md",
+        "05_반복_회피_변주.md"
+      ]
+    }
+  ],
+  "summary": {
+    "averageScore": 95.2,
+    "totalIssues": 8
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "generatedAt": "2026-03-12T11:12:18.111Z",
+  "config": {
+    "profilePack": "data/ai-presets/profile-pack-core.json",
+    "runs": 8,
+    "steps": 20,
+    "mode": "mock",
+    "seed": 222,
+    "outDir": "reports/ai",
+    "preset": "",
+    "presetDir": "",
+    "presetRegistry": "data/ai-presets/preset-registry.json",
+    "presetPolicy": "rotate",
+    "strict": false,
+    "thresholds": {
+      "minDistinctStorylines": 5,
+      "minRunsPerStoryline": 1,
+      "minAvgUniqueEventRatio": 0.65,
+      "minAvgCategoryDiversity": 2,
+      "minMatureCategoryRate": 0.25,
+      "maxSameSequencePairsPerStoryline": 1
+    }
+  },
+  "profilePackPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\data\\ai-presets\\profile-pack-core.json",
+  "sessionPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\ai-chat\\session-20260312-201217-690\\session.json",
+  "summary": {
+    "pass": true,
+    "distinctStorylines": 5,
+    "minRunCount": 1,
+    "avgUniqueEventRatio": 1,
+    "avgCategoryDiversity": 3.9,
+    "avgMatureCategoryRate": 0.48,
+    "sameSequencePairsMax": 0,
+    "checks": [
+      {
+        "key": "distinctStorylines",
+        "actual": 5,
+        "expected": ">= 5",
+        "pass": true
+      },
+      {
+        "key": "minRunsPerStoryline",
+        "actual": 1,
+        "expected": ">= 1",
+        "pass": true
+      },
+      {
+        "key": "avgUniqueEventRatio",
+        "actual": 1,
+        "expected": ">= 0.65",
+        "pass": true
+      },
+      {
+        "key": "avgCategoryDiversity",
+        "actual": 3.9,
+        "expected": ">= 2",
+        "pass": true
+      },
+      {
+        "key": "avgMatureCategoryRate",
+        "actual": 0.48,
+        "expected": ">= 0.25",
+        "pass": true
+      },
+      {
+        "key": "maxSameSequencePairsPerStoryline",
+        "actual": 0,
+        "expected": "<= 1",
+        "pass": true
+      }
+    ]
+  },
+  "storylines": [
+    {
+      "storylineId": "academy-prodigy",
+      "runCount": 2,
+      "avgTurns": 10,
+      "avgUniqueEventRatio": 1,
+      "avgCategoryDiversity": 4,
+      "avgMatureCategoryRate": 0.3,
+      "sameSequencePairs": 0,
+      "runs": [
+        {
+          "runIndex": 2,
+          "profileId": "academy-bard-longkin",
+          "profileName": "아카데미의 유혹 바드",
+          "storylineId": "academy-prodigy",
+          "turns": 10,
+          "uniqueEventRatio": 1,
+          "categoryDiversity": 4,
+          "matureCategoryRate": 0.5,
+          "sequenceHash": "c155da2e493289e4916adaca73e4b67f55473c79"
+        },
+        {
+          "runIndex": 6,
+          "profileId": "academy-wizard-longkin",
+          "profileName": "아카데미 금서학파",
+          "storylineId": "academy-prodigy",
+          "turns": 10,
+          "uniqueEventRatio": 1,
+          "categoryDiversity": 4,
+          "matureCategoryRate": 0.1,
+          "sequenceHash": "f97ef0481b87ef5d4d97a93113475f719bfafa36"
+        }
+      ]
+    },
+    {
+      "storylineId": "battleworn-veteran",
+      "runCount": 2,
+      "avgTurns": 10,
+      "avgUniqueEventRatio": 1,
+      "avgCategoryDiversity": 6,
+      "avgMatureCategoryRate": 0.45,
+      "sameSequencePairs": 0,
+      "runs": [
+        {
+          "runIndex": 1,
+          "profileId": "veteran-knight-human",
+          "profileName": "도시 외곽의 냉혈 기사",
+          "storylineId": "battleworn-veteran",
+          "turns": 10,
+          "uniqueEventRatio": 1,
+          "categoryDiversity": 6,
+          "matureCategoryRate": 0.4,
+          "sequenceHash": "74d17da75254c4c2609cda3a14d04025801925a2"
+        },
+        {
+          "runIndex": 7,
+          "profileId": "veteran-ranger-draconic",
+          "profileName": "변경의 추적자",
+          "storylineId": "battleworn-veteran",
+          "turns": 10,
+          "uniqueEventRatio": 1,
+          "categoryDiversity": 6,
+          "matureCategoryRate": 0.5,
+          "sequenceHash": "0507935ae8c2ca1caea030056e2f0153156893cd"
+        }
+      ]
+    },
+    {
+      "storylineId": "brothel-fixer",
+      "runCount": 2,
+      "avgTurns": 10,
+      "avgUniqueEventRatio": 1,
+      "avgCategoryDiversity": 3.5,
+      "avgMatureCategoryRate": 0.95,
+      "sameSequencePairs": 0,
+      "runs": [
+        {
+          "runIndex": 4,
+          "profileId": "brothel-warlock-succubus",
+          "profileName": "창녀촌 지배자",
+          "storylineId": "brothel-fixer",
+          "turns": 10,
+          "uniqueEventRatio": 1,
+          "categoryDiversity": 3,
+          "matureCategoryRate": 1,
+          "sequenceHash": "6f65710d61159dfd06f66e22cfb9b6942fe82c52"
+        },
+        {
+          "runIndex": 8,
+          "profileId": "brothel-sorcerer-smallfoot",
+          "profileName": "밤 시장의 계약술사",
+          "storylineId": "brothel-fixer",
+          "turns": 10,
+          "uniqueEventRatio": 1,
+          "categoryDiversity": 4,
+          "matureCategoryRate": 0.9,
+          "sequenceHash": "71099f41b453edbcb69ac0d0425046996dd9b2d1"
+        }
+      ]
+    },
+    {
+      "storylineId": "mountain-adept",
+      "runCount": 1,
+      "avgTurns": 10,
+      "avgUniqueEventRatio": 1,
+      "avgCategoryDiversity": 3,
+      "avgMatureCategoryRate": 0.1,
+      "sameSequencePairs": 0,
+      "runs": [
+        {
+          "runIndex": 3,
+          "profileId": "mountain-monk-stonefolk",
+          "profileName": "산중 수련자",
+          "storylineId": "mountain-adept",
+          "turns": 10,
+          "uniqueEventRatio": 1,
+          "categoryDiversity": 3,
+          "matureCategoryRate": 0.1,
+          "sequenceHash": "07c42c47d6f13afc74592858d5a84ad3f269e0ad"
+        }
+      ]
+    },
+    {
+      "storylineId": "thief-crew",
+      "runCount": 1,
+      "avgTurns": 10,
+      "avgUniqueEventRatio": 1,
+      "avgCategoryDiversity": 3,
+      "avgMatureCategoryRate": 0.6,
+      "sameSequencePairs": 0,
+      "runs": [
+        {
+          "runIndex": 5,
+          "profileId": "crew-rogue-infernal",
+          "profileName": "도적단 흑막",
+          "storylineId": "thief-crew",
+          "turns": 10,
+          "uniqueEventRatio": 1,
+          "categoryDiversity": 3,
+          "matureCategoryRate": 0.6,
+          "sequenceHash": "cfb15010ac955e2454280d89395709dc10cf0fb9"
+        }
+      ]
+    }
+  ]
+}

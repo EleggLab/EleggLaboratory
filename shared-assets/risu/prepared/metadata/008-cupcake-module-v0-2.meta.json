@@ -1,0 +1,19 @@
+{
+  "id": "008-cupcake-module-v0-2",
+  "originalName": "🧁컵케익모듈 잼삼일 v0.2 (1).risum",
+  "preparedName": "008-cupcake-module-v0-2.risum",
+  "sourcePath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\risu-source\\original\\🧁컵케익모듈 잼삼일 v0.2 (1).risum",
+  "preparedRelativePath": "binary/008-cupcake-module-v0-2.risum",
+  "kind": "binary-risum",
+  "ext": ".risum",
+  "size": 55405,
+  "headHex": "6F 00 66 D8 00 00 E6 6E 61 61 20 2D 40 E2 B2 4C 05 20 97 61 E6 6E 61 61",
+  "families": [
+    "soft-dialogue-surface"
+  ],
+  "usageHints": [
+    "Use this for lighter or playful dialogue texture on top of heavier scenes."
+  ],
+  "convertible": false,
+  "requiresRisuJsonExport": true
+}

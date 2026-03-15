@@ -1,0 +1,95 @@
+{
+  "generatedAt": "2026-03-12T11:32:37.585Z",
+  "config": {
+    "mode": "mock",
+    "runs": 3,
+    "steps": 24,
+    "suites": 5,
+    "seedBase": 500,
+    "outDir": "reports/ai",
+    "profilePack": "data/ai-presets/profile-pack-core.json",
+    "profileRuns": 0,
+    "canaryMode": "mock",
+    "canaryRuns": 1,
+    "canarySteps": 10,
+    "canarySeedOffset": 10000,
+    "promptCostPer1k": 0,
+    "completionCostPer1k": 0,
+    "minHealthScore": 0.93,
+    "maxBacklogCount": 0,
+    "requireCanaryWhenLive": true,
+    "trendRequired": true,
+    "trendMinSampleCount": 3,
+    "trendRequirePass": true,
+    "strict": true,
+    "preset": "",
+    "presetDir": "",
+    "presetRegistry": "",
+    "presetPolicy": "rotate",
+    "configPath": "config/narrative-release-gate.json",
+    "configProfile": "pre-release",
+    "configLoaded": true,
+    "configFileAbsolute": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\config\\narrative-release-gate.json",
+    "configProfileApplied": "pre-release",
+    "canaryModeResolved": "mock"
+  },
+  "pass": true,
+  "checks": [
+    {
+      "key": "opsPass",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "key": "healthScore",
+      "actual": 1,
+      "expected": ">= 0.93",
+      "pass": true
+    },
+    {
+      "key": "backlogCount",
+      "actual": 0,
+      "expected": "<= 0",
+      "pass": true
+    },
+    {
+      "key": "trendExecuted",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "key": "trendSampleCount",
+      "actual": 8,
+      "expected": ">= 3",
+      "pass": true
+    },
+    {
+      "key": "trendPass",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    }
+  ],
+  "ops": {
+    "pass": true,
+    "healthScore": 1,
+    "qualityPass": true,
+    "regressionPass": true,
+    "profilePass": true,
+    "storylinePass": true,
+    "semanticPass": true,
+    "canaryPass": true,
+    "trendPass": true,
+    "backlogCount": 0,
+    "jsonPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-ops-suite-20260312-203237-584.json",
+    "mdPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-ops-suite-20260312-203237-584.md",
+    "trend": {
+      "executed": true,
+      "pass": true,
+      "sampleCount": 8,
+      "reason": ""
+    }
+  }
+}

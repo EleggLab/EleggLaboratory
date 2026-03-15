@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-03-12T10:39:59.988Z",
+  "presetDir": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\data\\ai-presets",
+  "summary": {
+    "total": 3,
+    "valid": 2,
+    "invalid": 1,
+    "warned": 2
+  },
+  "presets": [
+    {
+      "file": "preset-registry.json",
+      "absPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\data\\ai-presets\\preset-registry.json",
+      "ok": false,
+      "errors": [
+        "missing id",
+        "missing name",
+        "missing systemPrompt",
+        "missing userPrompt"
+      ],
+      "warnings": [
+        "prompt too short (<120 chars)"
+      ],
+      "metrics": {
+        "systemPromptLength": 0,
+        "userPromptLength": 0,
+        "styleTagsCount": 0,
+        "categoriesCount": 0
+      }
+    },
+    {
+      "file": "risu-극작가-하이파-v1-0.json",
+      "absPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\data\\ai-presets\\risu-극작가-하이파-v1-0.json",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "contains hard output schema directive"
+      ],
+      "metrics": {
+        "systemPromptLength": 116,
+        "userPromptLength": 494,
+        "styleTagsCount": 2,
+        "categoriesCount": 0
+      }
+    },
+    {
+      "file": "story-core-balanced.json",
+      "absPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\data\\ai-presets\\story-core-balanced.json",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "systemPromptLength": 186,
+        "userPromptLength": 150,
+        "styleTagsCount": 4,
+        "categoriesCount": 0
+      }
+    }
+  ]
+}

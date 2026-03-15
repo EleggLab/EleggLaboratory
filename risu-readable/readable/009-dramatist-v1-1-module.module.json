@@ -1,0 +1,34 @@
+{
+  "decodedFrom": "risum",
+  "envelope": {
+    "magic": 111,
+    "version": 0,
+    "type": "risuModule"
+  },
+  "module": {
+    "name": "🪶극작가 모듈 v1.1",
+    "description": "",
+    "id": "eaa08c19-1354-4815-bdf8-383c78bd2499",
+    "namespace": "hoskren",
+    "hideIcon": false,
+    "lorebook": [],
+    "regex": [],
+    "trigger": [
+      {
+        "comment": "",
+        "type": "start",
+        "conditions": [],
+        "effect": [
+          {
+            "type": "triggerlua",
+            "code": "listenEdit(\"editRequest\", function(triggerId, data)\n    for i = 1, #data do\n        if data[i].role == \"user\" then\n            data[i].role = \"system\"\n        end\n    end\n    local assistantCount = 1\n    for i = 1, #data do\n        if data[i].role == \"assistant\" then\n            if assistantCount > 4 then\n                data[i].role = \"system\"\n            else\n                assistantCount = assistantCount + 1\n            end\n        end\n    end\n    mergeConsecutiveRoles(data)\n    return data\nend)\n \nfunction mergeConsecutiveRoles(data)\n    local i = 1\n    while i < #data do\n        if data[i].role == data[i + 1].role then\n            data[i].content = data[i].content .. \"\\n\" .. data[i + 1].content\n            table.remove(data, i + 1)\n        else\n            i = i + 1\n        end\n    end\nend\n"
+          }
+        ],
+        "lowLevelAccess": false
+      }
+    ],
+    "lowLevelAccess": false,
+    "assets": []
+  },
+  "assets": []
+}

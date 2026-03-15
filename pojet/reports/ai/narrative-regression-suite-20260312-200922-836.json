@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-03-12T11:09:22.836Z",
+  "config": {
+    "suites": 4,
+    "runs": 3,
+    "steps": 24,
+    "mode": "mock",
+    "seedBase": 700,
+    "outDir": "reports/ai",
+    "strict": false,
+    "maxFailRate": 0.2,
+    "profilePack": "data/ai-presets/profile-pack-core.json",
+    "preset": "",
+    "presetDir": "",
+    "presetRegistry": "data/ai-presets/preset-registry.json",
+    "presetPolicy": "rotate"
+  },
+  "summary": {
+    "total": 4,
+    "failed": 0,
+    "failRate": 0,
+    "avgDuplicateRate": 0.1181,
+    "avgBeforeLength": 184.18,
+    "avgResultSentences": 4
+  },
+  "pass": true,
+  "runs": [
+    {
+      "suiteIndex": 1,
+      "seed": 700,
+      "pass": true,
+      "turns": 36,
+      "duplicateBeforeRate": 0.0556,
+      "avgBeforeLength": 183.39,
+      "avgResultSentences": 4,
+      "errors": 0,
+      "reportJson": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-200922-197.json",
+      "reportMd": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-200922-197.md"
+    },
+    {
+      "suiteIndex": 2,
+      "seed": 701,
+      "pass": true,
+      "turns": 36,
+      "duplicateBeforeRate": 0.1389,
+      "avgBeforeLength": 185.56,
+      "avgResultSentences": 4,
+      "errors": 0,
+      "reportJson": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-200922-423.json",
+      "reportMd": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-200922-423.md"
+    },
+    {
+      "suiteIndex": 3,
+      "seed": 702,
+      "pass": true,
+      "turns": 36,
+      "duplicateBeforeRate": 0.1111,
+      "avgBeforeLength": 184.33,
+      "avgResultSentences": 4,
+      "errors": 0,
+      "reportJson": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-200922-621.json",
+      "reportMd": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-200922-621.md"
+    },
+    {
+      "suiteIndex": 4,
+      "seed": 703,
+      "pass": true,
+      "turns": 36,
+      "duplicateBeforeRate": 0.1667,
+      "avgBeforeLength": 183.44,
+      "avgResultSentences": 4,
+      "errors": 0,
+      "reportJson": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-200922-834.json",
+      "reportMd": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-200922-834.md"
+    }
+  ]
+}

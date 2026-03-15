@@ -1,0 +1,457 @@
+{
+  "generatedAt": "2026-03-13T12:56:50.105Z",
+  "config": {
+    "profilePack": "data/ai-presets/profile-pack-core.json",
+    "runs": 18,
+    "steps": 24,
+    "mode": "mock",
+    "seed": 500,
+    "outDir": "reports/ai",
+    "preset": "",
+    "presetDir": "",
+    "presetRegistry": "data/ai-presets/preset-registry.json",
+    "presetPolicy": "rotate",
+    "strict": false,
+    "thresholds": {
+      "minProfiles": 5,
+      "minAvgReflection": 0.75,
+      "minAvgUniqueCategories": 2,
+      "maxSameSequencePairs": null
+    }
+  },
+  "profilePackPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\data\\ai-presets\\profile-pack-core.json",
+  "sessionPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\ai-chat\\session-20260313-215641-865\\session.json",
+  "summary": {
+    "profileCount": 18,
+    "avgReflection": 1,
+    "avgUniqueCategories": 5,
+    "avgUniqueEventRatio": 1,
+    "sameSequencePairs": 0,
+    "maxSameSequencePairsAllowed": 0,
+    "pass": true,
+    "checks": [
+      {
+        "key": "profileCount",
+        "actual": 18,
+        "expected": ">= 5",
+        "pass": true
+      },
+      {
+        "key": "avgReflection",
+        "actual": 1,
+        "expected": ">= 0.75",
+        "pass": true
+      },
+      {
+        "key": "avgUniqueCategories",
+        "actual": 5,
+        "expected": ">= 2",
+        "pass": true
+      },
+      {
+        "key": "sameSequencePairs",
+        "actual": 0,
+        "expected": "<= 0",
+        "pass": true
+      }
+    ]
+  },
+  "runs": [
+    {
+      "runIndex": 1,
+      "profileId": "academy-heiress-human",
+      "profileName": "엘린",
+      "classId": "",
+      "lineageId": "human",
+      "backgroundId": "fallen-bastard",
+      "storylineId": "academy-prodigy",
+      "turns": 12,
+      "uniqueCategoryCount": 4,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "80ada9a6edf8567ef5a1ef6b5fd84f1645edb4a9",
+      "categories": [
+        "social",
+        "relationship",
+        "faction",
+        "relic"
+      ],
+      "signatureHash": "4eaf3853827778e43767b55bc2285e8e3769b960"
+    },
+    {
+      "runIndex": 2,
+      "profileId": "academy-heiress-longkin",
+      "profileName": "라시엘",
+      "classId": "",
+      "lineageId": "longkin",
+      "backgroundId": "fallen-bastard",
+      "storylineId": "academy-prodigy",
+      "turns": 12,
+      "uniqueCategoryCount": 4,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "e5ee3d5c2e30aca91eceba3efe82bb27c30a0708",
+      "categories": [
+        "relationship",
+        "faction",
+        "social",
+        "relic"
+      ],
+      "signatureHash": "617945b3119cb8d6339b82193dbf9f6cf2833098"
+    },
+    {
+      "runIndex": 3,
+      "profileId": "academy-heiress-succubus",
+      "profileName": "모르엔",
+      "classId": "",
+      "lineageId": "succubus",
+      "backgroundId": "fallen-bastard",
+      "storylineId": "academy-prodigy",
+      "turns": 12,
+      "uniqueCategoryCount": 4,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "06b29958cbd1aef43222a2ab65b021ecd20b9b68",
+      "categories": [
+        "relationship",
+        "faction",
+        "social",
+        "relic"
+      ],
+      "signatureHash": "dce0b545cb128c36ec03c5adfedc8d4b8423a173"
+    },
+    {
+      "runIndex": 4,
+      "profileId": "academy-escaped-human",
+      "profileName": "세라",
+      "classId": "",
+      "lineageId": "human",
+      "backgroundId": "border-conscript",
+      "storylineId": "academy-prodigy",
+      "turns": 12,
+      "uniqueCategoryCount": 5,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "847c7216d762759c89a5b944e3367924c1be2b9b",
+      "categories": [
+        "corruption",
+        "faction",
+        "market",
+        "relationship",
+        "faith"
+      ],
+      "signatureHash": "4807edc0b34a1eba5961f3560db548de1dcfc982"
+    },
+    {
+      "runIndex": 5,
+      "profileId": "academy-escaped-longkin",
+      "profileName": "미라엘",
+      "classId": "",
+      "lineageId": "longkin",
+      "backgroundId": "border-conscript",
+      "storylineId": "academy-prodigy",
+      "turns": 12,
+      "uniqueCategoryCount": 6,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "50308efa2353758fe9d6504ccd5c1ac8f27d8f22",
+      "categories": [
+        "corruption",
+        "faction",
+        "relationship",
+        "faith",
+        "social",
+        "market"
+      ],
+      "signatureHash": "78b7aab86d73a0ee30452b1cfd294e35b3a616a1"
+    },
+    {
+      "runIndex": 6,
+      "profileId": "academy-escaped-succubus",
+      "profileName": "이실라",
+      "classId": "",
+      "lineageId": "succubus",
+      "backgroundId": "border-conscript",
+      "storylineId": "academy-prodigy",
+      "turns": 12,
+      "uniqueCategoryCount": 6,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "a2a7059f79388ec05b999a1e924c19817e77ab72",
+      "categories": [
+        "corruption",
+        "faction",
+        "social",
+        "market",
+        "relationship",
+        "faith"
+      ],
+      "signatureHash": "391c76c8ad2242bfca28c2a65dbd562cec185f32"
+    },
+    {
+      "runIndex": 7,
+      "profileId": "orphan-veteran-human",
+      "profileName": "레이나",
+      "classId": "",
+      "lineageId": "human",
+      "backgroundId": "orphan-cutpurse",
+      "storylineId": "battleworn-veteran",
+      "turns": 12,
+      "uniqueCategoryCount": 6,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "2a90d5c8020732889fe12a83515eab863c5f9446",
+      "categories": [
+        "relationship",
+        "market",
+        "social",
+        "travel",
+        "relic",
+        "faith"
+      ],
+      "signatureHash": "e5b8c630bb970ee42a022dcbaf92624977ab3d7b"
+    },
+    {
+      "runIndex": 8,
+      "profileId": "orphan-veteran-longkin",
+      "profileName": "이르벨",
+      "classId": "",
+      "lineageId": "longkin",
+      "backgroundId": "orphan-cutpurse",
+      "storylineId": "battleworn-veteran",
+      "turns": 12,
+      "uniqueCategoryCount": 7,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "eb51abe400b18179d9d06c07ef849ee7ced70342",
+      "categories": [
+        "market",
+        "faction",
+        "corruption",
+        "travel",
+        "social",
+        "relationship",
+        "relic"
+      ],
+      "signatureHash": "91dd2e65f0587e27653ee0dd893d0dad5fbebd0a"
+    },
+    {
+      "runIndex": 9,
+      "profileId": "orphan-veteran-succubus",
+      "profileName": "벨로라",
+      "classId": "",
+      "lineageId": "succubus",
+      "backgroundId": "orphan-cutpurse",
+      "storylineId": "battleworn-veteran",
+      "turns": 12,
+      "uniqueCategoryCount": 6,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "c04f460412f129f95a3864eceaa0e2002d880a63",
+      "categories": [
+        "market",
+        "corruption",
+        "faith",
+        "travel",
+        "social",
+        "relationship"
+      ],
+      "signatureHash": "51b9f414e28aec0908bfa7926be8662a942875d8"
+    },
+    {
+      "runIndex": 10,
+      "profileId": "brothel-veteran-human",
+      "profileName": "아린",
+      "classId": "",
+      "lineageId": "human",
+      "backgroundId": "funeral-aide",
+      "storylineId": "battleworn-veteran",
+      "turns": 12,
+      "uniqueCategoryCount": 4,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "86eecc0b9b34992d05d073d1aba3c56a8f16a474",
+      "categories": [
+        "social",
+        "faith",
+        "relationship",
+        "market"
+      ],
+      "signatureHash": "e2a7a58c70e1550a444a7f7934832aa8f069e1f6"
+    },
+    {
+      "runIndex": 11,
+      "profileId": "brothel-veteran-longkin",
+      "profileName": "노엘라",
+      "classId": "",
+      "lineageId": "longkin",
+      "backgroundId": "funeral-aide",
+      "storylineId": "battleworn-veteran",
+      "turns": 12,
+      "uniqueCategoryCount": 4,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "6cafdbc412ef2b7a2df23aea3b0a01adb48afd75",
+      "categories": [
+        "relationship",
+        "market",
+        "faith",
+        "social"
+      ],
+      "signatureHash": "5547ed5a36508303359a8a91fe05aab8295d5d0d"
+    },
+    {
+      "runIndex": 12,
+      "profileId": "brothel-veteran-succubus",
+      "profileName": "나에사",
+      "classId": "",
+      "lineageId": "succubus",
+      "backgroundId": "funeral-aide",
+      "storylineId": "battleworn-veteran",
+      "turns": 12,
+      "uniqueCategoryCount": 4,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "3ca21ba93a91aaa052084844509cb2db144de96e",
+      "categories": [
+        "market",
+        "social",
+        "relationship",
+        "faith"
+      ],
+      "signatureHash": "2a86f9bab74c51492a63ebdc3b5502efd8b8b838"
+    },
+    {
+      "runIndex": 13,
+      "profileId": "smuggler-crew-human",
+      "profileName": "노에라",
+      "classId": "",
+      "lineageId": "human",
+      "backgroundId": "smuggler-runner",
+      "storylineId": "thief-crew",
+      "turns": 12,
+      "uniqueCategoryCount": 3,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "311ca1e779c76cd7f9fec73dd8aacfa7bfa00b94",
+      "categories": [
+        "social",
+        "travel",
+        "market"
+      ],
+      "signatureHash": "7daa5b2cb17760c39891f7882ee43e5f65c9a801"
+    },
+    {
+      "runIndex": 14,
+      "profileId": "smuggler-crew-longkin",
+      "profileName": "세리아",
+      "classId": "",
+      "lineageId": "longkin",
+      "backgroundId": "smuggler-runner",
+      "storylineId": "thief-crew",
+      "turns": 12,
+      "uniqueCategoryCount": 3,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "95171a68af5b8e8df119b08383a627bdc86633a3",
+      "categories": [
+        "market",
+        "social",
+        "travel"
+      ],
+      "signatureHash": "1e6d6bab9cf7f50ebce50546c494958e1b02b4a0"
+    },
+    {
+      "runIndex": 15,
+      "profileId": "smuggler-crew-succubus",
+      "profileName": "릴리아",
+      "classId": "",
+      "lineageId": "succubus",
+      "backgroundId": "smuggler-runner",
+      "storylineId": "thief-crew",
+      "turns": 12,
+      "uniqueCategoryCount": 3,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "7be22f93aebe31ac2e604f794fb41c08b8ce9654",
+      "categories": [
+        "market",
+        "travel",
+        "social"
+      ],
+      "signatureHash": "bab010ddfbc638835a4c37249096cc847699d86d"
+    },
+    {
+      "runIndex": 16,
+      "profileId": "witch-crew-human",
+      "profileName": "카엘라",
+      "classId": "",
+      "lineageId": "human",
+      "backgroundId": "tower-dropout",
+      "storylineId": "thief-crew",
+      "turns": 12,
+      "uniqueCategoryCount": 7,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "6d8ff54d1ec59e2668af112cf0a21e65789e0a5a",
+      "categories": [
+        "social",
+        "faith",
+        "relic",
+        "faction",
+        "travel",
+        "corruption",
+        "market"
+      ],
+      "signatureHash": "48d09903d4b5481f5583a3526c1b1555aee12a38"
+    },
+    {
+      "runIndex": 17,
+      "profileId": "witch-crew-longkin",
+      "profileName": "엘리아",
+      "classId": "",
+      "lineageId": "longkin",
+      "backgroundId": "tower-dropout",
+      "storylineId": "thief-crew",
+      "turns": 12,
+      "uniqueCategoryCount": 6,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "165b488b1d568ee2657adacda5158188d1b3b111",
+      "categories": [
+        "social",
+        "relic",
+        "faction",
+        "faith",
+        "travel",
+        "market"
+      ],
+      "signatureHash": "468a475c80b6173a80938a68e64983f1976c6a9b"
+    },
+    {
+      "runIndex": 18,
+      "profileId": "witch-crew-succubus",
+      "profileName": "세레인",
+      "classId": "",
+      "lineageId": "succubus",
+      "backgroundId": "tower-dropout",
+      "storylineId": "thief-crew",
+      "turns": 12,
+      "uniqueCategoryCount": 8,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "75fc15c2bbac139c7c788eefce11003bd5458877",
+      "categories": [
+        "corruption",
+        "travel",
+        "relic",
+        "faith",
+        "relationship",
+        "market",
+        "social",
+        "faction"
+      ],
+      "signatureHash": "aea9ac24f680717cf4f2c6626fdb72046d133e92"
+    }
+  ]
+}

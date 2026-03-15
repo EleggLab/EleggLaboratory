@@ -1,0 +1,19 @@
+{
+  "id": "001-affection-module-v1-0",
+  "originalName": "💞범용 호감도 모듈 - V1.0.risum",
+  "preparedName": "001-affection-module-v1-0.risum",
+  "sourcePath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\risu-source\\original\\💞범용 호감도 모듈 - V1.0.risum",
+  "preparedRelativePath": "binary/001-affection-module-v1-0.risum",
+  "kind": "binary-risum",
+  "ext": ".risum",
+  "size": 77349,
+  "headHex": "6F 00 1E 2E 01 00 E6 6E 61 61 20 2D 40 E2 B2 4C 05 20 97 61 E6 6E 61 61",
+  "families": [
+    "relationship-pressure"
+  ],
+  "usageHints": [
+    "Use this for affection tracking, tension, trust, and branching social fallout."
+  ],
+  "convertible": false,
+  "requiresRisuJsonExport": true
+}

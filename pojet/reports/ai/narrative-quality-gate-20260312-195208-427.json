@@ -1,0 +1,72 @@
+{
+  "generatedAt": "2026-03-12T10:52:08.427Z",
+  "config": {
+    "runs": 2,
+    "steps": 24,
+    "mode": "mock",
+    "seed": 104,
+    "preset": null,
+    "presetDir": null,
+    "presetRegistry": "data/ai-presets/preset-registry.json",
+    "presetPolicy": "rotate",
+    "thresholds": {
+      "placeholderMax": 0,
+      "duplicateBeforeRateMax": 0.2,
+      "avgBeforeMin": 80,
+      "avgResultSentenceMin": 2,
+      "errorsMax": 0
+    }
+  },
+  "sessionPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\ai-chat\\session-20260312-195208-303\\session.json",
+  "metrics": {
+    "turns": 24,
+    "errors": 0,
+    "parseFallbacks": 0,
+    "placeholderCount": 0,
+    "duplicateBeforeRate": 0.2083,
+    "avgBeforeLength": 148.25,
+    "avgResultSentences": 2,
+    "optionIntegrityViolations": 0
+  },
+  "evaluation": {
+    "pass": false,
+    "checks": [
+      {
+        "key": "placeholderCount",
+        "actual": 0,
+        "expected": "<= 0",
+        "pass": true
+      },
+      {
+        "key": "duplicateBeforeRate",
+        "actual": 0.2083,
+        "expected": "<= 0.2",
+        "pass": false
+      },
+      {
+        "key": "avgBeforeLength",
+        "actual": 148.25,
+        "expected": ">= 80",
+        "pass": true
+      },
+      {
+        "key": "avgResultSentences",
+        "actual": 2,
+        "expected": ">= 2",
+        "pass": true
+      },
+      {
+        "key": "errors",
+        "actual": 0,
+        "expected": "<= 0",
+        "pass": true
+      },
+      {
+        "key": "optionIntegrityViolations",
+        "actual": 0,
+        "expected": "<= 0",
+        "pass": true
+      }
+    ]
+  }
+}

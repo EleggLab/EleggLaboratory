@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Minimal VN Sample",
+    "author": "sample",
+    "version": "1.0.0"
+  },
+  "nodes": [
+    {
+      "id": "day1-trigger",
+      "type": "triggerNode",
+      "position": {
+        "x": 80,
+        "y": 120
+      },
+      "data": {
+        "type": "trigger",
+        "label": "Day 1",
+        "minDay": 1,
+        "maxDay": 1,
+        "probability": 1.0,
+        "requiredFlags": [],
+        "requiredItems": []
+      }
+    },
+    {
+      "id": "intro-dialogue",
+      "type": "dialogueNode",
+      "position": {
+        "x": 320,
+        "y": 120
+      },
+      "data": {
+        "type": "dialogue",
+        "label": "Intro",
+        "text": "Welcome to the Python Steam UGC sample.",
+        "textKo": "Python Steam UGC 샘플에 오신 것을 환영합니다.",
+        "characterId": "char-hero",
+        "backgroundId": "bg-home"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-1",
+      "source": "day1-trigger",
+      "target": "intro-dialogue",
+      "type": "smoothstep"
+    }
+  ],
+  "flags": [],
+  "assets": {
+    "backgrounds": [
+      {
+        "id": "bg-home",
+        "name": "Home",
+        "image": "assets/ui/home_bg.jpg"
+      }
+    ],
+    "characters": [
+      {
+        "id": "char-hero",
+        "name": "Hero"
+      }
+    ],
+    "items": []
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "generatedAt": "2026-03-12T10:40:00.154Z",
+  "config": {
+    "mode": "mock",
+    "model": "gpt-4.1-mini",
+    "baseUrl": "https://api.openai.com/v1",
+    "runs": 1,
+    "steps": 12,
+    "cache": false,
+    "presetPolicy": "single",
+    "singlePresetName": "스토리 코어 밸런스",
+    "singlePresetPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\data\\ai-presets\\story-core-balanced.json",
+    "presetPoolSize": 0
+  },
+  "stats": {
+    "turns": 6,
+    "apiCalls": 0,
+    "mockCalls": 6,
+    "cacheHits": 0,
+    "parseFallbacks": 0,
+    "errors": 0
+  },
+  "runs": [
+    {
+      "runIndex": 1,
+      "profile": {
+        "classId": "fighter",
+        "lineageId": "human",
+        "backgroundId": "border-conscript",
+        "storylineId": "academy-prodigy"
+      },
+      "turns": [
+        {
+          "turnIndex": 1,
+          "eventId": "evt-t2-007",
+          "choiceId": "c3",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "preset": {
+            "id": "story-core-balanced",
+            "name": "스토리 코어 밸런스"
+          },
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only. You are writing reusable game narrative logs, not a standalone novel chapter. Keep the language vivid but production-safe: coherent, causal, and compact enough for turn-by-turn gameplay."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"},{\"id\":\"string\",\"label\":\"string\"},{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n\nStyle tags: korean, dark-fantasy, causal-continuity, playable-json\n\nPreset directives:\n서사 지침: 1) 직전 로그의 결과가 이번 턴의 원인으로 읽히게 작성. 2) 선택지 문구는 서로 다른 리스크/보상을 느낄 수 있도록 분리. 3) 결과 로그에는 수치 변화가 왜 발생했는지 맥락을 넣는다. 4) 묘사는 감각적이되 과도한 수사보다 게임 진행 정보를 우선한다.\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 1,\n    \"turnIndex\": 1\n  },\n  \"world\": {\n    \"day\": 1,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"카일60\",\n    \"gender\": \"male\",\n    \"lineageId\": \"human\",\n    \"classId\": \"fighter\",\n    \"backgroundId\": \"border-conscript\",\n    \"storylineId\": \"academy-prodigy\",\n    \"topAbilities\": [\n      {\n        \"key\": \"WIS\",\n        \"value\": 15\n      },\n      {\n        \"key\": \"INT\",\n        \"value\": 14\n      },\n      {\n        \"key\": \"CON\",\n        \"value\": 13\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-007\",\n    \"tier\": \"T2\",\n    \"category\": \"corruption\",\n    \"title\": \"회색 항구 오염 분기\",\n    \"text\": \"회색 항구의 봉인 틈에서 새는 기운이 피부를 데우고 판단을 서서히 흔든다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 금단의 이득은 달콤하지만 오염의 이자는 느리게 쌓인다. 인간 기사 (노예시장에 있었다가 도망침)는 강점 WIS/INT/CON 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"금단 제안을 받아들인다 · 대가\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"대가를 피하고 손을 뗀다 · 균열\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"대가를 피하고 손을 뗀다 · 유혹\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"대가를 계산한 뒤 금지안을 받아들인다 · 금단\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 16\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 3\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 1,\n              \"fear\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"trait-wis-4\",\n        \"label\": \"의식 절차로 오염 비용을 낮춘다 · 대가\",\n        \"effects\": [\n          {\n            \"kind\": \"taint\",\n            \"value\": -2\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": 1\n          },\n          {\n            \"kind\": \"blessing\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c3\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 0,\n      \"taint\": 0,\n      \"renown\": 0,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n        \"hook\": \"Resolve the rest aftermath on the 밤 항구의 빚 route\"\n      }\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 이득의 냄새와 위험의 기척이 같은 방향에서 밀려왔다. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.의 여운이 아직 남아 있었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 핵심 능력은 WIS 15/INT 14.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "금단 제안을 받아들인다 · 대가"
+              },
+              {
+                "id": "c2",
+                "label": "대가를 피하고 손을 뗀다 · 균열"
+              },
+              {
+                "id": "c3",
+                "label": "대가를 피하고 손을 뗀다 · 유혹"
+              }
+            ],
+            "action_log": "손에 쥘 것과 버릴 것을 동시에 선택했다. 주인공은 \"대가를 피하고 손을 뗀다 · 유혹\"을 선택했다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.",
+            "result_log": "수치 변화는 제한적이었지만, 서사의 압력은 분명히 증가했다. 얻은 이익은 즉시 기록됐고, 보이지 않는 비용도 함께 누적됐다.",
+            "aftermath_log": "day 1 / turn 1의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다.",
+            "next_hook_log": "후속 이벤트는 대가 청구 시점을 앞당길 가능성이 있다. [회색 항구 오염 분기]",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "corruption",
+              "검은비 변경",
+              "steady-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 이득의 냄새와 위험의 기척이 같은 방향에서 밀려왔다. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.의 여운이 아직 남아 있었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 핵심 능력은 WIS 15/INT 14.\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"금단 제안을 받아들인다 · 대가\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"대가를 피하고 손을 뗀다 · 균열\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"대가를 피하고 손을 뗀다 · 유혹\"\n    }\n  ],\n  \"action_log\": \"손에 쥘 것과 버릴 것을 동시에 선택했다. 주인공은 \\\"대가를 피하고 손을 뗀다 · 유혹\\\"을 선택했다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"수치 변화는 제한적이었지만, 서사의 압력은 분명히 증가했다. 얻은 이익은 즉시 기록됐고, 보이지 않는 비용도 함께 누적됐다.\",\n  \"aftermath_log\": \"day 1 / turn 1의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다.\",\n  \"next_hook_log\": \"후속 이벤트는 대가 청구 시점을 앞당길 가능성이 있다. [회색 항구 오염 분기]\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"corruption\",\n    \"검은비 변경\",\n    \"steady-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 2,
+          "eventId": "evt-t2-015",
+          "choiceId": "trait-wis-4",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "preset": {
+            "id": "story-core-balanced",
+            "name": "스토리 코어 밸런스"
+          },
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only. You are writing reusable game narrative logs, not a standalone novel chapter. Keep the language vivid but production-safe: coherent, causal, and compact enough for turn-by-turn gameplay."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"},{\"id\":\"string\",\"label\":\"string\"},{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n\nStyle tags: korean, dark-fantasy, causal-continuity, playable-json\n\nPreset directives:\n서사 지침: 1) 직전 로그의 결과가 이번 턴의 원인으로 읽히게 작성. 2) 선택지 문구는 서로 다른 리스크/보상을 느낄 수 있도록 분리. 3) 결과 로그에는 수치 변화가 왜 발생했는지 맥락을 넣는다. 4) 묘사는 감각적이되 과도한 수사보다 게임 진행 정보를 우선한다.\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 1,\n    \"turnIndex\": 2\n  },\n  \"world\": {\n    \"day\": 1,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"카일60\",\n    \"gender\": \"male\",\n    \"lineageId\": \"human\",\n    \"classId\": \"fighter\",\n    \"backgroundId\": \"border-conscript\",\n    \"storylineId\": \"academy-prodigy\",\n    \"topAbilities\": [\n      {\n        \"key\": \"WIS\",\n        \"value\": 15\n      },\n      {\n        \"key\": \"INT\",\n        \"value\": 14\n      },\n      {\n        \"key\": \"CON\",\n        \"value\": 13\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-015\",\n    \"tier\": \"T2\",\n    \"category\": \"corruption\",\n    \"title\": \"재문 폐허 오염 분기\",\n    \"text\": \"재문 폐허의 봉인 틈에서 새는 기운이 피부를 데우고 판단을 서서히 흔든다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 금단의 이득은 달콤하지만 오염의 이자는 느리게 쌓인다. 인간 기사 (노예시장에 있었다가 도망침)는 강점 WIS/INT/CON 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"오염을 통제하며 이득만 챙긴다 · 금단\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"오염을 통제하며 이득만 챙긴다 · 대가\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"대가를 피하고 손을 뗀다 · 균열\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"대가를 계산한 뒤 금지안을 받아들인다 · 유혹\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 16\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 3\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 1,\n              \"fear\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"trait-wis-4\",\n        \"label\": \"의식 절차로 오염 비용을 낮춘다 · 금단\",\n        \"effects\": [\n          {\n            \"kind\": \"taint\",\n            \"value\": -2\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": 1\n          },\n          {\n            \"kind\": \"blessing\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"trait-wis-4\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 0,\n      \"taint\": 0,\n      \"renown\": 1,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n        \"hook\": \"Resolve the rest aftermath on the 밤 항구의 빚 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 대가를 피하고 손을 뗀다 · 유혹\",\n        \"hook\": \"Resolve the corruption aftermath on the 밤 항구의 빚 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n        \"hook\": \"Resolve the rest aftermath on the 밤 항구의 빚 route\"\n      }\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 보이지 않는 균열이 장면 전체를 느리게 흔들었다. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.의 여운이 아직 남아 있었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 핵심 능력은 WIS 15/INT 14.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "오염을 통제하며 이득만 챙긴다 · 금단"
+              },
+              {
+                "id": "c2",
+                "label": "오염을 통제하며 이득만 챙긴다 · 대가"
+              },
+              {
+                "id": "c3",
+                "label": "대가를 피하고 손을 뗀다 · 균열"
+              }
+            ],
+            "action_log": "주인공은 대가를 감수할 범위를 먼저 정했다. 주인공은 \"의식 절차로 오염 비용을 낮춘다 · 금단\"을 선택했다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.",
+            "result_log": "변화량은 명성 +1로 정리됐다. 관계의 온도는 미세하게 바뀌었고 그 차이가 장기 분기의 씨앗이 됐다.",
+            "aftermath_log": "day 1 / turn 2의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다.",
+            "next_hook_log": "이번 파장은 가까운 인물의 신뢰와 욕망 수치에 직결된다. [재문 폐허 오염 분기]",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "corruption",
+              "검은비 변경",
+              "steady-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 보이지 않는 균열이 장면 전체를 느리게 흔들었다. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.의 여운이 아직 남아 있었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 핵심 능력은 WIS 15/INT 14.\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"오염을 통제하며 이득만 챙긴다 · 금단\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"오염을 통제하며 이득만 챙긴다 · 대가\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"대가를 피하고 손을 뗀다 · 균열\"\n    }\n  ],\n  \"action_log\": \"주인공은 대가를 감수할 범위를 먼저 정했다. 주인공은 \\\"의식 절차로 오염 비용을 낮춘다 · 금단\\\"을 선택했다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 명성 +1로 정리됐다. 관계의 온도는 미세하게 바뀌었고 그 차이가 장기 분기의 씨앗이 됐다.\",\n  \"aftermath_log\": \"day 1 / turn 2의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다.\",\n  \"next_hook_log\": \"이번 파장은 가까운 인물의 신뢰와 욕망 수치에 직결된다. [재문 폐허 오염 분기]\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"corruption\",\n    \"검은비 변경\",\n    \"steady-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 3,
+          "eventId": "evt-t2-011",
+          "choiceId": "c3",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "preset": {
+            "id": "story-core-balanced",
+            "name": "스토리 코어 밸런스"
+          },
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only. You are writing reusable game narrative logs, not a standalone novel chapter. Keep the language vivid but production-safe: coherent, causal, and compact enough for turn-by-turn gameplay."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"},{\"id\":\"string\",\"label\":\"string\"},{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n\nStyle tags: korean, dark-fantasy, causal-continuity, playable-json\n\nPreset directives:\n서사 지침: 1) 직전 로그의 결과가 이번 턴의 원인으로 읽히게 작성. 2) 선택지 문구는 서로 다른 리스크/보상을 느낄 수 있도록 분리. 3) 결과 로그에는 수치 변화가 왜 발생했는지 맥락을 넣는다. 4) 묘사는 감각적이되 과도한 수사보다 게임 진행 정보를 우선한다.\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 1,\n    \"turnIndex\": 3\n  },\n  \"world\": {\n    \"day\": 1,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"카일60\",\n    \"gender\": \"male\",\n    \"lineageId\": \"human\",\n    \"classId\": \"fighter\",\n    \"backgroundId\": \"border-conscript\",\n    \"storylineId\": \"academy-prodigy\",\n    \"topAbilities\": [\n      {\n        \"key\": \"WIS\",\n        \"value\": 15\n      },\n      {\n        \"key\": \"INT\",\n        \"value\": 14\n      },\n      {\n        \"key\": \"CON\",\n        \"value\": 13\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-011\",\n    \"tier\": \"T2\",\n    \"category\": \"faction\",\n    \"title\": \"검은비 변경 세력 분기\",\n    \"text\": \"검은비 변경의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 한 진영의 손을 잡는 순간 다른 진영의 문이 닫힌다. 인간 기사 (노예시장에 있었다가 도망침)는 강점 WIS/INT/CON 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"한 세력에 힘을 실어준다\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"양측의 균형을 맞춘다\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"양측의 균형을 맞춘다 · 압박\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"양측 모두에 빚을 남겨 다음 판을 연다 · 정치\",\n        \"effects\": [\n          {\n            \"kind\": \"faction\",\n            \"value\": {\n              \"guild\": 1,\n              \"temple\": 1\n            }\n          },\n          {\n            \"kind\": \"infamy\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c3\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 0,\n      \"taint\": 0,\n      \"renown\": 0,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 탐험 경로를 안정적으로 확보했다.\",\n        \"hook\": \"장비 강화 혹은 소비 선택\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 의식 절차로 오염 비용을 낮춘다 · 금단\",\n        \"hook\": \"Resolve the corruption aftermath on the 밤 항구의 빚 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n        \"hook\": \"Resolve the rest aftermath on the 밤 항구의 빚 route\"\n      }\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 표정 하나, 침묵 한 번이 협상의 방향을 바꿀 수 있는 분위기였다. 검은비 변경 | 탐험 경로를 안정적으로 확보했다.의 여운이 아직 남아 있었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 핵심 능력은 WIS 15/INT 14.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "한 세력에 힘을 실어준다"
+              },
+              {
+                "id": "c2",
+                "label": "양측의 균형을 맞춘다"
+              },
+              {
+                "id": "c3",
+                "label": "양측의 균형을 맞춘다 · 압박"
+              }
+            ],
+            "action_log": "주인공은 상대의 반응 속도를 먼저 읽고 말을 꺼냈다. 주인공은 \"양측의 균형을 맞춘다 · 압박\"을 선택했다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.",
+            "result_log": "수치 변화는 제한적이었지만, 서사의 압력은 분명히 증가했다. 합의는 이뤄졌고, 그 대가로 다른 문이 닫히기 시작했다.",
+            "aftermath_log": "day 1 / turn 3의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다.",
+            "next_hook_log": "이번 대화의 여파가 추후 전투/거래 판정에 반영될 수 있다. [검은비 변경 세력 분기]",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "faction",
+              "검은비 변경",
+              "steady-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 표정 하나, 침묵 한 번이 협상의 방향을 바꿀 수 있는 분위기였다. 검은비 변경 | 탐험 경로를 안정적으로 확보했다.의 여운이 아직 남아 있었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 핵심 능력은 WIS 15/INT 14.\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"한 세력에 힘을 실어준다\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"양측의 균형을 맞춘다\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"양측의 균형을 맞춘다 · 압박\"\n    }\n  ],\n  \"action_log\": \"주인공은 상대의 반응 속도를 먼저 읽고 말을 꺼냈다. 주인공은 \\\"양측의 균형을 맞춘다 · 압박\\\"을 선택했다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"수치 변화는 제한적이었지만, 서사의 압력은 분명히 증가했다. 합의는 이뤄졌고, 그 대가로 다른 문이 닫히기 시작했다.\",\n  \"aftermath_log\": \"day 1 / turn 3의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다.\",\n  \"next_hook_log\": \"이번 대화의 여파가 추후 전투/거래 판정에 반영될 수 있다. [검은비 변경 세력 분기]\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"faction\",\n    \"검은비 변경\",\n    \"steady-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 4,
+          "eventId": "evt-t2-026",
+          "choiceId": "c1",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "preset": {
+            "id": "story-core-balanced",
+            "name": "스토리 코어 밸런스"
+          },
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only. You are writing reusable game narrative logs, not a standalone novel chapter. Keep the language vivid but production-safe: coherent, causal, and compact enough for turn-by-turn gameplay."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"},{\"id\":\"string\",\"label\":\"string\"},{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n\nStyle tags: korean, dark-fantasy, causal-continuity, playable-json\n\nPreset directives:\n서사 지침: 1) 직전 로그의 결과가 이번 턴의 원인으로 읽히게 작성. 2) 선택지 문구는 서로 다른 리스크/보상을 느낄 수 있도록 분리. 3) 결과 로그에는 수치 변화가 왜 발생했는지 맥락을 넣는다. 4) 묘사는 감각적이되 과도한 수사보다 게임 진행 정보를 우선한다.\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 1,\n    \"turnIndex\": 4\n  },\n  \"world\": {\n    \"day\": 2,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"카일60\",\n    \"gender\": \"male\",\n    \"lineageId\": \"human\",\n    \"classId\": \"fighter\",\n    \"backgroundId\": \"border-conscript\",\n    \"storylineId\": \"academy-prodigy\",\n    \"topAbilities\": [\n      {\n        \"key\": \"WIS\",\n        \"value\": 15\n      },\n      {\n        \"key\": \"INT\",\n        \"value\": 14\n      },\n      {\n        \"key\": \"CON\",\n        \"value\": 13\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-026\",\n    \"tier\": \"T2\",\n    \"category\": \"relationship\",\n    \"title\": \"검은비 변경 관계 분기\",\n    \"text\": \"검은비 변경의 좁은 회랑에서 시선과 숨이 교차하며, 거래인지 감정인지 경계가 흐려진다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 시선과 침묵의 간격이 관계 축을 빠르게 흔든다. 인간 기사 (노예시장에 있었다가 도망침)는 강점 WIS/INT/CON 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"유혹의 주도권을 잡는다 · 정면\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"감정선을 읽고 조율한다 · 완급조절\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"감정선을 읽고 조율한다\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"시선과 침묵으로 협상 우위를 만든다 · 밀실\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 1\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 2,\n              \"tension\": 1\n            }\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c1\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 14,\n      \"taint\": 0,\n      \"renown\": -1,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.\",\n        \"hook\": \"Resolve the social aftermath on the 밤 항구의 빚 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 양측의 균형을 맞춘다 · 압박\",\n        \"hook\": \"Resolve the faction aftermath on the 밤 항구의 빚 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | 탐험 경로를 안정적으로 확보했다.\",\n        \"hook\": \"장비 강화 혹은 소비 선택\"\n      }\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 신뢰와 경계가 같은 테이블 위에 놓였다. 검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.의 여운이 아직 남아 있었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 핵심 능력은 WIS 15/INT 14.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "유혹의 주도권을 잡는다 · 정면"
+              },
+              {
+                "id": "c2",
+                "label": "감정선을 읽고 조율한다 · 완급조절"
+              },
+              {
+                "id": "c3",
+                "label": "감정선을 읽고 조율한다"
+              }
+            ],
+            "action_log": "이득만 취하지 않고 관계의 지속 가능성까지 계산했다. 주인공은 \"유혹의 주도권을 잡는다 · 정면\"을 선택했다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.",
+            "result_log": "변화량은 골드 +14, 명성 -1로 정리됐다. 장면은 조용히 끝났지만 관계 구조는 이전과 달라졌다.",
+            "aftermath_log": "day 2 / turn 4의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다.",
+            "next_hook_log": "다음 장면은 같은 인물과의 재협상으로 이어질 가능성이 높다. [검은비 변경 관계 분기]",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "relationship",
+              "검은비 변경",
+              "high-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 신뢰와 경계가 같은 테이블 위에 놓였다. 검은비 변경 | 사회적 마찰이 남아 평판이 흔들렸다.의 여운이 아직 남아 있었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 핵심 능력은 WIS 15/INT 14.\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"유혹의 주도권을 잡는다 · 정면\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"감정선을 읽고 조율한다 · 완급조절\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"감정선을 읽고 조율한다\"\n    }\n  ],\n  \"action_log\": \"이득만 취하지 않고 관계의 지속 가능성까지 계산했다. 주인공은 \\\"유혹의 주도권을 잡는다 · 정면\\\"을 선택했다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 골드 +14, 명성 -1로 정리됐다. 장면은 조용히 끝났지만 관계 구조는 이전과 달라졌다.\",\n  \"aftermath_log\": \"day 2 / turn 4의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다.\",\n  \"next_hook_log\": \"다음 장면은 같은 인물과의 재협상으로 이어질 가능성이 높다. [검은비 변경 관계 분기]\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"relationship\",\n    \"검은비 변경\",\n    \"high-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 5,
+          "eventId": "evt-t2-023",
+          "choiceId": "c1",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "preset": {
+            "id": "story-core-balanced",
+            "name": "스토리 코어 밸런스"
+          },
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only. You are writing reusable game narrative logs, not a standalone novel chapter. Keep the language vivid but production-safe: coherent, causal, and compact enough for turn-by-turn gameplay."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"},{\"id\":\"string\",\"label\":\"string\"},{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n\nStyle tags: korean, dark-fantasy, causal-continuity, playable-json\n\nPreset directives:\n서사 지침: 1) 직전 로그의 결과가 이번 턴의 원인으로 읽히게 작성. 2) 선택지 문구는 서로 다른 리스크/보상을 느낄 수 있도록 분리. 3) 결과 로그에는 수치 변화가 왜 발생했는지 맥락을 넣는다. 4) 묘사는 감각적이되 과도한 수사보다 게임 진행 정보를 우선한다.\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 1,\n    \"turnIndex\": 5\n  },\n  \"world\": {\n    \"day\": 2,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"카일60\",\n    \"gender\": \"male\",\n    \"lineageId\": \"human\",\n    \"classId\": \"fighter\",\n    \"backgroundId\": \"border-conscript\",\n    \"storylineId\": \"academy-prodigy\",\n    \"topAbilities\": [\n      {\n        \"key\": \"WIS\",\n        \"value\": 15\n      },\n      {\n        \"key\": \"INT\",\n        \"value\": 14\n      },\n      {\n        \"key\": \"CON\",\n        \"value\": 13\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-023\",\n    \"tier\": \"T2\",\n    \"category\": \"corruption\",\n    \"title\": \"성좌 언덕 오염 분기\",\n    \"text\": \"성좌 언덕의 봉인 틈에서 새는 기운이 피부를 데우고 판단을 서서히 흔든다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 금단의 이득은 달콤하지만 오염의 이자는 느리게 쌓인다. 인간 기사 (노예시장에 있었다가 도망침)는 강점 WIS/INT/CON 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"금단 제안을 받아들인다 · 유혹\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"오염을 통제하며 이득만 챙긴다 · 금단\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"오염을 통제하며 이득만 챙긴다 · 대가\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"대가를 계산한 뒤 금지안을 받아들인다 · 균열\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 16\n          },\n          {\n            \"kind\": \"taint\",\n            \"value\": 3\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"desire\": 1,\n              \"fear\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"trait-wis-4\",\n        \"label\": \"의식 절차로 오염 비용을 낮춘다 · 유혹\",\n        \"effects\": [\n          {\n            \"kind\": \"taint\",\n            \"value\": -2\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": 1\n          },\n          {\n            \"kind\": \"blessing\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c1\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 14,\n      \"taint\": 0,\n      \"renown\": -1,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.\",\n        \"hook\": \"Resolve the rest aftermath on the 밤 항구의 빚 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [후속] 평판 상승의 반작용으로 긴장이 높아졌다.\",\n        \"hook\": \"Resolve the deferred-outcome aftermath on the 밤 항구의 빚 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 유혹의 주도권을 잡는다 · 정면\",\n        \"hook\": \"장비 강화 혹은 소비 선택\"\n      }\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 보이지 않는 균열이 장면 전체를 느리게 흔들었다. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.의 여운이 아직 남아 있었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 핵심 능력은 WIS 15/INT 14.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "금단 제안을 받아들인다 · 유혹"
+              },
+              {
+                "id": "c2",
+                "label": "오염을 통제하며 이득만 챙긴다 · 금단"
+              },
+              {
+                "id": "c3",
+                "label": "오염을 통제하며 이득만 챙긴다 · 대가"
+              }
+            ],
+            "action_log": "주인공은 대가를 감수할 범위를 먼저 정했다. 주인공은 \"금단 제안을 받아들인다 · 유혹\"을 선택했다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.",
+            "result_log": "변화량은 골드 +14, 명성 -1로 정리됐다. 관계의 온도는 미세하게 바뀌었고 그 차이가 장기 분기의 씨앗이 됐다.",
+            "aftermath_log": "day 2 / turn 5의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다.",
+            "next_hook_log": "이번 파장은 가까운 인물의 신뢰와 욕망 수치에 직결된다. [성좌 언덕 오염 분기]",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "corruption",
+              "검은비 변경",
+              "high-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 보이지 않는 균열이 장면 전체를 느리게 흔들었다. 검은비 변경 | 자동 휴식으로 호흡을 가다듬었다.의 여운이 아직 남아 있었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 핵심 능력은 WIS 15/INT 14.\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"금단 제안을 받아들인다 · 유혹\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"오염을 통제하며 이득만 챙긴다 · 금단\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"오염을 통제하며 이득만 챙긴다 · 대가\"\n    }\n  ],\n  \"action_log\": \"주인공은 대가를 감수할 범위를 먼저 정했다. 주인공은 \\\"금단 제안을 받아들인다 · 유혹\\\"을 선택했다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 골드 +14, 명성 -1로 정리됐다. 관계의 온도는 미세하게 바뀌었고 그 차이가 장기 분기의 씨앗이 됐다.\",\n  \"aftermath_log\": \"day 2 / turn 5의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다.\",\n  \"next_hook_log\": \"이번 파장은 가까운 인물의 신뢰와 욕망 수치에 직결된다. [성좌 언덕 오염 분기]\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"corruption\",\n    \"검은비 변경\",\n    \"high-pressure\"\n  ]\n}"
+        },
+        {
+          "turnIndex": 6,
+          "eventId": "evt-t2-003",
+          "choiceId": "c1",
+          "fromCache": false,
+          "model": "mock-narrative-v1",
+          "usage": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "preset": {
+            "id": "story-core-balanced",
+            "name": "스토리 코어 밸런스"
+          },
+          "prompt": [
+            {
+              "role": "system",
+              "content": "You are the Pojet narrative turn writer. Write coherent Korean dark-fantasy RPG text for a 1-log 1-choice flow. Keep continuity strong and produce directly usable JSON only. You are writing reusable game narrative logs, not a standalone novel chapter. Keep the language vivid but production-safe: coherent, causal, and compact enough for turn-by-turn gameplay."
+            },
+            {
+              "role": "user",
+              "content": "Generate one turn from this context JSON.\n\nReturn strict JSON object with exactly these keys:\n{\n  \"before_choice_log\": \"string\",\n  \"options\": [{\"id\":\"string\",\"label\":\"string\"},{\"id\":\"string\",\"label\":\"string\"},{\"id\":\"string\",\"label\":\"string\"}],\n  \"action_log\": \"string\",\n  \"result_log\": \"string\",\n  \"aftermath_log\": \"string\",\n  \"next_hook_log\": \"string\",\n  \"memory_tags\": [\"tag-1\",\"tag-2\",\"tag-3\"]\n}\nRules:\n- Korean output.\n- Keep each log 2~4 sentences.\n- Avoid placeholders like ???.\n- Keep causal continuity from recentLogs.\n- action_log must reflect selectedChoiceId outcome.\n\nStyle tags: korean, dark-fantasy, causal-continuity, playable-json\n\nPreset directives:\n서사 지침: 1) 직전 로그의 결과가 이번 턴의 원인으로 읽히게 작성. 2) 선택지 문구는 서로 다른 리스크/보상을 느낄 수 있도록 분리. 3) 결과 로그에는 수치 변화가 왜 발생했는지 맥락을 넣는다. 4) 묘사는 감각적이되 과도한 수사보다 게임 진행 정보를 우선한다.\n\nContext JSON:\n\n{\n  \"run\": {\n    \"runIndex\": 1,\n    \"turnIndex\": 6\n  },\n  \"world\": {\n    \"day\": 2,\n    \"act\": 1,\n    \"locationId\": \"검은비 변경\"\n  },\n  \"player\": {\n    \"name\": \"카일60\",\n    \"gender\": \"male\",\n    \"lineageId\": \"human\",\n    \"classId\": \"fighter\",\n    \"backgroundId\": \"border-conscript\",\n    \"storylineId\": \"academy-prodigy\",\n    \"topAbilities\": [\n      {\n        \"key\": \"WIS\",\n        \"value\": 15\n      },\n      {\n        \"key\": \"INT\",\n        \"value\": 14\n      },\n      {\n        \"key\": \"CON\",\n        \"value\": 13\n      }\n    ],\n    \"sexualStats\": {\n      \"experienceFactor\": 0,\n      \"lustfulness\": 0,\n      \"arousal\": 0,\n      \"auraOfLust\": 0\n    }\n  },\n  \"event\": {\n    \"id\": \"evt-t2-003\",\n    \"tier\": \"T2\",\n    \"category\": \"faction\",\n    \"title\": \"성좌 언덕 세력 분기\",\n    \"text\": \"성좌 언덕의 밀실 회동에서 각 세력 대표가 서로 다른 후원 조건을 밀어 넣는다. 지금 개입하면 이득과 관계를 함께 건드릴 수 있지만, 지연하면 주도권을 잃기 쉽다. 한 진영의 손을 잡는 순간 다른 진영의 문이 닫힌다. 인간 기사 (노예시장에 있었다가 도망침)는 강점 WIS/INT/CON 중심으로 이번 협상 방식의 결을 만든다. 중형 분기다. 미응답 시 자동 처리 규칙이 작동할 수 있다.\",\n    \"choices\": [\n      {\n        \"id\": \"c1\",\n        \"label\": \"양측의 균형을 맞춘다\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_gold\",\n            \"value\": 14\n          },\n          {\n            \"kind\": \"renown\",\n            \"value\": -1\n          }\n        ]\n      },\n      {\n        \"id\": \"c2\",\n        \"label\": \"양측의 균형을 맞춘다 · 압박 · 연합 탐색\",\n        \"effects\": [\n          {\n            \"kind\": \"renown\",\n            \"value\": 2\n          },\n          {\n            \"kind\": \"relation\",\n            \"value\": {\n              \"trust\": 1\n            }\n          }\n        ]\n      },\n      {\n        \"id\": \"c3\",\n        \"label\": \"공개 지지를 보류한다 · 정치\",\n        \"effects\": [\n          {\n            \"kind\": \"gain_xp\",\n            \"value\": 10\n          },\n          {\n            \"kind\": \"fatigue\",\n            \"value\": 2\n          }\n        ]\n      },\n      {\n        \"id\": \"bonus-3\",\n        \"label\": \"양측 모두에 빚을 남겨 다음 판을 연다 · 세력\",\n        \"effects\": [\n          {\n            \"kind\": \"faction\",\n            \"value\": {\n              \"guild\": 1,\n              \"temple\": 1\n            }\n          },\n          {\n            \"kind\": \"infamy\",\n            \"value\": 1\n          }\n        ]\n      }\n    ],\n    \"selectedChoiceId\": \"c1\"\n  },\n  \"deltas\": {\n    \"relation\": {\n      \"trust\": 0,\n      \"desire\": 0,\n      \"tension\": 0,\n      \"fear\": 0\n    },\n    \"resources\": {\n      \"gold\": 14,\n      \"taint\": 0,\n      \"renown\": -1,\n      \"infamy\": 0,\n      \"fatigue\": 0\n    }\n  },\n  \"continuity\": {\n    \"recentLogs\": [\n      {\n        \"feedLine\": \"검은비 변경 | 탐험 경로를 안정적으로 확보했다.\",\n        \"hook\": \"Resolve the exploration aftermath on the 밤 항구의 빚 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [후속] 짧은 이득 뒤에 피로와 소문이 따라붙었다.\",\n        \"hook\": \"Resolve the deferred-outcome aftermath on the 밤 항구의 빚 route\"\n      },\n      {\n        \"feedLine\": \"검은비 변경 | [선택] 금단 제안을 받아들인다 · 유혹\",\n        \"hook\": \"장비 강화 혹은 소비 선택\"\n      }\n    ]\n  }\n}"
+            }
+          ],
+          "output": {
+            "before_choice_log": "검은비 변경에서는 표정 하나, 침묵 한 번이 협상의 방향을 바꿀 수 있는 분위기였다. 검은비 변경 | 탐험 경로를 안정적으로 확보했다.의 여운이 아직 남아 있었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 핵심 능력은 WIS 15/INT 14.",
+            "options": [
+              {
+                "id": "c1",
+                "label": "양측의 균형을 맞춘다"
+              },
+              {
+                "id": "c2",
+                "label": "양측의 균형을 맞춘다 · 압박 · 연합 탐색"
+              },
+              {
+                "id": "c3",
+                "label": "공개 지지를 보류한다 · 정치"
+              }
+            ],
+            "action_log": "주인공은 상대의 반응 속도를 먼저 읽고 말을 꺼냈다. 주인공은 \"양측의 균형을 맞춘다\"을 선택했다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.",
+            "result_log": "변화량은 골드 +14, 명성 -1로 정리됐다. 합의는 이뤄졌고, 그 대가로 다른 문이 닫히기 시작했다.",
+            "aftermath_log": "day 2 / turn 6의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다.",
+            "next_hook_log": "이번 대화의 여파가 추후 전투/거래 판정에 반영될 수 있다. [성좌 언덕 세력 분기]",
+            "memory_tags": [
+              "continuity",
+              "choice-impact",
+              "faction",
+              "검은비 변경",
+              "high-pressure"
+            ]
+          },
+          "raw": "{\n  \"before_choice_log\": \"검은비 변경에서는 표정 하나, 침묵 한 번이 협상의 방향을 바꿀 수 있는 분위기였다. 검은비 변경 | 탐험 경로를 안정적으로 확보했다.의 여운이 아직 남아 있었다. 주인공의 프로필상 직업은 fighter, 배경은 border-conscript, 핵심 능력은 WIS 15/INT 14.\",\n  \"options\": [\n    {\n      \"id\": \"c1\",\n      \"label\": \"양측의 균형을 맞춘다\"\n    },\n    {\n      \"id\": \"c2\",\n      \"label\": \"양측의 균형을 맞춘다 · 압박 · 연합 탐색\"\n    },\n    {\n      \"id\": \"c3\",\n      \"label\": \"공개 지지를 보류한다 · 정치\"\n    }\n  ],\n  \"action_log\": \"주인공은 상대의 반응 속도를 먼저 읽고 말을 꺼냈다. 주인공은 \\\"양측의 균형을 맞춘다\\\"을 선택했다. 선택 직후 주변 인물들은 서로 다른 해석으로 반응하기 시작했다.\",\n  \"result_log\": \"변화량은 골드 +14, 명성 -1로 정리됐다. 합의는 이뤄졌고, 그 대가로 다른 문이 닫히기 시작했다.\",\n  \"aftermath_log\": \"day 2 / turn 6의 기록은 인과를 유지한 채 다음 분기로 넘어간다. 이번 텍스트는 후속 이벤트에서 재호출 가능한 단서로 저장된다.\",\n  \"next_hook_log\": \"이번 대화의 여파가 추후 전투/거래 판정에 반영될 수 있다. [성좌 언덕 세력 분기]\",\n  \"memory_tags\": [\n    \"continuity\",\n    \"choice-impact\",\n    \"faction\",\n    \"검은비 변경\",\n    \"high-pressure\"\n  ]\n}"
+        }
+      ]
+    }
+  ]
+}

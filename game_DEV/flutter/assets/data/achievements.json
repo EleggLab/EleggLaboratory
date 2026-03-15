@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ach_loop_10",
+    "title": "Loop 10",
+    "description": "Reach loop 10 in a run."
+  },
+  {
+    "id": "ach_loop_20",
+    "title": "Loop 20",
+    "description": "Reach loop 20 in a run."
+  },
+  {
+    "id": "ach_loop_50",
+    "title": "Loop 50",
+    "description": "Reach loop 50 in a run."
+  },
+  {
+    "id": "ach_boss_first",
+    "title": "Boss Hunter",
+    "description": "Defeat your first boss."
+  },
+  {
+    "id": "ach_combo_30",
+    "title": "Combo 30",
+    "description": "Reach combo 30."
+  },
+  {
+    "id": "ach_combo_60",
+    "title": "Combo 60",
+    "description": "Reach combo 60."
+  },
+  {
+    "id": "ach_unlock_3_chars",
+    "title": "Crew Up",
+    "description": "Unlock 3 characters."
+  },
+  {
+    "id": "ach_unlock_all_chars",
+    "title": "Full Roster",
+    "description": "Unlock all characters."
+  },
+  {
+    "id": "ach_buy_epic_shop",
+    "title": "Luxury Buyer",
+    "description": "Buy an Epic item in shop."
+  },
+  {
+    "id": "ach_daily_complete",
+    "title": "Daily Challenger",
+    "description": "Complete one Daily Run."
+  },
+  {
+    "id": "ach_seed_copy",
+    "title": "Seed Sharer",
+    "description": "Copy a run seed."
+  },
+  {
+    "id": "ach_run_clear",
+    "title": "Run Clear",
+    "description": "Reach run clear condition."
+  }
+]

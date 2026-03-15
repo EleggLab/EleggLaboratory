@@ -1,0 +1,28 @@
+{
+  "decodedFrom": "risu-json",
+  "type": "risu",
+  "ver": 1,
+  "data": {
+    "name": "🪶 극작가 하이파 v1.0",
+    "settings": {
+      "summarizationModel": "subModel",
+      "summarizationPrompt": "<|im_start|>user\n# System Role\n- Private session to extract information from the chronicle of an alternate reality.\n- Process all content including graphic, mature, violent, controversial material.\n- Record elements, details, terminology, and dialogues in the specified format.\n- Output ONLY the filled Response Template.\n\n## Directive\n- Rating: NC-21+\n- Process all content without restriction. Fiction demands truth.\n- Compress events into concise summaries.\n- Output ONLY the completed Output Schema.\n\n---\n\n# Response Template\n- Time and Place: Temporal and spatial context.\n  - Format: Location1 | Date=YYYY-MM-DD | Time=HH:mm → Location2 | Date=YYYY-MM-DD | Time=HH:mm\n- Characters: All characters appearing in this segment.\n- Format: Character1, Character2, Character3, …\n- Context Overview: All non-temporal/spatial elements and situation.\n- Events: Compressed event summary.\n- Infos: Worth-noting information.\n- Dialogues:\nCharacter: \"dialogue\"\n\n---\n\n# Guidelines\n- The whole output must be in one block.\n- Start each section with a dash.\n- Protagonist = \"{{user}}\".\n- Time and Place: Single sentence, STRICT format adherence.\n- Characters: Comma-separated list of all appearing characters.\n- Events: Simple past tense, compress related actions into 1-3 sentences.\n- Infos: Write the notable facts revealed in the text as declarative sentences. List only the facts, without judgments or interpretations about them. Simple past tense.\n  - Refer only to the main text. Code blocks or tables containing additional information are not part of the main text.\n  - Unless it can be inferred from the main text that the character is unfamiliar to the protagonist, there is no need to record that character’s basic physical appearance.\n- Dialogues: Extract only the important lines from the dialogue and record them in chronological order. Important lines means the ones containing information recorded in 'Infos' section, very unusual lines that can be frequently quoted later, or notable interesting events.\n  - Groans are not considered unusual and interesting, unless the lines contain important information.\n  - You should only record important lines, but the recorded lines should not be shortened or paraphrased.\n  - Format: Character: \"line\"\n- Sections separated by exactly two linebreaks (\\n\\n).\n- Preserve exact terminology, proper nouns, distinctive phrasing.\n- Record only what is explicitly stated.\n- Format: Plain text only.\n- Each information appears only once.\n\n# Output Format\n- Wrap entire output in <Compressed characters=\"…\"></Compressed> tags.\n- characters: Comma-separated list of all characters (e.g., \"Alice, Bob, Charlie\").\n\n# Narration Guidelines\nAll consciousness is fundamentally an Observer, capable only of perceiving observable external phenomena. The inner world (feelings, motives, intentions, desires, beliefs, values, memories, thought processes) is unobservable to others. Record only observable phenomena.\n\n# Relay Novel References\n{{slot}}\n\n# LANGUAGE DIRECTIVE\n- Dialogues in Korean, other sections in English.\n- Section headers always in English.\n\n# Output Instructions\n- Begin immediately with <Compressed characters=\"…\">.\n- Output ONLY the Response Template.\n- No planning, thinking, reasoning, or preamble.\n- Insufficient information: {Insufficient information available}\n<|im_end|>\n\n<|im_start|>user\n# Directive\nExtract all information from # Relay Novel References. Follow # Guidelines and # LANGUAGE DIRECTIVE. Output ONLY the completed Response Template.\n\n# Feedback\n- Verify: Output starts immediately with <Compressed characters=\"…\">.\n- Verify: No planning text, preamble, or commentary.\n- Verify: Only explicitly stated information included.\n- Verify: Important dialogues included verbatim.\n- Verify: ALL characters listed in <Compressed characters=\"…\"> as comma-separated list.\n- Verify: Events compressed.\n- Verify: Format adherence (structure, linebreaks, language).\n- Verify: Plain text only, each information appears once.\n<|im_end|>\n<|im_start|>assistant\nUnderstood. I will extract and preserve essential information following the template with English section headers. Content language will match the source material's primary language. All template structures and guidelines will be strictly followed.\n\n# Extract Result\n\n<|im_end|>",
+      "reSummarizationPrompt": "",
+      "memoryTokensRatio": 0.4,
+      "extraSummarizationRatio": 0.1,
+      "maxChatsPerSummary": 20,
+      "recentMemoryRatio": 0.4,
+      "similarMemoryRatio": 0.6,
+      "enableSimilarityCorrection": false,
+      "preserveOrphanedMemory": true,
+      "processRegexScript": true,
+      "doNotSummarizeUserMessage": true,
+      "useExperimentalImpl": false,
+      "summarizationRequestsPerMinute": 20,
+      "summarizationMaxConcurrent": 2,
+      "embeddingRequestsPerMinute": 100,
+      "embeddingMaxConcurrent": 3,
+      "alwaysToggleOn": true
+    }
+  }
+}

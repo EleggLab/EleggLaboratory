@@ -1,0 +1,1207 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-02-18T17:40:56Z",
+  "baseTimezone": "Asia/Seoul",
+  "games": [
+    {
+      "gameKey": "aether-gazer",
+      "displayName": "Aether Gazer",
+      "aliases": [
+        "Aether Gazer"
+      ],
+      "resetTimeKst": "21:00",
+      "resetMinutesKst": 1260,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/aether-gazer",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "afk-arena",
+      "displayName": "AFK Arena",
+      "aliases": [
+        "AFK Arena"
+      ],
+      "resetTimeKst": "09:00",
+      "resetMinutesKst": 540,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/afk-arena",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "afk-journey",
+      "displayName": "AFK Journey",
+      "aliases": [
+        "AFK Journey"
+      ],
+      "resetTimeKst": "09:00",
+      "resetMinutesKst": 540,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/afk-journey",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "anchor-panic",
+      "displayName": "Anchor Panic",
+      "aliases": [
+        "Anchor Panic"
+      ],
+      "resetTimeKst": null,
+      "resetMinutesKst": null,
+      "confidence": "unknown",
+      "sourceUrl": "https://gachalist.com/anchor-panic",
+      "sourceNote": "Reset time listed as Unknown in source card.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "arknights",
+      "displayName": "Arknights",
+      "aliases": [
+        "Arknights"
+      ],
+      "resetTimeKst": "20:00",
+      "resetMinutesKst": 1200,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/arknights",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "arknights-endfield",
+      "displayName": "Arknights: Endfield",
+      "aliases": [
+        "Arknights Endfield",
+        "Arknights: Endfield"
+      ],
+      "resetTimeKst": "18:00",
+      "resetMinutesKst": 1080,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/arknights-endfield",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "ash-echoes",
+      "displayName": "Ash Echoes",
+      "aliases": [
+        "Ash Echoes"
+      ],
+      "resetTimeKst": "18:00",
+      "resetMinutesKst": 1080,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/ash-echoes",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "astra-knights-of-veda",
+      "displayName": "ASTRA: Knights of Veda",
+      "aliases": [
+        "ASTRA Knights of Veda",
+        "ASTRA: Knights of Veda"
+      ],
+      "resetTimeKst": "15:00",
+      "resetMinutesKst": 900,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/astra-knights-of-veda",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "atelier-resleriana",
+      "displayName": "Atelier Resleriana",
+      "aliases": [
+        "Atelier Resleriana"
+      ],
+      "resetTimeKst": "12:00",
+      "resetMinutesKst": 720,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/atelier-resleriana",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "azur-lane",
+      "displayName": "Azur Lane",
+      "aliases": [
+        "Azur Lane",
+        "벽람항로",
+        "아주르레인"
+      ],
+      "resetTimeKst": "16:00",
+      "resetMinutesKst": 960,
+      "confidence": "official",
+      "sourceUrl": "https://gachalist.com/daily-resets",
+      "sourceNote": "Global reset pinned to 16:00 KST override.",
+      "packageNameHints": [
+        "com.YoStarEN.AzurLane"
+      ]
+    },
+    {
+      "gameKey": "black-beacon",
+      "displayName": "Black Beacon",
+      "aliases": [
+        "Black Beacon"
+      ],
+      "resetTimeKst": "13:00",
+      "resetMinutesKst": 780,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/black-beacon",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "blue-archive",
+      "displayName": "Blue Archive",
+      "aliases": [
+        "Blue Archive"
+      ],
+      "resetTimeKst": "04:00",
+      "resetMinutesKst": 240,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/blue-archive",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "brown-dust-2",
+      "displayName": "Brown Dust 2",
+      "aliases": [
+        "Brown Dust 2"
+      ],
+      "resetTimeKst": "09:00",
+      "resetMinutesKst": 540,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/brown-dust-2",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "chaos-zero-nightmare",
+      "displayName": "Chaos Zero Nightmare",
+      "aliases": [
+        "Chaos Zero Nightmare"
+      ],
+      "resetTimeKst": "03:00",
+      "resetMinutesKst": 180,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/chaos-zero-nightmare",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "cookierun-kingdom",
+      "displayName": "CookieRun: Kingdom",
+      "aliases": [
+        "CookieRun Kingdom",
+        "CookieRun: Kingdom"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/cookierun-kingdom",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "counterside",
+      "displayName": "CounterSide",
+      "aliases": [
+        "CounterSide"
+      ],
+      "resetTimeKst": "04:00",
+      "resetMinutesKst": 240,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/counterside",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "dislyte",
+      "displayName": "Dislyte",
+      "aliases": [
+        "Dislyte"
+      ],
+      "resetTimeKst": "09:00",
+      "resetMinutesKst": 540,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/dislyte",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "dragon-blaze",
+      "displayName": "Dragon Blaze",
+      "aliases": [
+        "Dragon Blaze"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/dragon-blaze",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "dragon-traveler",
+      "displayName": "Dragon Traveler",
+      "aliases": [
+        "Dragon Traveler"
+      ],
+      "resetTimeKst": "20:00",
+      "resetMinutesKst": 1200,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/dragon-traveler",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "ete-chronicle",
+      "displayName": "E.T.E. Chronicle",
+      "aliases": [
+        "E T E Chronicle",
+        "E.T.E. Chronicle"
+      ],
+      "resetTimeKst": null,
+      "resetMinutesKst": null,
+      "confidence": "unknown",
+      "sourceUrl": "https://gachalist.com/ete-chronicle",
+      "sourceNote": "Reset time listed as Unknown in source card.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "echocalypse",
+      "displayName": "Echocalypse",
+      "aliases": [
+        "Echocalypse"
+      ],
+      "resetTimeKst": null,
+      "resetMinutesKst": null,
+      "confidence": "unknown",
+      "sourceUrl": "https://gachalist.com/echocalypse",
+      "sourceNote": "Reset time listed as Unknown in source card.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "elpis-fallen-star",
+      "displayName": "Elpis: Fallen Star",
+      "aliases": [
+        "Elpis Fallen Star",
+        "Elpis: Fallen Star"
+      ],
+      "resetTimeKst": null,
+      "resetMinutesKst": null,
+      "confidence": "unknown",
+      "sourceUrl": "https://gachalist.com/elpis-fallen-star",
+      "sourceNote": "Reset time listed as Unknown in source card.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "enigma-of-sepia",
+      "displayName": "Enigma of Sépia",
+      "aliases": [
+        "Enigma of S pia",
+        "Enigma of Sépia"
+      ],
+      "resetTimeKst": "01:00",
+      "resetMinutesKst": 60,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/enigma-of-sepia",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "epic-seven",
+      "displayName": "Epic Seven",
+      "aliases": [
+        "Epic Seven"
+      ],
+      "resetTimeKst": "03:00",
+      "resetMinutesKst": 180,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/epic-seven",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "etheria-restart",
+      "displayName": "Etheria: Restart",
+      "aliases": [
+        "Etheria Restart",
+        "Etheria: Restart"
+      ],
+      "resetTimeKst": "18:00",
+      "resetMinutesKst": 1080,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/etheria-restart",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "eversoul",
+      "displayName": "Eversoul",
+      "aliases": [
+        "Eversoul"
+      ],
+      "resetTimeKst": "09:00",
+      "resetMinutesKst": 540,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/eversoul",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "fate-grand-order",
+      "displayName": "Fate/Grand Order",
+      "aliases": [
+        "Fate Grand Order",
+        "Fate/Grand Order"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/fate-grand-order",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "fellow-moon",
+      "displayName": "Fellow Moon",
+      "aliases": [
+        "Fellow Moon"
+      ],
+      "resetTimeKst": null,
+      "resetMinutesKst": null,
+      "confidence": "unknown",
+      "sourceUrl": "https://gachalist.com/fellow-moon",
+      "sourceNote": "Reset time listed as Unknown in source card.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "figure-fantasy",
+      "displayName": "Figure Fantasy",
+      "aliases": [
+        "Figure Fantasy"
+      ],
+      "resetTimeKst": null,
+      "resetMinutesKst": null,
+      "confidence": "unknown",
+      "sourceUrl": "https://gachalist.com/figure-fantasy",
+      "sourceNote": "Reset time listed as Unknown in source card.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "final-fantasy-brave-exvius",
+      "displayName": "Final Fantasy Brave Exvius",
+      "aliases": [
+        "Final Fantasy Brave Exvius"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/final-fantasy-brave-exvius",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "final-fantasy-record-keeper",
+      "displayName": "Final Fantasy Record Keeper",
+      "aliases": [
+        "Final Fantasy Record Keeper"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/final-fantasy-record-keeper",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "final-fantasy-vii-ever-crisis",
+      "displayName": "Final Fantasy VII Ever Crisis",
+      "aliases": [
+        "Final Fantasy VII Ever Crisis"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/final-fantasy-vii-ever-crisis",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "fire-emblem-heroes",
+      "displayName": "Fire Emblem Heroes",
+      "aliases": [
+        "Fire Emblem Heroes"
+      ],
+      "resetTimeKst": "16:00",
+      "resetMinutesKst": 960,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/fire-emblem-heroes",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "genshin-impact",
+      "displayName": "Genshin Impact",
+      "aliases": [
+        "Genshin Impact"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/genshin-impact",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "girls-frontline",
+      "displayName": "Girls' Frontline",
+      "aliases": [
+        "Girls Frontline",
+        "Girls' Frontline"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/girls-frontline",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "girls-frontline-2-exilium",
+      "displayName": "Girls' Frontline 2: Exilium",
+      "aliases": [
+        "Girls Frontline 2 Exilium",
+        "Girls' Frontline 2: Exilium"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/girls-frontline-2-exilium",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "nikke",
+      "displayName": "Goddess of Victory: NIKKE",
+      "aliases": [
+        "Goddess of Victory NIKKE",
+        "Goddess of Victory: NIKKE"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/nikke",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "granblue-fantasy",
+      "displayName": "Granblue Fantasy",
+      "aliases": [
+        "Granblue Fantasy"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/granblue-fantasy",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "grandchase",
+      "displayName": "GrandChase",
+      "aliases": [
+        "GrandChase"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/grandchase",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "guardian-tales",
+      "displayName": "Guardian Tales",
+      "aliases": [
+        "Guardian Tales"
+      ],
+      "resetTimeKst": "01:00",
+      "resetMinutesKst": 60,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/guardian-tales",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "gui-long-chao",
+      "displayName": "Gui Long Chao",
+      "aliases": [
+        "Gui Long Chao"
+      ],
+      "resetTimeKst": null,
+      "resetMinutesKst": null,
+      "confidence": "unknown",
+      "sourceUrl": "https://gachalist.com/gui-long-chao",
+      "sourceNote": "Reset time listed as Unknown in source card.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "heaven-burns-red",
+      "displayName": "Heaven Burns Red",
+      "aliases": [
+        "Heaven Burns Red"
+      ],
+      "resetTimeKst": "04:00",
+      "resetMinutesKst": 240,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/heaven-burns-red",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "higan-eruthyll",
+      "displayName": "Higan: Eruthyll",
+      "aliases": [
+        "Higan Eruthyll",
+        "Higan: Eruthyll"
+      ],
+      "resetTimeKst": "22:00",
+      "resetMinutesKst": 1320,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/higan-eruthyll",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "honkai-impact-3rd",
+      "displayName": "Honkai Impact 3rd",
+      "aliases": [
+        "Honkai Impact 3rd"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/honkai-impact-3rd",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "honkai-star-rail",
+      "displayName": "Honkai: Star Rail",
+      "aliases": [
+        "Honkai Star Rail",
+        "Honkai: Star Rail"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/honkai-star-rail",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "horizon-walker",
+      "displayName": "Horizon Walker",
+      "aliases": [
+        "Horizon Walker"
+      ],
+      "resetTimeKst": "10:00",
+      "resetMinutesKst": 600,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/horizon-walker",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "infinity-nikki",
+      "displayName": "Infinity Nikki",
+      "aliases": [
+        "Infinity Nikki"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/infinity-nikki",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "iron-saga",
+      "displayName": "Iron Saga",
+      "aliases": [
+        "Iron Saga"
+      ],
+      "resetTimeKst": null,
+      "resetMinutesKst": null,
+      "confidence": "unknown",
+      "sourceUrl": "https://gachalist.com/iron-saga",
+      "sourceNote": "Reset time listed as Unknown in source card.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "langrisser",
+      "displayName": "Langrisser",
+      "aliases": [
+        "Langrisser"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/langrisser",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "last-cloudia",
+      "displayName": "Last Cloudia",
+      "aliases": [
+        "Last Cloudia"
+      ],
+      "resetTimeKst": "04:00",
+      "resetMinutesKst": 240,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/last-cloudia",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "last-origin",
+      "displayName": "Last Origin",
+      "aliases": [
+        "Last Origin"
+      ],
+      "resetTimeKst": "04:00",
+      "resetMinutesKst": 240,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/last-origin",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "limbus-company",
+      "displayName": "Limbus Company",
+      "aliases": [
+        "Limbus Company"
+      ],
+      "resetTimeKst": "06:00",
+      "resetMinutesKst": 360,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/limbus-company",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "lord-of-heroes",
+      "displayName": "Lord of Heroes",
+      "aliases": [
+        "Lord of Heroes"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/lord-of-heroes",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "lost-sword",
+      "displayName": "Lost Sword",
+      "aliases": [
+        "Lost Sword"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/lost-sword",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "love-and-deepspace",
+      "displayName": "Love and Deepspace",
+      "aliases": [
+        "Love and Deepspace"
+      ],
+      "resetTimeKst": "06:00",
+      "resetMinutesKst": 360,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/love-and-deepspace",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "madoka-magica-magia-exedra",
+      "displayName": "Madoka Magica: Magia Exedra",
+      "aliases": [
+        "Madoka Magica Magia Exedra",
+        "Madoka Magica: Magia Exedra"
+      ],
+      "resetTimeKst": "04:00",
+      "resetMinutesKst": 240,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/madoka-magica-magia-exedra",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "mecharashi",
+      "displayName": "Mecharashi",
+      "aliases": [
+        "Mecharashi"
+      ],
+      "resetTimeKst": null,
+      "resetMinutesKst": null,
+      "confidence": "unknown",
+      "sourceUrl": "https://gachalist.com/mecharashi",
+      "sourceNote": "Reset time listed as Unknown in source card.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "mementomori",
+      "displayName": "MementoMori",
+      "aliases": [
+        "MementoMori"
+      ],
+      "resetTimeKst": "04:00",
+      "resetMinutesKst": 240,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/mementomori",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "mobile-legends-adventure",
+      "displayName": "Mobile Legends: Adventure",
+      "aliases": [
+        "Mobile Legends Adventure",
+        "Mobile Legends: Adventure"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/mobile-legends-adventure",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "morimens",
+      "displayName": "Morimens",
+      "aliases": [
+        "Morimens"
+      ],
+      "resetTimeKst": "10:00",
+      "resetMinutesKst": 600,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/morimens",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "neural-cloud",
+      "displayName": "Neural Cloud",
+      "aliases": [
+        "Neural Cloud"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/neural-cloud",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "octopath-traveler-champions-of-the-continent",
+      "displayName": "Octopath Traveler: Champions of the Continent",
+      "aliases": [
+        "Octopath Traveler Champions of the Continent",
+        "Octopath Traveler: Champions of the Continent"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/octopath-traveler-champions-of-the-continent",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "onmyoji",
+      "displayName": "Onmyoji",
+      "aliases": [
+        "Onmyoji"
+      ],
+      "resetTimeKst": null,
+      "resetMinutesKst": null,
+      "confidence": "unknown",
+      "sourceUrl": "https://gachalist.com/onmyoji",
+      "sourceNote": "Reset time listed as Unknown in source card.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "outerplane",
+      "displayName": "Outerplane",
+      "aliases": [
+        "Outerplane"
+      ],
+      "resetTimeKst": null,
+      "resetMinutesKst": null,
+      "confidence": "unknown",
+      "sourceUrl": "https://gachalist.com/outerplane",
+      "sourceNote": "Reset time listed as Unknown in source card.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "persona-5-the-phantom-x",
+      "displayName": "Persona 5: The Phantom X",
+      "aliases": [
+        "Persona 5 The Phantom X",
+        "Persona 5: The Phantom X"
+      ],
+      "resetTimeKst": "09:00",
+      "resetMinutesKst": 540,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/persona-5-the-phantom-x",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "punishing-gray-raven",
+      "displayName": "Punishing: Gray Raven",
+      "aliases": [
+        "Punishing Gray Raven",
+        "Punishing: Gray Raven"
+      ],
+      "resetTimeKst": "04:00",
+      "resetMinutesKst": 240,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/punishing-gray-raven",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "racing-master",
+      "displayName": "Racing Master",
+      "aliases": [
+        "Racing Master"
+      ],
+      "resetTimeKst": null,
+      "resetMinutesKst": null,
+      "confidence": "unknown",
+      "sourceUrl": "https://gachalist.com/racing-master",
+      "sourceNote": "Reset time listed as Unknown in source card.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "rememento-white-shadow",
+      "displayName": "Rememento - White Shadow",
+      "aliases": [
+        "Rememento - White Shadow",
+        "Rememento White Shadow"
+      ],
+      "resetTimeKst": null,
+      "resetMinutesKst": null,
+      "confidence": "unknown",
+      "sourceUrl": "https://gachalist.com/rememento-white-shadow",
+      "sourceNote": "Reset time listed as Unknown in source card.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "resonance-solstice",
+      "displayName": "Resonance Solstice",
+      "aliases": [
+        "Resonance Solstice"
+      ],
+      "resetTimeKst": "14:00",
+      "resetMinutesKst": 840,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/resonance-solstice",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "reverse-1999",
+      "displayName": "Reverse: 1999",
+      "aliases": [
+        "Reverse 1999",
+        "Reverse: 1999"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/reverse-1999",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "romancing-saga-re-universe",
+      "displayName": "Romancing SaGa Re;univerSe",
+      "aliases": [
+        "Romancing SaGa Re univerSe",
+        "Romancing SaGa Re;univerSe"
+      ],
+      "resetTimeKst": "04:00",
+      "resetMinutesKst": 240,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/romancing-saga-re-universe",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "sdorica",
+      "displayName": "Sdorica",
+      "aliases": [
+        "Sdorica"
+      ],
+      "resetTimeKst": "06:00",
+      "resetMinutesKst": 360,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/sdorica",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "shin-megami-tensei-liberation-dx2",
+      "displayName": "Shin Megami Tensei Liberation D×２",
+      "aliases": [
+        "Shin Megami Tensei Liberation D",
+        "Shin Megami Tensei Liberation D×２"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/shin-megami-tensei-liberation-dx2",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "silver-and-blood",
+      "displayName": "Silver and Blood",
+      "aliases": [
+        "Silver and Blood"
+      ],
+      "resetTimeKst": "21:00",
+      "resetMinutesKst": 1260,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/silver-and-blood",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "snowbreak",
+      "displayName": "Snowbreak",
+      "aliases": [
+        "Snowbreak"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/snowbreak",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "stella-sora",
+      "displayName": "Stella Sora",
+      "aliases": [
+        "Stella Sora"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/stella-sora",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "summoners-war",
+      "displayName": "Summoners War",
+      "aliases": [
+        "Summoners War"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/summoners-war",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "sword-master-story",
+      "displayName": "Sword Master Story",
+      "aliases": [
+        "Sword Master Story"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/sword-master-story",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "sword-of-convallaria",
+      "displayName": "Sword of Convallaria",
+      "aliases": [
+        "Sword of Convallaria"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/sword-of-convallaria",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "the-seven-deadly-sins-grand-cross",
+      "displayName": "The Seven Deadly Sins: Grand Cross",
+      "aliases": [
+        "The Seven Deadly Sins Grand Cross",
+        "The Seven Deadly Sins: Grand Cross"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/the-seven-deadly-sins-grand-cross",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "touhou-lostword",
+      "displayName": "Touhou LostWord",
+      "aliases": [
+        "Touhou LostWord"
+      ],
+      "resetTimeKst": "00:00",
+      "resetMinutesKst": 0,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/touhou-lostword",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "tower-of-fantasy",
+      "displayName": "Tower of Fantasy",
+      "aliases": [
+        "Tower of Fantasy"
+      ],
+      "resetTimeKst": "19:00",
+      "resetMinutesKst": 1140,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/tower-of-fantasy",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "tribe-nine",
+      "displayName": "TRIBE NINE",
+      "aliases": [
+        "TRIBE NINE"
+      ],
+      "resetTimeKst": "15:00",
+      "resetMinutesKst": 900,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/tribe-nine",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "trickcal",
+      "displayName": "Trickcal: Chibi Go",
+      "aliases": [
+        "Trickcal Chibi Go",
+        "Trickcal: Chibi Go"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/trickcal",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "final-fantasy-brave-exvius-war-of-the-visions",
+      "displayName": "War of the Visions: Final Fantasy Brave Exvius",
+      "aliases": [
+        "War of the Visions Final Fantasy Brave Exvius",
+        "War of the Visions: Final Fantasy Brave Exvius"
+      ],
+      "resetTimeKst": "17:00",
+      "resetMinutesKst": 1020,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/final-fantasy-brave-exvius-war-of-the-visions",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "wuthering-waves",
+      "displayName": "Wuthering Waves",
+      "aliases": [
+        "Wuthering Waves"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/wuthering-waves",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "zenless-zone-zero",
+      "displayName": "Zenless Zone Zero",
+      "aliases": [
+        "Zenless Zone Zero"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/zenless-zone-zero",
+      "sourceNote": "Parsed from GachaList daily-resets list.",
+      "packageNameHints": []
+    },
+    {
+      "gameKey": "umamusume-pretty-derby",
+      "displayName": "우마무스메 프리티 더비",
+      "aliases": [
+        "Uma Musume",
+        "Umamusume",
+        "Umamusume Pretty Derby",
+        "Umamusume: Pretty Derby",
+        "우마무스메",
+        "우마무스메 프리티 더비"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "official",
+      "sourceUrl": "https://kakaogames.oqupie.com/portals/1576/articles/35175",
+      "sourceNote": "Kakao Games KR notice confirms daily reset at 05:00 KST.",
+      "packageNameHints": [
+        "com.kakaogames.umamusume"
+      ]
+    },
+    {
+      "gameKey": "princess-connect-re-dive",
+      "displayName": "프린세스 커넥트 Re:Dive",
+      "aliases": [
+        "Princess Connect",
+        "Princess Connect Re Dive",
+        "Princess Connect! Re:Dive",
+        "프리코네",
+        "프린세스 커넥트 Re Dive",
+        "프린세스 커넥트 Re:Dive"
+      ],
+      "resetTimeKst": "05:00",
+      "resetMinutesKst": 300,
+      "confidence": "community",
+      "sourceUrl": "https://gachalist.com/princess-connect-re-dive",
+      "sourceNote": "Pinned override for KR tracker consistency.",
+      "packageNameHints": [
+        "com.kakaogames.priconne"
+      ]
+    }
+  ]
+}

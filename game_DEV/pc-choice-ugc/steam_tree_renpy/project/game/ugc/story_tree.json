@@ -1,0 +1,134 @@
+﻿{
+  "version": 1,
+  "meta": {
+    "title": "60sec Choice UGC",
+    "author": "UGC Team",
+    "default_language": "ko",
+    "start_node_id": "intro"
+  },
+  "nodes": [
+    {
+      "id": "intro",
+      "speaker": "시스템",
+      "background": "menu_background.png",
+      "text": {
+        "ko": "방공호에 새로운 요청이 도착했습니다. 오늘의 결정을 시작하세요.",
+        "en": "A new request reached the bunker. Start today's decision."
+      },
+      "choices": [
+        {
+          "id": "intro_accept",
+          "text": {
+            "ko": "요청을 받는다",
+            "en": "Accept the request"
+          },
+          "next": "accept_path"
+        },
+        {
+          "id": "intro_decline",
+          "text": {
+            "ko": "요청을 거절한다",
+            "en": "Decline the request"
+          },
+          "next": "decline_path"
+        }
+      ]
+    },
+    {
+      "id": "accept_path",
+      "speaker": "지휘관",
+      "text": {
+        "ko": "좋아. 탐색팀을 꾸려서 바로 움직이자.",
+        "en": "Good. Build a scout team and move now."
+      },
+      "choices": [
+        {
+          "id": "accept_safe",
+          "text": {
+            "ko": "안전 루트로 이동",
+            "en": "Move through the safe route"
+          },
+          "next": "safe_result"
+        },
+        {
+          "id": "accept_risk",
+          "text": {
+            "ko": "위험 루트로 단축 이동",
+            "en": "Take the risky shortcut"
+          },
+          "next": "risk_result"
+        }
+      ]
+    },
+    {
+      "id": "decline_path",
+      "speaker": "기록관",
+      "text": {
+        "ko": "거절 처리했습니다. 대신 내부 자원을 정비합니다.",
+        "en": "Request declined. We will reorganize internal resources instead."
+      },
+      "next": "internal_reorg"
+    },
+    {
+      "id": "safe_result",
+      "speaker": "정찰병",
+      "text": {
+        "ko": "시간은 더 걸렸지만 피해 없이 보급품을 회수했습니다.",
+        "en": "It took longer, but we recovered supplies with no damage."
+      },
+      "next": "day_end"
+    },
+    {
+      "id": "risk_result",
+      "speaker": "정찰병",
+      "text": {
+        "ko": "빠르게 도착했지만 인원 1명이 부상했습니다.",
+        "en": "We arrived quickly, but one team member got injured."
+      },
+      "next": "day_end"
+    },
+    {
+      "id": "internal_reorg",
+      "speaker": "시스템",
+      "text": {
+        "ko": "내부 정비로 사기가 소폭 상승했습니다.",
+        "en": "Internal reorganization slightly improved morale."
+      },
+      "next": "day_end"
+    },
+    {
+      "id": "day_end",
+      "speaker": "시스템",
+      "text": {
+        "ko": "오늘의 상황이 종료되었습니다. 다음 날로 진행합니다.",
+        "en": "Today's phase is complete. Proceeding to the next day."
+      },
+      "choices": [
+        {
+          "id": "day_end_continue",
+          "text": {
+            "ko": "다음 날 시작",
+            "en": "Start next day"
+          },
+          "next": "ending"
+        },
+        {
+          "id": "day_end_stop",
+          "text": {
+            "ko": "여기서 종료",
+            "en": "Finish here"
+          },
+          "next": "ending"
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "speaker": "기록관",
+      "text": {
+        "ko": "샘플 트리 종료. 이 노드를 기준으로 다음 가지를 추가하세요.",
+        "en": "Sample tree complete. Extend new branches from this node."
+      }
+    }
+  ]
+}

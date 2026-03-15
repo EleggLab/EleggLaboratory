@@ -1,0 +1,1743 @@
+[
+  {
+    "id": "dp-갑자",
+    "title": "갑자일주 요약",
+    "when": "dayPillar == '갑자'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=갑자"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "갑자 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-을축",
+    "title": "을축일주 요약",
+    "when": "dayPillar == '을축'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=을축"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "을축 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-병인",
+    "title": "병인일주 요약",
+    "when": "dayPillar == '병인'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=병인"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "병인 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-정묘",
+    "title": "정묘일주 요약",
+    "when": "dayPillar == '정묘'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=정묘"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "정묘 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-무진",
+    "title": "무진일주 요약",
+    "when": "dayPillar == '무진'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=무진"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "무진 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-기사",
+    "title": "기사일주 요약",
+    "when": "dayPillar == '기사'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=기사"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "기사 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-경오",
+    "title": "경오일주 요약",
+    "when": "dayPillar == '경오'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=경오"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "경오 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-신미",
+    "title": "신미일주 요약",
+    "when": "dayPillar == '신미'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=신미"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "신미 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-임신",
+    "title": "임신일주 요약",
+    "when": "dayPillar == '임신'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=임신"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "임신 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-계유",
+    "title": "계유일주 요약",
+    "when": "dayPillar == '계유'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=계유"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "계유 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-갑술",
+    "title": "갑술일주 요약",
+    "when": "dayPillar == '갑술'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=갑술"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "갑술 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-을해",
+    "title": "을해일주 요약",
+    "when": "dayPillar == '을해'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=을해"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "을해 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-병자",
+    "title": "병자일주 요약",
+    "when": "dayPillar == '병자'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=병자"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "병자 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-정축",
+    "title": "정축일주 요약",
+    "when": "dayPillar == '정축'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=정축"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "정축 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-무인",
+    "title": "무인일주 요약",
+    "when": "dayPillar == '무인'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=무인"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "무인 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-기묘",
+    "title": "기묘일주 요약",
+    "when": "dayPillar == '기묘'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=기묘"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "기묘 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-경진",
+    "title": "경진일주 요약",
+    "when": "dayPillar == '경진'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=경진"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "경진 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-신사",
+    "title": "신사일주 요약",
+    "when": "dayPillar == '신사'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=신사"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "신사 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-임오",
+    "title": "임오일주 요약",
+    "when": "dayPillar == '임오'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=임오"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "임오 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-계미",
+    "title": "계미일주 요약",
+    "when": "dayPillar == '계미'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=계미"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "계미 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-갑신",
+    "title": "갑신일주 요약",
+    "when": "dayPillar == '갑신'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=갑신"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "갑신 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-을유",
+    "title": "을유일주 요약",
+    "when": "dayPillar == '을유'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=을유"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "을유 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-병술",
+    "title": "병술일주 요약",
+    "when": "dayPillar == '병술'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=병술"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "병술 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-정해",
+    "title": "정해일주 요약",
+    "when": "dayPillar == '정해'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=정해"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "정해 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-무자",
+    "title": "무자일주 요약",
+    "when": "dayPillar == '무자'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=무자"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "무자 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-기축",
+    "title": "기축일주 요약",
+    "when": "dayPillar == '기축'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=기축"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "기축 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-경인",
+    "title": "경인일주 요약",
+    "when": "dayPillar == '경인'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=경인"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "경인 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-신묘",
+    "title": "신묘일주 요약",
+    "when": "dayPillar == '신묘'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=신묘"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "신묘 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-임진",
+    "title": "임진일주 요약",
+    "when": "dayPillar == '임진'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=임진"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "임진 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-계사",
+    "title": "계사일주 요약",
+    "when": "dayPillar == '계사'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=계사"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "계사 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-갑오",
+    "title": "갑오일주 요약",
+    "when": "dayPillar == '갑오'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=갑오"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "갑오 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-을미",
+    "title": "을미일주 요약",
+    "when": "dayPillar == '을미'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=을미"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "을미 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-병신",
+    "title": "병신일주 요약",
+    "when": "dayPillar == '병신'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=병신"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "병신 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-정유",
+    "title": "정유일주 요약",
+    "when": "dayPillar == '정유'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=정유"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "정유 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-무술",
+    "title": "무술일주 요약",
+    "when": "dayPillar == '무술'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=무술"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "무술 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-기해",
+    "title": "기해일주 요약",
+    "when": "dayPillar == '기해'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=기해"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "기해 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-경자",
+    "title": "경자일주 요약",
+    "when": "dayPillar == '경자'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=경자"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "경자 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-신축",
+    "title": "신축일주 요약",
+    "when": "dayPillar == '신축'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=신축"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "신축 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-임인",
+    "title": "임인일주 요약",
+    "when": "dayPillar == '임인'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=임인"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "임인 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-계묘",
+    "title": "계묘일주 요약",
+    "when": "dayPillar == '계묘'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=계묘"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "계묘 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-갑진",
+    "title": "갑진일주 요약",
+    "when": "dayPillar == '갑진'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=갑진"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "갑진 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-을사",
+    "title": "을사일주 요약",
+    "when": "dayPillar == '을사'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=을사"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "을사 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-병오",
+    "title": "병오일주 요약",
+    "when": "dayPillar == '병오'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=병오"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "병오 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-정미",
+    "title": "정미일주 요약",
+    "when": "dayPillar == '정미'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=정미"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "정미 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-무신",
+    "title": "무신일주 요약",
+    "when": "dayPillar == '무신'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=무신"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "무신 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-기유",
+    "title": "기유일주 요약",
+    "when": "dayPillar == '기유'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=기유"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "기유 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-경술",
+    "title": "경술일주 요약",
+    "when": "dayPillar == '경술'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=경술"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "경술 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-신해",
+    "title": "신해일주 요약",
+    "when": "dayPillar == '신해'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=신해"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "신해 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-임자",
+    "title": "임자일주 요약",
+    "when": "dayPillar == '임자'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=임자"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "임자 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-계축",
+    "title": "계축일주 요약",
+    "when": "dayPillar == '계축'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=계축"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "계축 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-갑인",
+    "title": "갑인일주 요약",
+    "when": "dayPillar == '갑인'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=갑인"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "갑인 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-을묘",
+    "title": "을묘일주 요약",
+    "when": "dayPillar == '을묘'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=을묘"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "을묘 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-병진",
+    "title": "병진일주 요약",
+    "when": "dayPillar == '병진'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=병진"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "병진 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-정사",
+    "title": "정사일주 요약",
+    "when": "dayPillar == '정사'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=정사"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "정사 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-무오",
+    "title": "무오일주 요약",
+    "when": "dayPillar == '무오'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=무오"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "무오 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-기미",
+    "title": "기미일주 요약",
+    "when": "dayPillar == '기미'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=기미"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "기미 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-경신",
+    "title": "경신일주 요약",
+    "when": "dayPillar == '경신'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=경신"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "경신 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-신유",
+    "title": "신유일주 요약",
+    "when": "dayPillar == '신유'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=신유"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "신유 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-임술",
+    "title": "임술일주 요약",
+    "when": "dayPillar == '임술'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=임술"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "임술 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  },
+  {
+    "id": "dp-계해",
+    "title": "계해일주 요약",
+    "when": "dayPillar == '계해'",
+    "tags": [
+      "일주",
+      "v1"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "dayPillar=계해"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "계해 일주는 기본 성향 해석 항목으로 제공됩니다.",
+      "long": "월령, 오행 분포, 십성 구조, 대운/세운 맥락을 함께 보면 더 입체적으로 읽을 수 있습니다.",
+      "cautions": [
+        "본 문구는 v1 기본형으로, 학파/문헌 기준으로 계속 고도화합니다."
+      ],
+      "questions": [
+        "현재 가장 에너지가 많이 쓰이는 영역은 어디인가요?",
+        "보완하고 싶은 습관이나 관계 패턴은 무엇인가요?"
+      ]
+    }
+  }
+]
+

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "relic_magnet",
+    "name": "Relic: Magnet",
+    "description": "Spawns +1 extra Ball+1 pickup each turn.",
+    "rarity": "rare",
+    "shopOnly": true,
+    "price": 10
+  },
+  {
+    "id": "relic_polish",
+    "name": "Relic: Polish",
+    "description": "Ball speed +10%.",
+    "rarity": "common",
+    "shopOnly": true,
+    "price": 5
+  },
+  {
+    "id": "relic_shield",
+    "name": "Relic: Shield",
+    "description": "Mitigates deadzone penalty by 1.",
+    "rarity": "epic",
+    "shopOnly": true,
+    "price": 18
+  },
+  {
+    "id": "relic_alchemy",
+    "name": "Relic: Alchemy",
+    "description": "Bomb explosions grant extra gold.",
+    "rarity": "rare",
+    "shopOnly": true,
+    "price": 10
+  },
+  {
+    "id": "relic_focus",
+    "name": "Relic: Focus",
+    "description": "Aim prediction line extends farther.",
+    "rarity": "common",
+    "shopOnly": true,
+    "price": 5
+  }
+]

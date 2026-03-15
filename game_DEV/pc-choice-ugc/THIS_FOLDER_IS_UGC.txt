@@ -1,0 +1,8 @@
+This folder is the UGC project, not the Saju app.
+
+To run the Saju app from here:
+1) RUN_SAJU_8082.cmd   (mobile-web preview, localhost:8082)
+2) RUN_SAJU_WEB_3100.cmd (Next web, localhost:3100)
+
+Real Saju project path:
+C:\Users\rndhr\OneDrive\Desktop\saju-vibe-monorepo

@@ -1,0 +1,230 @@
+{
+  "generatedAt": "2026-03-12T11:12:17.686Z",
+  "config": {
+    "profilePack": "data/ai-presets/profile-pack-core.json",
+    "runs": 8,
+    "steps": 20,
+    "mode": "mock",
+    "seed": 222,
+    "outDir": "reports/ai",
+    "preset": "",
+    "presetDir": "",
+    "presetRegistry": "data/ai-presets/preset-registry.json",
+    "presetPolicy": "rotate",
+    "strict": false,
+    "thresholds": {
+      "minProfiles": 5,
+      "minAvgReflection": 0.75,
+      "minAvgUniqueCategories": 2,
+      "maxSameSequencePairs": null
+    }
+  },
+  "profilePackPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\data\\ai-presets\\profile-pack-core.json",
+  "sessionPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\ai-chat\\session-20260312-201217-253\\session.json",
+  "summary": {
+    "profileCount": 8,
+    "avgReflection": 1,
+    "avgUniqueCategories": 4.13,
+    "avgUniqueEventRatio": 1,
+    "sameSequencePairs": 0,
+    "maxSameSequencePairsAllowed": 0,
+    "pass": true,
+    "checks": [
+      {
+        "key": "profileCount",
+        "actual": 8,
+        "expected": ">= 5",
+        "pass": true
+      },
+      {
+        "key": "avgReflection",
+        "actual": 1,
+        "expected": ">= 0.75",
+        "pass": true
+      },
+      {
+        "key": "avgUniqueCategories",
+        "actual": 4.13,
+        "expected": ">= 2",
+        "pass": true
+      },
+      {
+        "key": "sameSequencePairs",
+        "actual": 0,
+        "expected": "<= 0",
+        "pass": true
+      }
+    ]
+  },
+  "runs": [
+    {
+      "runIndex": 1,
+      "profileId": "veteran-knight-human",
+      "profileName": "도시 외곽의 냉혈 기사",
+      "classId": "fighter",
+      "lineageId": "human",
+      "backgroundId": "border-conscript",
+      "storylineId": "battleworn-veteran",
+      "turns": 10,
+      "uniqueCategoryCount": 6,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "74d17da75254c4c2609cda3a14d04025801925a2",
+      "categories": [
+        "social",
+        "faith",
+        "faction",
+        "corruption",
+        "travel",
+        "relationship"
+      ],
+      "signatureHash": "12b3f2b831f5b410137e7f95b80dc7fefe99111e"
+    },
+    {
+      "runIndex": 2,
+      "profileId": "academy-bard-longkin",
+      "profileName": "아카데미의 유혹 바드",
+      "classId": "bard",
+      "lineageId": "longkin",
+      "backgroundId": "fallen-bastard",
+      "storylineId": "academy-prodigy",
+      "turns": 10,
+      "uniqueCategoryCount": 4,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "c155da2e493289e4916adaca73e4b67f55473c79",
+      "categories": [
+        "relationship",
+        "faction",
+        "social",
+        "relic"
+      ],
+      "signatureHash": "1bbda85480f60cfa5ce63593bcb607f7887e4f98"
+    },
+    {
+      "runIndex": 3,
+      "profileId": "mountain-monk-stonefolk",
+      "profileName": "산중 수련자",
+      "classId": "monk",
+      "lineageId": "stonefolk",
+      "backgroundId": "forest-watch",
+      "storylineId": "mountain-adept",
+      "turns": 10,
+      "uniqueCategoryCount": 3,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "07c42c47d6f13afc74592858d5a84ad3f269e0ad",
+      "categories": [
+        "corruption",
+        "travel",
+        "relic"
+      ],
+      "signatureHash": "03bc7cba881d5c280efc977aa571c84ddb137e4b"
+    },
+    {
+      "runIndex": 4,
+      "profileId": "brothel-warlock-succubus",
+      "profileName": "창녀촌 지배자",
+      "classId": "warlock",
+      "lineageId": "succubus",
+      "backgroundId": "funeral-aide",
+      "storylineId": "brothel-fixer",
+      "turns": 10,
+      "uniqueCategoryCount": 3,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "6f65710d61159dfd06f66e22cfb9b6942fe82c52",
+      "categories": [
+        "social",
+        "market",
+        "relationship"
+      ],
+      "signatureHash": "10eed0b859fb10ab9815eaebf72a752f74473ba0"
+    },
+    {
+      "runIndex": 5,
+      "profileId": "crew-rogue-infernal",
+      "profileName": "도적단 흑막",
+      "classId": "rogue",
+      "lineageId": "infernal",
+      "backgroundId": "smuggler-runner",
+      "storylineId": "thief-crew",
+      "turns": 10,
+      "uniqueCategoryCount": 3,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "cfb15010ac955e2454280d89395709dc10cf0fb9",
+      "categories": [
+        "market",
+        "travel",
+        "social"
+      ],
+      "signatureHash": "1c888e5cd2e208cbd6c0e690013f4973642cab57"
+    },
+    {
+      "runIndex": 6,
+      "profileId": "academy-wizard-longkin",
+      "profileName": "아카데미 금서학파",
+      "classId": "wizard",
+      "lineageId": "longkin",
+      "backgroundId": "tower-dropout",
+      "storylineId": "academy-prodigy",
+      "turns": 10,
+      "uniqueCategoryCount": 4,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "f97ef0481b87ef5d4d97a93113475f719bfafa36",
+      "categories": [
+        "relationship",
+        "relic",
+        "faith",
+        "faction"
+      ],
+      "signatureHash": "dcab689cb80a44aeffd12037fe8b6732c2466c44"
+    },
+    {
+      "runIndex": 7,
+      "profileId": "veteran-ranger-draconic",
+      "profileName": "변경의 추적자",
+      "classId": "ranger",
+      "lineageId": "draconic",
+      "backgroundId": "caravan-guard",
+      "storylineId": "battleworn-veteran",
+      "turns": 10,
+      "uniqueCategoryCount": 6,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "0507935ae8c2ca1caea030056e2f0153156893cd",
+      "categories": [
+        "market",
+        "faction",
+        "relic",
+        "social",
+        "travel",
+        "corruption"
+      ],
+      "signatureHash": "b1a0976406bde5aa10d38795212571de3d6d9eb2"
+    },
+    {
+      "runIndex": 8,
+      "profileId": "brothel-sorcerer-smallfoot",
+      "profileName": "밤 시장의 계약술사",
+      "classId": "sorcerer",
+      "lineageId": "smallfoot",
+      "backgroundId": "funeral-aide",
+      "storylineId": "brothel-fixer",
+      "turns": 10,
+      "uniqueCategoryCount": 4,
+      "uniqueEventRatio": 1,
+      "reflectionRate": 1,
+      "sequenceHash": "71099f41b453edbcb69ac0d0425046996dd9b2d1",
+      "categories": [
+        "relationship",
+        "market",
+        "social",
+        "faith"
+      ],
+      "signatureHash": "73e3a03373bd9da2c7a4a005f559b45dc61d98df"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "generatedAt": "2026-03-13T05:41:21.350Z",
+  "sessionPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\ai-chat\\session-20260313-144112-377\\session.json",
+  "thresholds": {
+    "metaLeakMax": 0,
+    "englishLeakTurnsMax": 0,
+    "debugLeakMax": 0,
+    "placeholderMax": 0,
+    "shortTurnRateMax": 0.04,
+    "repeatedBeforeOpeningRateMax": 0.22,
+    "repeatedHookRateMax": 0.2
+  },
+  "metrics": {
+    "turnCount": 3,
+    "metaLeakCount": 0,
+    "englishLeakTurns": 0,
+    "debugLeakCount": 0,
+    "placeholderCount": 0,
+    "shortTurnCount": 0,
+    "shortTurnRate": 0,
+    "repeatedBeforeOpeningRate": 0,
+    "repeatedHookRate": 0.3333,
+    "flaggedTurns": []
+  },
+  "evaluation": {
+    "pass": false,
+    "checks": [
+      {
+        "key": "metaLeakCount",
+        "actual": 0,
+        "expected": "<= 0",
+        "pass": true
+      },
+      {
+        "key": "englishLeakTurns",
+        "actual": 0,
+        "expected": "<= 0",
+        "pass": true
+      },
+      {
+        "key": "debugLeakCount",
+        "actual": 0,
+        "expected": "<= 0",
+        "pass": true
+      },
+      {
+        "key": "placeholderCount",
+        "actual": 0,
+        "expected": "<= 0",
+        "pass": true
+      },
+      {
+        "key": "shortTurnRate",
+        "actual": 0,
+        "expected": "<= 0.04",
+        "pass": true
+      },
+      {
+        "key": "repeatedBeforeOpeningRate",
+        "actual": 0,
+        "expected": "<= 0.22",
+        "pass": true
+      },
+      {
+        "key": "repeatedHookRate",
+        "actual": 0.3333,
+        "expected": "<= 0.2",
+        "pass": false
+      }
+    ]
+  }
+}

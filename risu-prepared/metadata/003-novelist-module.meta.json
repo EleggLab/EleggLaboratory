@@ -1,0 +1,19 @@
+{
+  "id": "003-novelist-module",
+  "originalName": "📚 소설가 모듈.risum",
+  "preparedName": "003-novelist-module.risum",
+  "sourcePath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\risu-source\\original\\📚 소설가 모듈.risum",
+  "preparedRelativePath": "binary/003-novelist-module.risum",
+  "kind": "binary-risum",
+  "ext": ".risum",
+  "size": 18277,
+  "headHex": "6F 00 5E 47 00 00 E6 6E 61 61 20 2D 40 E2 B2 4C 05 20 97 61 E6 6E 61 61",
+  "families": [
+    "novelist-flow"
+  ],
+  "usageHints": [
+    "Use this for descriptive prose, paragraph cadence, and sensory details."
+  ],
+  "convertible": false,
+  "requiresRisuJsonExport": true
+}

@@ -1,0 +1,17 @@
+﻿# Web + Android 공용 무시 목록
+node_modules/
+dist/
+.vite/
+*.log
+.env
+
+# Android / Gradle
+.gradle/
+/local.properties
+/app/build/
+/build/
+
+# Python
+.venv/
+__pycache__/
+*.pyc

@@ -1,0 +1,352 @@
+{
+  "decodedFrom": "risum",
+  "envelope": {
+    "magic": 111,
+    "version": 0,
+    "type": "risuModule"
+  },
+  "module": {
+    "name": "📚 소설가 모듈",
+    "description": "출처: 올인원 Flush",
+    "id": "1b5acdf9-d5b7-4279-9e5f-b78b655afdb2",
+    "regex": [
+      {
+        "comment": "──── ▼  🛠️ 디폴트 ⚒️  ▼ ────",
+        "in": "",
+        "out": "",
+        "type": "disabled",
+        "ableFlag": false
+      },
+      {
+        "comment": "💻: Approved 삭제",
+        "in": "^(\\s*)#+ (Approved|승인됨)[:]?\\s*",
+        "out": "",
+        "type": "editdisplay",
+        "ableFlag": false
+      },
+      {
+        "comment": "🖨️: Approved 이전 삭제",
+        "in": "^([\\S\\s]+)## (Approved|승인됨)[:]?\\s*",
+        "out": "",
+        "type": "editoutput",
+        "ableFlag": false
+      },
+      {
+        "comment": "💻: Response 삭제",
+        "in": "\\s*#+ (Response|응답)[:]?\\s+([\\s\\S]*)",
+        "out": "<p></p>\n\n$2",
+        "type": "editdisplay",
+        "ableFlag": false
+      },
+      {
+        "comment": "📜: Response 앞부분 삭제",
+        "in": "[\\s\\S]*#+ (Response|응답)[:]?\\s+([\\s\\S]*)",
+        "out": "$2",
+        "type": "editprocess",
+        "ableFlag": false
+      },
+      {
+        "comment": "📜: 볼드체 삭제",
+        "in": "\\*\\*",
+        "out": "",
+        "type": "editprocess",
+        "ableFlag": false
+      },
+      {
+        "comment": "──── ▼ 🗯️ CoT 🗯️  ▼ ────",
+        "in": "",
+        "out": "",
+        "type": "disabled",
+        "ableFlag": false
+      },
+      {
+        "comment": "💻: 면책 조항 접기/펼치기 Simple Version",
+        "in": "### Pre-response([\\s\\S]*?)<p></p>",
+        "out": "<p></p>\n\n<details>\n<summary><strong>👨🏻‍⚖️ 면책 조항</strong></summary>\n<div>\n$1\n</div>\n</details>",
+        "type": "editdisplay",
+        "ableFlag": false
+      },
+      {
+        "comment": "💻: CoT 접기/펼치기 Simple Version",
+        "in": "### Six Thinking[- ]?Hats([\\s\\S]*?)<p></p>",
+        "out": "<p></p>\n\n<details>\n<summary><strong>🎩 6가지 생각 보기</strong></summary>\n<div>\n$1\n</div>\n</details>",
+        "type": "editdisplay",
+        "ableFlag": false
+      },
+      {
+        "comment": "💻: 장면 설정 접기/펼치기 Simple Version",
+        "in": "### Act[1,2,3]([\\s\\S]*?)<p></p>",
+        "out": "<p></p>\n\n<details>\n<summary><strong>🎬 장면 설정</strong></summary>\n<div>\n$1\n</div>\n</details>",
+        "type": "editdisplay",
+        "ableFlag": false
+      },
+      {
+        "comment": "🔒 -",
+        "in": "### Six Thinking Hats[\\s\\S]*- (.+): ([^/n])\\n+- (.+): ([^/n])\\n+- (.+): ([^/n])[\\s\\S]*<p></p>",
+        "out": "<p></p>\n<details>\n    <summary>🗯️ CoT 내용 보기</summary>\n    <div>\n\t<ul style=\"line-height: 1.2;\"><strong>$1</strong><li>$2</li></ul>\n\t<ul style=\"line-height: 1.2;\"><strong>$3</strong><li>$4</li></ul>\n\t<ul style=\"line-height: 1.2;\"><strong>$5</strong><li>$6</li></ul>\n</ul>\n<hr></div>\n</details>",
+        "type": "disabled",
+        "ableFlag": false
+      },
+      {
+        "comment": "──── ▼  🔠 인풋 번역 🔠  ▼ ────",
+        "in": "",
+        "out": "",
+        "type": "disabled",
+        "ableFlag": false
+      },
+      {
+        "comment": "💻🔒: 🔠 인풋 번역 none css Version",
+        "in": "### Input Translation([\\s\\S]*?)(?=<p></p>)",
+        "out": "<style>\n.button-input {\n  display: flex;\n  border: 1px solid white;\n  border-radius: .75rem;\n  cursor: pointer;\n  font-size: 0.9em;\n  line-height: 1.5em;\n  padding: 0.8em;\n  text-align: left;\n  touch-action: manipulation;\n  width: 100%;\n  margin-bottom: 1em;\n}\n\n.button-input:hover {\n  background-color: rgba(0, 0, 0, 0.3);\n}\n\n.button-input:focus {\n  box-shadow: none;\n  outline: 2px solid transparent;\n  outline-offset: 2px;\n}\n</style>\n\n<button class=\"button-input\" risu-trigger=\"TrInputTrans\">$1\n</button>",
+        "type": "disabled",
+        "ableFlag": false
+      },
+      {
+        "comment": "💻: 🔠 인풋 번역 css Version",
+        "in": "### Input Translation([\\s\\S]*?)(?=<p></p>)",
+        "out": "<!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Example</title>\n  <style>\n    .second-wrapper {\n      max-width: 100vw;\n      padding: 2.5em 2em 1em;\n      margin: 1em 0;\n      border: 0.1em solid rgba(255, 180, 180, 0.8); /* 빨간색 테두리 */\n      border-radius: 0.6em;\n      background-color: rgba(5, 5, 5, 0.1);\n      box-shadow: 0 0 1.5em #FF4500, 0 0 1em rgba(255, 69, 0, 0.1); /* 빨간색 그림자 */\n      text-align: center;\n      position: relative;\n      animation: blink 1s infinite alternate; /* 깜박거리는 이펙트 */\n    }\n\n    @keyframes blink {\n      0% { box-shadow: 0 0 1.5em #FF4500, 0 0 1em rgba(255, 69, 0, 0.1); }\n      100% { box-shadow: 0 0 2em #FF4500, 0 0 1.5em rgba(255, 69, 0, 0.3); }\n    }\n\n    .special-font {\n      font-family: 'Courier New', monospace, 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;\n      font-weight: bolder;\n      background: -webkit-linear-gradient(45deg, #ffd3d3, #deb0b0); /* 빨간색 그라디언트 */\n      -webkit-background-clip: text;\n      -webkit-text-fill-color: transparent;\n      text-shadow: 0 0 0.1em rgba(255, 211, 211, 0.5);\n    }\n\n    .courier-font {\n      font-family: 'Courier New', monospace, 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;\n      font-size: 1em;\n    }\n\n    .light-red {\n      color: #ffd3d3; /* 밝은 빨간색 텍스트 */\n      text-shadow: 0 0 0.1em #ffd3d3;\n    }\n\n    .title {\n      position: absolute;\n      top: -1.25em;\n      left: 50%;\n      transform: translateX(-50%);\n      padding: 0 0.5em;\n      background-color: rgba(5, 5, 5, 0.1);\n      font-family: 'Courier New', monospace, 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;\n      font-weight: bolder;\n      color: #FF4500; /* 빨간색 제목 */\n      text-shadow: 0 0 0.1em rgba(255, 69, 0, 0.8);\n      font-size: 1.5em; /* $1 텍스트보다 50% 더 큰 폰트 크기 */\n    }\n  </style>\n</head>\n<body>\n  <div class=\"second-wrapper\">\n    <button class=\"button-input\" risu-trigger=\"TrInputTrans\">    \n      <div class=\"title\">인풋 번역</div>\n      <span class=\"courier-font light-blue\">$1</span>\n      </button>\n  </div>\n</body>\n</html>\n",
+        "type": "editdisplay",
+        "ableFlag": false
+      },
+      {
+        "comment": "🖨️: 🔠 인풋 번역",
+        "in": "### Input Translation\\n+([^#]*)\\n+(#+[\\s\\S]*)",
+        "out": "### Input Translation\n$1\n\n$2\n{{setvar::VarInputTrans::$1}}{{setvar::content::$2}}\n",
+        "type": "editoutput",
+        "ableFlag": false
+      },
+      {
+        "comment": "──── ▼  🎲 선택지 🎲  ▼ ────",
+        "in": "",
+        "out": "",
+        "type": "disabled",
+        "ableFlag": false
+      },
+      {
+        "comment": "🖊️:  🎲 선택지 none css Version",
+        "in": "### Next Input Recommendation\\n1. ([\\s\\S]*?)\\n2. ([\\s\\S]*?)\\n3. ([^<]*?)\\n*",
+        "out": "<p></p>\n<style>\n  .button-choice {\n  background-color: rgba(0, 0, 0, 0.3);\n  border-radius: 8px;\n  padding: 0.5em;\n  text-align: left;\n  text-decoration: none;\n  text-shadow: none;\n  font-size: 0.9em;\n  cursor: pointer;\n}\n\n.button-choice:hover {\n  background-color: rgba(255, 255, 255, 0.1);\n}\n</style>\n\n<div>\n\n<button risu-trigger=\"trRcmd1\" class=\"button-choice\">$1</button>\n\n<button risu-trigger=\"trRcmd2\" class=\"button-choice\">$2</button>\n\n<button risu-trigger=\"trRcmd3\" class=\"button-choice\">$3</button>\n\n</div>",
+        "type": "editinput",
+        "ableFlag": false
+      },
+      {
+        "comment": "💻:  🎲 선택지 css Version",
+        "in": "### Next Input Recommendation\\n+1. ([\\s\\S]*?)\\n+2. ([\\s\\S]*?)\\n+3. ([^<p>]+)",
+        "out": "<!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n  <meta charset=\"UTF-8\">\n  <style>\n    /* 기본 스타일 정의 */\n    .button-container {\n      max-width: 100vw;\n      margin: 1em 0;\n      padding: 1.5em;\n      border: 0.1em solid rgba(180, 180, 255, 0.8);\n      border-radius: 0.6em;\n      background-color: rgba(5, 5, 5, 0.1);\n      box-shadow: 0 0 1.5em rgba(0, 191, 255, 0.2), 0 0 1em rgba(0, 191, 255, 0.1);\n      box-sizing: border-box;\n      position: relative;\n      text-align: center;\n      color: #d3e8ff;\n      animation: blink 1s infinite alternate;\n    }\n\n    /* 애니메이션 효과 추가 */\n    @keyframes blink {\n      0% { box-shadow: 0 0 1.5em #6b43d8, 0 0 1em rgba(0, 191, 255, 0.1); }\n      100% { box-shadow: 0 0 2em #6b43d8, 0 0 1.5em rgba(0, 191, 255, 0.3); }\n    }\n\n    /* 버튼 스타일 */\n    .button-choice {\n      padding: 0.5em 1em;\n      border: none;\n      border-radius: 0.3em;\n      color: white;\n      cursor: pointer;\n      transition: background-color 0.3s ease;\n    }\n\n    .button-choice:hover {\n      background-color: #009ACD;\n    }\n\n    .light-blue {\n      color: #d3e8ff;\n      text-shadow: 0 0 0.1em #d3e8ff;\n    }\n  </style>\n</head>\n<body>\n  <!-- 첫 번째 버튼 컨테이너 -->\n  <div class=\"button-container\">\n    <button risu-trigger=\"trRcmd1\" class=\"button-choice light-blue\"><strong>옵션 1:</strong> $1</button>\n  </div>\n\n  <!-- 두 번째 버튼 컨테이너 -->\n  <div class=\"button-container\">\n    <button risu-trigger=\"trRcmd2\" class=\"button-choice light-blue\"><strong>옵션 2:</strong> $2</button>\n  </div>\n\n  <!-- 세 번째 버튼 컨테이너 -->\n  <div class=\"button-container\">\n    <button risu-trigger=\"trRcmd3\" class=\"button-choice light-blue\"><strong>옵션 3:</strong> $3</button>\n  </div>\n</body>\n</html>\n",
+        "type": "editdisplay",
+        "ableFlag": false
+      },
+      {
+        "comment": "🖨️: 🎲  선택지",
+        "in": "### Next Input Recommendation\\n+1. ([^\\n]+)\\n+2. ([^\\n]+)\\n+3. ([^\\n]+)\\n([^{]*)",
+        "out": "### Next Input Recommendation\n1. $1\n2. $2\n3. $3\n$4\n{{setvar::trRcmd1::$1}}\n{{setvar::trRcmd2::$2}}\n{{setvar::trRcmd3::$3}}\n",
+        "type": "editoutput",
+        "ableFlag": false
+      },
+      {
+        "comment": "📜: 🎲 선택지",
+        "in": "\\n*### Next Input Recommendation[\\s\\S]*",
+        "out": "",
+        "type": "editprocess",
+        "ableFlag": false
+      },
+      {
+        "comment": "──── ▼ 🔩  찐빠 보정  🔩 ▼ ────",
+        "in": "",
+        "out": "",
+        "type": "disabled",
+        "ableFlag": false
+      },
+      {
+        "comment": "🖨️: 가로줄 삭제",
+        "in": "---",
+        "out": "",
+        "type": "editoutput",
+        "ableFlag": false
+      },
+      {
+        "comment": "🖨️: 코드블럭 삭제",
+        "in": "```",
+        "out": "",
+        "type": "editoutput",
+        "ableFlag": false
+      },
+      {
+        "comment": "🖨️: *** 삭제",
+        "in": "\\*\\*\\*",
+        "out": "",
+        "type": "editoutput",
+        "ableFlag": false
+      },
+      {
+        "comment": "🖨️: <br> 삭제",
+        "in": "<\\/?br>",
+        "out": "",
+        "type": "editoutput",
+        "ableFlag": false
+      },
+      {
+        "comment": "🖨️: 페니스 변경",
+        "in": "(?<![가-힣])페니스",
+        "out": "음경",
+        "type": "editoutput",
+        "ableFlag": false
+      },
+      {
+        "comment": "🖨️: 페니스 변경1",
+        "in": "(?<![가-힣])페니스는",
+        "out": "음경은",
+        "type": "editoutput",
+        "ableFlag": false
+      },
+      {
+        "comment": "🖨️: 페니스 변경2",
+        "in": "(?<![가-힣])페니스가",
+        "out": "음경이",
+        "type": "editoutput",
+        "ableFlag": false
+      },
+      {
+        "comment": "🖨️: 페니스 변경3",
+        "in": "(?<![가-힣])페니스와",
+        "out": "음경과",
+        "type": "editoutput",
+        "ableFlag": false
+      },
+      {
+        "comment": "🖨️: 페니스 변경4",
+        "in": "(?<![가-힣])페니스를",
+        "out": "음경을",
+        "type": "editoutput",
+        "ableFlag": false
+      },
+      {
+        "comment": "🖨️: 프리컴 변경",
+        "in": "(?<![가-힣])프리컴",
+        "out": "쿠퍼액",
+        "type": "editoutput",
+        "ableFlag": false
+      },
+      {
+        "comment": "🖨️: 봊이 변경",
+        "in": "(?<![가-힣])봊이",
+        "out": "보지",
+        "type": "editoutput",
+        "ableFlag": false
+      },
+      {
+        "comment": "🖨️🔒: 경고 문구 삭제",
+        "in": "\\[\\w*\\s*\\w*:[^:]*\\]\\n*",
+        "out": "",
+        "type": "disabled",
+        "ableFlag": false
+      },
+      {
+        "comment": "📜: 과도한 말줄임표 보정",
+        "in": "(\\.{4,8}|…{1,2})",
+        "out": "...",
+        "type": "editprocess",
+        "ableFlag": false
+      },
+      {
+        "comment": "──── ▼  📖 기타 👁️  ▼ ────",
+        "in": "🕵️",
+        "out": "🕵️",
+        "type": "edittrans",
+        "ableFlag": false
+      },
+      {
+        "comment": "💻: 상태창 css Version",
+        "in": "- Date: (.+?)\\n+-.Time: (.+?)\\n+-.Location: ([^\\n]+)(?=[<p></p>]*?)",
+        "out": "@@move_top \n<head>\n  <style>\n    @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Gowun+Batang&display=swap');\n  \n    svg {\n      display: inline;\n      fill: #ffffff;\n      width: 1em;\n      margin-bottom: 0.2em;\n    }\n  \n    .indicator {\n      display: flex;\n      flex-direction: column;\n      border: double #ffffff;\n      border-width: 6px 0;\n      max-width: 400px;\n      margin: 1em auto;\n    }\n  \n    .textbox {\n      display: flex;\n      flex-direction: column;\n      margin: 0.5em auto;\n      width: fit-content;\n    }\n  \n    .text {\n      line-height: 1em;\n      font-size: 1em;\n      font-family: \"Gowun Batang\";\n      font-optical-sizing: auto;\n      font-style: italic;\n      font-weight: 400;\n      color: #ffffff;\n    }\n  </style>\n</head>\n  \n<body style=\"background-color: black;\">\n  <div class=\"indicator\">\n    <div class=\"textbox\">\n      <span class=\"text\">\n        <svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g id=\"SVGRepo_iconCarrier\">\n            <path d=\"M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z\"></path>\n            <path d=\"M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z\"></path>\n          </g>\n        </svg>\n        $1\n      </span>\n      <span class=\"text\">\n        <svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g id=\"SVGRepo_iconCarrier\">\n            <path d=\"M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z\"></path>\n            <path d=\"M13 7h-2v6h6v-2h-4z\"></path>\n          </g>\n        </svg>\n        $2\n      </span>\n      <span class=\"text\">\n        <svg viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g id=\"SVGRepo_iconCarrier\">\n            <path d=\"M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z\"></path>\n          </g>\n        </svg>\n        $3\n      </span>\n    </div>\n  </div>\n</body>\n<br>",
+        "type": "editdisplay",
+        "ableFlag": false
+      },
+      {
+        "comment": "📜: 퍼스트 메시지",
+        "in": "/퍼메",
+        "out": "[OOC: To begin this roleplay session, please create a believable and relatable scene that introduces {{char}}.\n\n- Describe the location by briefly noting the weather, season, time of day, lighting conditions, and any relevant symbols.\n\n- Show {{char}} engaging in curious activities that reveal {{char}}'s personality and daily life.\n\n- End with an inciting incident in which {{char}} speaks to {{user}}, omitting any information or response about {{user}}.\n\n- Please write within 400 words, excluding monologues and additional characters.]",
+        "type": "editprocess",
+        "ableFlag": false
+      },
+      {
+        "comment": "────────────────────",
+        "in": "",
+        "out": "",
+        "type": "disabled",
+        "ableFlag": false
+      }
+    ],
+    "type": "risuModule",
+    "trigger": [
+      {
+        "comment": "trRcmd1",
+        "type": "manual",
+        "conditions": [],
+        "effect": [
+          {
+            "type": "impersonate",
+            "role": "user",
+            "value": "{{getvar::trRcmd1}}"
+          }
+        ],
+        "lowLevelAccess": true
+      },
+      {
+        "comment": "trRcmd2",
+        "type": "manual",
+        "conditions": [],
+        "effect": [
+          {
+            "type": "impersonate",
+            "role": "user",
+            "value": "{{getvar::trRcmd2}}"
+          }
+        ],
+        "lowLevelAccess": true
+      },
+      {
+        "comment": "trRcmd3",
+        "type": "manual",
+        "conditions": [],
+        "effect": [
+          {
+            "type": "impersonate",
+            "role": "user",
+            "value": "{{getvar::trRcmd3}}"
+          }
+        ],
+        "lowLevelAccess": true
+      },
+      {
+        "comment": "TrInputTrans",
+        "type": "manual",
+        "conditions": [],
+        "effect": [
+          {
+            "type": "modifychat",
+            "value": "{{getvar::VarInputTrans}}",
+            "index": "{{? {{lastmessageindex}}-1}}"
+          },
+          {
+            "type": "modifychat",
+            "value": "{{getvar::content}}",
+            "index": "{{lastmessageindex}}"
+          }
+        ],
+        "lowLevelAccess": true
+      }
+    ],
+    "lowLevelAccess": true,
+    "creator_notes": "",
+    "tags": [],
+    "license": "CC BY-NC-SA 4.0",
+    "rtype": "module",
+    "hideIcon": false,
+    "lorebook": [],
+    "assets": [],
+    "backgroundEmbedding": "",
+    "namespace": "소설가"
+  },
+  "assets": []
+}

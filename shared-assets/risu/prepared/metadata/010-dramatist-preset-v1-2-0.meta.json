@@ -1,0 +1,19 @@
+{
+  "id": "010-dramatist-preset-v1-2-0",
+  "originalName": "🪶극작가 v1.2.0_preset.risup",
+  "preparedName": "010-dramatist-preset-v1-2-0.risup",
+  "sourcePath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\risu-source\\original\\🪶극작가 v1.2.0_preset.risup",
+  "preparedRelativePath": "binary/010-dramatist-preset-v1-2-0.risup",
+  "kind": "binary-risup",
+  "ext": ".risup",
+  "size": 19338,
+  "headHex": "10 03 FC C4 BB 95 8B 0E C4 0B 0D 48 96 DD C7 81 C4 0B 28 2C 79 05 48 05",
+  "families": [
+    "dramatic-structure"
+  ],
+  "usageHints": [
+    "Use this for scene framing, beat escalation, and consequence hooks."
+  ],
+  "convertible": false,
+  "requiresRisuJsonExport": true
+}

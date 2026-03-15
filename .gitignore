@@ -1,0 +1,30 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+MemoryCaptures/
+
+# JavaScript dependencies
+node_modules/
+
+# Local logs and temp folders
+.runlogs/
+tmp/
+
+# Nested repositories kept as references/workspaces
+game_DEV/_refs/
+game_DEV/games/
+game_DEV/mobile-game-homework-checker/
+
+# Windows-reserved local scratch files
+game_DEV/pc-choice-ugc/NUL.css
+game_DEV/pc-choice-ugc/nul
+game_DEV/pc-choice-ugc/nu_
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

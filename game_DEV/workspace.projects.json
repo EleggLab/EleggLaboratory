@@ -1,0 +1,61 @@
+﻿{
+  "workspace": "game_DEV",
+  "projects": [
+    {
+      "id": "pc-choice-ugc",
+      "name": "60sec Choice Game UGC",
+      "platform": "pc",
+      "category": "choice-game-ugc",
+      "cwd": "pc-choice-ugc",
+      "install": "npm install",
+      "dev": "npm run dev -- --port 5200 --strictPort",
+      "ports": [
+        5200
+      ]
+    },
+    {
+      "id": "mobile-saju-fortune",
+      "name": "Saju All-in-One Fortune",
+      "platform": "mobile-app",
+      "category": "mobile-app",
+      "cwd": "mobile-saju-fortune",
+      "install": "corepack pnpm install",
+      "dev": "corepack pnpm --filter @saju/mobile start -- --web --port 8082 -c",
+      "ports": [
+        8082
+      ]
+    },
+    {
+      "id": "mobile-game-homework-checker",
+      "name": "Mobile Game Homework Checker",
+      "platform": "mobile-app",
+      "category": "mobile-app",
+      "cwd": "mobile-game-homework-checker",
+      "install": "npm install",
+      "dev": "npm run dev -- --port 5300 --strictPort",
+      "ports": [
+        5300
+      ]
+    },
+    {
+      "id": "mobile-breaking-block-augment",
+      "name": "Breaking a Block Augment",
+      "platform": "mobile-app",
+      "category": "mobile-game",
+      "cwd": "mobile-breaking-block-augment",
+      "install": "",
+      "dev": "",
+      "ports": []
+    },
+    {
+      "id": "novel-zombie-line2-train",
+      "name": "Zombie Line 2 Train Novel",
+      "platform": "writing",
+      "category": "novel",
+      "cwd": "novel-zombie-line2-train",
+      "install": "",
+      "dev": "",
+      "ports": []
+    }
+  ]
+}

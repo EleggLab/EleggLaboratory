@@ -1,0 +1,7 @@
+[
+  { "tier": "bronze", "promoteScore": 5000, "demoteScore": 0 },
+  { "tier": "silver", "promoteScore": 11000, "demoteScore": 3000 },
+  { "tier": "gold", "promoteScore": 18000, "demoteScore": 8000 },
+  { "tier": "platinum", "promoteScore": 26000, "demoteScore": 14000 },
+  { "tier": "diamond", "promoteScore": 999999999, "demoteScore": 22000 }
+]

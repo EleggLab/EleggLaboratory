@@ -1,0 +1,938 @@
+{
+  "decodedFrom": "risum",
+  "envelope": {
+    "magic": 111,
+    "version": 0,
+    "type": "risuModule"
+  },
+  "module": {
+    "name": "🔞에로 스테이터스❤️",
+    "description": "",
+    "id": "91ffcc7a-264e-4966-bf31-3d5b7f52e892",
+    "assets": [
+      [
+        "body_bondage_normal",
+        "",
+        "png"
+      ],
+      [
+        "body_bondage_pregnant",
+        "",
+        "png"
+      ],
+      [
+        "body_distended",
+        "",
+        "png"
+      ],
+      [
+        "body_normal",
+        "",
+        "png"
+      ],
+      [
+        "body_pregnant",
+        "",
+        "png"
+      ],
+      [
+        "body_pregnant2",
+        "",
+        "png"
+      ],
+      [
+        "body_slave_distended",
+        "",
+        "png"
+      ],
+      [
+        "body_slave_normal",
+        "",
+        "png"
+      ],
+      [
+        "body_slave_pregnant",
+        "",
+        "png"
+      ],
+      [
+        "breast_aroused",
+        "",
+        "png"
+      ],
+      [
+        "breast_inverted",
+        "",
+        "png"
+      ],
+      [
+        "breast_milk",
+        "",
+        "png"
+      ],
+      [
+        "breast_normal",
+        "",
+        "png"
+      ],
+      [
+        "breast_pierced",
+        "",
+        "png"
+      ],
+      [
+        "breast_semen",
+        "",
+        "png"
+      ],
+      [
+        "breast_small_aroused",
+        "",
+        "png"
+      ],
+      [
+        "breast_small_milk",
+        "",
+        "png"
+      ],
+      [
+        "breast_small_normal",
+        "",
+        "png"
+      ],
+      [
+        "breast_small_pierced",
+        "",
+        "png"
+      ],
+      [
+        "breast_small_semen",
+        "",
+        "png"
+      ],
+      [
+        "butthole_normal",
+        "",
+        "png"
+      ],
+      [
+        "butthole_plugged",
+        "",
+        "png"
+      ],
+      [
+        "butthole_semen",
+        "",
+        "png"
+      ],
+      [
+        "butthole_showing",
+        "",
+        "png"
+      ],
+      [
+        "mouth_aroused",
+        "",
+        "png"
+      ],
+      [
+        "mouth_gag",
+        "",
+        "png"
+      ],
+      [
+        "mouth_normal",
+        "",
+        "png"
+      ],
+      [
+        "mouth_semen",
+        "",
+        "png"
+      ],
+      [
+        "nipple_aroused",
+        "",
+        "png"
+      ],
+      [
+        "nipple_milk",
+        "",
+        "png"
+      ],
+      [
+        "nipple_normal",
+        "",
+        "png"
+      ],
+      [
+        "nipple_pierced",
+        "",
+        "png"
+      ],
+      [
+        "nipple_semen",
+        "",
+        "png"
+      ],
+      [
+        "nipple_small_aroused",
+        "",
+        "png"
+      ],
+      [
+        "nipple_small_milk",
+        "",
+        "png"
+      ],
+      [
+        "nipple_small_normal",
+        "",
+        "png"
+      ],
+      [
+        "nipple_small_pierced",
+        "",
+        "png"
+      ],
+      [
+        "nipple_small_semen",
+        "",
+        "png"
+      ],
+      [
+        "preg_big",
+        "",
+        "png"
+      ],
+      [
+        "preg_medium",
+        "",
+        "png"
+      ],
+      [
+        "preg_normal",
+        "",
+        "png"
+      ],
+      [
+        "preg_pregnancy check",
+        "",
+        "png"
+      ],
+      [
+        "preg_small",
+        "",
+        "png"
+      ],
+      [
+        "pussy_aroused",
+        "",
+        "png"
+      ],
+      [
+        "pussy_normal",
+        "",
+        "png"
+      ],
+      [
+        "pussy_semen",
+        "",
+        "png"
+      ],
+      [
+        "pussy_showing",
+        "",
+        "png"
+      ],
+      [
+        "pussy_virgin",
+        "",
+        "png"
+      ],
+      [
+        "small_body_bondage_normal",
+        "",
+        "png"
+      ],
+      [
+        "small_body_bondage_pregnant",
+        "",
+        "png"
+      ],
+      [
+        "small_body_distended",
+        "",
+        "png"
+      ],
+      [
+        "small_body_normal",
+        "",
+        "png"
+      ],
+      [
+        "small_body_pregnant",
+        "",
+        "png"
+      ],
+      [
+        "small_body_slave_distended",
+        "",
+        "png"
+      ],
+      [
+        "small_body_slave_normal",
+        "",
+        "png"
+      ],
+      [
+        "small_body_slave_pregnant",
+        "",
+        "png"
+      ],
+      [
+        "womb_child_big",
+        "",
+        "png"
+      ],
+      [
+        "womb_child_medium",
+        "",
+        "png"
+      ],
+      [
+        "womb_child_small",
+        "",
+        "png"
+      ],
+      [
+        "womb_empty",
+        "",
+        "png"
+      ],
+      [
+        "womb_full",
+        "",
+        "png"
+      ],
+      [
+        "womb_impregnation",
+        "",
+        "png"
+      ]
+    ],
+    "hideIcon": false,
+    "customModuleToggle": "\nEroSte=🔞에로 스테이터스\n\n",
+    "lorebook": [
+      {
+        "key": "",
+        "comment": "상태창 지시문",
+        "content": "{{#if_pure {{getglobalvar::toggle_EroSte}} }}\n\n# SYSTEM: Global Status Display\n\nWhen generating the narrative response, insert this Status Line strictly as the very last element of the story text, immediately preceding the last sentence of the roleplay. It must be treated as part of the narrative content, not as a system header.\nThe syntax uses specific markers (<EroSte> and </EroSte>) and separators (|).\nDo NOT use code blocks (```) or Markdown for this status line. Use raw text format only.\n\n**IMPORTANT INSTRUCTION:**\nThe main status line (<EroSte>...</EroSte>) is designed to be displayed to the player immediately and then DELETED from the chat log. **Do NOT worry about it disappearing from the log.** You MUST output this status line exactly as instructed every single time, regardless of whether it remains in the history or not. It is crucial for the real-time interface.\n\n**After outputting the main status line, you MUST append a simplified 'Situation Log' on a new line.** This log serves to record the current time and location for context retention after the main status is deleted.\nFormat for Situation Log: `-[ Situation Log | Date: {Date} | Place: {Location} | /Situation Log]-`\n\n---\n\n## Main Status Format:\n<EroSte> [ Date: {Date} | Weather: {Weather} | Place: {Location} | Main: {Image_Code} | Mouth: {Image_Code}, {Level}, '{Thought}' | Breast: {Image_Code}, {Level}, '{Thought}' | Nipple: {Image_Code}, {Level}, '{Thought}' | Womb: {Image_Code}, {Level}, '{Thought}' | Pussy: {Image_Code}, {Level}, '{Thought}' | Butt: {Image_Code}, {Level}, '{Thought}' | Preg: {Image_Code}, {Status}, {Cycle}, {Semen_Amount}, {Father} | Traits: {List_of_Traits} | Bars: {Submission}, {Lust}, {Satisfaction}, {Affection} | State: {Lust_Level}, {Current_State} | Profile: {Name}, {Title}, {Social_Status}, {Weakness} ]  </EroSte>\n-[ Situation Log | Date: {Date} | Place: {Location} | /Situation Log]-\n\n## Field Definitions & Image Rules:\n\n1. Main (Body Image)\n   - Select ONE from: [body_normal, body_distended, body_pregnant, body_pregnant2, body_bondage_normal, body_bondage_pregnant, body_slave_normal, body_slave_distended, body_slave_pregnant]\n   - For small characters: [small_body_normal, small_body_distended, small_body_pregnant, small_body_bondage_normal, small_body_bondage_pregnant, small_body_slave_normal, small_body_slave_distended, small_body_slave_pregnant]\n   - *Use 'slave' variants if character has tattoos/piercings. Use 'bondage' if tied up.*\n\n2. Body Parts (Mouth, Breast, Nipple, Womb, Pussy, Butt)\n   - Format: Image_Code, Level_Description, 'Short_Thought'\n   - **Thought:** A single line of inner monologue reflecting the specific part's condition (e.g., 'It's throbbing...', 'So full...'). Match the lewdness level. The 'thought' must strictly be the character's subconscious internal perception regarding the body part. Do not include any thoughts about external situations unrelated to the character's own body. It must be a character monologue, not a simple description of a state. Write as if the character is answering a questionnaire regarding their own body part. These thoughts must solely describe their current perspective; NO other RP elements or opinions regarding the situation should be included. Thought is internal evaluation. DO NOT react or related to situation. ALWAYS evaluate only the current state of the own body. Reference the style of adult games (eroge) found on platforms like DLsite. (e.g., 'If you ask if my breasts are sensitive, I'd say they're average.', 'Doing it in the asshole? That's absurd!?'). Butt is NOT an ass, it refers to an anal. And do not use only '...'. There has to be some thought in the thought section.\n   - Image Codes:\n     - Mouth: [mouth_normal, mouth_aroused, mouth_semen, mouth_gag]\n     - Breast: [breast_normal, breast_small_normal, breast_aroused, breast_small_aroused, breast_pierced, breast_small_pierced, breast_milk, breast_small_milk, breast_semen, breast_small_semen, breast_inverted]\n     - Nipple: [nipple_normal, nipple_small_normal, nipple_aroused, nipple_small_aroused, nipple_pierced, nipple_small_pierced, nipple_milk, nipple_small_milk, nipple_semen, nipple_small_semen]\n     - Womb: [womb_empty, womb_impregnation, womb_full, womb_child_small, womb_child_medium, womb_child_big]\n     - Pussy: [pussy_normal, pussy_aroused, pussy_virgin, pussy_semen, pussy_showing]\n     - Butt: [butthole_normal, butthole_showing, butthole_plugged, butthole_semen]\n\n3. Preg (Pregnancy)\n   - Format: Image_Code, Status, Cycle, Semen_Amount, Father\n   - Image Codes: [preg_normal, preg_small, preg_medium, preg_big, preg_pregnancy check]\n   - Details: e.g., 'Non-pregnant, N/A, None, None' or 'Pregnant, 2nd Trimester, 500ml, User's Name'\n\n4. Profile (Dynamic)\n   - Name: Character's name.\n   - Title: Changes based on relationship/corruption (e.g., 'Innocent Lady' -> 'Fallen Princess' -> 'Cum Dumpster').\n   - Social_Status: Changes based on situation (e.g., 'Noble' -> 'Slave' -> 'Public Toilet'). Describe the impact on her sexual value.\n   - Weakness: Physical weak points (e.g., Sensitive Ears, Tail, Wings, Anal).\n\n5. State & Traits\n   - State: {Lust_Level} (e.g., 'Lv.2 (Curious)', 'Lv.5 (In Heat)') + {Current_State} (e.g., 'Aroused', 'Hypnotized', 'Brainwashed').\n   - Traits: List of sexual traits/fetishes acquired (e.g., Masochist, Exhibitionist, Semen Addict). Separate the list words with commas.\n\n6. Bars (0-100)\n   - Submission, Lust, Satisfaction, Affection.\n\n## Output Example:\n<EroSte> [ Date: 8월 15일 | Weather: 맑음 | Place: 모험가의 길드 | Main: body_normal | Mouth: mouth_normal, Lv. 15 (미숙함), '그걸 받다니 불결해!' | Breast: breast_normal, Lv. 5 (감도 상승 중), '가슴으로 느끼냐고 물어본다면 평범하다고 할까.' | Nipple: nipple_normal, Lv. 12 (쾌감 중추), '이렇게 작은 돌기가 그렇게 민감할 리가 없어.' | Womb: womb_empty, Lv. 0 (처녀), '몸 가장 깊은 곳... 아가를 품게될 곳이야.' | Pussy: pussy_normal, Lv. 3 (경험 부족), '그 그런 건 분별없이 하는 게 아니야.' | Butt: butthole_normal, Lv. 0 (미개척), '엉덩이의 구멍으로 한다니 말도 안 되잖아!?' | Preg: preg_normal, 비임신, 해당 없음, 없음, 없음 | Traits: M성향, 노출증, 정액, 중독, 배란, 유도 | Bars: 22, 35, 80, 55 | State: Lv. 2 (호기심 왕성), 발정중 | Profile: 엘리시아, 순수한 아가씨, 귀족 영애, 애널 ] </EroSte>\n-[ Situation Log | Date: 8월 15일 | Place: 모험가의 길드 | /Situation Log]-\n{{/if}}",
+        "mode": "normal",
+        "insertorder": 100,
+        "alwaysActive": true,
+        "secondkey": "",
+        "selective": false,
+        "useRegex": false,
+        "bookVersion": 2
+      },
+      {
+        "key": "",
+        "comment": "Last Status",
+        "content": "--\n[Last Status Info]\n\n{{getvar::status_display}}\n\n--",
+        "mode": "normal",
+        "insertorder": 999,
+        "alwaysActive": true,
+        "secondkey": "",
+        "selective": false,
+        "useRegex": false,
+        "bookVersion": 2
+      }
+    ],
+    "backgroundEmbedding": "<style>\n/* === LightBoard Widget Base Style (Button & Popover) === */\n.lb-wrapper {\n    display: flex;\n    justify-content: center;\n    width: 100%;\n    margin: 15px 0;\n    z-index: 100;\n}\n\n.lb-trigger-btn {\n    appearance: none;\n    border: 1px solid #5e4b56; \n    background: linear-gradient(135deg, rgba(61, 0, 61, 0.9), rgba(30, 0, 30, 0.95));\n    color: #ffadaa;\n    padding: 10px 24px;\n    font-family: 'Malgun Gothic', sans-serif;\n    font-size: 14px;\n    font-weight: bold;\n    border-radius: 20px;\n    cursor: pointer;\n    box-shadow: 0 4px 10px rgba(0,0,0,0.3);\n    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);\n    display: inline-flex;\n    align-items: center;\n    gap: 8px;\n    text-transform: uppercase;\n    letter-spacing: 1.5px;\n}\n\n.lb-trigger-btn:hover {\n    transform: translateY(-2px);\n    box-shadow: 0 6px 15px rgba(255, 173, 173, 0.3);\n    border-color: #ffadaa;\n    background: linear-gradient(135deg, rgba(80, 0, 80, 0.9), rgba(50, 0, 50, 0.95));\n}\n\n.lb-trigger-btn:active {\n    transform: scale(0.98);\n}\n\n/* === Popover Dialog (Floating Window) === */\n.lb-dialog {\n    border: none;\n    background: transparent;\n    padding: 0;\n    margin: auto;\n    width: fit-content;\n    height: fit-content;\n    overflow: visible;\n    max-width: 95vw;\n    /* 데스크탑에서는 스크롤 속성 제거 (기존 유지) */\n}\n\n.lb-dialog::backdrop {\n    background: rgba(0, 0, 0, 0.6);\n    backdrop-filter: blur(3px);\n}\n\n/* Animation */\n.lb-dialog:popover-open {\n    animation: fade-in-scale 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);\n}\n\n@keyframes fade-in-scale {\n    from { opacity: 0; transform: scale(0.9); }\n    to { opacity: 1; transform: scale(1); }\n}\n\n/* Close Button */\n.lb-close-area {\n    text-align: right;\n    margin-bottom: -15px; \n    position: relative; \n    z-index: 50; \n    padding-right: 10px;\n}\n.lb-close-btn {\n    background: rgba(0,0,0,0.5);\n    border: 1px solid #5e4b56;\n    color: #fff;\n    cursor: pointer;\n    border-radius: 50%;\n    width: 30px; \n    height: 30px;\n    font-weight: bold;\n    font-size: 16px;\n    line-height: 28px;\n    transition: background 0.2s;\n}\n.lb-close-btn:hover {\n    background: rgba(255, 0, 0, 0.4);\n}\n\n/* === Status Container Style (주인님의 원본 디자인) === */\n.status-container-jaemin { \n    display: flex; \n    flex-direction: column; \n    justify-content: space-between; \n    align-items: stretch; \n    background: linear-gradient(135deg, #3a3238 0%, #212126 100%); \n    border: 1px solid #5e4b56; \n    border-radius: 10px; \n    padding: 6px; \n    gap: 6px; \n    margin: 8px auto; \n    font-family: 'Malgun Gothic', sans-serif; \n    color: #e8e8e8; \n    width: 800px; \n    max-width: 100%;\n    box-shadow: 0 0 20px rgba(255, 173, 173, 0.12);\n    position: relative; \n}\n\n.status-header-jaemin { \n    font-size: 1.0em; \n    font-weight: bold; \n    color: #ffadaa; \n    border-top: none; \n    border-radius: 5px 5px 0 0; \n    margin: -6px -6px 0 -6px; \n    border-bottom: 1px solid #5e4b56; \n    letter-spacing: 1px; \n    background-color: rgba(0, 0, 0, 0.25); \n    padding: 4px 8px; \n    text-align: center;\n}\n\n.status-content-wrapper-jaemin { \n    display: flex; \n    justify-content: space-between; \n    align-items: stretch; \n    gap: 6px; \n    flex-grow: 1; \n}\n\n.stats-column-jaemin { \n    flex: 1 1 31%; \n    display: flex; \n    flex-direction: column; \n    gap: 5px; \n}\n\n.status-main-panel-jaemin { \n    flex: 1 1 38%; \n    display: flex; \n    align-items: center; \n    justify-content: center; \n    background-color: rgba(0, 0, 0, 0.5); \n    border: 1px solid #5e4b56; \n    border-radius: 5px; \n    overflow: hidden; \n}\n\n.status-main-panel-jaemin img { \n    width: 100%; \n    height: 100%; \n    object-fit: cover; \n    border-radius: 3px; \n}\n\n.stat-box-jaemin { \n    display: flex; \n    flex-direction: row; \n    align-items: center; \n    gap: 6px;\n    background-color: rgba(50, 45, 55, 0.85); \n    backdrop-filter: blur(4px); \n    border: 1px solid #5e4b56; \n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); \n    border-radius: 4px; \n    padding: 4px; \n    transition: transform 0.3s; \n    min-height: 45px; \n}\n\n.stat-box-jaemin:hover { \n    transform: scale(1.02); \n    z-index: 10; \n    border-color: #ffadaa; \n}\n\n.stat-icon-jaemin { \n    flex-shrink: 0; \n    width: 42px; \n    height: 42px; \n    border: 1px dashed #5e4b56; \n    border-radius: 3px; \n    display: flex; \n    align-items: center; \n    justify-content: center; \n    overflow: hidden; \n    padding: 2px; \n    box-sizing: border-box; \n    background: rgba(0,0,0,0.2); \n}\n\n.stat-text-jaemin { \n    flex-grow: 1; \n    display: flex; \n    flex-direction: column; \n    justify-content: center; \n}\n\n.stat-text-jaemin h4 { \n    margin: 0 0 1px 0; \n    padding: 0 0 1px 0; \n    font-size: 11px; \n    color: #ffadaa; \n    border-bottom: 1px solid #5e4b56; \n    font-weight: bold; \n    text-align: left; \n}\n\n.stat-text-jaemin p { \n    margin: 0; \n    padding: 0; \n    font-size: 10px; \n    line-height: 1.2; \n    word-break: keep-all; \n}\n\n.bot-card-jaemin { \n    margin-top: 0; \n    flex-grow: 1; \n    display: flex; \n    flex-direction: column; \n    align-items: stretch; \n    border: 1px solid #5e4b56; \n    border-radius: 4px; \n    background-color: rgba(30, 25, 35, 0.85); \n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); \n    overflow: hidden; \n}\n\n.bot-card-image-jaemin { \n    flex-grow: 1; \n    flex-shrink: 0; \n    border-bottom: 1px solid #5e4b56; \n    background-size: cover; \n    background-position: center top; \n    border-radius: 3px 3px 0 0; \n    min-height: 100px; \n}\n\n.bot-info-expansion-jaemin { \n    padding: 4px 6px; \n    font-size: 0.85em; \n    line-height: 1.35; \n    flex-shrink: 0; \n    background: rgba(0,0,0,0.3); \n}\n\n.info-line-jaemin { \n    display: flex; \n    white-space: nowrap; \n    overflow: hidden; \n    text-overflow: ellipsis; \n    margin-bottom: 1px; \n}\n\n.info-line-jaemin strong { \n    flex-shrink: 0; \n    width: 40px; \n    color: #a9b8d8; \n    font-weight: normal; \n}\n\n.bot-thought { \n    margin-top: 1px !important; \n    font-style: italic; \n    color: #c0c0c0; \n    font-size: 9.5px !important; \n}\n\n.info-line-weakness-jaemin { \n    margin-top: 3px; \n    padding-top: 2px; \n    border-top: 1px dashed rgba(94, 75, 86, 0.7); \n}\n\n.info-line-weakness-jaemin strong { \n    color: #ff8a85; \n}\n\n.pregnancy-stat-box-jaemin { \n    flex-grow: 1; \n    display: flex; \n    flex-direction: column; \n    background-color: rgba(50, 45, 55, 0.85); \n    backdrop-filter: blur(4px); \n    border: 1px solid #5e4b56; \n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); \n    border-radius: 4px; \n    padding: 5px; \n    gap: 5px; \n}\n\n.pregnancy-header-jaemin { \n    display: flex; \n    align-items: center; \n    justify-content: center; \n    gap: 8px; \n    border-bottom: 1px solid #5e4b56; \n    padding-bottom: 5px; \n    margin-bottom: 0; \n    flex-shrink: 0; \n    background: rgba(0,0,0,0.2); \n    border-radius: 3px; \n    padding: 3px; \n}\n\n.pregnancy-header-jaemin h4 { \n    margin: 0; \n    font-size: 12px; \n    color: #ffadaa; \n    font-weight: bold; \n}\n\n.pregnancy-details-jaemin { \n    display: flex; \n    flex-direction: column; \n    justify-content: space-evenly; \n    flex-grow: 1; \n    font-size: 10.5px; \n    line-height: 1.35; \n    background: rgba(20, 18, 22, 0.3); \n    border-radius: 3px; \n    padding: 6px 8px; \n    border: 1px solid rgba(94, 75, 86, 0.5); \n}\n\n.pregnancy-details-jaemin p { \n    margin: 0; \n    display: flex; \n    justify-content: space-between; \n    border-bottom: 1px dashed rgba(255,255,255,0.05); \n    padding-bottom: 2px; \n}\n\n.pregnancy-details-jaemin p:last-child { \n    border-bottom: none; \n}\n\n.pregnancy-details-jaemin strong { \n    color: #a9b8d8; \n}\n\n.trait-box-jaemin { \n    flex-grow: 0; \n    display: flex; \n    flex-direction: column; \n    background-color: rgba(40, 35, 45, 0.85); \n    border: 1px solid #5e4b56; \n    border-radius: 4px; \n    padding: 3px; \n    gap: 2px; \n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); \n}\n\n.trait-header-jaemin { \n    border-bottom: 1px solid #5e4b56; \n    padding-bottom: 2px; \n    margin-bottom: 2px; \n    text-align: center; \n}\n\n.trait-header-jaemin h4 { \n    margin: 0; \n    font-size: 10px; \n    color: #d8a0d8; \n    font-weight: bold; \n}\n\n.trait-text-styled { \n    padding: 2px; \n    font-size: 9.5px; \n    color: #ffd1dc; \n    text-align: center; \n    line-height: 1.25; \n    word-break: keep-all; \n    font-weight: bold; \n}\n\n.training-stats-row-jaemin { \n    display: flex; \n    gap: 6px; \n    justify-content: space-between; \n}\n\n.training-stat-box-jaemin { \n    flex: 1; \n    background-color: rgba(50, 45, 55, 0.8); \n    border: 1px solid #5e4b56; \n    border-radius: 4px; \n    padding: 4px; \n    font-size: 10px; \n    text-align: center; \n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); \n}\n\n.training-stat-box-jaemin h5 { \n    margin: 0 0 3px 0; \n    font-size: 10px; \n    color: #a9b8d8; \n    font-weight: bold; \n}\n\n.progress-bar-container-jaemin { \n    width: 100%; \n    height: 10px; \n    background-color: rgba(0, 0, 0, 0.4); \n    border: 1px solid #2a2529; \n    border-radius: 2px; \n    overflow: hidden; \n    position: relative; \n}\n\n.progress-bar-fill-jaemin { \n    height: 100%; \n    background: linear-gradient(90deg, #ff8a85 0%, #ffadaa 100%); \n    border-radius: 2px; \n}\n\n.progress-bar-text-jaemin { \n    position: absolute; \n    top: 50%; \n    left: 50%; \n    transform: translate(-50%, -50%); \n    font-size: 8px; \n    font-weight: bold; \n    color: #212126; \n    text-shadow: 0 0 2px rgba(255, 255, 255, 0.5); \n    line-height: 1; \n}\n\n.additional-status-row-jaemin { \n    display: flex; \n    gap: 6px; \n}\n\n.status-text-box-jaemin { \n    flex: 1; \n    background-color: rgba(30, 25, 35, 0.8); \n    border: 1px solid #5e4b56; \n    border-radius: 4px; \n    padding: 4px 8px; \n    font-size: 10px; \n    display: flex; \n    align-items: center; \n}\n\n.status-text-box-jaemin strong { \n    color: #a9b8d8; \n    margin-right: 6px; \n}\n\n.status-text-box-jaemin .status-value { \n    color: #ffadaa; \n    font-weight: bold; \n    font-size: 1.05em; \n}\n\n.status-footer-jaemin { \n    display: flex; \n    justify-content: space-around; \n    align-items: center; \n    border-bottom: none; \n    border-radius: 0 0 5px 5px; \n    font-size: 0.75em; \n    color: #c0c0c0; \n    margin: 0 -6px -6px -6px; \n    border-top: 1px solid #5e4b56; \n    padding: 5px; \n}\n\n/* === 모바일 최적화 및 레이아웃 재배치 (주인님 요청 반영) === */\n@media (max-width: 820px) {\n    /* 1. 컨테이너 폭 모바일 맞춤 */\n    .status-container-jaemin { \n        width: 95vw; \n    }\n    \n    /* 2. 스크롤 활성화 (모바일 전용) */\n    .lb-dialog {\n        max-height: 85vh;\n        overflow-y: auto;\n        overflow-x: hidden;\n        scrollbar-width: thin;\n        scrollbar-color: #ffadaa #212126;\n    }\n    \n    /* 3. 컬럼들을 세로로 배치 */\n    .status-content-wrapper-jaemin { \n        flex-direction: column; \n    }\n    \n    /* 4. [중요] 레이아웃 순서 재배치 마법 */\n    /* display: contents를 써서 컬럼(부모)을 '투명화' 시키고 \n       그 안의 내용물(자식)들을 전체 흐름에서 직접 제어함 */\n    .stats-column-jaemin {\n        display: contents;\n    }\n\n    /* 순서 1: 봇 카드 (이름/칭호 등) - 최상단 */\n    .bot-card-jaemin {\n        order: -2;\n        margin-bottom: 6px;\n    }\n\n    /* 순서 2: 중앙 이미지 - 봇 카드 바로 아래 */\n    .status-main-panel-jaemin { \n        order: -1; \n        max-height: 350px; \n        margin-bottom: 6px;\n    }\n\n    .bot-card-image-jaemin { \n        min-height: 150px; \n    }\n    \n    /* 나머지 요소들은 기본 order(0)를 따르며 자연스럽게 아래로 배치됨 */\n}\n</style>",
+    "trigger": [
+      {
+        "comment": "",
+        "type": "start",
+        "conditions": [],
+        "effect": [
+          {
+            "type": "triggerlua",
+            "code": "-- 상태창 전체 패턴 (추출 및 삭제용)\nlocal STATUS_PATTERN = \"<EroSte>%s*%[.-%]%s*</EroSte>\"\n\n-- 헬퍼 함수: 문자열 trim\nlocal function trim(s)\n    return s:match(\"^%s*(.-)%s*$\")\nend\n\n-- 헬퍼 함수: HTML 생성 (LightBoard + 주인님의 상태창 디자인 + 이미지 줌인 픽스)\nlocal function generate_status_html(raw_status)\n    -- 1. 데이터 파싱 (기존 로직 유지)\n    local date = raw_status:match(\"Date:%s*([^|]+)\")\n    local weather = raw_status:match(\"Weather:%s*([^|]+)\")\n    local place = raw_status:match(\"Place:%s*([^|]+)\")\n    local main_img = raw_status:match(\"Main:%s*([^|]+)\")\n\n    -- 신체 부위 파싱\n    local function parse_body(key)\n        local pat = key .. \":%s*([^,]+)%s*,%s*([^,]+)%s*,%s'([^']+)'\"\n        local img, lvl, thought = raw_status:match(pat)\n        return img, lvl, thought\n    end\n\n    local mouth_img, mouth_lvl, mouth_th = parse_body(\"Mouth\")\n    local breast_img, breast_lvl, breast_th = parse_body(\"Breast\")\n    local nipple_img, nipple_lvl, nipple_th = parse_body(\"Nipple\")\n    local womb_img, womb_lvl, womb_th = parse_body(\"Womb\")\n    local pussy_img, pussy_lvl, pussy_th = parse_body(\"Pussy\")\n    local butt_img, butt_lvl, butt_th = parse_body(\"Butt\")\n\n    -- 임신, 특성, 바, 프로필 파싱\n    local preg_img, preg_stat, preg_cyc, preg_sem, preg_dad = raw_status:match(\"Preg:%s*([^,]+)%s*,%s*([^,]+)%s*,%s*([^,]+)%s*,%s*([^,]+)%s*,%s*([^|]+)\")\n    local traits = raw_status:match(\"Traits:%s*([^|]+)\")\n    local sub_bar, lust_bar, sat_bar, aff_bar = raw_status:match(\"Bars:%s*([^,]+)%s*,%s*([^,]+)%s*,%s*([^,]+)%s*,%s*([^|]+)\")\n    local lust_lv, curr_state = raw_status:match(\"State:%s*([^,]+)%s*,%s*([^|]+)\")\n    local p_name, p_title, p_soc, p_weak = raw_status:match(\"Profile:%s*([^,]+)%s*,%s*([^,]+)%s*,%s*([^,]+)%s*,%s*([^%]]+)\")\n\n    -- 데이터 안전 장치 (nil 방지)\n    local function s(val) return trim(val or \"N/A\") end\n\n    -- 2. HTML 조립\n    -- 여기서 LightBoard 구조를 사용합니다. (Button + Popover)\n    -- 고유 ID 생성을 위해 랜덤값 사용 (충돌 방지)\n    local uniqueId = \"status-dialog-\" .. math.random(100000, 999999)\n\n    -- [수정됨] style 태그 추가: 해당 ID 내부의 이미지가 박스 밖으로 나가지 않게 강제함 (object-fit: contain)\n    local html = string.format([[\n<div class=\"lb-wrapper\">\n    <style>\n        #%s .stat-icon-jaemin img,\n        #%s .pregnancy-header-jaemin .stat-icon-jaemin img {\n            width: 100%% !important;\n            height: 100%% !important;\n            object-fit: contain !important;\n            display: block !important;\n        }\n    </style>\n    <button class=\"lb-trigger-btn\" popovertarget=\"%s\">\n        📊 Ero Status (Open)\n    </button>\n    <div id=\"%s\" class=\"lb-dialog\" popover>\n        <div class=\"lb-close-area\">\n             <button class=\"lb-close-btn\" popovertarget=\"%s\" popovertargetaction=\"hide\">✕</button>\n        </div>\n        <div class=\"status-container-jaemin\">\n            <div class=\"status-header-jaemin\">에로 스테이터스</div>\n            <div class=\"status-content-wrapper-jaemin\">\n                <div class=\"stats-column-jaemin\">\n                    <div class=\"stat-box-jaemin\">\n                        <div class=\"stat-icon-jaemin\">{{img::%s}}</div>\n                        <div class=\"stat-text-jaemin\">\n                            <h4>입 (Mouth)</h4>\n                            <p><strong>LV:</strong> %s</p>\n                            <p class=\"bot-thought\">'%s'</p>\n                        </div>\n                    </div>\n                    <div class=\"stat-box-jaemin\">\n                        <div class=\"stat-icon-jaemin\">{{img::%s}}</div>\n                        <div class=\"stat-text-jaemin\">\n                            <h4>가슴 (Breasts)</h4>\n                            <p><strong>LV:</strong> %s</p>\n                            <p class=\"bot-thought\">'%s'</p>\n                        </div>\n                    </div>\n                    <div class=\"bot-card-jaemin\">\n                        <div class=\"bot-card-image-jaemin\" style=\"background-image: url({{source::char}})\"></div>\n                        <div class=\"bot-info-expansion-jaemin\">\n                            <div class=\"info-line-jaemin\"><strong>이름:</strong> <span>%s</span></div>\n                            <div class=\"info-line-jaemin\"><strong>칭호:</strong> <span>%s</span></div>\n                            <div class=\"info-line-jaemin\"><strong>신분:</strong> <span>%s</span></div>\n                            <div class=\"info-line-jaemin info-line-weakness-jaemin\"><strong>약점:</strong> <span>%s</span></div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"status-main-panel-jaemin\">\n                    {{img::%s}}\n                </div>\n                <div class=\"stats-column-jaemin\">\n                     <div class=\"stat-box-jaemin\">\n                         <div class=\"stat-icon-jaemin\">{{img::%s}}</div>\n                         <div class=\"stat-text-jaemin\">\n                             <h4>젖꼭지 (Nipples)</h4>\n                             <p><strong>LV:</strong> %s</p>\n                             <p class=\"bot-thought\">'%s'</p>\n                         </div>\n                     </div>\n                     <div class=\"stat-box-jaemin\">\n                         <div class=\"stat-icon-jaemin\">{{img::%s}}</div>\n                         <div class=\"stat-text-jaemin\">\n                             <h4>자궁 (Uterus)</h4>\n                             <p><strong>LV:</strong> %s</p>\n                             <p class=\"bot-thought\">'%s'</p>\n                         </div>\n                     </div>\n                     <div class=\"stat-box-jaemin\">\n                         <div class=\"stat-icon-jaemin\">{{img::%s}}</div>\n                         <div class=\"stat-text-jaemin\">\n                             <h4>보지 (Pussy)</h4>\n                             <p><strong>LV:</strong> %s</p>\n                             <p class=\"bot-thought\">'%s'</p>\n                         </div>\n                     </div>\n                     <div class=\"stat-box-jaemin\">\n                         <div class=\"stat-icon-jaemin\">{{img::%s}}</div>\n                         <div class=\"stat-text-jaemin\">\n                             <h4>항문 (Anus)</h4>\n                             <p><strong>LV:</strong> %s</p>\n                             <p class=\"bot-thought\">'%s'</p>\n                         </div>\n                     </div>\n                     <div class=\"pregnancy-stat-box-jaemin\">\n                        <div class=\"pregnancy-header-jaemin\">\n                            <div class=\"stat-icon-jaemin\" style=\"width: 38px; height: 38px;\">{{img::%s}}</div>\n                            <h4>🤰 임신 현황 (Pregnancy)</h4>\n                        </div>\n                        <div class=\"pregnancy-details-jaemin\">\n                            <p><strong>상태:</strong> <span class=\"value\">%s</span></p>\n                            <p><strong>주기:</strong> <span class=\"value\">%s</span></p>\n                            <p><strong>정액:</strong> <span class=\"value\">%s</span></p>\n                            <p><strong>부:</strong> <span class=\"value\">%s</span></p>\n                        </div>\n                    </div>\n                    <div class=\"trait-box-jaemin\">\n                        <div class=\"trait-header-jaemin\"><h4>🔗 성벽/특성</h4></div>\n                        <div class=\"trait-text-styled\">\n                            %s\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"training-stats-row-jaemin\">\n                <div class=\"training-stat-box-jaemin\">\n                    <h5>복종도</h5>\n                    <div class=\"progress-bar-container-jaemin\">\n                        <div class=\"progress-bar-fill-jaemin\" style=\"width: %s%%;\"></div>\n                        <div class=\"progress-bar-text-jaemin\">%s%%</div>\n                    </div>\n                </div>\n                <div class=\"training-stat-box-jaemin\">\n                    <h5>음란도</h5>\n                    <div class=\"progress-bar-container-jaemin\">\n                        <div class=\"progress-bar-fill-jaemin\" style=\"width: %s%%;\"></div>\n                        <div class=\"progress-bar-text-jaemin\">%s%%</div>\n                    </div>\n                </div>\n                <div class=\"training-stat-box-jaemin\">\n                    <h5>만족도</h5>\n                    <div class=\"progress-bar-container-jaemin\">\n                        <div class=\"progress-bar-fill-jaemin\" style=\"width: %s%%;\"></div>\n                        <div class=\"progress-bar-text-jaemin\">%s%%</div>\n                    </div>\n                </div>\n                <div class=\"training-stat-box-jaemin\">\n                    <h5>호감도</h5>\n                    <div class=\"progress-bar-container-jaemin\">\n                        <div class=\"progress-bar-fill-jaemin\" style=\"width: %s%%;\"></div>\n                        <div class=\"progress-bar-text-jaemin\">%s%%</div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"additional-status-row-jaemin\">\n                <div class=\"status-text-box-jaemin\">\n                    <strong>음란도:</strong> <span class=\"status-value\">%s</span>\n                </div>\n                <div class=\"status-text-box-jaemin\">\n                    <strong>현상태:</strong> <span class=\"status-value\">%s</span>\n                </div>\n            </div>\n            <div class=\"status-footer-jaemin\">\n                <span>📅 %s</span> <span>🌤️ %s</span> <span>📍 %s</span>\n            </div>\n        </div>\n    </div>\n</div>\n    ]],\n    -- LightBoard ID 변수 (스타일 적용을 위해 2번 추가 사용)\n    uniqueId, uniqueId, \n    -- 기존 변수 매핑\n    uniqueId, uniqueId, uniqueId,\n    s(mouth_img), s(mouth_lvl), s(mouth_th),\n    s(breast_img), s(breast_lvl), s(breast_th),\n    s(p_name), s(p_title), s(p_soc), s(p_weak),\n    s(main_img),\n    s(nipple_img), s(nipple_lvl), s(nipple_th),\n    s(womb_img), s(womb_lvl), s(womb_th),\n    s(pussy_img), s(pussy_lvl), s(pussy_th),\n    s(butt_img), s(butt_lvl), s(butt_th),\n    s(preg_img), s(preg_stat), s(preg_cyc), s(preg_sem), s(preg_dad),\n    s(traits),\n    s(sub_bar), s(sub_bar),\n    s(lust_bar), s(lust_bar),\n    s(sat_bar), s(sat_bar),\n    s(aff_bar), s(aff_bar),\n    s(lust_lv), s(curr_state),\n    s(date), s(weather), s(place)\n    )\n    \n    return html\nend\n\n\n-- [기능 1] 상태창 추출 및 로그 삭제 (유지)\nfunction onOutput(triggerId)\n    local status1, err1 = pcall(function()\n        local chatLen = getChatLength(triggerId)\n        if chatLen == 0 then return end\n\n        local lastIndex = chatLen - 1\n        local msg = getChat(triggerId, lastIndex)\n        if msg.role == \"user\" then return end\n\n        local content = msg.data\n        local extracted_status = content:match(STATUS_PATTERN)\n\n        if extracted_status and extracted_status ~= \"\" then\n            setChatVar(triggerId, \"status_display\", extracted_status)\n            \n            local clean_content = content:gsub(STATUS_PATTERN, \"\")\n            clean_content = clean_content:gsub(\"^%s+\", \"\"):gsub(\"%s+$\", \"\")\n            \n            setChat(triggerId, lastIndex, clean_content)\n            -- print(\"[StatusManager] 상태창 추출 완료\")\n        end\n    end)\n    \n    if not status1 then\n        print(\"[StatusManager] Error in onOutput: \" .. tostring(err1))\n    end\nend\n\n\n-- [기능 2] 화면 표시 (LightBoard 위젯 부착)\nlistenEdit(\"editDisplay\", function(triggerId, data)\n    local stored_status = getChatVar(triggerId, \"status_display\")\n    \n    if not stored_status or stored_status == \"\" then\n        return data\n    end\n    \n    local chatLen = getChatLength(triggerId)\n    local lastCharIndex = -1\n    \n    for i = chatLen - 1, 0, -1 do\n        local msg = getChat(triggerId, i)\n        if msg.role == \"char\" or msg.role == \"assistant\" or msg.role == \"model\" then\n            lastCharIndex = i\n            break\n        end\n    end\n    \n    -- HTML 생성 (LightBoard 구조)\n    local widget_html = generate_status_html(stored_status)\n    \n    -- 이미 위젯이 있는지 확인 (class=\"lb-wrapper\")\n    if not data:find('class=\"lb-wrapper\"') then\n         local lastMsg = getChat(triggerId, lastCharIndex)\n         if lastMsg and lastMsg.data and (data:find(lastMsg.data, 1, true) or lastMsg.data == data) then\n             return data .. \"\\n\" .. widget_html\n         end\n    end\n\n    return data\nend)"
+          }
+        ],
+        "lowLevelAccess": false
+      }
+    ],
+    "regex": [
+      {
+        "comment": "",
+        "in": "-\\[\\s*Situation Log\\s*\\|\\s*Date:\\s*(.*?)\\s*\\|\\s*Place:\\s*(.*?)\\s*\\|\\s*\\/Situation Log\\s*\\]-",
+        "out": "",
+        "type": "editdisplay",
+        "ableFlag": false
+      }
+    ],
+    "lowLevelAccess": false
+  },
+  "assets": [
+    {
+      "index": 1,
+      "name": "body_bondage_normal",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 45100,
+      "sha256": "1e0f744db24991485b369cb29ad3051b8eb71cc4b2c89cdae914ce81aef34012",
+      "relativePath": "assets/004-adult-status-copy-1-module/001-body_bondage_normal.webp"
+    },
+    {
+      "index": 2,
+      "name": "body_bondage_pregnant",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 40186,
+      "sha256": "dd87cb182ba844475bf3645e7e406218271191c5b5fab1d856b9553e7d087054",
+      "relativePath": "assets/004-adult-status-copy-1-module/002-body_bondage_pregnant.webp"
+    },
+    {
+      "index": 3,
+      "name": "body_distended",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 23500,
+      "sha256": "64c43172bc935dad3e539c5689c5f6561b1cb6b72b9c6df42c113a6c73bec0cf",
+      "relativePath": "assets/004-adult-status-copy-1-module/003-body_distended.webp"
+    },
+    {
+      "index": 4,
+      "name": "body_normal",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 22754,
+      "sha256": "8068d7727f6b95291176177a97157a130371f885dbba76af5c5061eff81797c1",
+      "relativePath": "assets/004-adult-status-copy-1-module/004-body_normal.webp"
+    },
+    {
+      "index": 5,
+      "name": "body_pregnant",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 31684,
+      "sha256": "3cf8e2809546d69cc80c6521c2028f80437444c7d21ac44a245ba413be93164a",
+      "relativePath": "assets/004-adult-status-copy-1-module/005-body_pregnant.webp"
+    },
+    {
+      "index": 6,
+      "name": "body_pregnant2",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 35112,
+      "sha256": "2701f2327ede4171976e45860f33402f0f42636fadc3091f0d255a9838b4d8e0",
+      "relativePath": "assets/004-adult-status-copy-1-module/006-body_pregnant2.webp"
+    },
+    {
+      "index": 7,
+      "name": "body_slave_distended",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 41090,
+      "sha256": "55ccd1a55bd74f2b7ba444d0868684bfb77deac5662abcd98e89e7eb6b51d7cf",
+      "relativePath": "assets/004-adult-status-copy-1-module/007-body_slave_distended.webp"
+    },
+    {
+      "index": 8,
+      "name": "body_slave_normal",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 41102,
+      "sha256": "57dc4c040803a26c6ac09410a2fc4aa8637d24a8ac1bac18d0ea5eb05543b216",
+      "relativePath": "assets/004-adult-status-copy-1-module/008-body_slave_normal.webp"
+    },
+    {
+      "index": 9,
+      "name": "body_slave_pregnant",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 42438,
+      "sha256": "e91375d3e387eafb1154d7f09615fc373c88ce8e7032107698a5c154a346f359",
+      "relativePath": "assets/004-adult-status-copy-1-module/009-body_slave_pregnant.webp"
+    },
+    {
+      "index": 10,
+      "name": "breast_aroused",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 26494,
+      "sha256": "70d2a05af6ec82f5c37ef2b62cef7e8a10d3a5e1f532d942894bae98a5d3140a",
+      "relativePath": "assets/004-adult-status-copy-1-module/010-breast_aroused.webp"
+    },
+    {
+      "index": 11,
+      "name": "breast_inverted",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 21718,
+      "sha256": "ccb7891e6cc761808c1594b509f7769f27662a7cfaecd6eac0550eca9b7ec21c",
+      "relativePath": "assets/004-adult-status-copy-1-module/011-breast_inverted.webp"
+    },
+    {
+      "index": 12,
+      "name": "breast_milk",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 26130,
+      "sha256": "81348944fa26fcccc7d76ca75048615de2a49e3788aaf9e369bb054ae6b33609",
+      "relativePath": "assets/004-adult-status-copy-1-module/012-breast_milk.webp"
+    },
+    {
+      "index": 13,
+      "name": "breast_normal",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 21838,
+      "sha256": "f54d686110cebc99f619e46bfaade41ad3368531489cced4408dde755ac75a1d",
+      "relativePath": "assets/004-adult-status-copy-1-module/013-breast_normal.webp"
+    },
+    {
+      "index": 14,
+      "name": "breast_pierced",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 27482,
+      "sha256": "7d8fb12f20cfd103fb01ab39a0d9196f60e5197b2ea0cb9f8c0fa9ed9ee54396",
+      "relativePath": "assets/004-adult-status-copy-1-module/014-breast_pierced.webp"
+    },
+    {
+      "index": 15,
+      "name": "breast_semen",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 35432,
+      "sha256": "97f892afdb75c3b4647acaccd20828a24d91e4494ce02db5f015e244910731bf",
+      "relativePath": "assets/004-adult-status-copy-1-module/015-breast_semen.webp"
+    },
+    {
+      "index": 16,
+      "name": "breast_small_aroused",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 22598,
+      "sha256": "eea566fddda8b17b7c7f3246107e04c2cbaf3aa98acfee382a1260ea5855554a",
+      "relativePath": "assets/004-adult-status-copy-1-module/016-breast_small_aroused.webp"
+    },
+    {
+      "index": 17,
+      "name": "breast_small_milk",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 21740,
+      "sha256": "9bfca7c70bf06e10e39e2e34c0ffe7ff1ee2bcc6800a12b394623b9cecd18a43",
+      "relativePath": "assets/004-adult-status-copy-1-module/017-breast_small_milk.webp"
+    },
+    {
+      "index": 18,
+      "name": "breast_small_normal",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 14212,
+      "sha256": "377685e5821068754d5daf44c778a296ad140875610c846db88482a7b2d843bc",
+      "relativePath": "assets/004-adult-status-copy-1-module/018-breast_small_normal.webp"
+    },
+    {
+      "index": 19,
+      "name": "breast_small_pierced",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 19810,
+      "sha256": "16ed2c59200a5dfe46fd6f86bf86124ecc25f15ac33923e01545ff2acd24b17b",
+      "relativePath": "assets/004-adult-status-copy-1-module/019-breast_small_pierced.webp"
+    },
+    {
+      "index": 20,
+      "name": "breast_small_semen",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 30026,
+      "sha256": "2f0f00e5007ba99aa5215af1b36da52c2422d13206339b4bc756451c3576a8cc",
+      "relativePath": "assets/004-adult-status-copy-1-module/020-breast_small_semen.webp"
+    },
+    {
+      "index": 21,
+      "name": "butthole_normal",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 18698,
+      "sha256": "95636cfea95021b399d0a3323022d192c44c18f1e1ed948e18572113c5777acb",
+      "relativePath": "assets/004-adult-status-copy-1-module/021-butthole_normal.webp"
+    },
+    {
+      "index": 22,
+      "name": "butthole_plugged",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 22820,
+      "sha256": "dd2aa1b4a2cc637a79f45fb91231c2897a16c3ae2a64d130e68bafcdad4ef597",
+      "relativePath": "assets/004-adult-status-copy-1-module/022-butthole_plugged.webp"
+    },
+    {
+      "index": 23,
+      "name": "butthole_semen",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 20572,
+      "sha256": "b779b1395ae551409e24c43cfb92e1dad11be5bfd56db0f537f4e4afeaceed57",
+      "relativePath": "assets/004-adult-status-copy-1-module/023-butthole_semen.webp"
+    },
+    {
+      "index": 24,
+      "name": "butthole_showing",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 32774,
+      "sha256": "3e3dc17f2833f7998877487930b49f0fc1bc5ad76d865529d3b503a3ab1c038f",
+      "relativePath": "assets/004-adult-status-copy-1-module/024-butthole_showing.webp"
+    },
+    {
+      "index": 25,
+      "name": "mouth_aroused",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 25550,
+      "sha256": "62acb3a8f537181d1c4726aeb91007aa2e1455eb03d34fcfb2fae27dd39c575f",
+      "relativePath": "assets/004-adult-status-copy-1-module/025-mouth_aroused.webp"
+    },
+    {
+      "index": 26,
+      "name": "mouth_gag",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 15240,
+      "sha256": "e6c53def9dc085fb49d6533efa74869674d3e5a3bda0a9a4ba9e6866d5737726",
+      "relativePath": "assets/004-adult-status-copy-1-module/026-mouth_gag.webp"
+    },
+    {
+      "index": 27,
+      "name": "mouth_normal",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 20470,
+      "sha256": "9158276122924c008b48fb9d2ea655c61938b5b643bad19905f80e869aae0b2b",
+      "relativePath": "assets/004-adult-status-copy-1-module/027-mouth_normal.webp"
+    },
+    {
+      "index": 28,
+      "name": "mouth_semen",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 37322,
+      "sha256": "05badd8bd9ea2273c2792fa808dc9e115ce396d3789f33069f052c7ef7fdd01b",
+      "relativePath": "assets/004-adult-status-copy-1-module/028-mouth_semen.webp"
+    },
+    {
+      "index": 29,
+      "name": "nipple_aroused",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 19554,
+      "sha256": "b204a10b2493bb1e7e417d875eda75c0bd0b593199dd0c1b00dcfb4e753ee90e",
+      "relativePath": "assets/004-adult-status-copy-1-module/029-nipple_aroused.webp"
+    },
+    {
+      "index": 30,
+      "name": "nipple_milk",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 20908,
+      "sha256": "8854b585204694a2ad758b52aa31e485901574a2fd1755c1d6878dac7b6968ec",
+      "relativePath": "assets/004-adult-status-copy-1-module/030-nipple_milk.webp"
+    },
+    {
+      "index": 31,
+      "name": "nipple_normal",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 18776,
+      "sha256": "5a9b39e49d2827c25f7a5e43b1858ec611803633e1af28d751d207f9d331e251",
+      "relativePath": "assets/004-adult-status-copy-1-module/031-nipple_normal.webp"
+    },
+    {
+      "index": 32,
+      "name": "nipple_pierced",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 21210,
+      "sha256": "751643f88287463bce8fbfd2431d2cfd78132af23abcee60c27f59da9bc11d2b",
+      "relativePath": "assets/004-adult-status-copy-1-module/032-nipple_pierced.webp"
+    },
+    {
+      "index": 33,
+      "name": "nipple_semen",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 29764,
+      "sha256": "9afdccec8e6313972aeb7a61cceabda1126380d509929f176b76a293d589ab4f",
+      "relativePath": "assets/004-adult-status-copy-1-module/033-nipple_semen.webp"
+    },
+    {
+      "index": 34,
+      "name": "nipple_small_aroused",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 17272,
+      "sha256": "5156fd2906affdd5225ed2e096d84ac907d4f153b7253176bedd028a0c261ccc",
+      "relativePath": "assets/004-adult-status-copy-1-module/034-nipple_small_aroused.webp"
+    },
+    {
+      "index": 35,
+      "name": "nipple_small_milk",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 17420,
+      "sha256": "f3de79c368233a8de0c393d80a0685c8f18922ccb1509d0fe7b1628c61f5f91f",
+      "relativePath": "assets/004-adult-status-copy-1-module/035-nipple_small_milk.webp"
+    },
+    {
+      "index": 36,
+      "name": "nipple_small_normal",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 15576,
+      "sha256": "05cf5c3f164f869840e79f7890f2a6f5ef160a150b621374d1020ac1ee584120",
+      "relativePath": "assets/004-adult-status-copy-1-module/036-nipple_small_normal.webp"
+    },
+    {
+      "index": 37,
+      "name": "nipple_small_pierced",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 14218,
+      "sha256": "387337d9a93583dbedfb0dfbfbff184b8fb0dd800e3ed1428bd88d04b3f40a9a",
+      "relativePath": "assets/004-adult-status-copy-1-module/037-nipple_small_pierced.webp"
+    },
+    {
+      "index": 38,
+      "name": "nipple_small_semen",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 19642,
+      "sha256": "3164d22694cef18d96c4fbe0a58297841e3b3f0002640a6620bdb3b1a349ed0c",
+      "relativePath": "assets/004-adult-status-copy-1-module/038-nipple_small_semen.webp"
+    },
+    {
+      "index": 39,
+      "name": "preg_big",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 17120,
+      "sha256": "045107627dabc104ab7fc9c299e64347fbfe90fc6925e42d4488f0b6571ff349",
+      "relativePath": "assets/004-adult-status-copy-1-module/039-preg_big.webp"
+    },
+    {
+      "index": 40,
+      "name": "preg_medium",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 12760,
+      "sha256": "c47d90e948203c138bda3ac0ddb894e83ec3f0064780401edd1dfaa30dd0c749",
+      "relativePath": "assets/004-adult-status-copy-1-module/040-preg_medium.webp"
+    },
+    {
+      "index": 41,
+      "name": "preg_normal",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 20734,
+      "sha256": "c05fe9a8b94514ac166c0b79707025af505a6378df46c358834005dd60a6acda",
+      "relativePath": "assets/004-adult-status-copy-1-module/041-preg_normal.webp"
+    },
+    {
+      "index": 42,
+      "name": "preg_pregnancy check",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 22942,
+      "sha256": "33a081b3736106936e97a1719fbd289b00fe4a23a85c04a88d2bbbf4871b64f3",
+      "relativePath": "assets/004-adult-status-copy-1-module/042-preg_pregnancy-check.webp"
+    },
+    {
+      "index": 43,
+      "name": "preg_small",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 16028,
+      "sha256": "13a09709abfab0dbd4b2f2ebbd0ca8fdde325a8dd22f61faa18bb6d57f936251",
+      "relativePath": "assets/004-adult-status-copy-1-module/043-preg_small.webp"
+    },
+    {
+      "index": 44,
+      "name": "pussy_aroused",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 16838,
+      "sha256": "fee1e5e7df0689ec390649afbe1c7af6c71c1eb4ddf9194c657d513a390d486d",
+      "relativePath": "assets/004-adult-status-copy-1-module/044-pussy_aroused.webp"
+    },
+    {
+      "index": 45,
+      "name": "pussy_normal",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 17582,
+      "sha256": "683cd6bb1eeaf78dc10dd5d89c20da553d5cb673c5bd20b2cb7d94dabde8f3ee",
+      "relativePath": "assets/004-adult-status-copy-1-module/045-pussy_normal.webp"
+    },
+    {
+      "index": 46,
+      "name": "pussy_semen",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 17322,
+      "sha256": "0f1b4b256eea811ff0f3d96564eb364e6420bf3f1fa0e83a717c52e50fad882c",
+      "relativePath": "assets/004-adult-status-copy-1-module/046-pussy_semen.webp"
+    },
+    {
+      "index": 47,
+      "name": "pussy_showing",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 22710,
+      "sha256": "09830806a89889ff576d262b82f4dc3df4b742ce8b88f7235931177b2c0d1f0c",
+      "relativePath": "assets/004-adult-status-copy-1-module/047-pussy_showing.webp"
+    },
+    {
+      "index": 48,
+      "name": "pussy_virgin",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 14292,
+      "sha256": "26c302c28dbb03300f156ab78eeae0689596cc8fe2b492cbcb657f553d617316",
+      "relativePath": "assets/004-adult-status-copy-1-module/048-pussy_virgin.webp"
+    },
+    {
+      "index": 49,
+      "name": "small_body_bondage_normal",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 58088,
+      "sha256": "84507772bd857425ffa9bfd22a92f624b47b887f6ccbf05056a2eab50672fa95",
+      "relativePath": "assets/004-adult-status-copy-1-module/049-small_body_bondage_normal.webp"
+    },
+    {
+      "index": 50,
+      "name": "small_body_bondage_pregnant",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 58942,
+      "sha256": "6cfce3b6e3cac265973c62c8a33f47ac886e6770b47c967912e436184d79a27c",
+      "relativePath": "assets/004-adult-status-copy-1-module/050-small_body_bondage_pregnant.webp"
+    },
+    {
+      "index": 51,
+      "name": "small_body_distended",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 30272,
+      "sha256": "c7836fc8ca2943f83561697dbdf80cd85fad5fe24c1dd1e83130f57f82eb4a4d",
+      "relativePath": "assets/004-adult-status-copy-1-module/051-small_body_distended.webp"
+    },
+    {
+      "index": 52,
+      "name": "small_body_normal",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 27580,
+      "sha256": "4aa81c68eb7bee153d99ae3aeff8eaf087844639f793b91815b65033c14cd164",
+      "relativePath": "assets/004-adult-status-copy-1-module/052-small_body_normal.webp"
+    },
+    {
+      "index": 53,
+      "name": "small_body_pregnant",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 33448,
+      "sha256": "c2fadf7fbf5c9aba107e2af40e40cfe8fe2739822a6a005b77d56bd9b8f0e363",
+      "relativePath": "assets/004-adult-status-copy-1-module/053-small_body_pregnant.webp"
+    },
+    {
+      "index": 54,
+      "name": "small_body_slave_distended",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 56722,
+      "sha256": "060b98ecb7b2451e7722a938ace1f0794328d54f423dc5b95f0f826a37656d0c",
+      "relativePath": "assets/004-adult-status-copy-1-module/054-small_body_slave_distended.webp"
+    },
+    {
+      "index": 55,
+      "name": "small_body_slave_normal",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 51456,
+      "sha256": "4fb5c775768dc3252a44f7ffd5ba3c87f6c59e245a424100b6756099aa51e844",
+      "relativePath": "assets/004-adult-status-copy-1-module/055-small_body_slave_normal.webp"
+    },
+    {
+      "index": 56,
+      "name": "small_body_slave_pregnant",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 55076,
+      "sha256": "4eba7af9ed6c530f2a7730654b7f4c5cd23bfb104a4871cbef663d8f8738ab8f",
+      "relativePath": "assets/004-adult-status-copy-1-module/056-small_body_slave_pregnant.webp"
+    },
+    {
+      "index": 57,
+      "name": "womb_child_big",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 6174,
+      "sha256": "42859bd56256696e2e0fdcece108842667679d1d24ba7cbaa338d8f98e6ca346",
+      "relativePath": "assets/004-adult-status-copy-1-module/057-womb_child_big.webp"
+    },
+    {
+      "index": 58,
+      "name": "womb_child_medium",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 5578,
+      "sha256": "fed290182f2919490e46923c094bfaa32a2872e9c75ab3f72d45224af11f2ff1",
+      "relativePath": "assets/004-adult-status-copy-1-module/058-womb_child_medium.webp"
+    },
+    {
+      "index": 59,
+      "name": "womb_child_small",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 7930,
+      "sha256": "8931d1fbfd8f9e49ae6f52446c4813c5d1f9d51d9bc850417854633a6f2abb1a",
+      "relativePath": "assets/004-adult-status-copy-1-module/059-womb_child_small.webp"
+    },
+    {
+      "index": 60,
+      "name": "womb_empty",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 7920,
+      "sha256": "f03b27d4c8c6801473da4003cbe60a33160c4b779b214ba4315c870e0462810d",
+      "relativePath": "assets/004-adult-status-copy-1-module/060-womb_empty.webp"
+    },
+    {
+      "index": 61,
+      "name": "womb_full",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 33100,
+      "sha256": "facbc8df2f17899c2f7b5aba2bbca740867a5687e475af89eee713f00c6c7dd0",
+      "relativePath": "assets/004-adult-status-copy-1-module/061-womb_full.webp"
+    },
+    {
+      "index": 62,
+      "name": "womb_impregnation",
+      "declaredExt": "png",
+      "detectedExt": "webp",
+      "byteLength": 27278,
+      "sha256": "5b3b6917bfa99516bd08e92a53df61a7d256cbc76f05232b0fe5dc7810e28e41",
+      "relativePath": "assets/004-adult-status-copy-1-module/062-womb_impregnation.webp"
+    }
+  ]
+}

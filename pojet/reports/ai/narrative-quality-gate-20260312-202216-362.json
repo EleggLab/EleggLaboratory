@@ -1,0 +1,130 @@
+{
+  "generatedAt": "2026-03-12T11:22:16.362Z",
+  "config": {
+    "runs": 2,
+    "steps": 20,
+    "mode": "mock",
+    "seed": 900,
+    "profilePack": "data/ai-presets/profile-pack-core.json",
+    "preset": null,
+    "presetDir": null,
+    "presetRegistry": "data/ai-presets/preset-registry.json",
+    "presetPolicy": "rotate",
+    "pricing": {
+      "promptPer1k": 0,
+      "completionPer1k": 0
+    },
+    "thresholds": {
+      "placeholderMax": 0,
+      "duplicateBeforeRateMax": 0.2,
+      "duplicateActionRateMax": 0.24,
+      "duplicateResultRateMax": 0.24,
+      "avgBeforeMin": 80,
+      "avgResultSentenceMin": 2,
+      "crossFieldSimilarityRateMax": 0.08,
+      "avgMemoryTagCountMin": 3,
+      "memoryTagViolationsMax": 0,
+      "responseMsAvgMax": null,
+      "responseMsP95Max": null,
+      "estimatedCostUsdMax": null,
+      "usageSampleRateMin": 0,
+      "errorsMax": 0
+    }
+  },
+  "sessionPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\generated\\ai-chat\\session-20260312-202216-229\\session.json",
+  "metrics": {
+    "turns": 20,
+    "errors": 0,
+    "parseFallbacks": 0,
+    "placeholderCount": 0,
+    "duplicateBeforeRate": 0,
+    "duplicateActionRate": 0,
+    "duplicateResultRate": 0,
+    "avgBeforeLength": 212.05,
+    "avgResultSentences": 4,
+    "optionIntegrityViolations": 0,
+    "crossFieldSimilarityViolations": 0,
+    "crossFieldSimilarityRate": 0,
+    "avgMemoryTagCount": 7,
+    "memoryTagViolations": 0,
+    "usageSamples": 20,
+    "usageSampleRate": 1,
+    "promptTokens": 0,
+    "completionTokens": 0,
+    "totalTokens": 0,
+    "responseMsAvg": 1.25,
+    "responseMsP95": 2,
+    "estimatedCostUsd": 0
+  },
+  "evaluation": {
+    "pass": true,
+    "checks": [
+      {
+        "key": "placeholderCount",
+        "actual": 0,
+        "expected": "<= 0",
+        "pass": true
+      },
+      {
+        "key": "duplicateBeforeRate",
+        "actual": 0,
+        "expected": "<= 0.2",
+        "pass": true
+      },
+      {
+        "key": "duplicateActionRate",
+        "actual": 0,
+        "expected": "<= 0.24",
+        "pass": true
+      },
+      {
+        "key": "duplicateResultRate",
+        "actual": 0,
+        "expected": "<= 0.24",
+        "pass": true
+      },
+      {
+        "key": "avgBeforeLength",
+        "actual": 212.05,
+        "expected": ">= 80",
+        "pass": true
+      },
+      {
+        "key": "avgResultSentences",
+        "actual": 4,
+        "expected": ">= 2",
+        "pass": true
+      },
+      {
+        "key": "crossFieldSimilarityRate",
+        "actual": 0,
+        "expected": "<= 0.08",
+        "pass": true
+      },
+      {
+        "key": "avgMemoryTagCount",
+        "actual": 7,
+        "expected": ">= 3",
+        "pass": true
+      },
+      {
+        "key": "memoryTagViolations",
+        "actual": 0,
+        "expected": "<= 0",
+        "pass": true
+      },
+      {
+        "key": "errors",
+        "actual": 0,
+        "expected": "<= 0",
+        "pass": true
+      },
+      {
+        "key": "optionIntegrityViolations",
+        "actual": 0,
+        "expected": "<= 0",
+        "pass": true
+      }
+    ]
+  }
+}

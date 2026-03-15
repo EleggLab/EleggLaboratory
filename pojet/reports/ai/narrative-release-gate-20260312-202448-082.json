@@ -1,0 +1,63 @@
+{
+  "generatedAt": "2026-03-12T11:24:48.081Z",
+  "config": {
+    "mode": "mock",
+    "runs": 2,
+    "steps": 20,
+    "suites": 4,
+    "seedBase": 500,
+    "outDir": "reports/ai",
+    "profilePack": "data/ai-presets/profile-pack-core.json",
+    "profileRuns": 0,
+    "canaryMode": "mock",
+    "canaryRuns": 1,
+    "canarySteps": 10,
+    "canarySeedOffset": 10000,
+    "promptCostPer1k": 0,
+    "completionCostPer1k": 0,
+    "minHealthScore": 0.9,
+    "maxBacklogCount": 0,
+    "requireCanaryWhenLive": true,
+    "strict": true,
+    "preset": "",
+    "presetDir": "",
+    "presetRegistry": "",
+    "presetPolicy": "rotate",
+    "canaryModeResolved": "mock"
+  },
+  "pass": true,
+  "checks": [
+    {
+      "key": "opsPass",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "key": "healthScore",
+      "actual": 1,
+      "expected": ">= 0.9",
+      "pass": true
+    },
+    {
+      "key": "backlogCount",
+      "actual": 0,
+      "expected": "<= 0",
+      "pass": true
+    }
+  ],
+  "ops": {
+    "pass": true,
+    "healthScore": 1,
+    "qualityPass": true,
+    "regressionPass": true,
+    "profilePass": true,
+    "storylinePass": true,
+    "semanticPass": true,
+    "canaryPass": true,
+    "trendPass": true,
+    "backlogCount": 0,
+    "jsonPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-ops-suite-20260312-202448-080.json",
+    "mdPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-ops-suite-20260312-202448-080.md"
+  }
+}

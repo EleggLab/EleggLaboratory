@@ -1,0 +1,383 @@
+{
+  "generatedAt": "2026-03-12T11:22:17.598Z",
+  "config": {
+    "mode": "mock",
+    "runs": 2,
+    "steps": 20,
+    "suites": 3,
+    "regressionMaxFailRate": null,
+    "seedBase": 900,
+    "outDir": "reports/ai",
+    "profilePack": "data/ai-presets/profile-pack-core.json",
+    "profileRuns": 0,
+    "canaryMode": "mock",
+    "canaryRuns": 1,
+    "canarySteps": 10,
+    "canarySeedOffset": 10000,
+    "promptCostPer1k": 0,
+    "completionCostPer1k": 0,
+    "canaryResponseAvgMax": 9000,
+    "canaryResponseP95Max": 15000,
+    "canaryEstimatedCostMax": 1.5,
+    "trendWindow": 8,
+    "trendMinSamples": 4,
+    "trendPassRateMin": 0.75,
+    "trendHealthLatestMin": 0.8,
+    "trendHealthDropMax": 0.15,
+    "trendHealthSlopeMin": -0.03,
+    "trendCanaryFailRateMax": 0.4,
+    "trendAvgBacklogMax": 4,
+    "trendP0BacklogAvgMax": 1,
+    "preset": "",
+    "presetDir": "",
+    "presetRegistry": "data/ai-presets/preset-registry.json",
+    "presetPolicy": "rotate",
+    "strict": true,
+    "regressionEffectiveMaxFailRate": 0.3333
+  },
+  "overall": {
+    "pass": true,
+    "healthScore": 1,
+    "scoreBreakdown": {
+      "quality": 1,
+      "regression": 1,
+      "profile": 1,
+      "storyline": 1,
+      "semantic": 1,
+      "canary": 1,
+      "trend": 1
+    }
+  },
+  "results": {
+    "quality": {
+      "pass": true,
+      "seed": 900,
+      "turns": 20,
+      "errors": 0,
+      "parseFallbacks": 0,
+      "placeholderCount": 0,
+      "duplicateBeforeRate": 0,
+      "duplicateActionRate": 0,
+      "duplicateResultRate": 0,
+      "avgBeforeLength": 212.05,
+      "avgResultSentences": 4,
+      "optionIntegrityViolations": 0,
+      "crossFieldSimilarityViolations": 0,
+      "crossFieldSimilarityRate": 0,
+      "avgMemoryTagCount": 7,
+      "memoryTagViolations": 0,
+      "usageSamples": 20,
+      "usageSampleRate": 1,
+      "promptTokens": 0,
+      "completionTokens": 0,
+      "totalTokens": 0,
+      "responseMsAvg": 1.25,
+      "responseMsP95": 2,
+      "estimatedCostUsd": 0,
+      "jsonPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-202216-362.json",
+      "mdPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-quality-gate-20260312-202216-362.md"
+    },
+    "regression": {
+      "pass": true,
+      "total": 3,
+      "failed": 0,
+      "failRate": 0,
+      "avgDuplicateRate": 0,
+      "avgBeforeLength": 209.32,
+      "avgResultSentences": 4,
+      "jsonPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-regression-suite-20260312-202216-684.json",
+      "mdPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-regression-suite-20260312-202216-684.md"
+    },
+    "profile": {
+      "pass": true,
+      "runs": 8,
+      "profileCount": 8,
+      "avgReflection": 1,
+      "avgUniqueCategories": 4.38,
+      "avgUniqueEventRatio": 1,
+      "sameSequencePairs": 0,
+      "maxSameSequencePairsAllowed": 0,
+      "checks": [
+        {
+          "key": "profileCount",
+          "actual": 8,
+          "expected": ">= 5",
+          "pass": true
+        },
+        {
+          "key": "avgReflection",
+          "actual": 1,
+          "expected": ">= 0.75",
+          "pass": true
+        },
+        {
+          "key": "avgUniqueCategories",
+          "actual": 4.38,
+          "expected": ">= 2",
+          "pass": true
+        },
+        {
+          "key": "sameSequencePairs",
+          "actual": 0,
+          "expected": "<= 0",
+          "pass": true
+        }
+      ],
+      "jsonPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\profile-differentiation-audit-20260312-202217-073.json",
+      "mdPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\profile-differentiation-audit-20260312-202217-073.md"
+    },
+    "storyline": {
+      "pass": true,
+      "runs": 8,
+      "distinctStorylines": 5,
+      "minRunCount": 1,
+      "avgUniqueEventRatio": 1,
+      "avgCategoryDiversity": 4.2,
+      "avgMatureCategoryRate": 0.52,
+      "sameSequencePairsMax": 0,
+      "checks": [
+        {
+          "key": "distinctStorylines",
+          "actual": 5,
+          "expected": ">= 5",
+          "pass": true
+        },
+        {
+          "key": "minRunsPerStoryline",
+          "actual": 1,
+          "expected": ">= 1",
+          "pass": true
+        },
+        {
+          "key": "avgUniqueEventRatio",
+          "actual": 1,
+          "expected": ">= 0.65",
+          "pass": true
+        },
+        {
+          "key": "avgCategoryDiversity",
+          "actual": 4.2,
+          "expected": ">= 2",
+          "pass": true
+        },
+        {
+          "key": "avgMatureCategoryRate",
+          "actual": 0.52,
+          "expected": ">= 0.25",
+          "pass": true
+        },
+        {
+          "key": "maxSameSequencePairsPerStoryline",
+          "actual": 0,
+          "expected": "<= 1",
+          "pass": true
+        }
+      ],
+      "jsonPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\storyline-coverage-audit-20260312-202217-467.json",
+      "mdPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\storyline-coverage-audit-20260312-202217-467.md"
+    },
+    "semantic": {
+      "pass": true,
+      "turns": 20,
+      "optionSimilarityAvg": 0.6536,
+      "optionSimilarityP95": 0.75,
+      "optionDistinctRate": 1,
+      "hookDensity": 1,
+      "categoryCount": 7,
+      "categoryDominance": 0.3,
+      "beforeLengthCv": 0.0334,
+      "resultSentenceCv": 0,
+      "checks": [
+        {
+          "key": "optionDistinctRate",
+          "actual": 1,
+          "expected": ">= 0.9",
+          "pass": true
+        },
+        {
+          "key": "optionSimilarityAvg",
+          "actual": 0.6536,
+          "expected": "<= 0.68",
+          "pass": true
+        },
+        {
+          "key": "optionSimilarityP95",
+          "actual": 0.75,
+          "expected": "<= 0.82",
+          "pass": true
+        },
+        {
+          "key": "hookDensity",
+          "actual": 1,
+          "expected": ">= 0.98",
+          "pass": true
+        },
+        {
+          "key": "categoryCount",
+          "actual": 7,
+          "expected": ">= 3",
+          "pass": true
+        },
+        {
+          "key": "categoryDominance",
+          "actual": 0.3,
+          "expected": "<= 0.6",
+          "pass": true
+        },
+        {
+          "key": "beforeLengthCv",
+          "actual": 0.0334,
+          "expected": "<= 0.55",
+          "pass": true
+        },
+        {
+          "key": "resultSentenceCv",
+          "actual": 0,
+          "expected": "<= 0.5",
+          "pass": true
+        }
+      ],
+      "jsonPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-semantic-pacing-audit-20260312-202217-571.json",
+      "mdPath": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-semantic-pacing-audit-20260312-202217-571.md"
+    },
+    "canary": {
+      "executed": true,
+      "pass": true,
+      "mode": "mock",
+      "metrics": {
+        "mode": "mock",
+        "turns": 5,
+        "errors": 0,
+        "parseFallbacks": 0,
+        "parseFallbackRate": 0,
+        "apiCalls": 0,
+        "responseMsAvg": 0.4,
+        "responseMsP95": 1,
+        "promptTokens": 0,
+        "completionTokens": 0,
+        "totalTokens": 0,
+        "estimatedCostUsd": 0,
+        "pricingMissing": false
+      },
+      "error": null,
+      "reportJson": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\live-cost-quality-gate-20260312-202217-592.json",
+      "reportMd": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\live-cost-quality-gate-20260312-202217-592.md"
+    },
+    "trend": {
+      "executed": true,
+      "pass": true,
+      "reason": "",
+      "metrics": {
+        "sampleCount": 8,
+        "passRate": 0.75,
+        "latestHealth": 1,
+        "firstHealth": 1,
+        "healthDelta": 0,
+        "healthSlope": -0.004363,
+        "healthVolatility": 0.0355,
+        "avgBacklog": 0.625,
+        "avgP0Backlog": 0.625,
+        "canarySamples": 8,
+        "canaryFailRate": 0
+      },
+      "checks": [
+        {
+          "key": "passRate",
+          "actual": 0.75,
+          "expected": ">= 0.75",
+          "pass": true
+        },
+        {
+          "key": "latestHealth",
+          "actual": 1,
+          "expected": ">= 0.8",
+          "pass": true
+        },
+        {
+          "key": "healthDrop",
+          "actual": 0,
+          "expected": "<= 0.15",
+          "pass": true
+        },
+        {
+          "key": "healthSlope",
+          "actual": -0.004363,
+          "expected": ">= -0.03",
+          "pass": true
+        },
+        {
+          "key": "canaryFailRate",
+          "actual": 0,
+          "expected": "<= 0.4",
+          "pass": true
+        },
+        {
+          "key": "avgBacklog",
+          "actual": 0.625,
+          "expected": "<= 4",
+          "pass": true
+        },
+        {
+          "key": "avgP0Backlog",
+          "actual": 0.625,
+          "expected": "<= 1",
+          "pass": true
+        }
+      ],
+      "reportJson": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-trend-monitor-20260312-202217-597.json",
+      "reportMd": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\pojet\\reports\\ai\\narrative-trend-monitor-20260312-202217-597.md"
+    }
+  },
+  "milestones": [
+    {
+      "id": "M1",
+      "title": "통합 내러티브 Ops 스위트 구축",
+      "status": "completed",
+      "deliverables": [
+        "품질게이트/회귀/프로필감사 단일 진입점",
+        "종합 리포트(JSON/MD) 자동 생성"
+      ]
+    },
+    {
+      "id": "M2",
+      "title": "라이브 카나리 + 문장 품질 강화",
+      "status": "ready",
+      "deliverables": [
+        "라이브 카나리 게이트(비용/지연/품질) 실행",
+        "결과 로그 변주 풀 추가",
+        "프로필 키워드 반영률 상향"
+      ]
+    },
+    {
+      "id": "M3",
+      "title": "시드 안정성 + 의미중복/페이싱 최적화",
+      "status": "ready",
+      "deliverables": [
+        "회귀 failRate 추가 하향",
+        "카테고리 다양성 균형 보정",
+        "스토리라인 커버리지 편차 축소",
+        "선택지 의미 유사도 및 페이싱 편차 감사"
+      ]
+    },
+    {
+      "id": "M4",
+      "title": "라이브 운영 게이트 전환",
+      "status": "planned",
+      "deliverables": [
+        "live API 모드 게이트",
+        "비용/품질 관제 지표 추가"
+      ]
+    },
+    {
+      "id": "M5",
+      "title": "Quality drift monitor and trend guard",
+      "status": "ready",
+      "deliverables": [
+        "narrative-ops historical trend analysis",
+        "health/pass/backlog drift alerting",
+        "release gate integration for trend status"
+      ]
+    }
+  ],
+  "backlog": []
+}
