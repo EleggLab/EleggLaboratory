@@ -13,6 +13,23 @@ def now_kst_iso() -> str:
     return datetime.now(KST).isoformat()
 
 
+def _trigger_ready(order: dict, px: float) -> bool:
+    tt = order.get("trigger_type", "none")
+    tp = order.get("trigger_price")
+    side = order.get("side")
+    if tt in ("none", "limit_now"):
+        return True
+    if tt == "market_open":
+        return True
+    if tp is None:
+        return False
+    if tt == "price_below":
+        return px <= float(tp)
+    if tt == "price_above":
+        return px >= float(tp)
+    return False
+
+
 def _try_fill(order: dict):
     q = get_quote(order["ticker"])
     if not q:
@@ -20,6 +37,11 @@ def _try_fill(order: dict):
         return
     side = order["side"]
     px = q["ask1"] if side == "buy" else q["bid1"]
+
+    if not _trigger_ready(order, float(px)):
+        order["status"] = "working"
+        return
+
     order_price = order.get("order_price")
     order_type = order.get("order_type", "market")
 
@@ -35,7 +57,7 @@ def _try_fill(order: dict):
         order["status"] = "working"
         return
 
-    req_qty = int(order.get("requested_qty") or 0)
+    req_qty = int(order.get("remaining_qty") or order.get("requested_qty") or 0)
     if req_qty <= 0:
         req_qty = 1
     fill_qty = max(1, req_qty // 2) if req_qty > 1 else 1  # conservative partial
@@ -60,19 +82,37 @@ def _try_fill(order: dict):
         order["status"] = "filled"
 
 
-def create_order(payload: dict) -> dict:
-    order_id = f"ord_{len(ORDER_DB)+1:06d}"
-    req_qty = int(payload.get("requested_qty") or 0)
-    row = {
-        "id": order_id,
-        "status": "queued",
-        "created_at": now_kst_iso(),
-        "remaining_qty": req_qty,
-        **payload,
-    }
-    ORDER_DB[order_id] = row
-    _try_fill(row)
-    return row
+def process_working_orders():
+    for order in ORDER_DB.values():
+        if order.get("status") in ("queued", "working", "partially_filled"):
+            _try_fill(order)
+
+
+def create_order(payload: dict):
+    split_count = int(payload.get("split_count") or 1)
+    split_count = max(1, split_count)
+    created = []
+
+    total_qty = int(payload.get("requested_qty") or 0)
+    tranche_qty = max(1, total_qty // split_count) if total_qty > 0 else 1
+
+    for i in range(split_count):
+        order_id = f"ord_{len(ORDER_DB)+1:06d}"
+        row = {
+            "id": order_id,
+            "status": "queued",
+            "created_at": now_kst_iso(),
+            "remaining_qty": tranche_qty,
+            **payload,
+            "requested_qty": tranche_qty,
+            "tranche_index": i + 1,
+            "tranche_total": split_count,
+        }
+        ORDER_DB[order_id] = row
+        _try_fill(row)
+        created.append(row)
+
+    return created[0] if split_count == 1 else {"split": created}
 
 
 def cancel_order(order_id: str) -> dict:

@@ -45,10 +45,13 @@ docker compose -f infra/docker-compose.yml up --build
 - GET `/api/cash-ledger`
 - GET `/api/dashboard`
 - GET `/api/market/status`
+- POST `/api/market/admin/session-state`
 - GET `/api/settings/risk`
 - PATCH `/api/settings/risk`
 - POST `/api/sim/reset`
 - POST `/api/sim/replay/start`
+- GET `/api/risk/banned-tickers`
+- PATCH `/api/risk/banned-tickers`
 - GET `/api/audit-logs`
 
 ## 주의

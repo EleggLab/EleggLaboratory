@@ -1,7 +1,7 @@
 from app.core.config import settings
 from app.schemas.common import OrderSchema
+from app.services.risk_state import is_banned
 
-BANNED_TICKERS = set()
 
 class RiskResult:
     def __init__(self, ok: bool, reason: str = ""):
@@ -10,7 +10,7 @@ class RiskResult:
 
 
 def validate_order(order: OrderSchema, stale_data: bool = False) -> RiskResult:
-    if order.ticker in BANNED_TICKERS:
+    if is_banned(order.ticker):
         return RiskResult(False, "banned ticker")
     if stale_data and order.side == "buy":
         return RiskResult(False, "stale data blocks new buy")
