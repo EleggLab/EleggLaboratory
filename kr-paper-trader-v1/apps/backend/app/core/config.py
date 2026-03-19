@@ -3,6 +3,7 @@ import os
 
 class Settings(BaseModel):
     tz: str = os.getenv("TZ", "Asia/Seoul")
+    allow_internal_ai_generate: bool = os.getenv("ALLOW_INTERNAL_AI_GENERATE", "false").lower() == "true"
     risk_reserve_cash_pct: float = 20.0
     max_positions: int = 5
     max_single_position_pct: float = 15.0

@@ -37,6 +37,8 @@ docker compose -f infra/docker-compose.yml up --build
 - POST `/api/ai/plan/submit` (외부 생성 전략안 schema/risk 사전검증)
 - POST `/api/ai/plan/{id}/approve` (승인 시 trade_plan을 주문 큐로 반영)
 - POST `/api/ai/plan/{id}/reject`
+- POST `/api/orders/compile` (target_weight_pct 기반 주문 컴파일)
+- POST `/api/orders/compile-and-queue`
 - POST `/api/orders`
 - POST `/api/orders/{id}/cancel`
 - POST `/api/orders/{id}/replace`
