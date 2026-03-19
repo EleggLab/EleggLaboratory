@@ -5,6 +5,8 @@ from app.schemas.ai import PlanGenerateRequest, DailyPlanResponse
 from app.schemas.auth import LoginRequest, LoginResponse
 from app.services import paper_execution as ex
 from app.services.risk_engine import validate_order
+from app.services.market_data import upsert_quote, all_quotes, QUOTE_DB
+from app.services.portfolio import POSITIONS, CASH_LEDGER, refresh_market_values, cash_balance
 from app.core.db import get_db
 from app.models.entities import Instrument, RiskRule, AuditLog
 
@@ -148,14 +150,50 @@ def get_fills():
     return ex.FILL_DB
 
 
+@router.post("/quotes")
+def post_quote(payload: dict):
+    ticker = payload.get("ticker")
+    last = payload.get("last")
+    if not ticker or last is None:
+        raise HTTPException(400, "ticker and last are required")
+    return upsert_quote(
+        ticker=ticker,
+        last=float(last),
+        bid1=float(payload.get("bid1", last)),
+        ask1=float(payload.get("ask1", last)),
+        volume=int(payload.get("volume", 0)),
+        source=str(payload.get("source", "mock")),
+    )
+
+
+@router.get("/quotes")
+def get_quotes():
+    return all_quotes()
+
+
 @router.get("/positions")
 def get_positions():
-    return []
+    refresh_market_values(QUOTE_DB)
+    return list(POSITIONS.values())
+
+
+@router.get("/cash-ledger")
+def get_cash_ledger():
+    return CASH_LEDGER[-200:]
 
 
 @router.get("/dashboard")
 def get_dashboard():
-    return DASHBOARD
+    total_asset = refresh_market_values(QUOTE_DB)
+    cash = cash_balance()
+    return {
+        **DASHBOARD,
+        "total_asset": round(total_asset, 2),
+        "cash_weight_pct": round((cash / total_asset * 100) if total_asset > 0 else 0, 2),
+        "today_orders": len(ex.ORDER_DB),
+        "today_fills": len(ex.FILL_DB),
+        "positions": len(POSITIONS),
+    }
 
 
 @router.get("/market/status")
