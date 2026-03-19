@@ -14,7 +14,7 @@
 - 기본 시간대: `Asia/Seoul`
 
 ## Monorepo 구조
-- `apps/frontend` : Next.js + TypeScript + Tailwind + shadcn/ui (스켈레톤)
+- `apps/frontend` : Next.js + TypeScript + Tailwind + shadcn/ui (스켈레톤 + 실시간 모니터 `/live`)
 - `apps/backend` : FastAPI + SQLAlchemy + Alembic (핵심 API 스켈레톤)
 - `infra` : Docker Compose
 - `samples` : AI Plan / Manual Order 샘플 JSON
