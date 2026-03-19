@@ -37,7 +37,10 @@ def _try_fill(order: dict):
         order["status"] = "working"
         return
     side = order["side"]
+    has_quote_book = q.get("bid1") is not None and q.get("ask1") is not None
     px = q["ask1"] if side == "buy" else q["bid1"]
+    if px is None:
+        px = q["last"]
 
     if not _trigger_ready(order, float(px)):
         order["status"] = "working"
@@ -70,7 +73,7 @@ def _try_fill(order: dict):
         "fee": float(px) * fill_qty * 0.00015,
         "tax": float(px) * fill_qty * (0.0018 if side == "sell" else 0.0),
         "slippage": 0.0,
-        "fill_model": "quote_based",
+        "fill_model": "quote_based" if has_quote_book else "bar_conservative",
         "filled_at": now_kst_iso(),
     }
     FILL_DB.append(fill)

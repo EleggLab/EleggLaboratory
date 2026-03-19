@@ -51,7 +51,28 @@ def test_ai_plan_submit_pending_when_valid():
     r = client.post('/api/ai/plan/submit', json={
       "as_of_kst":"2026-03-19",
       "market_regime":"sideways",
-      "trade_plan":[{"ticker":"005930","side":"buy","target_weight_pct":10}]
+      "trade_plan":[{"ticker":"005930","side":"buy","target_weight_pct":10, "confidence": 0.8}]
     })
     assert r.status_code == 200
     assert r.json()["approval_status"] == "pending"
+
+
+def test_ai_plan_submit_rejects_low_confidence_buy():
+    r = client.post('/api/ai/plan/submit', json={
+      "as_of_kst":"2026-03-19",
+      "market_regime":"sideways",
+      "trade_plan":[{"ticker":"005930","side":"buy","target_weight_pct":5, "confidence": 0.3}]
+    })
+    assert r.status_code == 200
+    assert r.json()["approval_status"] == "rejected"
+
+
+def test_ai_plan_no_trade_clears_plan():
+    r = client.post('/api/ai/plan/submit', json={
+      "as_of_kst":"2026-03-19",
+      "market_regime":"sideways",
+      "final_verdict":"NO_TRADE",
+      "trade_plan":[{"ticker":"005930","side":"buy","target_weight_pct":5}]
+    })
+    assert r.status_code == 200
+    assert r.json()["trade_plan"] == []

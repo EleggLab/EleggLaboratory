@@ -61,6 +61,7 @@ docker compose -f infra/docker-compose.yml up --build
 - GET `/api/risk/banned-tickers`
 - PATCH `/api/risk/banned-tickers`
 - GET `/api/audit-logs`
+- GET `/api/readiness`
 - WS `/ws/quotes`
 - WS `/ws/orders`
 - WS `/ws/positions`

@@ -1,14 +1,16 @@
 import asyncio
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from app.api.routes import router
+from app.api.readiness import router as readiness_router
 from app.core.db import Base, engine
 from app import models  # noqa: F401
 from app.services.state_store import load_state, save_state
 from app.services.ws_hub import hub, run_broadcast_loop
 from app.services.scheduler import run_worker_loop
 
-app = FastAPI(title="KR Paper Trader v1", version="0.3.0")
+app = FastAPI(title="KR Paper Trader v1", version="0.3.1")
 app.include_router(router)
+app.include_router(readiness_router)
 
 _stop_event = asyncio.Event()
 _broadcast_task: asyncio.Task | None = None

@@ -114,3 +114,19 @@ def test_market_open_trigger_allowed_when_closed():
         "target_weight_pct":4,"order_type":"market","trigger_type":"market_open"
     })
     assert r.status_code == 200
+
+
+def test_fill_model_bar_conservative_when_no_book_quote():
+    tk = client.post('/api/auth/login', json={"username": "dev", "password": "pass1234"}).json()["access_token"]
+    h = {"Authorization": f"Bearer {tk}"}
+    client.post('/api/sim/reset')
+    client.post('/api/instruments/seed')
+    client.post('/api/market/admin/session-state', json={"state": "open"})
+    client.post('/api/quotes', json={"ticker":"005930","last":70000, "bid1": None, "ask1": None})
+    r = client.post('/api/orders', headers=h, json={
+        "source":"manual","ticker":"005930","side":"buy","intent":"enter",
+        "target_weight_pct":5,"order_type":"market","trigger_type":"none","requested_qty":1
+    })
+    assert r.status_code == 200
+    fills = client.get('/api/fills').json()
+    assert fills[-1]["fill_model"] == "bar_conservative"
