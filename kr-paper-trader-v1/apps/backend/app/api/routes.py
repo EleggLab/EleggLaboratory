@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from app.schemas.common import OrderSchema
 from app.schemas.ai import PlanGenerateRequest, DailyPlanResponse
 from app.schemas.auth import LoginRequest, LoginResponse
+from app.schemas.plan_submit import PlanSubmitRequest
 from app.api.deps import get_current_user
 from app.services import paper_execution as ex
 from app.services.risk_engine import validate_order
@@ -204,6 +205,35 @@ def ai_plan_reject(plan_id: str):
         raise HTTPException(404, "plan not found")
     p["approval_status"] = "rejected"
     return p
+
+
+@router.post("/ai/plan/submit")
+def ai_plan_submit(payload: PlanSubmitRequest):
+    plan_id = f"plan_{len(AI_PLANS)+1:06d}"
+    plan = payload.model_dump()
+
+    # schema-like/risk checks for v1
+    invalid = []
+    for item in plan.get("trade_plan", []):
+        if "ticker" not in item or "side" not in item or "target_weight_pct" not in item:
+            invalid.append({"reason": "missing required order fields", "item": item})
+            continue
+        if float(item.get("target_weight_pct", 0)) > 15:
+            invalid.append({"reason": "max_single_position_pct exceeded", "item": item})
+
+    if invalid:
+        plan["approval_status"] = "rejected"
+        plan["risk_valid"] = False
+        plan["schema_valid"] = False
+        plan["reject_reasons"] = invalid
+    else:
+        plan["approval_status"] = "pending"
+        plan["risk_valid"] = True
+        plan["schema_valid"] = True
+
+    plan["id"] = plan_id
+    AI_PLANS[plan_id] = plan
+    return plan
 
 
 @router.post("/orders")
