@@ -1,7 +1,7 @@
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from app.services.market_data import get_quote
-from app.services.portfolio import apply_fill
+from app.services.portfolio import apply_fill, append_cash
 from app.services.exit_engine import register_exit_rules
 from app.services.session_service import infer_market_state
 
@@ -79,6 +79,10 @@ def _try_fill(order: dict):
     }
     FILL_DB.append(fill)
     apply_fill(order["ticker"], side, fill_qty, float(px))
+    # account for fee/tax explicitly in ledger
+    total_costs = float(fill["fee"]) + float(fill["tax"])
+    if total_costs > 0:
+        append_cash("cost", -total_costs, f"fees/tax {order['id']}")
 
     if side == "buy" and order.get("exit_rules"):
         register_exit_rules(order["ticker"], side, float(px), fill_qty, order.get("exit_rules"))
