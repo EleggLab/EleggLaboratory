@@ -27,6 +27,8 @@ class OrderSchema(BaseModel):
     trigger_price: Optional[float] = None
     order_type: OrderType = "market"
     order_price: Optional[float] = None
+    requested_qty: Optional[int] = 0
+    split_count: Optional[int] = 1
     exit_rules: Optional[ExitRules] = None
     execution_safety: ExecutionSafety = ExecutionSafety()
     metadata: Dict[str, Any] = {}

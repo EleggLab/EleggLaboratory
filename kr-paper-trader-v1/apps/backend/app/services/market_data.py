@@ -23,5 +23,14 @@ def get_quote(ticker: str):
     return QUOTE_DB.get(ticker)
 
 
+def is_stale(ticker: str, threshold_seconds: int = 60) -> bool:
+    q = get_quote(ticker)
+    if not q:
+        return True
+    ts = datetime.fromisoformat(q["ts"])
+    now = datetime.now(KST)
+    return (now - ts).total_seconds() > threshold_seconds
+
+
 def all_quotes():
     return list(QUOTE_DB.values())

@@ -5,8 +5,10 @@ from app.schemas.ai import PlanGenerateRequest, DailyPlanResponse
 from app.schemas.auth import LoginRequest, LoginResponse
 from app.services import paper_execution as ex
 from app.services.risk_engine import validate_order
-from app.services.market_data import upsert_quote, all_quotes, QUOTE_DB
+from app.services.market_data import upsert_quote, all_quotes, QUOTE_DB, is_stale
 from app.services.portfolio import POSITIONS, CASH_LEDGER, refresh_market_values, cash_balance
+from app.services.session_service import get_session_info, set_manual_state, SESSION_STATE
+from app.services.risk_state import set_banned, BANNED_TICKERS
 from app.core.db import get_db
 from app.models.entities import Instrument, RiskRule, AuditLog
 
@@ -114,11 +116,22 @@ def ai_plan_reject(plan_id: str):
 
 @router.post("/orders")
 def create_order(order: OrderSchema, db: Session = Depends(get_db)):
-    rr = validate_order(order)
+    session = get_session_info()
+    stale = is_stale(order.ticker, session["stale_quote_seconds"])
+    rr = validate_order(order, stale_data=stale)
     if not rr.ok:
         raise HTTPException(400, rr.reason)
+
+    # closed market policy: market_open stays queued, others rejected
+    if session["market_state"] == "closed" and order.trigger_type != "market_open":
+        raise HTTPException(400, "market closed: only market_open orders allowed")
+
     created = ex.create_order(order.model_dump())
-    _audit(db, "user", "order", created["id"], "created", after=created)
+    if isinstance(created, dict) and "split" in created:
+        for c in created["split"]:
+            _audit(db, "user", "order", c["id"], "created", after=c)
+    else:
+        _audit(db, "user", "order", created["id"], "created", after=created)
     return created
 
 
@@ -156,7 +169,7 @@ def post_quote(payload: dict):
     last = payload.get("last")
     if not ticker or last is None:
         raise HTTPException(400, "ticker and last are required")
-    return upsert_quote(
+    row = upsert_quote(
         ticker=ticker,
         last=float(last),
         bid1=float(payload.get("bid1", last)),
@@ -164,6 +177,8 @@ def post_quote(payload: dict):
         volume=int(payload.get("volume", 0)),
         source=str(payload.get("source", "mock")),
     )
+    ex.process_working_orders()
+    return row
 
 
 @router.get("/quotes")
@@ -198,7 +213,18 @@ def get_dashboard():
 
 @router.get("/market/status")
 def market_status():
-    return {"status": "정규장", "tz": "Asia/Seoul"}
+    return get_session_info()
+
+
+@router.post("/market/admin/session-state")
+def set_market_state(payload: dict):
+    state = payload.get("state")
+    if state not in (None, "pre", "open", "after", "closed"):
+        raise HTTPException(400, "state must be one of pre/open/after/closed/null")
+    set_manual_state(state)
+    if "stale_quote_seconds" in payload:
+        SESSION_STATE["stale_quote_seconds"] = int(payload["stale_quote_seconds"])
+    return get_session_info()
 
 
 @router.get("/settings/risk")
@@ -243,6 +269,20 @@ def sim_reset():
 @router.post("/sim/replay/start")
 def sim_replay_start(payload: dict):
     return {"ok": True, "seed": payload.get("seed", 42)}
+
+
+@router.get("/risk/banned-tickers")
+def get_banned_tickers():
+    return {"banned_tickers": sorted(BANNED_TICKERS)}
+
+
+@router.patch("/risk/banned-tickers")
+def patch_banned_tickers(payload: dict):
+    tickers = payload.get("banned_tickers", [])
+    if not isinstance(tickers, list):
+        raise HTTPException(400, "banned_tickers must be list")
+    set_banned([str(t) for t in tickers])
+    return {"banned_tickers": sorted(BANNED_TICKERS)}
 
 
 @router.get("/audit-logs")
