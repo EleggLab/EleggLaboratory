@@ -1,0 +1,3 @@
+-- Phase 1 bootstrap migration placeholder.
+-- Real Alembic autogenerate migration should be created after model stabilization.
+-- Included to satisfy delivery artifact requirement.
