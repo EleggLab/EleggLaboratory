@@ -214,12 +214,18 @@ def ai_plan_submit(payload: PlanSubmitRequest):
 
     # schema-like/risk checks for v1
     invalid = []
+    if str(plan.get("final_verdict", "")).upper() == "NO_TRADE":
+        plan["trade_plan"] = []
+
     for item in plan.get("trade_plan", []):
         if "ticker" not in item or "side" not in item or "target_weight_pct" not in item:
             invalid.append({"reason": "missing required order fields", "item": item})
             continue
         if float(item.get("target_weight_pct", 0)) > 15:
             invalid.append({"reason": "max_single_position_pct exceeded", "item": item})
+        conf = item.get("confidence")
+        if conf is not None and float(conf) < 0.60 and item.get("side") == "buy":
+            invalid.append({"reason": "confidence < 0.60 blocks new buy", "item": item})
 
     if invalid:
         plan["approval_status"] = "rejected"
@@ -302,11 +308,13 @@ def post_quote(payload: dict):
     last = payload.get("last")
     if not ticker or last is None:
         raise HTTPException(400, "ticker and last are required")
+    bid1 = payload.get("bid1", last)
+    ask1 = payload.get("ask1", last)
     row = upsert_quote(
         ticker=ticker,
         last=float(last),
-        bid1=float(payload.get("bid1", last)),
-        ask1=float(payload.get("ask1", last)),
+        bid1=None if bid1 is None else float(bid1),
+        ask1=None if ask1 is None else float(ask1),
         volume=int(payload.get("volume", 0)),
         source=str(payload.get("source", "mock")),
     )
