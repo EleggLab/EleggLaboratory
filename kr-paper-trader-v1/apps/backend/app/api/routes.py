@@ -153,7 +153,17 @@ def ai_plan_generate(req: PlanGenerateRequest):
         market_regime="sideways",
         portfolio_policy={"reserve_cash_pct": 20},
         portfolio_targets=[],
-        trade_plan=[],
+        trade_plan=[
+            {
+                "ticker": "005930",
+                "side": "buy",
+                "intent": "enter",
+                "target_weight_pct": 8,
+                "trigger_type": "market_open",
+                "order_type": "market",
+                "requested_qty": 2,
+            }
+        ],
         final_verdict="REVIEW_REQUIRED",
     ).model_dump()
     plan["id"] = plan_id
@@ -163,11 +173,27 @@ def ai_plan_generate(req: PlanGenerateRequest):
 
 
 @router.post("/ai/plan/{plan_id}/approve")
-def ai_plan_approve(plan_id: str):
+def ai_plan_approve(plan_id: str, db: Session = Depends(get_db), user: str = Depends(get_current_user)):
     p = AI_PLANS.get(plan_id)
     if not p:
         raise HTTPException(404, "plan not found")
     p["approval_status"] = "approved"
+
+    queued = []
+    for item in p.get("trade_plan", []):
+        order = OrderSchema(**{**item, "source": "ai", "execution_safety": {"review_required": False}})
+        _validate_instrument_tradability(db, order.ticker)
+        stale = is_stale(order.ticker, get_session_info()["stale_quote_seconds"])
+        rr = validate_order(order, stale_data=stale)
+        if not rr.ok:
+            continue
+        created = ex.create_order(order.model_dump())
+        queued.append(created)
+        if isinstance(created, dict) and "id" in created:
+            _audit(db, "ai", "order", created["id"], "created_from_approved_plan", after=created)
+
+    p["queued_orders"] = queued
+    save_state()
     return p
 
 

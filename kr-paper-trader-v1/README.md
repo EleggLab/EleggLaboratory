@@ -34,7 +34,7 @@ docker compose -f infra/docker-compose.yml up --build
 - PATCH `/api/market/admin/instruments/{ticker}/flags`
 - POST `/api/market/admin/disclosure-sync/mock`
 - POST `/api/ai/plan/generate`
-- POST `/api/ai/plan/{id}/approve`
+- POST `/api/ai/plan/{id}/approve` (승인 시 trade_plan을 주문 큐로 반영)
 - POST `/api/ai/plan/{id}/reject`
 - POST `/api/orders`
 - POST `/api/orders/{id}/cancel`
