@@ -13,8 +13,10 @@ from app.services.session_service import get_session_info, set_manual_state, SES
 from app.services.risk_state import set_banned, BANNED_TICKERS
 from app.services.state_store import save_state
 from app.services.corporate_actions_service import apply_actions_for_today
+from app.services.rebalance_compiler import compile_target_weights
 from app.core.db import get_db
 from app.core.security import create_access_token, verify_password, hash_password
+from app.core.config import settings
 from app.models.entities import Instrument, RiskRule, AuditLog, SessionCalendar, CorporateAction, User
 
 router = APIRouter(prefix="/api")
@@ -148,6 +150,8 @@ def disclosure_sync_mock(payload: dict, db: Session = Depends(get_db)):
 
 @router.post("/ai/plan/generate")
 def ai_plan_generate(req: PlanGenerateRequest):
+    if not settings.allow_internal_ai_generate:
+        raise HTTPException(403, "internal generate disabled; submit external plan instead")
     plan_id = f"plan_{len(AI_PLANS)+1:06d}"
     plan = DailyPlanResponse(
         as_of_kst="2026-03-19",
@@ -178,10 +182,28 @@ def ai_plan_approve(plan_id: str, db: Session = Depends(get_db), user: str = Dep
     p = AI_PLANS.get(plan_id)
     if not p:
         raise HTTPException(404, "plan not found")
-    p["approval_status"] = "approved"
+    if p.get("approval_status") != "pending":
+        raise HTTPException(400, "only pending plan can be approved")
+
+    # Compile target weights first (portfolio-centric), fallback to explicit trade_plan.
+    targets = p.get("portfolio_targets") or [
+        {"ticker": x.get("ticker"), "target_weight_pct": x.get("target_weight_pct", 0)}
+        for x in p.get("trade_plan", []) if x.get("ticker")
+    ]
+
+    risk = _get_or_create_risk_rule(db)
+    compile_out = compile_target_weights(
+        positions=POSITIONS,
+        quotes=QUOTE_DB,
+        cash=cash_balance(),
+        targets=targets,
+        reserve_cash_pct=risk.reserve_cash_pct,
+        max_single_position_pct=risk.max_single_position_pct,
+        max_positions=risk.max_positions,
+    )
 
     queued = []
-    for item in p.get("trade_plan", []):
+    for item in compile_out["orders"]:
         order = OrderSchema(**{**item, "source": "ai", "execution_safety": {"review_required": False}})
         _validate_instrument_tradability(db, order.ticker)
         stale = is_stale(order.ticker, get_session_info()["stale_quote_seconds"])
@@ -193,6 +215,8 @@ def ai_plan_approve(plan_id: str, db: Session = Depends(get_db), user: str = Dep
         if isinstance(created, dict) and "id" in created:
             _audit(db, "ai", "order", created["id"], "created_from_approved_plan", after=created)
 
+    p["approval_status"] = "approved"
+    p["compile_result"] = compile_out
     p["queued_orders"] = queued
     save_state()
     return p
@@ -204,6 +228,8 @@ def ai_plan_reject(plan_id: str):
     if not p:
         raise HTTPException(404, "plan not found")
     p["approval_status"] = "rejected"
+    p["queued_orders"] = []
+    save_state()
     return p
 
 
@@ -240,6 +266,39 @@ def ai_plan_submit(payload: PlanSubmitRequest):
     plan["id"] = plan_id
     AI_PLANS[plan_id] = plan
     return plan
+
+
+@router.post("/orders/compile")
+def compile_orders(payload: dict, db: Session = Depends(get_db), user: str = Depends(get_current_user)):
+    risk = _get_or_create_risk_rule(db)
+    out = compile_target_weights(
+        positions=POSITIONS,
+        quotes=QUOTE_DB,
+        cash=cash_balance(),
+        targets=payload.get("targets", []),
+        reserve_cash_pct=float(payload.get("reserve_cash_pct", risk.reserve_cash_pct)),
+        max_single_position_pct=float(payload.get("max_single_position_pct", risk.max_single_position_pct)),
+        max_positions=int(payload.get("max_positions", risk.max_positions)),
+        default_order_type=str(payload.get("order_type", "market")),
+        default_trigger_type=str(payload.get("trigger_type", "none")),
+    )
+    return out
+
+
+@router.post("/orders/compile-and-queue")
+def compile_and_queue(payload: dict, db: Session = Depends(get_db), user: str = Depends(get_current_user)):
+    out = compile_orders(payload, db, user)
+    queued = []
+    for item in out["orders"]:
+        order = OrderSchema(**{**item, "source": payload.get("source", "manual"), "execution_safety": {"review_required": False}})
+        _validate_instrument_tradability(db, order.ticker)
+        rr = validate_order(order, stale_data=is_stale(order.ticker, get_session_info()["stale_quote_seconds"]))
+        if not rr.ok:
+            continue
+        created = ex.create_order(order.model_dump())
+        queued.append(created)
+    save_state()
+    return {"compile": out, "queued": queued}
 
 
 @router.post("/orders")
