@@ -11,6 +11,8 @@
 - banned ticker 차단
 - state snapshot 저장/복구 (재시작 복구 기초)
 - WebSocket 스트림 기초 (/ws/quotes, /ws/orders, /ws/positions)
+- JWT 기반 기본 인증 보호(주요 변경 API)
+- corporate action 수동 적용 엔드포인트(분할 보정 기초)
 
 ## 남은 필수 항목 (실사용 전)
 1. 진짜 Alembic migration 체계 완성

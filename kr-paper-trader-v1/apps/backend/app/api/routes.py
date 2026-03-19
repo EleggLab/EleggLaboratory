@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from app.schemas.common import OrderSchema
 from app.schemas.ai import PlanGenerateRequest, DailyPlanResponse
 from app.schemas.auth import LoginRequest, LoginResponse
+from app.api.deps import get_current_user
 from app.services import paper_execution as ex
 from app.services.risk_engine import validate_order
 from app.services.market_data import upsert_quote, all_quotes, QUOTE_DB, is_stale
@@ -10,8 +11,10 @@ from app.services.portfolio import POSITIONS, CASH_LEDGER, refresh_market_values
 from app.services.session_service import get_session_info, set_manual_state, SESSION_STATE
 from app.services.risk_state import set_banned, BANNED_TICKERS
 from app.services.state_store import save_state
+from app.services.corporate_actions_service import apply_actions_for_today
 from app.core.db import get_db
-from app.models.entities import Instrument, RiskRule, AuditLog, SessionCalendar, CorporateAction
+from app.core.security import create_access_token, verify_password, hash_password
+from app.models.entities import Instrument, RiskRule, AuditLog, SessionCalendar, CorporateAction, User
 
 router = APIRouter(prefix="/api")
 
@@ -58,11 +61,22 @@ def _validate_instrument_tradability(db: Session, ticker: str):
 
 
 @router.post("/auth/login", response_model=LoginResponse)
-def login(payload: LoginRequest):
-    # v1 mock auth; replace with proper JWT in phase 2
+def login(payload: LoginRequest, db: Session = Depends(get_db)):
     if not payload.username or not payload.password:
         raise HTTPException(400, "invalid credentials")
-    return LoginResponse(access_token=f"dev-token-{payload.username}")
+
+    user = db.query(User).filter(User.username == payload.username).first()
+    if not user:
+        user = User(username=payload.username, password_hash=hash_password(payload.password))
+        db.add(user)
+        db.commit()
+        db.refresh(user)
+
+    if not verify_password(payload.password, user.password_hash):
+        raise HTTPException(401, "invalid credentials")
+
+    token = create_access_token(payload.username)
+    return LoginResponse(access_token=token)
 
 
 @router.get("/instruments")
@@ -167,7 +181,7 @@ def ai_plan_reject(plan_id: str):
 
 
 @router.post("/orders")
-def create_order(order: OrderSchema, db: Session = Depends(get_db)):
+def create_order(order: OrderSchema, db: Session = Depends(get_db), user: str = Depends(get_current_user)):
     _validate_instrument_tradability(db, order.ticker)
 
     # duplicate order guard (same ticker with live working states)
@@ -197,7 +211,7 @@ def create_order(order: OrderSchema, db: Session = Depends(get_db)):
 
 
 @router.post("/orders/{order_id}/cancel")
-def cancel_order(order_id: str, db: Session = Depends(get_db)):
+def cancel_order(order_id: str, db: Session = Depends(get_db), user: str = Depends(get_current_user)):
     row = ex.cancel_order(order_id)
     if "error" in row:
         raise HTTPException(404, row["error"])
@@ -207,7 +221,7 @@ def cancel_order(order_id: str, db: Session = Depends(get_db)):
 
 
 @router.post("/orders/{order_id}/replace")
-def replace_order(order_id: str, order: OrderSchema, db: Session = Depends(get_db)):
+def replace_order(order_id: str, order: OrderSchema, db: Session = Depends(get_db), user: str = Depends(get_current_user)):
     row = ex.replace_order(order_id, order.model_dump())
     if "error" in row:
         raise HTTPException(404, row["error"])
@@ -339,7 +353,7 @@ def get_corporate_actions(db: Session = Depends(get_db)):
 
 
 @router.post("/corporate-actions")
-def create_corporate_action(payload: dict, db: Session = Depends(get_db)):
+def create_corporate_action(payload: dict, db: Session = Depends(get_db), user: str = Depends(get_current_user)):
     required = ["ticker", "action_type", "ex_date"]
     if any(k not in payload for k in required):
         raise HTTPException(400, "ticker/action_type/ex_date required")
@@ -354,6 +368,13 @@ def create_corporate_action(payload: dict, db: Session = Depends(get_db)):
     db.add(row)
     db.commit()
     return {"ok": True, "id": row.id}
+
+
+@router.post("/corporate-actions/apply-today")
+def apply_corporate_actions_today(db: Session = Depends(get_db), user: str = Depends(get_current_user)):
+    applied = apply_actions_for_today(db, POSITIONS)
+    save_state()
+    return {"ok": True, "applied": applied}
 
 
 @router.get("/settings/risk")
@@ -373,7 +394,7 @@ def get_risk_settings(db: Session = Depends(get_db)):
 
 
 @router.patch("/settings/risk")
-def patch_risk_settings(payload: dict, db: Session = Depends(get_db)):
+def patch_risk_settings(payload: dict, db: Session = Depends(get_db), user: str = Depends(get_current_user)):
     rr = _get_or_create_risk_rule(db)
     before = {
         "reserve_cash_pct": rr.reserve_cash_pct,
@@ -414,7 +435,7 @@ def get_banned_tickers():
 
 
 @router.patch("/risk/banned-tickers")
-def patch_banned_tickers(payload: dict):
+def patch_banned_tickers(payload: dict, user: str = Depends(get_current_user)):
     tickers = payload.get("banned_tickers", [])
     if not isinstance(tickers, list):
         raise HTTPException(400, "banned_tickers must be list")
