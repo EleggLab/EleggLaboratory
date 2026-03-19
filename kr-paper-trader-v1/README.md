@@ -81,6 +81,7 @@ docker compose -f infra/docker-compose.yml up --build
 - `docs/readiness-report.md` (테스트 스크립트 실행 시 갱신)
 - `docs/release-checklist-v1.0-beta.md`
 - `docs/release-notes-v1.0-beta.md`
+- `CHANGELOG.md`
 
 ## 권한 모델 (v1)
 - `admin*` 사용자명으로 로그인 시 admin role 발급(개발 기본 정책)
