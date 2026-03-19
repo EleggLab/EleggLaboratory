@@ -1,0 +1,16 @@
+from typing import Protocol, Any
+
+class MarketDataProvider(Protocol):
+    def get_quote(self, ticker: str) -> dict: ...
+
+class NewsProvider(Protocol):
+    def get_news_digest(self) -> list[dict]: ...
+
+class DisclosureProvider(Protocol):
+    def get_disclosures(self) -> list[dict]: ...
+
+class FinancialProvider(Protocol):
+    def get_financials(self, ticker: str) -> dict: ...
+
+class BrokerAdapter(Protocol):
+    def place_order(self, payload: dict[str, Any]) -> dict: ...
