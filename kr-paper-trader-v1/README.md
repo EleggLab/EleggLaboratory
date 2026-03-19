@@ -57,6 +57,9 @@ docker compose -f infra/docker-compose.yml up --build
 - GET `/api/risk/banned-tickers`
 - PATCH `/api/risk/banned-tickers`
 - GET `/api/audit-logs`
+- WS `/ws/quotes`
+- WS `/ws/orders`
+- WS `/ws/positions`
 
 ## 주의
 현재 구현은 **v1 bootstrap/skeleton**이며, 실거래 연결은 의도적으로 비활성화되어 있습니다.

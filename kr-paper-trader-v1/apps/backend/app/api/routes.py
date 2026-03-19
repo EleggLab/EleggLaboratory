@@ -9,6 +9,7 @@ from app.services.market_data import upsert_quote, all_quotes, QUOTE_DB, is_stal
 from app.services.portfolio import POSITIONS, CASH_LEDGER, refresh_market_values, cash_balance
 from app.services.session_service import get_session_info, set_manual_state, SESSION_STATE
 from app.services.risk_state import set_banned, BANNED_TICKERS
+from app.services.state_store import save_state
 from app.core.db import get_db
 from app.models.entities import Instrument, RiskRule, AuditLog, SessionCalendar, CorporateAction
 
@@ -148,6 +149,7 @@ def create_order(order: OrderSchema, db: Session = Depends(get_db)):
             _audit(db, "user", "order", c["id"], "created", after=c)
     else:
         _audit(db, "user", "order", created["id"], "created", after=created)
+    save_state()
     return created
 
 
@@ -157,6 +159,7 @@ def cancel_order(order_id: str, db: Session = Depends(get_db)):
     if "error" in row:
         raise HTTPException(404, row["error"])
     _audit(db, "user", "order", order_id, "cancelled", after=row)
+    save_state()
     return row
 
 
@@ -166,6 +169,7 @@ def replace_order(order_id: str, order: OrderSchema, db: Session = Depends(get_d
     if "error" in row:
         raise HTTPException(404, row["error"])
     _audit(db, "user", "order", order_id, "replaced", after=row)
+    save_state()
     return row
 
 
@@ -194,6 +198,7 @@ def post_quote(payload: dict):
         source=str(payload.get("source", "mock")),
     )
     ex.process_working_orders()
+    save_state()
     return row
 
 
@@ -344,6 +349,10 @@ def patch_risk_settings(payload: dict, db: Session = Depends(get_db)):
 def sim_reset():
     ex.ORDER_DB.clear()
     ex.FILL_DB.clear()
+    POSITIONS.clear()
+    CASH_LEDGER.clear()
+    CASH_LEDGER.append({"type":"reset","amount":100000000,"balance_after":100000000,"reason":"sim_reset","occurred_at":"reset"})
+    save_state()
     return {"ok": True}
 
 
