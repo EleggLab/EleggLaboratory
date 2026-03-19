@@ -17,6 +17,10 @@ from app.api import routes as routes_module
 client = TestClient(app)
 
 
+def _admin_token():
+    return client.post('/api/auth/login', json={"username": "admin_ops", "password": "pw"}).json()["access_token"]
+
+
 def _token():
     return client.post('/api/auth/login', json={"username": "recovery", "password": "pw"}).json()["access_token"]
 
@@ -33,7 +37,7 @@ def test_state_snapshot_restores_orders_and_plans():
 
     client.post('/api/sim/reset')
     client.post('/api/instruments/seed')
-    client.post('/api/market/admin/session-state', json={"state":"open"})
+    client.post('/api/market/admin/session-state', headers={"Authorization": f"Bearer {_admin_token()}"}, json={"state":"open"})
     client.post('/api/quotes', json={"ticker":"005930","last":70000,"bid1":69990,"ask1":70000})
 
     client.post('/api/orders', headers=h, json={

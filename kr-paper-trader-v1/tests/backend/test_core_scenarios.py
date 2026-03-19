@@ -12,13 +12,18 @@ from app.main import app
 
 client = TestClient(app)
 
+def _admin_headers():
+    tk = client.post('/api/auth/login', json={"username": "admin_ops", "password": "pass1234"}).json()["access_token"]
+    return {"Authorization": f"Bearer {tk}"}
+
+
 
 def test_limit_buy_waits_until_price_reached():
     tk = client.post('/api/auth/login', json={"username": "dev", "password": "pass1234"}).json()["access_token"]
     h = {"Authorization": f"Bearer {tk}"}
     client.post('/api/sim/reset')
     client.post('/api/instruments/seed')
-    client.post('/api/market/admin/session-state', json={"state": "open"})
+    client.post('/api/market/admin/session-state', headers=_admin_headers(), json={"state": "open"})
     r = client.post('/api/orders', headers=h, json={
         "source":"manual","ticker":"005930","side":"buy","intent":"enter",
         "target_weight_pct":10,"order_type":"limit","order_price":70000,
@@ -38,7 +43,7 @@ def test_banned_ticker_blocked():
     tk = client.post('/api/auth/login', json={"username": "dev", "password": "pass1234"}).json()["access_token"]
     h = {"Authorization": f"Bearer {tk}"}
     client.post('/api/instruments/seed')
-    client.patch('/api/risk/banned-tickers', headers=h, json={"banned_tickers":["000660"]})
+    client.patch('/api/risk/banned-tickers', headers=_admin_headers(), json={"banned_tickers":["000660"]})
     r = client.post('/api/orders', headers=h, json={
         "source":"manual","ticker":"000660","side":"buy","intent":"enter",
         "target_weight_pct":5,"order_type":"market","trigger_type":"none"
@@ -66,8 +71,10 @@ def test_warning_flag_blocks_order():
     client.post('/api/sim/reset')
     client.post('/api/instruments/seed')
     client.post('/api/quotes', json={"ticker":"005930","last":71000,"bid1":70990,"ask1":71000})
-    client.patch('/api/market/admin/instruments/005930/flags', json={"warning_flags": {"warning": True}})
-    r = client.post('/api/orders', json={
+    client.patch('/api/market/admin/instruments/005930/flags', headers=_admin_headers(), json={"warning_flags": {"warning": True}})
+    tk = client.post('/api/auth/login', json={"username": "dev", "password": "pass1234"}).json()["access_token"]
+    h = {"Authorization": f"Bearer {tk}"}
+    r = client.post('/api/orders', headers=h, json={
         "source":"manual","ticker":"005930","side":"buy","intent":"enter",
         "target_weight_pct":5,"order_type":"market","trigger_type":"none"
     })
@@ -96,7 +103,7 @@ def test_market_closed_blocks_non_market_open():
     tk = client.post('/api/auth/login', json={"username": "dev", "password": "pass1234"}).json()["access_token"]
     h = {"Authorization": f"Bearer {tk}"}
     client.post('/api/instruments/seed')
-    client.post('/api/market/admin/session-state', json={"state": "closed"})
+    client.post('/api/market/admin/session-state', headers=_admin_headers(), json={"state": "closed"})
     r = client.post('/api/orders', headers=h, json={
         "source":"manual","ticker":"005930","side":"buy","intent":"enter",
         "target_weight_pct":4,"order_type":"market","trigger_type":"none"
@@ -108,7 +115,7 @@ def test_market_open_trigger_allowed_when_closed():
     tk = client.post('/api/auth/login', json={"username": "dev", "password": "pass1234"}).json()["access_token"]
     h = {"Authorization": f"Bearer {tk}"}
     client.post('/api/instruments/seed')
-    client.post('/api/market/admin/session-state', json={"state": "closed"})
+    client.post('/api/market/admin/session-state', headers=_admin_headers(), json={"state": "closed"})
     r = client.post('/api/orders', headers=h, json={
         "source":"manual","ticker":"005930","side":"buy","intent":"enter",
         "target_weight_pct":4,"order_type":"market","trigger_type":"market_open"
@@ -121,7 +128,7 @@ def test_fill_model_bar_conservative_when_no_book_quote():
     h = {"Authorization": f"Bearer {tk}"}
     client.post('/api/sim/reset')
     client.post('/api/instruments/seed')
-    client.post('/api/market/admin/session-state', json={"state": "open"})
+    client.post('/api/market/admin/session-state', headers=_admin_headers(), json={"state": "open"})
     client.post('/api/quotes', json={"ticker":"005930","last":70000, "bid1": None, "ask1": None})
     r = client.post('/api/orders', headers=h, json={
         "source":"manual","ticker":"005930","side":"buy","intent":"enter",

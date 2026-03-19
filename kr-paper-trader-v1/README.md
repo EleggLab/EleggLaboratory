@@ -78,3 +78,8 @@ docker compose -f infra/docker-compose.yml up --build
 - `docs/production-readiness.md`
 - `docs/ops-runbook.md`
 - `docs/readiness-report.md` (테스트 스크립트 실행 시 갱신)
+
+## 권한 모델 (v1)
+- `admin*` 사용자명으로 로그인 시 admin role 발급(개발 기본 정책)
+- 관리자 전용: 시장 상태/캘린더/경고플래그/리스크설정/기업행위 반영
+- trader는 주문/컴파일/AI 승인 경로 중심

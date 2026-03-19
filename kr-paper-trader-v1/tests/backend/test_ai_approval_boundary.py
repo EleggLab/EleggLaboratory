@@ -14,6 +14,10 @@ from app.main import app
 client = TestClient(app)
 
 
+def _admin_token():
+    return client.post('/api/auth/login', json={"username": "admin_ops", "password": "pw"}).json()["access_token"]
+
+
 def _token():
     return client.post('/api/auth/login', json={"username": "boundary", "password": "pw"}).json()["access_token"]
 

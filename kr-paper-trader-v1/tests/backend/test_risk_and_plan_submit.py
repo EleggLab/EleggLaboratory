@@ -13,6 +13,10 @@ from app.main import app
 client = TestClient(app)
 
 
+def _admin_token():
+    return client.post('/api/auth/login', json={"username": "admin_ops", "password": "pw"}).json()["access_token"]
+
+
 def _token() -> str:
     return client.post('/api/auth/login', json={"username": "risk", "password": "pw"}).json()["access_token"]
 
@@ -22,7 +26,7 @@ def test_stale_quote_blocks_new_buy():
     h = {"Authorization": f"Bearer {token}"}
     client.post('/api/sim/reset')
     client.post('/api/instruments/seed')
-    client.post('/api/market/admin/session-state', json={"state":"open", "stale_quote_seconds": 0})
+    client.post('/api/market/admin/session-state', headers={"Authorization": f"Bearer {_admin_token()}"}, json={"state":"open", "stale_quote_seconds": 0})
     client.post('/api/quotes', json={"ticker":"005930","last":70000,"bid1":69990,"ask1":70000})
 
     import time

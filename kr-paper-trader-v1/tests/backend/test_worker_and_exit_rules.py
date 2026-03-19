@@ -13,6 +13,10 @@ from app.main import app
 client = TestClient(app)
 
 
+def _admin_token():
+    return client.post('/api/auth/login', json={"username": "admin_ops", "password": "pw"}).json()["access_token"]
+
+
 def _token():
     return client.post('/api/auth/login', json={"username": "worker", "password": "pw"}).json()["access_token"]
 
@@ -22,7 +26,7 @@ def test_market_open_trigger_waits_until_open():
     h = {"Authorization": f"Bearer {tk}"}
     client.post('/api/sim/reset')
     client.post('/api/instruments/seed')
-    client.post('/api/market/admin/session-state', json={"state":"closed"})
+    client.post('/api/market/admin/session-state', headers={"Authorization": f"Bearer {_admin_token()}"}, json={"state":"closed"})
     client.post('/api/quotes', json={"ticker":"005930","last":70000,"bid1":69990,"ask1":70000})
 
     r = client.post('/api/orders', headers=h, json={
@@ -34,7 +38,7 @@ def test_market_open_trigger_waits_until_open():
     rows = client.get('/api/orders').json()
     assert rows[-1]['status'] in ('queued','working')
 
-    client.post('/api/market/admin/session-state', json={"state":"open"})
+    client.post('/api/market/admin/session-state', headers={"Authorization": f"Bearer {_admin_token()}"}, json={"state":"open"})
     client.post('/api/quotes', json={"ticker":"005930","last":70000,"bid1":69990,"ask1":70000})
     rows = client.get('/api/orders').json()
     assert rows[-1]['status'] in ('partially_filled','filled')
@@ -45,7 +49,7 @@ def test_exit_rule_take_profit_auto_exit_order_created():
     h = {"Authorization": f"Bearer {tk}"}
     client.post('/api/sim/reset')
     client.post('/api/instruments/seed')
-    client.post('/api/market/admin/session-state', json={"state":"open"})
+    client.post('/api/market/admin/session-state', headers={"Authorization": f"Bearer {_admin_token()}"}, json={"state":"open"})
 
     client.post('/api/quotes', json={"ticker":"005930","last":70000,"bid1":69990,"ask1":70000})
     r = client.post('/api/orders', headers=h, json={

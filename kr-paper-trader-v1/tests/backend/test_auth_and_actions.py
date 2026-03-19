@@ -13,6 +13,10 @@ from app.main import app
 client = TestClient(app)
 
 
+def _admin_token():
+    return client.post('/api/auth/login', json={"username": "admin_ops", "password": "pw"}).json()["access_token"]
+
+
 def _token() -> str:
     r = client.post('/api/auth/login', json={"username": "dev", "password": "pass1234"})
     assert r.status_code == 200
@@ -31,6 +35,7 @@ def test_protected_order_requires_token():
 def test_corporate_action_split_apply():
     tk = _token()
     h = {"Authorization": f"Bearer {tk}"}
+    ah = {"Authorization": f"Bearer {_admin_token()}"}
 
     client.post('/api/sim/reset')
     client.post('/api/instruments/seed')
@@ -46,11 +51,11 @@ def test_corporate_action_split_apply():
     # today split 2:1
     from datetime import datetime
     today = datetime.utcnow().strftime('%Y-%m-%d')
-    r = client.post('/api/corporate-actions', headers=h, json={
+    r = client.post('/api/corporate-actions', headers=ah, json={
         "ticker": "005930", "action_type": "split", "ex_date": today, "ratio": 2.0
     })
     assert r.status_code == 200
 
-    r = client.post('/api/corporate-actions/apply-today', headers=h)
+    r = client.post('/api/corporate-actions/apply-today', headers=ah)
     assert r.status_code == 200
     assert r.json()["ok"] is True

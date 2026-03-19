@@ -14,6 +14,10 @@ from app.main import app
 client = TestClient(app)
 
 
+def _admin_token():
+    return client.post('/api/auth/login', json={"username": "admin_ops", "password": "pw"}).json()["access_token"]
+
+
 def _token():
     return client.post('/api/auth/login', json={"username": "compiler", "password": "pw"}).json()["access_token"]
 
@@ -23,7 +27,7 @@ def test_compile_target_weight_generates_orders():
     h = {"Authorization": f"Bearer {tk}"}
     client.post('/api/sim/reset')
     client.post('/api/instruments/seed')
-    client.post('/api/market/admin/session-state', json={"state":"open"})
+    client.post('/api/market/admin/session-state', headers={"Authorization": f"Bearer {_admin_token()}"}, json={"state":"open"})
     client.post('/api/quotes', json={"ticker":"005930","last":70000,"bid1":69990,"ask1":70000})
 
     r = client.post('/api/orders/compile', headers=h, json={
@@ -41,7 +45,7 @@ def test_compile_and_queue_executes_compiled_orders():
     h = {"Authorization": f"Bearer {tk}"}
     client.post('/api/sim/reset')
     client.post('/api/instruments/seed')
-    client.post('/api/market/admin/session-state', json={"state":"open"})
+    client.post('/api/market/admin/session-state', headers={"Authorization": f"Bearer {_admin_token()}"}, json={"state":"open"})
     client.post('/api/quotes', json={"ticker":"005930","last":70000,"bid1":69990,"ask1":70000})
 
     r = client.post('/api/orders/compile-and-queue', headers=h, json={
