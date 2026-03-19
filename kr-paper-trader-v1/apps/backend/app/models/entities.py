@@ -64,6 +64,27 @@ class AuditLog(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
 
+class SessionCalendar(Base):
+    __tablename__ = "session_calendar"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    trade_date: Mapped[str] = mapped_column(String(10), unique=True)  # YYYY-MM-DD
+    market_state: Mapped[str] = mapped_column(String(10), default="open")
+    open_time: Mapped[str] = mapped_column(String(5), default="09:00")
+    close_time: Mapped[str] = mapped_column(String(5), default="15:30")
+    note: Mapped[str] = mapped_column(String(200), default="")
+
+
+class CorporateAction(Base):
+    __tablename__ = "corporate_actions"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    ticker: Mapped[str] = mapped_column(String(20))
+    action_type: Mapped[str] = mapped_column(String(30))
+    ex_date: Mapped[str] = mapped_column(String(10))
+    ratio: Mapped[float | None] = mapped_column(Float, nullable=True)
+    cash_amount: Mapped[float | None] = mapped_column(Float, nullable=True)
+    raw_payload: Mapped[dict | None] = mapped_column(JSON, nullable=True)
+
+
 class User(Base):
     __tablename__ = "users"
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
