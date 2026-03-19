@@ -1,16 +1,24 @@
 async function getStatus() {
   const base = process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:8000'
-  const res = await fetch(`${base}/api/market/status`, { cache: 'no-store' })
-  if (!res.ok) return null
-  return res.json()
+  const [s, c] = await Promise.all([
+    fetch(`${base}/api/market/status`, { cache: 'no-store' }),
+    fetch(`${base}/api/market/calendar`, { cache: 'no-store' })
+  ])
+  return {
+    status: s.ok ? await s.json() : null,
+    calendar: c.ok ? await c.json() : []
+  }
 }
 
 export default async function MarketAdminPage() {
-  const status = await getStatus()
+  const data = await getStatus()
   return (
     <main>
       <h2>Market Admin</h2>
-      <pre className="card">{JSON.stringify(status, null, 2)}</pre>
+      <h3>Current Session</h3>
+      <pre className="card">{JSON.stringify(data.status, null, 2)}</pre>
+      <h3>Session Calendar</h3>
+      <pre className="card">{JSON.stringify(data.calendar, null, 2)}</pre>
     </main>
   )
 }

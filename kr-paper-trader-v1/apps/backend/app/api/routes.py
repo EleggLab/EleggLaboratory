@@ -10,7 +10,7 @@ from app.services.portfolio import POSITIONS, CASH_LEDGER, refresh_market_values
 from app.services.session_service import get_session_info, set_manual_state, SESSION_STATE
 from app.services.risk_state import set_banned, BANNED_TICKERS
 from app.core.db import get_db
-from app.models.entities import Instrument, RiskRule, AuditLog
+from app.models.entities import Instrument, RiskRule, AuditLog, SessionCalendar, CorporateAction
 
 router = APIRouter(prefix="/api")
 
@@ -40,6 +40,20 @@ def _get_or_create_risk_rule(db: Session) -> RiskRule:
 def _audit(db: Session, actor: str, entity: str, entity_id: str, action: str, before=None, after=None):
     db.add(AuditLog(actor=actor, entity_type=entity, entity_id=entity_id, action=action, before_json=before, after_json=after))
     db.commit()
+
+
+def _validate_instrument_tradability(db: Session, ticker: str):
+    inst = db.query(Instrument).filter(Instrument.ticker == ticker).first()
+    if not inst:
+        raise HTTPException(400, "unknown instrument")
+    if not inst.tradable:
+        raise HTTPException(400, "instrument not tradable")
+    flags = set((inst.warning_flags or {}).keys())
+    blocked = {"halt", "warning", "danger", "managed"}
+    if flags.intersection(blocked):
+        raise HTTPException(400, f"instrument blocked by warning flags: {sorted(flags.intersection(blocked))}")
+    if (inst.liquidity_class or "NORMAL").upper() in ("LOW", "ILLIQUID"):
+        raise HTTPException(400, "instrument blocked by liquidity filter")
 
 
 @router.post("/auth/login", response_model=LoginResponse)
@@ -116,15 +130,17 @@ def ai_plan_reject(plan_id: str):
 
 @router.post("/orders")
 def create_order(order: OrderSchema, db: Session = Depends(get_db)):
+    _validate_instrument_tradability(db, order.ticker)
+
     session = get_session_info()
     stale = is_stale(order.ticker, session["stale_quote_seconds"])
     rr = validate_order(order, stale_data=stale)
     if not rr.ok:
         raise HTTPException(400, rr.reason)
 
-    # closed market policy: market_open stays queued, others rejected
-    if session["market_state"] == "closed" and order.trigger_type != "market_open":
-        raise HTTPException(400, "market closed: only market_open orders allowed")
+    # session policy
+    if session["market_state"] in ("closed", "pre", "after") and order.trigger_type != "market_open":
+        raise HTTPException(400, f"market state={session['market_state']}: only market_open orders allowed")
 
     created = ex.create_order(order.model_dump())
     if isinstance(created, dict) and "split" in created:
@@ -227,6 +243,71 @@ def set_market_state(payload: dict):
     return get_session_info()
 
 
+@router.get("/market/calendar")
+def get_market_calendar(db: Session = Depends(get_db)):
+    rows = db.query(SessionCalendar).order_by(SessionCalendar.trade_date.asc()).limit(365).all()
+    return [
+        {
+            "trade_date": r.trade_date,
+            "market_state": r.market_state,
+            "open_time": r.open_time,
+            "close_time": r.close_time,
+            "note": r.note,
+        }
+        for r in rows
+    ]
+
+
+@router.post("/market/calendar")
+def upsert_market_calendar(payload: dict, db: Session = Depends(get_db)):
+    trade_date = payload.get("trade_date")
+    if not trade_date:
+        raise HTTPException(400, "trade_date required")
+    row = db.query(SessionCalendar).filter(SessionCalendar.trade_date == trade_date).first()
+    if not row:
+        row = SessionCalendar(trade_date=trade_date)
+        db.add(row)
+    for k in ("market_state", "open_time", "close_time", "note"):
+        if k in payload:
+            setattr(row, k, payload[k])
+    db.commit()
+    return {"ok": True}
+
+
+@router.get("/corporate-actions")
+def get_corporate_actions(db: Session = Depends(get_db)):
+    rows = db.query(CorporateAction).order_by(CorporateAction.id.desc()).limit(200).all()
+    return [
+        {
+            "id": r.id,
+            "ticker": r.ticker,
+            "action_type": r.action_type,
+            "ex_date": r.ex_date,
+            "ratio": r.ratio,
+            "cash_amount": r.cash_amount,
+        }
+        for r in rows
+    ]
+
+
+@router.post("/corporate-actions")
+def create_corporate_action(payload: dict, db: Session = Depends(get_db)):
+    required = ["ticker", "action_type", "ex_date"]
+    if any(k not in payload for k in required):
+        raise HTTPException(400, "ticker/action_type/ex_date required")
+    row = CorporateAction(
+        ticker=payload["ticker"],
+        action_type=payload["action_type"],
+        ex_date=payload["ex_date"],
+        ratio=payload.get("ratio"),
+        cash_amount=payload.get("cash_amount"),
+        raw_payload=payload,
+    )
+    db.add(row)
+    db.commit()
+    return {"ok": True, "id": row.id}
+
+
 @router.get("/settings/risk")
 def get_risk_settings(db: Session = Depends(get_db)):
     rr = _get_or_create_risk_rule(db)
@@ -268,7 +349,11 @@ def sim_reset():
 
 @router.post("/sim/replay/start")
 def sim_replay_start(payload: dict):
-    return {"ok": True, "seed": payload.get("seed", 42)}
+    import random
+    seed = int(payload.get("seed", 42))
+    random.seed(seed)
+    path = [round(70000 + random.randint(-500, 500), 2) for _ in range(10)]
+    return {"ok": True, "seed": seed, "preview_path": path}
 
 
 @router.get("/risk/banned-tickers")

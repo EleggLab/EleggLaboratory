@@ -46,6 +46,10 @@ docker compose -f infra/docker-compose.yml up --build
 - GET `/api/dashboard`
 - GET `/api/market/status`
 - POST `/api/market/admin/session-state`
+- GET `/api/market/calendar`
+- POST `/api/market/calendar`
+- GET `/api/corporate-actions`
+- POST `/api/corporate-actions`
 - GET `/api/settings/risk`
 - PATCH `/api/settings/risk`
 - POST `/api/sim/reset`
