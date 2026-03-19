@@ -1,5 +1,6 @@
 import asyncio
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from app.api import routes as routes_module
 from app.api.routes import router
 from app.api.readiness import router as readiness_router
 from app.core.db import Base, engine
@@ -21,7 +22,10 @@ _worker_task: asyncio.Task | None = None
 async def on_startup():
     global _broadcast_task, _worker_task
     Base.metadata.create_all(bind=engine)
-    load_state()
+    state = load_state()
+    if state and isinstance(state.get("ai_plans"), dict):
+        routes_module.AI_PLANS.clear()
+        routes_module.AI_PLANS.update(state.get("ai_plans", {}))
     _broadcast_task = asyncio.create_task(run_broadcast_loop(_stop_event))
     _worker_task = asyncio.create_task(run_worker_loop(_stop_event))
 

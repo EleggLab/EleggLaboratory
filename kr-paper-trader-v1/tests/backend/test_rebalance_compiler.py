@@ -50,3 +50,20 @@ def test_compile_and_queue_executes_compiled_orders():
     })
     assert r.status_code == 200
     assert len(r.json()["queued"]) >= 1
+
+
+def test_compile_respects_daily_new_buy_cap():
+    tk = _token()
+    h = {"Authorization": f"Bearer {tk}"}
+    client.post('/api/sim/reset')
+    client.post('/api/instruments/seed')
+    client.post('/api/quotes', json={"ticker":"005930","last":70000,"bid1":69990,"ask1":70000})
+
+    r = client.post('/api/orders/compile', headers=h, json={
+      "targets": [{"ticker":"005930", "target_weight_pct": 40}],
+      "reserve_cash_pct": 0,
+      "max_daily_new_buy_pct": 1
+    })
+    assert r.status_code == 200
+    body = r.json()
+    assert body["summary"]["daily_new_buy_used"] <= body["summary"]["total_asset"] * 0.011

@@ -33,6 +33,10 @@ DASHBOARD = {
 AI_PLANS = {}
 
 
+def _save_all_state():
+    save_state({"ai_plans": AI_PLANS})
+
+
 def _get_or_create_risk_rule(db: Session) -> RiskRule:
     row = db.query(RiskRule).filter(RiskRule.is_active.is_(True)).first()
     if row:
@@ -192,6 +196,12 @@ def ai_plan_approve(plan_id: str, db: Session = Depends(get_db), user: str = Dep
     ]
 
     risk = _get_or_create_risk_rule(db)
+    meta = {}
+    for t in {x.get('ticker') for x in targets if x.get('ticker')} | set(POSITIONS.keys()):
+        inst = db.query(Instrument).filter(Instrument.ticker == t).first()
+        if inst:
+            meta[t] = {"sector": inst.sector}
+
     compile_out = compile_target_weights(
         positions=POSITIONS,
         quotes=QUOTE_DB,
@@ -200,6 +210,9 @@ def ai_plan_approve(plan_id: str, db: Session = Depends(get_db), user: str = Dep
         reserve_cash_pct=risk.reserve_cash_pct,
         max_single_position_pct=risk.max_single_position_pct,
         max_positions=risk.max_positions,
+        max_sector_exposure_pct=risk.max_sector_exposure_pct,
+        max_daily_new_buy_pct=risk.max_daily_new_buy_pct,
+        instrument_meta=meta,
     )
 
     queued = []
@@ -218,7 +231,7 @@ def ai_plan_approve(plan_id: str, db: Session = Depends(get_db), user: str = Dep
     p["approval_status"] = "approved"
     p["compile_result"] = compile_out
     p["queued_orders"] = queued
-    save_state()
+    _save_all_state()
     return p
 
 
@@ -229,7 +242,7 @@ def ai_plan_reject(plan_id: str):
         raise HTTPException(404, "plan not found")
     p["approval_status"] = "rejected"
     p["queued_orders"] = []
-    save_state()
+    _save_all_state()
     return p
 
 
@@ -265,20 +278,31 @@ def ai_plan_submit(payload: PlanSubmitRequest):
 
     plan["id"] = plan_id
     AI_PLANS[plan_id] = plan
+    _save_all_state()
     return plan
 
 
 @router.post("/orders/compile")
 def compile_orders(payload: dict, db: Session = Depends(get_db), user: str = Depends(get_current_user)):
     risk = _get_or_create_risk_rule(db)
+    targets = payload.get("targets", [])
+    meta = {}
+    for t in {x.get('ticker') for x in targets if x.get('ticker')} | set(POSITIONS.keys()):
+        inst = db.query(Instrument).filter(Instrument.ticker == t).first()
+        if inst:
+            meta[t] = {"sector": inst.sector}
+
     out = compile_target_weights(
         positions=POSITIONS,
         quotes=QUOTE_DB,
         cash=cash_balance(),
-        targets=payload.get("targets", []),
+        targets=targets,
         reserve_cash_pct=float(payload.get("reserve_cash_pct", risk.reserve_cash_pct)),
         max_single_position_pct=float(payload.get("max_single_position_pct", risk.max_single_position_pct)),
         max_positions=int(payload.get("max_positions", risk.max_positions)),
+        max_sector_exposure_pct=float(payload.get("max_sector_exposure_pct", risk.max_sector_exposure_pct)),
+        max_daily_new_buy_pct=float(payload.get("max_daily_new_buy_pct", risk.max_daily_new_buy_pct)),
+        instrument_meta=meta,
         default_order_type=str(payload.get("order_type", "market")),
         default_trigger_type=str(payload.get("trigger_type", "none")),
     )
@@ -297,7 +321,7 @@ def compile_and_queue(payload: dict, db: Session = Depends(get_db), user: str = 
             continue
         created = ex.create_order(order.model_dump())
         queued.append(created)
-    save_state()
+    _save_all_state()
     return {"compile": out, "queued": queued}
 
 
@@ -327,7 +351,7 @@ def create_order(order: OrderSchema, db: Session = Depends(get_db), user: str = 
             _audit(db, "user", "order", c["id"], "created", after=c)
     else:
         _audit(db, "user", "order", created["id"], "created", after=created)
-    save_state()
+    _save_all_state()
     return created
 
 
@@ -337,7 +361,7 @@ def cancel_order(order_id: str, db: Session = Depends(get_db), user: str = Depen
     if "error" in row:
         raise HTTPException(404, row["error"])
     _audit(db, "user", "order", order_id, "cancelled", after=row)
-    save_state()
+    _save_all_state()
     return row
 
 
@@ -347,7 +371,7 @@ def replace_order(order_id: str, order: OrderSchema, db: Session = Depends(get_d
     if "error" in row:
         raise HTTPException(404, row["error"])
     _audit(db, "user", "order", order_id, "replaced", after=row)
-    save_state()
+    _save_all_state()
     return row
 
 
@@ -378,7 +402,7 @@ def post_quote(payload: dict):
         source=str(payload.get("source", "mock")),
     )
     ex.process_working_orders()
-    save_state()
+    _save_all_state()
     return row
 
 
@@ -496,7 +520,7 @@ def create_corporate_action(payload: dict, db: Session = Depends(get_db), user: 
 @router.post("/corporate-actions/apply-today")
 def apply_corporate_actions_today(db: Session = Depends(get_db), user: str = Depends(get_current_user)):
     applied = apply_actions_for_today(db, POSITIONS)
-    save_state()
+    _save_all_state()
     return {"ok": True, "applied": applied}
 
 
@@ -539,7 +563,7 @@ def sim_reset():
     POSITIONS.clear()
     CASH_LEDGER.clear()
     CASH_LEDGER.append({"type":"reset","amount":100000000,"balance_after":100000000,"reason":"sim_reset","occurred_at":"reset"})
-    save_state()
+    _save_all_state()
     return {"ok": True}
 
 

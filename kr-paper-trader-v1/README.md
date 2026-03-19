@@ -2,6 +2,9 @@
 
 국내주식용 현실형 모의투자 웹앱 (Paper Trading Only)
 
+> 운영 기본: 외부 전략봇의 plan JSON을 submit 받아 승인/컴파일/집행합니다.
+> 내부 generate는 `ALLOW_INTERNAL_AI_GENERATE=true`일 때만 사용 가능합니다.
+
 ## 핵심 원칙
 - **실주문 절대 금지** (paper execution only)
 - 수동 주문 + AI 전략안을 동일한 실행 스키마로 처리
