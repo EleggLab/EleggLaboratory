@@ -11,18 +11,30 @@ import sys
 sys.path.append(str(Path(__file__).resolve().parents[1] / "apps/backend"))
 
 
-def _fallback_body():
+def _fallback_body(base_dir: Path):
+    # fallback: derive rough progress from docs/test-scenarios-checklist.md
+    checklist_path = base_dir / 'docs' / 'test-scenarios-checklist.md'
+    done = total = 0
+    if checklist_path.exists():
+        for ln in checklist_path.read_text(encoding='utf-8').splitlines():
+            if ln[:2].strip().rstrip('.') in {str(i) for i in range(1, 21)} or (ln and ln[0].isdigit() and '. ' in ln):
+                if '✅' in ln or '⚠️' in ln:
+                    total += 1
+                    if '✅' in ln:
+                        done += 1
+    percent = round(done / total * 100, 1) if total else 0
     return {
         "checklist": {},
-        "done": 0,
-        "total": 0,
-        "percent": 0,
+        "done": done,
+        "total": total,
+        "percent": percent,
         "production_ready": False,
-        "note": "fastapi deps not installed in current environment"
+        "note": "fallback mode (fastapi deps missing); using docs checklist"
     }
 
 
 def main():
+    base_dir = Path(__file__).resolve().parents[1]
     try:
         from fastapi.testclient import TestClient
         from app.main import app
@@ -30,10 +42,10 @@ def main():
         r = c.get('/api/readiness')
         body = r.json() if r.status_code == 200 else {"error": r.text}
     except Exception as e:
-        body = _fallback_body()
+        body = _fallback_body(base_dir)
         body["error"] = str(e)
 
-    out = Path(__file__).resolve().parents[1] / 'docs' / 'readiness-report.md'
+    out = base_dir / 'docs' / 'readiness-report.md'
     lines = [
         '# Readiness Report',
         '',
