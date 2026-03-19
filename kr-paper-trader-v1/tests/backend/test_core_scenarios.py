@@ -53,3 +53,31 @@ def test_split_order_creates_tranches():
     assert r.status_code == 200
     body = r.json()
     assert "split" in body and len(body["split"]) == 3
+
+
+def test_warning_flag_blocks_order():
+    client.post('/api/sim/reset')
+    client.post('/api/instruments/seed')
+    client.post('/api/quotes', json={"ticker":"005930","last":71000,"bid1":70990,"ask1":71000})
+    client.patch('/api/market/admin/instruments/005930/flags', json={"warning_flags": {"warning": True}})
+    r = client.post('/api/orders', json={
+        "source":"manual","ticker":"005930","side":"buy","intent":"enter",
+        "target_weight_pct":5,"order_type":"market","trigger_type":"none"
+    })
+    assert r.status_code == 400
+
+
+def test_duplicate_live_order_rejected():
+    client.post('/api/sim/reset')
+    client.post('/api/instruments/seed')
+    # no quote -> first order stays queued/working
+    r1 = client.post('/api/orders', json={
+        "source":"manual","ticker":"035420","side":"buy","intent":"enter",
+        "target_weight_pct":5,"order_type":"limit","order_price":1000,"trigger_type":"none"
+    })
+    assert r1.status_code == 200
+    r2 = client.post('/api/orders', json={
+        "source":"manual","ticker":"035420","side":"buy","intent":"enter",
+        "target_weight_pct":3,"order_type":"limit","order_price":900,"trigger_type":"none"
+    })
+    assert r2.status_code == 400

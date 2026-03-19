@@ -94,6 +94,43 @@ def seed_instruments(db: Session = Depends(get_db)):
     return {"ok": True, "count": len(seed)}
 
 
+@router.patch("/market/admin/instruments/{ticker}/flags")
+def patch_instrument_flags(ticker: str, payload: dict, db: Session = Depends(get_db)):
+    row = db.query(Instrument).filter(Instrument.ticker == ticker).first()
+    if not row:
+        raise HTTPException(404, "instrument not found")
+    wf = row.warning_flags or {}
+    wf.update(payload.get("warning_flags", {}))
+    row.warning_flags = wf
+    if "tradable" in payload:
+        row.tradable = bool(payload["tradable"])
+    if "liquidity_class" in payload:
+        row.liquidity_class = str(payload["liquidity_class"])
+    db.commit()
+    return {"ok": True, "ticker": ticker, "warning_flags": row.warning_flags, "tradable": row.tradable, "liquidity_class": row.liquidity_class}
+
+
+@router.post("/market/admin/disclosure-sync/mock")
+def disclosure_sync_mock(payload: dict, db: Session = Depends(get_db)):
+    items = payload.get("items", [])
+    updated = 0
+    for it in items:
+        ticker = it.get("ticker")
+        if not ticker:
+            continue
+        row = db.query(Instrument).filter(Instrument.ticker == ticker).first()
+        if not row:
+            continue
+        wf = row.warning_flags or {}
+        wf.update(it.get("warning_flags", {}))
+        row.warning_flags = wf
+        if "tradable" in it:
+            row.tradable = bool(it["tradable"])
+        updated += 1
+    db.commit()
+    return {"ok": True, "updated": updated}
+
+
 @router.post("/ai/plan/generate")
 def ai_plan_generate(req: PlanGenerateRequest):
     plan_id = f"plan_{len(AI_PLANS)+1:06d}"
@@ -132,6 +169,12 @@ def ai_plan_reject(plan_id: str):
 @router.post("/orders")
 def create_order(order: OrderSchema, db: Session = Depends(get_db)):
     _validate_instrument_tradability(db, order.ticker)
+
+    # duplicate order guard (same ticker with live working states)
+    live_states = {"queued", "working", "partially_filled"}
+    for o in ex.ORDER_DB.values():
+        if o.get("ticker") == order.ticker and o.get("status") in live_states:
+            raise HTTPException(400, "duplicate live order exists for ticker")
 
     session = get_session_info()
     stale = is_stale(order.ticker, session["stale_quote_seconds"])

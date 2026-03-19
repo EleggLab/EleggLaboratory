@@ -31,6 +31,8 @@ docker compose -f infra/docker-compose.yml up --build
 - POST `/api/auth/login`
 - GET `/api/instruments`
 - POST `/api/instruments/seed`
+- PATCH `/api/market/admin/instruments/{ticker}/flags`
+- POST `/api/market/admin/disclosure-sync/mock`
 - POST `/api/ai/plan/generate`
 - POST `/api/ai/plan/{id}/approve`
 - POST `/api/ai/plan/{id}/reject`
