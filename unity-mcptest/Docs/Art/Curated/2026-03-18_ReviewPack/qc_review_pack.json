@@ -1,0 +1,162 @@
+[
+  {
+    "file_name": "a2_elf_female.png",
+    "width": 832,
+    "height": 1216,
+    "white_ratio": 0.7599,
+    "subject_coverage": 0.78,
+    "touches_edges": {
+      "left": true,
+      "right": false,
+      "top": true,
+      "bottom": true
+    },
+    "flags": [
+      "touches_bottom"
+    ]
+  },
+  {
+    "file_name": "a2_human_female.png",
+    "width": 832,
+    "height": 1216,
+    "white_ratio": 0.7339,
+    "subject_coverage": 0.9087,
+    "touches_edges": {
+      "left": true,
+      "right": false,
+      "top": true,
+      "bottom": true
+    },
+    "flags": [
+      "touches_bottom"
+    ]
+  },
+  {
+    "file_name": "a2_tiefling_female.png",
+    "width": 832,
+    "height": 1216,
+    "white_ratio": 0.6266,
+    "subject_coverage": 0.8642,
+    "touches_edges": {
+      "left": true,
+      "right": false,
+      "top": true,
+      "bottom": true
+    },
+    "flags": [
+      "touches_bottom"
+    ]
+  },
+  {
+    "file_name": "a2_wolfkin_female.png",
+    "width": 832,
+    "height": 1216,
+    "white_ratio": 0.7518,
+    "subject_coverage": 0.8041,
+    "touches_edges": {
+      "left": true,
+      "right": false,
+      "top": true,
+      "bottom": true
+    },
+    "flags": [
+      "touches_bottom"
+    ]
+  },
+  {
+    "file_name": "a3_catfolk.png",
+    "width": 832,
+    "height": 1216,
+    "white_ratio": 0.758,
+    "subject_coverage": 0.8329,
+    "touches_edges": {
+      "left": true,
+      "right": false,
+      "top": true,
+      "bottom": true
+    },
+    "flags": [
+      "touches_bottom"
+    ]
+  },
+  {
+    "file_name": "a3_drow.png",
+    "width": 832,
+    "height": 1216,
+    "white_ratio": 0.7504,
+    "subject_coverage": 0.845,
+    "touches_edges": {
+      "left": true,
+      "right": false,
+      "top": true,
+      "bottom": true
+    },
+    "flags": [
+      "touches_bottom"
+    ]
+  },
+  {
+    "file_name": "a3_dwarf.png",
+    "width": 832,
+    "height": 1216,
+    "white_ratio": 0.6622,
+    "subject_coverage": 0.905,
+    "touches_edges": {
+      "left": true,
+      "right": false,
+      "top": true,
+      "bottom": true
+    },
+    "flags": [
+      "touches_bottom"
+    ]
+  },
+  {
+    "file_name": "a3_elf.png",
+    "width": 832,
+    "height": 1216,
+    "white_ratio": 0.7113,
+    "subject_coverage": 0.8089,
+    "touches_edges": {
+      "left": true,
+      "right": false,
+      "top": true,
+      "bottom": true
+    },
+    "flags": [
+      "touches_bottom"
+    ]
+  },
+  {
+    "file_name": "a3_human.png",
+    "width": 832,
+    "height": 1216,
+    "white_ratio": 0.6392,
+    "subject_coverage": 0.9231,
+    "touches_edges": {
+      "left": true,
+      "right": false,
+      "top": true,
+      "bottom": true
+    },
+    "flags": [
+      "touches_bottom"
+    ]
+  },
+  {
+    "file_name": "a3_wolfkin.png",
+    "width": 832,
+    "height": 1216,
+    "white_ratio": 0.5822,
+    "subject_coverage": 0.9423,
+    "touches_edges": {
+      "left": true,
+      "right": false,
+      "top": true,
+      "bottom": true
+    },
+    "flags": [
+      "touches_bottom"
+    ]
+  }
+]

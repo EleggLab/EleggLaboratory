@@ -1,0 +1,203 @@
+{
+  "date": "2026-03-18",
+  "families": {
+    "A": {
+      "family_name": "Pink/Black Gothic Cartoon",
+      "anchor_seed": 12003111,
+      "jobs": [
+        {
+          "slug": "a_human_female",
+          "seed": 12003111,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "a_elf_female",
+          "seed": 12003208,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "a_succubus_female",
+          "seed": 12003305,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "a_wolfkin_male",
+          "seed": 12003402,
+          "selected": false,
+          "notes": ""
+        }
+      ],
+      "winner_seed": null,
+      "winner_slug": null,
+      "refine_queue": []
+    },
+    "B": {
+      "family_name": "Monotone Maid Cartoon",
+      "anchor_seed": 12004222,
+      "jobs": [
+        {
+          "slug": "b_human_female",
+          "seed": 12004222,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "b_elf_female",
+          "seed": 12004319,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "b_succubus_female",
+          "seed": 12004416,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "b_wolfkin_male",
+          "seed": 12004513,
+          "selected": false,
+          "notes": ""
+        }
+      ],
+      "winner_seed": null,
+      "winner_slug": null,
+      "refine_queue": []
+    },
+    "C": {
+      "family_name": "White Dress Fantasy",
+      "anchor_seed": 12005333,
+      "jobs": [
+        {
+          "slug": "c_human_female",
+          "seed": 12005333,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "c_elf_female",
+          "seed": 12005430,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "c_succubus_female",
+          "seed": 12005527,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "c_wolfkin_male",
+          "seed": 12005624,
+          "selected": false,
+          "notes": ""
+        }
+      ],
+      "winner_seed": null,
+      "winner_slug": null,
+      "refine_queue": []
+    },
+    "D": {
+      "family_name": "Horned Succubus Fantasy",
+      "anchor_seed": 12006444,
+      "jobs": [
+        {
+          "slug": "d_human_female",
+          "seed": 12006444,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "d_elf_female",
+          "seed": 12006541,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "d_succubus_female",
+          "seed": 12006638,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "d_wolfkin_male",
+          "seed": 12006735,
+          "selected": false,
+          "notes": ""
+        }
+      ],
+      "winner_seed": null,
+      "winner_slug": null,
+      "refine_queue": []
+    },
+    "E": {
+      "family_name": "Soft Kemonomimi Fantasy",
+      "anchor_seed": 12007555,
+      "jobs": [
+        {
+          "slug": "e_human_female",
+          "seed": 12007555,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "e_elf_female",
+          "seed": 12007652,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "e_succubus_female",
+          "seed": 12007749,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "e_wolfkin_male",
+          "seed": 12007846,
+          "selected": false,
+          "notes": ""
+        }
+      ],
+      "winner_seed": null,
+      "winner_slug": null,
+      "refine_queue": []
+    },
+    "F": {
+      "family_name": "Adventurer Card Cartoon",
+      "anchor_seed": 12008666,
+      "jobs": [
+        {
+          "slug": "f_human_female",
+          "seed": 12008666,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "f_elf_female",
+          "seed": 12008763,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "f_succubus_female",
+          "seed": 12008860,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "f_wolfkin_male",
+          "seed": 12008957,
+          "selected": false,
+          "notes": ""
+        }
+      ],
+      "winner_seed": null,
+      "winner_slug": null,
+      "refine_queue": []
+    }
+  }
+}

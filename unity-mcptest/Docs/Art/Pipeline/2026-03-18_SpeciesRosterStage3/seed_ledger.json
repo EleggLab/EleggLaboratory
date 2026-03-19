@@ -1,0 +1,67 @@
+{
+  "date": "2026-03-18",
+  "family": "A3",
+  "anchor_seed": 32003111,
+  "jobs": [
+    {
+      "slug": "a3_human",
+      "seed": 32003111,
+      "selected": true,
+      "notes": "species_pass"
+    },
+    {
+      "slug": "a3_elf",
+      "seed": 32003242,
+      "selected": true,
+      "notes": "species_pass"
+    },
+    {
+      "slug": "a3_dwarf",
+      "seed": 32003373,
+      "selected": true,
+      "notes": "species_pass"
+    },
+    {
+      "slug": "a3_drow",
+      "seed": 32003504,
+      "selected": true,
+      "notes": "species_pass"
+    },
+    {
+      "slug": "a3_tiefling",
+      "seed": 32003635,
+      "selected": false,
+      "notes": "needs_retry_reduce_black_mass"
+    },
+    {
+      "slug": "a3_succubus",
+      "seed": 32003766,
+      "selected": false,
+      "notes": "needs_retry_reduce_black_mass"
+    },
+    {
+      "slug": "a3_wolfkin",
+      "seed": 32003897,
+      "selected": true,
+      "notes": "species_pass"
+    },
+    {
+      "slug": "a3_catfolk",
+      "seed": 32004028,
+      "selected": true,
+      "notes": "species_pass"
+    },
+    {
+      "slug": "a3_dragonkin",
+      "seed": 32004159,
+      "selected": false,
+      "notes": "needs_retry_reduce_black_mass"
+    },
+    {
+      "slug": "a3_goblin",
+      "seed": 32004290,
+      "selected": false,
+      "notes": "needs_retry_reduce_black_mass"
+    }
+  ]
+}

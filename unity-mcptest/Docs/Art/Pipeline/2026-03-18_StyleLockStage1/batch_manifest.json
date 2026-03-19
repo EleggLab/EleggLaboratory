@@ -1,0 +1,510 @@
+{
+  "date": "2026-03-18",
+  "stage": "style_lock_stage1",
+  "jobs": [
+    {
+      "slug": "a_human_female",
+      "family_id": "A",
+      "family_name": "Pink/Black Gothic Cartoon",
+      "source_mode": "PromptMining",
+      "role_id": "human_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, human, expressive eyes, tidy fantasy fashion, pink and black gothic fashion, black mini dress, cropped cardigan, ribbon details, platform boots, confident cute smile",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12003111,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "score_* slight chibi prompts",
+        "pink goth examples from user references"
+      ]
+    },
+    {
+      "slug": "a_elf_female",
+      "family_id": "A",
+      "family_name": "Pink/Black Gothic Cartoon",
+      "source_mode": "PromptMining",
+      "role_id": "elf_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, elf, long pointed ears, elegant fantasy details, pink and black gothic fashion, black mini dress, cropped cardigan, ribbon details, platform boots, confident cute smile",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12003208,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "score_* slight chibi prompts",
+        "pink goth examples from user references"
+      ]
+    },
+    {
+      "slug": "a_succubus_female",
+      "family_id": "A",
+      "family_name": "Pink/Black Gothic Cartoon",
+      "source_mode": "PromptMining",
+      "role_id": "succubus_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, succubus, small horns, demon tail, alluring fantasy look, pink and black gothic fashion, black mini dress, cropped cardigan, ribbon details, platform boots, confident cute smile",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12003305,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "score_* slight chibi prompts",
+        "pink goth examples from user references"
+      ]
+    },
+    {
+      "slug": "a_wolfkin_male",
+      "family_id": "A",
+      "family_name": "Pink/Black Gothic Cartoon",
+      "source_mode": "PromptMining",
+      "role_id": "wolfkin_male",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1boy, adult man, wolfkin, wolf ears, fluffy tail, masculine fantasy silhouette, pink and black gothic fashion, black mini dress, cropped cardigan, ribbon details, platform boots, confident cute smile",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12003402,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "score_* slight chibi prompts",
+        "pink goth examples from user references"
+      ]
+    },
+    {
+      "slug": "b_human_female",
+      "family_id": "B",
+      "family_name": "Monotone Maid Cartoon",
+      "source_mode": "VisualOnly",
+      "role_id": "human_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, human, expressive eyes, tidy fantasy fashion, clean maid outfit, monochrome palette, apron, ribbon, neat silhouette, polished anime mascot look",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12004222,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "hash reference maid images",
+        "blue maid example from first reference set"
+      ]
+    },
+    {
+      "slug": "b_elf_female",
+      "family_id": "B",
+      "family_name": "Monotone Maid Cartoon",
+      "source_mode": "VisualOnly",
+      "role_id": "elf_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, elf, long pointed ears, elegant fantasy details, clean maid outfit, monochrome palette, apron, ribbon, neat silhouette, polished anime mascot look",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12004319,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "hash reference maid images",
+        "blue maid example from first reference set"
+      ]
+    },
+    {
+      "slug": "b_succubus_female",
+      "family_id": "B",
+      "family_name": "Monotone Maid Cartoon",
+      "source_mode": "VisualOnly",
+      "role_id": "succubus_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, succubus, small horns, demon tail, alluring fantasy look, clean maid outfit, monochrome palette, apron, ribbon, neat silhouette, polished anime mascot look",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12004416,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "hash reference maid images",
+        "blue maid example from first reference set"
+      ]
+    },
+    {
+      "slug": "b_wolfkin_male",
+      "family_id": "B",
+      "family_name": "Monotone Maid Cartoon",
+      "source_mode": "VisualOnly",
+      "role_id": "wolfkin_male",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1boy, adult man, wolfkin, wolf ears, fluffy tail, masculine fantasy silhouette, clean maid outfit, monochrome palette, apron, ribbon, neat silhouette, polished anime mascot look",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12004513,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "hash reference maid images",
+        "blue maid example from first reference set"
+      ]
+    },
+    {
+      "slug": "c_human_female",
+      "family_id": "C",
+      "family_name": "White Dress Fantasy",
+      "source_mode": "CreativeReconstruction",
+      "role_id": "human_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, human, expressive eyes, tidy fantasy fashion, soft white fantasy dress, simple ribbon waist, elegant but readable silhouette, clean pastel accents",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12005333,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "white dress rabbit/fox references",
+        "simple fantasy heroine silhouettes"
+      ]
+    },
+    {
+      "slug": "c_elf_female",
+      "family_id": "C",
+      "family_name": "White Dress Fantasy",
+      "source_mode": "CreativeReconstruction",
+      "role_id": "elf_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, elf, long pointed ears, elegant fantasy details, soft white fantasy dress, simple ribbon waist, elegant but readable silhouette, clean pastel accents",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12005430,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "white dress rabbit/fox references",
+        "simple fantasy heroine silhouettes"
+      ]
+    },
+    {
+      "slug": "c_succubus_female",
+      "family_id": "C",
+      "family_name": "White Dress Fantasy",
+      "source_mode": "CreativeReconstruction",
+      "role_id": "succubus_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, succubus, small horns, demon tail, alluring fantasy look, soft white fantasy dress, simple ribbon waist, elegant but readable silhouette, clean pastel accents",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12005527,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "white dress rabbit/fox references",
+        "simple fantasy heroine silhouettes"
+      ]
+    },
+    {
+      "slug": "c_wolfkin_male",
+      "family_id": "C",
+      "family_name": "White Dress Fantasy",
+      "source_mode": "CreativeReconstruction",
+      "role_id": "wolfkin_male",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1boy, adult man, wolfkin, wolf ears, fluffy tail, masculine fantasy silhouette, soft white fantasy dress, simple ribbon waist, elegant but readable silhouette, clean pastel accents",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12005624,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "white dress rabbit/fox references",
+        "simple fantasy heroine silhouettes"
+      ]
+    },
+    {
+      "slug": "d_human_female",
+      "family_id": "D",
+      "family_name": "Horned Succubus Fantasy",
+      "source_mode": "PromptMining",
+      "role_id": "human_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, human, expressive eyes, tidy fantasy fashion, horned fantasy girl design, mature cute face, dark fitted dress, light demon details, seductive but safe standing pose",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12006444,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "horned fantasy references",
+        "succubus/demon target race for StackCraft"
+      ]
+    },
+    {
+      "slug": "d_elf_female",
+      "family_id": "D",
+      "family_name": "Horned Succubus Fantasy",
+      "source_mode": "PromptMining",
+      "role_id": "elf_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, elf, long pointed ears, elegant fantasy details, horned fantasy girl design, mature cute face, dark fitted dress, light demon details, seductive but safe standing pose",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12006541,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "horned fantasy references",
+        "succubus/demon target race for StackCraft"
+      ]
+    },
+    {
+      "slug": "d_succubus_female",
+      "family_id": "D",
+      "family_name": "Horned Succubus Fantasy",
+      "source_mode": "PromptMining",
+      "role_id": "succubus_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, succubus, small horns, demon tail, alluring fantasy look, horned fantasy girl design, mature cute face, dark fitted dress, light demon details, seductive but safe standing pose",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12006638,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "horned fantasy references",
+        "succubus/demon target race for StackCraft"
+      ]
+    },
+    {
+      "slug": "d_wolfkin_male",
+      "family_id": "D",
+      "family_name": "Horned Succubus Fantasy",
+      "source_mode": "PromptMining",
+      "role_id": "wolfkin_male",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1boy, adult man, wolfkin, wolf ears, fluffy tail, masculine fantasy silhouette, horned fantasy girl design, mature cute face, dark fitted dress, light demon details, seductive but safe standing pose",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12006735,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "horned fantasy references",
+        "succubus/demon target race for StackCraft"
+      ]
+    },
+    {
+      "slug": "e_human_female",
+      "family_id": "E",
+      "family_name": "Soft Kemonomimi Fantasy",
+      "source_mode": "VisualOnly",
+      "role_id": "human_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, human, expressive eyes, tidy fantasy fashion, animal ears or tail, soft fantasy outfit, clean white background mascot presentation, adult coded proportions",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12007555,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "fox/cat/bunny selected images",
+        "visual-only hash references"
+      ]
+    },
+    {
+      "slug": "e_elf_female",
+      "family_id": "E",
+      "family_name": "Soft Kemonomimi Fantasy",
+      "source_mode": "VisualOnly",
+      "role_id": "elf_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, elf, long pointed ears, elegant fantasy details, animal ears or tail, soft fantasy outfit, clean white background mascot presentation, adult coded proportions",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12007652,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "fox/cat/bunny selected images",
+        "visual-only hash references"
+      ]
+    },
+    {
+      "slug": "e_succubus_female",
+      "family_id": "E",
+      "family_name": "Soft Kemonomimi Fantasy",
+      "source_mode": "VisualOnly",
+      "role_id": "succubus_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, succubus, small horns, demon tail, alluring fantasy look, animal ears or tail, soft fantasy outfit, clean white background mascot presentation, adult coded proportions",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12007749,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "fox/cat/bunny selected images",
+        "visual-only hash references"
+      ]
+    },
+    {
+      "slug": "e_wolfkin_male",
+      "family_id": "E",
+      "family_name": "Soft Kemonomimi Fantasy",
+      "source_mode": "VisualOnly",
+      "role_id": "wolfkin_male",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1boy, adult man, wolfkin, wolf ears, fluffy tail, masculine fantasy silhouette, animal ears or tail, soft fantasy outfit, clean white background mascot presentation, adult coded proportions",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12007846,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "fox/cat/bunny selected images",
+        "visual-only hash references"
+      ]
+    },
+    {
+      "slug": "f_human_female",
+      "family_id": "F",
+      "family_name": "Adventurer Card Cartoon",
+      "source_mode": "CreativeReconstruction",
+      "role_id": "human_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, human, expressive eyes, tidy fantasy fashion, fantasy adventurer outfit, leather and cloth mix, small prop or belt details, readable game-card silhouette",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12008666,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "full body standing adventure prompt references",
+        "StackCraft role readability"
+      ]
+    },
+    {
+      "slug": "f_elf_female",
+      "family_id": "F",
+      "family_name": "Adventurer Card Cartoon",
+      "source_mode": "CreativeReconstruction",
+      "role_id": "elf_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, elf, long pointed ears, elegant fantasy details, fantasy adventurer outfit, leather and cloth mix, small prop or belt details, readable game-card silhouette",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12008763,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "full body standing adventure prompt references",
+        "StackCraft role readability"
+      ]
+    },
+    {
+      "slug": "f_succubus_female",
+      "family_id": "F",
+      "family_name": "Adventurer Card Cartoon",
+      "source_mode": "CreativeReconstruction",
+      "role_id": "succubus_female",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1girl, adult woman, succubus, small horns, demon tail, alluring fantasy look, fantasy adventurer outfit, leather and cloth mix, small prop or belt details, readable game-card silhouette",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12008860,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "full body standing adventure prompt references",
+        "StackCraft role readability"
+      ]
+    },
+    {
+      "slug": "f_wolfkin_male",
+      "family_id": "F",
+      "family_name": "Adventurer Card Cartoon",
+      "source_mode": "CreativeReconstruction",
+      "role_id": "wolfkin_male",
+      "prompt": "score_9, score_8_up, masterpiece, full body, standing, solo, (feet visible:1.2), clean bold lineart, flat cel shading, simple shapes, (slight chibi:0.8), (smaller head:1.3), 3.5 to 4 heads tall, adult game character, white background, #ffff, 1boy, adult man, wolfkin, wolf ears, fluffy tail, masculine fantasy silhouette, fantasy adventurer outfit, leather and cloth mix, small prop or belt details, readable game-card silhouette",
+      "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, reference sheet, palette swatches, silhouette, shadow figure, unfinished lineart, sketch, cropped, head out of frame, feet out of frame, extra limbs, extra arms, extra legs, duplicate body, child, loli, toddler, baby",
+      "seed": 12008957,
+      "width": 832,
+      "height": 1216,
+      "steps": 23,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "reference_notes": [
+        "full body standing adventure prompt references",
+        "StackCraft role readability"
+      ]
+    }
+  ]
+}

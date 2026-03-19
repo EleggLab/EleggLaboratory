@@ -1,0 +1,100 @@
+{
+  "jobs": [
+    {
+      "slug": "fr01_pink_goth_cat_headphones",
+      "prompt": "masterpiece, best quality, 1girl, adult, solo, full body, deformed cute anime style, thick clean black outline, flat pastel colors, minimal shading, centered standing pose, plain white background, pink and black fashion, cat ear headphones, white hair, oversized cardigan, black overalls, striped socks, chunky boots, simple cute expression, sticker-like silhouette",
+      "negative_prompt": "realistic, photorealistic, painterly, dirty texture, messy lineart, rough sketch, silhouette, shadow figure, monochrome silhouette, faceless, no face, no eyes, headless, background scene, props, multiple characters, side view sheet, turnaround, collage, text, watermark, logo, signature, nsfw, explicit",
+      "seed": 510101,
+      "width": 832,
+      "height": 1216
+    },
+    {
+      "slug": "fr02_pink_goth_front_standing",
+      "prompt": "masterpiece, best quality, 1girl, adult, solo, full body, deformed cute anime style, thick clean black outline, flat pastel colors, minimal shading, centered standing pose, plain white background, pink and black fashion, cat ear headphones, white hair, oversized pink jacket, black shorts, striped socks, chunky boots, simple front-facing pose, simple cute expression",
+      "negative_prompt": "realistic, photorealistic, painterly, dirty texture, messy lineart, rough sketch, silhouette, shadow figure, monochrome silhouette, faceless, no face, no eyes, headless, background scene, props, multiple characters, side view sheet, turnaround, collage, text, watermark, logo, signature, nsfw, explicit",
+      "seed": 510102,
+      "width": 832,
+      "height": 1216
+    },
+    {
+      "slug": "fr03_blue_maid_pose",
+      "prompt": "masterpiece, best quality, 1girl, adult, solo, full body, deformed cute anime style, thick clean black outline, flat pastel colors, minimal shading, centered pose, plain white background, blue bob haircut, black and white maid dress, apron, black stockings, simple shoes, cute maid expression, readable silhouette",
+      "negative_prompt": "realistic, photorealistic, painterly, dirty texture, messy lineart, rough sketch, silhouette, shadow figure, monochrome silhouette, faceless, no face, no eyes, headless, background scene, props, multiple characters, side view sheet, turnaround, collage, text, watermark, logo, signature, nsfw, explicit",
+      "seed": 510103,
+      "width": 832,
+      "height": 1216
+    },
+    {
+      "slug": "fr04_pink_bunny_white_dress",
+      "prompt": "masterpiece, best quality, 1girl, adult, solo, full body, deformed cute anime style, thick clean black outline, flat pastel colors, minimal shading, centered standing pose, plain white background, bunny girl, long pink hair, white dress, blue ribbon belt, simple cute face, soft pastel look, readable silhouette",
+      "negative_prompt": "realistic, photorealistic, painterly, dirty texture, messy lineart, rough sketch, silhouette, shadow figure, monochrome silhouette, faceless, no face, no eyes, headless, background scene, props, multiple characters, side view sheet, turnaround, collage, text, watermark, logo, signature, nsfw, explicit",
+      "seed": 510104,
+      "width": 832,
+      "height": 1216
+    },
+    {
+      "slug": "fr05_pink_fox_white_dress",
+      "prompt": "masterpiece, best quality, 1girl, adult, solo, full body, deformed cute anime style, thick clean black outline, flat pastel colors, minimal shading, centered standing pose, plain white background, fox girl, long pink hair, fluffy tail, white dress, blue ribbon belt, simple cute face, soft pastel look, readable silhouette",
+      "negative_prompt": "realistic, photorealistic, painterly, dirty texture, messy lineart, rough sketch, silhouette, shadow figure, monochrome silhouette, faceless, no face, no eyes, headless, background scene, props, multiple characters, side view sheet, turnaround, collage, text, watermark, logo, signature, nsfw, explicit",
+      "seed": 510105,
+      "width": 832,
+      "height": 1216
+    },
+    {
+      "slug": "fr06_horned_fantasy_purple",
+      "prompt": "masterpiece, best quality, 1girl, adult, solo, full body, deformed cute anime style, thick clean black outline, flat pastel colors, minimal shading, centered standing pose, plain white background, horned fantasy girl, short blonde hair, purple dress, boots, fantasy capelet, cute serious face, readable silhouette",
+      "negative_prompt": "realistic, photorealistic, painterly, dirty texture, messy lineart, rough sketch, silhouette, shadow figure, monochrome silhouette, faceless, no face, no eyes, headless, background scene, props, multiple characters, side view sheet, turnaround, collage, text, watermark, logo, signature, nsfw, explicit",
+      "seed": 510106,
+      "width": 832,
+      "height": 1216
+    },
+    {
+      "slug": "fr07_blackdress_pink_hair_minimal",
+      "prompt": "masterpiece, best quality, 1girl, adult, solo, full body, deformed cute anime style, thick clean black outline, flat pastel colors, minimal shading, centered standing pose, plain white background, simple black dress, long pink hair, simple lashes, clean readable silhouette, minimal fashion illustration",
+      "negative_prompt": "realistic, photorealistic, painterly, dirty texture, messy lineart, rough sketch, silhouette, shadow figure, monochrome silhouette, faceless, no face, no eyes, headless, background scene, props, multiple characters, side view sheet, turnaround, collage, text, watermark, logo, signature, nsfw, explicit",
+      "seed": 510107,
+      "width": 832,
+      "height": 1216
+    },
+    {
+      "slug": "fr08_whitehair_black_white_maid",
+      "prompt": "masterpiece, best quality, 1girl, adult, solo, full body, deformed cute anime style, thick clean black outline, flat pastel colors, minimal shading, centered standing pose, plain white background, white hair, black and white maid outfit, apron, black stockings, cute neutral expression, simple readable silhouette",
+      "negative_prompt": "realistic, photorealistic, painterly, dirty texture, messy lineart, rough sketch, silhouette, shadow figure, monochrome silhouette, faceless, no face, no eyes, headless, background scene, props, multiple characters, side view sheet, turnaround, collage, text, watermark, logo, signature, nsfw, explicit",
+      "seed": 510108,
+      "width": 832,
+      "height": 1216
+    },
+    {
+      "slug": "fr09_bunny_black_pink_alt",
+      "prompt": "masterpiece, best quality, 1girl, adult, solo, full body, deformed cute anime style, thick clean black outline, flat pastel colors, minimal shading, centered standing pose, plain white background, bunny girl, black and pink outfit, long ears, white hair, cute alt fashion, readable silhouette",
+      "negative_prompt": "realistic, photorealistic, painterly, dirty texture, messy lineart, rough sketch, silhouette, shadow figure, monochrome silhouette, faceless, no face, no eyes, headless, background scene, props, multiple characters, side view sheet, turnaround, collage, text, watermark, logo, signature, nsfw, explicit",
+      "seed": 510109,
+      "width": 832,
+      "height": 1216
+    },
+    {
+      "slug": "fr10_fox_storybook_dress",
+      "prompt": "masterpiece, best quality, 1girl, adult, solo, full body, deformed cute anime style, thick clean black outline, flat pastel colors, minimal shading, centered standing pose, plain white background, fox girl, coral pink hair, cream storybook dress, cute calm face, readable silhouette",
+      "negative_prompt": "realistic, photorealistic, painterly, dirty texture, messy lineart, rough sketch, silhouette, shadow figure, monochrome silhouette, faceless, no face, no eyes, headless, background scene, props, multiple characters, side view sheet, turnaround, collage, text, watermark, logo, signature, nsfw, explicit",
+      "seed": 510110,
+      "width": 832,
+      "height": 1216
+    },
+    {
+      "slug": "fr11_horned_blue_dress_clean",
+      "prompt": "masterpiece, best quality, 1girl, adult, solo, full body, deformed cute anime style, thick clean black outline, flat pastel colors, minimal shading, centered standing pose, plain white background, horned fantasy girl, long pink hair, blue dress, cute face, readable silhouette",
+      "negative_prompt": "realistic, photorealistic, painterly, dirty texture, messy lineart, rough sketch, silhouette, shadow figure, monochrome silhouette, faceless, no face, no eyes, headless, background scene, props, multiple characters, side view sheet, turnaround, collage, text, watermark, logo, signature, nsfw, explicit",
+      "seed": 510111,
+      "width": 832,
+      "height": 1216
+    },
+    {
+      "slug": "fr12_pink_cardigan_black_dress",
+      "prompt": "masterpiece, best quality, 1girl, adult, solo, full body, deformed cute anime style, thick clean black outline, flat pastel colors, minimal shading, centered standing pose, plain white background, pink cardigan, black dress, white hair, simple cute face, readable silhouette",
+      "negative_prompt": "realistic, photorealistic, painterly, dirty texture, messy lineart, rough sketch, silhouette, shadow figure, monochrome silhouette, faceless, no face, no eyes, headless, background scene, props, multiple characters, side view sheet, turnaround, collage, text, watermark, logo, signature, nsfw, explicit",
+      "seed": 510112,
+      "width": 832,
+      "height": 1216
+    }
+  ]
+}

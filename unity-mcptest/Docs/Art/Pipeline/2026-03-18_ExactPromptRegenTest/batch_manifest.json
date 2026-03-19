@@ -1,0 +1,520 @@
+{
+  "date": "2026-03-18",
+  "mode": "exact_prompt_regen_test",
+  "job_count": 27,
+  "jobs": [
+    {
+      "slug": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-1852803451",
+      "prompt": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l",
+      "negative_prompt": "",
+      "seed": 1852803451,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-1852803451.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-2149538122",
+      "prompt": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l",
+      "negative_prompt": "",
+      "seed": 2149538122,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-2149538122.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3164599244",
+      "prompt": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l",
+      "negative_prompt": "",
+      "seed": 3164599244,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3164599244.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3496859571",
+      "prompt": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l",
+      "negative_prompt": "",
+      "seed": 3496859571,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3496859571.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3499779879",
+      "prompt": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l",
+      "negative_prompt": "",
+      "seed": 3499779879,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3499779879.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3695900517",
+      "prompt": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l",
+      "negative_prompt": "",
+      "seed": 3695900517,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3695900517.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3981419444",
+      "prompt": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l",
+      "negative_prompt": "",
+      "seed": 3981419444,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3981419444.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-4141182270",
+      "prompt": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l",
+      "negative_prompt": "",
+      "seed": 4141182270,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-4141182270.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-4165285912",
+      "prompt": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l",
+      "negative_prompt": "",
+      "seed": 4165285912,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-4165285912.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-8557775",
+      "prompt": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l",
+      "negative_prompt": "",
+      "seed": 8557775,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-8557775.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty s-3415329945",
+      "prompt": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty",
+      "negative_prompt": "",
+      "seed": 3415329945,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty s-3415329945.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty s-3441169515",
+      "prompt": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty",
+      "negative_prompt": "",
+      "seed": 3441169515,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty s-3441169515.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty s-3757247806",
+      "prompt": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty",
+      "negative_prompt": "",
+      "seed": 3757247806,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty s-3757247806.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-1631311782",
+      "prompt": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty",
+      "negative_prompt": "",
+      "seed": 1631311782,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-1631311782.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-2496740283",
+      "prompt": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty",
+      "negative_prompt": "",
+      "seed": 2496740283,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-2496740283.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-2641218358",
+      "prompt": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty",
+      "negative_prompt": "",
+      "seed": 2641218358,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-2641218358.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-30709292",
+      "prompt": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty",
+      "negative_prompt": "",
+      "seed": 30709292,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-30709292.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-3569049670",
+      "prompt": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty",
+      "negative_prompt": "",
+      "seed": 3569049670,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-3569049670.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-3569502794",
+      "prompt": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty",
+      "negative_prompt": "",
+      "seed": 3569502794,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-3569502794.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-923046665",
+      "prompt": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty",
+      "negative_prompt": "",
+      "seed": 923046665,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-923046665.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, __full body, standing__, chibi style, bold lin s-3060702384",
+      "prompt": "score_9, score_8_up, masterpiece, __full body, standing__, chibi style, bold lin",
+      "negative_prompt": "",
+      "seed": 3060702384,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing__, chibi style, bold lin s-3060702384.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, chibi style, bold lineart, flat color, 1girl,  s-1659235244",
+      "prompt": "score_9, score_8_up, masterpiece, chibi style, bold lineart, flat color, 1girl,",
+      "negative_prompt": "",
+      "seed": 1659235244,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, chibi style, bold lineart, flat color, 1girl,  s-1659235244.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-123418701",
+      "prompt": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart,",
+      "negative_prompt": "",
+      "seed": 123418701,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-123418701.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-1738056368",
+      "prompt": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart,",
+      "negative_prompt": "",
+      "seed": 1738056368,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-1738056368.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-2278331069",
+      "prompt": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart,",
+      "negative_prompt": "",
+      "seed": 2278331069,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-2278331069.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-2488074396",
+      "prompt": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart,",
+      "negative_prompt": "",
+      "seed": 2488074396,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-2488074396.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    },
+    {
+      "slug": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-3490865774",
+      "prompt": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart,",
+      "negative_prompt": "",
+      "seed": 3490865774,
+      "width": 1024,
+      "height": 1024,
+      "steps": 28,
+      "scale": 6.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "model": "nai-diffusion-3",
+      "source_file": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-3490865774.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "notes": "Exact positive prompt from filename stem; trailing seed marker extracted into seed."
+    }
+  ]
+}

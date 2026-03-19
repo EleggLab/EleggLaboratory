@@ -1,0 +1,703 @@
+{
+  "chibi anime": [
+    {
+      "name": "Peanuts Style",
+      "type": "LORA",
+      "tags": [
+        "comics",
+        "style",
+        "cartoon",
+        "peanuts"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "Peanuts style, chibi, black eyes, toon(style), artstyle"
+      ],
+      "url": "https://civitai.com/models/2469444"
+    },
+    {
+      "name": "Oshaki (Cocotama)",
+      "type": "LORA",
+      "tags": [
+        "character"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "oshaki, blue eyes, standing, no humans, blush stickers, bloomers, goggles, furry, chibi, frameless glasses, blue body,"
+      ],
+      "url": "https://civitai.com/models/2469303"
+    }
+  ],
+  "pastel goth anime": [
+    {
+      "name": "Lysrtalehs | by UTdT69",
+      "type": "LORA",
+      "tags": [
+        "colorful",
+        "art",
+        "whimsical",
+        "ethereal",
+        "pastel",
+        "reflection",
+        "style",
+        "soft"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "lsrt_4l3hs",
+        "pastel colors",
+        "ethereal",
+        "dappled sunlight"
+      ],
+      "url": "https://civitai.com/models/2465295"
+    },
+    {
+      "name": "The Administrator (Fortnite) Female Skin",
+      "type": "LORA",
+      "tags": [
+        "character",
+        "game character",
+        "fortnite"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "TheAdministratorF, aqua hair, blunt bangs, (white face:1.1), blue eyes, dark purple hoodie, hood up, clothes writing, black fingerless gloves, dark purple pants, pastel pink trim on pants, thigh strap, black footwear,"
+      ],
+      "url": "https://civitai.com/models/2435214"
+    },
+    {
+      "name": "myststyle-origami-universe-xl",
+      "type": "LORA",
+      "tags": [
+        "style"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "8d_s2_l5-enhanced-style",
+        "sharp angular creases,crisp paper folds, flat geometric facets,pale matte textures, layered origami, minimalist pastel palette",
+        "origami theme",
+        "8d_s2_l5"
+      ],
+      "url": "https://civitai.com/models/2444523"
+    },
+    {
+      "name": "Alice/A.M.Y (Sonic.exe)",
+      "type": "LORA",
+      "tags": [
+        "character",
+        "woman",
+        "girls",
+        "lora",
+        "sonic the hedgehog",
+        "sonic.exe"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "AliceAmy, 1girl, pastel pink fur, large green eyes, spiked bangs, red dress with white trim, yellow gloves, red boots with white stripes, Gold circular bracelets, red headband, amy rose, horror"
+      ],
+      "url": "https://civitai.com/models/2455023"
+    }
+  ],
+  "maid anime": [
+    {
+      "name": "Rem | Re:Zero",
+      "type": "LORA",
+      "tags": [
+        "anime",
+        "character",
+        "re:zero",
+        "cute",
+        "maid",
+        "lora",
+        "sfw",
+        "rem"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "rem, blue eyes, blue hair, hair ornament, hair over one eye, hair ribbon, short hair, x hair ornament",
+        "apron, black bow, black dress, black ribbon, bow, detached sleeves, dress, frilled apron, frilled sleeves, frills, juliet sleeves, long sleeves, maid, neck ribbon, puffy sleeves, ribbon, roswaal mansion maid uniform, thighhighs, two-tone dress, waist apron, white bow, white dress, white thighhighs"
+      ],
+      "url": "https://civitai.com/models/2468362"
+    },
+    {
+      "name": "魔術師クノンは見えている　イコ・ラウンド　illustrious(Majutsushi Kunon wa mieteiru　Iko Round　illustrious)",
+      "type": "LORA",
+      "tags": [
+        "character"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "Iko Round,long hair, brown hair,braid,single braid,braided ponytail,hair over shoulder,green eyes,maid,maid headdress,black dress,frills,long sleeves, puffy sleeves,juliet sleeves,maid apron,brown footwear,"
+      ],
+      "url": "https://civitai.com/models/2470229"
+    },
+    {
+      "name": "Sayaka Dejima (出島 サヤカ) - Student Council Staff Members (Seitokai Yakuindomo) (SYD) (生徒会役員共)",
+      "type": "LORA",
+      "tags": [
+        "character"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "sayaka dejima, black hair, ponytail, black eyes, medium breasts, anime screencap",
+        "apron, maid, maid headdress,"
+      ],
+      "url": "https://civitai.com/models/2469700"
+    },
+    {
+      "name": "マルバス（メギド72） / Marbas (Megido72)",
+      "type": "LORA",
+      "tags": [
+        "anime",
+        "character",
+        "megido72"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "marbas72, long hair, pink hair, drill hair, drill sidelocks, green eyes, hair flower, hair ornament, hair ribbon, maid headdress, black dress, black ribbon, collared dress, frilled dress, long sleeves, blue staff, white pantyhose, white shoes",
+        "marbas72, long hair, pink hair, drill hair, drill sidelocks, green eyes, white hairband, jewelry, gold breastplate, white dress, puffy long sleeves, staff, black thighhighs, white shoes"
+      ],
+      "url": "https://civitai.com/models/2468862"
+    },
+    {
+      "name": "Ryomou Shimei [Ikkitousen]",
+      "type": "LORA",
+      "tags": [
+        "anime",
+        "character"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "ry0m0ush1m31",
+        "ry0m0ush1m31, 1girl, short hair, bob cut, purple hair, green eyes, medical eyepatch, mole under mouth, shirt, white shirt, collared shirt, bowtie, sweater vest, medium breasts, short sleeves, gloves, blue gloves, skirt, plaid skirt, red skirt, kneehighs, blue kneehighs",
+        "ry0m0ush1m31, 1girl, short hair, bob cut, purple hair, green eyes, medical eyepatch, mole under mouth, choker, cross necklace, maid uniform, blue uniform, apron, white apron, frilled apron, medium breasts, short sleeves, gloves, blue gloves, kneehighs, blue kneehighs"
+      ],
+      "url": "https://civitai.com/models/2470402"
+    }
+  ],
+  "gothic lolita anime": [
+    {
+      "name": "Queen's Blade - Ymir",
+      "type": "LORA",
+      "tags": [
+        "character",
+        "queen's blade",
+        "クイーンズブレイド",
+        "sentou kyoukain alain",
+        "queen's blade: the exiled virgin",
+        "クイーンズブレイド 流浪の戦士"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "Ymir",
+        "armor, armored dress, detached sleeves, garter straps, pirate hat, plaid, short hair, skirt, thighhighs",
+        "armor, armored dress, choker, earrings, elbow gloves, hairband, jewelry, long hair, short sleeves, thighhighs, upskirt,   animal cat ears, bikini armor, thighhighs",
+        "bikini armor, elbow gloves, red leotard, short hair, thighhighs, v-shaped eyebrows",
+        "armor, armored dress, earrings, glasses, gloves, hairband, jewelry, long hair, red-framed eyewear, thighhighs",
+        "armor, detached sleeves, pirate hat, short hair",
+        "thighhighs, drill hair, pointy ears, skirt, gauntlets, armor, garter straps, black gothic dress, plaid skirt, plaid, short hair, no bra"
+      ],
+      "url": "https://civitai.com/models/2442747"
+    },
+    {
+      "name": "Coven Evelyn / League of Legends",
+      "type": "LORA",
+      "tags": [
+        "league of legends",
+        "character",
+        "girl",
+        "sexy",
+        "lol",
+        "skin",
+        "coven"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "Coven_Eve,demon girl,red eyes,long blonde hair,side part,red lips,sharp eyes,dark gothic armor,coven outfit,horns,dark blonde bodysuit,feather armor,dark feathers,bare shoulders,(elegant),dark eye makeup,heels, elbow gloves,long golden nails"
+      ],
+      "url": "https://civitai.com/models/2442044"
+    },
+    {
+      "name": "akama_chlorine (赤間) - Artist Style // Illustrious",
+      "type": "LORA",
+      "tags": [
+        "style",
+        "artist style",
+        "赤間",
+        "akama_chlorine"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "akamacstyle",
+        "gothic, abstract shading, high contrast, dark fantasy, sketchy lineart, chaotic strokes"
+      ],
+      "url": "https://civitai.com/models/2469519"
+    },
+    {
+      "name": "ゴスロリ衣装の女  Gothic Lolita female / 名探偵コナン Detective Conan Episode575&576 - Illustrious",
+      "type": "LORA",
+      "tags": [
+        "anime",
+        "character",
+        "woman",
+        "detective conan",
+        "meitantei conan"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "gtlg, blonde hair, twintails, blunt bangs,wig, eyebrows hidden by hair, purple eyes,pale skin,dark red lips,lipstick,makeup,black headwear,tilted headwear,mini hat,frilled hat,frilled choker,black choker,emblem,",
+        "collarbone,red frills, black dress, red dress,gothic lolita, long sleeves, juliet sleeves, frilled dress, vertical-striped skirt, red skirt, black skirt,fishnet pantyhose,purple pantyhose,ankle boots,black boots,frilled boots,black handbag,frilled bag,bag ribbon, cosplay, goth fashion,disguise,"
+      ],
+      "url": "https://civitai.com/models/2455271"
+    },
+    {
+      "name": "Abandoned Gothic Cathedral Interior",
+      "type": "LORA",
+      "tags": [
+        "gothic",
+        "abandoned",
+        "background",
+        "cathedral",
+        "interior"
+      ],
+      "baseModel": "Flux.1 D",
+      "trainedWords": [
+        "AGCI",
+        "Abandoned Gothic Cathedral Interior",
+        "agci_column",
+        "agci_floor"
+      ],
+      "url": "https://civitai.com/models/2445728"
+    }
+  ],
+  "magical girl anime": [
+    {
+      "name": "プリミティ・ミエル/神宮 真奈（純聖天使シリーズ） / Primity Miel/Jingu Mana (Holy Angel series)",
+      "type": "LORA",
+      "tags": [
+        "character",
+        "game character"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "blonde hair,blue eyes,purple eyes,short hair,small breasts,",
+        "miel-jt,magical girl,dress,skirt,detached sleeves,frills,red flower,rose,frilled thighhighs,white thighhighs,zettai ryouiki,elbow gloves,shoes,pink footwear,hat,star hat ornament,",
+        "mana-jt,school uniform,serafuku,light blue skirt,pleated skirt,long sleeves,red necktie,bow,hair ribbon,hair ornament,sneakers,white footwear,black footwear,white socks,"
+      ],
+      "url": "https://civitai.com/models/2470249"
+    },
+    {
+      "name": "プリミティ・シエル/鳴神 天音（純聖天使シリーズ） / Primity Ciel/Narugami Amane (Holy Angel Tenshi series)",
+      "type": "LORA",
+      "tags": [
+        "character",
+        "game character"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "green hair,grey hair,aqua eyes,blue eyes,green eyes,very long hair,wavy hair,small breasts,",
+        "ciel-jt,navel,magical girl,dress,skirt,frills,center opening,hat,red headwear,elbow gloves,mary janes,winged footwear,wings,black thighhighs,zettai ryouiki,",
+        "amane-jt,school uniform,serafuku,blue skirt,pleated skirt,long sleeves,red necktie,white thighhighs,zettai ryouiki,mary janes,"
+      ],
+      "url": "https://civitai.com/models/2470446"
+    },
+    {
+      "name": "[IL CHARACTER 168] Blue mahou shoujyo Midori ootori",
+      "type": "LORA",
+      "tags": [
+        "character"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "Blue mahou shoujyo,1girl,solo,magical girl,blue eyes,blue hair,fingerless gloves,long hair,thighhighs,blue gloves,hair bun,double bun,general,hair ornament,white sleeves,hair flower,detached sleeves,symbol in eye,blue thighhighs,blue footwear,ribbon,dress,skirt,hair ribbon,bike shorts,heart brooch,hair flower,bridal garter,thigh strap,shorts under dress,blunt bangs,puffy sleeves,doughnut hair bun,drill hair,white sleeves,sidelocks,star \\(symbol\\),high heel boots,"
+      ],
+      "url": "https://civitai.com/models/2468104"
+    },
+    {
+      "name": "ワッフル（人造魔法少女ワッフル） / Waffle (Waffle the Artificial Magical Girl)",
+      "type": "LORA",
+      "tags": [
+        "character",
+        "game character"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "waffle-jw,pink hair,brown hair,blue eyes,short hair,short twintails,small breasts,ahoge,dog ears,dog tail,bare shoulders,nurse cap,dress,skirt,detached sleeves,detached collar,white thighhighs,zettai ryouiki,"
+      ],
+      "url": "https://civitai.com/models/2470506"
+    }
+  ],
+  "storybook anime": [
+    {
+      "name": "Whimsical Storybook Illustrations",
+      "type": "LORA",
+      "tags": [
+        "lineart",
+        "watercolor",
+        "whimsical",
+        "style",
+        "illustration",
+        "storybook",
+        "hand-drawn"
+      ],
+      "baseModel": "ZImageTurbo",
+      "trainedWords": [
+        "linex"
+      ],
+      "url": "https://civitai.com/models/2314478"
+    },
+    {
+      "name": "Kidart_Trad_V1",
+      "type": "LORA",
+      "tags": [
+        "concept art",
+        "whimsical",
+        "stylized",
+        "style",
+        "art style",
+        "colored pencil",
+        "illustration",
+        "traditional media"
+      ],
+      "baseModel": "Flux.1 D",
+      "trainedWords": [],
+      "url": "https://civitai.com/models/2443905"
+    },
+    {
+      "name": "Storybook Illu",
+      "type": "LORA",
+      "tags": [
+        "character",
+        "book"
+      ],
+      "baseModel": "Pony",
+      "trainedWords": [
+        "Storybook"
+      ],
+      "url": "https://civitai.com/models/2367367"
+    },
+    {
+      "name": "Greenaway-inspired Victorian Storybook LoRA",
+      "type": "LORA",
+      "tags": [
+        "style",
+        "children's book",
+        "storybook",
+        "vintage illustration",
+        "greenaway_style"
+      ],
+      "baseModel": "SD 1.5",
+      "trainedWords": [],
+      "url": "https://civitai.com/models/2462409"
+    }
+  ],
+  "clean line anime": [
+    {
+      "name": "エルピー・プル＆プルツー：機動戦士ガンダムZZ／Elpeo Ple & Ple Two：Mobile Suit Gundam ZZ ＋Style",
+      "type": "LORA",
+      "tags": [
+        "character",
+        "elpeo ple",
+        "ple two",
+        "ガンダムzz",
+        "mobile suit gundam zz",
+        "エルピー・プル",
+        "プルツー",
+        "プル"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "retro artstyle, 1980s \\(style\\),",
+        "anime screencap, cel shading, anime coloring, flat colors, clean lineart,",
+        "Pleples, official art, elpeo_puru\\(gundam_zz\\), child, 1girl, solo, brown hair, sidelocks, blue eyes, closed mouth, smile, necklace, yellow crop top, green shirt, navel, yellow skirt, green skirt, miniskirt, waist rope, green wristband, red garter straps, yellow thighhighs, red socks, green footwear,",
+        "Pleples, official art, elpeo_puru\\(gundam_zz\\), child, 1girl, solo, brown hair, sidelocks, blue eyes, Parted Lips, light smile, Burgundy shirt, puffy short sleeves, black apron, Burgundy belt, Burgundy shorts, puffy shorts, red fingerless gloves, single glove, glove on left hand, left hand only, loose socks, burgundy socks, gladiator sandals,",
+        "Pleples, figure_style, puru_two\\(gundam_zz\\), child, 1girl, solo, brown hair, sidelocks, v-shaped eyebrows, purple eyes, closed mouth, No expression, small breasts, red chest protector, red shoulder armor, red elbow pads, black bodysuit, skin tight, covered navel, red shorts, red gloves, red boots,",
+        "figure_style,"
+      ],
+      "url": "https://civitai.com/models/2447744"
+    },
+    {
+      "name": "Yaomai (やおまい) - Artist Style // Illustrious",
+      "type": "LORA",
+      "tags": [
+        "style",
+        "artist style",
+        "やおまい",
+        "yaomai"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "Yaomstyle",
+        "cel shading, crisp shadows, bright colors, high saturation, smooth gradients, clean lineart"
+      ],
+      "url": "https://civitai.com/models/2461845"
+    },
+    {
+      "name": "Jasmine",
+      "type": "LORA",
+      "tags": [
+        "character"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "Jasmine",
+        "1girl, jewelry, brown hair, short hair, denim, pants, jeans, belt, solo, bracelet, brown eyes, necklace, ring, lips, breasts, looking at viewer, bare shoulders, Jasmine, masterpiece, best quality, absurdres,  realistic, master piece, best quality, high resolution, 4K, 8K, video game artwork, soft lighting, smooth shading, stylized 3d character, video game cutscene, high quality game render, soft global illumination, smooth skin shading, subsurface scattering, clean facial topology,"
+      ],
+      "url": "https://civitai.com/models/2463840"
+    },
+    {
+      "name": "V67 Digital illustration",
+      "type": "LORA",
+      "tags": [
+        "style"
+      ],
+      "baseModel": "Flux.1 D",
+      "trainedWords": [
+        "(2D digital illustration:1.2), illustrated, digital painting, concept art, clean lines, vibrant colors, sharp details, stylized, artistic rendering, premium illustration, sophisticated art, semi-realistic"
+      ],
+      "url": "https://civitai.com/models/2464828"
+    }
+  ],
+  "cartoon anime": [
+    {
+      "name": "April Fools \"Clown\" Vex | (League of Legends)",
+      "type": "LORA",
+      "tags": [
+        "league of legends",
+        "character",
+        "clown",
+        "shortstack",
+        "waifu",
+        "woman",
+        "anthro",
+        "fantasy"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "1girl, vex_clown, shortstack, two-tone eyes, pink eyes, blue eyes, yellow eye ring, black pupils, rounded slit pupils, half lidded eyes,",
+        "blue hair, lavender hair, gradient hair, wavy hair, low short twintails, bangs, shoulder length hair, fluffy hair,",
+        "pink clown nose, clown makeup, face paint, face markings, dark blue tear mark, gradiant makeup under eyes, eyeliner, glossy eyeshadow, subtle dark lipstick,",
+        "///",
+        "colored skin, light teal skin, slightly chubby,",
+        "(four fingered hands),",
+        "jester hat, two pointed hat, split color hat, pom pom hat, right white pom pom, right dark purple hat, left black pom pom, left white and pink diamond pattern,",
+        "////",
+        "clownvex_outfit, jester costume, patchwork clothes, diamond pattern clothes, white pom pom buttons, two-tone clothes, split color clothes, purple and pink clothes, white clothes,",
+        "oversized sleeves, baggy sleeves, frilled cuffs,"
+      ],
+      "url": "https://civitai.com/models/2466187"
+    },
+    {
+      "name": "Classic Cartoon style {Illus}",
+      "type": "LORA",
+      "tags": [
+        "vintage",
+        "style",
+        "cartoon",
+        "lora"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "clascart_ Style, detailed background, blurry background, film grain, vignette, hard shadows",
+        "clascart_ Style, detailed background, blurry background, monochrome, film grain, vignette, hard shadows",
+        "clascart_ Style, simple background, film grain, vignette"
+      ],
+      "url": "https://civitai.com/models/2470817"
+    },
+    {
+      "name": "Dona Marocas | Turma da Monica | Monica's Gang | Illustrious",
+      "type": "LORA",
+      "tags": [
+        "character",
+        "comics",
+        "brazilian",
+        "glasses",
+        "woman",
+        "gibi",
+        "turma da monica",
+        "monicas gang"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "marocasmnc",
+        "1 girl, retro cartoon, blonde hair, hair bun, black eyes, lips, eyelashes, glasses, earrings"
+      ],
+      "url": "https://civitai.com/models/2470343"
+    },
+    {
+      "name": "Supa Strikas Style",
+      "type": "LORA",
+      "tags": [
+        "style",
+        "cartoon"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "Supa Strikas Style, Western Animation, Cartoon Style, Ameerican Style, Toony, 2D"
+      ],
+      "url": "https://civitai.com/models/2460009"
+    },
+    {
+      "name": "Zeitgeist-Morphing-Concept by AI_Characters",
+      "type": "LORA",
+      "tags": [
+        "concept",
+        "anthro",
+        "artstyle",
+        "artwork",
+        "fanart",
+        "morphing",
+        "zeitgeist",
+        "kvbn"
+      ],
+      "baseModel": "SDXL 1.0",
+      "trainedWords": [
+        "kvbn",
+        "morphing",
+        "concept",
+        "anthro",
+        "cartoon"
+      ],
+      "url": "https://civitai.com/models/2461904"
+    }
+  ],
+  "cute mascot anime": [
+    {
+      "name": "[Illustrious] Ieiri Popo(家入ポポ) - Nanashi Inc. (3 outfits)",
+      "type": "LORA",
+      "tags": [
+        "character",
+        "vtuber",
+        "virtual youtuber",
+        "nanashi inc"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "ieiri popo, short hair, braid, hair ornament, brown capelet, pink bowtie, white shirt, corset, navel, brown gloves, layered skirt, pleated skirt, (yellow skirt:0.94), white skirt, white thighhighs, wings",
+        "popo legacy, long hair, black hairband, low twintails, hair tubes, yellow coat, puffy short sleeves, collared shirt, muneate, brown gloves, fingerless gloves, navel, purple skirt, pleated skirt, plaid skirt, yellow thighhighs, thigh boots",
+        "popo oldcasual, long hair, green bow hairband, plaid bow hairband, necklace, cropped hoodie, orange hoodie, white sleeves, long sleeves, shoulder cutout, suspender skirt, brown skirt, black thighhighs"
+      ],
+      "url": "https://civitai.com/models/2462779"
+    },
+    {
+      "name": "Minimalist cute dress 3",
+      "type": "LORA",
+      "tags": [
+        "swimsuit",
+        "clothing",
+        "plaid dress"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "blue plaid dress,short dress,short sleeves,collared,white ribbon,"
+      ],
+      "url": "https://civitai.com/models/2469878"
+    },
+    {
+      "name": "[Illustrious] Nanoha Suzu(七乃羽すず) - vtuber",
+      "type": "LORA",
+      "tags": [
+        "character",
+        "vtuber",
+        "virtual youtuber",
+        "suzumia"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "nanoha suzu, low twintails, hair bow, blue bow, tiara, single earring, white choker, key choker, letterman jacket, blue jacket, fur trim, white dress, black thighhighs, asymmetrical legwear",
+        "nanoha suzu, low twintails, hair bow, blue bow, tiara, single earring, white choker, key choker, white dress, sleeveless, spaghetti strap, black thighhighs, asymmetrical legwear"
+      ],
+      "url": "https://civitai.com/models/2452074"
+    },
+    {
+      "name": "[Illustrious] Hira Hikari(飛良ひかり) - Nanashi Inc. (5 outfits)",
+      "type": "LORA",
+      "tags": [
+        "character",
+        "vtuber",
+        "virtual youtuber",
+        "nanashi inc"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "hira hikari, twintails, long hair, hair ornament, pink jacket, two-tone jacket, white shirt, frilled shirt, shoulder cutout, red ribbon, neck ribbon, black skirt, high-waist skirt, suspender skirt, plaid skirt, cat tail",
+        "hikari legacy, very long hair, low twintails, red hoodie, ribbon trim, long sleeves, pink skirt",
+        "hikari iamhero, medium hair, low twintails, star hair ornament, white shirt, t-shirt, clothes writing, short sleeves, dark blue skirt, suspender skirt, black belt",
+        "hikari gamer, short hair, grey jacket, two-sided jacket, red inner fabric, black crop top, cleavage, cross-criss halter, navel, white belt, alt black skirt, thigh strap",
+        "hikari idol, very long hair, low twintails, hair bow, dress, idol clothes, detached collar, necktie, single shoulder pad, wrist cuffs, white thighhighs"
+      ],
+      "url": "https://civitai.com/models/2470394"
+    }
+  ],
+  "fashion anime": [
+    {
+      "name": "Kirara Hoshi (星綺羅羅) - Jujutsu Kaisen",
+      "type": "LORA",
+      "tags": [
+        "character",
+        "jujutsu kaisen",
+        "anime character"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "1girl,purple eyes,pink eyes,black hair,blue hair,pink hair,multicolored hair,two-tone hair,streaked hair,long hair,bangs,blunt bangs",
+        "alternate hairstyle,piercing,ear piercing,lip piercing,jewelry,bracelet,choker,black choker,shirt,white shirt,crop top,off-shoulder shirt,off shoulder,bare shoulders,midriff,pants,black pants,belt,socks,red socks,shoes,black footwear,boots,bra strap,fashion,flat chest",
+        "split-color hair,striped,medium hair,short hair,alternate hairstyle,jewelry,necklace,cross necklace,cross,piercing,lip piercing,tattoo,mole,mole under mouth,shirt,striped shirt,long sleeves,skirt,miniskirt,belt,socks,grey socks,shoes,sneakers,breasts,casual,fashion,flat chest"
+      ],
+      "url": "https://civitai.com/models/2430928"
+    },
+    {
+      "name": "V67 fashionable, modest, well-tailored",
+      "type": "LORA",
+      "tags": [
+        "character"
+      ],
+      "baseModel": "Flux.1 D",
+      "trainedWords": [
+        "V67, fashionable, modest, well-tailored, elegant, chic, sophisticated, classy, tailored, refined, polished, tasteful, modest fashion, conservative chic, smart casual, formal wear, business attire, modest dress, elegant style"
+      ],
+      "url": "https://civitai.com/models/2433914"
+    },
+    {
+      "name": "ゴスロリ衣装の女  Gothic Lolita female / 名探偵コナン Detective Conan Episode575&576 - Illustrious",
+      "type": "LORA",
+      "tags": [
+        "anime",
+        "character",
+        "woman",
+        "detective conan",
+        "meitantei conan"
+      ],
+      "baseModel": "Illustrious",
+      "trainedWords": [
+        "gtlg, blonde hair, twintails, blunt bangs,wig, eyebrows hidden by hair, purple eyes,pale skin,dark red lips,lipstick,makeup,black headwear,tilted headwear,mini hat,frilled hat,frilled choker,black choker,emblem,",
+        "collarbone,red frills, black dress, red dress,gothic lolita, long sleeves, juliet sleeves, frilled dress, vertical-striped skirt, red skirt, black skirt,fishnet pantyhose,purple pantyhose,ankle boots,black boots,frilled boots,black handbag,frilled bag,bag ribbon, cosplay, goth fashion,disguise,"
+      ],
+      "url": "https://civitai.com/models/2455271"
+    },
+    {
+      "name": "2030s fashion",
+      "type": "LORA",
+      "tags": [
+        "meme",
+        "fashion",
+        "style",
+        "future"
+      ],
+      "baseModel": "ZImageTurbo",
+      "trainedWords": [],
+      "url": "https://civitai.com/models/2460753"
+    },
+    {
+      "name": "✨ CATHRIN — SDXL LoRA · High-Fashion Editorial Portrait Generator | Full ComfyUI Workflow Included",
+      "type": "Workflows",
+      "tags": [
+        "character",
+        "cathrin, sdxl, sdxl lora, lora, portrait, woman, female, realistic, photorealistic, hyperrealistic, ultra realistic, high fashion, editorial, fashion photography, vogue, beauty, glamour, model, cinematic, cinematic lighting, studio lighting, golden hour, bokeh, flawless skin, sharp eyes, expressive eyes, masterpiece, best quality, 8k, ultra detailed, raw photo, hasselblad, medium format, shallow depth of field, hdr, color grading, luxury, elegant, professional, headshot, business, outdoor portrait, beauty portrait, close up, face, skin detail, pores, natural light, rembrandt lighting, volumetric light, comfyui, comfyui workflow, workflow, ksampler, vae, clip, checkpoint, sdxl base, sdxl base 1.0, lora weight, dpmpp 2m, karras, upscale, 4x ultrasharp, ultrasharp, lanczos, 2048, print ready, safetensors, embedding, textual inversion, trigger word, s0 s1, high resolution, ultra high resolution, photo, photography, portrait photography, fashion model, cover girl, magazine cover, editorial photography, dark background, gradient background, wind blown hair, bone structure, symmetry, facial symmetry, catchlights, micro detail, pore detail, skin texture, luxury fashion, high end, refined, confident, pose, editorial style, vogue style, magazine style, civitai, civitai lora, free download, free workflow, comfyui lora, sdxl portrait, sdxl fashion, sdxl realistic, sdxl photorealistic, sdxl woman, sdxl female, sdxl beauty, sdxl model"
+      ],
+      "baseModel": "SDXL 1.0",
+      "trainedWords": [],
+      "url": "https://civitai.com/models/2465034"
+    }
+  ]
+}

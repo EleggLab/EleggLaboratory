@@ -1,0 +1,958 @@
+{
+  "date": "2026-03-18",
+  "selected_dir": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion",
+  "gemini_source": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\Gemini-NAI 프롬프트_ 성인 게임 캐릭터 생성.md",
+  "summary": {
+    "VisualOnly": 17,
+    "PromptDerived": 27,
+    "Reject": 2
+  },
+  "curated_cues": {
+    "keep": [
+      "slight chibi",
+      "smaller head",
+      "full body",
+      "standing",
+      "feet visible",
+      "white background",
+      "adult game character",
+      "bold clean lineart",
+      "flat cel shading"
+    ],
+    "drop": [
+      "reference sheet",
+      "multiple views",
+      "palette swatches",
+      "silhouette",
+      "unfinished lineart",
+      "long prose prompt blocks"
+    ]
+  },
+  "extracted_cues": {
+    "prompt_cues": {
+      "masterpiece": 27,
+      "full body": 11,
+      "standing": 11,
+      "slight chibi": 10,
+      "smaller head": 10,
+      "feet": 10,
+      "bold lineart": 6,
+      "flat color": 1
+    },
+    "gemini_cues": [
+      "slight chibi",
+      "smaller head",
+      "full body",
+      "standing",
+      "white background",
+      "human",
+      "elf",
+      "demon",
+      "centaur",
+      "succubus"
+    ]
+  },
+  "entries": [
+    {
+      "file_name": "03ede80408e600de2c156ea01668a3f8.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\03ede80408e600de2c156ea01668a3f8.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "03ede80408e600de2c156ea01668a3f8",
+      "stats": {
+        "width": 576,
+        "height": 1024,
+        "white_ratio": 0.6458,
+        "subject_bbox": [
+          35,
+          39,
+          550,
+          1006
+        ],
+        "subject_bbox_coverage": 0.8468
+      }
+    },
+    {
+      "file_name": "04c3443473ba07c4d14740814d120090.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\04c3443473ba07c4d14740814d120090.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "04c3443473ba07c4d14740814d120090",
+      "stats": {
+        "width": 576,
+        "height": 1024,
+        "white_ratio": 0.4137,
+        "subject_bbox": [
+          0,
+          0,
+          575,
+          1023
+        ],
+        "subject_bbox_coverage": 1.0
+      }
+    },
+    {
+      "file_name": "145c2d275a9a98ef24433a9e2277b731.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\145c2d275a9a98ef24433a9e2277b731.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "145c2d275a9a98ef24433a9e2277b731",
+      "stats": {
+        "width": 576,
+        "height": 1024,
+        "white_ratio": 0.3912,
+        "subject_bbox": [
+          0,
+          0,
+          575,
+          1023
+        ],
+        "subject_bbox_coverage": 1.0
+      }
+    },
+    {
+      "file_name": "2387d21b8209667e85161de29aa5d381.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\2387d21b8209667e85161de29aa5d381.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "2387d21b8209667e85161de29aa5d381",
+      "stats": {
+        "width": 576,
+        "height": 1024,
+        "white_ratio": 0.0934,
+        "subject_bbox": [
+          0,
+          0,
+          575,
+          1023
+        ],
+        "subject_bbox_coverage": 1.0
+      }
+    },
+    {
+      "file_name": "246e40b79b505c0e33a3e0d3badd522c.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\246e40b79b505c0e33a3e0d3badd522c.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "246e40b79b505c0e33a3e0d3badd522c",
+      "stats": {
+        "width": 576,
+        "height": 1024,
+        "white_ratio": 0.2934,
+        "subject_bbox": [
+          0,
+          32,
+          575,
+          1023
+        ],
+        "subject_bbox_coverage": 0.9688
+      }
+    },
+    {
+      "file_name": "377279c2c3078fb0331b206ae69e1255.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\377279c2c3078fb0331b206ae69e1255.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "377279c2c3078fb0331b206ae69e1255",
+      "stats": {
+        "width": 736,
+        "height": 1226,
+        "white_ratio": 0.1242,
+        "subject_bbox": [
+          0,
+          0,
+          735,
+          1225
+        ],
+        "subject_bbox_coverage": 1.0
+      }
+    },
+    {
+      "file_name": "41dbc1cb7082ee95c63445cfb3467d50.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\41dbc1cb7082ee95c63445cfb3467d50.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "41dbc1cb7082ee95c63445cfb3467d50",
+      "stats": {
+        "width": 576,
+        "height": 1024,
+        "white_ratio": 0.5552,
+        "subject_bbox": [
+          57,
+          23,
+          553,
+          1007
+        ],
+        "subject_bbox_coverage": 0.83
+      }
+    },
+    {
+      "file_name": "5259b2cd8a5e8d6f65593818c8bec0ba.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\5259b2cd8a5e8d6f65593818c8bec0ba.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "5259b2cd8a5e8d6f65593818c8bec0ba",
+      "stats": {
+        "width": 720,
+        "height": 720,
+        "white_ratio": 0.0035,
+        "subject_bbox": [
+          0,
+          0,
+          719,
+          719
+        ],
+        "subject_bbox_coverage": 1.0
+      }
+    },
+    {
+      "file_name": "564d7b4572e29e16768a4b31e96742ac.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\564d7b4572e29e16768a4b31e96742ac.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "564d7b4572e29e16768a4b31e96742ac",
+      "stats": {
+        "width": 576,
+        "height": 1024,
+        "white_ratio": 0.6792,
+        "subject_bbox": [
+          44,
+          44,
+          567,
+          1005
+        ],
+        "subject_bbox_coverage": 0.8546
+      }
+    },
+    {
+      "file_name": "5ad6968561d72e0a9c6afd6ff8957c51.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\5ad6968561d72e0a9c6afd6ff8957c51.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "5ad6968561d72e0a9c6afd6ff8957c51",
+      "stats": {
+        "width": 720,
+        "height": 1280,
+        "white_ratio": 0.4819,
+        "subject_bbox": [
+          0,
+          0,
+          719,
+          1279
+        ],
+        "subject_bbox_coverage": 1.0
+      }
+    },
+    {
+      "file_name": "6c5c5f5e4e0c391442486ac56a7417a0.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\6c5c5f5e4e0c391442486ac56a7417a0.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "6c5c5f5e4e0c391442486ac56a7417a0",
+      "stats": {
+        "width": 576,
+        "height": 1024,
+        "white_ratio": 0.3011,
+        "subject_bbox": [
+          0,
+          0,
+          575,
+          1023
+        ],
+        "subject_bbox_coverage": 1.0
+      }
+    },
+    {
+      "file_name": "6e82b6ee291b295a77859d723dcacd92.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\6e82b6ee291b295a77859d723dcacd92.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "6e82b6ee291b295a77859d723dcacd92",
+      "stats": {
+        "width": 720,
+        "height": 1280,
+        "white_ratio": 0.5984,
+        "subject_bbox": [
+          30,
+          32,
+          719,
+          1242
+        ],
+        "subject_bbox_coverage": 0.9067
+      }
+    },
+    {
+      "file_name": "78e2712d4c362987de99c44d8e181647.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\78e2712d4c362987de99c44d8e181647.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "78e2712d4c362987de99c44d8e181647",
+      "stats": {
+        "width": 736,
+        "height": 1218,
+        "white_ratio": 0.1267,
+        "subject_bbox": [
+          0,
+          0,
+          735,
+          1217
+        ],
+        "subject_bbox_coverage": 1.0
+      }
+    },
+    {
+      "file_name": "9d2f3d1bd42c6df87097113c139ee3b6.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\9d2f3d1bd42c6df87097113c139ee3b6.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "9d2f3d1bd42c6df87097113c139ee3b6",
+      "stats": {
+        "width": 576,
+        "height": 1024,
+        "white_ratio": 0.7013,
+        "subject_bbox": [
+          48,
+          51,
+          539,
+          985
+        ],
+        "subject_bbox_coverage": 0.7799
+      }
+    },
+    {
+      "file_name": "ae1760ebb4b9529b2435bad8f15e0ab9.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\ae1760ebb4b9529b2435bad8f15e0ab9.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "ae1760ebb4b9529b2435bad8f15e0ab9",
+      "stats": {
+        "width": 768,
+        "height": 1280,
+        "white_ratio": 0.0578,
+        "subject_bbox": [
+          0,
+          0,
+          767,
+          1279
+        ],
+        "subject_bbox_coverage": 1.0
+      }
+    },
+    {
+      "file_name": "c6e39862c9dc75da3201aa6167abbd04.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\c6e39862c9dc75da3201aa6167abbd04.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "c6e39862c9dc75da3201aa6167abbd04",
+      "stats": {
+        "width": 720,
+        "height": 1280,
+        "white_ratio": 0.0446,
+        "subject_bbox": [
+          0,
+          0,
+          719,
+          1279
+        ],
+        "subject_bbox_coverage": 1.0
+      }
+    },
+    {
+      "file_name": "feba665f6807e8f8b6a31f870a3de67e.jpg",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\feba665f6807e8f8b6a31f870a3de67e.jpg",
+      "classification": "VisualOnly",
+      "extension": ".jpg",
+      "stem": "feba665f6807e8f8b6a31f870a3de67e",
+      "stats": {
+        "width": 676,
+        "height": 1200,
+        "white_ratio": 0.6571,
+        "subject_bbox": [
+          122,
+          0,
+          675,
+          1199
+        ],
+        "subject_bbox_coverage": 0.8195
+      }
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-1852803451.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-1852803451.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-1852803451",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.8318,
+        "subject_bbox": [
+          89,
+          50,
+          717,
+          1010
+        ],
+        "subject_bbox_coverage": 0.5765
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, (slight chibi 0.8), (smaller head 1.3), bold l"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-2149538122.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-2149538122.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-2149538122",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.7923,
+        "subject_bbox": [
+          210,
+          14,
+          870,
+          1002
+        ],
+        "subject_bbox_coverage": 0.6234
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, (slight chibi 0.8), (smaller head 1.3), bold l"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3164599244.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3164599244.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3164599244",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.6305,
+        "subject_bbox": [
+          65,
+          48,
+          850,
+          982
+        ],
+        "subject_bbox_coverage": 0.7009
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, (slight chibi 0.8), (smaller head 1.3), bold l"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3496859571.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3496859571.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3496859571",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.7768,
+        "subject_bbox": [
+          150,
+          44,
+          896,
+          997
+        ],
+        "subject_bbox_coverage": 0.6796
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, (slight chibi 0.8), (smaller head 1.3), bold l"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3499779879.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3499779879.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3499779879",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.7308,
+        "subject_bbox": [
+          177,
+          18,
+          892,
+          1006
+        ],
+        "subject_bbox_coverage": 0.6753
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, (slight chibi 0.8), (smaller head 1.3), bold l"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3695900517.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3695900517.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3695900517",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.7048,
+        "subject_bbox": [
+          61,
+          20,
+          972,
+          1002
+        ],
+        "subject_bbox_coverage": 0.855
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, (slight chibi 0.8), (smaller head 1.3), bold l"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3981419444.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3981419444.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-3981419444",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.6778,
+        "subject_bbox": [
+          23,
+          10,
+          984,
+          1004
+        ],
+        "subject_bbox_coverage": 0.9128
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, (slight chibi 0.8), (smaller head 1.3), bold l"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-4141182270.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-4141182270.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-4141182270",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.7399,
+        "subject_bbox": [
+          240,
+          72,
+          796,
+          1006
+        ],
+        "subject_bbox_coverage": 0.4967
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, (slight chibi 0.8), (smaller head 1.3), bold l"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-4165285912.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-4165285912.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-4165285912",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.7218,
+        "subject_bbox": [
+          173,
+          35,
+          832,
+          1013
+        ],
+        "subject_bbox_coverage": 0.6162
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, (slight chibi 0.8), (smaller head 1.3), bold l"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-8557775.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-8557775.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, (slight chibi_0.8), (smaller head_1.3), bold l s-8557775",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.6842,
+        "subject_bbox": [
+          23,
+          72,
+          990,
+          1000
+        ],
+        "subject_bbox_coverage": 0.8576
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, (slight chibi 0.8), (smaller head 1.3), bold l"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty s-3415329945.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty s-3415329945.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty s-3415329945",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.75,
+        "subject_bbox": [
+          264,
+          96,
+          851,
+          968
+        ],
+        "subject_bbox_coverage": 0.4895
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, full body, standing, (feet 1.2) , chibi sty"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty s-3441169515.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty s-3441169515.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty s-3441169515",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.7529,
+        "subject_bbox": [
+          274,
+          35,
+          821,
+          1004
+        ],
+        "subject_bbox_coverage": 0.5069
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, full body, standing, (feet 1.2) , chibi sty"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty s-3757247806.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty s-3757247806.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.2)__, chibi sty s-3757247806",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.7319,
+        "subject_bbox": [
+          153,
+          98,
+          765,
+          981
+        ],
+        "subject_bbox_coverage": 0.5168
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, full body, standing, (feet 1.2) , chibi sty"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-1631311782.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-1631311782.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-1631311782",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.7483,
+        "subject_bbox": [
+          201,
+          80,
+          742,
+          996
+        ],
+        "subject_bbox_coverage": 0.474
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, full body, standing, (feet 1.3) , chibi sty"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-2496740283.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-2496740283.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-2496740283",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.6897,
+        "subject_bbox": [
+          217,
+          101,
+          852,
+          952
+        ],
+        "subject_bbox_coverage": 0.5168
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, full body, standing, (feet 1.3) , chibi sty"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-2641218358.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-2641218358.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-2641218358",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.7511,
+        "subject_bbox": [
+          151,
+          41,
+          789,
+          990
+        ],
+        "subject_bbox_coverage": 0.5789
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, full body, standing, (feet 1.3) , chibi sty"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-30709292.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-30709292.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-30709292",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.7476,
+        "subject_bbox": [
+          247,
+          73,
+          819,
+          970
+        ],
+        "subject_bbox_coverage": 0.4907
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, full body, standing, (feet 1.3) , chibi sty"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-3569049670.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-3569049670.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-3569049670",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.7715,
+        "subject_bbox": [
+          233,
+          33,
+          758,
+          989
+        ],
+        "subject_bbox_coverage": 0.4801
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, full body, standing, (feet 1.3) , chibi sty"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-3569502794.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-3569502794.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-3569502794",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.6476,
+        "subject_bbox": [
+          205,
+          57,
+          874,
+          989
+        ],
+        "subject_bbox_coverage": 0.5962
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, full body, standing, (feet 1.3) , chibi sty"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-923046665.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-923046665.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, __full body, standing, (feet_1.3)__, chibi sty s-923046665",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.7055,
+        "subject_bbox": [
+          162,
+          73,
+          846,
+          1006
+        ],
+        "subject_bbox_coverage": 0.6102
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, full body, standing, (feet 1.3) , chibi sty"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, __full body, standing__, chibi style, bold lin s-3060702384.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, __full body, standing__, chibi style, bold lin s-3060702384.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, __full body, standing__, chibi style, bold lin s-3060702384",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.731,
+        "subject_bbox": [
+          38,
+          84,
+          981,
+          974
+        ],
+        "subject_bbox_coverage": 0.8021
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, full body, standing , chibi style, bold lin"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, chibi style, bold lineart, flat color, 1girl,  s-1659235244.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, chibi style, bold lineart, flat color, 1girl,  s-1659235244.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, chibi style, bold lineart, flat color, 1girl,  s-1659235244",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.6584,
+        "subject_bbox": [
+          111,
+          69,
+          875,
+          1001
+        ],
+        "subject_bbox_coverage": 0.6807
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, chibi style, bold lineart, flat color, 1girl,"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-123418701.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-123418701.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-123418701",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.6701,
+        "subject_bbox": [
+          243,
+          34,
+          928,
+          989
+        ],
+        "subject_bbox_coverage": 0.6254
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, chibi, super deformed, big head, bold lineart,"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-1738056368.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-1738056368.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-1738056368",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.6294,
+        "subject_bbox": [
+          181,
+          67,
+          885,
+          951
+        ],
+        "subject_bbox_coverage": 0.595
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, chibi, super deformed, big head, bold lineart,"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-2278331069.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-2278331069.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-2278331069",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.6898,
+        "subject_bbox": [
+          225,
+          89,
+          895,
+          976
+        ],
+        "subject_bbox_coverage": 0.5682
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, chibi, super deformed, big head, bold lineart,"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-2488074396.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-2488074396.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-2488074396",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.6326,
+        "subject_bbox": [
+          181,
+          34,
+          828,
+          1006
+        ],
+        "subject_bbox_coverage": 0.6013
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, chibi, super deformed, big head, bold lineart,"
+    },
+    {
+      "file_name": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-3490865774.png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-3490865774.png",
+      "classification": "PromptDerived",
+      "extension": ".png",
+      "stem": "score_9, score_8_up, masterpiece, chibi, super deformed, big head, bold lineart, s-3490865774",
+      "stats": {
+        "width": 1024,
+        "height": 1024,
+        "white_ratio": 0.693,
+        "subject_bbox": [
+          21,
+          59,
+          989,
+          964
+        ],
+        "subject_bbox_coverage": 0.8372
+      },
+      "clean_prompt": "score 9, score 8 up, masterpiece, chibi, super deformed, big head, bold lineart,"
+    },
+    {
+      "file_name": "다운로드 (1).png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\다운로드 (1).png",
+      "classification": "Reject",
+      "extension": ".png",
+      "stem": "다운로드 (1)",
+      "stats": {
+        "width": 1152,
+        "height": 2048,
+        "white_ratio": 0.0029,
+        "subject_bbox": [
+          0,
+          0,
+          1151,
+          2047
+        ],
+        "subject_bbox_coverage": 1.0
+      }
+    },
+    {
+      "file_name": "다운로드 (2).png",
+      "path": "C:\\Users\\rndhr\\OneDrive\\Documents\\GitHub\\EleggLaboratory\\unity-mcptest\\Docs\\Art\\SelectedForExpansion\\다운로드 (2).png",
+      "classification": "Reject",
+      "extension": ".png",
+      "stem": "다운로드 (2)",
+      "stats": {
+        "width": 1152,
+        "height": 2048,
+        "white_ratio": 0.6155,
+        "subject_bbox": [
+          0,
+          0,
+          1151,
+          2047
+        ],
+        "subject_bbox_coverage": 1.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "date": "2026-03-18",
+  "families": {
+    "A2": {
+      "family_name": "Refined Pink Gothic",
+      "anchor_seed": 22003111,
+      "winner_slug": "a2_tiefling_female",
+      "winner_seed": 22003547,
+      "jobs": [
+        {
+          "slug": "a2_human_female",
+          "seed": 22003111,
+          "selected": true,
+          "notes": "stage2_keep"
+        },
+        {
+          "slug": "a2_elf_female",
+          "seed": 22003220,
+          "selected": true,
+          "notes": "stage2_keep"
+        },
+        {
+          "slug": "a2_succubus_female",
+          "seed": 22003329,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "a2_wolfkin_female",
+          "seed": 22003438,
+          "selected": true,
+          "notes": "stage2_keep"
+        },
+        {
+          "slug": "a2_tiefling_female",
+          "seed": 22003547,
+          "selected": true,
+          "notes": "stage2_keep"
+        },
+        {
+          "slug": "a2_human_male",
+          "seed": 22003656,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "a2_elf_male",
+          "seed": 22003765,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "a2_wolfkin_male",
+          "seed": 22003874,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "a2_dragonkin_male",
+          "seed": 22003983,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "a2_goblin_female",
+          "seed": 22004092,
+          "selected": false,
+          "notes": ""
+        }
+      ]
+    },
+    "F2": {
+      "family_name": "Refined Adventurer",
+      "anchor_seed": 22008666,
+      "winner_slug": null,
+      "winner_seed": null,
+      "jobs": [
+        {
+          "slug": "f2_human_female",
+          "seed": 22008666,
+          "selected": true,
+          "notes": "secondary_reference"
+        },
+        {
+          "slug": "f2_elf_female",
+          "seed": 22008775,
+          "selected": true,
+          "notes": "secondary_reference"
+        },
+        {
+          "slug": "f2_succubus_female",
+          "seed": 22008884,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "f2_wolfkin_female",
+          "seed": 22008993,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "f2_tiefling_female",
+          "seed": 22009102,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "f2_human_male",
+          "seed": 22009211,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "f2_elf_male",
+          "seed": 22009320,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "f2_wolfkin_male",
+          "seed": 22009429,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "f2_dragonkin_male",
+          "seed": 22009538,
+          "selected": false,
+          "notes": ""
+        },
+        {
+          "slug": "f2_goblin_female",
+          "seed": 22009647,
+          "selected": false,
+          "notes": ""
+        }
+      ]
+    }
+  }
+}
