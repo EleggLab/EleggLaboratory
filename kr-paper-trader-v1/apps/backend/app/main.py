@@ -5,20 +5,23 @@ from app.core.db import Base, engine
 from app import models  # noqa: F401
 from app.services.state_store import load_state, save_state
 from app.services.ws_hub import hub, run_broadcast_loop
+from app.services.scheduler import run_worker_loop
 
 app = FastAPI(title="KR Paper Trader v1", version="0.3.0")
 app.include_router(router)
 
 _stop_event = asyncio.Event()
 _broadcast_task: asyncio.Task | None = None
+_worker_task: asyncio.Task | None = None
 
 
 @app.on_event("startup")
 async def on_startup():
-    global _broadcast_task
+    global _broadcast_task, _worker_task
     Base.metadata.create_all(bind=engine)
     load_state()
     _broadcast_task = asyncio.create_task(run_broadcast_loop(_stop_event))
+    _worker_task = asyncio.create_task(run_worker_loop(_stop_event))
 
 
 @app.on_event("shutdown")
@@ -26,6 +29,8 @@ async def on_shutdown():
     _stop_event.set()
     if _broadcast_task:
         _broadcast_task.cancel()
+    if _worker_task:
+        _worker_task.cancel()
     save_state()
 
 
