@@ -28,6 +28,9 @@ docker compose -f infra/docker-compose.yml up --build
 - Frontend: http://localhost:3000
 
 ## 필수 API (v1 스켈레톤)
+- POST `/api/auth/login`
+- GET `/api/instruments`
+- POST `/api/instruments/seed`
 - POST `/api/ai/plan/generate`
 - POST `/api/ai/plan/{id}/approve`
 - POST `/api/ai/plan/{id}/reject`
