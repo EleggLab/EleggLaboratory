@@ -1,3 +1,4 @@
+from datetime import datetime, timezone
 from app.services.market_data import get_quote
 from app.services import paper_execution as ex
 
@@ -13,6 +14,8 @@ def register_exit_rules(ticker: str, side: str, entry_price: float, qty: int, ru
         "take_profit_pct": rules.get("take_profit_pct"),
         "stop_loss_pct": rules.get("stop_loss_pct"),
         "trailing_stop_pct": rules.get("trailing_stop_pct"),
+        "time_stop_days": rules.get("time_stop_days"),
+        "armed_at": datetime.now(timezone.utc).isoformat(),
         "peak_price": entry_price,
     }
 
@@ -29,6 +32,7 @@ def process_exit_rules() -> list[dict]:
         tp = r.get("take_profit_pct")
         sl = r.get("stop_loss_pct")
         tr = r.get("trailing_stop_pct")
+        tsd = r.get("time_stop_days")
 
         do_exit = False
         reason = None
@@ -42,6 +46,13 @@ def process_exit_rules() -> list[dict]:
         if tr is not None and last <= r["peak_price"] * (1 - float(tr) / 100):
             do_exit = True
             reason = reason or "trailing_stop"
+
+        if tsd is not None:
+            armed_at = datetime.fromisoformat(r["armed_at"])
+            held_days = (datetime.now(timezone.utc) - armed_at).total_seconds() / 86400
+            if held_days >= float(tsd):
+                do_exit = True
+                reason = reason or "time_stop"
 
         if do_exit:
             payload = {

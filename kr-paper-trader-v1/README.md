@@ -67,4 +67,8 @@ docker compose -f infra/docker-compose.yml up --build
 - WS `/ws/positions`
 
 ## 주의
-현재 구현은 **v1 bootstrap/skeleton**이며, 실거래 연결은 의도적으로 비활성화되어 있습니다.
+현재 구현은 **paper trading 중심 개발 중**이며, 실거래 연결은 의도적으로 비활성화되어 있습니다.
+
+## 운영 문서
+- `docs/production-readiness.md`
+- `docs/ops-runbook.md`
