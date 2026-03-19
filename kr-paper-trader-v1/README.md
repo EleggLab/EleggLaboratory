@@ -39,7 +39,10 @@ docker compose -f infra/docker-compose.yml up --build
 - POST `/api/orders/{id}/replace`
 - GET `/api/orders`
 - GET `/api/fills`
+- POST `/api/quotes`
+- GET `/api/quotes`
 - GET `/api/positions`
+- GET `/api/cash-ledger`
 - GET `/api/dashboard`
 - GET `/api/market/status`
 - GET `/api/settings/risk`
