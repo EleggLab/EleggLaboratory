@@ -1,0 +1,15 @@
+{
+  "source": "manual",
+  "ticker": "005930",
+  "side": "buy",
+  "intent": "enter",
+  "target_weight_pct": 10,
+  "trigger_type": "price_below",
+  "trigger_price": 73000,
+  "order_type": "limit",
+  "order_price": 72900,
+  "execution_safety": {
+    "review_required": false,
+    "max_slippage_bps": 15
+  }
+}

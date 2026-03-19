@@ -1,0 +1,21 @@
+{
+  "as_of_kst": "2026-03-19",
+  "market_regime": "sideways",
+  "portfolio_policy": {"reserve_cash_pct": 20},
+  "portfolio_targets": [
+    {"ticker": "005930", "target_weight_pct": 12.0, "confidence": 0.71},
+    {"ticker": "000660", "target_weight_pct": 10.0, "confidence": 0.68}
+  ],
+  "trade_plan": [
+    {
+      "ticker": "005930",
+      "side": "buy",
+      "intent": "enter",
+      "target_weight_pct": 12,
+      "trigger_type": "market_open",
+      "order_type": "market",
+      "approval_required": true
+    }
+  ],
+  "final_verdict": "REVIEW_REQUIRED"
+}
