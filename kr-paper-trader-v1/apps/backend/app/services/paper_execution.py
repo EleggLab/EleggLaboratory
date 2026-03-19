@@ -2,6 +2,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 from app.services.market_data import get_quote
 from app.services.portfolio import apply_fill
+from app.services.exit_engine import register_exit_rules
 
 KST = ZoneInfo("Asia/Seoul")
 
@@ -74,6 +75,9 @@ def _try_fill(order: dict):
     }
     FILL_DB.append(fill)
     apply_fill(order["ticker"], side, fill_qty, float(px))
+
+    if side == "buy" and order.get("exit_rules"):
+        register_exit_rules(order["ticker"], side, float(px), fill_qty, order.get("exit_rules"))
 
     order["remaining_qty"] = max(0, req_qty - fill_qty)
     if order["remaining_qty"] > 0:
