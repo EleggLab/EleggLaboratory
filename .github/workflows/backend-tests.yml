@@ -1,0 +1,35 @@
+name: backend-tests
+
+on:
+  push:
+    paths:
+      - 'kr-paper-trader-v1/**'
+      - '.github/workflows/backend-tests.yml'
+  pull_request:
+    paths:
+      - 'kr-paper-trader-v1/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: kr-paper-trader-v1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r apps/backend/requirements.txt
+      - name: Run backend tests
+        run: python -m pytest -q tests/backend
+      - name: Generate readiness report
+        run: python scripts/generate-readiness-report.py
+      - name: Upload readiness report
+        uses: actions/upload-artifact@v4
+        with:
+          name: readiness-report
+          path: kr-paper-trader-v1/docs/readiness-report.md
