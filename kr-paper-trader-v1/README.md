@@ -52,6 +52,7 @@ docker compose -f infra/docker-compose.yml up --build
 - POST `/api/market/calendar`
 - GET `/api/corporate-actions`
 - POST `/api/corporate-actions`
+- POST `/api/corporate-actions/apply-today`
 - GET `/api/settings/risk`
 - PATCH `/api/settings/risk`
 - POST `/api/sim/reset`
