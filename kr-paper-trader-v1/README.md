@@ -77,3 +77,4 @@ docker compose -f infra/docker-compose.yml up --build
 ## 운영 문서
 - `docs/production-readiness.md`
 - `docs/ops-runbook.md`
+- `docs/readiness-report.md` (테스트 스크립트 실행 시 갱신)
