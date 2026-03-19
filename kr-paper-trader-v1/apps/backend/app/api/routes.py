@@ -4,7 +4,7 @@ from app.schemas.common import OrderSchema
 from app.schemas.ai import PlanGenerateRequest, DailyPlanResponse
 from app.schemas.auth import LoginRequest, LoginResponse
 from app.schemas.plan_submit import PlanSubmitRequest
-from app.api.deps import get_current_user
+from app.api.deps import get_current_user, require_admin
 from app.services import paper_execution as ex
 from app.services.risk_engine import validate_order
 from app.services.market_data import upsert_quote, all_quotes, QUOTE_DB, is_stale
@@ -74,7 +74,8 @@ def login(payload: LoginRequest, db: Session = Depends(get_db)):
 
     user = db.query(User).filter(User.username == payload.username).first()
     if not user:
-        user = User(username=payload.username, password_hash=hash_password(payload.password))
+        role = "admin" if payload.username.startswith("admin") else "trader"
+        user = User(username=payload.username, role=role, password_hash=hash_password(payload.password))
         db.add(user)
         db.commit()
         db.refresh(user)
@@ -82,7 +83,7 @@ def login(payload: LoginRequest, db: Session = Depends(get_db)):
     if not verify_password(payload.password, user.password_hash):
         raise HTTPException(401, "invalid credentials")
 
-    token = create_access_token(payload.username)
+    token = create_access_token(payload.username, role=user.role)
     return LoginResponse(access_token=token)
 
 
@@ -116,7 +117,7 @@ def seed_instruments(db: Session = Depends(get_db)):
 
 
 @router.patch("/market/admin/instruments/{ticker}/flags")
-def patch_instrument_flags(ticker: str, payload: dict, db: Session = Depends(get_db)):
+def patch_instrument_flags(ticker: str, payload: dict, db: Session = Depends(get_db), admin: dict = Depends(require_admin)):
     row = db.query(Instrument).filter(Instrument.ticker == ticker).first()
     if not row:
         raise HTTPException(404, "instrument not found")
@@ -132,7 +133,7 @@ def patch_instrument_flags(ticker: str, payload: dict, db: Session = Depends(get
 
 
 @router.post("/market/admin/disclosure-sync/mock")
-def disclosure_sync_mock(payload: dict, db: Session = Depends(get_db)):
+def disclosure_sync_mock(payload: dict, db: Session = Depends(get_db), admin: dict = Depends(require_admin)):
     items = payload.get("items", [])
     updated = 0
     for it in items:
@@ -442,7 +443,7 @@ def market_status():
 
 
 @router.post("/market/admin/session-state")
-def set_market_state(payload: dict):
+def set_market_state(payload: dict, admin: dict = Depends(require_admin)):
     state = payload.get("state")
     if state not in (None, "pre", "open", "after", "closed"):
         raise HTTPException(400, "state must be one of pre/open/after/closed/null")
@@ -468,7 +469,7 @@ def get_market_calendar(db: Session = Depends(get_db)):
 
 
 @router.post("/market/calendar")
-def upsert_market_calendar(payload: dict, db: Session = Depends(get_db)):
+def upsert_market_calendar(payload: dict, db: Session = Depends(get_db), admin: dict = Depends(require_admin)):
     trade_date = payload.get("trade_date")
     if not trade_date:
         raise HTTPException(400, "trade_date required")
@@ -500,7 +501,7 @@ def get_corporate_actions(db: Session = Depends(get_db)):
 
 
 @router.post("/corporate-actions")
-def create_corporate_action(payload: dict, db: Session = Depends(get_db), user: str = Depends(get_current_user)):
+def create_corporate_action(payload: dict, db: Session = Depends(get_db), admin: dict = Depends(require_admin)):
     required = ["ticker", "action_type", "ex_date"]
     if any(k not in payload for k in required):
         raise HTTPException(400, "ticker/action_type/ex_date required")
@@ -518,7 +519,7 @@ def create_corporate_action(payload: dict, db: Session = Depends(get_db), user: 
 
 
 @router.post("/corporate-actions/apply-today")
-def apply_corporate_actions_today(db: Session = Depends(get_db), user: str = Depends(get_current_user)):
+def apply_corporate_actions_today(db: Session = Depends(get_db), admin: dict = Depends(require_admin)):
     applied = apply_actions_for_today(db, POSITIONS)
     _save_all_state()
     return {"ok": True, "applied": applied}
@@ -541,7 +542,7 @@ def get_risk_settings(db: Session = Depends(get_db)):
 
 
 @router.patch("/settings/risk")
-def patch_risk_settings(payload: dict, db: Session = Depends(get_db), user: str = Depends(get_current_user)):
+def patch_risk_settings(payload: dict, db: Session = Depends(get_db), admin: dict = Depends(require_admin)):
     rr = _get_or_create_risk_rule(db)
     before = {
         "reserve_cash_pct": rr.reserve_cash_pct,
@@ -582,7 +583,7 @@ def get_banned_tickers():
 
 
 @router.patch("/risk/banned-tickers")
-def patch_banned_tickers(payload: dict, user: str = Depends(get_current_user)):
+def patch_banned_tickers(payload: dict, admin: dict = Depends(require_admin)):
     tickers = payload.get("banned_tickers", [])
     if not isinstance(tickers, list):
         raise HTTPException(400, "banned_tickers must be list")
