@@ -3,6 +3,7 @@ from zoneinfo import ZoneInfo
 from app.services.market_data import get_quote
 from app.services.portfolio import apply_fill
 from app.services.exit_engine import register_exit_rules
+from app.services.session_service import infer_market_state
 
 KST = ZoneInfo("Asia/Seoul")
 
@@ -21,7 +22,7 @@ def _trigger_ready(order: dict, px: float) -> bool:
     if tt in ("none", "limit_now"):
         return True
     if tt == "market_open":
-        return True
+        return infer_market_state() == "open"
     if tp is None:
         return False
     if tt == "price_below":

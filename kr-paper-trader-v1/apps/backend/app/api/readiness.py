@@ -12,8 +12,8 @@ CHECKLIST = {
     "jwt_auth": True,
     "corporate_action_apply": True,
     "core_tests_added": True,
+    "ops_runbook_complete": True,
     "e2e_full_suite_green": False,
-    "ops_runbook_complete": False,
 }
 
 
