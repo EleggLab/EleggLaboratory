@@ -12,7 +12,7 @@
 8. AI 전략 schema invalid -> reject ✅ (`test_ai_plan_submit_rejects_risk_violation` + 필수필드 체크)
 9. AI 전략 risk 위반 -> reject ✅
 10. 서버 재시작 후 order/position 복구 ✅ (`test_state_snapshot_restores_orders_and_plans`)
-11. fee/tax 반영 후 pnl 계산 일치 ⚠️ (fee/tax 현금원장 반영 + 스모크 테스트 추가, PnL 정밀 일치 테스트는 추가 필요)
+11. fee/tax 반영 후 pnl 계산 일치 ✅ (`test_fee_tax_and_pnl_consistency_smoke` + `/api/pnl`)
 12. split order tranche 정상 작동 ✅ (`test_split_order_creates_tranches`)
 13. marketable limit 즉시 체결 ✅ (limit 조건 체결 경로)
 14. same ticker duplicate order 제한 ✅ (`test_duplicate_live_order_rejected`)

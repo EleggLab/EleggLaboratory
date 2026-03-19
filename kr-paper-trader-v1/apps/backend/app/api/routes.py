@@ -14,6 +14,7 @@ from app.services.risk_state import set_banned, BANNED_TICKERS
 from app.services.state_store import save_state
 from app.services.corporate_actions_service import apply_actions_for_today
 from app.services.rebalance_compiler import compile_target_weights
+from app.services.pnl_service import calculate_pnl_summary
 from app.core.db import get_db
 from app.core.security import create_access_token, verify_password, hash_password
 from app.core.config import settings
@@ -427,6 +428,7 @@ def get_cash_ledger():
 def get_dashboard():
     total_asset = refresh_market_values(QUOTE_DB)
     cash = cash_balance()
+    pnl = calculate_pnl_summary(ex.FILL_DB, QUOTE_DB)
     return {
         **DASHBOARD,
         "total_asset": round(total_asset, 2),
@@ -434,7 +436,13 @@ def get_dashboard():
         "today_orders": len(ex.ORDER_DB),
         "today_fills": len(ex.FILL_DB),
         "positions": len(POSITIONS),
+        **pnl,
     }
+
+
+@router.get("/pnl")
+def get_pnl():
+    return calculate_pnl_summary(ex.FILL_DB, QUOTE_DB)
 
 
 @router.get("/market/status")

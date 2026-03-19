@@ -52,6 +52,7 @@ docker compose -f infra/docker-compose.yml up --build
 - GET `/api/positions`
 - GET `/api/cash-ledger`
 - GET `/api/dashboard`
+- GET `/api/pnl`
 - GET `/api/market/status`
 - POST `/api/market/admin/session-state`
 - GET `/api/market/calendar`
