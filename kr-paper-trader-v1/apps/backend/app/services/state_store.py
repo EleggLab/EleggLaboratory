@@ -1,10 +1,11 @@
 import json
+import os
 from pathlib import Path
 from app.services import paper_execution as ex
 from app.services.portfolio import POSITIONS, CASH_LEDGER
 from app.services.market_data import QUOTE_DB
 
-STATE_PATH = Path("/app/runtime/state.json")
+STATE_PATH = Path(os.getenv("STATE_PATH", "./runtime/state.json"))
 
 
 def save_state(extra: dict | None = None) -> None:

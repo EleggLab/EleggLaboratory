@@ -22,15 +22,22 @@ def _token() -> str:
     return r.json()["access_token"]
 
 
-def test_ai_plan_generate_and_approve_queues_orders():
+def test_ai_plan_submit_and_approve_queues_orders():
     token = _token()
     h = {"Authorization": f"Bearer {token}"}
+    client.post('/api/sim/reset')
     client.post('/api/instruments/seed')
+    client.post('/api/market/admin/session-state', headers={"Authorization": f"Bearer {_admin_token()}"}, json={"state":"open"})
     client.post('/api/quotes', json={"ticker":"005930","last":70000,"bid1":69990,"ask1":70000})
 
-    g = client.post('/api/ai/plan/generate', json={})
-    assert g.status_code == 200
-    plan_id = g.json()["id"]
+    s = client.post('/api/ai/plan/submit', json={
+        "as_of_kst": "2026-03-19",
+        "market_regime": "sideways",
+        "portfolio_targets": [{"ticker": "005930", "target_weight_pct": 5}],
+        "trade_plan": [{"ticker": "005930", "side": "buy", "target_weight_pct": 5, "confidence": 0.9}],
+    })
+    assert s.status_code == 200
+    plan_id = s.json()["id"]
 
     a = client.post(f'/api/ai/plan/{plan_id}/approve', headers=h)
     assert a.status_code == 200

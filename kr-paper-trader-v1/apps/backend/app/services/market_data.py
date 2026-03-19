@@ -11,8 +11,8 @@ def upsert_quote(ticker: str, last: float, bid1: float | None = None, ask1: floa
         "ticker": ticker,
         "ts": datetime.now(KST).isoformat(),
         "last": last,
-        "bid1": bid1 if bid1 is not None else last,
-        "ask1": ask1 if ask1 is not None else last,
+        "bid1": bid1,
+        "ask1": ask1,
         "volume": volume,
         "source": source,
     }

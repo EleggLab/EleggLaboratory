@@ -8,6 +8,14 @@ node_modules/
 
 # Env
 .env
+.venv/
+
+# Runtime/Test artifacts
+runtime/
+*.db
+
+# Reports
+docs/soak-report-latest.json
 
 # OS
 .DS_Store

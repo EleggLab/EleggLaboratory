@@ -19,10 +19,12 @@ def _trigger_ready(order: dict, px: float) -> bool:
     tt = order.get("trigger_type", "none")
     tp = order.get("trigger_price")
     side = order.get("side")
+    mstate = infer_market_state()
+
     if tt in ("none", "limit_now"):
-        return True
+        return mstate == "open"
     if tt == "market_open":
-        return infer_market_state() == "open"
+        return mstate == "open"
     if tp is None:
         return False
     if tt == "price_below":

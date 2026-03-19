@@ -23,7 +23,8 @@ def test_limit_buy_waits_until_price_reached():
     h = {"Authorization": f"Bearer {tk}"}
     client.post('/api/sim/reset')
     client.post('/api/instruments/seed')
-    client.post('/api/market/admin/session-state', headers=_admin_headers(), json={"state": "open"})
+    client.post('/api/market/admin/session-state', headers=_admin_headers(), json={"state": "open", "stale_quote_seconds": 60})
+    client.post('/api/quotes', json={"ticker":"005930","last":70100,"bid1":70090,"ask1":70100})
     r = client.post('/api/orders', headers=h, json={
         "source":"manual","ticker":"005930","side":"buy","intent":"enter",
         "target_weight_pct":10,"order_type":"limit","order_price":70000,
@@ -86,10 +87,11 @@ def test_duplicate_live_order_rejected():
     h = {"Authorization": f"Bearer {tk}"}
     client.post('/api/sim/reset')
     client.post('/api/instruments/seed')
-    # no quote -> first order stays queued/working
+    client.post('/api/market/admin/session-state', headers=_admin_headers(), json={"state": "closed"})
+    # market_open trigger should be accepted and stay queued while closed
     r1 = client.post('/api/orders', headers=h, json={
         "source":"manual","ticker":"035420","side":"buy","intent":"enter",
-        "target_weight_pct":5,"order_type":"limit","order_price":1000,"trigger_type":"none"
+        "target_weight_pct":5,"order_type":"limit","order_price":1000,"trigger_type":"market_open"
     })
     assert r1.status_code == 200
     r2 = client.post('/api/orders', headers=h, json={
@@ -114,6 +116,7 @@ def test_market_closed_blocks_non_market_open():
 def test_market_open_trigger_allowed_when_closed():
     tk = client.post('/api/auth/login', json={"username": "dev", "password": "pass1234"}).json()["access_token"]
     h = {"Authorization": f"Bearer {tk}"}
+    client.post('/api/sim/reset')
     client.post('/api/instruments/seed')
     client.post('/api/market/admin/session-state', headers=_admin_headers(), json={"state": "closed"})
     r = client.post('/api/orders', headers=h, json={
