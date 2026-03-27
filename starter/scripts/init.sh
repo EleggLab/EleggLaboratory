@@ -20,7 +20,7 @@ fi
 
 TEMPLATE_DIR="$(cd "$(dirname "$0")/.." && pwd)/templates/$STACK"
 if [[ ! -d "$TEMPLATE_DIR" ]]; then
-  echo "unknown stack: $STACK (use: webapp|bot|cli|mobile)"
+  echo "unknown stack: $STACK (use: webapp|bot|cli|mobile|toss-rn-miniapp)"
   exit 1
 fi
 

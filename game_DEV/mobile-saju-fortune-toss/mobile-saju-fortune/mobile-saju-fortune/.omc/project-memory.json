@@ -1,0 +1,415 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1774179046014,
+  "projectRoot": "/Users/euisung/Documents/mobile-saju-fortune",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "pnpm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "pnpm build",
+    "testCommand": "pnpm test",
+    "lintCommand": "pnpm lint",
+    "devCommand": "pnpm dev",
+    "scripts": {
+      "dev": "corepack pnpm --filter @saju/web dev",
+      "dev:web": "corepack pnpm --filter @saju/web dev",
+      "build:web": "corepack pnpm --filter @saju/web build",
+      "start:web": "corepack pnpm --filter @saju/web start",
+      "dev:mobile": "corepack pnpm --filter @saju/mobile start",
+      "build": "corepack pnpm -r build",
+      "test": "corepack pnpm -r test",
+      "typecheck": "corepack pnpm -r typecheck",
+      "lint": "corepack pnpm -r lint",
+      "verify:sources": "corepack pnpm --filter @saju/tools check:sources",
+      "verify:cross": "corepack pnpm --filter @saju/tools verify:cross",
+      "verify:kasi": "corepack pnpm --filter @saju/tools verify:kasi",
+      "research:collect": "corepack pnpm --filter @saju/tools collect:research",
+      "research:competitors": "corepack pnpm --filter @saju/tools collect:competitors",
+      "research:web-competitors": "corepack pnpm --filter @saju/tools collect:web-competitors",
+      "research:taaft-2024": "corepack pnpm --filter @saju/tools collect:taaft-2024",
+      "research:web-curated": "corepack pnpm --filter @saju/tools curate:web-research-2024",
+      "verify:assets": "corepack pnpm --filter @saju/tools check:assets",
+      "optimize:assets": "corepack pnpm --filter @saju/tools optimize:assets",
+      "qa:regression": "corepack pnpm --filter @saju/tools qa:regression",
+      "vectors:refresh": "corepack pnpm --filter @saju/tools refresh:vectors",
+      "release:check": "corepack pnpm verify:assets && corepack pnpm qa:regression && corepack pnpm typecheck && corepack pnpm test && corepack pnpm build"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": true,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "apps": {
+      "path": "apps",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1774179045970,
+      "keyFiles": []
+    },
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 16,
+      "lastAccessed": 1774179045971,
+      "keyFiles": [
+        "ASSET_AUDIT.md",
+        "CHANGELOG.md",
+        "COMPETITIVE_GAP.md",
+        "COMPETITORS.md",
+        "COMPETITORS_2024PLUS.md"
+      ]
+    },
+    "packages": {
+      "path": "packages",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1774179045992,
+      "keyFiles": []
+    },
+    "packages/data": {
+      "path": "packages/data",
+      "purpose": "Data files",
+      "fileCount": 2,
+      "lastAccessed": 1774179046012,
+      "keyFiles": [
+        "package.json",
+        "tsconfig.json"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "apps/mobile/granite.config.ts",
+      "accessCount": 12,
+      "lastAccessed": 1774186824579,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/package.json",
+      "accessCount": 10,
+      "lastAccessed": 1774186819539,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 10,
+      "lastAccessed": 1774187193671,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/tarot/result.tsx",
+      "accessCount": 9,
+      "lastAccessed": 1774182336943,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 8,
+      "lastAccessed": 1774181235255,
+      "type": "directory"
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/saju/index.tsx",
+      "accessCount": 8,
+      "lastAccessed": 1774182358271,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/today.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1774182320109,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/iching.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1774182320199,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/tarot/reading.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1774182336436,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/require.context.ts",
+      "accessCount": 6,
+      "lastAccessed": 1774186832819,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/lib/ads/BannerAd.tsx",
+      "accessCount": 5,
+      "lastAccessed": 1774182545348,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/babel.config.js",
+      "accessCount": 5,
+      "lastAccessed": 1774186828176,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/_layout.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1774182319017,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/lib/ui/ScreenScroll.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1774182536582,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/tsconfig.json",
+      "accessCount": 4,
+      "lastAccessed": 1774186823561,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/home.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1774182319455,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/_components/SectionCard.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1774182335329,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/_components/GameTabBar.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1774182335730,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/tarot/index.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1774182336173,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/tarot/TarotCardTile.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1774182340651,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/lib/ui/tokens.ts",
+      "accessCount": 3,
+      "lastAccessed": 1774182348124,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/lib/ui/commonStyles.ts",
+      "accessCount": 3,
+      "lastAccessed": 1774182348182,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/lib/ads/useFullscreenAd.ts",
+      "accessCount": 3,
+      "lastAccessed": 1774182560037,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/index.ts",
+      "accessCount": 3,
+      "lastAccessed": 1774186828625,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/app/_layout.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1774179777706,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/tarot/_layout.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1774181079460,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/lib/assets/backgrounds.ts",
+      "accessCount": 2,
+      "lastAccessed": 1774182348287,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/lib/ads/index.ts",
+      "accessCount": 2,
+      "lastAccessed": 1774182358654,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/lib/ads/config.ts",
+      "accessCount": 2,
+      "lastAccessed": 1774182358949,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/src/_app.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1774184239294,
+      "type": "file"
+    },
+    {
+      "path": "packages/core/package.json",
+      "accessCount": 2,
+      "lastAccessed": 1774186820130,
+      "type": "file"
+    },
+    {
+      "path": "packages/data/package.json",
+      "accessCount": 2,
+      "lastAccessed": 1774186820182,
+      "type": "file"
+    },
+    {
+      "path": "apps/web/package.json",
+      "accessCount": 1,
+      "lastAccessed": 1774179057636,
+      "type": "file"
+    },
+    {
+      "path": "packages/ui/package.json",
+      "accessCount": 1,
+      "lastAccessed": 1774179058927,
+      "type": "file"
+    },
+    {
+      "path": "packages/tools/package.json",
+      "accessCount": 1,
+      "lastAccessed": 1774179059814,
+      "type": "file"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "accessCount": 1,
+      "lastAccessed": 1774179060206,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile",
+      "accessCount": 1,
+      "lastAccessed": 1774179776697,
+      "type": "directory"
+    },
+    {
+      "path": "apps/mobile/app/index.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1774179776873,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/saju/_layout.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1774179780738,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/lib/features/tarot/deck.ts",
+      "accessCount": 1,
+      "lastAccessed": 1774179795250,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/lib/features/tarot/storage.ts",
+      "accessCount": 1,
+      "lastAccessed": 1774179795451,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/lib/features/tarot/random.ts",
+      "accessCount": 1,
+      "lastAccessed": 1774179795548,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/lib/features/tarot/imageSource.ts",
+      "accessCount": 1,
+      "lastAccessed": 1774179795566,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/app/(tabs)/saju/PillarsMatrixNative.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1774182347004,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/src/components/SectionCard.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1774182450525,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/src/components/TarotCardTile.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1774182484526,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/src/components/TabBar.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1774182502821,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/src/screens/HomeScreen.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1774182591450,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/src/screens/IChingScreen.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1774182635626,
+      "type": "file"
+    },
+    {
+      "path": "apps/mobile/src/screens/TarotHomeScreen.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1774182649344,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

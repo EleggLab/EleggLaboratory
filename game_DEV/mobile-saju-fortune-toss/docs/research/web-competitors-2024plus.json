@@ -1,0 +1,554 @@
+{
+  "summary": {
+    "generatedAtUTC": "2026-02-16T07:55:26.198Z",
+    "candidatesFromSearch": 164,
+    "relevantRows": 24,
+    "strict2024PlusRows": 0,
+    "strictRule": "creationDate >= 2024-01-01 && monthlyVisitors >= 30000",
+    "notes": [
+      "Traffic and creation date are parsed from hypestat.com snapshots via r.jina.ai mirror.",
+      "Monthly visitors are estimates and should be treated as directional signals."
+    ]
+  },
+  "strict2024Plus": [],
+  "allRelevant": [
+    {
+      "domain": "fortune.com",
+      "sourceQueries": [
+        "fortune teller ai website"
+      ],
+      "sourceUrls": [
+        "https://fortune.com/"
+      ],
+      "title": "Fortune.com ▷ Fortune - Fortune 500 Daily & Breaking Business News | Fortune",
+      "description": "Unrivaled access, premier storytelling, and the best of business since 1930.",
+      "category": "Finance / Other Finance",
+      "creationDate": "1994-06-02",
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": 1000000,
+      "monthlyVisitors": 30800000,
+      "globalRank": 11302,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "fortune"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/fortune.com"
+    },
+    {
+      "domain": "astrology.com",
+      "sourceQueries": [
+        "astrology app web dashboard"
+      ],
+      "sourceUrls": [
+        "https://www.astrology.com/us/home.aspx"
+      ],
+      "title": "Astrology.com ▷ Tarot, Zodiac, Astrology & Horoscopes - Astrology.com",
+      "description": "Astrology.com provides free daily horoscopes, online tarot readings, psychic readings, Chinese astrology, Vedic Astrology, Mayan Astrology, Numerology, Feng Shui, zodiac 101, sun sign compatibility and video horoscopes.",
+      "category": "Community and Society / Faith and Beliefs",
+      "creationDate": "1995-10-13",
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": 166100,
+      "monthlyVisitors": 5000000,
+      "globalRank": 17931,
+      "relevanceScore": 5,
+      "relevanceSignals": [
+        "tarot",
+        "astrology",
+        "horoscope",
+        "zodiac",
+        "numerology"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/astrology.com"
+    },
+    {
+      "domain": "astrologyanswers.com",
+      "sourceQueries": [
+        "tarot spread online reading"
+      ],
+      "sourceUrls": [
+        "https://www.astrologyanswers.com/tarot/3-card-spread/"
+      ],
+      "title": "Astrologyanswers.com ▷ Read Your Daily Horoscope!  | Astrology Answers",
+      "description": "Read Astrology Answers' online daily horoscopes for your zodiac sign, Tarot readings, article content, Chinese astrology, numerology, & more!",
+      "category": "Community and Society / Faith and Beliefs",
+      "creationDate": "2006-07-02",
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": 48700,
+      "monthlyVisitors": 1500000,
+      "globalRank": 21181,
+      "relevanceScore": 5,
+      "relevanceSignals": [
+        "tarot",
+        "astrology",
+        "horoscope",
+        "zodiac",
+        "numerology"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/astrologyanswers.com"
+    },
+    {
+      "domain": "yourchineseastrology.com",
+      "sourceQueries": [
+        "bazi four pillars online calculator"
+      ],
+      "sourceUrls": [
+        "https://www.yourchineseastrology.com/calendar/bazi/"
+      ],
+      "title": "Yourchineseastrology.com ▷ Chinese Astrology: Chinese Zodiac, Horoscope, Calendar  2026 - YourChineseAstrology.com",
+      "description": "Your Chinese Astrology provides full guides to Chinese zodiac signs, 2026 Chinese calendar, and monthly and yearly horoscopes.",
+      "category": "Community and Society / Faith and Beliefs",
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": 17100,
+      "monthlyVisitors": 516900,
+      "globalRank": 335213,
+      "relevanceScore": 3,
+      "relevanceSignals": [
+        "astrology",
+        "horoscope",
+        "zodiac"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/yourchineseastrology.com"
+    },
+    {
+      "domain": "numerology.com",
+      "sourceQueries": [
+        "numerology ai reading website"
+      ],
+      "sourceUrls": [
+        "https://www.numerology.com/articles/your-numerology-chart/life-path-number-meanings/"
+      ],
+      "title": "Numerology.com ▷",
+      "description": "Decode the Numerology number meanings behind your Life Path number, Personal Day number, Birth Day number, Numerology compatibility, and more!",
+      "category": "Community and Society / Faith and Beliefs",
+      "creationDate": "1996-11-05",
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": 9000,
+      "monthlyVisitors": 272800,
+      "globalRank": 671671,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "numerology"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/numerology.com"
+    },
+    {
+      "domain": "tarotap.com",
+      "sourceQueries": [
+        "ai tarot reading online"
+      ],
+      "sourceUrls": [
+        "https://tarotap.com/en"
+      ],
+      "title": "Tarotap.com ▷ Tarotap - AI塔羅牌占卜｜免費線上塔羅占卜解讀",
+      "description": null,
+      "category": null,
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": 7200,
+      "monthlyVisitors": 219600,
+      "globalRank": 972208,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "tarot"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/tarotap.com"
+    },
+    {
+      "domain": "tarotoo.com",
+      "sourceQueries": [
+        "ai tarot reading online"
+      ],
+      "sourceUrls": [
+        "https://tarotoo.com/"
+      ],
+      "title": "Tarotoo.com ▷ Free Psychic & Tarot Readings | Tarotoo",
+      "description": "Tarotoo is an innovative intearctive tarot & psychic reading platform, we provide absolutely free psychic readings & tarot card readings.",
+      "category": "Community and Society / Faith and Beliefs",
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": 6700,
+      "monthlyVisitors": 203200,
+      "globalRank": 1361107,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "tarot"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/tarotoo.com"
+    },
+    {
+      "domain": "bazi-calculator.com",
+      "sourceQueries": [
+        "bazi four pillars online calculator"
+      ],
+      "sourceUrls": [
+        "https://bazi-calculator.com/"
+      ],
+      "title": "Bazi-calculator.com ▷ BaZi Calculator",
+      "description": "Recommendations for BaZi Calculator: The program is very good, better than 90% of the Chinese 4P software (forget the English ones) - Ken Lai",
+      "category": null,
+      "creationDate": "2014-01-07",
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": 2600,
+      "monthlyVisitors": 79200,
+      "globalRank": 1787025,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "bazi"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/bazi-calculator.com"
+    },
+    {
+      "domain": "palmtalk.org",
+      "sourceQueries": [
+        "palm reading ai online"
+      ],
+      "sourceUrls": [
+        "https://www.palmtalk.org/forum/topic/86155-albuquerque-palm-pics/"
+      ],
+      "title": "Palmtalk.org ▷ Forums - PalmTalk",
+      "description": "Ok, since I'm about to post a LOT of pics... I'm not going to label them all (also because there are a few that I'm not certain on the exact species).",
+      "category": "Home and Garden / Gardening",
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": 2400,
+      "monthlyVisitors": 71800,
+      "globalRank": 8766105,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "palm"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/palmtalk.org"
+    },
+    {
+      "domain": "halloftarot.com",
+      "sourceQueries": [
+        "ai tarot reading online"
+      ],
+      "sourceUrls": [
+        "https://www.halloftarot.com/"
+      ],
+      "title": "Halloftarot.com ▷ Free AI Tarot Reading - Hall of Tarot",
+      "description": "The most advanced Artificial Intelligence Tarot reading. Unlock amazing insights & experience virtual divination like never before at Hall of Tarot",
+      "category": null,
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": 890,
+      "monthlyVisitors": 27000,
+      "globalRank": 1576313,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "tarot"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/halloftarot.com"
+    },
+    {
+      "domain": "masterseanchan.com",
+      "sourceQueries": [
+        "bazi four pillars online calculator"
+      ],
+      "sourceUrls": [
+        "https://www.masterseanchan.com/bazi-calculator/"
+      ],
+      "title": "Masterseanchan.com ▷ Sean Chan | Asia's Leading Bazi Master & Feng Shui Consultant",
+      "description": "Sean Chan is Asia's leading Chinese metaphysics practitioner and feng shui master. Featured on Channel NewsAsia and The New York Times Style Magazine.",
+      "category": "Community and Society / Faith and Beliefs",
+      "creationDate": "2017-06-09",
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": 785,
+      "monthlyVisitors": 23800,
+      "globalRank": 3742492,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "bazi"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/masterseanchan.com"
+    },
+    {
+      "domain": "fortune.org",
+      "sourceQueries": [
+        "fortune teller ai website"
+      ],
+      "sourceUrls": [
+        "https://fortune.org/"
+      ],
+      "title": "Fortune.org ▷ fortune",
+      "description": null,
+      "category": null,
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": 296,
+      "monthlyVisitors": 9000,
+      "globalRank": 4882901,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "fortune"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/fortune.org"
+    },
+    {
+      "domain": "imperialharvest.com",
+      "sourceQueries": [
+        "bazi four pillars online calculator"
+      ],
+      "sourceUrls": [
+        "https://imperialharvest.com/blog/beginners-guide-to-bazi-reading/"
+      ],
+      "title": "Imperialharvest.com ▷ Home - Imperial Harvest",
+      "description": "Imperial Harvest is a premium fengshui consultancy based in Singapore. Headed by the renowned Master David Goh, we empower clients with auspicious luck and spatial fengshui at every stage of their lives. Book a Free Bazi destiny consultation.",
+      "category": null,
+      "creationDate": "2016-05-06",
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": 246,
+      "monthlyVisitors": 7500,
+      "globalRank": 4361242,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "bazi"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/imperialharvest.com"
+    },
+    {
+      "domain": "tarotmood.com",
+      "sourceQueries": [
+        "ai tarot reading online"
+      ],
+      "sourceUrls": [
+        "https://tarotmood.com/en"
+      ],
+      "title": "Tarotmood.com ▷ Tarot Mood - Home",
+      "description": "Relatable, irreverent and kinda funny tarot and tarot ***.",
+      "category": null,
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": null,
+      "monthlyVisitors": null,
+      "globalRank": 16807985,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "tarot"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/tarotmood.com"
+    },
+    {
+      "domain": "tarota.ai",
+      "sourceQueries": [
+        "ai tarot reading online"
+      ],
+      "sourceUrls": [
+        "https://www.tarota.ai/"
+      ],
+      "title": "Tarota.ai info",
+      "description": null,
+      "category": null,
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": null,
+      "monthlyVisitors": null,
+      "globalRank": null,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "tarot"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/tarota.ai"
+    },
+    {
+      "domain": "tarot-reader.ai",
+      "sourceQueries": [
+        "ai tarot reading online"
+      ],
+      "sourceUrls": [
+        "https://tarot-reader.ai/"
+      ],
+      "title": "Tarot-reader.ai info",
+      "description": null,
+      "category": null,
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": null,
+      "monthlyVisitors": null,
+      "globalRank": null,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "tarot"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/tarot-reader.ai"
+    },
+    {
+      "domain": "pitarot.com",
+      "sourceQueries": [
+        "ai tarot reading online"
+      ],
+      "sourceUrls": [
+        "https://pitarot.com/"
+      ],
+      "title": "Pitarot.com info",
+      "description": null,
+      "category": null,
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": null,
+      "monthlyVisitors": null,
+      "globalRank": null,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "tarot"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/pitarot.com"
+    },
+    {
+      "domain": "youtarot.app",
+      "sourceQueries": [
+        "ai tarot reading online"
+      ],
+      "sourceUrls": [
+        "https://www.youtarot.app/"
+      ],
+      "title": "Youtarot.app info",
+      "description": null,
+      "category": null,
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": null,
+      "monthlyVisitors": null,
+      "globalRank": null,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "tarot"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/youtarot.app"
+    },
+    {
+      "domain": "tarotvista.ai",
+      "sourceQueries": [
+        "ai tarot reading online"
+      ],
+      "sourceUrls": [
+        "https://tarotvista.ai/"
+      ],
+      "title": "Tarotvista.ai info",
+      "description": null,
+      "category": null,
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": null,
+      "monthlyVisitors": null,
+      "globalRank": null,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "tarot"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/tarotvista.ai"
+    },
+    {
+      "domain": "content.fortune.com",
+      "sourceQueries": [
+        "fortune teller ai website"
+      ],
+      "sourceUrls": [
+        "https://content.fortune.com/"
+      ],
+      "title": "Fortune.com - Content ▷ Fortune – Fortune 500 Daily & Breaking Business News",
+      "description": null,
+      "category": null,
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": null,
+      "monthlyVisitors": null,
+      "globalRank": null,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "fortune"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/content.fortune.com"
+    },
+    {
+      "domain": "bazicode.com",
+      "sourceQueries": [
+        "bazi four pillars online calculator"
+      ],
+      "sourceUrls": [
+        "https://bazicode.com/en/bazi"
+      ],
+      "title": "Bazicode.com info",
+      "description": null,
+      "category": null,
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": null,
+      "monthlyVisitors": null,
+      "globalRank": null,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "bazi"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/bazicode.com"
+    },
+    {
+      "domain": "bazicalculator.janetyung.com",
+      "sourceQueries": [
+        "bazi four pillars online calculator"
+      ],
+      "sourceUrls": [
+        "https://bazicalculator.janetyung.com/free-bazi-calculator/"
+      ],
+      "title": "Bazicalculator.janetyung.com info",
+      "description": null,
+      "category": null,
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": null,
+      "monthlyVisitors": null,
+      "globalRank": null,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "bazi"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/bazicalculator.janetyung.com"
+    },
+    {
+      "domain": "bazisifu.com",
+      "sourceQueries": [
+        "bazi four pillars online calculator"
+      ],
+      "sourceUrls": [
+        "https://bazisifu.com/bazi-calculator"
+      ],
+      "title": "Bazisifu.com info",
+      "description": null,
+      "category": null,
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": null,
+      "monthlyVisitors": null,
+      "globalRank": null,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "bazi"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/bazisifu.com"
+    },
+    {
+      "domain": "js.astrologyanswers.com",
+      "sourceQueries": [
+        "tarot spread online reading"
+      ],
+      "sourceUrls": [
+        "https://js.astrologyanswers.com/tarot-yes-no"
+      ],
+      "title": "Js.astrologyanswers.com info",
+      "description": null,
+      "category": null,
+      "creationDate": null,
+      "is2024PlusByCreationDate": false,
+      "dailyVisitors": null,
+      "monthlyVisitors": null,
+      "globalRank": null,
+      "relevanceScore": 1,
+      "relevanceSignals": [
+        "astrology"
+      ],
+      "hypestatUrl": "https://r.jina.ai/http://hypestat.com/info/js.astrologyanswers.com"
+    }
+  ]
+}

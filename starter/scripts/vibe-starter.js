@@ -7,7 +7,7 @@ const root = path.resolve(__dirname, '..');
 const args = process.argv.slice(2);
 
 function usage() {
-  console.log(`vibe-starter usage:\n\n  vibe-starter init <webapp|bot|cli|mobile> <name> [targetDir]\n  vibe-starter verify [rootDir]\n  vibe-starter report [outputFile]\n`);
+  console.log(`vibe-starter usage:\n\n  vibe-starter init <webapp|bot|cli|mobile|toss-rn-miniapp> <name> [targetDir]\n  vibe-starter verify [rootDir]\n  vibe-starter report [outputFile]\n`);
 }
 
 function copyDir(src, dest) {
@@ -40,7 +40,7 @@ function replaceProjectName(dir, name) {
 }
 
 function init(stack, name, targetDir) {
-  const allowed = new Set(['webapp', 'bot', 'cli', 'mobile']);
+  const allowed = new Set(['webapp', 'bot', 'cli', 'mobile', 'toss-rn-miniapp']);
   if (!allowed.has(stack)) {
     console.error(`unknown stack: ${stack}`);
     process.exit(1);

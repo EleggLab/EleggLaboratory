@@ -12,6 +12,7 @@
     "init:web": "node scripts/vibe-starter.js init webapp demo-web",
     "init:bot": "node scripts/vibe-starter.js init bot demo-bot",
     "init:cli": "node scripts/vibe-starter.js init cli demo-cli",
-    "init:mobile": "node scripts/vibe-starter.js init mobile demo-mobile"
+    "init:mobile": "node scripts/vibe-starter.js init mobile demo-mobile",
+    "init:toss": "node scripts/vibe-starter.js init toss-rn-miniapp demo-toss-miniapp"
   }
 }

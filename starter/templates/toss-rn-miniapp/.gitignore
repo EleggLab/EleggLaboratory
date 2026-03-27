@@ -1,0 +1,6 @@
+.env
+.bedrock
+node_modules
+dist
+*.ait
+*.log

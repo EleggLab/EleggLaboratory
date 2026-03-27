@@ -1,0 +1,42 @@
+{
+  "name": "{{PROJECT_NAME}}",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "bedrock dev",
+    "build": "node ./scripts/validate-release-env.mjs --strict && ait build",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsc -p tsconfig.json --noEmit",
+    "lint": "echo \"no lint configured for {{PROJECT_NAME}}\"",
+    "validate:release-env": "node ./scripts/validate-release-env.mjs --strict",
+    "qa:sandbox": "node ./scripts/qa-sandbox.mjs",
+    "qa:toss": "node ./scripts/qa-toss.mjs",
+    "deploy:test": "node ./scripts/deploy-test.mjs"
+  },
+  "dependencies": {
+    "@apps-in-toss/framework": "2.0.5",
+    "@granite-js/native": "1.0.4",
+    "@granite-js/plugin-core": "1.0.4",
+    "@granite-js/plugin-env": "1.0.4",
+    "@granite-js/plugin-hermes": "1.0.4",
+    "@granite-js/plugin-micro-frontend": "1.0.4",
+    "@granite-js/plugin-router": "1.0.4",
+    "@granite-js/plugin-sentry": "1.0.4",
+    "@granite-js/react-native": "1.0.4",
+    "@react-native-async-storage/async-storage": "1.23.1",
+    "@react-native-bedrock/native": "0.0.19",
+    "@toss/tds-react-native": "2.0.2",
+    "brick-module": "0.5.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.84.0",
+    "react-native-bedrock": "0.0.19"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.3",
+    "@types/react-dom": "19.2.3",
+    "babel-preset-granite": "1.0.3",
+    "react-test-renderer": "19.2.3",
+    "typescript": "5.7.3"
+  }
+}

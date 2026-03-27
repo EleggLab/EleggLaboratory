@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xcrun simctl:*)",
+      "Bash(find /Users/euisung/Documents/mobile-saju-fortune/node_modules/@granite-js/react-native/dist/router -name *.d.ts)"
+    ]
+  }
+}

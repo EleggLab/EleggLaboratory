@@ -1,0 +1,620 @@
+[
+  {
+    "id": "T001-solar-basic",
+    "input": {
+      "calendar": "solar",
+      "date": "1992-10-24",
+      "time": "05:30",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "임신",
+      "month": "경술",
+      "day": "계유",
+      "hour": "을묘"
+    }
+  },
+  {
+    "id": "T002-solar-jasi-2359",
+    "input": {
+      "calendar": "solar",
+      "date": "2000-01-01",
+      "time": "23:59",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "기묘",
+      "month": "병자",
+      "day": "기미",
+      "hour": "임자"
+    }
+  },
+  {
+    "id": "T003-solar-midnight",
+    "input": {
+      "calendar": "solar",
+      "date": "2000-01-02",
+      "time": "00:10",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "기묘",
+      "month": "병자",
+      "day": "기미",
+      "hour": "갑자"
+    }
+  },
+  {
+    "id": "T004-solar-ipchun-prev",
+    "input": {
+      "calendar": "solar",
+      "date": "2024-02-03",
+      "time": "12:00",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "계묘",
+      "month": "을축",
+      "day": "정유",
+      "hour": "병오"
+    }
+  },
+  {
+    "id": "T005-solar-ipchun-next",
+    "input": {
+      "calendar": "solar",
+      "date": "2024-02-05",
+      "time": "12:00",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "갑진",
+      "month": "을축",
+      "day": "기해",
+      "hour": "경오"
+    }
+  },
+  {
+    "id": "T006-solar-newyear",
+    "input": {
+      "calendar": "solar",
+      "date": "2024-01-01",
+      "time": "09:15",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "계묘",
+      "month": "을축",
+      "day": "갑자",
+      "hour": "기사"
+    }
+  },
+  {
+    "id": "T007-solar-leapday",
+    "input": {
+      "calendar": "solar",
+      "date": "2024-02-29",
+      "time": "18:20",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "갑진",
+      "month": "정묘",
+      "day": "계해",
+      "hour": "신유"
+    }
+  },
+  {
+    "id": "T008-solar-term-edge1",
+    "input": {
+      "calendar": "solar",
+      "date": "2023-03-05",
+      "time": "23:40",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "계묘",
+      "month": "을묘",
+      "day": "계해",
+      "hour": "경자"
+    }
+  },
+  {
+    "id": "T009-solar-term-edge2",
+    "input": {
+      "calendar": "solar",
+      "date": "2023-03-06",
+      "time": "00:20",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "계묘",
+      "month": "을묘",
+      "day": "계해",
+      "hour": "임자"
+    }
+  },
+  {
+    "id": "T010-solar-term-edge3",
+    "input": {
+      "calendar": "solar",
+      "date": "2023-08-07",
+      "time": "23:50",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "계묘",
+      "month": "경신",
+      "day": "무술",
+      "hour": "경자"
+    }
+  },
+  {
+    "id": "T011-solar-term-edge4",
+    "input": {
+      "calendar": "solar",
+      "date": "2023-08-08",
+      "time": "00:20",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "계묘",
+      "month": "경신",
+      "day": "무술",
+      "hour": "임자"
+    }
+  },
+  {
+    "id": "T012-solar-1960",
+    "input": {
+      "calendar": "solar",
+      "date": "1960-06-15",
+      "time": "14:30",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "경자",
+      "month": "임오",
+      "day": "계유",
+      "hour": "기미"
+    }
+  },
+  {
+    "id": "T013-solar-1975",
+    "input": {
+      "calendar": "solar",
+      "date": "1975-11-30",
+      "time": "06:05",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "을묘",
+      "month": "정해",
+      "day": "경진",
+      "hour": "기묘"
+    }
+  },
+  {
+    "id": "T014-solar-1984",
+    "input": {
+      "calendar": "solar",
+      "date": "1984-02-04",
+      "time": "01:30",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "계해",
+      "month": "을축",
+      "day": "무진",
+      "hour": "계축"
+    }
+  },
+  {
+    "id": "T015-solar-1999",
+    "input": {
+      "calendar": "solar",
+      "date": "1999-12-31",
+      "time": "22:00",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "기묘",
+      "month": "병자",
+      "day": "정사",
+      "hour": "신해"
+    }
+  },
+  {
+    "id": "T016-solar-2001",
+    "input": {
+      "calendar": "solar",
+      "date": "2001-09-09",
+      "time": "09:09",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "신사",
+      "month": "무술",
+      "day": "을해",
+      "hour": "신사"
+    }
+  },
+  {
+    "id": "T017-solar-2012",
+    "input": {
+      "calendar": "solar",
+      "date": "2012-12-21",
+      "time": "21:00",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "임진",
+      "month": "계축",
+      "day": "병진",
+      "hour": "기해"
+    }
+  },
+  {
+    "id": "T018-solar-2018",
+    "input": {
+      "calendar": "solar",
+      "date": "2018-04-04",
+      "time": "04:44",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "무술",
+      "month": "병진",
+      "day": "병인",
+      "hour": "경인"
+    }
+  },
+  {
+    "id": "T019-solar-2020",
+    "input": {
+      "calendar": "solar",
+      "date": "2020-05-23",
+      "time": "10:10",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "경자",
+      "month": "임오",
+      "day": "병인",
+      "hour": "계사"
+    }
+  },
+  {
+    "id": "T020-solar-2021",
+    "input": {
+      "calendar": "solar",
+      "date": "2021-02-12",
+      "time": "07:30",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "신축",
+      "month": "신묘",
+      "day": "신묘",
+      "hour": "임진"
+    }
+  },
+  {
+    "id": "T021-solar-2022",
+    "input": {
+      "calendar": "solar",
+      "date": "2022-11-07",
+      "time": "23:01",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "임인",
+      "month": "신해",
+      "day": "을축",
+      "hour": "갑자"
+    }
+  },
+  {
+    "id": "T022-solar-2025",
+    "input": {
+      "calendar": "solar",
+      "date": "2025-01-29",
+      "time": "11:11",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "갑진",
+      "month": "정축",
+      "day": "무술",
+      "hour": "무오"
+    }
+  },
+  {
+    "id": "T023-solar-2026",
+    "input": {
+      "calendar": "solar",
+      "date": "2026-02-14",
+      "time": "16:16",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "병오",
+      "month": "신묘",
+      "day": "기미",
+      "hour": "임신"
+    }
+  },
+  {
+    "id": "T024-solar-2030",
+    "input": {
+      "calendar": "solar",
+      "date": "2030-06-01",
+      "time": "03:33",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "경술",
+      "month": "임오",
+      "day": "정묘",
+      "hour": "임인"
+    }
+  },
+  {
+    "id": "T025-solar-2035",
+    "input": {
+      "calendar": "solar",
+      "date": "2035-10-31",
+      "time": "19:45",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "을묘",
+      "month": "정해",
+      "day": "을축",
+      "hour": "병술"
+    }
+  },
+  {
+    "id": "T026-solar-2040",
+    "input": {
+      "calendar": "solar",
+      "date": "2040-12-25",
+      "time": "13:00",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "solar baseline"
+    ],
+    "expected": {
+      "year": "경신",
+      "month": "기축",
+      "day": "정해",
+      "hour": "정미"
+    }
+  },
+  {
+    "id": "T027-lunar-from-1992",
+    "input": {
+      "calendar": "lunar",
+      "date": "1992-09-28",
+      "isLeapMonth": false,
+      "time": "05:30",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "converted from known solar date"
+    ],
+    "expected": {
+      "year": "임신",
+      "month": "경술",
+      "day": "임신",
+      "hour": "계묘"
+    }
+  },
+  {
+    "id": "T028-lunar-from-2020",
+    "input": {
+      "calendar": "lunar",
+      "date": "2020-04-30",
+      "isLeapMonth": false,
+      "time": "10:10",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "converted from known solar date"
+    ],
+    "expected": {
+      "year": "경자",
+      "month": "임오",
+      "day": "을축",
+      "hour": "신사"
+    }
+  },
+  {
+    "id": "T029-lunar-from-2021",
+    "input": {
+      "calendar": "lunar",
+      "date": "2020-12-30",
+      "isLeapMonth": false,
+      "time": "07:30",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "converted from known solar date"
+    ],
+    "expected": {
+      "year": "신축",
+      "month": "신묘",
+      "day": "경인",
+      "hour": "경진"
+    }
+  },
+  {
+    "id": "T030-lunar-from-2024",
+    "input": {
+      "calendar": "lunar",
+      "date": "2023-12-30",
+      "isLeapMonth": false,
+      "time": "12:34",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "converted from known solar date"
+    ],
+    "expected": {
+      "year": "갑진",
+      "month": "을축",
+      "day": "계묘",
+      "hour": "무오"
+    }
+  },
+  {
+    "id": "T031-lunar-from-2025",
+    "input": {
+      "calendar": "lunar",
+      "date": "2024-12-29",
+      "isLeapMonth": false,
+      "time": "02:10",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "converted from known solar date"
+    ],
+    "expected": {
+      "year": "갑진",
+      "month": "정축",
+      "day": "정유",
+      "hour": "신축"
+    }
+  },
+  {
+    "id": "T032-lunar-from-2030",
+    "input": {
+      "calendar": "lunar",
+      "date": "2030-04-30",
+      "isLeapMonth": false,
+      "time": "03:33",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "converted from known solar date"
+    ],
+    "expected": {
+      "year": "경술",
+      "month": "임오",
+      "day": "병인",
+      "hour": "경인"
+    }
+  },
+  {
+    "id": "T033-lunar-leap-month",
+    "input": {
+      "calendar": "lunar",
+      "date": "2020-04-01",
+      "isLeapMonth": true,
+      "time": "09:00",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "leap month case from manseryeok README"
+    ],
+    "expected": {
+      "year": "경자",
+      "month": "임오",
+      "day": "병인",
+      "hour": "계사"
+    }
+  },
+  {
+    "id": "T034-solar-time-unknown",
+    "input": {
+      "calendar": "solar",
+      "date": "1990-01-01",
+      "timezone": "Asia/Seoul"
+    },
+    "notes": [
+      "hour unknown path"
+    ],
+    "expected": {
+      "year": "기사",
+      "month": "병자",
+      "day": "병인",
+      "hour": null
+    }
+  }
+]

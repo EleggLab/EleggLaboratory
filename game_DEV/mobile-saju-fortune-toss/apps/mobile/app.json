@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "Saju Companion",
+    "description": "광고나 결제 없이 사주, 타로, 주역, 오늘 운세를 한 앱에서 보는 무료 운세 앱",
+    "slug": "saju-companion",
+    "scheme": "sajucompanion",
+    "version": "0.1.0",
+    "icon": "./assets/app-icon.png",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0
+    },
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0b1020"
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": false
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rndhr.sajucompanion",
+      "buildNumber": "1",
+      "icon": "./assets/app-icon.png",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.rndhr.sajucompanion",
+      "versionCode": 1,
+      "permissions": [],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-foreground.png",
+        "backgroundColor": "#0b1020",
+        "monochromeImage": "./assets/adaptive-foreground.png"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "extra": {
+      "releaseStage": "production-candidate"
+    }
+  }
+}

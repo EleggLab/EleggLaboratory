@@ -1,0 +1,37 @@
+export const UI = {
+  colors: {
+    ink: '#0b1020',
+    inkSoft: 'rgba(242,241,239,0.82)',
+    paper: '#f5f1ea',
+    paperSoft: '#faf7f2',
+    card: '#ffffff',
+    line: '#ded7cf',
+    text: '#111827',
+    muted: '#6b7280',
+    gold: '#f7c948',
+    jade: '#2c6e63',
+    rose: '#ef476f',
+    danger: '#b91c1c',
+  },
+  radius: {
+    sm: 12,
+    md: 14,
+    lg: 16,
+    xl: 18,
+    pill: 999,
+  },
+  space: {
+    screenX: 20,
+    screenBottom: 60,
+    cardPad: 16,
+    heroPad: 18,
+    gap: 18,
+  },
+  type: {
+    heroTitle: { fontSize: 26, fontWeight: '900' as const, letterSpacing: 0.2, lineHeight: 32 },
+    title: { fontSize: 22, fontWeight: '900' as const },
+    h2: { fontSize: 16, fontWeight: '900' as const },
+    body: { fontSize: 13, lineHeight: 20, color: '#111827' },
+    meta: { fontSize: 12, lineHeight: 17, color: '#6b7280' },
+  },
+} as const;

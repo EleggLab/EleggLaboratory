@@ -70,3 +70,9 @@ vibe-starter report ./starter-report.md
 - `scripts/mcp-discovery-template.sh` : MCP 후보 조사 노트 자동 생성
 - `scripts/mobile-stack-note.md` : 모바일(iOS 계열) 흡수 포인트 노트
 - 결과 위치: `research/github-wide/`
+- `templates/toss-rn-miniapp` (Granite/App-in-Toss React Native starter)
+
+## Toss Miniapp Starter
+- Initialize with `vibe-starter init toss-rn-miniapp my-toss-app`
+- Foundation notes: `docs/toss-miniapp-foundation.md`
+- Launch checklist: `checklists/toss-miniapp-launch.md`
