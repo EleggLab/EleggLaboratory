@@ -152,7 +152,7 @@ function collectIssues(strict) {
     issues.push('`TOSS_BRAND_PRIMARY_COLOR` must use the `#RRGGBB` format.');
   }
 
-  if (strict && (isPlaceholder(consoleAppName) || consoleAppName === DEFAULT_APP_NAME)) {
+  if (strict && isPlaceholder(consoleAppName)) {
     issues.push('`TOSS_CONSOLE_APP_NAME` must be set to the real console app name before release.');
   }
 

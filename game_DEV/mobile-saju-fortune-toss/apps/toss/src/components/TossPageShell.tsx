@@ -1,16 +1,15 @@
 import type { PropsWithChildren, ReactNode } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
-import { Navbar } from '@toss/tds-react-native';
+
 import { UI } from '../legacy/lib/ui/tokens';
-import { TOSS_RUNTIME_ENV } from '../config/runtimeEnv';
 import type { MiniRootTabPath } from '../platform/miniRouteContext';
 
-const TAB_META: Array<{ label: string; path: MiniRootTabPath }> = [
-  { label: '오늘', path: '/today' },
-  { label: '타로', path: '/tarot' },
-  { label: '홈', path: '/' },
-  { label: '사주', path: '/saju' },
-  { label: '주역', path: '/iching' },
+const TAB_META: Array<{ bubble: string; label: string; path: MiniRootTabPath }> = [
+  { bubble: '일', label: '데일리', path: '/today' },
+  { bubble: '타', label: '타로', path: '/tarot' },
+  { bubble: '홈', label: '홈', path: '/' },
+  { bubble: '사', label: '사주', path: '/saju' },
+  { bubble: '역', label: '주역', path: '/iching' },
 ];
 
 export function TossPageShell({
@@ -19,26 +18,41 @@ export function TossPageShell({
   footerSlot,
   onBackPress,
   onTabPress,
-  subtitle,
   title,
 }: PropsWithChildren<{
   activeTab?: MiniRootTabPath;
   footerSlot?: ReactNode;
   onBackPress?: () => void;
   onTabPress?: (path: MiniRootTabPath) => void;
-  subtitle?: string;
   title: string;
 }>): React.JSX.Element {
   return (
     <View style={styles.root}>
       <View style={styles.header}>
-        <Navbar
-          left={onBackPress ? <Navbar.BackButton onPress={onBackPress} /> : <View style={styles.navSpacer} />}
-          title={title}
-        />
-        <View style={styles.headerCopy}>
-          <Text style={styles.headerEyebrow}>{TOSS_RUNTIME_ENV.brandDisplayName}</Text>
-          {subtitle ? <Text style={styles.headerSubtitle}>{subtitle}</Text> : null}
+        <View style={styles.navRow}>
+          <View style={styles.navSide}>
+            {onBackPress ? (
+              <Pressable
+                accessibilityLabel="뒤로"
+                accessibilityRole="button"
+                onPress={onBackPress}
+                style={({ pressed }) => [styles.backButton, pressed && styles.pressed]}
+              >
+                <Text style={styles.backButtonGlyph}>{'<'}</Text>
+                <Text style={styles.backButtonText}>뒤로</Text>
+              </Pressable>
+            ) : (
+              <View style={styles.navSpacer} />
+            )}
+          </View>
+          <View style={styles.navCenter}>
+            <Text numberOfLines={1} style={styles.navTitle}>
+              {title}
+            </Text>
+          </View>
+          <View style={styles.navSide}>
+            <View style={styles.navSpacer} />
+          </View>
         </View>
       </View>
 
@@ -73,7 +87,7 @@ export function TossPageShell({
                       active && !isHome && styles.tabBubbleActive,
                     ]}
                   >
-                    <Text style={[styles.tabBubbleText, isHome && styles.homeBubbleText]}>{tab.label}</Text>
+                    <Text style={[styles.tabBubbleText, isHome && styles.homeBubbleText]}>{tab.bubble}</Text>
                   </View>
                   <Text style={[styles.tabLabel, active && styles.tabLabelActive]}>{tab.label}</Text>
                   {active && !isHome ? <View style={styles.activeDot} /> : null}
@@ -96,26 +110,56 @@ const styles = StyleSheet.create({
     backgroundColor: '#fffdf9',
     borderBottomWidth: 1,
     borderBottomColor: '#ece5da',
-    paddingBottom: 10,
+    paddingTop: 10,
+    paddingBottom: 12,
   },
-  navSpacer: {
-    width: 24,
+  navRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    paddingHorizontal: 12,
   },
-  headerCopy: {
-    paddingHorizontal: 20,
+  navSide: {
+    width: 72,
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+  },
+  navCenter: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  navTitle: {
+    color: '#111827',
+    fontSize: 16,
+    fontWeight: '900',
+    textAlign: 'center',
+  },
+  backButton: {
+    minHeight: 34,
+    borderRadius: 999,
+    borderWidth: 1,
+    borderColor: '#e5e7eb',
+    backgroundColor: '#ffffff',
+    paddingHorizontal: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
     gap: 4,
   },
-  headerEyebrow: {
-    color: '#6b7280',
-    fontSize: 11,
-    fontWeight: '700',
-    letterSpacing: 0.3,
-  },
-  headerSubtitle: {
-    color: '#4b5563',
-    fontSize: 12,
+  backButtonGlyph: {
+    color: '#111827',
+    fontSize: 13,
+    fontWeight: '900',
     lineHeight: 18,
-    fontWeight: '600',
+  },
+  backButtonText: {
+    color: '#111827',
+    fontSize: 12,
+    fontWeight: '800',
+  },
+  navSpacer: {
+    width: 56,
+    minHeight: 34,
   },
   content: {
     flex: 1,
@@ -160,9 +204,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 10,
-    backgroundColor: 'rgba(255,255,255,0.1)',
+    backgroundColor: 'rgba(255,255,255,0.10)',
     borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.14)',
+    borderColor: 'rgba(255,255,255,0.16)',
   },
   tabBubbleActive: {
     backgroundColor: 'rgba(247,201,72,0.22)',
@@ -181,12 +225,12 @@ const styles = StyleSheet.create({
   },
   tabBubbleText: {
     color: '#f2f1ef',
-    fontSize: 12,
+    fontSize: 15,
     fontWeight: '900',
   },
   homeBubbleText: {
     color: UI.colors.ink,
-    fontSize: 15,
+    fontSize: 16,
   },
   tabLabel: {
     marginTop: 6,

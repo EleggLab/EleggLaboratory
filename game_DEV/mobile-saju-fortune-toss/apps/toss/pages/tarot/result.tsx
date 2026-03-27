@@ -1,4 +1,5 @@
 import { createRoute } from '@granite-js/react-native';
+
 import { TossBannerAd } from '../../src/ads/TossBannerAd';
 import { TossPageShell } from '../../src/components/TossPageShell';
 import TarotResult from '../../src/legacy/app/(tabs)/tarot/result';
@@ -6,11 +7,19 @@ import { MiniRouteProvider } from '../../src/platform/miniRouteContext';
 import { useMiniRouteController } from '../../src/platform/useMiniRouteController';
 
 export const Route = createRoute('/tarot/result', {
-  validateParams: (params) =>
+  screenOptions: { headerShown: false },
+  validateParams: (params: Readonly<object | undefined>) =>
     ({
-      cached: params.cached,
-      cards: params.cards,
-      type: typeof params.type === 'string' ? params.type : undefined,
+      cached: (params as Record<string, unknown> | undefined)?.cached,
+      cards: (params as Record<string, unknown> | undefined)?.cards,
+      historyDateKey:
+        typeof (params as Record<string, unknown> | undefined)?.historyDateKey === 'string'
+          ? ((params as Record<string, unknown>).historyDateKey as string)
+          : undefined,
+      type:
+        typeof (params as Record<string, unknown> | undefined)?.type === 'string'
+          ? ((params as Record<string, unknown>).type as string)
+          : undefined,
     }) as { cached?: unknown; cards?: unknown; type?: string },
   component: Page,
 });

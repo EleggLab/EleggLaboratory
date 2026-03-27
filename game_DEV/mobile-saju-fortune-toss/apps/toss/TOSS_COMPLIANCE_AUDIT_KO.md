@@ -1,38 +1,53 @@
-# 토스 규격 점검 메모
+# 토스 규격 감사 메모
 
-## 현재 충족한 항목
+## 현재 충족된 항목
 
-- Granite/App-in-Toss 기반 RN 구조로 분리 완료
+- Granite/App-in-Toss 기반 RN 구조 분리 완료
 - `scheme: 'intoss'` 적용
-- `@apps-in-toss/framework` 2.0.5, `@toss/tds-react-native` 2.0.2로 고정
-- 홈/사주/오늘 운세/주역/타로/타로 결과의 토스 제출용 페이지 라우트 분리
-- 상단 내비게이션에 TDS `Navbar` 적용
-- 사주 입력 폼의 주요 입력/선택/저장/결과 전환 버튼을 TDS 기준으로 정리
-- 타로 결과, 타로 카드 선택, 주역 재시도 등 핵심 CTA를 TDS 버튼으로 정리
-- 배너 광고 슬롯 3개를 문서 기준 위치에만 배치
-- 운영 환경에서 광고 ID가 비어 있으면 광고가 꺼지도록 처리
-- 릴리즈 전 env 검증 스크립트 추가
+- `@apps-in-toss/framework` 2.0.5, `@toss/tds-react-native` 2.0.2 고정
+- `/`, `/saju`, `/today`, `/iching`, `/tarot`, `/tarot/reading`, `/tarot/result` 라우트 구성 완료
+- 원본 모바일 자산 84개, 총 41,608,173 bytes 가 토스 이식본과 일치
+- `apps/mobile/lib` 대비 `apps/toss/src/legacy/lib` 누락 파일 없음
+- 같은 탭 재선택 초기화, 방문 토큰 기반 리셋, 뒤로가기 fallback 동작 복원 완료
+- `pnpm --filter @saju/mobile typecheck` 통과
+- `pnpm --filter @saju/web typecheck` 통과
+- `pnpm --filter @saju/toss typecheck` 통과
+- `pnpm --filter @saju/toss build` 통과
+- `.ait` 생성 확인 완료
+- 콘솔 준비 문서, 자산 매니페스트, QA 스크립트, 패리티 감사 스크립트 추가 완료
 
-## 출시 전 필수 잔여 항목
+## 이번 라운드 보강 항목
 
-- `TOSS_APP_NAME` 을 토스 콘솔의 실제 앱 이름으로 교체
-- `TOSS_BRAND_ICON_URL` 을 토스 콘솔 앱 정보의 실제 아이콘 URL로 교체
-- 광고 그룹 3개 생성 후 실제 운영 ID 입력
-- `pnpm install` 성공 환경에서 `pnpm --filter @saju/toss typecheck` 재검증
-- `pnpm build:toss` 로 `.ait` 생성 확인
-- 토스 콘솔 QR 기반 실기기 광고 QA 수행
+- `assets/console/asset-manifest.json` 추가
+- 콘솔 업로드용 준비 자산 생성 스크립트 추가
+- 앱 등록, 기능 등록, 광고 슬롯, 정산 운영, UX 패리티 문서 추가
+- `validate-release-env` 에 콘솔 앱명, 고객지원 정보, 콘솔 자산 규격 검증 추가
+- `audit:parity`, `qa:sandbox`, `qa:toss` 스크립트 추가
 
-## 검수 리스크 메모
+## 남은 외부 작업
 
-- 현재 환경에서는 레지스트리 접근 문제로 `pnpm install` 이 실패해 실제 타입체크/빌드가 미완료 상태입니다.
-- 타로 홈/오늘 운세의 카드형 선택 UI는 기존 감성을 유지하기 위해 커스텀 컴포넌트를 보존했습니다.
-- 전면/리워드 광고는 구조만 남아 있고 기본 비활성입니다. v1 정책과 일치합니다.
-- 샌드박스에서는 광고가 동작하지 않으므로 실광고 검증은 반드시 콘솔 QR로 진행해야 합니다.
+- `TOSS_APP_NAME` 을 실제 토스 콘솔 앱명으로 확정
+- `TOSS_CONSOLE_APP_NAME` 을 같은 값으로 입력
+- `TOSS_BRAND_ICON_URL` 을 실제 콘솔 아이콘 URL로 교체
+- 고객지원 이메일, 전화번호, 채팅 URL 실값 입력
+- 토스 콘솔 QR 기반 실기기 QA
+- 광고를 다시 켤 때만 운영 광고 ID와 정산 정보 입력
+
+## 차이 해석
+
+- 원본과 토스 화면 파일은 완전 동일하지 않습니다.
+- 차이 대부분은 TDS 버튼과 입력, Granite 라우팅, 토스용 상하단 셸에서 발생합니다.
+- 계산 로직, 리소스, 핵심 운세 흐름은 원본 기준을 유지하도록 맞췄습니다.
+
+## 리스크 메모
+
+- 비게임 v1 기준으로는 기능 소개를 3개 안쪽으로 묶는 쪽이 검수 친화적입니다.
+- 현재 콘솔 자산은 준비용 초안이므로 출시 전 최종 비주얼 교체를 권장합니다.
 
 ## 추가 개발 우선순위
 
-1. 사주/타로/주역/오늘 운세 결과 히스토리
-2. 결과 카드 공유 이미지 저장/내보내기
-3. 첫 진입 온보딩과 각 운세 타입 설명
-4. 광고 성과와 기능 사용량을 함께 보는 analytics
-5. 운영 중 배너 on/off 와 위치 실험용 remote config
+1. 사주, 타로, 주역, 오늘 운세 결과 히스토리
+2. 결과 카드 공유 이미지 내보내기
+3. 첫 진입 온보딩과 기능 소개 페이지
+4. 광고 on/off 및 위치 실험용 remote config
+5. 운영 analytics 대시보드

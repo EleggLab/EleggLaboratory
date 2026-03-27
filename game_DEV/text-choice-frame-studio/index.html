@@ -3,11 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+<<<<<<< Updated upstream
     <title>Text Choice Template</title>
+=======
+    <title>Text Choice Frame Studio</title>
+>>>>>>> Stashed changes
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="app-shell">
+<<<<<<< Updated upstream
       <header class="topbar">
         <div class="topbar-copy">
           <p class="eyebrow">TEXT TEMPLATE</p>
@@ -20,6 +25,38 @@
           <button id="export-btn" class="btn" type="button">JSON 내보내기</button>
           <input id="import-input" type="file" accept=".json,application/json" hidden />
         </div>
+=======
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">TEXT FRAME AUTHORING TOOL</p>
+          <h1>Text Choice Frame Studio</h1>
+          <p class="hero-description">
+            AI가 이야기를 대신 써 주는 툴이 아니라, 사용자가 직접 장면과 선택지를 채워 넣는
+            간단한 텍스트 게임 제작기입니다.
+          </p>
+          <div class="hero-tags">
+            <span>사건 → 선택지 → 결과</span>
+            <span>폼 기반 편집</span>
+            <span>즉시 플레이테스트</span>
+            <span>JSON 내보내기</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <button id="new-project-btn" class="btn btn-strong" type="button">새 프로젝트</button>
+          <button id="load-sample-btn" class="btn" type="button">샘플 불러오기</button>
+          <button id="import-btn" class="btn" type="button">JSON 불러오기</button>
+          <button id="export-btn" class="btn" type="button">편집 JSON</button>
+        </div>
+        <details class="hero-more">
+          <summary>고급 도구</summary>
+          <div class="hero-actions hero-actions-advanced">
+            <button id="runtime-export-btn" class="btn" type="button">런타임 JSON</button>
+            <button id="reset-local-btn" class="btn btn-muted" type="button">로컬 저장 초기화</button>
+          </div>
+        </details>
+        <input id="import-input" type="file" accept=".json,application/json" hidden />
+>>>>>>> Stashed changes
       </header>
 
       <main class="workspace">
@@ -27,6 +64,10 @@
           <section class="card">
             <div class="card-head">
               <h2>프로젝트</h2>
+<<<<<<< Updated upstream
+=======
+              <p>레퍼런스보다 단순한 구조를 유지합니다.</p>
+>>>>>>> Stashed changes
             </div>
             <div class="field-grid">
               <label class="field">
@@ -37,12 +78,26 @@
                 <span>작성자</span>
                 <input id="project-author" type="text" />
               </label>
+<<<<<<< Updated upstream
+=======
+              <label class="field field-wide">
+                <span>한 줄 설명</span>
+                <textarea id="project-pitch" rows="3"></textarea>
+              </label>
+>>>>>>> Stashed changes
             </div>
           </section>
 
           <section class="card">
             <div class="card-head split-head">
+<<<<<<< Updated upstream
               <h2>장면 목록</h2>
+=======
+              <div>
+                <h2>장면 목록</h2>
+                <p>그래프 대신 순서 있는 장면 카드로 작업합니다.</p>
+              </div>
+>>>>>>> Stashed changes
               <div class="button-row">
                 <button id="add-scene-btn" class="btn btn-small" type="button">장면</button>
                 <button id="add-ending-btn" class="btn btn-small btn-muted" type="button">엔딩</button>
@@ -50,22 +105,111 @@
             </div>
             <div id="node-list" class="node-list"></div>
           </section>
+<<<<<<< Updated upstream
+=======
+
+          <details class="card collapsible-card">
+            <summary>고급 조건/효과 설정</summary>
+            <div class="collapsible-body">
+              <section class="card-section">
+                <div class="card-head split-head">
+                  <div>
+                    <h2>능력치</h2>
+                    <p>선택지 해금과 결과 변화가 필요할 때만 씁니다.</p>
+                  </div>
+                  <button id="add-stat-btn" class="btn btn-small" type="button">추가</button>
+                </div>
+                <div id="stats-list" class="stack-list"></div>
+              </section>
+
+              <section class="card-section">
+                <div class="card-head split-head">
+                  <div>
+                    <h2>기억 플래그</h2>
+                    <p>과거 선택 여부를 남기고 싶을 때만 추가합니다.</p>
+                  </div>
+                  <button id="add-flag-btn" class="btn btn-small" type="button">추가</button>
+                </div>
+                <div id="flags-list" class="stack-list"></div>
+              </section>
+            </div>
+          </details>
+>>>>>>> Stashed changes
         </aside>
 
         <section class="panel panel-center">
           <section class="card card-editor">
             <div class="card-head">
               <h2>장면 편집</h2>
+<<<<<<< Updated upstream
+=======
+              <p>선택지를 늘리기 전에 장면 목적과 압박을 먼저 잡아두세요.</p>
+>>>>>>> Stashed changes
             </div>
             <div id="scene-editor"></div>
           </section>
         </section>
 
         <aside class="panel panel-right">
+<<<<<<< Updated upstream
           <section class="card playtest-card">
             <div class="card-head split-head">
               <h2>플레이테스트</h2>
               <button id="restart-playtest-btn" class="btn btn-small" type="button">처음부터</button>
+=======
+          <section class="card">
+            <div class="card-head">
+              <h2>단순화 기준</h2>
+              <p>이번 툴은 기존 레거시 프로젝트보다 훨씬 가볍게 유지합니다.</p>
+            </div>
+            <ul class="plain-list">
+              <li>장면 하나에는 사건 하나만 둡니다.</li>
+              <li>선택지는 보통 2~3개만 둡니다.</li>
+              <li>효과는 능력치 변화 1개, 플래그 변경 1개 정도로 제한합니다.</li>
+              <li>전투, 장비, 초상화, 자동 생성 서사는 기본 기능에서 제외합니다.</li>
+            </ul>
+          </section>
+
+          <details class="card collapsible-card">
+            <summary>고급 점검 / 가져오기</summary>
+            <div class="collapsible-body">
+              <section class="card-section">
+                <div class="card-head">
+                  <h2>검증</h2>
+                  <p>트리 구조가 깨졌을 때만 여기서 확인합니다.</p>
+                </div>
+                <div id="validation-summary"></div>
+              </section>
+
+              <section class="card-section">
+                <div class="card-head">
+                  <h2>구조 개요</h2>
+                  <p>시작점, 막힌 장면, 도달 엔딩 같은 고급 정보입니다.</p>
+                </div>
+                <div id="flow-overview"></div>
+              </section>
+
+              <section class="card-section">
+                <div class="card-head">
+                  <h2>60sec UGC 브리지</h2>
+                  <p>`pc-choice-ugc`의 레거시 그래프 JSON을 접어오는 기능 설명입니다.</p>
+                </div>
+                <div id="import-summary"></div>
+              </section>
+            </div>
+          </details>
+
+          <section class="card playtest-card">
+            <div class="card-head split-head">
+              <div>
+                <h2>플레이테스트</h2>
+                <p>현재 작성한 내용으로 즉시 흐름을 확인합니다.</p>
+              </div>
+              <div class="button-row">
+                <button id="restart-playtest-btn" class="btn btn-small" type="button">처음부터</button>
+                <button id="reset-run-btn" class="btn btn-small btn-muted" type="button">상태 초기화</button>
+              </div>
+>>>>>>> Stashed changes
             </div>
             <div id="playtest-panel"></div>
           </section>

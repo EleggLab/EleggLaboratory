@@ -1,6 +1,5 @@
-import { Navbar } from '@toss/tds-react-native';
 import type { PropsWithChildren, ReactNode } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { TOSS_RUNTIME_ENV } from '../config/runtimeEnv';
 
 export function TossPageShell({
@@ -18,10 +17,19 @@ export function TossPageShell({
   return (
     <View style={styles.root}>
       <View style={styles.header}>
-        <Navbar
-          left={onBackPress ? <Navbar.BackButton onPress={onBackPress} /> : <View style={styles.navSpacer} />}
-          title={title}
-        />
+        <View style={styles.topBar}>
+          {onBackPress ? (
+            <Pressable accessibilityRole="button" onPress={onBackPress} style={styles.backButton}>
+              <Text style={styles.backButtonLabel}>Back</Text>
+            </Pressable>
+          ) : (
+            <View style={styles.navSpacer} />
+          )}
+          <Text numberOfLines={1} style={styles.topBarTitle}>
+            {title}
+          </Text>
+          <View style={styles.navSpacer} />
+        </View>
         <View style={styles.heroCard}>
           <Text style={styles.eyebrow}>{TOSS_RUNTIME_ENV.brandDisplayName}</Text>
           <Text style={styles.headline}>{title}</Text>
@@ -53,8 +61,36 @@ const styles = StyleSheet.create({
     backgroundColor: '#f4f8fc',
     paddingBottom: 10,
   },
+  topBar: {
+    minHeight: 52,
+    paddingHorizontal: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 12,
+  },
   navSpacer: {
-    width: 24,
+    width: 64,
+  },
+  backButton: {
+    minWidth: 64,
+    borderRadius: 999,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    backgroundColor: '#e2e8f0',
+    alignItems: 'center',
+  },
+  backButtonLabel: {
+    color: '#0f172a',
+    fontSize: 13,
+    fontWeight: '700',
+  },
+  topBarTitle: {
+    flex: 1,
+    textAlign: 'center',
+    color: '#334155',
+    fontSize: 13,
+    fontWeight: '700',
   },
   heroCard: {
     marginHorizontal: 16,

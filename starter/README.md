@@ -76,3 +76,6 @@ vibe-starter report ./starter-report.md
 - Initialize with `vibe-starter init toss-rn-miniapp my-toss-app`
 - Foundation notes: `docs/toss-miniapp-foundation.md`
 - Launch checklist: `checklists/toss-miniapp-launch.md`
+- App vs game strategy: `docs/toss-app-vs-game-strategy.md`
+- Market analysis: `docs/toss-market-analysis-2026-03.md`
+- Game launch checklist: `checklists/toss-game-launch.md`

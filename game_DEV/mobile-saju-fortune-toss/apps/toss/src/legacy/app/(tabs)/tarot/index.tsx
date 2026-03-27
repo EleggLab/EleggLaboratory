@@ -5,9 +5,10 @@ import type { TarotReadingType } from '../../../lib/features/tarot/deck';
 import { loadTodayTarot } from '../../../lib/features/tarot/storage';
 import { BACKGROUNDS } from '../../../lib/assets/backgrounds';
 import { commonStyles } from '../../../lib/ui/commonStyles';
+import { HistoryLinkChip } from '../../../lib/ui/HistoryLinkChip';
 import { ScreenScroll } from '../../../lib/ui/ScreenScroll';
 import { UI } from '../../../lib/ui/tokens';
-import { useMiniNavigation } from '../../../support/miniRouteContext';
+import { useMiniNavigation, useMiniRouteSignals } from '../../../support/miniRouteContext';
 
 function CardButton({
   title,
@@ -30,6 +31,7 @@ function CardButton({
 
 export default function TarotHome(): React.JSX.Element {
   const miniNavigation = useMiniNavigation();
+  const { tabPressToken, visitToken } = useMiniRouteSignals();
   const [todayReady, setTodayReady] = useState<boolean>(false);
 
   useEffect(() => {
@@ -47,7 +49,7 @@ export default function TarotHome(): React.JSX.Element {
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [visitToken]);
 
   const goReading = async (type: TarotReadingType): Promise<void> => {
     if (type === 'today') {
@@ -65,10 +67,12 @@ export default function TarotHome(): React.JSX.Element {
     <ScreenScroll
       background={BACKGROUNDS.tarot}
       contentContainerStyle={[commonStyles.screen, styles.container]}
+      scrollToTopKey={tabPressToken ?? 'tarot-home'}
       resetScrollOnFocus
     >
       <View style={[commonStyles.hero, styles.hero]}>
-        <Text style={styles.heroLine}>보고 싶은 운세를 고르세요.</Text>
+        <Text style={styles.heroLine}>보고 싶은 운세를 골라보세요.</Text>
+        <HistoryLinkChip label="최근 기록" onPress={() => miniNavigation.navigate('/history', { type: 'tarot' })} />
       </View>
 
       <View style={styles.grid}>
@@ -83,7 +87,7 @@ export default function TarotHome(): React.JSX.Element {
           <CardButton title="연애운" onPress={() => void goReading('love')} style={styles.halfBtn} />
           <CardButton title="금전운" onPress={() => void goReading('money')} style={styles.halfBtn} />
           <CardButton title="인간관계운" onPress={() => void goReading('relationship')} style={styles.halfBtn} />
-          <CardButton title="학업운" onPress={() => void goReading('study')} style={styles.halfBtn} />
+          <CardButton title="직업운" onPress={() => void goReading('study')} style={styles.halfBtn} />
         </View>
       </View>
     </ScreenScroll>
@@ -96,7 +100,7 @@ const styles = StyleSheet.create({
     gap: 16,
   },
   hero: {
-    gap: 0,
+    gap: 10,
   },
   heroLine: {
     color: '#f2f1ef',

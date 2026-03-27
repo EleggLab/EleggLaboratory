@@ -1,1 +1,106 @@
+<<<<<<< Updated upstream
 Watch mode is not supported in this environment
+=======
+=fortune-suite-toss : '=fortune-suite-toss' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인
+식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+위치 줄:1 문자:1
++ ='fortune-suite-toss'; ='fortune-suite-toss'; ='종합 운세'; ='#D6B25E'; = ...
++ ~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (=fortune-suite-toss:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+=fortune-suite-toss : '=fortune-suite-toss' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인
+식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+위치 줄:1 문자:24
++ ='fortune-suite-toss'; ='fortune-suite-toss'; ='종합 운세'; ='#D6B25E'; = ...
++                        ~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (=fortune-suite-toss:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+=종합 운세 : '=종합 운세' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 
+이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+위치 줄:1 문자:47
++ ='fortune-suite-toss'; ='fortune-suite-toss'; ='종합 운세'; ='#D6B25E'; = ...
++                                               ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (=종합 운세:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+=#D6B25E : '=#D6B25E' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 이름
+이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+위치 줄:1 문자:57
++ ... tune-suite-toss'; ='fortune-suite-toss'; ='종합 운세'; ='#D6B25E'; ='http ...
++                                                        ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (=#D6B25E:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+=https://example.com/icon.png : '=https://example.com/icon.png' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 
+프로그램 이름으로 인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도
+하십시오.
+위치 줄:1 문자:69
++ ... -toss'; ='종합 운세'; ='#D6B25E'; ='https://example.com/icon.png'; ='supp ...
++                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (=https://example.com/icon.png:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+=support@example.com : '=support@example.com' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 
+인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+위치 줄:1 문자:102
++ ... 25E'; ='https://example.com/icon.png'; ='support@example.com'; ='010- ...
++                                            ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (=support@example.com:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+=010-0000-0000 : '=010-0000-0000' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않
+습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+위치 줄:1 문자:126
++ ... ample.com/icon.png'; ='support@example.com'; ='010-0000-0000'; ='http ...
++                                                  ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (=010-0000-0000:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+=https://example.com/support : '=https://example.com/support' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프
+로그램 이름으로 인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하
+십시오.
+위치 줄:1 문자:144
++ ... xample.com'; ='010-0000-0000'; ='https://example.com/support'; ='fals ...
++                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (=https://example.com/support:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+=false : '=false' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 이름이 정
+확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시오.
+위치 줄:1 문자:176
++ ... '; ='010-0000-0000'; ='https://example.com/support'; ='false'; corepa ...
++                                                          ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (=false:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+React DevTools client error Error: listen EADDRINUSE: address already in use :::8097
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at new WebSocketServer (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\ws@8.19.0\node_modules\ws\lib\websocket-server.js:106:20)
+    at new ProxyWebSocket (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\react-native-devtools-standalone@0.4.1\node_modules\react-native-devtools-standalone\cjs\backend\index.cjs:54:17)
+    at setupDevToolsProxy (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\react-native-devtools-standalone@0.4.1\node_modules\react-native-devtools-standalone\cjs\backend\index.cjs:122:27)
+    at Object.runServer (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\@react-native-bedrock+mpack-next@0.0.19_@types+node@22.19.11\node_modules\@react-native-bedrock\mpack-next\dist\operations\runServer.js:111:49)
+    at async DevCommand.execute (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\@react-native-bedrock+cli@0_51186b854b54e44a7c1be181bea0f4b7\node_modules\@react-native-bedrock\cli\dist\index.cjs:446:9)
+    at async DevCommand.validateAndExecute (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\clipanion@4.0.0-rc.4_typanion@3.14.0\node_modules\clipanion\lib\advanced\Command.js:71:26)
+    at async Cli.run (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\clipanion@4.0.0-rc.4_typanion@3.14.0\node_modules\clipanion\lib\advanced\Cli.js:231:24) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 8097
+}
+Error: listen EADDRINUSE: address already in use :::8081
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\@react-native-bedrock+mpack-next@0.0.19_@types+node@22.19.11\node_modules\@react-native-bedrock\mpack-next\dist\vendors\metro\src\index.flow.js:276:14
+    at new Promise (<anonymous>)
+    at earlyPortCheck (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\@react-native-bedrock+mpack-next@0.0.19_@types+node@22.19.11\node_modules\@react-native-bedrock\mpack-next\dist\vendors\metro\src\index.flow.js:272:11)
+    at exports.runServer (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\@react-native-bedrock+mpack-next@0.0.19_@types+node@22.19.11\node_modules\@react-native-bedrock\mpack-next\dist\vendors\metro\src\index.flow.js:102:9)
+    at Object.runServer (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\@react-native-bedrock+mpack-next@0.0.19_@types+node@22.19.11\node_modules\@react-native-bedrock\mpack-next\dist\operations\runServer.js:129:38)
+    at async DevCommand.execute (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\@react-native-bedrock+cli@0_51186b854b54e44a7c1be181bea0f4b7\node_modules\@react-native-bedrock\cli\dist\index.cjs:446:9)
+    at async DevCommand.validateAndExecute (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\clipanion@4.0.0-rc.4_typanion@3.14.0\node_modules\clipanion\lib\advanced\Command.js:71:26)
+>>>>>>> Stashed changes

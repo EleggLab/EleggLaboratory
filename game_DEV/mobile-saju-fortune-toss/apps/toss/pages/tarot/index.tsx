@@ -1,11 +1,13 @@
 import { createRoute } from '@granite-js/react-native';
+
 import { TossPageShell } from '../../src/components/TossPageShell';
 import TarotHome from '../../src/legacy/app/(tabs)/tarot/index';
 import { MiniRouteProvider } from '../../src/platform/miniRouteContext';
 import { useMiniRouteController } from '../../src/platform/useMiniRouteController';
 
 export const Route = createRoute('/tarot', {
-  validateParams: (params) => params as Record<string, unknown>,
+  screenOptions: { headerShown: false },
+  validateParams: (params: Readonly<object | undefined>) => (params ?? {}) as Record<string, unknown>,
   component: Page,
 });
 

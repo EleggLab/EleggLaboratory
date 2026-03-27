@@ -1,5 +1,7 @@
 # Toss Miniapp Launch Checklist
 
+This checklist is for the non-game app lane. If the product is a game, use `checklists/toss-game-launch.md` as the primary release checklist instead.
+
 ## Console And Brand
 - [ ] Workspace, representative admin, and required terms are complete.
 - [ ] The real Toss console `appName` is fixed and copied into the project env.
@@ -21,6 +23,7 @@
 ## QA
 - [ ] `pnpm qa:sandbox` reviewed and sandbox checks completed.
 - [ ] `pnpm qa:toss` reviewed and QR/Toss-app checks completed.
+- [ ] First release scope still fits a non-game v1 footprint of roughly `2 to 4` service screens.
 - [ ] Banner no-fill and render-failure states collapse cleanly.
 - [ ] Ads do not block payment, login, signup, or critical user actions.
 - [ ] Back/foreground, network retry, and audio behavior are confirmed on real devices.
@@ -29,6 +32,7 @@
 - [ ] Settlement info review is approved in the Toss console.
 - [ ] Bank-account copy is registered correctly.
 - [ ] Popbill reverse-invoice approval owner is assigned.
+- [ ] Current settlement terms were rechecked against the live doc before launch, especially for time-limited fee promotions.
 - [ ] `pnpm validate:release-env` passes.
 - [ ] `.ait` build is generated.
 - [ ] Test upload path is confirmed via console QR or `ait deploy`.

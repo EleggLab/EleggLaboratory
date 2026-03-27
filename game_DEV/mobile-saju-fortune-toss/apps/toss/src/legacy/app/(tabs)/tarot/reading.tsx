@@ -3,18 +3,17 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Button } from '@toss/tds-react-native';
 
 import { spreadFor, TAROT_DECK, type TarotReadingType } from '../../../lib/features/tarot/deck';
+import { encodeDrawnCards, isTarotReadingType } from '../../../lib/features/tarot/helpers';
 import { hashSeed, makeRng, shuffle } from '../../../lib/features/tarot/random';
 import { kstDateKey, saveTodayTarot, type TarotDrawnCard } from '../../../lib/features/tarot/storage';
 import { BACKGROUNDS } from '../../../lib/assets/backgrounds';
+import { saveHistoryEntry } from '../../../lib/features/history/storage';
 import { commonStyles } from '../../../lib/ui/commonStyles';
+import { HistoryLinkChip } from '../../../lib/ui/HistoryLinkChip';
 import { ScreenScroll } from '../../../lib/ui/ScreenScroll';
 import { UI } from '../../../lib/ui/tokens';
 import { useMiniNavigation, useMiniParams } from '../../../support/miniRouteContext';
 import TarotCardTile from './TarotCardTile';
-
-function isReadingType(value: string | undefined): value is TarotReadingType {
-  return value === 'today' || value === 'love' || value === 'money' || value === 'relationship' || value === 'study';
-}
 
 function chunkIntoRows<T>(items: readonly T[], columns: number): T[][] {
   const rows: T[][] = [];
@@ -24,14 +23,10 @@ function chunkIntoRows<T>(items: readonly T[], columns: number): T[][] {
   return rows;
 }
 
-function encodeCards(cards: TarotDrawnCard[]): string {
-  return cards.map((card) => `${card.id}:${card.reversed ? 1 : 0}`).join(',');
-}
-
 export default function TarotReading(): React.JSX.Element {
   const miniNavigation = useMiniNavigation();
   const params = useMiniParams<{ type?: string }>();
-  const type: TarotReadingType = isReadingType(params.type) ? params.type : 'today';
+  const type: TarotReadingType = isTarotReadingType(params.type) ? params.type : 'today';
 
   const spread = useMemo(() => spreadFor(type), [type]);
   const columns = 4;
@@ -101,16 +96,34 @@ export default function TarotReading(): React.JSX.Element {
   const complete = async (): Promise<void> => {
     if (isShuffling || selected.length !== spread.count) return;
 
+    const createdAtISO = new Date().toISOString();
+    const dateKey = kstDateKey();
+
     if (type === 'today') {
       await saveTodayTarot({
         type,
-        dateKey: kstDateKey(),
+        dateKey,
         drawn: selected,
-        createdAtISO: new Date().toISOString(),
+        createdAtISO,
       });
     }
 
-    miniNavigation.navigate('/tarot/result', { cards: encodeCards(selected), type });
+    await saveHistoryEntry({
+      id: `tarot-${type}-${dateKey}-${createdAtISO}`,
+      kind: 'tarot',
+      createdAtISO,
+      payload: {
+        createdAtISO,
+        dateKey,
+        drawn: selected,
+        type,
+      },
+    });
+
+    miniNavigation.navigate('/tarot/result', {
+      cards: encodeDrawnCards(selected),
+      type,
+    });
   };
 
   return (
@@ -118,9 +131,10 @@ export default function TarotReading(): React.JSX.Element {
       <View style={[commonStyles.hero, styles.header]}>
         <Text style={styles.heroLine}>
           {type === 'today'
-            ? '오늘의 운세는 하루 1회만 저장됩니다.'
-            : '3장 카드 조합으로 현재 흐름과 조언을 정리해 드립니다.'}
+            ? '오늘의 운세는 한 장, 나머지는 3장 스프레드로 흐름을 읽어요.'
+            : '3장 카드를 고르면 현재·흐름·조언 순서로 결과를 정리해 드려요.'}
         </Text>
+        <HistoryLinkChip label="최근 기록" onPress={() => miniNavigation.navigate('/history', { type: 'tarot' })} />
       </View>
 
       <View style={styles.toolbar}>
@@ -130,14 +144,7 @@ export default function TarotReading(): React.JSX.Element {
           {isShuffling ? <Text style={styles.shuffleText}>섞는 중...</Text> : null}
 
           <View style={styles.toolbarButton}>
-            <Button
-              disabled={isShuffling}
-              display="full"
-              onPress={reshuffle}
-              size="tiny"
-              style="weak"
-              type="dark"
-            >
+            <Button disabled={isShuffling} display="full" onPress={reshuffle} size="tiny" style="weak" type="dark">
               다시 섞기
             </Button>
           </View>
@@ -171,13 +178,13 @@ export default function TarotReading(): React.JSX.Element {
                 <View key={card.id} style={styles.gridCell}>
                   <TarotCardTile
                     card={card}
+                    disabled={disabled}
                     faceUp={picked}
+                    onPress={() => togglePick(card.id)}
                     reversed={reversed}
                     selected={picked}
-                    disabled={disabled}
                     shuffleToken={shuffleToken}
                     slotIndex={slotIndex}
-                    onPress={() => togglePick(card.id)}
                   />
                 </View>
               );
@@ -206,7 +213,7 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   header: {
-    gap: 0,
+    gap: 10,
   },
   heroLine: {
     color: '#f2f1ef',
@@ -236,10 +243,6 @@ const styles = StyleSheet.create({
   counter: {
     color: UI.colors.gold,
     fontWeight: '900',
-  },
-  pressed: {
-    opacity: 0.92,
-    transform: [{ scale: 0.99 }],
   },
   grid: {
     gap: 10,

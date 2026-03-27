@@ -17,9 +17,18 @@ import {
 import { qnaSnippets } from '@saju/data';
 
 import { BACKGROUNDS } from '../../../lib/assets/backgrounds';
+import {
+  deleteHistoryEntry,
+  listHistory,
+  migrateLegacyHistoryIfNeeded,
+  saveHistoryEntry,
+} from '../../../lib/features/history/storage';
+import { HistoryLinkChip } from '../../../lib/ui/HistoryLinkChip';
 import { commonStyles } from '../../../lib/ui/commonStyles';
 import { ScreenScroll } from '../../../lib/ui/ScreenScroll';
 import { UI } from '../../../lib/ui/tokens';
+import { loadSavedSajuInputs as loadLegacySajuInputs } from '../../../lib/features/saju/savedInput';
+import { useMiniNavigation, useMiniParams, useMiniRouteSignals } from '../../../support/miniRouteContext';
 import SectionCard from '../_components/SectionCard';
 import PillarsMatrixNative from './PillarsMatrixNative';
 
@@ -41,6 +50,7 @@ const DOMAINS: Array<{ key: QnaDomain; label: string; hint: string }> = [
 
 const SAJU_INPUT_STORAGE_KEY = 'saju:birth-input:v1';
 const SAJU_INPUT_MAX = 10;
+const SAJU_HISTORY_MAX = 20;
 
 interface SavedSajuInput {
   id: string;
@@ -128,6 +138,26 @@ function formatSavedInputSummary(saved: SavedSajuInput): string {
   const genderLabel =
     saved.gender === 'male' ? '남' : saved.gender === 'female' ? '여' : saved.gender === 'other' ? '기타' : '미입력';
   return `${calendar}${leap} · ${date} ${time} · ${genderLabel}`;
+}
+
+function parseHistoryPayload(raw: string | undefined): SavedSajuPayload | null {
+  if (!raw) return null;
+
+  try {
+    const parsed = JSON.parse(raw) as unknown;
+    const normalized = normalizeSavedInput({
+      id: 'history-open',
+      createdAtISO: new Date().toISOString(),
+      ...(parsed && typeof parsed === 'object' ? parsed : {}),
+    });
+
+    if (!normalized) return null;
+
+    const { id: _id, createdAtISO: _createdAtISO, ...payload } = normalized;
+    return payload;
+  } catch {
+    return null;
+  }
 }
 
 function monthLuckText(monthLuck: MonthlyLuckCycle, chart: SajuChartResult): string {
@@ -261,6 +291,10 @@ function buildCycleNote(domain: QnaDomain, cycle: QnaCycleContext): string {
 }
 
 export default function SajuScreen(): React.JSX.Element {
+  const miniNavigation = useMiniNavigation();
+  const params = useMiniParams<{ historyPayload?: string }>();
+  const { tabPressToken, visitToken } = useMiniRouteSignals();
+  const historyPayload = useMemo(() => parseHistoryPayload(params.historyPayload), [params.historyPayload]);
   const [calendar, setCalendar] = useState<CalendarType>('solar');
   const [birthYear, setBirthYear] = useState('1992');
   const [birthMonth, setBirthMonth] = useState('10');
@@ -285,6 +319,7 @@ export default function SajuScreen(): React.JSX.Element {
 
   const [qnaMode, setQnaMode] = useState<QnaMode>('overall');
   const [domain, setDomain] = useState<QnaDomain>('money');
+  const [historyCount, setHistoryCount] = useState(0);
   const [saveNote, setSaveNote] = useState('');
   const [savedInputs, setSavedInputs] = useState<SavedSajuInput[]>([]);
 
@@ -364,36 +399,41 @@ export default function SajuScreen(): React.JSX.Element {
   }, []);
 
   useEffect(() => {
+    if (!visitToken && !tabPressToken) return;
+    resetToEntry();
+  }, [resetToEntry, tabPressToken, visitToken]);
+
+  useEffect(() => {
     let mounted = true;
-    AsyncStorage.getItem(SAJU_INPUT_STORAGE_KEY)
-      .then((raw) => {
-        if (!mounted || !raw) return;
+    Promise.all([migrateLegacyHistoryIfNeeded(), loadLegacySajuInputs(), listHistory('saju')])
+      .then(([, legacyInputs, historyEntries]) => {
+        if (!mounted) return;
 
-        const parsedUnknown = JSON.parse(raw) as unknown;
-        const parsedList = Array.isArray(parsedUnknown) ? parsedUnknown : [parsedUnknown];
-        const normalized = parsedList
-          .map((item) => normalizeSavedInput(item))
-          .filter((item): item is SavedSajuInput => Boolean(item))
-          .slice(0, SAJU_INPUT_MAX);
+        setSavedInputs(legacyInputs);
+        setHistoryCount(historyEntries.length);
 
-        if (normalized.length === 0) return;
+        if (historyPayload) {
+          applySavedInputToForm(historyPayload);
+          setSaveNote('최근 기록에서 저장한 입력값을 불러왔어요.');
+          return;
+        }
 
-        const firstSaved = normalized[0];
+        const firstSaved = legacyInputs[0];
         if (!firstSaved) return;
 
-        setSavedInputs(normalized);
         applySavedInputToForm(firstSaved);
-        setSaveNote(`저장한 입력값 ${normalized.length}개를 불러왔어요.`);
+        setSaveNote(`저장한 입력값 ${legacyInputs.length}개를 불러왔어요.`);
       })
       .catch(() => {
         if (!mounted) return;
         setSavedInputs([]);
+        setHistoryCount(0);
         setSaveNote('');
       });
     return () => {
       mounted = false;
     };
-  }, [applySavedInputToForm]);
+  }, [applySavedInputToForm, historyPayload]);
 
   const computeFromPayload = useCallback((payload: SavedSajuPayload): void => {
     setError('');
@@ -439,6 +479,12 @@ export default function SajuScreen(): React.JSX.Element {
     }
   }, []);
 
+  useEffect(() => {
+    if (!historyPayload) return;
+    applySavedInputToForm(historyPayload);
+    computeFromPayload(historyPayload);
+  }, [applySavedInputToForm, computeFromPayload, historyPayload]);
+
   const compute = (): void => {
     computeFromPayload({
       calendar,
@@ -455,8 +501,8 @@ export default function SajuScreen(): React.JSX.Element {
   };
 
   const handleSaveInput = useCallback(() => {
-    if (savedInputs.length >= SAJU_INPUT_MAX) {
-      setSaveNote(`저장 슬롯(${SAJU_INPUT_MAX}개)이 가득 찼어요. 기존 항목을 삭제 후 저장해 주세요.`);
+    if (historyCount >= SAJU_HISTORY_MAX) {
+      setSaveNote(`저장 슬롯(${SAJU_HISTORY_MAX}개)이 가득 찼어요. 기존 항목을 삭제 후 저장해 주세요.`);
       return;
     }
 
@@ -475,11 +521,28 @@ export default function SajuScreen(): React.JSX.Element {
       jaSiNextDay,
     };
 
-    const nextList = [payload, ...savedInputs].slice(0, SAJU_INPUT_MAX);
-    AsyncStorage.setItem(SAJU_INPUT_STORAGE_KEY, JSON.stringify(nextList))
-      .then(() => {
-        setSavedInputs(nextList);
-        setSaveNote(`입력 정보를 저장했어요. (${nextList.length}/${SAJU_INPUT_MAX})`);
+    void saveHistoryEntry({
+      id: payload.id,
+      kind: 'saju',
+      createdAtISO: payload.createdAtISO,
+      payload: {
+        calendar: payload.calendar,
+        birthYear: payload.birthYear,
+        birthMonth: payload.birthMonth,
+        birthDay: payload.birthDay,
+        birthHour: payload.birthHour,
+        birthMinute: payload.birthMinute,
+        isLeapMonth: payload.isLeapMonth,
+        gender: payload.gender,
+        yearRuleIpchun: payload.yearRuleIpchun,
+        jaSiNextDay: payload.jaSiNextDay,
+      },
+    })
+      .then(async (nextHistory) => {
+        const nextLegacy = await loadLegacySajuInputs();
+        setSavedInputs(nextLegacy);
+        setHistoryCount(nextHistory.length);
+        setSaveNote(`입력 정보를 저장했어요. (${nextHistory.length}/${SAJU_HISTORY_MAX})`);
       })
       .catch(() => setSaveNote('저장에 실패했어요. 다시 시도해 주세요.'));
   }, [
@@ -490,9 +553,9 @@ export default function SajuScreen(): React.JSX.Element {
     birthYear,
     calendar,
     gender,
+    historyCount,
     isLeapMonth,
     jaSiNextDay,
-    savedInputs,
     yearRuleIpchun,
   ]);
 
@@ -506,17 +569,18 @@ export default function SajuScreen(): React.JSX.Element {
 
   const handleDeleteSavedInput = useCallback(
     (id: string): void => {
-      const nextList = savedInputs.filter((item) => item.id !== id);
-      AsyncStorage.setItem(SAJU_INPUT_STORAGE_KEY, JSON.stringify(nextList))
-        .then(() => {
-          setSavedInputs(nextList);
-          setSaveNote(nextList.length ? '저장 정보를 삭제했어요.' : '저장 정보를 모두 비웠어요.');
+      void deleteHistoryEntry('saju', id)
+        .then(async (nextHistory) => {
+          const nextLegacy = await loadLegacySajuInputs();
+          setSavedInputs(nextLegacy);
+          setHistoryCount(nextHistory.length);
+          setSaveNote(nextHistory.length ? '저장 정보를 삭제했어요.' : '저장 정보를 모두 비웠어요.');
         })
         .catch(() => {
           setSaveNote('삭제에 실패했어요. 다시 시도해 주세요.');
         });
     },
-    [savedInputs],
+    [],
   );
 
   const handlePickYear = (): void => {
@@ -546,6 +610,7 @@ export default function SajuScreen(): React.JSX.Element {
     <ScreenScroll background={BACKGROUNDS.saju} contentContainerStyle={[commonStyles.screen, styles.container]} resetScrollOnFocus>
       <View style={[commonStyles.hero, styles.hero]}>
         <Text style={styles.heroLine}>생년월일시를 입력하면 결과와 분야별 Q&A를 바로 확인할 수 있어요.</Text>
+        <HistoryLinkChip label="최근 기록" onPress={() => miniNavigation.navigate('/history', { type: 'saju' })} />
       </View>
 
       {!chart ? (
@@ -680,8 +745,9 @@ export default function SajuScreen(): React.JSX.Element {
           </Button>
 
           <Button display="full" onPress={handleSaveInput} size="medium" style="weak" type="dark">
-            {`입력 정보 저장 (${savedInputs.length}/${SAJU_INPUT_MAX})`}
+            {`입력 정보 저장 (${historyCount}/${SAJU_HISTORY_MAX})`}
           </Button>
+          {saveNote ? <Text style={styles.meta}>{saveNote}</Text> : null}
 
           {savedInputs.length > 0 ? (
             <View style={styles.savedList}>
@@ -899,7 +965,7 @@ export default function SajuScreen(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   container: { gap: 22 },
-  hero: { gap: 0 },
+  hero: { gap: 10 },
   heroLine: { color: '#f2f1ef', fontSize: 14, fontWeight: '800', lineHeight: 20 },
   meta: { fontSize: 12, lineHeight: 17, color: '#6b7280' },
   choiceRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },

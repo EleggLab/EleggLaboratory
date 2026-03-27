@@ -1,14 +1,59 @@
 {
   "version": 1,
   "meta": {
+<<<<<<< Updated upstream
     "title": "기본 텍스트 템플릿",
     "author": "",
     "start_node_id": "intro"
   },
+=======
+    "title": "Text Frame Starter",
+    "author": "",
+    "pitch": "A simple branching text frame focused on incident, choice, consequence, and ending.",
+    "default_language": "ko",
+    "start_node_id": "intro"
+  },
+  "stats": [
+    {
+      "id": "survival",
+      "label": "생존",
+      "default": 1,
+      "min": 0,
+      "max": 5
+    },
+    {
+      "id": "curiosity",
+      "label": "호기심",
+      "default": 1,
+      "min": 0,
+      "max": 5
+    },
+    {
+      "id": "trust",
+      "label": "신뢰",
+      "default": 0,
+      "min": -3,
+      "max": 5
+    }
+  ],
+  "flags": [
+    {
+      "id": "met_scout",
+      "label": "정찰자와 만남",
+      "default": false
+    },
+    {
+      "id": "opened_archive",
+      "label": "폐기 문서 보관함 개방",
+      "default": false
+    }
+  ],
+>>>>>>> Stashed changes
   "nodes": [
     {
       "id": "intro",
       "kind": "scene",
+<<<<<<< Updated upstream
       "title": "도입",
       "speaker": "",
       "text": "[도입] 지금 어디에 있고 무엇이 평소와 달라졌는지 적으세요.",
@@ -36,10 +81,63 @@
           "text": "먼저 버틴다",
           "writer_note": "위험이나 부담이 커지는 선택",
           "next": "pressure"
+=======
+      "title": "첫 사건",
+      "speaker": "기록관",
+      "text": {
+        "ko": "[상황] 플레이어가 지금 어디에 있는지 적으세요.\n[감각] 소리, 냄새, 조명처럼 장면의 질감을 적으세요.\n[압박] 왜 지금 선택해야 하는지 적으세요.",
+        "en": ""
+      },
+      "writer_note": "이 장면은 세계관 소개보다도 첫 결정을 밀어붙이는 데 집중합니다. 사건 하나, 선택지 둘 정도로 유지하세요.",
+      "next": "",
+      "choices": [
+        {
+          "id": "intro_follow_signal",
+          "text": {
+            "ko": "수상한 신호를 따라간다",
+            "en": ""
+          },
+          "writer_note": "호기심형 선택. 다음 장면에서 위험과 정보 둘 다 열리게 설계합니다.",
+          "next": "signal_room",
+          "requirements": [],
+          "effects": [
+            {
+              "type": "change_stat",
+              "stat_id": "curiosity",
+              "flag_id": "",
+              "value": 1
+            },
+            {
+              "type": "set_flag",
+              "stat_id": "",
+              "flag_id": "met_scout",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "intro_secure_supplies",
+          "text": {
+            "ko": "먼저 식량을 챙긴다",
+            "en": ""
+          },
+          "writer_note": "안전형 선택. 짧은 보상과 무난한 엔딩으로 연결해도 좋습니다.",
+          "next": "supply_ending",
+          "requirements": [],
+          "effects": [
+            {
+              "type": "change_stat",
+              "stat_id": "survival",
+              "flag_id": "",
+              "value": 1
+            }
+          ]
+>>>>>>> Stashed changes
         }
       ]
     },
     {
+<<<<<<< Updated upstream
       "id": "clue",
       "kind": "scene",
       "title": "단서",
@@ -79,26 +177,124 @@
           "text": "다른 길을 택한다",
           "writer_note": "남는 감정이 다른 결말로 연결",
           "next": "ending_b"
+=======
+      "id": "signal_room",
+      "kind": "scene",
+      "title": "신호실",
+      "speaker": "정찰자",
+      "text": {
+        "ko": "[반전] 플레이어가 따라간 결과 무엇을 보게 되는지 적으세요.\n[정보] 이후 분기에 영향을 줄 단서를 한 줄 넣으세요.\n[선택 직전] 지금 열 것인지, 물러날 것인지 압박을 다시 만드세요.",
+        "en": ""
+      },
+      "writer_note": "여기서는 서울 2033식 사건-보상 감각과 모험가 이야기식 조건 분기를 아주 얇게만 흉내 냅니다. 시스템보다 텍스트 한 덩어리가 먼저입니다.",
+      "next": "",
+      "choices": [
+        {
+          "id": "signal_open_archive",
+          "text": {
+            "ko": "잠긴 보관함을 연다",
+            "en": ""
+          },
+          "writer_note": "호기심 2 이상일 때만 열리도록 샘플로 넣어둔 선택입니다.",
+          "next": "archive_ending",
+          "requirements": [
+            {
+              "type": "stat_at_least",
+              "stat_id": "curiosity",
+              "flag_id": "",
+              "value": 2
+            }
+          ],
+          "effects": [
+            {
+              "type": "set_flag",
+              "stat_id": "",
+              "flag_id": "opened_archive",
+              "value": true
+            },
+            {
+              "type": "change_stat",
+              "stat_id": "trust",
+              "flag_id": "",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "signal_leave",
+          "text": {
+            "ko": "위험하니 물러난다",
+            "en": ""
+          },
+          "writer_note": "짧은 후퇴 엔딩이나 중간 거점 장면으로 보내도 됩니다.",
+          "next": "quiet_exit",
+          "requirements": [],
+          "effects": [
+            {
+              "type": "change_stat",
+              "stat_id": "survival",
+              "flag_id": "",
+              "value": 1
+            }
+          ]
+>>>>>>> Stashed changes
         }
       ]
     },
     {
+<<<<<<< Updated upstream
       "id": "ending_a",
       "kind": "ending",
       "title": "엔딩 A",
       "speaker": "",
       "text": "[엔딩 A] 선택의 결과로 얻은 것과 남은 여운을 적으세요.",
       "writer_note": "무엇이 달라졌는지, 무엇이 남았는지만 짧게 정리하세요.",
+=======
+      "id": "supply_ending",
+      "kind": "ending",
+      "title": "식량을 챙긴 사람",
+      "speaker": "기록관",
+      "text": {
+        "ko": "[결말] 눈앞의 자원을 확보한 덕분에 무엇을 지켰는지 적으세요.\n[여운] 대신 어떤 기회나 진실을 놓쳤는지 남기세요.",
+        "en": ""
+      },
+      "writer_note": "안전한 선택이 항상 최선은 아니라는 여운을 남기면 좋습니다.",
+>>>>>>> Stashed changes
       "next": "",
       "choices": []
     },
     {
+<<<<<<< Updated upstream
       "id": "ending_b",
       "kind": "ending",
       "title": "엔딩 B",
       "speaker": "",
       "text": "[엔딩 B] 다른 선택의 결과와 마지막 감정을 적으세요.",
       "writer_note": "첫 엔딩과 결의 감정 차이가 보이도록 마무리하세요.",
+=======
+      "id": "quiet_exit",
+      "kind": "ending",
+      "title": "조용한 철수",
+      "speaker": "기록관",
+      "text": {
+        "ko": "[결말] 플레이어가 무사히 빠져나가지만 무엇을 놓쳤는지 적으세요.\n[여운] 다음 회차에서 다른 선택을 해보고 싶게 만드는 힌트를 남기세요.",
+        "en": ""
+      },
+      "writer_note": "짧은 엔딩도 괜찮습니다. 중요한 건 결말마다 플레이 감정이 달라지는 것입니다.",
+      "next": "",
+      "choices": []
+    },
+    {
+      "id": "archive_ending",
+      "kind": "ending",
+      "title": "문서를 연 사람",
+      "speaker": "정찰자",
+      "text": {
+        "ko": "[결말] 플레이어가 알아낸 비밀과 그 대가를 적으세요.\n[회차 유도] 이 정보를 바탕으로 다른 분기로 이어질 확장 아이디어를 메모하세요.",
+        "en": ""
+      },
+      "writer_note": "확장팩처럼 뻗어나갈 훅만 남겨도 충분합니다. 여기서 세계관을 다 설명할 필요는 없습니다.",
+>>>>>>> Stashed changes
       "next": "",
       "choices": []
     }

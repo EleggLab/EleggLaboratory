@@ -1,0 +1,126 @@
+INFO         | Android emulator version 35.4.9.0 (build_id 13025442) (CL:N/A)
+INFO         | Graphics backend: gfxstream
+INFO         | Found systemPath C:\Users\rndhr\AppData\Local\Android\Sdk\system-images\android-36\google_apis_playstore_ps16k\x86_64\
+WARNING      | Please update the emulator to one that supports the feature(s): VulkanVirtualQueue
+INFO         | Increasing RAM size to 3072MB
+INFO         | IPv4 server found: 168.126.63.1
+INFO         | Ignore IPv6 address: a012:91e8:7e01:0:c00a:91e8:7e01:0
+INFO         | Ignore IPv6 address: a012:91e8:7e01:0:c00a:91e8:7e01:0
+INFO         | Ignore IPv6 address: a012:91e8:7e01:0:c00a:91e8:7e01:0
+INFO         | Ignore IPv6 address: a818:91e8:7e01:0:c00a:91e8:7e01:0
+INFO         | Ignore IPv6 address: a818:91e8:7e01:0:c00a:91e8:7e01:0
+INFO         | Ignore IPv6 address: a818:91e8:7e01:0:c00a:91e8:7e01:0
+INFO         | Checking system compatibility:
+INFO         |   Checking: hasCompatibleHypervisor
+INFO         |      Ok: Hypervisor compatibility to run avd: `Pixel_9_Pro` are met
+INFO         |   Checking: hasSufficientSystem
+INFO         |      Ok: System requirements to run avd: `Pixel_9_Pro` are met
+INFO         |   Checking: hasSufficientHwGpu
+INFO         |      Ok: Hardware GPU requirements to run avd: `Pixel_9_Pro` are passed
+INFO         |   Checking: hasSufficientDiskSpace
+INFO         |      Ok: Disk space requirements to run avd: `Pixel_9_Pro` are met
+INFO         | Critical: Failed to load opengl32sw (지정된 모듈을 찾을 수 없습니다.) (:0, )
+INFO         | Warning: Software OpenGL failed. Falling back to system OpenGL. (:0, )
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_btn_xr_environment_living_room_day_clicked() (:0, )
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_btn_xr_environment_living_room_night_clicked() (:0, )
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_new_posture_requested(int) (:0, )
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_dismiss_posture_selection_dialog() (:0, )
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_new_resizable_requested(PresetEmulatorSizeType) (:0, )
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_dismiss_resizable_dialog() (:0, )
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_xr_environment_mode_changed(int) (:0, )
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_dismiss_xr_environment_mode_dialog() (:0, )
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_xr_input_mode_changed(int) (:0, )
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_dismiss_xr_input_mode_dialog() (:0, )
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_sleep_timer_done() (:0, )
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_unfold_timer_done() (:0, )
+INFO         | Storing crashdata in: C:\Users\rndhr\AppData\Local\Temp\\AndroidEmulator\emu-crash-35.4.9.db, detection is enabled for process: 11112
+INFO         | Guest Driver: Auto (ext controls)
+library_mode host gpu mode host
+INFO         | emuglConfig_get_vulkan_hardware_gpu_support_info: Found physical GPU 'NVIDIA GeForce RTX 3060 Ti', type: VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU, apiVersion: 1.4.329, driverVersion: 595.71
+
+INFO         | GPU device local memory = 8238MB
+INFO         | Initializing hardware OpenGLES emulation support
+INFO         | HealthMonitor disabled.
+INFO         | SharedLibrary::open for [vulkan-1.dll]
+
+INFO         | SharedLibrary::open for [vulkan-1.dll]: not found in map, open for the first time
+
+INFO         | SharedLibrary::open for [vulkan-1.dll] (win32): call LoadLibraryA
+
+INFO         | SharedLibrary::open succeeded for [vulkan-1.dll]. File name: [C:\WINDOWS\SYSTEM32\vulkan-1.dll]
+
+INFO         | Added library: vulkan-1.dll
+INFO         | Selecting Vulkan device: NVIDIA GeForce RTX 3060 Ti, Version: 1.4.329
+INFO         | Supports id properties, got a vulkan device UUID
+INFO         | SharedLibrary::open for [opengl32.dll]: not found in map, open for the first time
+
+INFO         | SharedLibrary::open for [opengl32.dll] (win32): call LoadLibraryA
+
+INFO         | SharedLibrary::open succeeded for [opengl32.dll]. File name: [C:\WINDOWS\SYSTEM32\opengl32.DLL]
+
+INFO         | SharedLibrary::open for [libshadertranslator.dll]: not found in map, open for the first time
+
+INFO         | SharedLibrary::open for [libshadertranslator.dll] (win32): call LoadLibraryA
+
+INFO         | SharedLibrary::open succeeded for [libshadertranslator.dll]. File name: [C:\Users\rndhr\AppData\Local\Android\Sdk\emulator\lib64\libshadertranslator.dll]
+
+INFO         | Initializing VkEmulation features:
+INFO         |     glInteropSupported: true
+INFO         |     useDeferredCommands: true
+INFO         |     createResourceWithRequirements: true
+INFO         |     useVulkanComposition: false
+INFO         |     useVulkanNativeSwapchain: false
+INFO         |     enable guestRenderDoc: false
+INFO         |     ASTC LDR emulation mode: 2
+INFO         |     enable ETC2 emulation: true
+INFO         |     enable Ycbcr emulation: false
+INFO         |     guestVulkanOnly: false
+INFO         |     useDedicatedAllocations: false
+INFO         | Graphics Adapter Vendor Google (NVIDIA Corporation)
+INFO         | Graphics Adapter Android Emulator OpenGL ES Translator (NVIDIA GeForce RTX 3060 Ti/PCIe/SSE2)
+INFO         | Graphics API Version OpenGL ES 3.0 (4.5.0 NVIDIA 595.71)
+INFO         | Graphics API Extensions GL_OES_EGL_sync GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_depth24 GL_OES_depth32 GL_OES_element_index_uint GL_OES_texture_float GL_OES_texture_float_linear GL_OES_compressed_paletted_texture GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth_texture GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_packed_depth_stencil GL_OES_vertex_half_float GL_OES_texture_npot GL_OES_rgb8_rgba8 GL_OVR_multiview2 GL_EXT_multiview_texture_multisample GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_texture_format_BGRA8888 GL_APPLE_texture_format_BGRA8888 GL_EXT_texture_buffer 
+INFO         | Graphics Device Extensions N/A
+INFO         | Sending adb public key [QAAAALEUV7avSzn8sbE1mtTfs7R6PWcwzKOkWZMB/5dfaLMyWacaxnarUeE7ONg4yBBAjnKs+DPtwKO8XrXKn0EKjiRbQu+P+MSKQBQ3nXY8H2pmEXpO7EmOuR36v0J+GVHYjvoOgyXZpkQq2lw4Y90OdLlBrrHIC/u7M79A45Pr8fEORgcOjxcNFK4E4pT6IrFHhvCVjQGEIqZtLJdd45cS6zUQJjBSkJDBq7pNFLUGRdWW1AYetWp7FowsnODzczQZ/JsGTuhgfxzMHXbnQhXzoFFhs9pnOa4yy5s+kNDxqyGNuc4R8ZCfkpu2VrbP/Odiov0J0RQHsOE2olDobhAGE5rzbtDST3W7CakzdRDLKi0frbcuXQqAjk0O5l3/gEM1/Z2vnu05OKxde8kEq+3vSbwxqBSC0SEnuKXcVYZWILrRyKM+LysrdQYdgorPW7Trf0+s4YsFX23mOu6QGnaFTTYdDhoT88VhaHVYOA503Zi8E26x74EvScgP9+b1NsJngKGcwdqzop/Z78pPpGt7UsFxf4dTQimYFhsVQOfAzCp5rUIudKtcCXpwE3Hqy2BixcPF0nU1ngUaoYVloUQ0M+u+lttX7B9DBuWsigsSd1mkKBXDllfm8QF76rgGcvCwgYt++o89CZxphJfysVgQWVRalL3+lb3MaymSjgThFWAtaqPBMQEAAQA= @unknown]
+WHPX on Windows 10.0.26200 detected.
+Windows Hypervisor Platform accelerator is operational
+INFO         | Monitoring duration of emulator setup.
+WARNING      | The emulator now requires a signed jwt token for gRPC access! Use the -grpc flag if you really want an open unprotected grpc port
+INFO         | Using security allow list from: C:\Users\rndhr\AppData\Local\Android\Sdk\emulator\lib\emulator_access.json
+WARNING      | *** Basic token auth should only be used by android-studio ***
+INFO         | The active JSON Web Key Sets can be found here: C:\Users\rndhr\AppData\Local\Temp\avd\running\11112\jwks\f79c4d93-0e3d-46f1-813a-62a146cc423b\active.jwk
+INFO         | Scanning C:\Users\rndhr\AppData\Local\Temp\avd\running\11112\jwks\f79c4d93-0e3d-46f1-813a-62a146cc423b for jwk keys.
+INFO         | Started GRPC server at 127.0.0.1:8554, security: Local, auth: +token
+INFO         | Advertising in: C:\Users\rndhr\AppData\Local\Temp\avd\running\pid_11112.ini
+INFO         | Setting display: 0 configuration to: 1280x2856, dpi: 480x480 
+INFO         | setDisplayActiveConfig 0
+INFO         | Checking system compatibility:
+INFO         |   Checking: hasCompatibleHypervisor
+INFO         |      Ok: Hypervisor compatibility to run avd: `Pixel_9_Pro` are met
+INFO         |   Checking: hasSufficientSystem
+INFO         |      Ok: System requirements to run avd: `Pixel_9_Pro` are met
+INFO         |   Checking: hasSufficientHwGpu
+INFO         |      Ok: Hardware GPU requirements to run avd: `Pixel_9_Pro` are passed
+INFO         |   Checking: hasSufficientDiskSpace
+INFO         |      Ok: Disk space requirements to run avd: `Pixel_9_Pro` are met
+INFO         | Loading snapshot 'default_boot'...
+WARNING      | Client not connected yet. Ignoring message!
+WARNING      | Client not connected yet. Ignoring message!
+WARNING      | Client not connected yet. Ignoring message!
+WARNING      | Unknown XR viewport mode requested: 0, ignored.
+
+INFO         | Successfully loaded snapshot 'default_boot'
+INFO        INFO         | Activated packet streamer for bluetooth emulation
+ | Activated packet streamer for uwb emulation
+ERROR        | Failed to find ColorBuffer:0
+ERROR        | Failed to find ColorBuffer:0
+ERROR        | Failed to find ColorBuffer:0
+ERROR        | Failed to find ColorBuffer:0
+ERROR        | Failed to find ColorBuffer:0
+ERROR        | Failed to find ColorBuffer:0
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_rgbcSensorValueWidget_valueChanged() (:0, )
+INFO         | Warning: QMetaObject::connectSlotsByName: No matching signal for on_posture_valueChanged(int) (:0, )
+INFO         | AVD supportsNativeGLES=1, supportsGuestAngle=1
+INFO         | Wait for emulator (pid 11112) 20 seconds to shutdown gracefully before kill;you can set environment variable ANDROID_EMULATOR_WAIT_TIME_BEFORE_KILL(in seconds) to change the default value (20 seconds)
+
+INFO         | Saving with gfxstream=1

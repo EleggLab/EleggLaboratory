@@ -26,19 +26,22 @@ export const TOSS_PROD_FULLSCREEN_AD_GROUP_IDS: Record<TossFullscreenSlot, strin
   rewarded: '',
 };
 
+export const TOSS_BANNER_ADS_ENABLED = TOSS_RUNTIME_ENV.enableBannerAds;
+
 // v1 keeps fullscreen ads disabled while preserving the integration surface for later rollout.
 export const TOSS_FULLSCREEN_ADS_ENABLED = TOSS_RUNTIME_ENV.enableFullscreenAds;
 
-export const TOSS_AD_SLOT_META: Record<
-  TossBannerSlot,
-  { fixedHeight?: number; variant: 'expanded' | 'card' }
-> = {
+export const TOSS_AD_SLOT_META: Record<TossBannerSlot, { fixedHeight?: number; variant: 'expanded' | 'card' }> = {
   home_banner_list: { fixedHeight: 96, variant: 'expanded' },
   today_banner_inline: { variant: 'card' },
   tarot_result_banner_list: { fixedHeight: 96, variant: 'expanded' },
 };
 
 export function resolveBannerAdGroupId(slot: TossBannerSlot): string {
+  if (!TOSS_BANNER_ADS_ENABLED) {
+    return '';
+  }
+
   const prod = TOSS_PROD_AD_GROUP_IDS[slot]?.trim();
   if (prod) {
     return prod;

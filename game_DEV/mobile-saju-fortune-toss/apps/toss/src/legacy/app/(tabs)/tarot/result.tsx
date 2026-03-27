@@ -3,114 +3,17 @@ import { useEffect, useMemo, useState } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import { Button } from '@toss/tds-react-native';
 
-import { spreadFor, TAROT_DECK, type TarotReadingType } from '../../../lib/features/tarot/deck';
+import { TAROT_DECK, type TarotReadingType } from '../../../lib/features/tarot/deck';
+import { buildTarotReading, isTarotReadingType, parseDrawnCards } from '../../../lib/features/tarot/helpers';
 import { TAROT_IMAGE_CROP, tarotImageSource } from '../../../lib/features/tarot/imageSource';
 import { loadTodayTarot, type TarotDrawnCard } from '../../../lib/features/tarot/storage';
 import { BACKGROUNDS } from '../../../lib/assets/backgrounds';
 import { commonStyles } from '../../../lib/ui/commonStyles';
+import { HistoryLinkChip } from '../../../lib/ui/HistoryLinkChip';
 import { ScreenScroll } from '../../../lib/ui/ScreenScroll';
 import { UI } from '../../../lib/ui/tokens';
 import { useMiniNavigation, useMiniParams } from '../../../support/miniRouteContext';
 import SectionCard from '../_components/SectionCard';
-
-function isReadingType(value: string | undefined): value is TarotReadingType {
-  return value === 'today' || value === 'love' || value === 'money' || value === 'relationship' || value === 'study';
-}
-
-function parseCards(value: string | undefined): TarotDrawnCard[] | null {
-  if (!value) return null;
-
-  const parts = value
-    .split(',')
-    .map((part) => part.trim())
-    .filter(Boolean);
-
-  if (parts.length === 0) return null;
-
-  const parsed: TarotDrawnCard[] = [];
-  for (const part of parts) {
-    const [id, flag] = part.split(':');
-    if (!id) return null;
-    parsed.push({ id, reversed: flag === '1' });
-  }
-
-  return parsed;
-}
-
-function titleFor(type: TarotReadingType): string {
-  if (type === 'today') return '오늘의 운세';
-  if (type === 'love') return '연애운';
-  if (type === 'money') return '금전운';
-  if (type === 'relationship') return '인간관계운';
-  return '학업운';
-}
-
-function buildReading(type: TarotReadingType, drawn: TarotDrawnCard[]): string {
-  const spread = spreadFor(type);
-  const cards = drawn
-    .map((drawnCard) => {
-      const def = TAROT_DECK.find((card) => card.id === drawnCard.id);
-      if (!def) return null;
-
-      const meaning = drawnCard.reversed ? def.meanings.reversed : def.meanings.upright;
-      return {
-        keywords: meaning.keywords,
-        long: meaning.long,
-        name: def.nameKo,
-        reversed: drawnCard.reversed,
-        short: meaning.short,
-      };
-    })
-    .filter(Boolean) as Array<{
-    keywords: string[];
-    long: string;
-    name: string;
-    reversed: boolean;
-    short: string;
-  }>;
-
-  const lines: string[] = [];
-  lines.push(`[${titleFor(type)} 해석]`);
-  lines.push('');
-  lines.push('[뽑은 카드]');
-
-  cards.forEach((card, idx) => {
-    const pos = spread.positions[idx] ?? `카드 ${idx + 1}`;
-    lines.push(`- ${pos}: ${card.name} ${card.reversed ? '(역방향)' : '(정방향)'} · ${card.keywords.join(', ')}`);
-  });
-
-  lines.push('');
-  if (type === 'today') {
-    const card = cards[0];
-    if (!card) return lines.join('\n');
-
-    lines.push('[오늘의 흐름]');
-    lines.push(card.long);
-    lines.push('');
-    lines.push('[실행 팁]');
-    lines.push(
-      card.reversed
-        ? '- 속도를 줄이고, 놓친 조건이나 감정의 결을 먼저 확인해 보세요.'
-        : '- 오늘은 한 가지를 먼저 정해서 밀어붙이면 흐름이 더 좋아집니다.',
-    );
-    lines.push('- 하루 일정 3개 중 1개만 먼저 완료 처리해 보세요.');
-    return lines.join('\n');
-  }
-
-  lines.push('[카드별 해석]');
-  cards.forEach((card, idx) => {
-    const pos = spread.positions[idx] ?? `카드 ${idx + 1}`;
-    lines.push(`- ${pos}: ${card.short}`);
-    lines.push(`  ${card.long}`);
-  });
-
-  lines.push('');
-  lines.push('[종합 정리]');
-  lines.push('- 지금은 결론보다 작은 실행을 먼저 쌓는 편이 더 유리합니다.');
-  lines.push('- 오늘 해야 할 일 1개와 미룰 일 1개를 분리하면 흐름이 안정됩니다.');
-
-  return lines.join('\n');
-}
 
 export default function TarotResult({
   afterCardsSlot,
@@ -118,12 +21,16 @@ export default function TarotResult({
   afterCardsSlot?: ReactNode;
 }): React.JSX.Element {
   const miniNavigation = useMiniNavigation();
-  const params = useMiniParams<{ cards?: string; type?: string }>();
-  const type: TarotReadingType = isReadingType(params.type) ? params.type : 'today';
-  const fromParam = useMemo(() => parseCards(params.cards), [params.cards]);
+  const params = useMiniParams<{ cards?: string; historyDateKey?: string; type?: string }>();
+  const type: TarotReadingType = isTarotReadingType(params.type) ? params.type : 'today';
+  const fromParam = useMemo(() => parseDrawnCards(params.cards), [params.cards]);
 
   const [drawn, setDrawn] = useState<TarotDrawnCard[] | null>(fromParam);
   const [loadError, setLoadError] = useState('');
+
+  useEffect(() => {
+    setDrawn(fromParam);
+  }, [fromParam]);
 
   useEffect(() => {
     if (drawn || type !== 'today') return;
@@ -133,7 +40,7 @@ export default function TarotResult({
       .then((saved) => {
         if (!mounted) return;
         if (!saved) {
-          setLoadError('오늘의 운세 결과를 찾지 못했어요. 다시 뽑아주세요.');
+          setLoadError('오늘의 운세 결과를 찾지 못했어요. 다시 뽑아 주세요.');
           return;
         }
         setDrawn(saved.drawn);
@@ -148,7 +55,7 @@ export default function TarotResult({
     };
   }, [drawn, type]);
 
-  const readingText = useMemo(() => (drawn ? buildReading(type, drawn) : ''), [drawn, type]);
+  const readingText = useMemo(() => (drawn ? buildTarotReading(type, drawn) : ''), [drawn, type]);
 
   const drawnDefs = useMemo(() => {
     if (!drawn) return [];
@@ -166,7 +73,8 @@ export default function TarotResult({
   return (
     <ScreenScroll background={BACKGROUNDS.tarot} contentContainerStyle={[commonStyles.screen, styles.container]}>
       <View style={[commonStyles.hero, styles.header]}>
-        <Text style={styles.heroLine}>카드의 방향과 조합을 그대로 반영한 결과입니다.</Text>
+        <Text style={styles.heroLine}>카드의 방향과 배치를 그대로 반영한 결과를 보여줘요.</Text>
+        <HistoryLinkChip label="최근 기록" onPress={() => miniNavigation.navigate('/history', { type: 'tarot' })} />
       </View>
 
       {loadError ? <Text style={styles.error}>{loadError}</Text> : null}
@@ -219,7 +127,7 @@ export default function TarotResult({
       {afterCardsSlot ? <View>{afterCardsSlot}</View> : null}
 
       {readingText ? (
-        <SectionCard title="결과">
+        <SectionCard title="풀이">
           <Text style={styles.pre}>{readingText}</Text>
         </SectionCard>
       ) : null}
@@ -253,7 +161,7 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   header: {
-    gap: 0,
+    gap: 10,
   },
   heroLine: {
     color: '#f2f1ef',
@@ -330,9 +238,5 @@ const styles = StyleSheet.create({
   },
   actionButton: {
     flex: 1,
-  },
-  pressed: {
-    opacity: 0.92,
-    transform: [{ scale: 0.99 }],
   },
 });

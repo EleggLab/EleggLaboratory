@@ -14,6 +14,7 @@ export const TOSS_RUNTIME_ENV = {
   brandDisplayName: readString('TOSS_BRAND_DISPLAY_NAME', '종합 운세'),
   brandPrimaryColor: readString('TOSS_BRAND_PRIMARY_COLOR', '#F7C948'),
   brandIconUrl: readString('TOSS_BRAND_ICON_URL', 'https://placehold.co/512x512/png?text=fortune-suite'),
+  enableBannerAds: readBoolean('TOSS_ENABLE_BANNER_ADS', false),
   ads: {
     homeBannerId: readString('TOSS_AD_HOME_BANNER_ID', ''),
     todayBannerId: readString('TOSS_AD_TODAY_BANNER_ID', ''),

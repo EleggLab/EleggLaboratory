@@ -2,6 +2,8 @@
 
 Shared starter for a non-game Toss miniapp built with React Native, Granite, and App-in-Toss.
 
+This template is intentionally scoped to the non-game lane. If the service is a game, treat it as a separate track with its own stack, QA, asset, and release checklist.
+
 ## Baseline
 - SDK: `@apps-in-toss/framework@2.0.5`
 - React Native: `0.84.0`
@@ -19,6 +21,7 @@ Shared starter for a non-game Toss miniapp built with React Native, Granite, and
 
 ## Scripts
 - `pnpm dev`: local development
+- `pnpm router:types`: regenerate route typings from `pages/`
 - `pnpm build`: strict release validation + `.ait` build
 - `pnpm validate:release-env`: release gate for env, support info, ad IDs, and asset manifest
 - `pnpm qa:sandbox`: sandbox QA guide
@@ -47,3 +50,4 @@ Shared starter for a non-game Toss miniapp built with React Native, Granite, and
 - Sandbox does not support in-app ads. Use console QR or Toss-app testing for ad verification.
 - SDK 1.x bundles are blocked from upload after `2026-03-23`.
 - Treat fullscreen ads, login, IAP, share, and marketing as expansion tracks. They ship disabled by default in this starter.
+- The build wrapper prepares a local `pnpm` shim through `corepack` before calling `ait build`, which helps on machines without a global `pnpm` install.

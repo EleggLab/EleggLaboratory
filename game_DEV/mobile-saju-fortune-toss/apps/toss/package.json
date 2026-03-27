@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "bedrock dev",
-    "build": "node ./scripts/validate-release-env.mjs --strict && ait build",
+    "dev": "node ./scripts/patch-granite-windows.mjs && bedrock dev",
+    "build": "node ./scripts/patch-granite-windows.mjs && node ./scripts/validate-release-env.mjs --strict && node ./scripts/run-ait-build.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "tsc -p tsconfig.json --noEmit",
     "lint": "echo 'no lint for @saju/toss'",
-    "validate:release-env": "node ./scripts/validate-release-env.mjs --strict"
+    "validate:release-env": "node ./scripts/validate-release-env.mjs --strict",
+    "prepare:console-assets": "powershell -ExecutionPolicy Bypass -File ./scripts/generate-console-assets.ps1",
+    "qa:sandbox": "node ./scripts/qa-sandbox.mjs",
+    "qa:toss": "node ./scripts/qa-toss.mjs",
+    "audit:parity": "node ./scripts/audit-parity.mjs"
   },
   "dependencies": {
     "@apps-in-toss/framework": "2.0.5",

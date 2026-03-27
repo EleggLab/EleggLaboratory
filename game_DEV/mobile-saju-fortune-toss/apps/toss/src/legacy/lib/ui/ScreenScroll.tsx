@@ -3,6 +3,7 @@ import type { PropsWithChildren } from 'react';
 import type { ImageSourcePropType, StyleProp, ViewStyle } from 'react-native';
 import { Animated, Image, Platform, StyleSheet, View } from 'react-native';
 import { IOScrollView } from '@granite-js/react-native';
+import { useOptionalMiniRouteSignals } from '../../../platform/miniRouteContext';
 
 import { UI } from './tokens';
 
@@ -20,6 +21,7 @@ export function ScreenScroll({
   scrollToTopKey?: string | number;
   resetScrollOnFocus?: boolean;
 }>): React.JSX.Element {
+  const { visitToken } = useOptionalMiniRouteSignals();
   const scrollRef = useRef<any>(null);
   const reveal = useRef(new Animated.Value(contentRevealDelayMs > 0 ? 0 : 1)).current;
 
@@ -36,7 +38,7 @@ export function ScreenScroll({
       delay: contentRevealDelayMs,
       useNativeDriver: true,
     }).start();
-  }, [contentRevealDelayMs, reveal]);
+  }, [contentRevealDelayMs, reveal, visitToken]);
 
   useEffect(() => {
     if (scrollToTopKey === undefined) return;
@@ -52,7 +54,7 @@ export function ScreenScroll({
       scrollRef.current?.scrollTo({ x: 0, y: 0, animated: false });
     }, 0);
     return () => clearTimeout(timer);
-  }, [resetScrollOnFocus]);
+  }, [resetScrollOnFocus, visitToken]);
 
   const revealTranslateY = reveal.interpolate({
     inputRange: [0, 1],

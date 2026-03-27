@@ -1,4 +1,5 @@
 
+<<<<<<< Updated upstream
 > @saju/toss@0.1.0 dev C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\apps\toss
 > bedrock dev
 
@@ -17,3 +18,37 @@
 C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\apps\toss:
  ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @saju/toss@0.1.0 dev: `bedrock dev`
 Exit status 4294967295
+=======
+> saju-monorepo@0.1.0 dev:toss C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss
+> corepack pnpm --filter @saju/toss dev
+
+
+> @saju/toss@0.1.0 dev C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\apps\toss
+> node ./scripts/patch-granite-windows.mjs && bedrock dev
+
+✅ Router file generated successfully!
+✅ Router file generated successfully!
+ERROR OCCURRED
+Error: listen EADDRINUSE: address already in use :::8081
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2102:7)
+    at C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\@react-native-bedrock+mpack-next@0.0.19_@types+node@22.19.11\node_modules\@react-native-bedrock\mpack-next\dist\vendors\metro\src\index.flow.js:276:14
+    at new Promise (<anonymous>)
+    at earlyPortCheck (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\@react-native-bedrock+mpack-next@0.0.19_@types+node@22.19.11\node_modules\@react-native-bedrock\mpack-next\dist\vendors\metro\src\index.flow.js:272:11)
+    at exports.runServer (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\@react-native-bedrock+mpack-next@0.0.19_@types+node@22.19.11\node_modules\@react-native-bedrock\mpack-next\dist\vendors\metro\src\index.flow.js:102:9)
+    at Object.runServer (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\@react-native-bedrock+mpack-next@0.0.19_@types+node@22.19.11\node_modules\@react-native-bedrock\mpack-next\dist\operations\runServer.js:129:38)
+    at async DevCommand.execute (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\@react-native-bedrock+cli@0_51186b854b54e44a7c1be181bea0f4b7\node_modules\@react-native-bedrock\cli\dist\index.cjs:446:9)
+    at async DevCommand.validateAndExecute (C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\node_modules\.pnpm\clipanion@4.0.0-rc.4_typanion@3.14.0\node_modules\clipanion\lib\advanced\Command.js:71:26) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 8081
+}
+listen EADDRINUSE: address already in use :::8081
+C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\apps\toss:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @saju/toss@0.1.0 dev: `node ./scripts/patch-granite-windows.mjs && bedrock dev`
+Exit status 1
+ ELIFECYCLE  Command failed with exit code 1.
+>>>>>>> Stashed changes

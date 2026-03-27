@@ -1,16 +1,18 @@
-﻿import { useCallback, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Animated, Easing, Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { BACKGROUNDS } from '../../lib/assets/backgrounds';
 import { commonStyles } from '../../lib/ui/commonStyles';
+import { HistoryLinkChip } from '../../lib/ui/HistoryLinkChip';
 import { ScreenScroll } from '../../lib/ui/ScreenScroll';
+import { useMiniNavigation, useMiniRouteSignals } from '../../support/miniRouteContext';
 
 const HOME_LINES = [
-  '오늘은 가볍게 시작해도 흐름이 잘 붙어요.',
+  '오늘은 가볍게 시작해도 흐름이 붙어요.',
   '하나만 먼저 끝내면 마음이 훨씬 편해져요.',
-  '지금 떠오른 메모 하나가 힌트가 될 수 있어요.',
+  '지금 적는 메모 한 줄이 좋은 힌트가 될 수 있어요.',
   '서두르기보다 순서를 정하면 실수가 줄어요.',
-  '작은 약속 하나를 지키는 게 운을 올려줘요.',
+  '작은 약속 하나를 지키는 게 운을 살려줘요.',
 ];
 
 function pickNextLine(current: string): string {
@@ -23,10 +25,13 @@ function pickNextLine(current: string): string {
 }
 
 export default function HomeScreen(): React.JSX.Element {
+  const miniNavigation = useMiniNavigation();
+  const { tabPressToken } = useMiniRouteSignals();
   const [lineText, setLineText] = useState(
     () => HOME_LINES[Math.floor(Math.random() * HOME_LINES.length)] ?? HOME_LINES[0] ?? '',
   );
 
+  const handledTabPressToken = useRef<string | null>(null);
   const bubbleOpacity = useRef(new Animated.Value(1)).current;
   const bubbleLift = useRef(new Animated.Value(0)).current;
 
@@ -68,6 +73,12 @@ export default function HomeScreen(): React.JSX.Element {
     animateBubble(pickNextLine(lineText));
   };
 
+  useEffect(() => {
+    if (!tabPressToken || handledTabPressToken.current === tabPressToken) return;
+    handledTabPressToken.current = tabPressToken;
+    animateBubble(pickNextLine(lineText));
+  }, [lineText, tabPressToken]);
+
   return (
     <ScreenScroll
       background={BACKGROUNDS.home}
@@ -76,12 +87,13 @@ export default function HomeScreen(): React.JSX.Element {
       resetScrollOnFocus
     >
       <View style={styles.tapCanvas}>
-        <Pressable
-          onPress={handleNextLine}
-          style={({ pressed }) => [styles.faceTapZone, pressed && styles.faceTapZonePressed]}
-        >
+        <Pressable onPress={handleNextLine} style={({ pressed }) => [styles.faceTapZone, pressed && styles.faceTapZonePressed]}>
           <View style={styles.faceSpacer} />
         </Pressable>
+
+        <View style={styles.historyChipWrap}>
+          <HistoryLinkChip label="최근 기록" onPress={() => miniNavigation.navigate('/history')} />
+        </View>
 
         <Pressable onPress={handleNextLine} style={({ pressed }) => [styles.toastWrap, pressed && styles.pressed]}>
           <View style={styles.toastBody}>
@@ -117,6 +129,12 @@ const styles = StyleSheet.create({
   },
   faceTapZonePressed: {
     opacity: 0.97,
+  },
+  historyChipWrap: {
+    position: 'absolute',
+    left: '4%',
+    bottom: 80,
+    zIndex: 3,
   },
   toastWrap: {
     position: 'absolute',

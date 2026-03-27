@@ -1,4 +1,8 @@
 {
+<<<<<<< Updated upstream
   "appName": "fortune-suite-toss",
+=======
+  "appName": "fortune-suite",
+>>>>>>> Stashed changes
   "permissions": []
 }

@@ -1,38 +1,25 @@
-﻿import { useCallback, useMemo, useState } from 'react';
+import type { ReactNode } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { ImageSourcePropType } from 'react-native';
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { BACKGROUNDS } from '../../lib/assets/backgrounds';
+import { saveHistoryEntry } from '../../lib/features/history/storage';
+import {
+  CHINESE_ZODIAC_ORDER,
+  buildTodayFortuneDetail,
+  kstDateKey,
+  type ChineseZodiacKey,
+  type DailySelection,
+  type WesternZodiacKey,
+  yearsForChineseZodiac,
+} from '../../lib/features/today/fortune';
 import { commonStyles } from '../../lib/ui/commonStyles';
+import { HistoryLinkChip } from '../../lib/ui/HistoryLinkChip';
 import { ScreenScroll } from '../../lib/ui/ScreenScroll';
 import { UI } from '../../lib/ui/tokens';
+import { useMiniNavigation, useMiniParams, useMiniRouteSignals } from '../../support/miniRouteContext';
 import SectionCard from './_components/SectionCard';
-import { hashSeed, makeRng } from '../../lib/features/tarot/random';
-
-type DailyKind = 'western' | 'chinese';
-type DailySelection = { kind: DailyKind; key: string } | null;
-
-type WesternZodiacKey =
-  | 'aries'
-  | 'taurus'
-  | 'gemini'
-  | 'cancer'
-  | 'leo'
-  | 'virgo'
-  | 'libra'
-  | 'scorpio'
-  | 'sagittarius'
-  | 'capricorn'
-  | 'aquarius'
-  | 'pisces';
-
-function kstDateKey(now = new Date()): string {
-  const kst = new Date(now.getTime() + 9 * 60 * 60 * 1000);
-  const y = kst.getUTCFullYear();
-  const m = String(kst.getUTCMonth() + 1).padStart(2, '0');
-  const d = String(kst.getUTCDate()).padStart(2, '0');
-  return `${y}-${m}-${d}`;
-}
 
 function chunkIntoRows<T>(items: readonly T[], columns: number): T[][] {
   const rows: T[][] = [];
@@ -92,22 +79,7 @@ const WESTERN_ZODIAC: Array<{
   { key: 'pisces', name: '물고기자리', iconImage: WESTERN_ZODIAC_ICON_IMAGES.pisces, detailImage: WESTERN_ZODIAC_DETAIL_IMAGES.pisces },
 ];
 
-const CHINESE_ZODIAC_ORDER = [
-  'rat',
-  'ox',
-  'tiger',
-  'rabbit',
-  'dragon',
-  'snake',
-  'horse',
-  'goat',
-  'monkey',
-  'rooster',
-  'dog',
-  'pig',
-] as const;
-
-const CHINESE_ZODIAC_ICON_IMAGES: Record<(typeof CHINESE_ZODIAC_ORDER)[number], ImageSourcePropType> = {
+const CHINESE_ZODIAC_ICON_IMAGES: Record<ChineseZodiacKey, ImageSourcePropType> = {
   rat: require('../../assets/icons/zodiac/chinese/rat.png'),
   ox: require('../../assets/icons/zodiac/chinese/ox.png'),
   tiger: require('../../assets/dos_simple_square_app_icon_twelve_zodiac_animals_2D_clean_linea_d9aab4c4-a48b-4afb-bae0-fd3320a6b2c3.png'),
@@ -122,7 +94,7 @@ const CHINESE_ZODIAC_ICON_IMAGES: Record<(typeof CHINESE_ZODIAC_ORDER)[number], 
   pig: require('../../assets/icons/zodiac/chinese/pig.png'),
 };
 
-const CHINESE_ZODIAC_DETAIL_IMAGES: Record<(typeof CHINESE_ZODIAC_ORDER)[number], ImageSourcePropType> = {
+const CHINESE_ZODIAC_DETAIL_IMAGES: Record<ChineseZodiacKey, ImageSourcePropType> = {
   rat: require('../../assets/zodiac/chinese/rat.png'),
   ox: require('../../assets/zodiac/chinese/ox.png'),
   tiger: require('../../assets/zodiac/chinese/tiger.png'),
@@ -138,7 +110,7 @@ const CHINESE_ZODIAC_DETAIL_IMAGES: Record<(typeof CHINESE_ZODIAC_ORDER)[number]
 };
 
 const CHINESE_ZODIAC: Array<{
-  key: (typeof CHINESE_ZODIAC_ORDER)[number];
+  key: ChineseZodiacKey;
   name: string;
   iconImage: ImageSourcePropType;
   detailImage: ImageSourcePropType;
@@ -156,73 +128,6 @@ const CHINESE_ZODIAC: Array<{
   { key: 'dog', name: '개띠', iconImage: CHINESE_ZODIAC_ICON_IMAGES.dog, detailImage: CHINESE_ZODIAC_DETAIL_IMAGES.dog },
   { key: 'pig', name: '돼지띠', iconImage: CHINESE_ZODIAC_ICON_IMAGES.pig, detailImage: CHINESE_ZODIAC_DETAIL_IMAGES.pig },
 ];
-
-function yearsForChineseZodiac(key: (typeof CHINESE_ZODIAC_ORDER)[number]): number[] {
-  const idx = CHINESE_ZODIAC_ORDER.indexOf(key);
-  const base = 1972 + Math.max(0, idx);
-  return [base, base + 12, base + 24, base + 36];
-}
-
-const OVERALL = [
-  '오늘은 해야 할 일을 작게 쪼개서 순서대로 진행하면 흐름이 빠르게 붙습니다.',
-  '결정을 급하게 내리기보다 확인 가능한 기준을 먼저 세우면 실수가 크게 줄어듭니다.',
-  '한 번에 많이 바꾸기보다 반복 가능한 루틴 1개를 고정하면 체감 성과가 좋습니다.',
-  '관계와 일정이 동시에 움직이기 쉬운 날이라, 우선순위를 분명히 하면 마음이 편해집니다.',
-  '지금은 확장보다 정리의 효율이 높은 날입니다. 작은 완료를 빠르게 쌓아보세요.',
-] as const;
-
-const MONEY = [
-  '지출은 즉흥 구매보다 고정비 점검이 더 큰 효과를 냅니다. 자동결제 항목부터 확인하세요.',
-  '큰 수익보다 작은 누수를 막는 흐름입니다. 결제 전 10초 체크가 유효합니다.',
-  '오늘은 숫자를 적어보는 것만으로도 재정 스트레스가 줄어드는 날입니다.',
-  '정산·환불·미청구 항목을 확인하면 생각보다 빠른 개선 포인트가 보입니다.',
-] as const;
-
-const LOVE = [
-  '관계운은 감정보다 표현 방식이 핵심입니다. 짧고 구체적으로 말할수록 오해가 줄어듭니다.',
-  '상대를 설득하기보다 먼저 이해하려는 태도가 유리한 흐름입니다.',
-  '답을 빨리 내기보다 대화를 한 번 더 거치면 만족도가 높아질 수 있습니다.',
-  '오늘은 작은 약속을 지키는 행동이 신뢰를 크게 올려주는 날입니다.',
-] as const;
-
-const WORK = [
-  '업무운은 멀티태스킹보다 단일 집중이 유리합니다. 핵심 과제 1개를 먼저 끝내세요.',
-  '메모·기록·정리 같은 기본 동작이 성과를 안정적으로 만들어줍니다.',
-  '보고서나 전달문은 길이보다 명확성이 중요합니다. 한 문장 요약부터 잡아보세요.',
-  '오늘은 결과물을 빠르게 공유하고 피드백 받는 방식이 잘 맞습니다.',
-] as const;
-
-const ACTIONS = [
-  '30분 안에 끝낼 수 있는 작업 1개를 지금 바로 시작해보세요.',
-  '오늘 미룰 일 1개와 반드시 끝낼 일 1개를 분리해서 정리하세요.',
-  '결정이 필요한 일은 24시간 보류 규칙을 적용해 충동을 줄이세요.',
-  '지출·시간·에너지 중 하나만 기준을 정하고 끝까지 유지해보세요.',
-] as const;
-
-function pick<T>(rng: () => number, items: readonly T[]): T {
-  return items[Math.floor(rng() * items.length)] as T;
-}
-
-function buildDetailText(dateKey: string, seedKey: string): string {
-  const rng = makeRng(hashSeed(`${dateKey}:${seedKey}`));
-  return [
-    '[오늘의 흐름]',
-    pick(rng, OVERALL),
-    '',
-    '[금전]',
-    pick(rng, MONEY),
-    '',
-    '[관계]',
-    pick(rng, LOVE),
-    '',
-    '[일/학업]',
-    pick(rng, WORK),
-    '',
-    '[실행 2가지]',
-    `- ${pick(rng, ACTIONS)}`,
-    `- ${pick(rng, ACTIONS)}`,
-  ].join('\n');
-}
 
 function IconTile({
   image,
@@ -246,11 +151,53 @@ function IconTile({
 export default function TodayFortuneScreen({
   detailBanner,
 }: {
-  detailBanner?: any;
+  detailBanner?: ReactNode;
 }): React.JSX.Element {
-  const dateKey = useMemo(() => kstDateKey(), []);
+  const miniNavigation = useMiniNavigation();
+  const params = useMiniParams<{
+    historyChineseYear?: string;
+    historyDateKey?: string;
+    historyKey?: string;
+    historyKind?: string;
+  }>();
+  const { tabPressToken, visitToken } = useMiniRouteSignals();
+
+  const [activeDateKey, setActiveDateKey] = useState(() => kstDateKey());
   const [selection, setSelection] = useState<DailySelection>(null);
   const [chineseYear, setChineseYear] = useState<number | null>(null);
+  const skipNextHistorySave = useRef(false);
+
+  useEffect(() => {
+    if (!visitToken && !tabPressToken) return;
+    setActiveDateKey(kstDateKey());
+    setSelection(null);
+    setChineseYear(null);
+  }, [tabPressToken, visitToken]);
+
+  useEffect(() => {
+    if (params.historyKind !== 'western' && params.historyKind !== 'chinese') return;
+    if (typeof params.historyKey !== 'string' || params.historyKey.length === 0) return;
+
+    skipNextHistorySave.current = true;
+    setActiveDateKey(
+      typeof params.historyDateKey === 'string' && params.historyDateKey.length > 0
+        ? params.historyDateKey
+        : kstDateKey(),
+    );
+    setSelection({ kind: params.historyKind, key: params.historyKey });
+
+    if (params.historyKind === 'chinese') {
+      const years = yearsForChineseZodiac(params.historyKey as ChineseZodiacKey);
+      const parsedYear =
+        typeof params.historyChineseYear === 'string' && params.historyChineseYear.length > 0
+          ? Number(params.historyChineseYear)
+          : NaN;
+      setChineseYear(Number.isInteger(parsedYear) ? parsedYear : (years[2] ?? years[0] ?? null));
+      return;
+    }
+
+    setChineseYear(null);
+  }, [params.historyChineseYear, params.historyDateKey, params.historyKey, params.historyKind]);
 
   const selectedMeta = useMemo(() => {
     if (!selection) return null;
@@ -262,18 +209,42 @@ export default function TodayFortuneScreen({
 
   const chineseYears = useMemo(() => {
     if (!selection || selection.kind !== 'chinese') return null;
-    const key = selection.key as (typeof CHINESE_ZODIAC_ORDER)[number];
-    return yearsForChineseZodiac(key);
+    return yearsForChineseZodiac(selection.key as ChineseZodiacKey);
   }, [selection]);
 
   const detailText = useMemo(() => {
     if (!selection) return null;
     if (selection.kind === 'western') {
-      return buildDetailText(dateKey, `w:${selection.key}`);
+      return buildTodayFortuneDetail(activeDateKey, selection);
     }
     const year = chineseYear ?? chineseYears?.[2] ?? chineseYears?.[0] ?? 1996;
-    return buildDetailText(dateKey, `c:${selection.key}:${year}`);
-  }, [chineseYear, chineseYears, dateKey, selection]);
+    return buildTodayFortuneDetail(activeDateKey, selection, year);
+  }, [activeDateKey, chineseYear, chineseYears, selection]);
+
+  useEffect(() => {
+    if (!selection) return;
+    if (selection.kind === 'chinese' && !chineseYear) return;
+
+    if (skipNextHistorySave.current) {
+      skipNextHistorySave.current = false;
+      return;
+    }
+
+    const createdAtISO = new Date().toISOString();
+
+    void saveHistoryEntry({
+      id: `today-${selection.kind}-${selection.key}-${activeDateKey}-${chineseYear ?? 'none'}`,
+      kind: 'today',
+      createdAtISO,
+      payload: {
+        createdAtISO,
+        dateKey: activeDateKey,
+        key: selection.key,
+        kind: selection.kind,
+        ...(selection.kind === 'chinese' && chineseYear ? { chineseYear } : {}),
+      },
+    });
+  }, [activeDateKey, chineseYear, selection]);
 
   return (
     <ScreenScroll
@@ -284,6 +255,7 @@ export default function TodayFortuneScreen({
     >
       <View style={[commonStyles.hero, styles.header]}>
         <Text style={styles.heroLine}>자기에게 맞는 항목을 눌러 오늘 운세를 확인하세요.</Text>
+        <HistoryLinkChip label="최근 기록" onPress={() => miniNavigation.navigate('/history', { type: 'today' })} />
       </View>
 
       {!selection ? (
@@ -294,7 +266,15 @@ export default function TodayFortuneScreen({
                 <View key={`w:${rowIdx}`} style={styles.gridRow}>
                   {row.map((z) => (
                     <View key={z.key} style={styles.gridCell}>
-                      <IconTile image={z.iconImage} title={z.name} onPress={() => setSelection({ kind: 'western', key: z.key })} />
+                      <IconTile
+                        image={z.iconImage}
+                        title={z.name}
+                        onPress={() => {
+                          setActiveDateKey(kstDateKey());
+                          setSelection({ kind: 'western', key: z.key });
+                          setChineseYear(null);
+                        }}
+                      />
                     </View>
                   ))}
                   {row.length < 3
@@ -318,8 +298,9 @@ export default function TodayFortuneScreen({
                           image={z.iconImage}
                           title={z.name}
                           onPress={() => {
-                            setSelection({ kind: 'chinese', key: z.key });
                             const years = yearsForChineseZodiac(z.key);
+                            setActiveDateKey(kstDateKey());
+                            setSelection({ kind: 'chinese', key: z.key });
                             setChineseYear(years[2] ?? years[0] ?? null);
                           }}
                         />
@@ -341,6 +322,7 @@ export default function TodayFortuneScreen({
           <View style={styles.topRow}>
             <Pressable
               onPress={() => {
+                setActiveDateKey(kstDateKey());
                 setSelection(null);
                 setChineseYear(null);
               }}
@@ -349,7 +331,7 @@ export default function TodayFortuneScreen({
               <Text style={styles.backBtnText}>목록으로</Text>
             </Pressable>
             <View style={{ flex: 1 }} />
-            <Text style={styles.topMeta}>KST {dateKey}</Text>
+            <Text style={styles.topMeta}>KST {activeDateKey}</Text>
           </View>
 
           <SectionCard title="선택 항목">
@@ -408,7 +390,9 @@ const styles = StyleSheet.create({
   container: {
     gap: 16,
   },
-  header: {},
+  header: {
+    gap: 10,
+  },
   heroLine: {
     color: '#f2f1ef',
     fontSize: 13,
@@ -511,44 +495,45 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   selectedTitle: {
+    color: UI.colors.text,
     fontSize: 18,
     fontWeight: '900',
-    color: UI.colors.text,
   },
   pickerLabel: {
-    marginTop: 8,
-    fontSize: 12,
-    fontWeight: '900',
     color: UI.colors.text,
+    fontSize: 12,
+    fontWeight: '800',
   },
   yearRow: {
     flexDirection: 'row',
-    gap: 8,
     flexWrap: 'wrap',
+    gap: 8,
   },
   yearChip: {
-    borderRadius: UI.radius.pill,
+    minWidth: 48,
+    borderRadius: 999,
     borderWidth: 1,
     borderColor: UI.colors.line,
-    backgroundColor: UI.colors.paperSoft,
+    backgroundColor: UI.colors.card,
     paddingVertical: 8,
     paddingHorizontal: 12,
+    alignItems: 'center',
   },
   yearChipActive: {
-    borderColor: UI.colors.gold,
-    backgroundColor: '#fff6d6',
+    borderColor: '#d4b45d',
+    backgroundColor: '#fbf3d6',
   },
   yearChipText: {
+    color: UI.colors.text,
     fontSize: 12,
     fontWeight: '900',
-    color: UI.colors.text,
-    letterSpacing: 0.6,
   },
   yearChipTextActive: {
-    color: UI.colors.text,
+    color: '#7c5800',
   },
   pre: {
-    ...UI.type.body,
+    color: UI.colors.text,
+    fontSize: 13,
+    lineHeight: 20,
   },
 });
-

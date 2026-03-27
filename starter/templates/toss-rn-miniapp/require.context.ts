@@ -1,2 +1,3 @@
-// biome-ignore lint/suspicious/noExplicitAny: Granite requires require.context at runtime.
-export const context = (require as any).context('./pages', true, /\.[tj]sx?$/);
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+export const context = require.context('./pages');
