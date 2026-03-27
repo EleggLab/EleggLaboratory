@@ -1,22 +1,6 @@
-const path = require('path');
 const { getDefaultConfig } = require('expo/metro-config');
 
-const projectRoot = __dirname;
-const workspaceRoot = path.resolve(projectRoot, '../..');
-
-const config = getDefaultConfig(projectRoot);
-
-config.watchFolders = [workspaceRoot];
-config.resolver.unstable_enableSymlinks = true;
-config.resolver.nodeModulesPaths = [
-  path.resolve(projectRoot, 'node_modules'),
-  path.resolve(workspaceRoot, 'node_modules'),
-];
-config.resolver.extraNodeModules = new Proxy(
-  {},
-  {
-    get: (_, name) => path.join(projectRoot, 'node_modules', name),
-  },
-);
-
-module.exports = config;
+// Expo SDK 52+ handles monorepo resolution automatically.
+// Keeping the config minimal avoids Metro resolver version mismatches
+// and duplicate workspace scans on Windows.
+module.exports = getDefaultConfig(__dirname);

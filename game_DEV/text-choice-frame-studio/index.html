@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Text Choice Template</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="topbar-copy">
+          <p class="eyebrow">TEXT TEMPLATE</p>
+          <h1>Text Choice Template</h1>
+          <p class="topbar-note">장면과 선택지만 채워 넣는 최소 제작기</p>
+        </div>
+        <div class="topbar-actions">
+          <button id="new-project-btn" class="btn btn-strong" type="button">새 프로젝트</button>
+          <button id="import-btn" class="btn" type="button">JSON 불러오기</button>
+          <button id="export-btn" class="btn" type="button">JSON 내보내기</button>
+          <input id="import-input" type="file" accept=".json,application/json" hidden />
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="panel panel-left">
+          <section class="card">
+            <div class="card-head">
+              <h2>프로젝트</h2>
+            </div>
+            <div class="field-grid">
+              <label class="field">
+                <span>제목</span>
+                <input id="project-title" type="text" />
+              </label>
+              <label class="field">
+                <span>작성자</span>
+                <input id="project-author" type="text" />
+              </label>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-head split-head">
+              <h2>장면 목록</h2>
+              <div class="button-row">
+                <button id="add-scene-btn" class="btn btn-small" type="button">장면</button>
+                <button id="add-ending-btn" class="btn btn-small btn-muted" type="button">엔딩</button>
+              </div>
+            </div>
+            <div id="node-list" class="node-list"></div>
+          </section>
+        </aside>
+
+        <section class="panel panel-center">
+          <section class="card card-editor">
+            <div class="card-head">
+              <h2>장면 편집</h2>
+            </div>
+            <div id="scene-editor"></div>
+          </section>
+        </section>
+
+        <aside class="panel panel-right">
+          <section class="card playtest-card">
+            <div class="card-head split-head">
+              <h2>플레이테스트</h2>
+              <button id="restart-playtest-btn" class="btn btn-small" type="button">처음부터</button>
+            </div>
+            <div id="playtest-panel"></div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

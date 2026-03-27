@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Word Morph Lab</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">WORD MORPH LAB</p>
+          <h1>단어를 입력하면<br />초상화가 변한다</h1>
+          <p class="hero-note">
+            100개의 숨겨진 키워드를 찾아 고정된 인물의 상태를 바꾸세요. 맞는 단어를 입력하면 새로운 상태가 해금되고,
+            갤러리에 저장됩니다.
+          </p>
+        </div>
+        <div class="hero-stats">
+          <article class="hero-metric">
+            <span>Unlocked</span>
+            <strong id="hero-unlocked">0 / 100</strong>
+          </article>
+          <article class="hero-metric">
+            <span>Attempts</span>
+            <strong id="hero-attempts">0</strong>
+          </article>
+          <article class="hero-metric">
+            <span>Completion</span>
+            <strong id="hero-completion">0%</strong>
+          </article>
+        </div>
+      </header>
+
+      <main class="game-grid">
+        <section class="card stage-card">
+          <div class="card-head">
+            <div>
+              <p id="stage-category" class="eyebrow eyebrow-inline">LOCKED STATE</p>
+              <h2 id="stage-title">아직 아무 상태도 열리지 않았습니다</h2>
+            </div>
+            <span id="stage-chip" class="status-chip">대기</span>
+          </div>
+
+          <div id="portrait-stage" class="portrait-stage">
+            <img id="portrait-image" alt="" hidden />
+            <div id="portrait-placeholder" class="portrait-placeholder">
+              <p class="placeholder-badge">NO DISCOVERY</p>
+              <strong>첫 단어를 입력하세요</strong>
+              <p>힌트를 참고해서 100개의 상태를 하나씩 수집할 수 있습니다.</p>
+            </div>
+          </div>
+
+          <div class="response-shell">
+            <div class="response-head">
+              <h3>Machine Log</h3>
+              <span class="tiny-caption">최근 반응</span>
+            </div>
+            <div id="log-list" class="log-list"></div>
+          </div>
+        </section>
+
+        <aside class="sidebar">
+          <section class="card console-card">
+            <div class="card-head">
+              <h2>입력 콘솔</h2>
+            </div>
+            <form id="word-form" class="console-form">
+              <label class="field field-wide">
+                <span>키워드</span>
+                <input id="word-input" type="text" placeholder="예: angel, glitch, velvet" autocomplete="off" />
+              </label>
+              <div class="console-actions">
+                <button class="btn btn-strong" type="submit">단어 주입</button>
+                <button id="hint-btn" class="btn" type="button">힌트</button>
+              </div>
+              <div class="console-actions">
+                <button id="random-discovered-btn" class="btn btn-small" type="button">해금된 상태 랜덤 보기</button>
+                <button id="reset-progress-btn" class="btn btn-small btn-danger" type="button">진행 초기화</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="card hint-card">
+            <div class="card-head">
+              <h2>현재 힌트</h2>
+            </div>
+            <div id="hint-panel" class="hint-panel"></div>
+          </section>
+
+          <section class="card detail-card">
+            <div class="card-head">
+              <h2>선택 상태</h2>
+            </div>
+            <dl class="detail-list">
+              <div>
+                <dt>Word</dt>
+                <dd id="detail-word">-</dd>
+              </div>
+              <div>
+                <dt>Category</dt>
+                <dd id="detail-category">-</dd>
+              </div>
+              <div>
+                <dt>Mood</dt>
+                <dd id="detail-mood">-</dd>
+              </div>
+              <div>
+                <dt>State Cue</dt>
+                <dd id="detail-cue">-</dd>
+              </div>
+            </dl>
+          </section>
+        </aside>
+
+        <section class="card progress-card">
+          <div class="card-head split-head">
+            <h2>해금 진행률</h2>
+            <span id="progress-caption" class="tiny-caption">0 / 10 카테고리 활성화</span>
+          </div>
+          <div id="category-progress" class="category-progress"></div>
+        </section>
+
+        <section class="card archive-card">
+          <div class="card-head split-head">
+            <div>
+              <h2>Unlocked Archive</h2>
+              <p class="section-note">해금된 상태만 카드로 표시됩니다.</p>
+            </div>
+            <span id="archive-caption" class="tiny-caption">0개 해금</span>
+          </div>
+          <div id="archive-grid" class="archive-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+
+> @saju/toss@0.1.0 dev C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\apps\toss
+> bedrock dev
+
+✅ Router file generated successfully!
+✅ Router file generated successfully!
+
+██████╗ ███████╗██████╗ ██████╗  ██████╗  ██████╗██╗  ██╗
+██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔═══██╗██╔════╝██║ ██╔╝
+██████╔╝█████╗  ██║  ██║██████╔╝██║   ██║██║     █████╔╝ 
+██╔══██╗██╔══╝  ██║  ██║██╔══██╗██║   ██║██║     ██╔═██╗ 
+██████╔╝███████╗██████╔╝██║  ██║╚██████╔╝╚██████╗██║  ██╗
+╚═════╝ ╚══════╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝
+
+                   Welcome to Bedrock
+
+C:\Users\rndhr\OneDrive\Documents\GitHub\EleggLaboratory\game_DEV\mobile-saju-fortune-toss\apps\toss:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @saju/toss@0.1.0 dev: `bedrock dev`
+Exit status 4294967295

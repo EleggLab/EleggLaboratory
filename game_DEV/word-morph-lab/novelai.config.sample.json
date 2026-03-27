@@ -1,0 +1,30 @@
+{
+  "api": {
+    "endpoint": "https://image.novelai.net/ai/generate-image",
+    "token_env": "NOVELAI_TOKEN",
+    "timeout_seconds": 180
+  },
+  "render": {
+    "model": "nai-diffusion-3",
+    "width": 832,
+    "height": 1216,
+    "steps": 24,
+    "scale": 5.5,
+    "sampler": "k_euler",
+    "cfg_rescale": 0.2,
+    "n_samples": 1,
+    "quality_toggle": true,
+    "sm": true,
+    "sm_dyn": true
+  },
+  "prompting": {
+    "base_prompt_override": "",
+    "negative_prompt_suffix": "",
+    "suffix_template": "{category} state, {mood}"
+  },
+  "output": {
+    "manifest_path": "./output/jobs/word_jobs.json",
+    "image_dir": "./assets/generated",
+    "overwrite": false
+  }
+}
