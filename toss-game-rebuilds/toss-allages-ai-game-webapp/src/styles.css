@@ -1,0 +1,430 @@
+:root {
+  color-scheme: dark;
+  font-family: "SUIT Variable", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #f6f4ff;
+  background:
+    radial-gradient(circle at top, rgba(88, 87, 192, 0.24), transparent 42%),
+    radial-gradient(circle at 20% 20%, rgba(255, 118, 92, 0.18), transparent 28%),
+    linear-gradient(180deg, #0f0a21 0%, #08050f 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --panel-bg: rgba(22, 16, 44, 0.86);
+  --panel-border: rgba(255, 255, 255, 0.08);
+  --panel-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  --primary: #5b7cff;
+  --primary-strong: #89a0ff;
+  --accent: #ff8f67;
+  --success: #9be46f;
+  --danger: #ff7272;
+  --text-muted: rgba(246, 244, 255, 0.72);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-background {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 80% 12%, rgba(255, 171, 123, 0.18), transparent 18%),
+    radial-gradient(circle at 18% 0%, rgba(106, 96, 255, 0.16), transparent 30%);
+  pointer-events: none;
+}
+
+.app-frame {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 560px);
+  margin: 0 auto;
+  padding: calc(max(env(safe-area-inset-top), 24px) + 24px) 18px calc(max(env(safe-area-inset-bottom), 24px) + 32px);
+}
+
+.top-banner {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.banner-title {
+  display: block;
+  font-size: 1.15rem;
+}
+
+.banner-notice {
+  max-width: 240px;
+  text-align: right;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-card,
+.panel,
+.overlay-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--panel-shadow);
+  backdrop-filter: blur(14px);
+}
+
+.hero-card {
+  border-radius: 28px;
+  padding: 24px;
+}
+
+.hero-card h1,
+.screen-title {
+  margin: 8px 0 10px;
+  font-size: clamp(1.8rem, 4vw, 2.3rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.hero-copy,
+.panel p,
+.muted {
+  color: var(--text-muted);
+}
+
+.eyebrow-row,
+.panel-header,
+.currency-row,
+.settings-row,
+.upgrade-footer,
+.stage-card-top,
+.battle-footer-row,
+.inline-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.eyebrow,
+.status-pill,
+.rule-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+}
+
+.eyebrow {
+  color: #b5beff;
+  text-transform: uppercase;
+}
+
+.status-pill,
+.rule-chip {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 6px 10px;
+}
+
+.rule-list,
+.lesson-bonus-list,
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.panel {
+  border-radius: 22px;
+  padding: 18px;
+}
+
+.compact-panel {
+  padding: 16px 18px;
+}
+
+.panel h2 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.panel-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.stage-list,
+.lesson-grid,
+.upgrade-list,
+.choice-list {
+  display: grid;
+  gap: 12px;
+}
+
+.stage-card,
+.lesson-card,
+.choice-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  color: inherit;
+  text-align: left;
+  padding: 16px;
+  cursor: pointer;
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.stage-card:hover,
+.lesson-card:hover,
+.choice-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(139, 160, 255, 0.58);
+  background: rgba(91, 124, 255, 0.12);
+}
+
+.stage-card.is-active {
+  border-color: rgba(255, 143, 103, 0.7);
+  background: rgba(255, 143, 103, 0.12);
+}
+
+.stage-card p,
+.lesson-card p,
+.lesson-card small,
+.choice-card p {
+  margin: 8px 0 0;
+}
+
+.lesson-meta {
+  font-size: 0.82rem;
+  margin-bottom: 8px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.stat-grid div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.stat-grid strong {
+  font-size: 1.08rem;
+}
+
+.primary-button,
+.secondary-button,
+.ghost-button,
+.danger-button {
+  border-radius: 16px;
+  border: 1px solid transparent;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: transform 140ms ease, opacity 140ms ease, background 140ms ease;
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.ghost-button:hover,
+.danger-button:hover {
+  transform: translateY(-1px);
+}
+
+.primary-button:disabled,
+.secondary-button:disabled,
+.ghost-button:disabled,
+.danger-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, var(--primary), #7d92ff);
+  color: white;
+}
+
+.secondary-button {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8f5ff;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ghost-button {
+  background: transparent;
+  color: var(--text-muted);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.danger-button {
+  background: rgba(255, 114, 114, 0.12);
+  color: #ffd9d9;
+  border-color: rgba(255, 114, 114, 0.3);
+}
+
+.battle-screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.battle-hud {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.battle-hud-card {
+  border-radius: 16px;
+  padding: 12px 14px;
+  background: rgba(18, 12, 34, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.battle-canvas {
+  width: 100%;
+  max-height: min(72vh, 720px);
+  aspect-ratio: 390 / 720;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--panel-shadow);
+  background: #0c0916;
+}
+
+.battle-footer {
+  border-radius: 18px;
+  padding: 12px 16px;
+  background: rgba(18, 12, 34, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.xp-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.xp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff976e, #ffe386);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  padding: 24px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(3, 2, 7, 0.68);
+  z-index: 10;
+}
+
+.overlay-card {
+  width: min(100%, 520px);
+  border-radius: 26px;
+  padding: 22px;
+}
+
+.overlay-card h2 {
+  margin: 8px 0 18px;
+}
+
+.result-hero {
+  background:
+    radial-gradient(circle at top right, rgba(255, 194, 122, 0.2), transparent 25%),
+    var(--panel-bg);
+}
+
+.upgrade-card,
+.resume-panel,
+.danger-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.plain-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-muted);
+}
+
+.plain-list li + li {
+  margin-top: 8px;
+}
+
+@media (min-width: 640px) {
+  .panel-grid {
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .lesson-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .choice-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 639px) {
+  .top-banner,
+  .panel-header,
+  .currency-row,
+  .settings-row,
+  .upgrade-footer,
+  .stage-card-top,
+  .battle-footer-row,
+  .inline-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .battle-hud {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+}

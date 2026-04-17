@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "meta": {
+    "title": "기본 텍스트 템플릿",
+    "author": "",
+    "start_node_id": "intro"
+  },
+  "nodes": [
+    {
+      "id": "intro",
+      "kind": "scene",
+      "title": "도입",
+      "speaker": "",
+      "text": "[도입] 지금 어디에 있고 무엇이 평소와 달라졌는지 적으세요.",
+      "writer_note": "배경 설명을 길게 쓰기보다 첫 장면의 변화만 바로 보여 주세요.",
+      "next": "incident",
+      "choices": []
+    },
+    {
+      "id": "incident",
+      "kind": "scene",
+      "title": "사건",
+      "speaker": "",
+      "text": "[사건] 지금 바로 반응해야 하는 문제나 변화가 무엇인지 적으세요.",
+      "writer_note": "이 장면에서 독자가 처음으로 방향을 고르게 만드세요.",
+      "next": "",
+      "choices": [
+        {
+          "id": "incident_to_clue",
+          "text": "상황을 더 파고든다",
+          "writer_note": "정보, 발견, 관찰로 이어지는 선택",
+          "next": "clue"
+        },
+        {
+          "id": "incident_to_pressure",
+          "text": "먼저 버틴다",
+          "writer_note": "위험이나 부담이 커지는 선택",
+          "next": "pressure"
+        }
+      ]
+    },
+    {
+      "id": "clue",
+      "kind": "scene",
+      "title": "단서",
+      "speaker": "",
+      "text": "[단서] 상황을 다시 보게 만드는 정보나 발견을 적으세요.",
+      "writer_note": "새로운 사실이 나오더라도 핵심 한 가지에만 집중하세요.",
+      "next": "decision",
+      "choices": []
+    },
+    {
+      "id": "pressure",
+      "kind": "scene",
+      "title": "압박",
+      "speaker": "",
+      "text": "[압박] 시간이 부족하거나 위험이 커지는 이유를 적으세요.",
+      "writer_note": "서두르게 만드는 이유가 분명하면 다음 선택이 선명해집니다.",
+      "next": "decision",
+      "choices": []
+    },
+    {
+      "id": "decision",
+      "kind": "scene",
+      "title": "결정",
+      "speaker": "",
+      "text": "[결정] 이제 무엇을 선택해야 하는지 한 문장으로 분명하게 적으세요.",
+      "writer_note": "엔딩으로 바로 연결되는 마지막 선택 장면입니다.",
+      "next": "",
+      "choices": [
+        {
+          "id": "decision_to_ending_a",
+          "text": "정면으로 결정한다",
+          "writer_note": "얻는 것이 분명한 결말로 연결",
+          "next": "ending_a"
+        },
+        {
+          "id": "decision_to_ending_b",
+          "text": "다른 길을 택한다",
+          "writer_note": "남는 감정이 다른 결말로 연결",
+          "next": "ending_b"
+        }
+      ]
+    },
+    {
+      "id": "ending_a",
+      "kind": "ending",
+      "title": "엔딩 A",
+      "speaker": "",
+      "text": "[엔딩 A] 선택의 결과로 얻은 것과 남은 여운을 적으세요.",
+      "writer_note": "무엇이 달라졌는지, 무엇이 남았는지만 짧게 정리하세요.",
+      "next": "",
+      "choices": []
+    },
+    {
+      "id": "ending_b",
+      "kind": "ending",
+      "title": "엔딩 B",
+      "speaker": "",
+      "text": "[엔딩 B] 다른 선택의 결과와 마지막 감정을 적으세요.",
+      "writer_note": "첫 엔딩과 결의 감정 차이가 보이도록 마무리하세요.",
+      "next": "",
+      "choices": []
+    }
+  ]
+}

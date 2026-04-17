@@ -1,0 +1,19 @@
+﻿{
+  "input": "masterpiece, best quality, 1girl, solo, bust portrait, centered composition, looking at viewer, clean anime lineart, crisp cel shading, soft studio backdrop, stable face, stable hairstyle, expressive eyes, high detail face, consistent character design, halo, feathered wings, radiant backlight, celestial state, serene and uplifting",
+  "model": "nai-diffusion-3",
+  "action": "generate",
+  "parameters": {
+    "width": 832,
+    "height": 1216,
+    "steps": 24,
+    "scale": 5.5,
+    "sampler": "k_euler",
+    "cfg_rescale": 0.2,
+    "seed": 3102802,
+    "n_samples": 1,
+    "qualityToggle": true,
+    "sm": true,
+    "sm_dyn": true,
+    "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, cropped, extra arms, extra hands, extra fingers, duplicate body, deformed face, bad anatomy, child, loli, toddler, baby"
+  }
+}
