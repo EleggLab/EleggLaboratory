@@ -1,0 +1,24 @@
+{
+  "date": "2026-04-13",
+  "generatedAt": "2026-04-12T18:37:21.016Z",
+  "sourceEntryIds": [
+    "entry-b6fbfb65-6fba-438b-8b5b-63f0224edcd2"
+  ],
+  "overallDraft": "# 2026-04-13 작업일지\n\n## 전체 보고\n- 신규 기록 1건 반영\n- 대상 프로젝트: General\n- 기록 시각: 2026-04-13 03:36 (KST)\n- 원시 기록 본문 인코딩 이상으로 세부 작업 내용 식별 불가\n- 첨부 이미지 없음",
+  "projectDrafts": [
+    {
+      "projectId": "project-general",
+      "projectName": "General",
+      "body": "# General\n\n## 상세\n- 신규 기록 1건 확인\n- 기록 시각: 2026-04-13 03:36 (KST)\n- 원시 기록 본문 인코딩 이상으로 작업 내용 판독 불가\n- 첨부 이미지 없음",
+      "sourceEntryIds": [
+        "entry-b6fbfb65-6fba-438b-8b5b-63f0224edcd2"
+      ]
+    }
+  ],
+  "previewHtml": "<section class=\"preview-section\"><header><h1>전체 보고</h1></header><h1>2026-04-13 작업일지</h1>\n<h2>전체 보고</h2>\n<ul>\n<li>신규 기록 1건 반영</li>\n<li>대상 프로젝트: General</li>\n<li>기록 시각: 2026-04-13 03:36 (KST)</li>\n<li>원시 기록 본문 인코딩 이상으로 세부 작업 내용 식별 불가</li>\n<li>첨부 이미지 없음</li>\n</ul></section>\n<section class=\"preview-section\"><header><h1>General</h1></header><h1>General</h1>\n<h2>상세</h2>\n<ul>\n<li>신규 기록 1건 확인</li>\n<li>기록 시각: 2026-04-13 03:36 (KST)</li>\n<li>원시 기록 본문 인코딩 이상으로 작업 내용 판독 불가</li>\n<li>첨부 이미지 없음</li>\n</ul></section>",
+  "notionTargets": {
+    "projectPageIds": {},
+    "projectPageUrls": {}
+  },
+  "revisionCount": 0
+}

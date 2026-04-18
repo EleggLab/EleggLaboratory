@@ -1,0 +1,23 @@
+{
+  "name": "@tong/worker",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --port 8787",
+    "build": "tsc -p tsconfig.json --noEmit",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@tong/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260405.0",
+    "@types/node": "^25.6.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.2.4",
+    "wrangler": "^4.81.1"
+  }
+}

@@ -2,20 +2,35 @@ import { getUserKeyForGame } from '@apps-in-toss/web-framework';
 import type { GameIdentity } from '../game/types';
 
 const FALLBACK_DEVICE_KEY = 'magic-toss-device-key';
+let memoryFallbackKey: string | null = null;
+
+function createFallbackKey() {
+  return `local-${Math.random().toString(36).slice(2, 12)}`;
+}
 
 function ensureFallbackKey(): string {
   if (typeof window === 'undefined') {
     return 'magic-toss-ssr';
   }
 
-  const current = window.localStorage.getItem(FALLBACK_DEVICE_KEY);
-  if (current) {
-    return current;
-  }
+  try {
+    const current = window.localStorage.getItem(FALLBACK_DEVICE_KEY);
+    if (current) {
+      memoryFallbackKey = current;
+      return current;
+    }
 
-  const fallback = `local-${Math.random().toString(36).slice(2, 12)}`;
-  window.localStorage.setItem(FALLBACK_DEVICE_KEY, fallback);
-  return fallback;
+    const fallback = memoryFallbackKey ?? createFallbackKey();
+    memoryFallbackKey = fallback;
+    window.localStorage.setItem(FALLBACK_DEVICE_KEY, fallback);
+    return fallback;
+  } catch {
+    if (!memoryFallbackKey) {
+      memoryFallbackKey = createFallbackKey();
+    }
+
+    return memoryFallbackKey;
+  }
 }
 
 export async function resolveGameIdentity(): Promise<GameIdentity> {

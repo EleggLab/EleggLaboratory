@@ -12,6 +12,13 @@ function createMiniRouteToken(): string {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 }
 
+function normalizeMiniRouteParams(params: unknown): MiniRouteParams {
+  if (!params || typeof params !== 'object') {
+    return {};
+  }
+  return params as MiniRouteParams;
+}
+
 function readMiniRouteToken(params: MiniRouteParams, key: string): string | null {
   const value = params[key];
   return typeof value === 'string' && value.length > 0 ? value : null;
@@ -20,10 +27,11 @@ function readMiniRouteToken(params: MiniRouteParams, key: string): string | null
 export function useMiniRouteController(
   navigation: any,
   currentPath: MiniAppPath,
-  params: MiniRouteParams,
+  rawParams: unknown,
 ): MiniRouteController {
   return useMemo(
     () => {
+      const params = normalizeMiniRouteParams(rawParams);
       const visitToken = readMiniRouteToken(params, MINI_ROUTE_VISIT_PARAM);
       const tabPressToken = readMiniRouteToken(params, MINI_ROUTE_TAB_PRESS_PARAM);
 
@@ -66,6 +74,6 @@ export function useMiniRouteController(
         visitToken,
       };
     },
-    [currentPath, navigation, params],
+    [currentPath, navigation, rawParams],
   );
 }

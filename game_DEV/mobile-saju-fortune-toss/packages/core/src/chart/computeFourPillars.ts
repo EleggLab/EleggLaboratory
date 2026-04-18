@@ -1,5 +1,6 @@
 ﻿import { z } from 'zod';
 import { branches as branchesData } from '@saju/data';
+// @ts-expect-error lunar-javascript does not publish official type definitions.
 import { Solar } from 'lunar-javascript';
 import * as manseryeok from 'manseryeok/dist/index.js';
 import { convertLunarToSolar, convertSolarToLunar } from '../calendar/conversion';

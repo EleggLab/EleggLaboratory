@@ -1,0 +1,166 @@
+[
+  {
+    "id": "qna-money",
+    "title": "금전: 돈과 자원 흐름 Q&A",
+    "when": "domain == 'money'",
+    "tags": ["qna", "money"],
+    "evidence": {
+      "featureRefs": [
+        "tenGodCount.정재",
+        "tenGodCount.편재",
+        "tenGodGroup(재성/식상/비겁/관성/인성)",
+        "strength.level",
+        "elementDistribution.counts"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Four_Pillars_of_Destiny",
+        "https://www.masterseanchan.com/blog/ten-gods-bazi-profile-how-its-done/"
+      ]
+    },
+    "content": {
+      "short": "재성(정재/편재)을 중심으로, 버는 방식과 새는 지점을 현실적으로 요약합니다.",
+      "long": "이 항목은 사주 구조(십성/오행/강약)에서 금전과 연결되는 축을 정리한 것입니다.\n\n[기본 지표]\n- 재성(돈/자원/교환): {{wealthGrade}}\n- 식상(생산/표현/성과): {{outputGrade}}\n- 비겁(경쟁/동업/또래): {{peerGrade}}\n- 관성(규칙/직장/책임): {{powerGrade}}\n- 인성(학습/지원/회복): {{resourceGrade}}\n\n[돈이 들어오는 방식]\n1) 재성이 강할수록 \"돈 그 자체\"보다 \"자원/기회/거래\"를 다루는 감각이 부각됩니다. 다만 재성만 많고 식상(성과)이 약하면 기회는 있어도 실행·수익화로 연결이 느릴 수 있습니다.\n2) 식상이 받쳐주면(식상 {{outputGrade}}) 기술·콘텐츠·성과를 통해 수입이 만들어지는 그림이 나오기 쉽습니다. \"생산 -> 노출/성과 -> 교환\" 흐름을 만들면 유리합니다.\n3) 관성이 강하면(관성 {{powerGrade}}) 조직/규정/역할 안에서 안정적 보상(급여, 직무 기반)이 정착되기 쉽습니다.\n\n[돈이 새는 지점(주의 포인트)]\n- 비겁이 강하면(비겁 {{peerGrade}}) 인간관계/경쟁/동업에서 지출이 늘거나, \"내가 책임지는\" 돈의 구멍이 생기기 쉽습니다. 계약/정산을 문서로 남기는 습관이 방어력이 됩니다.\n- 강약이 {{strengthLevel}}일 때, 무리한 레버리지/속도전은 컨디션을 먼저 소모시킬 수 있습니다. 속도보다 반복 가능한 시스템을 우선하세요.\n\n[올해/이달로 보기]\n- 연/월 운(선택)이 들어오면, 그 시기엔 {{cycleTenGodLabel}} 성향이 더 강하게 드러납니다. 금전 카테고리에서는 \"수입/지출/거래\" 어느 쪽이 흔들리기 쉬운지에 초점을 맞춰 읽는 것이 안전합니다.\n\n[실천 체크리스트]\n- (1) 수입원 1개를 \"반복 가능\"하게 만들기: 정기 루틴/정산/리포트\n- (2) 지출을 2개 계정으로 분리: 생활비/프로젝트비\n- (3) 동업·가족·연인과 돈을 섞기 전, 룰을 먼저 합의하기(기준/한도/정산)"
+    }
+  },
+  {
+    "id": "qna-love",
+    "title": "연애: 관계 패턴과 궁합 관점 Q&A",
+    "when": "domain == 'love'",
+    "tags": ["qna", "love"],
+    "evidence": {
+      "featureRefs": [
+        "gender",
+        "tenGodGroup(재성/관성/식상/비겁/인성)",
+        "relations",
+        "strength.level"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Four_Pillars_of_Destiny",
+        "https://novamastersconsulting.com/introduction-to-the-10-gods-in-bazi/"
+      ]
+    },
+    "content": {
+      "short": "관계에서 무엇을 중시하는지(현실/약속/표현/경쟁/돌봄)를 십성 구조로 정리합니다.",
+      "long": "연애/관계 해석은 개인 경험과 환경 변수가 크므로, 아래는 \"내가 관계에서 어떤 역할을 자주 맡는가\"를 보는 체크리스트로 활용하세요.\n\n[기본 지표]\n- 재성(현실/교환/매력): {{wealthGrade}}\n- 관성(약속/규범/책임): {{powerGrade}}\n- 식상(표현/먼저 다가감): {{outputGrade}}\n- 비겁(동등/경쟁/친구같음): {{peerGrade}}\n- 인성(배려/안정/회복): {{resourceGrade}}\n\n[관계 스타일 힌트]\n1) 재성이 두드러지면 \"현실 감각\"이 관계에 강하게 들어옵니다. 표현은 실용적일 수 있고, 함께 사는 방식(시간·돈·약속)을 중요하게 봅니다.\n2) 관성이 두드러지면 \"공식성/신뢰\"를 중요하게 봅니다. 책임감이 장점이지만, 관계가 규칙/평가처럼 느껴지지 않도록 완급이 필요합니다.\n3) 식상이 두드러지면 말/행동으로 애정을 표현하는 편이 강합니다. 다만 상처(상관) 성향이 강한 시기엔 직설이 갈등이 될 수 있으니, 속도 조절이 중요합니다.\n4) 비겁이 두드러지면 친구 같은 관계가 편하지만, 경쟁/자존심이 관계를 경직시키는 때가 있습니다. \"승부\"보다 \"팀\" 언어가 효과적입니다.\n\n[갈등이 생길 때 자주 등장하는 패턴]\n- 강약 {{strengthLevel}}: 강한 쪽은 주도권, 약한 쪽은 피로/회피로 나타나기 쉽습니다. 이럴 땐 '결정'과 '회복'을 분리해서(오늘 결정, 내일 회복) 감정 소모를 줄일 수 있습니다.\n- 충(沖) 등 관계 신호가 있는 경우: 변동/이동/일정 변화가 겹칠 때 갈등이 커질 수 있으니 \"일정 합의\"를 최우선으로 두세요.\n\n[올해/이달로 보기]\n- 연/월 운이 들어오면, 그 시기엔 {{cycleTenGodLabel}} 성향이 관계에 더 드러납니다. 연애 카테고리에서는 \"표현(식상)\"과 \"약속(관성)\"의 균형을 의식하면 안정성이 올라갑니다.\n\n[대화 유도 질문]\n- (1) 나는 애정을 '말/행동/시간/돈/약속' 중 무엇으로 느끼는가?\n- (2) 갈등이 날 때, 내가 먼저 하는 반응은 '설명'인가 '거리두기'인가?\n- (3) 관계에서 반드시 필요한 최소 룰 3가지는?"
+    }
+  },
+  {
+    "id": "qna-health",
+    "title": "건강: 생활 리듬과 컨디션 관리 Q&A",
+    "when": "domain == 'health'",
+    "tags": ["qna", "health"],
+    "evidence": {
+      "featureRefs": ["elementDistribution.counts", "strength.level"],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Four_Pillars_of_Destiny",
+        "https://github.com/yhj1024/manseryeok"
+      ]
+    },
+    "content": {
+      "short": "의학 조언이 아니라, 오행 분포/강약을 '생활 습관' 관점으로 안전하게 번역합니다.",
+      "long": "중요: 이 항목은 의료 조언이 아닙니다. 증상/통증이 있으면 의료 전문가 상담이 우선입니다.\n\n[오행 밸런스(생활 습관 힌트)]\n- 우세 오행: {{dominantElements}}\n- 보완이 필요한 오행: {{lackingElements}}\n- 강약: {{strengthLevel}}\n\n[읽는 법(안전한 번역)]\n1) 우세 오행은 '자주 쓰는 에너지 패턴'으로, 과해지면 과속/과열/과몰입처럼 나타날 수 있습니다.\n2) 부족 오행은 '루틴으로 채워야 하는 영역'으로, 무리한 보충보다 \"작게 자주\"가 효과적입니다.\n3) 강약 {{strengthLevel}}는 회복 속도와 압박 내성의 힌트로 보되, 실제 컨디션은 수면/스트레스/식습관이 더 큰 변수입니다.\n\n[생활 루틴 제안(일반적)]\n- 수면: 기상/취침 시간을 30분 단위로 고정(주말 포함)\n- 운동: 주 3회 20~40분의 '지속 가능한 강도' 우선\n- 식사: 끼니 거르지 않기 + 물 섭취량 체크\n- 스트레스: 10분 산책/호흡/기록 중 하나를 \"매일\" 고정\n\n[올해/이달로 보기]\n- 연/월 운이 들어오면, 그 시기엔 {{cycleTenGodLabel}} 성향이 생활 속 압박/회복 패턴에 반영될 수 있습니다. 건강 카테고리에서는 \"무리한 목표\"보다 \"회복 가능한 루틴\"이 핵심입니다."
+    }
+  },
+  {
+    "id": "qna-children",
+    "title": "자식: 자녀운/양육 에너지 Q&A",
+    "when": "domain == 'children'",
+    "tags": ["qna", "children"],
+    "evidence": {
+      "featureRefs": ["tenGodGroup(식상/인성/관성)", "strength.level"],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Four_Pillars_of_Destiny",
+        "https://www.masterseanchan.com/blog/ten-gods-bazi-profile-how-its-done/"
+      ]
+    },
+    "content": {
+      "short": "식상(표현/생산)과 인성(돌봄/지원)의 균형으로 '양육 에너지'를 정리합니다.",
+      "long": "자녀 관련 해석은 현실 변수(관계, 경제, 건강)가 매우 큽니다. 여기서는 \"내가 돌봄/양육에서 어떤 역할을 편하게 하는가\"를 정리합니다.\n\n[기본 지표]\n- 식상(표현/가르침/놀이): {{outputGrade}}\n- 인성(돌봄/지원/보호): {{resourceGrade}}\n- 관성(규칙/훈육/책임): {{powerGrade}}\n\n[양육에서 편한 역할]\n1) 식상이 두드러지면: 아이의 표현/재능을 끌어내는 \"코치\" 역할이 편합니다. 다만 피곤할 때 말이 강해질 수 있어, 피로 관리가 중요합니다.\n2) 인성이 두드러지면: 안정감/보호를 주는 \"안전기지\" 역할이 편합니다. 다만 과보호로 흐르지 않게, 작은 도전을 허용하는 룰이 도움이 됩니다.\n3) 관성이 두드러지면: 규칙/루틴을 세우는 \"관리\" 역할이 편합니다. 다만 관계가 '평가'로 느껴지지 않게 칭찬/놀이를 의식적으로 섞어주세요.\n\n[올해/이달로 보기]\n- 연/월 운이 {{cycleTenGodLabel}} 쪽으로 들어오면, 자녀/가족 이슈는 '표현(식상)' 또는 '규칙(관성)' 어느 쪽으로 무게가 실리는지 점검하는 것이 좋습니다."
+    }
+  },
+  {
+    "id": "qna-parents",
+    "title": "부모: 부모와의 관계/지원 패턴 Q&A",
+    "when": "domain == 'parents'",
+    "tags": ["qna", "parents"],
+    "evidence": {
+      "featureRefs": ["tenGodGroup(인성/비겁/관성)", "strength.level"],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Four_Pillars_of_Destiny",
+        "https://novamastersconsulting.com/introduction-to-the-10-gods-in-bazi/"
+      ]
+    },
+    "content": {
+      "short": "인성(지원/돌봄)과 관성(책임), 비겁(독립) 축으로 가족 관계를 정리합니다.",
+      "long": "부모/가족은 개인의 감정사와 현실 책임이 함께 얽힙니다. 아래는 '내가 가족 안에서 어떤 역할로 굳어지기 쉬운가'를 보는 관점입니다.\n\n[기본 지표]\n- 인성(받는 도움/돌봄): {{resourceGrade}}\n- 관성(책임/의무): {{powerGrade}}\n- 비겁(독립/거리): {{peerGrade}}\n\n[관계 패턴]\n1) 인성이 두드러지면: 가족의 기대/보호 안에서 안정감을 얻는 방식이 익숙할 수 있습니다. 다만 '받는 것'과 '주는 것'의 경계가 흐려지지 않게, 나의 루틴을 먼저 확보하세요.\n2) 관성이 두드러지면: 가족 안에서도 책임을 떠맡기 쉬운 구조가 됩니다. \"내가 다 해야 한다\"에서 \"우리가 나눈다\"로 언어를 바꾸는 게 도움이 됩니다.\n3) 비겁이 두드러지면: 독립성이 장점이지만, 감정 전달이 짧아 오해가 생길 수 있습니다. 사실(일정/돈/요청)을 구체화하면 관계가 안정됩니다.\n\n[올해/이달로 보기]\n- 연/월 운이 {{cycleTenGodLabel}}로 들어오면, 가족 이슈는 '책임(관성)' 또는 '지원(인성)'으로 부각될 수 있습니다. 중요한 건, 부담을 혼자 해석하지 않도록 '역할 분담'을 먼저 하는 것입니다."
+    }
+  },
+  {
+    "id": "qna-friends",
+    "title": "친구: 인간관계/동료/협업 Q&A",
+    "when": "domain == 'friends'",
+    "tags": ["qna", "friends"],
+    "evidence": {
+      "featureRefs": ["tenGodGroup(비겁/식상/관성)", "relations"],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Four_Pillars_of_Destiny",
+        "https://www.masterseanchan.com/blog/ten-gods-bazi-profile-how-its-done/"
+      ]
+    },
+    "content": {
+      "short": "비겁(친구/동료)과 식상(표현), 관성(규칙)으로 '관계 운영법'을 정리합니다.",
+      "long": "친구/동료 관계는 '누구를 끌어들이는가'보다 '어떻게 유지하는가'가 더 중요합니다.\n\n[기본 지표]\n- 비겁(친구/동료/경쟁): {{peerGrade}}\n- 식상(말/표현/설득): {{outputGrade}}\n- 관성(규칙/경계): {{powerGrade}}\n\n[관계 운영 힌트]\n1) 비겁이 강하면: 네트워크가 넓어지기 쉽지만, 동업/경쟁/비교도 같이 들어옵니다. \"좋은 사람\"보다 \"역할이 맞는 사람\"을 기준으로 구분해보세요.\n2) 식상이 강하면: 말과 콘텐츠로 사람을 모으는 힘이 있습니다. 다만 과한 직설이 관계 비용이 될 수 있으니, 피드백은 \"사실-감정-요청\" 순서로 정리하면 충돌이 줄어듭니다.\n3) 관성이 약하면: 경계가 흐려져 부탁/의존이 쌓이기 쉽습니다. 작은 규칙(연락 빈도/돈/시간)을 미리 합의하면 관계가 오래 갑니다.\n\n[올해/이달로 보기]\n- 연/월 운이 {{cycleTenGodLabel}}로 들어오면, 관계에선 '협업/경쟁(비겁)' 또는 '규칙/책임(관성)'이 부각될 수 있습니다. 약속과 정산을 선명하게 하면 관계가 안정됩니다."
+    }
+  },
+  {
+    "id": "qna-benefactor",
+    "title": "귀인: 도움/인맥/기회가 들어오는 방식 Q&A",
+    "when": "domain == 'benefactor'",
+    "tags": ["qna", "benefactor"],
+    "evidence": {
+      "featureRefs": ["tenGodGroup(인성/관성/식상)", "elementDistribution.counts"],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Four_Pillars_of_Destiny",
+        "https://novamastersconsulting.com/introduction-to-the-10-gods-in-bazi/"
+      ]
+    },
+    "content": {
+      "short": "귀인은 '하늘에서 떨어지는 행운'보다, 내가 잘 작동하는 환경/사람의 유형을 찾는 문제입니다.",
+      "long": "귀인(도움) 해석은 \"내가 어떤 방식으로 도움을 주고 받는가\"를 정리하는 데 초점이 있습니다.\n\n[기본 지표]\n- 인성(후원/학습/보호): {{resourceGrade}}\n- 관성(공식 네트워크/조직): {{powerGrade}}\n- 식상(발신/포트폴리오): {{outputGrade}}\n\n[도움이 들어오는 경로]\n1) 인성이 두드러지면: 선배/멘토/학습 커뮤니티처럼 '지식/보호' 채널에서 도움을 받기 쉽습니다. 요청은 '준비물/상황/기한'을 구체화하면 성사율이 올라갑니다.\n2) 관성이 두드러지면: 조직/공식 경로(추천, 레퍼런스, 자격)에서 기회가 커집니다. 이럴 때는 평판 관리가 곧 기회 관리입니다.\n3) 식상이 두드러지면: 내가 먼저 '보여주는 것'이 귀인을 부릅니다. 포트폴리오/글/결과물을 공개하는 것이 가장 현실적인 귀인 전략입니다.\n\n[올해/이달로 보기]\n- 연/월 운이 {{cycleTenGodLabel}}로 들어오면, 도움의 경로가 바뀔 수 있습니다. 귀인 카테고리에서는 '요청 방식'을 바꾸는 게 가장 빠른 체감 변화입니다."
+    }
+  },
+  {
+    "id": "qna-job",
+    "title": "직장: 커리어/승진/평판 Q&A",
+    "when": "domain == 'job'",
+    "tags": ["qna", "job"],
+    "evidence": {
+      "featureRefs": ["tenGodGroup(관성/식상/인성/재성)", "strength.level"],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Four_Pillars_of_Destiny",
+        "https://destinyi.com/bazi/ten-gods/cheat-sheet"
+      ]
+    },
+    "content": {
+      "short": "관성(규칙/책임) 중심으로, 직장형 커리어에서 강점과 리스크를 정리합니다.",
+      "long": "직장운은 '운이 좋다/나쁘다'보다, 어떤 환경에서 성과가 나오는지(규정/자율/평가 방식)를 파악하는 게 더 유용합니다.\n\n[기본 지표]\n- 관성(책임/규정/리더십): {{powerGrade}}\n- 식상(성과/말/기획): {{outputGrade}}\n- 인성(학습/문서/전문성): {{resourceGrade}}\n- 재성(성과의 보상/자원관리): {{wealthGrade}}\n\n[직장형 강점]\n1) 관성이 강하면: 규정과 역할이 있는 조직에서 신뢰를 얻기 쉽습니다. 다만 압박이 누적되면 번아웃으로 갈 수 있어 회복 루틴이 필수입니다.\n2) 식상이 강하면: 결과물을 만들고 설명하는 능력이 강합니다. 상향 설득(보고/발표/문서화)을 루틴으로 만들면 속도가 붙습니다.\n3) 인성이 강하면: 전문성/자격/문서 능력이 강점입니다. '아는 것'을 '표준화'하면 평판이 빨리 쌓입니다.\n\n[리스크 관리]\n- 강약 {{strengthLevel}}일 때, 무리한 역할 확장은 컨디션을 먼저 깎을 수 있습니다. \"성과\"와 \"회복\"을 같이 일정에 넣어야 오래 갑니다.\n\n[올해/이달로 보기]\n- 연/월 운이 {{cycleTenGodLabel}}로 들어오면, 승진/평가 포인트가 '규칙(관성)' 또는 '성과(식상)' 쪽으로 이동할 수 있습니다. 목표를 그 포인트에 맞춰 조정하세요."
+    }
+  },
+  {
+    "id": "qna-business",
+    "title": "사업: 창업/수익화/리스크 Q&A",
+    "when": "domain == 'business'",
+    "tags": ["qna", "business"],
+    "evidence": {
+      "featureRefs": ["tenGodGroup(재성/식상/비겁/관성)", "strength.level"],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Four_Pillars_of_Destiny",
+        "https://destinyi.com/bazi/ten-gods/cheat-sheet"
+      ]
+    },
+    "content": {
+      "short": "재성(수익/자원)과 식상(생산/마케팅), 비겁(팀/경쟁) 관점으로 사업형 성향을 정리합니다.",
+      "long": "사업운은 '운이 열렸다'보다, \"수익화 구조\"를 만들고 유지할 수 있는지에 달려 있습니다.\n\n[기본 지표]\n- 재성(수익/가격/거래): {{wealthGrade}}\n- 식상(생산/마케팅/런칭): {{outputGrade}}\n- 비겁(팀/동업/경쟁): {{peerGrade}}\n- 관성(리스크/규정/컴플라이언스): {{powerGrade}}\n\n[사업형 강점]\n1) 식상이 강하면: 제품/콘텐츠를 만들고 시장에 내는 속도가 강점입니다. 다만 기준(관성)이 약하면 품질/계약에서 손실이 생길 수 있어 체크리스트가 필요합니다.\n2) 재성이 강하면: 가격/거래/자원 배분 감각이 좋습니다. '팔기'보다 '반복 가능한 판매 시스템'을 만들면 힘이 더 납니다.\n3) 비겁이 강하면: 사람을 모으는 힘이 있지만, 동업 리스크도 같이 큽니다. 지분/역할/정산을 문서로 고정하세요.\n\n[리스크 관리]\n- 강약 {{strengthLevel}}일 때, 확장 속도를 컨디션이 따라가지 못하면 구조가 무너집니다. 확장은 \"매출\"이 아니라 \"운영 가능한 루틴\"을 기준으로 하세요.\n\n[올해/이달로 보기]\n- 연/월 운이 {{cycleTenGodLabel}}로 들어오면, 사업 카테고리에서는 '확장'보다 '검증/정리'가 유리한지 점검해야 합니다. 특히 계약/세금/정산은 운보다 시스템이 좌우합니다."
+    }
+  }
+]

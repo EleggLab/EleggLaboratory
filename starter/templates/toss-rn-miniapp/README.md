@@ -8,8 +8,14 @@ This template is intentionally scoped to the non-game lane. If the service is a 
 - SDK: `@apps-in-toss/framework@2.0.5`
 - React Native: `0.84.0`
 - React: `19.2.3`
-- Build command: `ait build`
+- Granite: `1.0.4`
+- Build command: `pnpm build`
 - Ad default: banner only
+
+## Support Matrix
+- Windows local: `pnpm install`, `pnpm typecheck`, and `pnpm validate:release-env` are expected to work.
+- Supported release-build environments: CI, WSL, macOS, and Linux are the target environments for `pnpm build` and `.ait` generation.
+- Windows local build is not the release gate for this starter because the current Granite/App-in-Toss toolchain still shows Windows-specific build instability.
 
 ## Quick Start
 1. Create the app in the Toss console and record the real `appName`.
@@ -22,7 +28,8 @@ This template is intentionally scoped to the non-game lane. If the service is a 
 ## Scripts
 - `pnpm dev`: local development
 - `pnpm router:types`: regenerate route typings from `pages/`
-- `pnpm build`: strict release validation + `.ait` build
+- `pnpm build`: strict release validation and `.ait` build
+- `pnpm typecheck`: route typing generation plus TypeScript verification
 - `pnpm validate:release-env`: release gate for env, support info, ad IDs, and asset manifest
 - `pnpm qa:sandbox`: sandbox QA guide
 - `pnpm qa:toss`: QR/Toss-app QA guide

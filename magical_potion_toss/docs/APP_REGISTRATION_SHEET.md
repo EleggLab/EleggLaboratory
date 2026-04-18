@@ -1,0 +1,28 @@
+# App Registration Sheet
+
+## Identity
+- App ID (`TOSS_APP_NAME`): `magical-potion-shop`
+- Console app name (`TOSS_CONSOLE_APP_NAME`): `magical-potion-shop`
+- Display name: `마녀의 만병항아리`
+- Category: `게임`
+- Type: `무료 미니앱`
+
+## Product Summary
+- One-line pitch: 재료 5개 중 4개를 어떤 순서로 넣을지 계산해 주문 컷라인과 임대료를 넘기는 7일 런 항아리 퍼즐 로그라이크
+- Core loop: 로비 -> 주문 선택 -> 재료 선택 -> 손질 -> 항아리 조제 -> 정산 -> 업그레이드
+- Monetization: 없음
+
+## Support
+- Customer service email: `TOSS_CUSTOMER_SERVICE_EMAIL`
+- Customer service phone: `TOSS_CUSTOMER_SERVICE_PHONE`
+- Customer service chat URL: `TOSS_CUSTOMER_SERVICE_CHAT_URL`
+
+## Assets
+- Logo: `assets/console/app-logo.png`
+- Square thumbnail: `assets/console/thumbnail-square.png`
+- Landscape thumbnail: `assets/console/thumbnail-landscape.png`
+- Portrait screenshots: `assets/console/screenshots/shot-01.png` to `shot-03.png`
+
+## Notes
+- 게임 카테고리로 등록해야 `getUserKeyForGame()`을 사용할 수 있습니다.
+- WebView type은 `game`으로 설정되어 있습니다.

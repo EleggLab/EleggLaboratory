@@ -15,6 +15,7 @@ node_modules/
 # Local logs and temp folders
 .runlogs/
 tmp/
+data/worklog/
 
 # Nested repositories kept as references/workspaces
 game_DEV/_refs/
@@ -29,3 +30,18 @@ game_DEV/pc-choice-ugc/nu_
 # OS/editor noise
 .DS_Store
 Thumbs.db
+
+# TypeScript incremental build artifacts
+*.tsbuildinfo
+
+# Release/build bundles
+*.ait
+
+# Generated artifacts for mobile-saju-fortune-toss
+game_DEV/mobile-saju-fortune-toss/**/.bedrock/
+game_DEV/mobile-saju-fortune-toss/**/.granite/
+game_DEV/mobile-saju-fortune-toss/**/.swc/
+game_DEV/mobile-saju-fortune-toss/**/dev-logs/
+game_DEV/mobile-saju-fortune-toss/apps/toss/dist/
+game_DEV/mobile-saju-fortune-toss/packages/*/dist/
+game_DEV/mobile-saju-fortune-toss/apps/mobile/assets/*.backup-*

@@ -1,0 +1,72 @@
+[
+  {
+    "stem": "\uac11",
+    "hanja": "\u7532",
+    "element": "\ubaa9",
+    "yinYang": "\uc591",
+    "keywords": ["pioneer", "start", "direct"]
+  },
+  {
+    "stem": "\uc744",
+    "hanja": "\u4e59",
+    "element": "\ubaa9",
+    "yinYang": "\uc74c",
+    "keywords": ["flexible", "growth", "relationship"]
+  },
+  {
+    "stem": "\ubcd1",
+    "hanja": "\u4e19",
+    "element": "\ud654",
+    "yinYang": "\uc591",
+    "keywords": ["expression", "expansion", "energy"]
+  },
+  {
+    "stem": "\uc815",
+    "hanja": "\u4e01",
+    "element": "\ud654",
+    "yinYang": "\uc74c",
+    "keywords": ["detail", "focus", "care"]
+  },
+  {
+    "stem": "\ubb34",
+    "hanja": "\u620a",
+    "element": "\ud1a0",
+    "yinYang": "\uc591",
+    "keywords": ["center", "balance", "stability"]
+  },
+  {
+    "stem": "\uae30",
+    "hanja": "\u5df1",
+    "element": "\ud1a0",
+    "yinYang": "\uc74c",
+    "keywords": ["organize", "operation", "accumulate"]
+  },
+  {
+    "stem": "\uacbd",
+    "hanja": "\u5e9a",
+    "element": "\uae08",
+    "yinYang": "\uc591",
+    "keywords": ["decisive", "reform", "execute"]
+  },
+  {
+    "stem": "\uc2e0",
+    "hanja": "\u8f9b",
+    "element": "\uae08",
+    "yinYang": "\uc74c",
+    "keywords": ["refine", "finish", "precision"]
+  },
+  {
+    "stem": "\uc784",
+    "hanja": "\u58ec",
+    "element": "\uc218",
+    "yinYang": "\uc591",
+    "keywords": ["flow", "network", "scale"]
+  },
+  {
+    "stem": "\uacc4",
+    "hanja": "\u7678",
+    "element": "\uc218",
+    "yinYang": "\uc74c",
+    "keywords": ["insight", "wisdom", "recovery"]
+  }
+]

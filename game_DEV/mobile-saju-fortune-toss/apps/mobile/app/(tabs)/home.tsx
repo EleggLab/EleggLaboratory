@@ -1,4 +1,4 @@
-﻿import { useCallback, useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { Animated, Easing, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 
@@ -6,19 +6,23 @@ import { BACKGROUNDS } from '../../lib/assets/backgrounds';
 import { commonStyles } from '../../lib/ui/commonStyles';
 import { ScreenScroll } from '../../lib/ui/ScreenScroll';
 
-const HOME_LINES = [
-  '오늘은 가볍게 시작해도 흐름이 잘 붙어요.',
-  '하나만 먼저 끝내면 마음이 훨씬 편해져요.',
-  '지금 떠오른 메모 하나가 힌트가 될 수 있어요.',
-  '서두르기보다 순서를 정하면 실수가 줄어요.',
-  '작은 약속 하나를 지키는 게 운을 올려줘요.',
+const ASTRA_LINES = [
+  '저는 아스트라라고 해요. 오늘의 흐름을 함께 읽어드릴게요.',
+  '아스트라는 작은 신호를 놓치지 않는 편이에요.',
+  '화면을 톡 건드려주면 제가 다른 힌트도 들려드릴게요.',
+  '오늘은 해야 할 일 하나만 먼저 끝내도 흐름이 좋아져요.',
+  '급하게 달리기보다 한 번 숨을 고르면 운이 더 선명해져요.',
+  '사주도 좋고 타로도 좋아요. 끌리는 쪽부터 천천히 가볼까요?',
+  '메모처럼 스쳐 간 생각 하나가 오늘의 열쇠가 될 수 있어요.',
+  '지금 필요한 건 거창한 결론보다, 마음을 가볍게 해 주는 한 걸음이에요.',
 ];
 
 function pickNextLine(current: string): string {
-  if (HOME_LINES.length <= 1) return current;
+  if (ASTRA_LINES.length <= 1) return current;
+
   let next = current;
   while (next === current) {
-    next = HOME_LINES[Math.floor(Math.random() * HOME_LINES.length)] ?? current;
+    next = ASTRA_LINES[Math.floor(Math.random() * ASTRA_LINES.length)] ?? current;
   }
   return next;
 }
@@ -26,7 +30,7 @@ function pickNextLine(current: string): string {
 export default function HomeScreen(): React.JSX.Element {
   const navigation = useNavigation();
   const [lineText, setLineText] = useState(
-    () => HOME_LINES[Math.floor(Math.random() * HOME_LINES.length)] ?? HOME_LINES[0] ?? '',
+    () => ASTRA_LINES[Math.floor(Math.random() * ASTRA_LINES.length)] ?? ASTRA_LINES[0] ?? '',
   );
 
   const bubbleOpacity = useRef(new Animated.Value(1)).current;
@@ -88,24 +92,20 @@ export default function HomeScreen(): React.JSX.Element {
       contentRevealDelayMs={0}
       resetScrollOnFocus
     >
-      <View style={styles.tapCanvas}>
-        <Pressable
-          onPress={handleNextLine}
-          style={({ pressed }) => [styles.faceTapZone, pressed && styles.faceTapZonePressed]}
-        >
+      <Pressable onPress={handleNextLine} style={({ pressed }) => [styles.tapCanvas, pressed && styles.canvasPressed]}>
+        <View style={styles.faceArea}>
           <View style={styles.faceSpacer} />
-        </Pressable>
+        </View>
 
-        <Pressable onPress={handleNextLine} style={({ pressed }) => [styles.toastWrap, pressed && styles.pressed]}>
+        <View style={styles.toastWrap}>
           <View style={styles.toastBody}>
-            <Animated.Text
-              style={[styles.toastText, { opacity: bubbleOpacity, transform: [{ translateY: bubbleLift }] }]}
-            >
+            <Text style={styles.toastName}>아스트라</Text>
+            <Animated.Text style={[styles.toastText, { opacity: bubbleOpacity, transform: [{ translateY: bubbleLift }] }]}>
               {lineText}
             </Animated.Text>
           </View>
-        </Pressable>
-      </View>
+        </View>
+      </Pressable>
     </ScreenScroll>
   );
 }
@@ -118,18 +118,17 @@ const styles = StyleSheet.create({
   tapCanvas: {
     position: 'relative',
     flex: 1,
-    minHeight: 520,
+    minHeight: 980,
     paddingBottom: 14,
+  },
+  canvasPressed: {
+    opacity: 0.985,
+  },
+  faceArea: {
+    flex: 1,
   },
   faceSpacer: {
     flex: 1,
-  },
-  faceTapZone: {
-    ...StyleSheet.absoluteFillObject,
-    borderRadius: 12,
-  },
-  faceTapZonePressed: {
-    opacity: 0.97,
   },
   toastWrap: {
     position: 'absolute',
@@ -147,14 +146,16 @@ const styles = StyleSheet.create({
     gap: 4,
     zIndex: 3,
   },
+  toastName: {
+    color: '#ffd979',
+    fontSize: 12,
+    fontWeight: '900',
+    letterSpacing: 0.4,
+  },
   toastText: {
     color: '#f2f1ef',
     fontSize: 14,
     fontWeight: '800',
     lineHeight: 19,
-  },
-  pressed: {
-    opacity: 0.92,
-    transform: [{ scale: 0.99 }],
   },
 });

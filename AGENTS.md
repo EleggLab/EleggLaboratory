@@ -10,12 +10,15 @@ If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out w
 
 Before doing anything else:
 
-1. Read `SOUL.md` — this is who you are
-2. Read `PERSONA_ELEGG_GLOBAL.md` — global cross-channel persona baseline
-3. If present, read `persona/channel-<channel>.md` — channel-specific override
-4. Read `USER.md` — this is who you're helping
+1. Read this `AGENTS.md` first — it sets the startup order for the workspace
+2. Read `PROJECT_UIUX_POLICY.md` — workspace UI/UX authorship and art-design defaults
+3. Read `UIUX_10PASS_BRANCH_CRITIQUE_PROMPT.md` — reusable 50-pass UI/art working prompt (legacy filename retained)
+4. **If in MAIN SESSION** (direct chat with your human): read `MEMORY.md`
 5. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-6. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+6. Read `SOUL.md` — this is who you are
+7. Read `PERSONA_ELEGG_GLOBAL.md` — global cross-channel persona baseline
+8. If present, read `persona/channel-<channel>.md` — channel-specific override
+9. Read `USER.md` — this is who you're helping
 
 Don't ask permission. Just do it.
 
@@ -72,6 +75,17 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 
 - Global persona baseline file: `PERSONA_ELEGG_GLOBAL.md`
 - If user asks for "all channels" persona sync, treat this file as the cross-channel default unless a channel-specific override is explicitly provided.
+
+## Project UI/UX Defaults
+
+- The base UI/UX frame of this project is the human user's original work. Treat it as authored source material, not disposable scaffolding.
+- Preserve the trunk before growing new branches: keep the recognizable layout DNA, interaction rhythm, information hierarchy, and emotional framing unless the human explicitly asks for a rewrite.
+- For future UI/art work, default to the `PROJECT_UIUX_POLICY.md` `50-Pass Branch Critique Loop`:
+  - pass 1 creates the first working branch from the current trunk
+  - each later pass receives the previous edited branch, modifies it directly, and hands it to the next pass
+  - pass 50 delivers the final revised branch; there is no separate feedback-only stage or later implementation stage
+- When a reusable design brief or instruction block is needed, start from `UIUX_10PASS_BRANCH_CRITIQUE_PROMPT.md` (legacy filename retained).
+- Do not collapse this into a single generic "AI-looking" pass unless the human explicitly asks for speed over depth.
 
 ## Group Chats
 

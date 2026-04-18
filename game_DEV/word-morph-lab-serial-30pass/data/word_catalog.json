@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "meta": {
+    "title": "Word Morph Lab",
+    "subtitle": "Type a word and push a locked anime portrait into a new visual state.",
+    "description": "Prototype catalog for 100 keyword-driven image states. The catalog is tuned for a single recurring heroine rendered as a bust portrait with stable lineart and cel shading.",
+    "base_prompt": "masterpiece, best quality, 1girl, solo, bust portrait, centered composition, looking at viewer, clean anime lineart, crisp cel shading, soft studio backdrop, stable face, stable hairstyle, expressive eyes, high detail face, consistent character design",
+    "negative_prompt": "low quality, worst quality, blurry, realistic, painterly, 3d, text, watermark, multiple views, cropped, extra arms, extra hands, extra fingers, duplicate body, deformed face, bad anatomy, child, loli, toddler, baby",
+    "default_render": {
+      "model": "nai-diffusion-3",
+      "width": 832,
+      "height": 1216,
+      "steps": 24,
+      "scale": 5.5,
+      "sampler": "k_euler",
+      "cfg_rescale": 0.2,
+      "base_seed": 3102801
+    },
+    "style_lock_notes": [
+      "Keep one recurring heroine and change only one fantasy axis per word.",
+      "Use reference guidance only after a base face has been approved.",
+      "Cache accepted results and reuse them instead of regenerating on repeat input."
+    ]
+  },
+  "categories": [
+    {
+      "slug": "celestial",
+      "label": "Celestial",
+      "accent": "#f5d98e",
+      "words": [
+        ["angel", "halo, feathered wings, radiant backlight", "serene and uplifting"],
+        ["sun", "sun disk, warm gold rim light, solar shimmer", "bright and triumphant"],
+        ["moon", "moonlit glow, silver highlights, night veil", "quiet and wistful"],
+        ["star", "star particles, sparkling eyes, cosmic freckles", "hopeful and dreamy"],
+        ["eclipse", "eclipse halo, dramatic shadow ring, black sun motif", "ominous and majestic"],
+        ["aurora", "aurora ribbons, rainbow mist, polar glow", "ethereal and fluid"],
+        ["comet", "comet trail, fast streaks, icy sparkle", "swift and electric"],
+        ["nova", "bursting light petals, stellar flare, radiant bloom", "explosive and ecstatic"],
+        ["orbit", "orbital rings, circular light trails, gravitational arcs", "poised and focused"],
+        ["seraph", "multi-wing silhouette, sacred fire, jeweled crown", "solemn and holy"]
+      ]
+    },
+    {
+      "slug": "elemental",
+      "label": "Elemental",
+      "accent": "#7ec8f8",
+      "words": [
+        ["fire", "embers, flame hair tips, orange glow", "passionate and intense"],
+        ["water", "liquid ribbons, glossy droplets, blue sheen", "calm and adaptive"],
+        ["ice", "ice crystals, frosted lashes, pale blue mist", "cold and elegant"],
+        ["storm", "storm clouds, rain streaks, thunder backdrop", "restless and charged"],
+        ["lightning", "electric cracks, neon veins, yellow sparks", "sharp and aggressive"],
+        ["wind", "flowing ribbons, loose hair motion, airy fabric", "free and light"],
+        ["earth", "stone accents, moss trim, grounded stance", "steady and reliable"],
+        ["sand", "desert veil, sandy particles, sun-bleached tones", "dry and mysterious"],
+        ["mist", "soft fog curtain, diffused highlights, blurred edges", "uncertain and soft"],
+        ["crystal", "faceted gems, prism reflections, glassy ornaments", "clean and refined"]
+      ]
+    },
+    {
+      "slug": "botanical",
+      "label": "Botanical",
+      "accent": "#8dd39e",
+      "words": [
+        ["rose", "rose petals, crimson thorns, romantic lace", "romantic and dangerous"],
+        ["thorn", "thorn crown, sharp vine loops, scarlet scratches", "guarded and hostile"],
+        ["ivy", "ivy tendrils, green wraps, climbing vines", "clingy and persistent"],
+        ["bloom", "petal burst, floral pollen glow, fresh colors", "joyful and reborn"],
+        ["sakura", "sakura petals, pink haze, spring breeze", "gentle and nostalgic"],
+        ["lotus", "lotus halo, layered petals, still water accents", "pure and centered"],
+        ["moss", "moss textures, damp stone, forest softness", "quiet and ancient"],
+        ["vine", "spiral vines, leaf cuffs, twisting growth", "curious and invasive"],
+        ["coral", "coral branches, sea bloom colors, reef details", "playful and alien"],
+        ["forest", "canopy shadows, green dapple light, fern motifs", "protective and wild"]
+      ]
+    },
+    {
+      "slug": "arcane",
+      "label": "Arcane",
+      "accent": "#c7a4ff",
+      "words": [
+        ["witch", "witch hat motif, occult lace, violet smoke", "cunning and theatrical"],
+        ["rune", "floating runes, glowing script, geometric sigils", "studious and secretive"],
+        ["tarot", "card fragments, fortune motifs, velvet trim", "enigmatic and performative"],
+        ["sigil", "magic circles, branded glyphs, precise symmetry", "controlled and ritualistic"],
+        ["mirror", "shattered reflections, glass shards, silver frame motifs", "self-aware and eerie"],
+        ["dream", "sleepy haze, pillow-soft light, surreal overlap", "floaty and intimate"],
+        ["void", "void tears, black gradients, starless depth", "cold and hungry"],
+        ["glitch", "rgb splits, scanlines, digital tear artifacts", "unstable and clever"],
+        ["neon", "neon tubing, city glow, electric magenta", "bold and modern"],
+        ["prism", "rainbow refractions, cut-glass edges, spectral shine", "analytical and radiant"]
+      ]
+    },
+    {
+      "slug": "creature",
+      "label": "Creature",
+      "accent": "#ffb4a2",
+      "words": [
+        ["cat", "cat ears, slit pupils, fluffy collar", "mischievous and aloof"],
+        ["fox", "fox ears, red tail, sly smile", "tricky and warm"],
+        ["wolf", "wolf ears, fur mantle, amber eyes", "fierce and loyal"],
+        ["rabbit", "rabbit ears, soft fluff, spring-step posture", "timid and curious"],
+        ["crow", "black feathers, crow halo, beak-like mask motifs", "watchful and severe"],
+        ["bat", "bat wings, nocturnal cape, moonlit fangs", "playful and gothic"],
+        ["moth", "moth wings, powder shimmer, lamp glow", "fragile and hypnotic"],
+        ["butterfly", "butterfly wings, iridescent spots, floating petals", "light and transformative"],
+        ["serpent", "serpent coils, scale jewelry, forked motifs", "tempting and dangerous"],
+        ["dragon", "small horns, scale armor, draconic smoke", "proud and overwhelming"]
+      ]
+    },
+    {
+      "slug": "gothic",
+      "label": "Gothic",
+      "accent": "#8b5cf6",
+      "words": [
+        ["vampire", "small fangs, velvet collar, wine-red glow", "seductive and predatory"],
+        ["ghost", "translucent edges, pale mist, floating veil", "lonely and distant"],
+        ["doll", "joint seams, porcelain shine, ribbon locks", "cute and uncanny"],
+        ["clown", "painted smile, harlequin pattern, theatrical tears", "chaotic and sad"],
+        ["bride", "veil, white roses, ceremonial lace", "tragic and elegant"],
+        ["funeral", "black lilies, mourning veil, obsidian fabric", "heavy and ceremonial"],
+        ["candle", "wax drips, candle crown, warm darkness", "quiet and devotional"],
+        ["mask", "ornate mask, hidden eyes, stage mystery", "detached and seductive"],
+        ["midnight", "deep blue shadows, clock motifs, silver moon", "still and suspenseful"],
+        ["bloody", "crimson stains, sharp contrast, dramatic highlights", "violent and urgent"]
+      ]
+    },
+    {
+      "slug": "cyber",
+      "label": "Cyber",
+      "accent": "#22d3ee",
+      "words": [
+        ["robot", "android joints, chrome plating, led eyes", "precise and emotionless"],
+        ["cyber", "circuit tattoos, hologram panels, data glow", "fast and clinical"],
+        ["hacker", "hooded screen light, code rain, dark neon", "focused and sly"],
+        ["laser", "laser beams, sharp highlights, red optics", "surgical and intense"],
+        ["pixel", "pixel blocks, mosaic edges, game ui motifs", "playful and synthetic"],
+        ["server", "rack lights, cable halos, machine-room glow", "cold and industrious"],
+        ["satellite", "antenna rings, orbital panels, space telemetry", "remote and observant"],
+        ["drone", "hover drones, targeting marks, sleek armor", "alert and tactical"],
+        ["virus", "biohazard sigils, green corruption, crawling data noise", "infectious and wrong"],
+        ["signal", "waveforms, radio arcs, transmission distortion", "searching and unstable"]
+      ]
+    },
+    {
+      "slug": "roles",
+      "label": "Roles",
+      "accent": "#fb7185",
+      "words": [
+        ["queen", "crown, regal silk, commanding posture", "authoritative and glamorous"],
+        ["knight", "armor pieces, heraldic trim, noble focus", "protective and brave"],
+        ["pirate", "eyepatch motif, sea coat, treasure jewelry", "reckless and charming"],
+        ["nurse", "clean white accents, medical trim, calm gaze", "caring and clinical"],
+        ["detective", "trench coat, magnifier motif, noir shadows", "suspicious and smart"],
+        ["idol", "stage sparkle, microphone charm, star accessories", "cheerful and polished"],
+        ["chef", "chef coat details, warm kitchen light, ribbon apron", "hearty and organized"],
+        ["pilot", "aviator jacket, cockpit lights, wind visor", "confident and adventurous"],
+        ["priest", "clerical trim, sacred stole, prayer hands motif", "calm and judgemental"],
+        ["guard", "shield emblem, uniform trim, disciplined silhouette", "firm and dependable"]
+      ]
+    },
+    {
+      "slug": "moods",
+      "label": "Moods",
+      "accent": "#f59e0b",
+      "words": [
+        ["joy", "bright smile, sunlit cheeks, celebratory confetti", "happy and open"],
+        ["anger", "sharp brows, heat haze, red aura", "furious and explosive"],
+        ["sorrow", "teary shine, blue shadows, soft rain", "melancholic and tender"],
+        ["fear", "wide eyes, trembling light, dark vignette", "frightened and fragile"],
+        ["envy", "green sheen, side glare, grasping shadows", "covetous and bitter"],
+        ["greed", "gold chains, coin gleam, hungry reach", "possessive and hungry"],
+        ["pride", "lifted chin, luxury fabric, polished aura", "grand and self-assured"],
+        ["mercy", "soft glow, open hands, pale gold cloth", "gentle and forgiving"],
+        ["panic", "motion blur, broken lines, alarm red accents", "overwhelmed and frantic"],
+        ["calm", "balanced posture, smooth gradients, soft blue haze", "still and centered"]
+      ]
+    },
+    {
+      "slug": "materials",
+      "label": "Materials",
+      "accent": "#94a3b8",
+      "words": [
+        ["glass", "glass shards, transparent sheen, reflective edges", "fragile and precise"],
+        ["gold", "gold filigree, warm luxury, metallic shine", "rich and radiant"],
+        ["silver", "silver trim, moonlike metal, cool highlights", "refined and sharp"],
+        ["obsidian", "obsidian plates, glossy black stone, crimson glints", "heavy and threatening"],
+        ["porcelain", "porcelain skin, delicate cracks, lacquer shine", "delicate and eerie"],
+        ["velvet", "velvet folds, deep fabric shadows, soft luster", "luxurious and intimate"],
+        ["paper", "paper charms, folded cranes, ink texture", "light and handmade"],
+        ["ink", "ink trails, calligraphy splashes, black gradients", "artistic and severe"],
+        ["smoke", "smoke curls, dissolving edges, ash glow", "fleeting and dangerous"],
+        ["honey", "amber syrup, sticky shine, golden drops", "sweet and possessive"]
+      ]
+    }
+  ]
+}

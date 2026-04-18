@@ -1,0 +1,145 @@
+{
+  "updatedAt": "2026-04-18",
+  "rootPolicy": {
+    "projectRoots": [
+      "apps",
+      "packages",
+      "game_DEV",
+      "kr-paper-trader-v1",
+      "magic_toss",
+      "magical_potion_toss",
+      "mobile-suite",
+      "new-project",
+      "nibel_arena_counter",
+      "nibel_arena_counter_uploader",
+      "pojet",
+      "starter",
+      "toss-game-rebuilds",
+      "unity-mcptest"
+    ],
+    "sharedHubs": [
+      "shared-assets",
+      "research",
+      "data"
+    ]
+  },
+  "groups": [
+    {
+      "name": "root-monorepo",
+      "entries": [
+        {
+          "id": "tong-web",
+          "path": "apps/web",
+          "type": "vite-react-app"
+        },
+        {
+          "id": "tong-worker",
+          "path": "apps/worker",
+          "type": "cloudflare-worker"
+        },
+        {
+          "id": "tong-worklog-web",
+          "path": "apps/worklog-web",
+          "type": "vite-react-app"
+        },
+        {
+          "id": "tong-worklog-server",
+          "path": "apps/worklog-server",
+          "type": "node-service"
+        },
+        {
+          "id": "tong-shared",
+          "path": "packages/shared",
+          "type": "shared-typescript-package"
+        }
+      ]
+    },
+    {
+      "name": "standalone-projects",
+      "entries": [
+        {
+          "id": "kr-paper-trader-v1",
+          "path": "kr-paper-trader-v1",
+          "type": "standalone-project"
+        },
+        {
+          "id": "magic-toss",
+          "path": "magic_toss",
+          "type": "standalone-project"
+        },
+        {
+          "id": "magical-potion-toss",
+          "path": "magical_potion_toss",
+          "type": "standalone-project"
+        },
+        {
+          "id": "mobile-suite",
+          "path": "mobile-suite",
+          "type": "standalone-project"
+        },
+        {
+          "id": "new-project",
+          "path": "new-project",
+          "type": "standalone-project"
+        },
+        {
+          "id": "nibel-arena-counter",
+          "path": "nibel_arena_counter",
+          "type": "standalone-project"
+        },
+        {
+          "id": "nibel-arena-counter-uploader",
+          "path": "nibel_arena_counter_uploader",
+          "type": "standalone-project"
+        },
+        {
+          "id": "pojet",
+          "path": "pojet",
+          "type": "standalone-project"
+        },
+        {
+          "id": "starter",
+          "path": "starter",
+          "type": "template-factory"
+        },
+        {
+          "id": "toss-game-rebuilds",
+          "path": "toss-game-rebuilds",
+          "type": "prototype-bundle"
+        },
+        {
+          "id": "unity-mcptest",
+          "path": "unity-mcptest",
+          "type": "unity-project"
+        }
+      ]
+    },
+    {
+      "name": "incubator-projects",
+      "root": "game_DEV",
+      "entries": [
+        { "id": "mobile-saju-fortune", "path": "game_DEV/mobile-saju-fortune" },
+        { "id": "mobile-saju-fortune-toss", "path": "game_DEV/mobile-saju-fortune-toss" },
+        { "id": "mobile-saju-fortune-toss-10pass", "path": "game_DEV/mobile-saju-fortune-toss-10pass" },
+        { "id": "mobile-breaking-block-augment", "path": "game_DEV/mobile-breaking-block-augment" },
+        { "id": "mobile-breaking-block-augment-toss", "path": "game_DEV/mobile-breaking-block-augment-toss" },
+        { "id": "merge-tactics", "path": "game_DEV/merge_tactics" },
+        { "id": "merge-tactics-ascii", "path": "game_DEV/merge_tactics_ascii" },
+        { "id": "text-choice-frame-studio", "path": "game_DEV/text-choice-frame-studio" },
+        { "id": "word-morph-lab", "path": "game_DEV/word-morph-lab" },
+        { "id": "word-morph-lab-serial-30pass", "path": "game_DEV/word-morph-lab-serial-30pass" },
+        { "id": "pc-choice-ugc", "path": "game_DEV/pc-choice-ugc" },
+        { "id": "novel-zombie-line2-train", "path": "game_DEV/novel-zombie-line2-train" },
+        { "id": "ugc-python-steam", "path": "game_DEV/ugc-python-steam" }
+      ]
+    },
+    {
+      "name": "shared-hubs",
+      "entries": [
+        { "id": "shared-assets", "path": "shared-assets" },
+        { "id": "research", "path": "research" },
+        { "id": "data", "path": "data" }
+      ]
+    }
+  ]
+}

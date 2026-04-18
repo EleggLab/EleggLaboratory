@@ -185,8 +185,12 @@ export type PersistentLastRun =
       kind: 'result';
       outcome: {
         inkReward: number;
+        masteryGain: number;
         notesReward: number;
+        resultLabel: string;
         savedAt: number;
+        schoolId: SchoolId;
+        summary: string;
         stageId: string;
         status: 'victory' | 'defeat';
       };
@@ -215,4 +219,3 @@ export type GameIdentity = {
     | 'fallback-invalid-category'
     | 'fallback-runtime-error';
 };
-

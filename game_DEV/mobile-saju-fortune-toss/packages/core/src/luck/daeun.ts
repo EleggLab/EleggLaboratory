@@ -1,4 +1,5 @@
-﻿import { Solar } from 'lunar-javascript';
+// @ts-expect-error lunar-javascript does not publish official type definitions.
+import { Solar } from 'lunar-javascript';
 import type { FourPillars, Gender, LuckComputationModel, LuckCycle } from '../types';
 import { STEM_TO_ELEMENT, STEM_TO_YINYANG } from '../ganji/constants';
 import { getSexagenaryByIndex, getSexagenaryIndex, splitPillar } from '../ganji/sexagenary';

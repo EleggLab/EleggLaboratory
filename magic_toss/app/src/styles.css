@@ -228,6 +228,53 @@ button {
   margin-bottom: 8px;
 }
 
+.class-brief {
+  gap: 12px;
+}
+
+.class-brief h2 {
+  margin: 6px 0 8px;
+}
+
+.lesson-tag-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.lesson-tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.76rem;
+  color: #f2ecff;
+}
+
+.lesson-preview-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.lesson-preview-list div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.lesson-cta {
+  margin-top: 14px;
+  color: #ffd7b9;
+  font-size: 0.94rem;
+}
+
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -317,6 +364,44 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.battle-objective-card {
+  display: grid;
+  gap: 12px;
+  border-radius: 20px;
+  padding: 14px 16px;
+  background:
+    radial-gradient(circle at right top, rgba(255, 156, 108, 0.16), transparent 34%),
+    rgba(18, 12, 34, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.battle-objective-copy {
+  display: grid;
+  gap: 6px;
+}
+
+.battle-objective-copy strong {
+  line-height: 1.4;
+}
+
+.battle-objective-progress {
+  display: grid;
+  gap: 8px;
+}
+
+.battle-objective-track {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.battle-objective-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff976e, #8e9cff);
+}
+
 .battle-canvas {
   width: 100%;
   max-height: min(72vh, 720px);
@@ -367,6 +452,53 @@ button {
 
 .overlay-card h2 {
   margin: 8px 0 18px;
+}
+
+.choice-card {
+  display: grid;
+  gap: 10px;
+}
+
+.choice-card-head {
+  display: grid;
+  gap: 6px;
+}
+
+.choice-card-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.76rem;
+  color: #f6f1ff;
+}
+
+.choice-card-meta {
+  color: rgba(246, 244, 255, 0.64);
+  font-size: 0.82rem;
+}
+
+.choice-card-hint {
+  color: #ffd7bc;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.choice-card.is-spell {
+  border-color: rgba(255, 151, 110, 0.28);
+  background: linear-gradient(180deg, rgba(255, 151, 110, 0.12), rgba(255, 255, 255, 0.04));
+}
+
+.choice-card.is-passive {
+  border-color: rgba(142, 156, 255, 0.3);
+  background: linear-gradient(180deg, rgba(142, 156, 255, 0.12), rgba(255, 255, 255, 0.04));
+}
+
+.choice-card.is-relic {
+  border-color: rgba(255, 227, 134, 0.3);
+  background: linear-gradient(180deg, rgba(255, 227, 134, 0.12), rgba(255, 255, 255, 0.04));
 }
 
 .result-hero {

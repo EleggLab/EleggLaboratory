@@ -1,0 +1,44 @@
+{
+  "name": "saju-fortune",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.ts",
+  "scripts": {
+    "dev": "granite dev",
+    "start": "granite dev",
+    "build": "granite build",
+    "typecheck": "tsc --noEmit",
+    "test": "tsc --noEmit",
+    "verify:sources": "pnpm --filter @saju/tools check:sources",
+    "verify:cross": "pnpm --filter @saju/tools verify:cross",
+    "verify:kasi": "pnpm --filter @saju/tools verify:kasi",
+    "research:collect": "pnpm --filter @saju/tools collect:research",
+    "research:competitors": "pnpm --filter @saju/tools collect:competitors",
+    "research:web-competitors": "pnpm --filter @saju/tools collect:web-competitors",
+    "research:taaft-2024": "pnpm --filter @saju/tools collect:taaft-2024",
+    "research:web-curated": "pnpm --filter @saju/tools curate:web-research-2024",
+    "verify:assets": "pnpm --filter @saju/tools check:assets",
+    "optimize:assets": "pnpm --filter @saju/tools optimize:assets",
+    "qa:regression": "pnpm --filter @saju/tools qa:regression",
+    "vectors:refresh": "pnpm --filter @saju/tools refresh:vectors"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.26.0",
+    "@apps-in-toss/framework": "1.14.1",
+    "@granite-js/native": "1.0.7",
+    "@granite-js/plugin-router": "1.0.7",
+    "@granite-js/react-native": "1.0.7",
+    "@react-native-async-storage/async-storage": "1.23.1",
+    "korean-lunar-calendar": "^0.3.6",
+    "lunar-javascript": "^1.7.7",
+    "manseryeok": "^1.0.1",
+    "react": "18.2.0",
+    "react-native": "0.72.6",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "babel-plugin-module-resolver": "^5.0.2",
+    "typescript": "^5.7.3"
+  }
+}

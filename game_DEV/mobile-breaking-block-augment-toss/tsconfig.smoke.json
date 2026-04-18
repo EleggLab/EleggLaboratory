@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": ".granite/smoke-check",
+    "rootDir": ".",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "isolatedModules": false
+  },
+  "include": ["src/game/**/*.ts", "scripts/engine-smoke.ts"]
+}

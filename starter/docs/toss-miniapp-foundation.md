@@ -1,5 +1,7 @@
 # Toss Miniapp RN Foundation
 
+Last reviewed: `2026-03-28`
+
 This note defines the shared baseline for new non-game Toss miniapps built with React Native, Granite, and App-in-Toss.
 
 The current repository baseline is intentionally for the non-game lane only. Games should be planned and released as a separate lane because their stack, QA rules, runtime APIs, and review criteria differ materially.
@@ -31,6 +33,11 @@ The current repository baseline is intentionally for the non-game lane only. Gam
 - `2025-12-05`: `ait deploy` CLI upload support was added for CI/CD.
 - `2026-03-31`: the temporary `0%` Toss fee promotion for in-app ad settlement ends on this date, per the settlement guide.
 
+## Support Matrix
+- Windows local: use it for starter generation, dependency install, `typecheck`, and release-env validation.
+- CI, WSL, macOS, and Linux: treat these as the release-grade environments for `.ait` build verification.
+- Windows local `.ait` build failures should be treated as toolchain constraints unless the same build fails in a supported environment.
+
 ## Lane Split
 ### Non-game app lane
 - Default stack: React Native + Granite + TDS + App-in-Toss SDK `2.0.5`
@@ -61,9 +68,9 @@ The current repository baseline is intentionally for the non-game lane only. Gam
 
 ## Market Signals To Use In Planning
 - The Apps in Toss public site currently says the service can reach `29,000,000` cumulative users, sourced to Toss internal data through the end of July 2025.
-- The developer overview currently says partners can expose services to `3,000만` cumulative Toss users.
+- The developer overview currently says partners can expose services to roughly `30 million` cumulative Toss users.
 - The official overview says games usually launch in `2 to 4 weeks`, while non-game services usually take `2 to 3 months`.
-- The October 15, 2025 Tossfeed milestone said App-in-Toss crossed `200` partner miniapps in the first `100` days, with about `260만` cumulative users, `1,500만` cumulative pageviews, and average dwell time of about `6.7` minutes.
+- The October 15, 2025 Tossfeed milestone said App-in-Toss crossed `200` partner miniapps in the first `100` days, with about `2.6 million` cumulative users, `15 million` cumulative pageviews, and average dwell time of about `6.7` minutes.
 - The January 30, 2026 webinar recap said Toss analyzed `300+` game datasets and highlighted instant-launch HTML5 services as a major growth pattern.
 
 ## Follow-up Docs

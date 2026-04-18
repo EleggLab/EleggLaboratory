@@ -25,6 +25,7 @@ function pickNextLine(current: string): string {
 }
 
 export default function HomeScreen(): React.JSX.Element {
+  console.log('[astra:toss] HomeScreen render:start');
   const miniNavigation = useMiniNavigation();
   const { tabPressToken } = useMiniRouteSignals();
   const [lineText, setLineText] = useState(
@@ -72,6 +73,10 @@ export default function HomeScreen(): React.JSX.Element {
   const handleNextLine = (): void => {
     animateBubble(pickNextLine(lineText));
   };
+
+  useEffect(() => {
+    console.log('[astra:toss] HomeScreen mounted');
+  }, []);
 
   useEffect(() => {
     if (!tabPressToken || handledTabPressToken.current === tabPressToken) return;

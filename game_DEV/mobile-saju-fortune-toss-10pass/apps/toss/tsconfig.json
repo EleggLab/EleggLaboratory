@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "noEmit": true,
+    "types": ["react", "react-native"]
+  },
+  "include": ["pages/**/*", "src/**/*", "granite.config.ts", "require.context.ts"],
+  "exclude": [
+    "src/legacy/app/**/_layout.tsx",
+    "src/legacy/app/(tabs)/_components/GameTabBar.tsx"
+  ]
+}

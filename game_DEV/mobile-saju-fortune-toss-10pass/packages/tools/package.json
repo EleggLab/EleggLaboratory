@@ -1,0 +1,41 @@
+{
+  "name": "@saju/tools",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx src/sources-check.ts",
+    "lint": "echo 'no lint for @saju/tools'",
+    "verify:kasi": "tsx src/verify-kasi.ts",
+    "verify:cross": "tsx src/verify-cross.ts",
+    "check:sources": "tsx src/sources-check.ts",
+    "collect:research": "tsx src/collect-research-links.ts",
+    "collect:competitors": "tsx src/collect-competitors-2024.ts",
+    "collect:web-competitors": "tsx src/collect-web-competitors-2024.ts",
+    "collect:taaft-2024": "tsx src/collect-taaft-spiritual-2024.ts",
+    "curate:web-research-2024": "tsx src/curate-web-research-2024.ts",
+    "prepare:astra": "python src/prepare-astra-assets.py",
+    "check:assets": "tsx src/check-mobile-assets.ts",
+    "optimize:assets": "python src/optimize-mobile-assets.py",
+    "qa:regression": "tsx src/qa-regression.ts",
+    "refresh:vectors": "tsx src/refresh-vectors.ts"
+  },
+  "dependencies": {
+    "@saju/core": "workspace:*",
+    "@saju/data": "workspace:*",
+    "dotenv": "^16.4.5",
+    "google-play-scraper": "10.1.2",
+    "korean-lunar-calendar": "^0.3.6",
+    "lunar-javascript": "^1.7.7",
+    "manseryeok": "^1.0.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

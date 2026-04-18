@@ -1,6 +1,6 @@
 # Toss App Vs Game Strategy
 
-This note separates the two product lanes that now coexist in App-in-Toss. It is based on official Toss developer documentation and public Toss announcements reviewed on `2026-03-27`.
+This note separates the two product lanes that now coexist in App-in-Toss. It is based on official Toss developer documentation and public Toss announcements reviewed on `2026-03-28`.
 
 ## Why The Lanes Must Be Separate
 - The developer FAQ and overview distinguish `게임` and `비게임` on planning, launch timing, and registration inputs.

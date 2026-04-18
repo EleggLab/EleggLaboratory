@@ -8,11 +8,12 @@
   "type": "commonjs",
   "license": "MIT",
   "scripts": {
-    "verify": "bash scripts/verify.sh .",
+    "verify": "node scripts/vibe-starter.js verify .",
     "init:web": "node scripts/vibe-starter.js init webapp demo-web",
     "init:bot": "node scripts/vibe-starter.js init bot demo-bot",
     "init:cli": "node scripts/vibe-starter.js init cli demo-cli",
     "init:mobile": "node scripts/vibe-starter.js init mobile demo-mobile",
-    "init:toss": "node scripts/vibe-starter.js init toss-rn-miniapp demo-toss-miniapp"
+    "init:toss": "node scripts/vibe-starter.js init toss-rn-miniapp demo-toss-miniapp",
+    "smoke:toss": "node scripts/smoke-test-toss-rn-miniapp.mjs"
   }
 }

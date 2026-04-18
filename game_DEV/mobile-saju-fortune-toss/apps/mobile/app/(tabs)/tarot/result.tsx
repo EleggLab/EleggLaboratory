@@ -1,6 +1,6 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
-import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Image, Pressable, StyleSheet, Text, View, type ImageSourcePropType } from 'react-native';
 
 import { spreadFor, TAROT_DECK, type TarotReadingType } from '../../../lib/features/tarot/deck';
 import { TAROT_IMAGE_CROP, tarotImageSource } from '../../../lib/features/tarot/imageSource';
@@ -10,6 +10,12 @@ import { commonStyles } from '../../../lib/ui/commonStyles';
 import { ScreenScroll } from '../../../lib/ui/ScreenScroll';
 import { UI } from '../../../lib/ui/tokens';
 import SectionCard from '../_components/SectionCard';
+
+type ResolvedTarotCard = {
+  def: (typeof TAROT_DECK)[number];
+  reversed: boolean;
+  imageSource: ImageSourcePropType | null;
+};
 
 function isReadingType(value: string | undefined): value is TarotReadingType {
   return value === 'today' || value === 'love' || value === 'money' || value === 'relationship' || value === 'study';
@@ -135,18 +141,62 @@ export default function TarotResult(): React.JSX.Element {
     };
   }, [drawn, type]);
 
-  const readingText = useMemo(() => (drawn ? buildReading(type, drawn) : ''), [drawn, type]);
+  const readingState = useMemo(() => {
+    try {
+      return {
+        text: drawn ? buildReading(type, drawn) : '',
+        error: '',
+      };
+    } catch (error) {
+      console.error('TAROT_RESULT_READING_ERROR', error);
+      return {
+        text: '',
+        error: '타로 결과를 정리하는 중 문제가 생겼어요. 다시 카드를 골라주세요.',
+      };
+    }
+  }, [drawn, type]);
 
-  const drawnDefs = useMemo(() => {
-    if (!drawn) return [];
-    return drawn
-      .map((d) => {
-        const def = TAROT_DECK.find((c) => c.id === d.id);
-        if (!def) return null;
-        return { def, reversed: d.reversed };
-      })
-      .filter(Boolean) as Array<{ def: (typeof TAROT_DECK)[number]; reversed: boolean }>;
+  const drawnDefsState = useMemo(() => {
+    if (!drawn) {
+      return {
+        cards: [] as ResolvedTarotCard[],
+        error: '',
+      };
+    }
+
+    try {
+      const cards = drawn
+        .map((d) => {
+          const def = TAROT_DECK.find((c) => c.id === d.id);
+          if (!def) return null;
+
+          let imageSource: ImageSourcePropType | null = null;
+          try {
+            imageSource = typeof tarotImageSource === 'function' ? tarotImageSource(def) : null;
+          } catch (error) {
+            console.error('TAROT_RESULT_IMAGE_SOURCE_ERROR', def.id, error);
+          }
+
+          return { def, reversed: d.reversed, imageSource };
+        })
+        .filter(Boolean) as ResolvedTarotCard[];
+
+      return {
+        cards,
+        error: '',
+      };
+    } catch (error) {
+      console.error('TAROT_RESULT_CARD_RESOLVE_ERROR', error);
+      return {
+        cards: [] as ResolvedTarotCard[],
+        error: '타로 카드 정보를 불러오는 중 문제가 생겼어요. 다시 시도해주세요.',
+      };
+    }
   }, [drawn]);
+
+  const drawnDefs = drawnDefsState.cards;
+  const readingText = readingState.text;
+  const screenError = loadError || drawnDefsState.error || readingState.error;
 
   const cardsLayout = drawnDefs.length === 1 ? 'single' : drawnDefs.length === 3 ? 'three' : 'grid';
 
@@ -156,7 +206,7 @@ export default function TarotResult(): React.JSX.Element {
         <Text style={styles.heroLine}>카드의 정·역 방향을 그대로 반영해 결과를 보여줘요.</Text>
       </View>
 
-      {loadError ? <Text style={styles.error}>{loadError}</Text> : null}
+      {screenError ? <Text style={styles.error}>{screenError}</Text> : null}
 
       {drawnDefs.length > 0 ? (
         <SectionCard title="뽑은 카드">
@@ -167,7 +217,7 @@ export default function TarotResult(): React.JSX.Element {
               cardsLayout === 'three' && styles.cardsRowThree,
             ]}
           >
-            {drawnDefs.map(({ def, reversed }) => (
+            {drawnDefs.map(({ def, reversed, imageSource }) => (
               <View
                 key={def.id}
                 style={[
@@ -178,20 +228,26 @@ export default function TarotResult(): React.JSX.Element {
               >
                 <View style={styles.cardFrame}>
                   <View style={styles.cardFrameInner}>
-                    <Image
-                      source={tarotImageSource(def)}
-                      style={[
-                        styles.cardImg,
-                        {
-                          transform: [
-                            { scale: TAROT_IMAGE_CROP.scale },
-                            { translateY: TAROT_IMAGE_CROP.translateY },
-                            ...(reversed ? ([{ rotate: '180deg' }] as const) : []),
-                          ],
-                        },
-                      ]}
-                      resizeMode="contain"
-                    />
+                    {imageSource ? (
+                      <Image
+                        source={imageSource}
+                        style={[
+                          styles.cardImg,
+                          {
+                            transform: [
+                              { scale: TAROT_IMAGE_CROP.scale },
+                              { translateY: TAROT_IMAGE_CROP.translateY },
+                              ...(reversed ? ([{ rotate: '180deg' }] as const) : []),
+                            ],
+                          },
+                        ]}
+                        resizeMode="contain"
+                      />
+                    ) : (
+                      <View style={styles.cardFallback}>
+                        <Text style={styles.cardFallbackText}>{def.nameKo}</Text>
+                      </View>
+                    )}
                   </View>
                 </View>
                 <Text style={styles.cardName}>
@@ -291,6 +347,20 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
+  cardFallback: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 12,
+    backgroundColor: '#f7f1e7',
+  },
+  cardFallbackText: {
+    color: UI.colors.ink,
+    fontSize: 13,
+    fontWeight: '900',
+    textAlign: 'center',
+    lineHeight: 18,
+  },
   cardName: {
     color: UI.colors.text,
     fontWeight: '900',
@@ -331,4 +401,3 @@ const styles = StyleSheet.create({
     transform: [{ scale: 0.99 }],
   },
 });
-

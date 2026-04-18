@@ -12,25 +12,25 @@ $cards = @(
     Output = 'app-logo.png'
     Width = 600
     Height = 600
-    Background = $null
-    Title = 'FORTUNE SUITE'
-    Subtitle = 'SAJU TAROT ICHING TODAY'
+    Background = $iconPath
+    Title = $null
+    Subtitle = $null
   },
   @{
     Output = 'thumbnail-square.png'
     Width = 1000
     Height = 1000
     Background = (Join-Path $sourceRoot 'backgrounds\bg-saju.png')
-    Title = 'FORTUNE SUITE'
-    Subtitle = 'SAJU TAROT ICHING TODAY'
+    Title = 'ASTRA'
+    Subtitle = 'TODAY''S FORTUNE COMPANION'
   },
   @{
     Output = 'thumbnail-landscape.png'
     Width = 1932
     Height = 828
     Background = (Join-Path $sourceRoot 'backgrounds\bg-daily.png')
-    Title = 'FORTUNE SUITE'
-    Subtitle = 'DAILY FLOW TO DEEP READINGS'
+    Title = 'ASTRA'
+    Subtitle = 'FORTUNE FROM DAILY FLOW TO DEEP READINGS'
   },
   @{
     Output = 'screenshot-portrait-1.png'
@@ -98,57 +98,68 @@ foreach ($card in $cards) {
   if ($card.Background -and (Test-Path $card.Background)) {
     $background = [System.Drawing.Image]::FromFile($card.Background)
     Draw-CoverImage -Graphics $graphics -Image $background -TargetWidth $card.Width -TargetHeight $card.Height
-    $overlayBrush = New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(120, 13, 13, 13))
-    $graphics.FillRectangle($overlayBrush, 0, 0, $card.Width, $card.Height)
-    $overlayBrush.Dispose()
+    if ($card.Title) {
+      $overlayBrush = New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(120, 13, 13, 13))
+      $graphics.FillRectangle($overlayBrush, 0, 0, $card.Width, $card.Height)
+      $overlayBrush.Dispose()
+    }
     $background.Dispose()
   }
 
-  $panelWidth = [Math]::Round($card.Width * 0.78)
-  $panelHeight = [Math]::Round($card.Height * 0.38)
-  $panelX = [Math]::Round(($card.Width - $panelWidth) / 2)
-  $panelY = [Math]::Round($card.Height * 0.47)
-  $panelBrush = New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(180, 18, 18, 18))
-  $graphics.FillRectangle($panelBrush, $panelX, $panelY, $panelWidth, $panelHeight)
+  $panelBrush = $null
+  $centerFormat = $null
+  $whiteBrush = $null
+  $goldBrush = $null
+  $subtitleFont = $null
+  $titleFont = $null
 
-  $iconSize = [Math]::Round([Math]::Min($card.Width, $card.Height) * 0.24)
-  if ($card.Width -ge 1000) {
-    $iconSize = [Math]::Round([Math]::Min($card.Width, $card.Height) * 0.22)
+  if ($card.Title) {
+    $panelWidth = [Math]::Round($card.Width * 0.78)
+    $panelHeight = [Math]::Round($card.Height * 0.38)
+    $panelX = [Math]::Round(($card.Width - $panelWidth) / 2)
+    $panelY = [Math]::Round($card.Height * 0.47)
+    $panelBrush = New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(180, 18, 18, 18))
+    $graphics.FillRectangle($panelBrush, $panelX, $panelY, $panelWidth, $panelHeight)
+
+    $iconSize = [Math]::Round([Math]::Min($card.Width, $card.Height) * 0.24)
+    if ($card.Width -ge 1000) {
+      $iconSize = [Math]::Round([Math]::Min($card.Width, $card.Height) * 0.22)
+    }
+    $iconX = [Math]::Round(($card.Width - $iconSize) / 2)
+    $iconY = [Math]::Round($card.Height * 0.12)
+    $graphics.DrawImage($icon, $iconX, $iconY, $iconSize, $iconSize)
+
+    $titleFontSize = [Math]::Round([Math]::Min($card.Width, $card.Height) * 0.08)
+    $subtitleFontSize = [Math]::Round([Math]::Min($card.Width, $card.Height) * 0.035)
+    if ($card.Width -gt $card.Height) {
+      $titleFontSize = [Math]::Round($card.Height * 0.16)
+      $subtitleFontSize = [Math]::Round($card.Height * 0.06)
+    }
+
+    $titleFont = New-Object System.Drawing.Font 'Segoe UI', $titleFontSize, ([System.Drawing.FontStyle]::Bold)
+    $subtitleFont = New-Object System.Drawing.Font 'Segoe UI', $subtitleFontSize, ([System.Drawing.FontStyle]::Regular)
+    $goldBrush = New-ColorBrush '#F7C948'
+    $whiteBrush = New-ColorBrush '#F5F1E8'
+
+    $titleRect = New-Object System.Drawing.RectangleF ($panelX + 32), ($panelY + 28), ($panelWidth - 64), ($panelHeight * 0.36)
+    $subtitleRect = New-Object System.Drawing.RectangleF ($panelX + 32), ($panelY + ($panelHeight * 0.46)), ($panelWidth - 64), ($panelHeight * 0.34)
+    $centerFormat = New-Object System.Drawing.StringFormat
+    $centerFormat.Alignment = [System.Drawing.StringAlignment]::Center
+    $centerFormat.LineAlignment = [System.Drawing.StringAlignment]::Center
+
+    $graphics.DrawString($card.Title, $titleFont, $goldBrush, $titleRect, $centerFormat)
+    $graphics.DrawString($card.Subtitle, $subtitleFont, $whiteBrush, $subtitleRect, $centerFormat)
   }
-  $iconX = [Math]::Round(($card.Width - $iconSize) / 2)
-  $iconY = [Math]::Round($card.Height * 0.12)
-  $graphics.DrawImage($icon, $iconX, $iconY, $iconSize, $iconSize)
-
-  $titleFontSize = [Math]::Round([Math]::Min($card.Width, $card.Height) * 0.08)
-  $subtitleFontSize = [Math]::Round([Math]::Min($card.Width, $card.Height) * 0.035)
-  if ($card.Width -gt $card.Height) {
-    $titleFontSize = [Math]::Round($card.Height * 0.16)
-    $subtitleFontSize = [Math]::Round($card.Height * 0.06)
-  }
-
-  $titleFont = New-Object System.Drawing.Font 'Segoe UI', $titleFontSize, ([System.Drawing.FontStyle]::Bold)
-  $subtitleFont = New-Object System.Drawing.Font 'Segoe UI', $subtitleFontSize, ([System.Drawing.FontStyle]::Regular)
-  $goldBrush = New-ColorBrush '#F7C948'
-  $whiteBrush = New-ColorBrush '#F5F1E8'
-
-  $titleRect = New-Object System.Drawing.RectangleF ($panelX + 32), ($panelY + 28), ($panelWidth - 64), ($panelHeight * 0.36)
-  $subtitleRect = New-Object System.Drawing.RectangleF ($panelX + 32), ($panelY + ($panelHeight * 0.46)), ($panelWidth - 64), ($panelHeight * 0.34)
-  $centerFormat = New-Object System.Drawing.StringFormat
-  $centerFormat.Alignment = [System.Drawing.StringAlignment]::Center
-  $centerFormat.LineAlignment = [System.Drawing.StringAlignment]::Center
-
-  $graphics.DrawString($card.Title, $titleFont, $goldBrush, $titleRect, $centerFormat)
-  $graphics.DrawString($card.Subtitle, $subtitleFont, $whiteBrush, $subtitleRect, $centerFormat)
 
   $outputPath = Join-Path $assetsRoot $card.Output
   $bitmap.Save($outputPath, [System.Drawing.Imaging.ImageFormat]::Png)
 
-  $centerFormat.Dispose()
-  $whiteBrush.Dispose()
-  $goldBrush.Dispose()
-  $subtitleFont.Dispose()
-  $titleFont.Dispose()
-  $panelBrush.Dispose()
+  if ($centerFormat) { $centerFormat.Dispose() }
+  if ($whiteBrush) { $whiteBrush.Dispose() }
+  if ($goldBrush) { $goldBrush.Dispose() }
+  if ($subtitleFont) { $subtitleFont.Dispose() }
+  if ($titleFont) { $titleFont.Dispose() }
+  if ($panelBrush) { $panelBrush.Dispose() }
   $backgroundBrush.Dispose()
   $graphics.Dispose()
   $bitmap.Dispose()

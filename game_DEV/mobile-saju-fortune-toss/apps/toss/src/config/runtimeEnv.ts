@@ -10,10 +10,13 @@ function readBoolean(name: string, fallback: boolean): boolean {
 }
 
 export const TOSS_RUNTIME_ENV = {
-  appName: readString('TOSS_APP_NAME', 'fortune-suite'),
-  brandDisplayName: readString('TOSS_BRAND_DISPLAY_NAME', '종합 운세'),
+  appName: readString('TOSS_APP_NAME', 'astra'),
+  brandDisplayName: readString('TOSS_BRAND_DISPLAY_NAME', 'Astra: Fortune'),
   brandPrimaryColor: readString('TOSS_BRAND_PRIMARY_COLOR', '#F7C948'),
-  brandIconUrl: readString('TOSS_BRAND_ICON_URL', 'https://placehold.co/512x512/png?text=fortune-suite'),
+  brandIconUrl: readString(
+    'TOSS_BRAND_ICON_URL',
+    'https://raw.githubusercontent.com/EleggLab/EleggLaboratory/main/game_DEV/mobile-saju-fortune-toss/apps/mobile/assets/app-icon.png',
+  ),
   enableBannerAds: readBoolean('TOSS_ENABLE_BANNER_ADS', false),
   ads: {
     homeBannerId: readString('TOSS_AD_HOME_BANNER_ID', ''),

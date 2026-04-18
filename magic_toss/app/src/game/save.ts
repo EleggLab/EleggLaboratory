@@ -10,6 +10,42 @@ export const SAVE_VERSION = 1;
 
 const SAVE_PREFIX = 'magic-toss-save';
 
+function readLocalStorage(key: string) {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
+  try {
+    return window.localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+}
+
+function writeLocalStorage(key: string, value: string) {
+  if (typeof window === 'undefined') {
+    return;
+  }
+
+  try {
+    window.localStorage.setItem(key, value);
+  } catch {
+    // Ignore storage failures and keep the session playable.
+  }
+}
+
+function removeLocalStorage(key: string) {
+  if (typeof window === 'undefined') {
+    return;
+  }
+
+  try {
+    window.localStorage.removeItem(key);
+  } catch {
+    // Ignore storage failures and fall back to in-memory progress.
+  }
+}
+
 function buildDefaultMastery(): Record<SchoolId, number> {
   return {
     flame: 0,
@@ -34,11 +70,7 @@ export function createDefaultSave(): PersistentSave {
 }
 
 export function loadSave(userKey: string): PersistentSave {
-  if (typeof window === 'undefined') {
-    return createDefaultSave();
-  }
-
-  const raw = window.localStorage.getItem(`${SAVE_PREFIX}:${userKey}`);
+  const raw = readLocalStorage(`${SAVE_PREFIX}:${userKey}`);
   if (!raw) {
     return createDefaultSave();
   }
@@ -68,18 +100,11 @@ export function loadSave(userKey: string): PersistentSave {
 }
 
 export function saveProgress(userKey: string, data: PersistentSave): void {
-  if (typeof window === 'undefined') {
-    return;
-  }
-
-  window.localStorage.setItem(`${SAVE_PREFIX}:${userKey}`, JSON.stringify(data));
+  writeLocalStorage(`${SAVE_PREFIX}:${userKey}`, JSON.stringify(data));
 }
 
 export function clearSave(userKey: string): PersistentSave {
-  if (typeof window !== 'undefined') {
-    window.localStorage.removeItem(`${SAVE_PREFIX}:${userKey}`);
-  }
-
+  removeLocalStorage(`${SAVE_PREFIX}:${userKey}`);
   return createDefaultSave();
 }
 
@@ -151,4 +176,3 @@ export function buyLibraryUpgrade(save: PersistentSave, upgradeId: string): Pers
     },
   };
 }
-

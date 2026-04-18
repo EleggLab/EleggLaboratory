@@ -1,0 +1,15 @@
+{
+  "version": "tenGods.v1",
+  "description": "Ten gods are computed from day master element relation plus yin/yang parity.",
+  "polarityRule": {
+    "sameElement": { "same": "\ube44\uacac", "different": "\uac81\uc7ac" },
+    "output": { "same": "\uc2dd\uc2e0", "different": "\uc0c1\uad00" },
+    "wealth": { "same": "\ud3b8\uc7ac", "different": "\uc815\uc7ac" },
+    "power": { "same": "\ud3b8\uad00", "different": "\uc815\uad00" },
+    "resource": { "same": "\ud3b8\uc778", "different": "\uc815\uc778" }
+  },
+  "sourceUrls": [
+    "https://github.com/yhj1024/manseryeok",
+    "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+  ]
+}

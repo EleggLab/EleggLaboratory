@@ -1,300 +1,105 @@
 {
   "version": 1,
   "meta": {
-<<<<<<< Updated upstream
-    "title": "기본 텍스트 템플릿",
-    "author": "",
+    "title": "Archive Sector Report",
+    "author": "Sample Writer",
+    "premise": "A quiet archive opens one sealed record, and the player must choose between dangerous truth and fragile safety before the system erases both.",
     "start_node_id": "intro"
   },
-=======
-    "title": "Text Frame Starter",
-    "author": "",
-    "pitch": "A simple branching text frame focused on incident, choice, consequence, and ending.",
-    "default_language": "ko",
-    "start_node_id": "intro"
-  },
-  "stats": [
-    {
-      "id": "survival",
-      "label": "생존",
-      "default": 1,
-      "min": 0,
-      "max": 5
-    },
-    {
-      "id": "curiosity",
-      "label": "호기심",
-      "default": 1,
-      "min": 0,
-      "max": 5
-    },
-    {
-      "id": "trust",
-      "label": "신뢰",
-      "default": 0,
-      "min": -3,
-      "max": 5
-    }
-  ],
-  "flags": [
-    {
-      "id": "met_scout",
-      "label": "정찰자와 만남",
-      "default": false
-    },
-    {
-      "id": "opened_archive",
-      "label": "폐기 문서 보관함 개방",
-      "default": false
-    }
-  ],
->>>>>>> Stashed changes
   "nodes": [
     {
       "id": "intro",
       "kind": "scene",
-<<<<<<< Updated upstream
-      "title": "도입",
-      "speaker": "",
-      "text": "[도입] 지금 어디에 있고 무엇이 평소와 달라졌는지 적으세요.",
-      "writer_note": "배경 설명을 길게 쓰기보다 첫 장면의 변화만 바로 보여 주세요.",
+      "title": "Intro",
+      "speaker": "Archivist",
+      "text": "The warning lights in the archive return after months of silence.\n\nA sealed drawer unlocks on its own, and the queue purge clock begins counting down.",
+      "writer_note": "Open with curiosity and a visible clock. The player should feel that waiting already costs something.",
       "next": "incident",
       "choices": []
     },
     {
       "id": "incident",
       "kind": "scene",
-      "title": "사건",
+      "title": "Incident",
       "speaker": "",
-      "text": "[사건] 지금 바로 반응해야 하는 문제나 변화가 무엇인지 적으세요.",
-      "writer_note": "이 장면에서 독자가 처음으로 방향을 고르게 만드세요.",
+      "text": "Inside the drawer are two records that cannot both be true.\n\nOne names a witness who was erased from the official archive. The other shows the power room failing fast enough to wipe the queue before dawn.",
+      "writer_note": "Split the route into truth versus protection so the player feels two different instincts immediately.",
       "next": "",
       "choices": [
         {
           "id": "incident_to_clue",
-          "text": "상황을 더 파고든다",
-          "writer_note": "정보, 발견, 관찰로 이어지는 선택",
+          "text": "Follow the erased witness before the trail closes.",
+          "writer_note": "Truth-first branch.",
           "next": "clue"
         },
         {
           "id": "incident_to_pressure",
-          "text": "먼저 버틴다",
-          "writer_note": "위험이나 부담이 커지는 선택",
+          "text": "Stabilize the power room before the archive burns its own evidence.",
+          "writer_note": "Protection-first branch.",
           "next": "pressure"
-=======
-      "title": "첫 사건",
-      "speaker": "기록관",
-      "text": {
-        "ko": "[상황] 플레이어가 지금 어디에 있는지 적으세요.\n[감각] 소리, 냄새, 조명처럼 장면의 질감을 적으세요.\n[압박] 왜 지금 선택해야 하는지 적으세요.",
-        "en": ""
-      },
-      "writer_note": "이 장면은 세계관 소개보다도 첫 결정을 밀어붙이는 데 집중합니다. 사건 하나, 선택지 둘 정도로 유지하세요.",
-      "next": "",
-      "choices": [
-        {
-          "id": "intro_follow_signal",
-          "text": {
-            "ko": "수상한 신호를 따라간다",
-            "en": ""
-          },
-          "writer_note": "호기심형 선택. 다음 장면에서 위험과 정보 둘 다 열리게 설계합니다.",
-          "next": "signal_room",
-          "requirements": [],
-          "effects": [
-            {
-              "type": "change_stat",
-              "stat_id": "curiosity",
-              "flag_id": "",
-              "value": 1
-            },
-            {
-              "type": "set_flag",
-              "stat_id": "",
-              "flag_id": "met_scout",
-              "value": true
-            }
-          ]
-        },
-        {
-          "id": "intro_secure_supplies",
-          "text": {
-            "ko": "먼저 식량을 챙긴다",
-            "en": ""
-          },
-          "writer_note": "안전형 선택. 짧은 보상과 무난한 엔딩으로 연결해도 좋습니다.",
-          "next": "supply_ending",
-          "requirements": [],
-          "effects": [
-            {
-              "type": "change_stat",
-              "stat_id": "survival",
-              "flag_id": "",
-              "value": 1
-            }
-          ]
->>>>>>> Stashed changes
         }
       ]
     },
     {
-<<<<<<< Updated upstream
       "id": "clue",
       "kind": "scene",
-      "title": "단서",
+      "title": "Clue",
       "speaker": "",
-      "text": "[단서] 상황을 다시 보게 만드는 정보나 발견을 적으세요.",
-      "writer_note": "새로운 사실이 나오더라도 핵심 한 가지에만 집중하세요.",
+      "text": "Inside the witness file, one line is written by hand: 'The clean copy was made after the body count.'\n\nThe truth is no longer abstract. Someone edited the archive to make the loss look smaller.",
+      "writer_note": "One sharp clue is enough, but it should deepen the emotional cost of choosing truth.",
       "next": "decision",
       "choices": []
     },
     {
       "id": "pressure",
       "kind": "scene",
-      "title": "압박",
+      "title": "Pressure",
       "speaker": "",
-      "text": "[압박] 시간이 부족하거나 위험이 커지는 이유를 적으세요.",
-      "writer_note": "서두르게 만드는 이유가 분명하면 다음 선택이 선명해집니다.",
+      "text": "The power room is still running, but one more surge will erase the active record queue.\n\nYou can save the archive or chase the truth, but you do not have time to do both.",
+      "writer_note": "Make hesitation expensive and concrete. The player should feel the cost of protecting others.",
       "next": "decision",
       "choices": []
     },
     {
       "id": "decision",
       "kind": "scene",
-      "title": "결정",
+      "title": "Decision",
       "speaker": "",
-      "text": "[결정] 이제 무엇을 선택해야 하는지 한 문장으로 분명하게 적으세요.",
-      "writer_note": "엔딩으로 바로 연결되는 마지막 선택 장면입니다.",
+      "text": "You can expose the altered record now and let the fallout spread, or lock the archive down and keep the surviving records safe at the price of silence.",
+      "writer_note": "The endings should differ in sacrifice, not just in wording.",
       "next": "",
       "choices": [
         {
           "id": "decision_to_ending_a",
-          "text": "정면으로 결정한다",
-          "writer_note": "얻는 것이 분명한 결말로 연결",
+          "text": "Release the altered record and accept the public damage.",
+          "writer_note": "Clarity first, even if it hurts everyone watching.",
           "next": "ending_a"
         },
         {
           "id": "decision_to_ending_b",
-          "text": "다른 길을 택한다",
-          "writer_note": "남는 감정이 다른 결말로 연결",
+          "text": "Seal the archive and protect what still remains.",
+          "writer_note": "Protection first, with incomplete closure.",
           "next": "ending_b"
-=======
-      "id": "signal_room",
-      "kind": "scene",
-      "title": "신호실",
-      "speaker": "정찰자",
-      "text": {
-        "ko": "[반전] 플레이어가 따라간 결과 무엇을 보게 되는지 적으세요.\n[정보] 이후 분기에 영향을 줄 단서를 한 줄 넣으세요.\n[선택 직전] 지금 열 것인지, 물러날 것인지 압박을 다시 만드세요.",
-        "en": ""
-      },
-      "writer_note": "여기서는 서울 2033식 사건-보상 감각과 모험가 이야기식 조건 분기를 아주 얇게만 흉내 냅니다. 시스템보다 텍스트 한 덩어리가 먼저입니다.",
-      "next": "",
-      "choices": [
-        {
-          "id": "signal_open_archive",
-          "text": {
-            "ko": "잠긴 보관함을 연다",
-            "en": ""
-          },
-          "writer_note": "호기심 2 이상일 때만 열리도록 샘플로 넣어둔 선택입니다.",
-          "next": "archive_ending",
-          "requirements": [
-            {
-              "type": "stat_at_least",
-              "stat_id": "curiosity",
-              "flag_id": "",
-              "value": 2
-            }
-          ],
-          "effects": [
-            {
-              "type": "set_flag",
-              "stat_id": "",
-              "flag_id": "opened_archive",
-              "value": true
-            },
-            {
-              "type": "change_stat",
-              "stat_id": "trust",
-              "flag_id": "",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "id": "signal_leave",
-          "text": {
-            "ko": "위험하니 물러난다",
-            "en": ""
-          },
-          "writer_note": "짧은 후퇴 엔딩이나 중간 거점 장면으로 보내도 됩니다.",
-          "next": "quiet_exit",
-          "requirements": [],
-          "effects": [
-            {
-              "type": "change_stat",
-              "stat_id": "survival",
-              "flag_id": "",
-              "value": 1
-            }
-          ]
->>>>>>> Stashed changes
         }
       ]
     },
     {
-<<<<<<< Updated upstream
       "id": "ending_a",
       "kind": "ending",
-      "title": "엔딩 A",
-      "speaker": "",
-      "text": "[엔딩 A] 선택의 결과로 얻은 것과 남은 여운을 적으세요.",
-      "writer_note": "무엇이 달라졌는지, 무엇이 남았는지만 짧게 정리하세요.",
-=======
-      "id": "supply_ending",
-      "kind": "ending",
-      "title": "식량을 챙긴 사람",
-      "speaker": "기록관",
-      "text": {
-        "ko": "[결말] 눈앞의 자원을 확보한 덕분에 무엇을 지켰는지 적으세요.\n[여운] 대신 어떤 기회나 진실을 놓쳤는지 남기세요.",
-        "en": ""
-      },
-      "writer_note": "안전한 선택이 항상 최선은 아니라는 여운을 남기면 좋습니다.",
->>>>>>> Stashed changes
+      "title": "Ending A",
+      "speaker": "Archivist",
+      "text": "The altered record reaches the council by dawn.\n\nNothing stays quiet after that, but the erased witness is finally named and the archive can no longer pretend the loss was small.",
+      "writer_note": "Show both the rupture and the relief.",
       "next": "",
       "choices": []
     },
     {
-<<<<<<< Updated upstream
       "id": "ending_b",
       "kind": "ending",
-      "title": "엔딩 B",
-      "speaker": "",
-      "text": "[엔딩 B] 다른 선택의 결과와 마지막 감정을 적으세요.",
-      "writer_note": "첫 엔딩과 결의 감정 차이가 보이도록 마무리하세요.",
-=======
-      "id": "quiet_exit",
-      "kind": "ending",
-      "title": "조용한 철수",
-      "speaker": "기록관",
-      "text": {
-        "ko": "[결말] 플레이어가 무사히 빠져나가지만 무엇을 놓쳤는지 적으세요.\n[여운] 다음 회차에서 다른 선택을 해보고 싶게 만드는 힌트를 남기세요.",
-        "en": ""
-      },
-      "writer_note": "짧은 엔딩도 괜찮습니다. 중요한 건 결말마다 플레이 감정이 달라지는 것입니다.",
-      "next": "",
-      "choices": []
-    },
-    {
-      "id": "archive_ending",
-      "kind": "ending",
-      "title": "문서를 연 사람",
-      "speaker": "정찰자",
-      "text": {
-        "ko": "[결말] 플레이어가 알아낸 비밀과 그 대가를 적으세요.\n[회차 유도] 이 정보를 바탕으로 다른 분기로 이어질 확장 아이디어를 메모하세요.",
-        "en": ""
-      },
-      "writer_note": "확장팩처럼 뻗어나갈 훅만 남겨도 충분합니다. 여기서 세계관을 다 설명할 필요는 없습니다.",
->>>>>>> Stashed changes
+      "title": "Ending B",
+      "speaker": "Archivist",
+      "text": "The archive survives the surge, and the surviving records stay intact.\n\nThe crossed-out line remains unread, but the people still inside the system wake up to one more safe morning.",
+      "writer_note": "Keep the unresolved feeling intentional, not empty.",
       "next": "",
       "choices": []
     }

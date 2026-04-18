@@ -1,0 +1,31 @@
+{
+  "name": "magical-potion-toss-app",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.29.3",
+  "scripts": {
+    "dev": "node ./scripts/run-local-bin.mjs granite dev",
+    "build": "node ./scripts/build.mjs",
+    "build:web": "vite build",
+    "build:android-mirror-web": "node ./scripts/run-local-bin.mjs vite build --base ./ --outDir android-mirror/app/src/main/assets/web",
+    "preview": "vite preview --host",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsc -p tsconfig.json --noEmit",
+    "validate:release-env": "node ./scripts/validate-release-env.mjs --strict",
+    "qa:sandbox": "node ./scripts/qa-sandbox.mjs",
+    "qa:toss": "node ./scripts/qa-toss.mjs"
+  },
+  "dependencies": {
+    "@apps-in-toss/web-framework": "2.0.5",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.0.4",
+    "typescript": "^5.7.3",
+    "vite": "^7.1.7"
+  }
+}

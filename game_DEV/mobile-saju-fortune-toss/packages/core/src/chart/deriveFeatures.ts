@@ -6,7 +6,6 @@
   ElementDistributionModel,
   FourPillars,
   StrengthAnalysis,
-  TenGod,
   TenGodCount,
 } from '../types';
 import { BRANCH_TO_ELEMENT, CONTROLS, GENERATES } from '../ganji/constants';

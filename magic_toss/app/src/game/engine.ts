@@ -20,7 +20,19 @@ function clamp(value: number, min: number, max: number): number {
 }
 
 function copyState(state: BattleState): BattleState {
-  return JSON.parse(JSON.stringify(state)) as BattleState;
+  return {
+    ...state,
+    castTimers: { ...state.castTimers },
+    knownRelicIds: [...state.knownRelicIds],
+    knownSpellIds: [...state.knownSpellIds],
+    passiveLevels: { ...state.passiveLevels },
+    spellLevels: { ...state.spellLevels },
+    enemies: state.enemies.map((enemy) => ({ ...enemy })),
+    projectiles: state.projectiles.map((projectile) => ({ ...projectile })),
+    pendingChoices: [...state.pendingChoices],
+    eventLog: [...state.eventLog],
+    lastStepEvents: [...state.lastStepEvents],
+  };
 }
 
 function createEnemy(enemyId: string, id: number): EnemyInstance {
@@ -470,25 +482,32 @@ export function buildBattleOutcome(state: BattleState, save: PersistentSave): Ba
     : state.inkCollected;
   const notesReward = Math.floor(notesBase * (1 + stats.rewardNotesRate));
   const masteryGain = state.status === 'victory' ? 2 : 1;
+  const status = state.status === 'victory' ? 'victory' : 'defeat';
+  const resultLabel = status === 'victory' ? '결계시험 통과' : '결계시험 실패';
+  const summary = status === 'victory'
+    ? '오늘 들은 수업이 실제 시험에서 통했어여. 다음 시험이 열렸네여.'
+    : '결계가 무너졌지만 노트는 남았어여. 도서관에서 보강하고 다시 도전할 수 있어여.';
 
   return {
     stageId: state.stageId,
-    status: state.status === 'victory' ? 'victory' : 'defeat',
-    resultLabel: state.status === 'victory' ? '결계시험 통과' : '결계시험 실패',
-    summary: state.status === 'victory'
-      ? '오늘 들은 수업이 실제 시험에서 통했어여. 다음 시험이 열렸네여.'
-      : '결계가 무너졌지만 노트는 남았어여. 도서관에서 보강하고 다시 도전할 수 있어여.',
+    status,
+    resultLabel,
+    summary,
     notesReward,
     inkReward: inkBase,
     masteryGain,
     lastRunSnapshot: {
       kind: 'result',
       outcome: {
+        schoolId: state.schoolId,
         savedAt: Date.now(),
         stageId: state.stageId,
-        status: state.status === 'victory' ? 'victory' : 'defeat',
+        status,
+        resultLabel,
+        summary,
         notesReward,
         inkReward: inkBase,
+        masteryGain,
       },
     },
   };

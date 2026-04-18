@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Word Morph Lab</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">WORD MORPH LAB</p>
+          <h1>단어를 입력하면<br />초상이 변한다</h1>
+          <p class="hero-note">
+            100개의 숨겨진 단어를 찾아 초상을 다른 상태로 바꿔 보세요. 맞는 단어를 입력하면 새로운 상태가 해금되고,
+            아카이브에 기록됩니다.
+          </p>
+        </div>
+        <div class="hero-stats">
+          <article class="hero-metric">
+            <span>Unlocked</span>
+            <strong id="hero-unlocked">0 / 100</strong>
+          </article>
+          <article class="hero-metric">
+            <span>Attempts</span>
+            <strong id="hero-attempts">0</strong>
+          </article>
+          <article class="hero-metric">
+            <span>Completion</span>
+            <strong id="hero-completion">0%</strong>
+          </article>
+          <article class="hero-metric">
+            <span>Streak</span>
+            <strong id="hero-streak">0</strong>
+          </article>
+          <article class="hero-metric">
+            <span>Misses</span>
+            <strong id="hero-misses">0</strong>
+          </article>
+          <article class="hero-metric">
+            <span>Hints</span>
+            <strong id="hero-hints">0</strong>
+          </article>
+        </div>
+      </header>
+
+      <section class="session-strip">
+        <article class="session-pill">
+          <span class="tiny-caption">현재 필터</span>
+          <strong id="session-filter">전체 상태</strong>
+        </article>
+        <article class="session-pill">
+          <span class="tiny-caption">현재 힌트</span>
+          <strong id="session-hint">힌트 없음</strong>
+        </article>
+        <article class="session-pill">
+          <span class="tiny-caption">베스트 스트릭</span>
+          <strong id="session-best">0</strong>
+        </article>
+        <article class="session-pill">
+          <span class="tiny-caption">최근 입력</span>
+          <strong id="session-last-input">없음</strong>
+        </article>
+        <article class="session-pill">
+          <span class="tiny-caption">Resonance</span>
+          <strong id="session-resonance">0%</strong>
+        </article>
+      </section>
+
+      <main class="game-grid">
+        <section id="stage-card" class="card stage-card">
+          <div class="card-head">
+            <div>
+              <p id="stage-category" class="eyebrow eyebrow-inline">LOCKED STATE</p>
+              <h2 id="stage-title">아직 아무 상태도 열리지 않았습니다.</h2>
+            </div>
+            <span id="stage-chip" class="status-chip">대기</span>
+          </div>
+
+          <div class="stage-meta">
+            <article class="meta-pill">
+              <span class="tiny-caption">Mood</span>
+              <strong id="stage-mood">-</strong>
+            </article>
+            <article class="meta-pill">
+              <span class="tiny-caption">State Cue</span>
+              <strong id="stage-cue">-</strong>
+            </article>
+          </div>
+
+          <div id="portrait-stage" class="portrait-stage">
+            <img id="portrait-image" alt="" decoding="async" hidden />
+            <div id="portrait-placeholder" class="portrait-placeholder">
+              <p class="placeholder-badge">NO DISCOVERY</p>
+              <strong>첫 단어를 입력해 보세요.</strong>
+              <p>힌트를 참고하면서 100개의 상태를 하나씩 수집할 수 있습니다.</p>
+            </div>
+          </div>
+
+          <div id="dialogue-frame" class="dialogue-frame">
+            <div class="dialogue-head">
+              <div>
+                <p class="eyebrow eyebrow-inline">SUBJECT VOICE</p>
+                <strong id="dialogue-speaker">SUBJECT-01</strong>
+              </div>
+              <span id="dialogue-event" class="status-chip">관측 대기</span>
+            </div>
+            <p id="dialogue-line" class="dialogue-line">단어가 들어오기 전까지는 얼굴도, 목소리도, 상태도 아직 정해지지 않습니다.</p>
+            <div class="dialogue-meta">
+              <article class="dialogue-pill">
+                <span class="tiny-caption">Directive</span>
+                <strong id="dialogue-directive">첫 단어를 입력해 반응 곡선을 여세요.</strong>
+              </article>
+              <article class="dialogue-pill">
+                <span class="tiny-caption">Lab Note</span>
+                <strong id="dialogue-note">반응 전에는 같은 얼굴만 유지됩니다.</strong>
+              </article>
+            </div>
+          </div>
+
+          <div id="stage-aliases" class="tag-rail">
+            <span class="tag-chip">별칭 대기</span>
+          </div>
+
+          <div class="response-shell">
+            <div class="response-head">
+              <h3>Machine Log</h3>
+              <span class="tiny-caption">최근 반응</span>
+            </div>
+            <div id="log-list" class="log-list" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <aside class="sidebar">
+          <section id="console-card" class="card console-card">
+            <div class="card-head">
+              <h2>입력 콘솔</h2>
+            </div>
+            <form id="word-form" class="console-form">
+              <label class="field field-wide">
+                <span>단어</span>
+                <input
+                  id="word-input"
+                  type="text"
+                  placeholder="예: angel, glitch, velvet"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                  aria-describedby="console-note"
+                />
+              </label>
+              <div class="console-actions">
+                <button class="btn btn-strong" type="submit">단어 주입</button>
+                <button id="hint-btn" class="btn" type="button">힌트</button>
+              </div>
+              <div class="console-actions">
+                <button id="random-discovered-btn" class="btn btn-small" type="button">해금된 상태 랜덤 보기</button>
+                <button id="reset-progress-btn" class="btn btn-small btn-danger" type="button">진행 초기화</button>
+              </div>
+              <p id="console-note" class="section-note console-note">영문과 한글 별칭을 모두 지원합니다. 대소문자와 공백은 무시됩니다.</p>
+            </form>
+            <div id="suggestion-list" class="suggestion-list" aria-live="polite"></div>
+          </section>
+
+          <section class="card hint-card">
+            <div class="card-head">
+              <h2>현재 힌트</h2>
+            </div>
+            <div id="hint-panel" class="hint-panel" aria-live="polite"></div>
+          </section>
+
+          <section class="card nav-card">
+            <div class="card-head">
+              <h2>카테고리 퀵 점프</h2>
+              <button id="clear-filter-btn" class="btn btn-small" type="button">전체 보기</button>
+            </div>
+            <div id="category-chip-list" class="category-chip-list"></div>
+          </section>
+
+          <section class="card detail-card">
+            <div class="card-head">
+              <h2>선택한 상태</h2>
+            </div>
+            <dl class="detail-list">
+              <div>
+                <dt>Word</dt>
+                <dd id="detail-word">-</dd>
+              </div>
+              <div>
+                <dt>Category</dt>
+                <dd id="detail-category">-</dd>
+              </div>
+              <div>
+                <dt>Mood</dt>
+                <dd id="detail-mood">-</dd>
+              </div>
+              <div>
+                <dt>State Cue</dt>
+                <dd id="detail-cue">-</dd>
+              </div>
+              <div>
+                <dt>Observation</dt>
+                <dd id="detail-observation">-</dd>
+              </div>
+              <div>
+                <dt>Aliases</dt>
+                <dd id="detail-aliases">-</dd>
+              </div>
+              <div>
+                <dt>Drift Axis</dt>
+                <dd id="detail-drift">-</dd>
+              </div>
+              <div>
+                <dt>Recent Trigger</dt>
+                <dd id="detail-trigger">-</dd>
+              </div>
+              <div>
+                <dt>Next Push</dt>
+                <dd id="detail-next">-</dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="card recent-card">
+            <div class="card-head">
+              <h2>최근 방문한 상태</h2>
+            </div>
+            <div id="recent-list" class="recent-list" aria-live="polite"></div>
+          </section>
+
+          <section class="card event-card">
+            <div class="card-head">
+              <h2>이벤트 피드</h2>
+            </div>
+            <div id="event-list" class="event-list" aria-live="polite"></div>
+          </section>
+
+          <section class="card help-card">
+            <div class="card-head">
+              <h2>플레이 가이드</h2>
+            </div>
+            <div class="help-list">
+              <p><strong>탐색:</strong> 영어 또는 한글 별칭으로 상태를 찾을 수 있습니다.</p>
+              <p><strong>복구:</strong> 막히면 힌트를 눌러 카테고리와 글자 정보를 좁혀 보세요.</p>
+              <p><strong>수집:</strong> 최근 방문 목록과 아카이브에서 이미 찾은 상태를 다시 볼 수 있습니다.</p>
+              <p><strong>단축키:</strong> <kbd>/</kbd> 입력 포커스, <kbd>H</kbd> 힌트, <kbd>R</kbd> 랜덤 상태, <kbd>Esc</kbd> 입력 지우기</p>
+            </div>
+          </section>
+        </aside>
+
+        <section class="card progress-card">
+          <div class="card-head split-head">
+            <h2>해금 진행률</h2>
+            <span id="progress-caption" class="tiny-caption">0 / 10 카테고리 활성화</span>
+          </div>
+          <div id="category-progress" class="category-progress"></div>
+        </section>
+
+        <section class="card archive-card">
+          <div class="card-head split-head">
+            <div>
+              <h2>Unlocked Archive</h2>
+              <p class="section-note">해금된 상태만 카드로 표시됩니다.</p>
+            </div>
+            <div class="archive-tools">
+              <label class="archive-sort">
+                <span class="tiny-caption">정렬</span>
+                <select id="archive-sort">
+                  <option value="recent">최근 발견순</option>
+                  <option value="alphabetical">이름순</option>
+                  <option value="category">카테고리순</option>
+                </select>
+              </label>
+              <span id="archive-caption" class="tiny-caption">0개 해금</span>
+            </div>
+          </div>
+          <div id="archive-grid" class="archive-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

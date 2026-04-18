@@ -2,6 +2,7 @@
   "name": "@saju/toss",
   "version": "0.1.0",
   "private": true,
+  "main": "index.ts",
   "scripts": {
     "dev": "node ./scripts/patch-granite-windows.mjs && bedrock dev",
     "build": "node ./scripts/patch-granite-windows.mjs && node ./scripts/validate-release-env.mjs --strict && node ./scripts/run-ait-build.mjs",
@@ -16,6 +17,8 @@
   },
   "dependencies": {
     "@apps-in-toss/framework": "2.0.5",
+    "@apps-in-toss/plugins": "2.0.5",
+    "@babel/runtime": "7.28.4",
     "@granite-js/native": "1.0.4",
     "@granite-js/plugin-core": "1.0.4",
     "@granite-js/plugin-env": "1.0.4",

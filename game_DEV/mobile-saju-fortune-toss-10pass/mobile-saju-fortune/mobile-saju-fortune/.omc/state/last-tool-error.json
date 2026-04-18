@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"npx tsc --noEmit 2>&1\",\"timeout\":60000,\"description\":\"Run TypeScript type check\"}",
+  "error": "Exit code 2\npages/tarot-reading.tsx(16,25): error TS2345: Argument of type 'string' is not assignable to parameter of type '{ name: \"/\"; params: Record<string, unknown>; path?: string; merge?: boolean; pop?: boolean; } | { name: \"/today\"; params: Record<string, unknown>; path?: string; merge?: boolean; pop?: boolean; } | ... 4 more ... | { ...; }'.\npages/tarot-result.tsx(13,25): error TS2345: Argument of type 'string' is not assignable to parameter of type '{ name: \"/\"; params: Record<string, un...",
+  "timestamp": "2026-03-22T14:00:42.282Z",
+  "retry_count": 1
+}

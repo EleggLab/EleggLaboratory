@@ -1,5 +1,15 @@
 # MEMORY.md
 
+## UI/UX Authorship Default
+
+- The user considers the base UI/UX frame of this project their own original work.
+- Preserve that authored trunk by default instead of replacing it with generic AI-style structure.
+- Future art work, especially UI design, should use the `PROJECT_UIUX_POLICY.md` `50-Pass Branch Critique Loop` as the default process.
+- Default depth for that loop is 50 sequential direct-edit handoff passes unless the user explicitly asks for a faster mode.
+- Each pass should receive the previously edited working branch, modify it directly, and hand it to the next pass.
+- There is no separate feedback collection phase and no later implementation phase after pass 50.
+- Workspace startup order should begin with `AGENTS.md`, then `PROJECT_UIUX_POLICY.md`, then `UIUX_10PASS_BRANCH_CRITIQUE_PROMPT.md` (legacy filename retained, 50-pass content), then `MEMORY.md`, then today's and yesterday's `memory/YYYY-MM-DD.md` files before normal work begins.
+
 ## Saved Direction References
 
 - `https://zb-web2.pages.dev/`

@@ -26,6 +26,8 @@ export function TossPageShell({
   onTabPress?: (path: MiniRootTabPath) => void;
   title: string;
 }>): React.JSX.Element {
+  console.log(`[astra:toss] TossPageShell render title=${title}`);
+
   return (
     <View style={styles.root}>
       <View style={styles.header}>

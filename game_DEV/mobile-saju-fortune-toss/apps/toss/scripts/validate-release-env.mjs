@@ -2,8 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const PROJECT_ROOT = process.cwd();
-const DEFAULT_APP_NAME = 'fortune-suite';
-const DEFAULT_ICON_URL = 'https://placehold.co/512x512/png?text=fortune-suite';
+const DEFAULT_APP_NAME = 'set-real-app-name';
+const DEFAULT_ICON_URL = 'https://placehold.co/512x512/png?text=astra';
 const PLACEHOLDER_PREFIX = '__SET_';
 const ASSET_MANIFEST_PATH = path.join(PROJECT_ROOT, 'assets', 'console', 'asset-manifest.json');
 const BOOLEAN_LITERALS = new Set(['true', 'false', '1', '0', 'yes', 'no', 'on', 'off']);

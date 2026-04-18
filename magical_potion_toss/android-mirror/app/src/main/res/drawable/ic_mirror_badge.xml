@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" />
+            <gradient
+                android:angle="315"
+                android:endColor="#0D1A23"
+                android:startColor="#241913" />
+        </shape>
+    </item>
+    <item android:gravity="center">
+        <layer-list>
+            <item
+                android:height="68dp"
+                android:width="68dp">
+                <shape android:shape="oval">
+                    <solid android:color="#120E0A" />
+                    <stroke
+                        android:width="2dp"
+                        android:color="#F2B56B" />
+                </shape>
+            </item>
+            <item
+                android:bottom="12dp"
+                android:gravity="center_horizontal|bottom"
+                android:height="34dp"
+                android:width="24dp">
+                <shape android:shape="rectangle">
+                    <corners
+                        android:bottomLeftRadius="12dp"
+                        android:bottomRightRadius="12dp"
+                        android:topLeftRadius="10dp"
+                        android:topRightRadius="10dp" />
+                    <gradient
+                        android:angle="270"
+                        android:endColor="#E68247"
+                        android:startColor="#FFE1A4" />
+                    <stroke
+                        android:width="1dp"
+                        android:color="#FFF1C5" />
+                </shape>
+            </item>
+            <item
+                android:gravity="center_horizontal|top"
+                android:height="16dp"
+                android:top="12dp"
+                android:width="28dp">
+                <shape android:shape="oval">
+                    <gradient
+                        android:angle="90"
+                        android:endColor="#6EEAD6"
+                        android:startColor="#C6FFF4" />
+                </shape>
+            </item>
+            <item
+                android:gravity="center_horizontal|top"
+                android:height="18dp"
+                android:top="20dp"
+                android:width="6dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="3dp" />
+                    <solid android:color="#A7FFF0" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</layer-list>

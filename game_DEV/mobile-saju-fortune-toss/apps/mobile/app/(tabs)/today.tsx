@@ -111,7 +111,9 @@ const CHINESE_ZODIAC_ORDER = [
 const CHINESE_ZODIAC_ICON_IMAGES: Record<(typeof CHINESE_ZODIAC_ORDER)[number], ImageSourcePropType> = {
   rat: require('../../assets/icons/zodiac/chinese/rat.png'),
   ox: require('../../assets/icons/zodiac/chinese/ox.png'),
-  tiger: require('../../assets/dos_simple_square_app_icon_twelve_zodiac_animals_2D_clean_linea_d9aab4c4-a48b-4afb-bae0-fd3320a6b2c3.png'),
+  // The previous tiger icon pointed at a large generic asset, which can make
+  // the daily list heavier than the rest of the zodiac grid on Android.
+  tiger: require('../../assets/zodiac/chinese/tiger.png'),
   rabbit: require('../../assets/icons/zodiac/chinese/rabbit.png'),
   dragon: require('../../assets/icons/zodiac/chinese/dragon.png'),
   snake: require('../../assets/icons/zodiac/chinese/snake.png'),

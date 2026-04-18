@@ -33,6 +33,9 @@ function walkFiles(rootDir) {
         stack.push(fullPath);
         continue;
       }
+      if (/\.backup-\d{8}$/.test(entry.name)) {
+        continue;
+      }
       collected.push(fullPath);
     }
   }

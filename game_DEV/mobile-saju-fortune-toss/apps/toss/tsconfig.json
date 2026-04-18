@@ -4,7 +4,11 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "noEmit": true,
-    "types": ["react", "react-native"]
+    "types": ["react", "react-native"],
+    "paths": {
+      "@saju/data": ["../../packages/data/src/index.ts"],
+      "@saju/data/*": ["../../packages/data/src/*"]
+    }
   },
   "include": ["pages/**/*", "src/**/*", "granite.config.ts", "require.context.ts"],
   "exclude": [

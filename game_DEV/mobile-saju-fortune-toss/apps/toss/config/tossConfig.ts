@@ -1,4 +1,4 @@
-import { appsInToss } from '@apps-in-toss/framework/plugins';
+import { appsInToss } from '@apps-in-toss/plugins';
 import { env } from '@granite-js/plugin-env';
 import { router } from '@granite-js/plugin-router';
 import { defineConfig } from '@granite-js/react-native/config';
@@ -9,12 +9,12 @@ function readEnv(name: string, fallback: string): string {
 }
 
 const runtimeEnv = {
-  TOSS_APP_NAME: readEnv('TOSS_APP_NAME', 'fortune-suite'),
-  TOSS_BRAND_DISPLAY_NAME: readEnv('TOSS_BRAND_DISPLAY_NAME', '종합 운세'),
+  TOSS_APP_NAME: readEnv('TOSS_APP_NAME', 'astra'),
+  TOSS_BRAND_DISPLAY_NAME: readEnv('TOSS_BRAND_DISPLAY_NAME', '아스트라: 오늘의 운세'),
   TOSS_BRAND_PRIMARY_COLOR: readEnv('TOSS_BRAND_PRIMARY_COLOR', '#F7C948'),
   TOSS_BRAND_ICON_URL: readEnv(
     'TOSS_BRAND_ICON_URL',
-    'https://placehold.co/512x512/png?text=fortune-suite',
+    'https://raw.githubusercontent.com/EleggLab/EleggLaboratory/main/game_DEV/mobile-saju-fortune-toss/apps/mobile/assets/app-icon.png',
   ),
   TOSS_ENABLE_BANNER_ADS: readEnv('TOSS_ENABLE_BANNER_ADS', 'false'),
   TOSS_AD_HOME_BANNER_ID: readEnv('TOSS_AD_HOME_BANNER_ID', ''),

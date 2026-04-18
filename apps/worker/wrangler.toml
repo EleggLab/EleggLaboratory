@@ -1,0 +1,19 @@
+name = "tong-keusine"
+main = "src/index.ts"
+compatibility_date = "2026-04-10"
+
+[observability.logs]
+enabled = true
+
+[[durable_objects.bindings]]
+name = "ROOMS"
+class_name = "GameRoomDurableObject"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["GameRoomDurableObject"]
+
+[assets]
+directory = "../web/dist"
+not_found_handling = "single-page-application"
+run_worker_first = ["/api/*"]

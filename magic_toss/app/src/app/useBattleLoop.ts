@@ -29,18 +29,24 @@ export function useBattleLoop({
   const [battleState, setBattleState] = useState<BattleState | null>(initialState);
   const battleStateRef = useRef<BattleState | null>(initialState);
   const completionGuardRef = useRef(false);
+  const saveRef = useRef<PersistentSave | null>(save);
+
+  useEffect(() => {
+    saveRef.current = save;
+  }, [save]);
 
   const handleSnapshot = useEffectEvent((state: BattleState) => {
     onBattleStateSnapshot(createBattleSnapshot(state));
   });
 
   const handleComplete = useEffectEvent((state: BattleState) => {
-    if (!save || completionGuardRef.current) {
+    const currentSave = saveRef.current;
+    if (!currentSave || completionGuardRef.current) {
       return;
     }
 
     completionGuardRef.current = true;
-    onComplete(buildBattleOutcome(state, save), createBattleSnapshot(state));
+    onComplete(buildBattleOutcome(state, currentSave), createBattleSnapshot(state));
   });
 
   useEffect(() => {
@@ -55,7 +61,7 @@ export function useBattleLoop({
   }, [initialState]);
 
   useEffect(() => {
-    if (!active || !battleStateRef.current || !save) {
+    if (!active || !battleStateRef.current || !saveRef.current) {
       return;
     }
 
@@ -81,7 +87,18 @@ export function useBattleLoop({
         return;
       }
 
-      const next = stepBattle(current, save, delta);
+      if (current.status === 'level-up') {
+        frameId = window.requestAnimationFrame(loop);
+        return;
+      }
+
+      const currentSave = saveRef.current;
+      if (!currentSave) {
+        frameId = window.requestAnimationFrame(loop);
+        return;
+      }
+
+      const next = stepBattle(current, currentSave, delta);
       battleStateRef.current = next;
       setBattleState(next);
 
@@ -99,7 +116,7 @@ export function useBattleLoop({
 
     frameId = window.requestAnimationFrame(loop);
     return () => window.cancelAnimationFrame(frameId);
-  }, [active, handleComplete, save, soundController]);
+  }, [active, handleComplete, soundController]);
 
   useEffect(() => {
     if (!active) {
@@ -120,13 +137,15 @@ export function useBattleLoop({
 
   const chooseUpgrade = (choiceId: string) => {
     const current = battleStateRef.current;
-    if (!current || !save) {
+    const currentSave = saveRef.current;
+    if (!current || !currentSave) {
       return;
     }
 
-    const next = applyUpgradeChoice(current, choiceId, save);
+    const next = applyUpgradeChoice(current, choiceId, currentSave);
     battleStateRef.current = next;
     setBattleState(next);
+    handleSnapshot(next);
   };
 
   return {
@@ -134,4 +153,3 @@ export function useBattleLoop({
     chooseUpgrade,
   };
 }
-

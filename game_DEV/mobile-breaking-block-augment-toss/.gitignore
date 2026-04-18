@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.granite/
+.bedrock/
+.dev-logs/
+*.ait
+.env
+

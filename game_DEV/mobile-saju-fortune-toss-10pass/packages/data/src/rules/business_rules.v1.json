@@ -1,0 +1,131 @@
+[
+  {
+    "id": "biz-leadership-power",
+    "title": "관성 중심 리더십",
+    "when": "tenGodCount.정관 + tenGodCount.편관 >= 3",
+    "tags": [
+      "business",
+      "leadership"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "tenGodCount.정관",
+        "tenGodCount.편관"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok",
+        "https://github.com/waterbeside/lunisolar/blob/master/packages/lunisolar/docs/faq.md"
+      ]
+    },
+    "content": {
+      "short": "Rule and responsibility-heavy roles may show stable performance.",
+      "long": "Clear role boundaries, explicit priorities, and risk control loops improve reproducibility of outcomes.",
+      "questions": [
+        "Are accountability and authority boundaries explicit in your team?"
+      ]
+    }
+  },
+  {
+    "id": "biz-output-creator",
+    "title": "식상 중심 생산형",
+    "when": "tenGodCount.식신 + tenGodCount.상관 >= 3",
+    "tags": [
+      "business",
+      "creator"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "tenGodCount.식신",
+        "tenGodCount.상관"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok"
+      ]
+    },
+    "content": {
+      "short": "Content/product production with rapid feedback loops may fit well.",
+      "long": "Small experiment cycles and clear validation metrics convert output energy into reliable results.",
+      "questions": [
+        "Can you define one testable experiment for this week?"
+      ]
+    }
+  },
+  {
+    "id": "biz-wealth-ops",
+    "title": "재성 중심 운영",
+    "when": "tenGodCount.편재 + tenGodCount.정재 >= 3",
+    "tags": [
+      "business",
+      "operations"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "tenGodCount.편재",
+        "tenGodCount.정재"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok"
+      ]
+    },
+    "content": {
+      "short": "Resource allocation and operating efficiency may become key strengths.",
+      "long": "Simple KPI design and transparent cost-to-outcome tracking improve decision quality.",
+      "questions": [
+        "Do you track 3 core KPIs weekly?"
+      ]
+    }
+  },
+  {
+    "id": "biz-resource-learning",
+    "title": "인성 중심 학습",
+    "when": "tenGodCount.정인 + tenGodCount.편인 >= 3",
+    "tags": [
+      "business",
+      "learning"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "tenGodCount.정인",
+        "tenGodCount.편인"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok"
+      ]
+    },
+    "content": {
+      "short": "Learning/research-heavy workflows may fit well.",
+      "long": "Define explicit conversion rules from learning to execution to avoid analysis-only loops.",
+      "questions": [
+        "What rule triggers transition from study to action?"
+      ]
+    }
+  },
+  {
+    "id": "biz-balance-warning",
+    "title": "비겁 과다 주의",
+    "when": "tenGodCount.비견 + tenGodCount.겁재 >= 4",
+    "tags": [
+      "business",
+      "risk"
+    ],
+    "evidence": {
+      "featureRefs": [
+        "tenGodCount.비견",
+        "tenGodCount.겁재"
+      ],
+      "sourceUrls": [
+        "https://github.com/yhj1024/manseryeok"
+      ]
+    },
+    "content": {
+      "short": "High self-drive can coexist with collaboration friction risk.",
+      "long": "Decision logs and explicit role boundaries reduce unnecessary conflict while preserving momentum.",
+      "cautions": [
+        "This is an operational risk hypothesis, not a deterministic judgment."
+      ],
+      "questions": [
+        "Which decision points repeatedly create team friction?"
+      ]
+    }
+  }
+]

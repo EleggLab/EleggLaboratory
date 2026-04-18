@@ -1,0 +1,33 @@
+name: nibel_arena_counter
+description: "A one-screen Android counter app for Nivel Arena."
+publish_to: 'none'
+version: 1.0.1+2
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  image_picker: ^1.2.1
+  shared_preferences: ^2.5.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: CookieRun
+      fonts:
+        - asset: assets/fonts/cookie_run_regular.ttf
+          weight: 400
+        - asset: assets/fonts/cookie_run_medium.ttf
+          weight: 500
+        - asset: assets/fonts/cookie_run_bold.ttf
+          weight: 700
+        - asset: assets/fonts/cookie_run_black.ttf
+          weight: 900

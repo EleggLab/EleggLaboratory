@@ -14,7 +14,7 @@ import {
   type QnaCycleContext,
   type QnaDomain,
 } from '@saju/core';
-import { qnaSnippets } from '@saju/data';
+import { qnaSnippets, type QnaSnippet } from '@saju/data';
 
 import { BACKGROUNDS } from '../../../lib/assets/backgrounds';
 import {
@@ -328,7 +328,10 @@ export default function SajuScreen(): React.JSX.Element {
     return buildNarrative(chart, yearCycle);
   }, [chart, yearCycle]);
 
-  const qnaSnippet = useMemo(() => qnaSnippets.find((s) => s.tags?.includes(domain)), [domain]);
+  const qnaSnippet = useMemo(
+    () => qnaSnippets.find((s: QnaSnippet) => s.tags?.includes(domain)),
+    [domain],
+  );
 
   const qnaCycleContext = useMemo<QnaCycleContext | undefined>(() => {
     if (!chart) return undefined;

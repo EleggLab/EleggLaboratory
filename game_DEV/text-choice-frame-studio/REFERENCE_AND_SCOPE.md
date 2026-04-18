@@ -1,72 +1,30 @@
-# Reference And Scope
+# Scope Notes
 
-## 레거시 프로젝트와의 차이
+This project is a small authoring frame, not a full game engine.
 
-### `pojet`
+## Core Intent
 
-- 자동 틱 진행
-- 성인 톤 분기와 로그 구조
-- 초상화/배경 연출
-- 대량 콘텐츠 팩과 리포트 산출물
+Keep the tool centered on:
 
-이 프로젝트는 "텍스트 게임 엔진 + 콘텐츠 실험실"에 가깝습니다.
+- scenes
+- choices
+- direct next links
+- writer notes
+- endings
+- quick playtest
+- import and export
 
-### `new-project`
+## Not In Scope
 
-- 포스트 아포칼립스 성인 RPG 기획 문서가 매우 큼
-- 생존/전투/관계/퀘스트 구조 포함
-- CLI + 웹 상태 브리지 포함
+The tool does not try to include:
 
-이 프로젝트는 "복합 시스템 프로토타입"에 가깝습니다.
+- generated story writing
+- combat systems
+- inventory editors
+- simulation meters
+- large presentation layers
+- packaging pipelines
 
-## 이번 툴의 의도
+## Design Rule
 
-이번 툴은 위 두 프로젝트를 계승하지 않습니다. 대신 다음으로 축소합니다.
-
-- 장면 카드
-- 선택지
-- 간단한 조건
-- 간단한 결과
-- 엔딩
-
-즉, 콘텐츠를 직접 쓰기 위한 틀만 남깁니다.
-
-## 60sec UGC에서 가져올 것
-
-- `pc-choice-ugc`의 그래프 건강 체크 감각
-- 시작점 1개 / 명확한 엔딩 / 도달 불가 장면 점검
-- 짧은 사건 -> 선택지 -> 결과 흐름 템플릿
-- 플래그 기반의 가벼운 분기 아이디어
-- 레거시 그래프를 단순 트리로 접는 사고방식
-
-## 60sec UGC에서 안 가져올 것
-
-- ReactFlow 드래그 편집기 자체
-- 생존 수치 번들 (`hunger`, `thirst`, `sanity` 등) 전체
-- 레이아웃 테마, 사운드, 배경, 초상화, 인벤토리 패널
-- 레시피/환경/구조 신호 같은 60초 시스템 레이어
-- Python 런처(`ugc-python-steam`)와 Steam 패키징 흐름
-
-즉, `60sec Choice Game UGC`는 "아이디어 원본"으로만 보고, 작성 경험은 훨씬 더 얇고 단순하게 유지합니다.
-
-## 참고한 외부 감각
-
-- `서울 2033`
-  - 텍스트 로그라이크
-  - 사건과 선택, 능력/아이템/상처 관리
-  - 창작마당까지 있으나 플레이 핵심은 사건-선택-결과
-
-- `모험가 이야기 (Life in Adventure)`
-  - 텍스트 로그라이크
-  - 사건과 선택지가 능력/아이템/과거 선택에 의해 달라짐
-  - 픽셀아트와 전투가 있지만, 플레이 리듬의 코어는 여전히 텍스트 이벤트
-
-## 범위 밖
-
-- AI 자동 스토리 생성
-- 복잡한 전투 계산
-- 장비 인벤토리 편집기
-- 연출용 초상화 에셋 관리자
-- 스팀 배포 파이프라인
-
-이 문서는 "이번 툴이 일부러 하지 않는 것"을 잊지 않기 위해 남깁니다.
+If a feature makes the frame feel heavier than "fill in the episode yourself," it should probably stay out.

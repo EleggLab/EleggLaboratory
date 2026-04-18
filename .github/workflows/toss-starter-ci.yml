@@ -1,0 +1,36 @@
+name: toss-starter-ci
+
+on:
+  push:
+    paths:
+      - 'starter/**'
+      - '.github/workflows/toss-starter-ci.yml'
+  pull_request:
+    paths:
+      - 'starter/**'
+      - '.github/workflows/toss-starter-ci.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify starter
+        run: bash starter/scripts/verify.sh starter
+      - name: Build locales index
+        run: bash starter/scripts/build-locales-index.sh starter
+
+  toss-rn-smoke:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: starter
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Enable corepack
+        run: corepack enable
+      - name: Smoke test Toss RN starter
+        run: node scripts/smoke-test-toss-rn-miniapp.mjs --with-build

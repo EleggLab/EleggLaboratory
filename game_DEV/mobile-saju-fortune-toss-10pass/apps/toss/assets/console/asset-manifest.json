@@ -1,0 +1,11 @@
+{
+  "appLogoPath": "assets/console/app-logo.png",
+  "thumbnailSquarePath": "assets/console/thumbnail-square.png",
+  "thumbnailLandscapePath": "assets/console/thumbnail-landscape.png",
+  "portraitScreenshotPaths": [
+    "assets/console/screenshot-portrait-1.png",
+    "assets/console/screenshot-portrait-2.png",
+    "assets/console/screenshot-portrait-3.png"
+  ],
+  "landscapeScreenshotPaths": []
+}

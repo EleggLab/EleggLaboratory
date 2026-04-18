@@ -1,0 +1,43 @@
+{
+  "name": "saju-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.29.3",
+  "scripts": {
+    "dev": "corepack pnpm --filter @saju/web dev",
+    "dev:web": "corepack pnpm --filter @saju/web dev",
+    "dev:toss": "corepack pnpm --filter @saju/toss dev",
+    "build:web": "corepack pnpm --filter @saju/web build",
+    "build:toss": "corepack pnpm --filter @saju/toss build",
+    "start:web": "corepack pnpm --filter @saju/web start",
+    "dev:mobile": "corepack pnpm --filter @saju/mobile start",
+    "build:ios": "corepack pnpm --dir apps/mobile run build:ios:store",
+    "submit:ios": "corepack pnpm --dir apps/mobile run submit:ios:store",
+    "build": "corepack pnpm -r build",
+    "test": "corepack pnpm -r test",
+    "typecheck": "corepack pnpm -r typecheck",
+    "lint": "corepack pnpm -r lint",
+    "qa:toss": "corepack pnpm --filter @saju/toss typecheck",
+    "verify:sources": "corepack pnpm --filter @saju/tools check:sources",
+    "verify:cross": "corepack pnpm --filter @saju/tools verify:cross",
+    "verify:kasi": "corepack pnpm --filter @saju/tools verify:kasi",
+    "research:collect": "corepack pnpm --filter @saju/tools collect:research",
+    "research:competitors": "corepack pnpm --filter @saju/tools collect:competitors",
+    "research:web-competitors": "corepack pnpm --filter @saju/tools collect:web-competitors",
+    "research:taaft-2024": "corepack pnpm --filter @saju/tools collect:taaft-2024",
+    "research:web-curated": "corepack pnpm --filter @saju/tools curate:web-research-2024",
+    "astra:prepare": "corepack pnpm --filter @saju/tools prepare:astra",
+    "verify:assets": "corepack pnpm --filter @saju/tools check:assets",
+    "optimize:assets": "corepack pnpm --filter @saju/tools optimize:assets",
+    "qa:regression": "corepack pnpm --filter @saju/tools qa:regression",
+    "vectors:refresh": "corepack pnpm --filter @saju/tools refresh:vectors",
+    "release:check": "corepack pnpm verify:assets && corepack pnpm qa:regression && corepack pnpm typecheck && corepack pnpm test && corepack pnpm build"
+  },
+  "devDependencies": {
+    "expo-asset": "~11.0.5",
+    "expo-constants": "~17.0.8",
+    "expo-modules-core": "~2.2.3",
+    "invariant": "^2.2.4",
+    "typescript": "^5.7.3"
+  }
+}

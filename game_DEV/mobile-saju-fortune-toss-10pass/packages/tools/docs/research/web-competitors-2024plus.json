@@ -1,0 +1,15 @@
+{
+  "summary": {
+    "generatedAtUTC": "2026-02-16T07:36:22.640Z",
+    "candidatesFromSearch": 0,
+    "relevantRows": 0,
+    "strict2024PlusRows": 0,
+    "strictRule": "creationDate >= 2024-01-01 && monthlyVisitors >= 30000",
+    "notes": [
+      "Traffic and creation date are parsed from hypestat.com snapshots via r.jina.ai mirror.",
+      "Monthly visitors are estimates and should be treated as directional signals."
+    ]
+  },
+  "strict2024Plus": [],
+  "allRelevant": []
+}
