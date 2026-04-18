@@ -66,3 +66,15 @@ new-project/new-project/reports/qa/
 
 # Flutter generated desktop files
 **/windows/flutter/ephemeral/
+
+# Generated web build outputs (do not track)
+apps/**/dist/
+
+# Recovery/backup dumps (local archival only)
+data/recovery/
+data/worklog-backups/
+
+# AI/harness run reports
+**/progress-*.md
+**/BATCH_*_REPORT.md
+**/SPRINT_*_REPORT.md
