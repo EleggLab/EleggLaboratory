@@ -45,3 +45,24 @@ game_DEV/mobile-saju-fortune-toss/**/dev-logs/
 game_DEV/mobile-saju-fortune-toss/apps/toss/dist/
 game_DEV/mobile-saju-fortune-toss/packages/*/dist/
 game_DEV/mobile-saju-fortune-toss/apps/mobile/assets/*.backup-*
+
+# Harness progress logs and batch reports
+toss-game-rebuilds/progress-*.md
+toss-game-rebuilds/BATCH_*.md
+toss-game-rebuilds/SPRINT_*.md
+
+# Repeated generated QA / audit reports
+pojet/reports/ai/
+pojet/reports/qa/
+pojet/reports/ui-capture/
+pojet/reports/balance/latest-metrics.json
+pojet/reports/balance/latest-summary.md
+new-project/new-project/reports/qa/
+**/_server.pid
+
+# Mobile release packages
+*.apk
+*.aab
+
+# Flutter generated desktop files
+**/windows/flutter/ephemeral/
